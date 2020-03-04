@@ -1,0 +1,1090 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>层次化索引 | Python数据课程</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../md/Pandas-liSan.html" />
+    
+    
+    <link rel="prev" href="../md/Pandas-guiZheng-zhuanHuan.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="4.9.1"
+        data-chapter-title="层次化索引"
+        data-filepath="md/Pandas-cengCi.md"
+        data-basepath=".."
+        data-revision="Thu Nov 22 2018 08:28:34 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Python数据学科
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="md/rumen-content.html">
+            
+                
+                    <a href="../md/rumen-content.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Python数据学科内容
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="md/rumen-why.html">
+            
+                
+                    <a href="../md/rumen-why.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        为什么学Python数据分析
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="md/rumen-gongju.html">
+            
+                
+                    <a href="../md/rumen-gongju.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        软件和环境安装
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="md/rumen-zhixing.html">
+            
+                
+                    <a href="../md/rumen-zhixing.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Python程序执行方式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="md/rumen-anaconda.html">
+            
+                
+                    <a href="../md/rumen-anaconda.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        Python发行版：Anaconda
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="md/rumen-jupyter.html">
+            
+                
+                    <a href="../md/rumen-jupyter.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        交互式编辑器：Jupyter-Notebook
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="md/rumen-conda.html">
+            
+                
+                    <a href="../md/rumen-conda.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        包和环境管理器：conda
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="md/rumen-pip.html">
+            
+                
+                    <a href="../md/rumen-pip.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.1.</b>
+                        
+                        pip和Virtualenv
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="md/rumen-markdown.html">
+            
+                
+                    <a href="../md/rumen-markdown.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        标记语言：MarkDown
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" data-path="md/rumen-gitbook.html">
+            
+                
+                    <a href="../md/rumen-gitbook.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.1.</b>
+                        
+                        文档工具-GitBook
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.2" data-path="md/rumen-xmind.html">
+            
+                
+                    <a href="../md/rumen-xmind.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.2.</b>
+                        
+                        思维导图-Xmind
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="md/rumen-liucheng.html">
+            
+                
+                    <a href="../md/rumen-liucheng.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        数据分析流程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="md/Pandas.html">
+            
+                
+                    <a href="../md/Pandas.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        数据分析库-Pandas
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="md/Pandas-Series.html">
+            
+                
+                    <a href="../md/Pandas-Series.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Series对象-1维
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="md/Pandas-DataFrame.html">
+            
+                
+                    <a href="../md/Pandas-DataFrame.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        DataFrame对象-2维
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="md/Pandas-DataFrame-chaXun.html">
+            
+                
+                    <a href="../md/Pandas-DataFrame-chaXun.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        DataFrame查询
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="md/Pandas-caoZuo.html">
+            
+                
+                    <a href="../md/Pandas-caoZuo.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        数据操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="md/Pandas-shuJuChunQu.html">
+            
+                
+                    <a href="../md/Pandas-shuJuChunQu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        数据存取
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="md/Pandas-tongJi.html">
+            
+                
+                    <a href="../md/Pandas-tongJi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        数据运算
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.6.1" data-path="md/Pandas-yunSuan.html">
+            
+                
+                    <a href="../md/Pandas-yunSuan.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.1.</b>
+                        
+                        数据运算-拓展
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="md/Pandas-fenZu.html">
+            
+                
+                    <a href="../md/Pandas-fenZu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.7.</b>
+                        
+                        分组聚合
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="md/Pandas-guiZheng-qingLi.html">
+            
+                
+                    <a href="../md/Pandas-guiZheng-qingLi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.8.</b>
+                        
+                        数据规整-清理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="md/Pandas-guiZheng-zhuanHuan.html">
+            
+                
+                    <a href="../md/Pandas-guiZheng-zhuanHuan.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.9.</b>
+                        
+                        数据规整-转换
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="4.9.1" data-path="md/Pandas-cengCi.html">
+            
+                
+                    <a href="../md/Pandas-cengCi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.9.1.</b>
+                        
+                        层次化索引
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9.2" data-path="md/Pandas-liSan.html">
+            
+                
+                    <a href="../md/Pandas-liSan.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.9.2.</b>
+                        
+                        离散化和面元划分
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10" data-path="md/Pandas-guiZheng-chongSu.html">
+            
+                
+                    <a href="../md/Pandas-guiZheng-chongSu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.10.</b>
+                        
+                        数据规整-重塑
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.10.1" data-path="md/Pandas-guiZheng-touShi.html">
+            
+                
+                    <a href="../md/Pandas-guiZheng-touShi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.10.1.</b>
+                        
+                        透视表和交叉表
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.11" data-path="md/Pandas-guiZheng-heBing.html">
+            
+                
+                    <a href="../md/Pandas-guiZheng-heBing.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.11.</b>
+                        
+                        数据规整-合并
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="md/wenBen.html">
+            
+                
+                    <a href="../md/wenBen.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        文本挖掘/非结构化数据分析
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="md/keshihua.html">
+            
+                
+                    <a href="../md/keshihua.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        Python可视化
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="md/matplotlib.html">
+            
+                
+                    <a href="../md/matplotlib.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        绘图库-Matplotlib
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="md/matplotlib-tuBiao.html">
+            
+                
+                    <a href="../md/matplotlib-tuBiao.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.1.</b>
+                        
+                        基础：常用图表
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.2" data-path="md/matplotlib-quYu.html">
+            
+                
+                    <a href="../md/matplotlib-quYu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.2.</b>
+                        
+                        提升：绘图区域
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.3" data-path="md/matplotlib-zuJian.html">
+            
+                
+                    <a href="../md/matplotlib-zuJian.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.3.</b>
+                        
+                        提升：图像组件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.4" data-path="md/matplotlib-gaoJi.html">
+            
+                
+                    <a href="../md/matplotlib-gaoJi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.4.</b>
+                        
+                        拓展：高级绘图
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.5" data-path="md/matplotlib-zhuYi.html">
+            
+                
+                    <a href="../md/matplotlib-zhuYi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.5.</b>
+                        
+                        拓展：注意事项
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.6" data-path="md/matplotlib-pylab.html">
+            
+                
+                    <a href="../md/matplotlib-pylab.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.6.</b>
+                        
+                        拓展：pylab
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="md/Pandas-huiTu.html">
+            
+                
+                    <a href="../md/Pandas-huiTu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        Pandas绘图
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="md/keshihua-web.html">
+            
+                
+                    <a href="../md/keshihua-web.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        WEB数据可视化-Echarts
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="md/keshihua-seaborn.html">
+            
+                
+                    <a href="../md/keshihua-seaborn.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        seaborn绘图（了解）
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="md/numpy.html">
+            
+                
+                    <a href="../md/numpy.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        数值计算库-Numpy
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="md/numpy-chuangJian.html">
+            
+                
+                    <a href="../md/numpy-chuangJian.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        基础：ndarray数组创建
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="md/numpy-suoYin.html">
+            
+                
+                    <a href="../md/numpy-suoYin.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        基础：查询修改
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="md/numpy-bianHuan.html">
+            
+                
+                    <a href="../md/numpy-bianHuan.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        提升：数组变换
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="md/numpy-tongJi.html">
+            
+                
+                    <a href="../md/numpy-tongJi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.</b>
+                        
+                        提升：数组运算
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="md/numpy-shuJuChunQu.html">
+            
+                
+                    <a href="../md/numpy-shuJuChunQu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.5.</b>
+                        
+                        拓展：数据存取
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="md/numpy-caoZuo.html">
+            
+                
+                    <a href="../md/numpy-caoZuo.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.6.</b>
+                        
+                        拓展：数组操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="md/numpy-suiJiShu.html">
+            
+                
+                    <a href="../md/numpy-suiJiShu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.7.</b>
+                        
+                        拓展：随机数-拓展
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.8" data-path="md/numpy-yunSuan.html">
+            
+                
+                    <a href="../md/numpy-yunSuan.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.8.</b>
+                        
+                        拓展：数组运算-拓展
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Python数据课程</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="&#x5C42;&#x6B21;&#x5316;&#x7D22;&#x5F15;">&#x5C42;&#x6B21;&#x5316;&#x7D22;&#x5F15;</h1>
+<hr>
+<ul>
+<li>&#x5C42;&#x6B21;&#x5316;&#x7D22;&#x5F15;&#xFF08;hierarchical indexing&#xFF09;&#x4F7F;&#x4F60;&#x80FD;&#x5728;&#x4E00;&#x4E2A;&#x8F74;&#x4E0A;&#x62E5;&#x6709;&#x8D85;&#x8FC7;1&#x4E2A;&#x7D22;&#x5F15;&#x7EA7;&#x522B;</li>
+<li>&#x5C42;&#x6B21;&#x5316;&#x7D22;&#x5F15;&#x80FD;&#x4EE5;&#x4F4E;&#x7EF4;&#x5EA6;&#x5F62;&#x5F0F;&#x5904;&#x7406;&#x9AD8;&#x7EF4;&#x5EA6;&#x6570;&#x636E;</li>
+</ul>
+<h3 id="series&#x5BF9;&#x8C61;&#x7684;&#x5C42;&#x6B21;&#x5316;&#x7D22;&#x5F15;">Series&#x5BF9;&#x8C61;&#x7684;&#x5C42;&#x6B21;&#x5316;&#x7D22;&#x5F15;</h3>
+<pre><code class="lang-python">data = pd.Series(np.random.randn(<span class="hljs-number">9</span>), index=[[<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>, <span class="hljs-string">&apos;d&apos;</span>, <span class="hljs-string">&apos;d&apos;</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]])
+data
+
+data.index
+
+<span class="hljs-comment"># &#x5C42;&#x6B21;&#x5316;&#x7D22;&#x5F15;&#x67E5;&#x8BE2;</span>
+
+ <span class="hljs-comment"># &#x9ED8;&#x8BA4;&#x7D22;&#x5F15;&#xFF0C;&#x4F4D;&#x7F6E;&#x7D22;&#x5F15;</span>
+data[<span class="hljs-number">0</span>]
+data[[<span class="hljs-number">0</span>, <span class="hljs-number">2</span>]]
+
+<span class="hljs-comment"># &#x5916;&#x5C42;&#x7D22;&#x5F15;&#x67E5;&#x8BE2;</span>
+data[<span class="hljs-string">&apos;b&apos;</span>]  <span class="hljs-comment"># &#x81EA;&#x5B9A;&#x4E49;&#x7D22;&#x5F15;</span>
+data[<span class="hljs-string">&apos;b&apos;</span>:<span class="hljs-string">&apos;c&apos;</span>]  <span class="hljs-comment"># &#x81EA;&#x5B9A;&#x4E49;&#x7D22;&#x5F15;&#x5207;&#x7247;</span>
+data.loc[[<span class="hljs-string">&apos;b&apos;</span>,<span class="hljs-string">&apos;d&apos;</span>]]  <span class="hljs-comment"># &#x81EA;&#x5B9A;&#x4E49;&#x7D22;&#x5F15;&#xFF0C;&#x9009;&#x62E9;&#x591A;&#x4E2A;&#x5143;&#x7D20;</span>
+
+<span class="hljs-comment"># &#x5185;&#x5C42;&#x7D22;&#x5F15;&#x67E5;&#x8BE2;</span>
+data.loc[<span class="hljs-string">&apos;a&apos;</span>]  <span class="hljs-comment"># &#x5916;&#x5C42;</span>
+data.loc[:, <span class="hljs-number">2</span>]  <span class="hljs-comment"># &#x5185;&#x5C42;</span>
+data.loc[<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-number">2</span>]
+
+<span class="hljs-comment"># &#x5C06;&#x5C42;&#x6B21;&#x5316;&#x7D22;&#x5F15;Series&#x8F6C;&#x4E3A;DataFrame</span>
+data.unstack()
+data.unstack().stack()  <span class="hljs-comment"># unstack&#x7684;&#x9006;&#x8FD0;&#x7B97;&#x662F;stack</span>
+</code></pre>
+<h3 id="dataframe&#x5BF9;&#x8C61;&#x7684;&#x5C42;&#x6B21;&#x5316;&#x7D22;&#x5F15;">DataFrame&#x5BF9;&#x8C61;&#x7684;&#x5C42;&#x6B21;&#x5316;&#x7D22;&#x5F15;</h3>
+<p>&#x6BCF;&#x6761;&#x8F74;&#x90FD;&#x53EF;&#x4EE5;&#x6709;&#x5206;&#x5C42;&#x7D22;&#x5F15;</p>
+<pre><code class="lang-python">frame = pd.DataFrame(
+    np.arange(<span class="hljs-number">12</span>).reshape((<span class="hljs-number">4</span>, <span class="hljs-number">3</span>)),
+    index=[[<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>]],
+    columns=[[<span class="hljs-string">&apos;Ohio&apos;</span>, <span class="hljs-string">&apos;Ohio&apos;</span>, <span class="hljs-string">&apos;Colorado&apos;</span>],[<span class="hljs-string">&apos;Green&apos;</span>, <span class="hljs-string">&apos;Red&apos;</span>, <span class="hljs-string">&apos;Green&apos;</span>]],
+)
+frame
+
+<span class="hljs-comment"># &#x5404;&#x5C42;&#x7D22;&#x5F15;&#x6307;&#x5B9A;name</span>
+frame.index.names = [<span class="hljs-string">&apos;key1&apos;</span>, <span class="hljs-string">&apos;key2&apos;</span>]
+frame.columns.names = [<span class="hljs-string">&apos;state&apos;</span>, <span class="hljs-string">&apos;color&apos;</span>]
+frame
+frame.index
+frame.columns
+
+<span class="hljs-comment"># DataFrame&#x5C42;&#x6B21;&#x5316;&#x7D22;&#x5F15;&#x67E5;&#x8BE2;</span>
+frame.loc[<span class="hljs-string">&apos;a&apos;</span>]  <span class="hljs-comment"># .loc[&#x5916;&#x5C42;&#x884C;]</span>
+frame.loc[<span class="hljs-string">&apos;a&apos;</span>,<span class="hljs-string">&apos;Ohio&apos;</span>]  <span class="hljs-comment"># .loc[&#x5916;&#x5C42;&#x884C;&#xFF0C;&#x5916;&#x5C42;&#x5217;]</span>
+frame.loc[<span class="hljs-string">&apos;a&apos;</span>,<span class="hljs-number">1</span>]  <span class="hljs-comment"># .loc[&#x5916;&#x5C42;&#x884C;&#xFF0C;&#x5185;&#x5C42;&#x884C;]</span>
+frame[<span class="hljs-string">&apos;Ohio&apos;</span>,<span class="hljs-string">&apos;Green&apos;</span>]  <span class="hljs-comment"># [&#x5916;&#x5C42;&#x5217;&#xFF0C;&#x5185;&#x5C42;&#x5217;]</span>
+frame.loc[<span class="hljs-string">&apos;a&apos;</span>,<span class="hljs-number">1</span>][<span class="hljs-string">&apos;Ohio&apos;</span>,<span class="hljs-string">&apos;Green&apos;</span>]  <span class="hljs-comment"># .loc[&#x5916;&#x5C42;&#x884C;&#xFF0C;&#x5185;&#x5C42;&#x884C;][&#x5916;&#x5C42;&#x5217;&#xFF0C;&#x5185;&#x5C42;&#x5217;]</span>
+frame.loc[<span class="hljs-string">&apos;a&apos;</span>,<span class="hljs-string">&apos;Ohio&apos;</span>].loc[<span class="hljs-number">1</span>,<span class="hljs-string">&apos;Green&apos;</span>]  <span class="hljs-comment"># &#x540C;&#x4E0A;&#xFF0C;.loc[&#x5916;&#x5C42;&#x884C;&#xFF0C;&#x5916;&#x5C42;&#x5217;].loc[&#x5185;&#x5C42;&#x884C;&#xFF0C;&#x5185;&#x5C42;&#x5217;]</span>
+</code></pre>
+<hr>
+<h2 id="&#x91CD;&#x6392;&#x4E0E;&#x5206;&#x7EA7;&#x6392;&#x5E8F;">&#x91CD;&#x6392;&#x4E0E;&#x5206;&#x7EA7;&#x6392;&#x5E8F;</h2>
+<p>&#x8C03;&#x6574;&#x67D0;&#x6761;&#x8F74;&#x4E0A;&#x5404;&#x7EA7;&#x522B;&#x7684;&#x987A;&#x5E8F;&#xFF0C;&#x6216;&#x6839;&#x636E;&#x6307;&#x5B9A;&#x7EA7;&#x522B;&#x4E0A;&#x7684;&#x503C;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x6392;&#x5E8F;</p>
+<pre><code class="lang-python">frame.swaplevel(<span class="hljs-string">&apos;key1&apos;</span>, <span class="hljs-string">&apos;key2&apos;</span>)  <span class="hljs-comment"># &#x4EA4;&#x6362;&#x884C;&#x7D22;&#x5F15;&#x5C42;&#x7EA7;</span>
+frame.swaplevel(<span class="hljs-string">&apos;state&apos;</span>, <span class="hljs-string">&apos;color&apos;</span>, axis=<span class="hljs-number">1</span>)  <span class="hljs-comment"># &#x4EA4;&#x6362;&#x5217;&#x7D22;&#x5F15;&#x5C42;&#x7EA7;</span>
+
+frame.sort_index(ascending=<span class="hljs-keyword">False</span>)  <span class="hljs-comment"># &#x6309;&#x7D22;&#x5F15;&#x6392;&#x5E8F;&#xFF0C;0&#x8F74;&#xFF0C;&#x964D;&#x5E8F;</span>
+<span class="hljs-comment"># &#x6307;&#x5B9A;&#x6392;&#x5E8F;&#x7D22;&#x5F15;&#x5C42;</span>
+frame.sort_index(level=<span class="hljs-number">1</span>, ascending=<span class="hljs-keyword">False</span>)  <span class="hljs-comment"># 0&#x8F74;&#xFF0C;&#x5185;&#x5C42;&#x7D22;&#x5F15;&#x6392;&#x5E8F;</span>
+frame.sort_index(axis=<span class="hljs-number">1</span>)  <span class="hljs-comment"># 1&#x8F74;&#xFF0C;&#x5217;&#x7D22;&#x5F15;&#x6392;&#x5E8F;&#xFF0C;&#x5B57;&#x7B26;&#x7F16;&#x7801;&#x987A;&#x5E8F;</span>
+
+frame.swaplevel(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>)  <span class="hljs-comment"># &#x4EA4;&#x6362;&#x884C;&#x7D22;&#x5F15;&#x5C42;&#x7EA7;&#xFF0C;&#x540C;(&apos;key1&apos;,&apos;key2&apos;)</span>
+frame.swaplevel(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>).sort_index(level=<span class="hljs-number">0</span>)  <span class="hljs-comment"># &#x4EA4;&#x6362;&#x884C;&#x7D22;&#x5F15;&#x5C42;&#x7EA7;&#x540E;&#xFF0C;&#x6392;&#x5E8F;&#x5916;&#x5C42;&#x884C;&#x7D22;&#x5F15;</span>
+</code></pre>
+<hr>
+<h2 id="&#x6839;&#x636E;&#x7EA7;&#x522B;&#x6C47;&#x603B;&#x7EDF;&#x8BA1;">&#x6839;&#x636E;&#x7EA7;&#x522B;&#x6C47;&#x603B;&#x7EDF;&#x8BA1;</h2>
+<p>&#x8BB8;&#x591A;&#x5BF9;DataFrame&#x548C;Series&#x7684;&#x63CF;&#x8FF0;&#x548C;&#x6C47;&#x603B;&#x7EDF;&#x8BA1;&#x51FD;&#x6570;&#x90FD;&#x6709;&#x4E00;&#x4E2A;level&#x9009;&#x9879;&#xFF0C;&#x5B83;&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x5728;&#x67D0;&#x6761;&#x8F74;&#x4E0A;&#x8BA1;&#x7B97;&#x7684;&#x7EA7;&#x522B;</p>
+<p>&#x5176;&#x5B9E;&#x662F;&#x5229;&#x7528;&#x4E86;pandas&#x7684;groupby&#x529F;&#x80FD;</p>
+<pre><code class="lang-python">frame
+
+frame.sum()  <span class="hljs-comment"># &#x6574;&#x8868;&#x6C42;&#x548C;</span>
+frame.sum(level=<span class="hljs-string">&apos;key1&apos;</span>)  <span class="hljs-comment"># &#x6307;&#x5B9A;&#x5916;&#x5C42;&#x884C;&#x7D22;&#x5F15;key1&#x6C42;&#x548C;</span>
+frame.sum(level=<span class="hljs-string">&apos;key2&apos;</span>)  <span class="hljs-comment"># &#x6307;&#x5B9A;&#x5916;&#x5C42;&#x884C;&#x7D22;&#x5F15;key2&#x6C42;&#x548C;</span>
+
+frame.groupby(<span class="hljs-string">&apos;key2&apos;</span>).sum()  <span class="hljs-comment"># &#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x8D77;&#x59CB;&#x5C31;&#x662F;&#x5206;&#x7EC4;&#x805A;&#x5408;</span>
+
+<span class="hljs-comment"># &#x6309;&#x5217;&#x7D22;&#x5F15;&#xFF0C;&#x5C42;&#x6B21;&#x5316;&#x6C42;&#x548C;</span>
+
+frame.sum(level=<span class="hljs-string">&apos;color&apos;</span>, axis=<span class="hljs-number">1</span>)
+frame.groupby([<span class="hljs-string">&apos;Green&apos;</span>,<span class="hljs-string">&apos;Red&apos;</span>,<span class="hljs-string">&apos;Green&apos;</span>], axis=<span class="hljs-number">1</span>).sum()  <span class="hljs-comment"># &#x540C;&#x4E0A;&#xFF0C;&#x9ED8;&#x8BA4;&#x7ED9;&#x5185;&#x5C42;&#x5217;&#x7D22;&#x5F15;&#x5206;&#x7EC4;</span>
+
+frame.sum(level=<span class="hljs-string">&apos;state&apos;</span>, axis=<span class="hljs-number">1</span>)
+<span class="hljs-comment"># &#x540C;&#x4E0A;&#xFF0C;&#x60F3;&#x7ED9;&#x5916;&#x5C42;&#x5217;&#x7D22;&#x5F15;&#x5206;&#x7EC4;&#x805A;&#x5408;&#xFF0C;</span>
+frame.groupby(level=<span class="hljs-number">0</span>, axis=<span class="hljs-number">1</span>).sum()
+<span class="hljs-comment"># &#x6216;&#x8005;&#x5148;&#x5C06;&#x5217;&#x7D22;&#x5F15;&#x5185;&#x5916;&#x5C42;&#x7FFB;&#x8F6C;&#xFF0C;&#x518D;&#x5206;&#x7EC4;</span>
+x = frame.swaplevel(<span class="hljs-string">&apos;state&apos;</span>, <span class="hljs-string">&apos;color&apos;</span>, axis=<span class="hljs-number">1</span>)
+x
+x.groupby([<span class="hljs-string">&apos;Ohio&apos;</span>,<span class="hljs-string">&apos;Ohio&apos;</span>,<span class="hljs-string">&apos;Colorado&apos;</span>], axis=<span class="hljs-number">1</span>).sum()  <span class="hljs-comment"># &#x4E09;&#x5217;&#xFF0C;&#x4E0D;&#x662F;2&#x5217;</span>
+</code></pre>
+<hr>
+<h2 id="&#x4F7F;&#x7528;dataframe&#x7684;&#x5217;&#x6216;&#x884C;&#x8FDB;&#x884C;&#x7D22;&#x5F15;">&#x4F7F;&#x7528;DataFrame&#x7684;&#x5217;&#x6216;&#x884C;&#x8FDB;&#x884C;&#x7D22;&#x5F15;</h2>
+<p>&#x5C06;DataFrame&#x7684;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5217;&#x5F53;&#x505A;&#x884C;&#x7D22;&#x5F15;&#x6765;&#x7528;&#xFF0C;&#x6216;&#x8005;&#x5C06;&#x884C;&#x7D22;&#x5F15;&#x53D8;&#x6210;DataFrame&#x7684;&#x5217;</p>
+<pre><code class="lang-python">frame = pd.DataFrame(
+    {<span class="hljs-string">&apos;a&apos;</span>: range(<span class="hljs-number">7</span>), <span class="hljs-string">&apos;b&apos;</span>: range(<span class="hljs-number">7</span>, <span class="hljs-number">0</span>, -<span class="hljs-number">1</span>),
+     <span class="hljs-string">&apos;c&apos;</span>: [<span class="hljs-string">&apos;one&apos;</span>, <span class="hljs-string">&apos;one&apos;</span>, <span class="hljs-string">&apos;one&apos;</span>, <span class="hljs-string">&apos;two&apos;</span>, <span class="hljs-string">&apos;two&apos;</span>, <span class="hljs-string">&apos;two&apos;</span>, <span class="hljs-string">&apos;two&apos;</span>],
+     <span class="hljs-string">&apos;d&apos;</span>: [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]}
+)
+frame
+
+<span class="hljs-comment"># DataFrame&#x7684;set_index&#x51FD;&#x6570;&#x4F1A;&#x5C06;&#x5176;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5217;&#x8F6C;&#x6362;&#x4E3A;&#x884C;&#x7D22;&#x5F15;</span>
+frame2 = frame.set_index([<span class="hljs-string">&apos;c&apos;</span>, <span class="hljs-string">&apos;d&apos;</span>])
+frame2
+
+<span class="hljs-comment"># reset_index&#x7684;&#x529F;&#x80FD;&#x8DDF;set_index&#x76F8;&#x53CD;&#xFF0C;&#x5C42;&#x6B21;&#x5316;&#x7D22;&#x5F15;&#x7684;&#x7EA7;&#x522B;&#x4F1A;&#x88AB;&#x8F6C;&#x79FB;&#x5230;&#x5217;&#x91CC;&#x9762;</span>
+frame2.reset_index()
+
+<span class="hljs-comment"># &#x4FDD;&#x7559;&#x8F6C;&#x6362;&#x540E;&#x7684;&#x5217;</span>
+frame.set_index([<span class="hljs-string">&apos;c&apos;</span>, <span class="hljs-string">&apos;d&apos;</span>], drop=<span class="hljs-keyword">False</span>)
+</code></pre>
+<p>&#x5982;&#x679C;&#x8981;&#x5C06;&#x4E00;&#x4E9B;&#x884C;&#x8F6C;&#x4E3A;&#x5217;&#x7D22;&#x5F15;&#xFF0C;&#x53EF;&#x4EE5;&#x5148;&#x5C06;DataFrame&#x5BF9;&#x8C61;&#x8F6C;&#x7F6E;&#xFF0C;&#x518D;&#x8FDB;&#x884C;&#x4E0A;&#x9762;&#x7684;&#x64CD;&#x4F5C;</p>
+<pre><code class="lang-python">frame3 = frame.T.reset_index()  <span class="hljs-comment"># &#x8F6C;&#x7F6E;&#xFF0C;&#x5E76;&#x5C06;&#x884C;&#x7D22;&#x5F15;&#x6062;&#x590D;&#x81F3;&#x5217;&#xFF08;&#x5426;&#x5219;&#x64CD;&#x4F5C;&#x65F6;&#x4F1A;&#x4E22;&#x5931;&#x539F;&#x884C;&#x7D22;&#x5F15;&#x6570;&#x636E;&#xFF09;</span>
+frame3
+
+z = frame3.set_index([<span class="hljs-string">&apos;index&apos;</span>,<span class="hljs-number">0</span>])  <span class="hljs-comment"># &#x5C06;&#x6307;&#x5B9A;&#x5217;&#x8F6C;&#x4E3A;&#x884C;&#x7D22;&#x5F15;</span>
+z
+
+z.T  <span class="hljs-comment"># &#x5BF9;&#x8C61;&#x91CD;&#x65B0;&#x8F6C;&#x56DE;&#x539F;&#x6765;&#x7684;&#x884C;&#x5217;&#x72B6;&#x6001;</span>
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../md/Pandas-guiZheng-zhuanHuan.html" class="navigation navigation-prev " aria-label="Previous page: 数据规整-转换"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../md/Pandas-liSan.html" class="navigation navigation-next " aria-label="Next page: 离散化和面元划分"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

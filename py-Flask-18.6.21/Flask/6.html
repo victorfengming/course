@@ -1,0 +1,448 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>状态保持 | 欢迎使用 Flask</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../Project/index.html" />
+    
+    
+    <link rel="prev" href="../Flask/5.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="2.6"
+        data-chapter-title="状态保持"
+        data-filepath="Flask/6.md"
+        data-basepath=".."
+        data-revision="Thu Jun 21 2018 19:32:35 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="Flask/virtualenv.html">
+            
+                
+                    <a href="../Flask/virtualenv.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Virtualenv
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Flask简介
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="Flask/index.html">
+            
+                
+                    <a href="../Flask/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Flask教程
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="Flask/1.html">
+            
+                
+                    <a href="../Flask/1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Route 路由
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="Flask/2.html">
+            
+                
+                    <a href="../Flask/2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        templates 模板
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="Flask/3.html">
+            
+                
+                    <a href="../Flask/3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Models 模型
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="Flask/3/1.html">
+            
+                
+                    <a href="../Flask/3/1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.1.</b>
+                        
+                        定义模型
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="Flask/3/2.html">
+            
+                
+                    <a href="../Flask/3/2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.2.</b>
+                        
+                        模型操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" data-path="Flask/3/3.html">
+            
+                
+                    <a href="../Flask/3/3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.3.</b>
+                        
+                        ORM关系模型
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="Flask/11.html">
+            
+                
+                    <a href="../Flask/11.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        蓝图
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="Flask/5.html">
+            
+                
+                    <a href="../Flask/5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        静态文件+上传
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.6" data-path="Flask/6.html">
+            
+                
+                    <a href="../Flask/6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        状态保持
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="Project/index.html">
+            
+                
+                    <a href="../Project/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        博客项目设计与实现
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="Project/1.html">
+            
+                
+                    <a href="../Project/1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        项目设计
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >欢迎使用 Flask</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="cookies">Cookies</h1>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<a href="http://docs.jinkan.org/docs/flask/api.html#flask.Request.cookies" target="_blank">cookies</a>&#x5C5E;&#x6027;&#x6765;&#x8BBF;&#x95EE; Cookies&#xFF0C;&#x7528;&#x54CD;&#x5E94;&#x5BF9;&#x8C61;&#x7684;<a href="http://docs.jinkan.org/docs/flask/api.html#flask.Response.set_cookie" target="_blank">set_cookie</a>&#x65B9;&#x6CD5;&#x6765;&#x8BBE;&#x7F6E; Cookies&#x3002;&#x8BF7;&#x6C42;&#x5BF9;&#x8C61;&#x7684;<a href="http://docs.jinkan.org/docs/flask/api.html#flask.Request.cookies" target="_blank">cookies</a>&#x5C5E;&#x6027;&#x662F;&#x4E00;&#x4E2A;&#x5185;&#x5BB9;&#x4E3A;&#x5BA2;&#x6237;&#x7AEF;&#x63D0;&#x4EA4;&#x7684;&#x6240;&#x6709; Cookies &#x7684;&#x5B57;&#x5178;&#x3002;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x4F7F;&#x7528;&#x4F1A;&#x8BDD;&#xFF0C;&#x8BF7;&#x4E0D;&#x8981;&#x76F4;&#x63A5;&#x4F7F;&#x7528; Cookies&#xFF0C;&#x8BF7;&#x53C2;&#x8003;<a href="http://docs.jinkan.org/docs/flask/quickstart.html#sessions" target="_blank"><em>&#x4F1A;&#x8BDD;</em></a>&#x4E00;&#x8282;&#x3002;&#x5728; Flask &#x4E2D;&#xFF0C;&#x5DF2;&#x7ECF;&#x6CE8;&#x610F;&#x5904;&#x7406;&#x4E86;&#x4E00;&#x4E9B; Cookies &#x5B89;&#x5168;&#x7EC6;&#x8282;&#x3002;</p>
+<p>&#x8BFB;&#x53D6; cookies:</p>
+<pre><code class="lang-py"><span class="hljs-keyword">from</span> flask <span class="hljs-keyword">import</span> request
+
+<span class="hljs-decorator">@app.route(&apos;/&apos;)</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">index</span><span class="hljs-params">()</span>:</span>
+    username = request.cookies.get(<span class="hljs-string">&apos;username&apos;</span>)
+    <span class="hljs-comment"># use cookies.get(key) instead of cookies[key] to not get a</span>
+    <span class="hljs-comment"># KeyError if the cookie is missing.</span>
+</code></pre>
+<p>&#x5B58;&#x50A8; cookies:</p>
+<pre><code class="lang-py"><span class="hljs-keyword">from</span> flask <span class="hljs-keyword">import</span> make_response
+
+<span class="hljs-decorator">@app.route(&apos;/&apos;)</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">index</span><span class="hljs-params">()</span>:</span>
+    resp = make_response(render_template(...))
+    resp.set_cookie(<span class="hljs-string">&apos;username&apos;</span>, <span class="hljs-string">&apos;the username&apos;</span>)
+    <span class="hljs-keyword">return</span> resp
+</code></pre>
+<p>&#x53EF;&#x6CE8;&#x610F;&#x5230;&#x7684;&#x662F;&#xFF0C;Cookies &#x662F;&#x8BBE;&#x7F6E;&#x5728;&#x54CD;&#x5E94;&#x5BF9;&#x8C61;&#x4E0A;&#x7684;&#x3002;&#x7531;&#x4E8E;&#x901A;&#x5E38;&#x89C6;&#x56FE;&#x51FD;&#x6570;&#x53EA;&#x662F;&#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4E4B;&#x540E; Flask &#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6362;&#x4E3A;&#x54CD;&#x5E94;&#x5BF9;&#x8C61;&#x3002;&#x5982;&#x679C;&#x4F60;&#x8981;&#x663E;&#x5F0F;&#x5730;&#x8F6C;&#x6362;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<a href="http://docs.jinkan.org/docs/flask/api.html#flask.make_response" target="_blank">make_response()</a>&#x51FD;&#x6570;&#x7136;&#x540E;&#x518D;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#x3002;</p>
+<p>&#x6709;&#x65F6;&#x5019;&#x4F60;&#x60F3;&#x8BBE;&#x7F6E; Cookie&#xFF0C;&#x4F46;&#x54CD;&#x5E94;&#x5BF9;&#x8C61;&#x4E0D;&#x80FD;&#x918B;&#x5728;&#x3002;&#x8FD9;&#x53EF;&#x4EE5;&#x5229;&#x7528;<a href="http://docs.jinkan.org/docs/flask/patterns/deferredcallbacks.html#deferred-callbacks" target="_blank"><em>&#x5EF6;&#x8FDF;&#x8BF7;&#x6C42;&#x56DE;&#x8C03;</em></a>&#x6A21;&#x5F0F;&#x5B9E;&#x73B0;&#x3002;</p>
+<p>&#x4E3A;&#x6B64;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x9605;&#x8BFB;<a href="http://docs.jinkan.org/docs/flask/quickstart.html#about-responses" target="_blank"><em>&#x5173;&#x4E8E;&#x54CD;&#x5E94;</em></a>&#x3002;</p>
+<h1 id="session">session</h1>
+<p>&#x9664;&#x8BF7;&#x6C42;&#x5BF9;&#x8C61;&#x4E4B;&#x5916;&#xFF0C;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;<a href="http://docs.jinkan.org/docs/flask/api.html#flask.session" target="_blank">session</a>&#x5BF9;&#x8C61;&#x3002;&#x5B83;&#x5141;&#x8BB8;&#x4F60;&#x5728;&#x4E0D;&#x540C;&#x8BF7;&#x6C42;&#x95F4;&#x5B58;&#x50A8;&#x7279;&#x5B9A;&#x7528;&#x6237;&#x7684;&#x4FE1;&#x606F;&#x3002;&#x5B83;&#x662F;&#x5728; Cookies &#x7684;&#x57FA;&#x7840;&#x4E0A;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x5BF9; Cookies &#x8FDB;&#x884C;&#x5BC6;&#x94A5;&#x7B7E;&#x540D;&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x4F60; Cookie &#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x4F46;&#x5374;&#x4E0D;&#x80FD;&#x4FEE;&#x6539;&#x5B83;&#xFF0C;&#x9664;&#x975E;&#x7528;&#x6237;&#x77E5;&#x9053;&#x7B7E;&#x540D;&#x7684;&#x5BC6;&#x94A5;&#x3002;</p>
+<p>&#x8981;&#x4F7F;&#x7528;&#x4F1A;&#x8BDD;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x5BC6;&#x94A5;&#x3002;&#x8FD9;&#x91CC;&#x4ECB;&#x7ECD;&#x4F1A;&#x8BDD;&#x5982;&#x4F55;&#x5DE5;&#x4F5C;:</p>
+<pre><code class="lang-py"><span class="hljs-keyword">from</span> flask <span class="hljs-keyword">import</span> Flask, session, redirect, url_for, escape, request
+
+app = Flask(__name__)
+
+<span class="hljs-decorator">@app.route(&apos;/&apos;)</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">index</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-keyword">if</span> <span class="hljs-string">&apos;username&apos;</span> <span class="hljs-keyword">in</span> session:
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;Logged in as %s&apos;</span> % escape(session[<span class="hljs-string">&apos;username&apos;</span>])
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;You are not logged in&apos;</span>
+
+<span class="hljs-decorator">@app.route(&apos;/login&apos;, methods=[&apos;GET&apos;, &apos;POST&apos;])</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">login</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-keyword">if</span> request.method == <span class="hljs-string">&apos;POST&apos;</span>:
+        session[<span class="hljs-string">&apos;username&apos;</span>] = request.form[<span class="hljs-string">&apos;username&apos;</span>]
+        <span class="hljs-keyword">return</span> redirect(url_for(<span class="hljs-string">&apos;index&apos;</span>))
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&apos;&apos;
+        &lt;form action=&quot;&quot; method=&quot;post&quot;&gt;
+            &lt;p&gt;&lt;input type=text name=username&gt;
+            &lt;p&gt;&lt;input type=submit value=Login&gt;
+        &lt;/form&gt;
+    &apos;&apos;&apos;</span>
+
+<span class="hljs-decorator">@app.route(&apos;/logout&apos;)</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">logout</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-comment"># remove the username from the session if it&apos;s there</span>
+    session.pop(<span class="hljs-string">&apos;username&apos;</span>, <span class="hljs-keyword">None</span>)
+    <span class="hljs-keyword">return</span> redirect(url_for(<span class="hljs-string">&apos;index&apos;</span>))
+
+<span class="hljs-comment"># set the secret key.  keep this really secret:</span>
+app.secret_key = <span class="hljs-string">&apos;A0Zr98j/3yX R~XHH!jmN]LWX/,?RT&apos;</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x63D0;&#x5230;&#x7684;<a href="http://docs.jinkan.org/docs/flask/api.html#flask.escape" target="_blank">escape()</a>&#x53EF;&#x4EE5;&#x5728;&#x4F60;&#x6A21;&#x677F;&#x5F15;&#x64CE;&#x5916;&#x505A;&#x8F6C;&#x4E49;&#xFF08;&#x5982;&#x540C;&#x672C;&#x4F8B;&#xFF09;&#x3002;</p>
+<p>&#x5982;&#x4F55;&#x751F;&#x6210;&#x5F3A;&#x58EE;&#x7684;&#x5BC6;&#x94A5;</p>
+<p>&#x968F;&#x673A;&#x7684;&#x95EE;&#x9898;&#x5728;&#x4E8E;&#x5F88;&#x96BE;&#x5224;&#x65AD;&#x4EC0;&#x4E48;&#x662F;&#x771F;&#x968F;&#x673A;&#x3002;&#x4E00;&#x4E2A;&#x5BC6;&#x94A5;&#x5E94;&#x8BE5;&#x8DB3;&#x591F;&#x968F;&#x673A;&#x3002;&#x4F60;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x53EF;&#x4EE5;&#x57FA;&#x4E8E;&#x4E00;&#x4E2A;&#x5BC6;&#x94A5;&#x968F;&#x673A;&#x751F;&#x6210;&#x5668;&#x6765;&#x751F;&#x6210;&#x6F02;&#x4EAE;&#x7684;&#x968F;&#x673A;&#x503C;&#xFF0C;&#x8FD9;&#x4E2A;&#x503C;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x505A;&#x5BC6;&#x94A5;:</p>
+<pre><code class="lang-py"><span class="hljs-prompt">&gt;&gt;&gt; </span><span class="hljs-keyword">import</span> os
+<span class="hljs-prompt">&gt;&gt;&gt; </span>os.urandom(<span class="hljs-number">24</span>)
+<span class="hljs-string">&apos;\xfd{H\xe5&lt;\x95\xf9\xe3\x96.5\xd1\x01O&lt;!\xd5\xa2\xa0\x9fR&quot;\xa1\xa8&apos;</span>
+</code></pre>
+<p>&#x628A;&#x8FD9;&#x4E2A;&#x503C;&#x590D;&#x5236;&#x7C98;&#x8D34;&#x8FDB;&#x4F60;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x4F60;&#x5C31;&#x6709;&#x4E86;&#x5BC6;&#x94A5;&#x3002;</p>
+<p>&#x4F7F;&#x7528;&#x57FA;&#x4E8E; cookie &#x7684;&#x4F1A;&#x8BDD;&#x9700;&#x6CE8;&#x610F;: Flask &#x4F1A;&#x5C06;&#x4F60;&#x653E;&#x8FDB;&#x4F1A;&#x8BDD;&#x5BF9;&#x8C61;&#x7684;&#x503C;&#x5E8F;&#x5217;&#x5316;&#x81F3; Cookies&#x3002;&#x5982;&#x679C;&#x4F60;&#x53D1;&#x73B0;&#x67D0;&#x4E9B;&#x503C;&#x5728;&#x8BF7;&#x6C42;&#x4E4B;&#x95F4;&#x5E76;&#x6CA1;&#x6709;&#x6301;&#x4E45;&#x5B58;&#x5728;&#xFF0C;&#x7136;&#x800C;&#x786E;&#x5B9E;&#x5DF2;&#x7ECF;&#x542F;&#x7528;&#x4E86; Cookies&#xFF0C;&#x4F46;&#x4E5F;&#x6CA1;&#x6709;&#x5F97;&#x5230;&#x660E;&#x786E;&#x7684;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x3002;&#x8FD9;&#x65F6;&#xFF0C;&#x8BF7;&#x68C0;&#x67E5;&#x4F60;&#x7684;&#x9875;&#x9762;&#x54CD;&#x5E94;&#x4E2D;&#x7684; Cookies &#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x5E76;&#x4E0E; Web &#x6D4F;&#x89C8;&#x5668;&#x6240;&#x652F;&#x6301;&#x7684;&#x5927;&#x5C0F;&#x5BF9;&#x6BD4;&#x3002;</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../Flask/5.html" class="navigation navigation-prev " aria-label="Previous page: 静态文件+上传"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../Project/index.html" class="navigation navigation-next " aria-label="Next page: 博客项目设计与实现"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

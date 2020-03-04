@@ -1,0 +1,543 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>ORM关系模型 | 欢迎使用 Flask</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../../Flask/11.html" />
+    
+    
+    <link rel="prev" href="../../Flask/3/2.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="2.3.3"
+        data-chapter-title="ORM关系模型"
+        data-filepath="Flask/3/3.md"
+        data-basepath="../.."
+        data-revision="Thu Jun 21 2018 19:32:35 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="Flask/virtualenv.html">
+            
+                
+                    <a href="../../Flask/virtualenv.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Virtualenv
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="index.html">
+            
+                
+                    <a href="../../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Flask简介
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="Flask/index.html">
+            
+                
+                    <a href="../../Flask/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Flask教程
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="Flask/1.html">
+            
+                
+                    <a href="../../Flask/1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Route 路由
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="Flask/2.html">
+            
+                
+                    <a href="../../Flask/2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        templates 模板
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="Flask/3.html">
+            
+                
+                    <a href="../../Flask/3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Models 模型
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="Flask/3/1.html">
+            
+                
+                    <a href="../../Flask/3/1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.1.</b>
+                        
+                        定义模型
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="Flask/3/2.html">
+            
+                
+                    <a href="../../Flask/3/2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.2.</b>
+                        
+                        模型操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.3.3" data-path="Flask/3/3.html">
+            
+                
+                    <a href="../../Flask/3/3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.3.</b>
+                        
+                        ORM关系模型
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="Flask/11.html">
+            
+                
+                    <a href="../../Flask/11.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        蓝图
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="Flask/5.html">
+            
+                
+                    <a href="../../Flask/5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        静态文件+上传
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="Flask/6.html">
+            
+                
+                    <a href="../../Flask/6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        状态保持
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="Project/index.html">
+            
+                
+                    <a href="../../Project/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        博客项目设计与实现
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="Project/1.html">
+            
+                
+                    <a href="../../Project/1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        项目设计
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../" >欢迎使用 Flask</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="orm&#x5173;&#x7CFB;&#x6A21;&#x578B;">ORM&#x5173;&#x7CFB;&#x6A21;&#x578B;</h1>
+<p>SQLAlchemy&#x914D;&#x7F6E;</p>
+<pre><code>from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+from datetime import datetime
+import pymysql
+
+app = Flask(__name__)
+app.config[&apos;SQLALCHEMY_DATABASE_URI&apos;] = &quot;mysql+pymysql://root:123456@localhost/blog&quot;
+app.config[&apos;SQLALCHEMY_TRACK_MODIFICATIONS&apos;] = True
+# SQLALCHEMY_ON_TEARDOWN | flask-sqlalchemy==2.1
+
+db = SQLAlchemy(app)
+</code></pre><h2 id="&#x4E00;&#x5BF9;&#x4E00;onetoone&#x5173;&#x7CFB;">&#x4E00;&#x5BF9;&#x4E00;(one-to-one)&#x5173;&#x7CFB;</h2>
+<h3 id="&#x6A21;&#x578B;&#x5B9A;&#x4E49;">&#x6A21;&#x578B;&#x5B9A;&#x4E49;</h3>
+<pre><code>class Users(db.Model):
+    __tablename__ = &apos;users&apos;
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(50))
+    userinfo = db.relationship(&apos;UserInfo&apos;, backref=&apos;users&apos;, cascade=&quot;all, delete,delete-orphan&quot;,uselist=False)
+
+class UserInfo(db.Model):
+    __tablename__ = &apos;userinfo&apos;
+    id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(db.String(50))
+    users_id = db.Column(db.Integer, db.ForeignKey(&apos;users.id&apos;))
+</code></pre><h3 id="curd&#x64CD;&#x4F5C;">CURD&#x64CD;&#x4F5C;</h3>
+<pre><code># # &#x521B;&#x5EFA;&#x7528;&#x6237;
+# u1 = Users(name=&apos;&#x738B;&#x4E94;&apos;)
+# u2 = Users(name=&apos;&#x8D75;&#x67F3;&apos;)
+
+# db.session.add(u1)
+# db.session.add(u2)
+# db.session.commit()
+
+# # &#x521B;&#x5EFA;&#x8BE6;&#x60C5;
+# i1 = UserInfo(email=&apos;ww@qq.com&apos;)
+# i2 = UserInfo(email=&apos;zl@qq.com&apos;)
+
+# i1.users_id = u1.id
+# i2.users_id = u2.id
+# db.session.add(i1)
+# db.session.add(i2)
+# db.session.commit()
+
+# &#x6839;&#x636E;&#x7528;&#x6237;&#x67E5;&#x8BE6;&#x60C5;
+# u = Users.query.first()
+# print(u)
+# print(u.name)
+# print(u.userinfo.email)
+
+# &#x6839;&#x636E;&#x8BE6;&#x60C5;&#x67E5;&#x7528;&#x6237;
+# i = UserInfo.query.first()
+# print(i)
+# print(i.email)
+# print(i.users.name)
+
+# &#x5220;&#x9664;
+# u = Users.query.first()
+# db.session.delete(u)
+# db.session.commit()
+</code></pre><h2 id="&#x4E00;&#x5BF9;&#x591A;onetomany&#x5173;&#x7CFB;">&#x4E00;&#x5BF9;&#x591A;(one-to-many)&#x5173;&#x7CFB;</h2>
+<h3 id="&#x6A21;&#x578B;&#x5B9A;&#x4E49;">&#x6A21;&#x578B;&#x5B9A;&#x4E49;</h3>
+<pre><code># &#x73ED;&#x7EA7;
+class Classs(db.Model):
+    __tablename__ = &apos;class&apos;
+    id = db.Column(db.Integer, primary_key=True)
+    cname = db.Column(db.String(50))
+    # stus = db.relationship(&apos;Stus&apos;,backref=&quot;classs&quot;)
+    stus = db.relationship(&apos;Stus&apos;,backref=&quot;classs&quot;,cascade=&quot;all, delete,delete-orphan&quot;)
+    def __repr__(self):
+        return &apos;&lt;Classs %r&gt;&apos; % self.cname
+# &#x5B66;&#x5458;
+class Stus(db.Model):
+    __tablename__ = &apos;stu&apos;
+    id = db.Column(db.Integer, primary_key=True)
+    uname = db.Column(db.String(50))
+    c_id = db.Column(db.Integer, db.ForeignKey(&apos;class.id&apos;))
+    def __repr__(self):
+        return &apos;&lt;Stus %r&gt;&apos; % self.uname
+</code></pre><h3 id="curd&#x64CD;&#x4F5C;">CURD&#x64CD;&#x4F5C;</h3>
+<pre><code># &#x83B7;&#x53D6;&#x6240;&#x6709;&#x5B66;&#x5458;&#x53CA;&#x73ED;&#x7EA7;&#x4FE1;&#x606F;
+# s = Stus.query.join(Classs).filter(Stus.c_id == Classs.id).all()
+# print(s[0].classs.cname)
+# s = Stus.query.join(Classs).add_columns(Stus.id,Stus.uname,Classs.cname).filter(Stus.c_id == Classs.id).all()
+# s = db.session.query(Stus, Classs).filter(Stus.c_id == Classs.id).all()
+
+
+# &#x901A;&#x8FC7;&#x5B66;&#x5458;&#x67E5;&#x8BE2;&#x73ED;&#x7EA7;
+# s = Stus.query.get(1)
+# print(s)
+# print(s.id)
+# print(s.uname)
+# print(s.c_id)
+# print(s.classs.cname)
+
+
+# &#x901A;&#x8FC7;&#x73ED;&#x7EA7;&#x67E5;&#x8BE2;&#x5B66;&#x5458;
+# c = Classs.query.get(1)
+# print(c.stus)
+
+# &#x5220;&#x9664;
+# db.session.delete(c)
+# db.session.commit()
+
+# &#x6DFB;&#x52A0;
+# me = Stus(
+#     uname=&apos;&#x8D75;&#x67F3;&apos;,
+#     c_id=2
+# )
+# db.session.add(me)
+# db.session.commit()
+</code></pre><h2 id="&#x591A;&#x5BF9;&#x591A;manytomany&#x5173;&#x7CFB;">&#x591A;&#x5BF9;&#x591A;(many-to-many)&#x5173;&#x7CFB;</h2>
+<h3 id="&#x6A21;&#x578B;&#x5B9A;&#x4E49;">&#x6A21;&#x578B;&#x5B9A;&#x4E49;</h3>
+<pre><code>tags = db.Table(&apos;post_tag&apos;,
+    db.Column(&apos;tag_id&apos;, db.Integer, db.ForeignKey(&apos;tags.id&apos;)),
+    db.Column(&apos;post_id&apos;, db.Integer, db.ForeignKey(&apos;posts.id&apos;))
+)
+#&#x6587;&#x7AE0;
+class Posts(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(255))
+    tags = db.relationship(&apos;Tags&apos;,secondary=tags,backref=&apos;Posts&apos;)
+#&#x6807;&#x7B7E;
+class Tags(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(50))
+    # def __repr__(self):
+    #     return self.name
+</code></pre><h3 id="curd&#x64CD;&#x4F5C;">CURD&#x64CD;&#x4F5C;</h3>
+<pre><code># # &#x521B;&#x5EFA;&#x6587;&#x7AE0;
+# p1=Posts(title=&apos;flask&#x5F00;&#x53D1;&apos;)
+# p2=Posts(title=&apos;django&#x5F00;&#x53D1;&apos;)
+# p3=Posts(title=&apos;web&#x6846;&#x67B6;&#x5F00;&#x53D1;&#x535A;&#x5BA2;&#x7CFB;&#x7EDF;&apos;)
+
+# # &#x521B;&#x5EFA;&#x6807;&#x7B7E;
+# t1=Tags(name=&apos;falsk&apos;)
+# t2=Tags(name=&apos;django&apos;)
+# t3=Tags(name=&apos;web&#x6846;&#x67B6;&apos;)
+
+# # &#x6DFB;&#x52A0;&#x6570;&#x636E;
+# p1.tags = [t1,t3]
+# p2.tags = [t2,t3]
+# p3.tags = [t3]
+
+# db.session.add(p1)
+# db.session.add(p2)
+# db.session.add(p3)
+# db.session.commit()
+
+# &#x6839;&#x636E;&#x6587;&#x7AE0;&#x67E5;&#x6807;&#x7B7E;
+# p = db.session.query(Posts).first()
+# print(p)
+# print(p.title)
+# print(p.tags)
+
+# &#x6839;&#x636E;&#x6807;&#x7B7E;&#x67E5;&#x6587;&#x7AE0;
+# t = db.session.query(Tags).get(7)
+# print(t)
+# print(t.name)
+# print(t.Posts)
+</code></pre>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../../Flask/3/2.html" class="navigation navigation-prev " aria-label="Previous page: 模型操作"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../../Flask/11.html" class="navigation navigation-next " aria-label="Next page: 蓝图"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../../gitbook/app.js"></script>
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

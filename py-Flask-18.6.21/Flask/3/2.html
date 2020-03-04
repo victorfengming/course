@@ -1,0 +1,521 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>模型操作 | 欢迎使用 Flask</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../../Flask/3/3.html" />
+    
+    
+    <link rel="prev" href="../../Flask/3/1.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="2.3.2"
+        data-chapter-title="模型操作"
+        data-filepath="Flask/3/2.md"
+        data-basepath="../.."
+        data-revision="Thu Jun 21 2018 19:32:35 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="Flask/virtualenv.html">
+            
+                
+                    <a href="../../Flask/virtualenv.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Virtualenv
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="index.html">
+            
+                
+                    <a href="../../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Flask简介
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="Flask/index.html">
+            
+                
+                    <a href="../../Flask/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Flask教程
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="Flask/1.html">
+            
+                
+                    <a href="../../Flask/1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Route 路由
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="Flask/2.html">
+            
+                
+                    <a href="../../Flask/2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        templates 模板
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="Flask/3.html">
+            
+                
+                    <a href="../../Flask/3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Models 模型
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="Flask/3/1.html">
+            
+                
+                    <a href="../../Flask/3/1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.1.</b>
+                        
+                        定义模型
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.3.2" data-path="Flask/3/2.html">
+            
+                
+                    <a href="../../Flask/3/2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.2.</b>
+                        
+                        模型操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" data-path="Flask/3/3.html">
+            
+                
+                    <a href="../../Flask/3/3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.3.</b>
+                        
+                        ORM关系模型
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="Flask/11.html">
+            
+                
+                    <a href="../../Flask/11.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        蓝图
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="Flask/5.html">
+            
+                
+                    <a href="../../Flask/5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        静态文件+上传
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="Flask/6.html">
+            
+                
+                    <a href="../../Flask/6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        状态保持
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="Project/index.html">
+            
+                
+                    <a href="../../Project/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        博客项目设计与实现
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="Project/1.html">
+            
+                
+                    <a href="../../Project/1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        项目设计
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../" >欢迎使用 Flask</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="&#x6A21;&#x578B;&#x64CD;&#x4F5C;">&#x6A21;&#x578B;&#x64CD;&#x4F5C;</h1>
+<blockquote>
+<p>&#x8BE6;&#x60C5;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;<a href="http://docs.sqlalchemy.org/en/latest/orm/tutorial.html" target="_blank">SQLAlchemy&#x5B98;&#x7F51;:http://docs.sqlalchemy.org/en/latest/orm/tutorial.html</a></p>
+<p>&#x5047;&#x5982;&#x4F60;&#x5DF2;&#x7ECF;&#x5B9A;&#x4E49;&#x597D;&#x4E86;&#x6A21;&#x578B;,&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#x914D;&#x7F6E;:</p>
+</blockquote>
+<pre><code>from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+
+app = Flask(__name__)
+app.config[&quot;SQLALCHEMY_DATABASE_URI&quot;] = &quot;mysql://root:tp158917@127.0.0.1:3306/artcms&quot;
+# &#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x6210; True (&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;)&#xFF0C;Flask-SQLAlchemy &#x5C06;&#x4F1A;&#x8FFD;&#x8E2A;&#x5BF9;&#x8C61;&#x7684;&#x4FEE;&#x6539;&#x5E76;&#x4E14;&#x53D1;&#x9001;&#x4FE1;&#x53F7;&#x3002;
+app.config[&quot;SQLALCHEMY_TRACK_MODIFICATIONS&quot;] = True
+
+# &#x7ED1;&#x5B9A;app&#x81F3;SQLAlchemy
+db = SQLAlchemy(app)
+
+
+
+#&#x4F1A;&#x5458;&#x6A21;&#x578B;
+class User(db.Model):
+    __tablename__ = &apos;user&apos;
+
+    id = db.Column(db.Integer,primary_key=True)
+    name = db.Column(db.String(100),unique=True)
+    pwd= db.Column(db.String(100))
+    email= db.Column(db.String(100))
+    phone= db.Column(db.String(11))
+    info= db.Column(db.Text)
+    face = db.Column(db.String(255))
+    addtime = db.Column(db.DateTime,default=datetime.now)
+
+    def __repr__(self):
+    return &apos;&lt;User %r&gt;&apos; % self.username
+
+if __name__ == &quot;__main__&quot;:
+    db.create_all()
+</code></pre><h3 id="&#x521B;&#x5EFA;&#x751F;&#x6210;&#x8868;">&#x521B;&#x5EFA;&#x751F;&#x6210;&#x8868;</h3>
+<pre><code>db.create_all()
+</code></pre><h3 id="&#x6DFB;&#x52A0;&#x6570;&#x636E;">&#x6DFB;&#x52A0;&#x6570;&#x636E;</h3>
+<blockquote>
+<p>&#x5411;&#x6570;&#x636E;&#x5E93;&#x63D2;&#x5165;&#x6570;&#x636E;&#x5206;&#x4E3A;&#x4E09;&#x4E2A;&#x6B65;&#x9AA4;:</p>
+<ol>
+<li>&#x521B;&#x5EFA; Python &#x5BF9;&#x8C61;</li>
+<li>&#x628A;&#x5B83;&#x6DFB;&#x52A0;&#x5230;&#x4F1A;&#x8BDD;</li>
+<li>&#x63D0;&#x4EA4;&#x4F1A;&#x8BDD;</li>
+</ol>
+<p>&#x8FD9;&#x91CC;&#x7684;&#x4F1A;&#x8BDD;&#x4E0D;&#x662F; Flask &#x7684;&#x4F1A;&#x8BDD;&#xFF0C;&#x800C;&#x662F; Flask-SQLAlchemy &#x7684;&#x4F1A;&#x8BDD;&#x3002;&#x5B83;&#x672C;&#x8D28;&#x4E0A;&#x662F;&#x4E00;&#x4E2A; &#x6570;&#x636E;&#x5E93;&#x4E8B;&#x52A1;&#x7684;&#x52A0;&#x5F3A;&#x7248;&#x672C;</p>
+</blockquote>
+<pre><code>#&#x7B2C;&#x4E00;&#x79CD;
+me = User(&apos;admin&apos;, &apos;admin@example.com&apos;)
+db.session.add(me)
+db.session.commit()
+
+#&#x7B2C;&#x4E8C;&#x79CD;
+me = User(
+    username = &apos;admin&apos;, 
+    email=&apos;admin@example.com&apos;
+    )
+db.session.add(me)
+db.session.commit()
+
+&#x7B2C;&#x4E09;&#x79CD;
+me = User()
+me.username = &apos;admin&apos;
+me.email = &apos;admin@example.com&apos;
+db.session.add(me)
+db.session.commit()
+</code></pre><h3 id="&#x5220;&#x9664;&#x6570;&#x636E;">&#x5220;&#x9664;&#x6570;&#x636E;</h3>
+<p>&#x5220;&#x9664;&#x8BB0;&#x5F55;&#x662F;&#x5341;&#x5206;&#x7C7B;&#x4F3C;&#x7684;&#xFF0C;&#x4F7F;&#x7528; <strong>delete() &#x4EE3;&#x66FF; add():</strong></p>
+<pre><code>db.session.delete(me)
+db.session.commit()
+</code></pre><h3 id="&#x66F4;&#x65B0;&#x6570;&#x636E;">&#x66F4;&#x65B0;&#x6570;&#x636E;</h3>
+<pre><code>#&#x7528;&#x4E3B;&#x952E;&#x67E5;&#x8BE2;&#x7528;&#x6237;
+me = User.query.get(1)
+me.username = &apos;zhangsan&apos;
+db.session.add(me)
+db.session.commit()
+</code></pre><h3 id="&#x67E5;&#x8BE2;&#x6570;&#x636E;">&#x67E5;&#x8BE2;&#x6570;&#x636E;</h3>
+<blockquote>
+<p>&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x600E;&#x4E48;&#x4ECE;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x67E5;&#x8BE2;&#x6570;&#x636E;&#xFF1F;&#x4E3A;&#x6B64;&#xFF0C;Flask-SQLAlchemy &#x5728;&#x60A8;&#x7684;<strong> Model &#x7C7B;&#x4E0A;&#x63D0;&#x4F9B;&#x4E86; query &#x5C5E;&#x6027;</strong>&#x3002;</p>
+<p>&#x5F53;&#x60A8;&#x8BBF;&#x95EE;&#x5B83;&#x65F6;&#xFF0C;&#x60A8;&#x4F1A;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x6240;&#x6709;&#x8BB0;&#x5F55;&#x7684;&#x67E5;&#x8BE2;&#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x5728;&#x4F7F;&#x7528; <strong>all() &#x6216;&#x8005; first() &#x53D1;&#x8D77;&#x67E5;&#x8BE2;&#x4E4B;&#x524D;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x65B9;&#x6CD5; filter() &#x6765;&#x8FC7;&#x6EE4;&#x8BB0;&#x5F55;</strong>&#x3002;</p>
+<p>&#x5982;&#x679C;&#x60A8;&#x60F3;<strong>&#x8981;&#x7528;&#x4E3B;&#x952E;&#x67E5;&#x8BE2;&#x7684;&#x8BDD;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; get()</strong>&#x3002;</p>
+</blockquote>
+<p>&#x4E0B;&#x9762;&#x7684;&#x67E5;&#x8BE2;&#x5047;&#x8BBE;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x6709;&#x5982;&#x4E0B;&#x6761;&#x76EE;:id</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">id</th>
+<th style="text-align:left">username</th>
+<th style="text-align:left">email</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">admin</td>
+<td style="text-align:left"><a href="mailto:admin%40example.com" target="_blank">admin@example.com</a></td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left">peter</td>
+<td style="text-align:left"><a href="mailto:peter%40example.org" target="_blank">peter@example.org</a></td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:left">guest</td>
+<td style="text-align:left"><a href="mailto:guest%40example.com" target="_blank">guest@example.com</a></td>
+</tr>
+</tbody>
+</table>
+<p>&#x901A;&#x8FC7;&#x7528;&#x6237;&#x540D;&#x67E5;&#x8BE2;&#x7528;&#x6237;:</p>
+<pre><code>&gt;&gt;&gt; peter = User.query.filter_by(username=&apos;peter&apos;).first()
+&gt;&gt;&gt; peter.id
+1
+&gt;&gt;&gt; peter.email
+u&apos;peter@example.org&apos;
+</code></pre><p>&#x540C;&#x4E0A;&#x4F46;&#x662F;&#x67E5;&#x8BE2;&#x4E00;&#x4E2A;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x7528;&#x6237;&#x540D;&#x8FD4;&#x56DE;None:</p>
+<pre><code>&gt;&gt;&gt; missing = User.query.filter_by(username=&apos;missing&apos;).first()
+&gt;&gt;&gt; missing is None
+True
+</code></pre><p>&#x4F7F;&#x7528;&#x66F4;&#x590D;&#x6742;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x67E5;&#x8BE2;&#x4E00;&#x4E9B;&#x7528;&#x6237;:</p>
+<pre><code>&gt;&gt;&gt; User.query.filter(User.email.endswith(&apos;@example.com&apos;)).all()
+[&lt;User u&apos;admin&apos;&gt;, &lt;User u&apos;guest&apos;&gt;]
+</code></pre><p>&#x6309;&#x67D0;&#x79CD;&#x89C4;&#x5219;&#x5BF9;&#x7528;&#x6237;&#x6392;&#x5E8F;:</p>
+<pre><code>&gt;&gt;&gt; User.query.order_by(User.username)
+[&lt;User u&apos;admin&apos;&gt;, &lt;User u&apos;guest&apos;&gt;, &lt;User u&apos;peter&apos;&gt;]
+</code></pre><p>&#x9650;&#x5236;&#x8FD4;&#x56DE;&#x7528;&#x6237;&#x7684;&#x6570;&#x91CF;:</p>
+<pre><code>&gt;&gt;&gt; User.query.limit(1).all()
+[&lt;User u&apos;admin&apos;&gt;]
+</code></pre><p>&#x7528;&#x4E3B;&#x952E;&#x67E5;&#x8BE2;&#x7528;&#x6237;:</p>
+<pre><code>&gt;&gt;&gt; User.query.get(1)
+&lt;User u&apos;admin&apos;&gt;
+</code></pre><h2 id="&#x5728;&#x89C6;&#x56FE;&#x4E2D;&#x67E5;&#x8BE2;">&#x5728;&#x89C6;&#x56FE;&#x4E2D;&#x67E5;&#x8BE2;</h2>
+<p>&#x5F53;&#x60A8;&#x7F16;&#x5199; Flask &#x89C6;&#x56FE;&#x51FD;&#x6570;&#xFF0C;&#x5BF9;&#x4E8E;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x6761;&#x76EE;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; 404 &#x9519;&#x8BEF;&#x662F;&#x975E;&#x5E38;&#x65B9;&#x4FBF;&#x7684;&#x3002;&#x56E0;&#x4E3A;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x5F88;&#x5E38;&#x89C1;&#x7684;&#x95EE;&#x9898;&#xFF0C;Flask-SQLAlchemy &#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x5E2E;&#x52A9;&#x51FD;&#x6570;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>get_or_404()</code>&#x6765;&#x4EE3;&#x66FF;<a href="http://www.sqlalchemy.org/docs/orm/query.html#sqlalchemy.orm.query.Query.get" target="_blank"><code>get()</code></a>&#xFF0C;&#x4F7F;&#x7528;<code>first_or_404()</code>&#x6765;&#x4EE3;&#x66FF;<a href="http://www.sqlalchemy.org/docs/orm/query.html#sqlalchemy.orm.query.Query.first" target="_blank"><code>first()</code></a>&#x3002;&#x8FD9;&#x6837;&#x4F1A;&#x629B;&#x51FA;&#x4E00;&#x4E2A; 404 &#x9519;&#x8BEF;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x8FD4;&#x56DE;None:</p>
+<pre><code>@app.route(&apos;/user/&lt;username&gt;&apos;)
+def show_user(username):
+    user = User.query.filter_by(username=username).first_or_404()
+    return render_template(&apos;show_user.html&apos;, user=user)
+</code></pre>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../../Flask/3/1.html" class="navigation navigation-prev " aria-label="Previous page: 定义模型"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../../Flask/3/3.html" class="navigation navigation-next " aria-label="Next page: ORM关系模型"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../../gitbook/app.js"></script>
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

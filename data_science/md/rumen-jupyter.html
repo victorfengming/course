@@ -1,0 +1,1520 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>交互式编辑器：Jupyter-Notebook | Python数据课程</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../md/rumen-conda.html" />
+    
+    
+    <link rel="prev" href="../md/rumen-anaconda.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="2.3"
+        data-chapter-title="交互式编辑器：Jupyter-Notebook"
+        data-filepath="md/rumen-jupyter.md"
+        data-basepath=".."
+        data-revision="Thu Nov 22 2018 08:28:34 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Python数据学科
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="md/rumen-content.html">
+            
+                
+                    <a href="../md/rumen-content.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Python数据学科内容
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="md/rumen-why.html">
+            
+                
+                    <a href="../md/rumen-why.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        为什么学Python数据分析
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="md/rumen-gongju.html">
+            
+                
+                    <a href="../md/rumen-gongju.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        软件和环境安装
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="md/rumen-zhixing.html">
+            
+                
+                    <a href="../md/rumen-zhixing.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Python程序执行方式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="md/rumen-anaconda.html">
+            
+                
+                    <a href="../md/rumen-anaconda.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        Python发行版：Anaconda
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.3" data-path="md/rumen-jupyter.html">
+            
+                
+                    <a href="../md/rumen-jupyter.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        交互式编辑器：Jupyter-Notebook
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="md/rumen-conda.html">
+            
+                
+                    <a href="../md/rumen-conda.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        包和环境管理器：conda
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="md/rumen-pip.html">
+            
+                
+                    <a href="../md/rumen-pip.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.1.</b>
+                        
+                        pip和Virtualenv
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="md/rumen-markdown.html">
+            
+                
+                    <a href="../md/rumen-markdown.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        标记语言：MarkDown
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" data-path="md/rumen-gitbook.html">
+            
+                
+                    <a href="../md/rumen-gitbook.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.1.</b>
+                        
+                        文档工具-GitBook
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.2" data-path="md/rumen-xmind.html">
+            
+                
+                    <a href="../md/rumen-xmind.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.2.</b>
+                        
+                        思维导图-Xmind
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="md/rumen-liucheng.html">
+            
+                
+                    <a href="../md/rumen-liucheng.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        数据分析流程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="md/Pandas.html">
+            
+                
+                    <a href="../md/Pandas.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        数据分析库-Pandas
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="md/Pandas-Series.html">
+            
+                
+                    <a href="../md/Pandas-Series.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Series对象-1维
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="md/Pandas-DataFrame.html">
+            
+                
+                    <a href="../md/Pandas-DataFrame.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        DataFrame对象-2维
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="md/Pandas-DataFrame-chaXun.html">
+            
+                
+                    <a href="../md/Pandas-DataFrame-chaXun.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        DataFrame查询
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="md/Pandas-caoZuo.html">
+            
+                
+                    <a href="../md/Pandas-caoZuo.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        数据操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="md/Pandas-shuJuChunQu.html">
+            
+                
+                    <a href="../md/Pandas-shuJuChunQu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        数据存取
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="md/Pandas-tongJi.html">
+            
+                
+                    <a href="../md/Pandas-tongJi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        数据运算
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.6.1" data-path="md/Pandas-yunSuan.html">
+            
+                
+                    <a href="../md/Pandas-yunSuan.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.1.</b>
+                        
+                        数据运算-拓展
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="md/Pandas-fenZu.html">
+            
+                
+                    <a href="../md/Pandas-fenZu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.7.</b>
+                        
+                        分组聚合
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="md/Pandas-guiZheng-qingLi.html">
+            
+                
+                    <a href="../md/Pandas-guiZheng-qingLi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.8.</b>
+                        
+                        数据规整-清理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="md/Pandas-guiZheng-zhuanHuan.html">
+            
+                
+                    <a href="../md/Pandas-guiZheng-zhuanHuan.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.9.</b>
+                        
+                        数据规整-转换
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.9.1" data-path="md/Pandas-cengCi.html">
+            
+                
+                    <a href="../md/Pandas-cengCi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.9.1.</b>
+                        
+                        层次化索引
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9.2" data-path="md/Pandas-liSan.html">
+            
+                
+                    <a href="../md/Pandas-liSan.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.9.2.</b>
+                        
+                        离散化和面元划分
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10" data-path="md/Pandas-guiZheng-chongSu.html">
+            
+                
+                    <a href="../md/Pandas-guiZheng-chongSu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.10.</b>
+                        
+                        数据规整-重塑
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.10.1" data-path="md/Pandas-guiZheng-touShi.html">
+            
+                
+                    <a href="../md/Pandas-guiZheng-touShi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.10.1.</b>
+                        
+                        透视表和交叉表
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.11" data-path="md/Pandas-guiZheng-heBing.html">
+            
+                
+                    <a href="../md/Pandas-guiZheng-heBing.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.11.</b>
+                        
+                        数据规整-合并
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="md/wenBen.html">
+            
+                
+                    <a href="../md/wenBen.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        文本挖掘/非结构化数据分析
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="md/keshihua.html">
+            
+                
+                    <a href="../md/keshihua.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        Python可视化
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="md/matplotlib.html">
+            
+                
+                    <a href="../md/matplotlib.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        绘图库-Matplotlib
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="md/matplotlib-tuBiao.html">
+            
+                
+                    <a href="../md/matplotlib-tuBiao.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.1.</b>
+                        
+                        基础：常用图表
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.2" data-path="md/matplotlib-quYu.html">
+            
+                
+                    <a href="../md/matplotlib-quYu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.2.</b>
+                        
+                        提升：绘图区域
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.3" data-path="md/matplotlib-zuJian.html">
+            
+                
+                    <a href="../md/matplotlib-zuJian.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.3.</b>
+                        
+                        提升：图像组件
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.4" data-path="md/matplotlib-gaoJi.html">
+            
+                
+                    <a href="../md/matplotlib-gaoJi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.4.</b>
+                        
+                        拓展：高级绘图
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.5" data-path="md/matplotlib-zhuYi.html">
+            
+                
+                    <a href="../md/matplotlib-zhuYi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.5.</b>
+                        
+                        拓展：注意事项
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.6" data-path="md/matplotlib-pylab.html">
+            
+                
+                    <a href="../md/matplotlib-pylab.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.6.</b>
+                        
+                        拓展：pylab
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="md/Pandas-huiTu.html">
+            
+                
+                    <a href="../md/Pandas-huiTu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        Pandas绘图
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="md/keshihua-web.html">
+            
+                
+                    <a href="../md/keshihua-web.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        WEB数据可视化-Echarts
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="md/keshihua-seaborn.html">
+            
+                
+                    <a href="../md/keshihua-seaborn.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        seaborn绘图（了解）
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="md/numpy.html">
+            
+                
+                    <a href="../md/numpy.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        数值计算库-Numpy
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="md/numpy-chuangJian.html">
+            
+                
+                    <a href="../md/numpy-chuangJian.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        基础：ndarray数组创建
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="md/numpy-suoYin.html">
+            
+                
+                    <a href="../md/numpy-suoYin.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        基础：查询修改
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="md/numpy-bianHuan.html">
+            
+                
+                    <a href="../md/numpy-bianHuan.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        提升：数组变换
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="md/numpy-tongJi.html">
+            
+                
+                    <a href="../md/numpy-tongJi.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.</b>
+                        
+                        提升：数组运算
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="md/numpy-shuJuChunQu.html">
+            
+                
+                    <a href="../md/numpy-shuJuChunQu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.5.</b>
+                        
+                        拓展：数据存取
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="md/numpy-caoZuo.html">
+            
+                
+                    <a href="../md/numpy-caoZuo.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.6.</b>
+                        
+                        拓展：数组操作
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="md/numpy-suiJiShu.html">
+            
+                
+                    <a href="../md/numpy-suiJiShu.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.7.</b>
+                        
+                        拓展：随机数-拓展
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.8" data-path="md/numpy-yunSuan.html">
+            
+                
+                    <a href="../md/numpy-yunSuan.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.8.</b>
+                        
+                        拓展：数组运算-拓展
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Python数据课程</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="&#x4EA4;&#x4E92;&#x5F0F;&#x7F16;&#x8F91;&#x5668;--jupyter-notebook">&#x4EA4;&#x4E92;&#x5F0F;&#x7F16;&#x8F91;&#x5668; - Jupyter notebook</h1>
+<hr>
+<ul>
+<li>&#x4E3A;&#x4EC0;&#x4E48;&#x4F7F;&#x7528;Jupyter Notebook&#xFF1F;<ul>
+<li><a href="#jiaohu">&#x4EA4;&#x4E92;&#x5F0F;&#x8BA1;&#x7B97;</a></li>
+<li><a href="#jieshao">Jupyter Notebook</a></li>
+</ul>
+</li>
+<li>&#x57FA;&#x7840;&#x64CD;&#x4F5C;<ul>
+<li><a href="#dakai">&#x6253;&#x5F00;&#x65B9;&#x5F0F;</a></li>
+<li><a href="#jiemian">&#x754C;&#x9762;&#x64CD;&#x4F5C;</a></li>
+<li><a href="#danyuan"><strong>cell&#x64CD;&#x4F5C;&#xFF08;&#x91CD;&#x8981;&#xFF09;</strong></a></li>
+</ul>
+</li>
+<li>&#x62D3;&#x5C55;&#x5E94;&#x7528;<ul>
+<li><a href="#moshu">IPython&#x9B54;&#x672F;&#x547D;&#x4EE4;</a></li>
+<li><a href="#shijian">Jupyter Notebook&#x8BA1;&#x7B97;&#x4EE3;&#x7801;&#x6267;&#x884C;&#x65F6;&#x95F4;</a></li>
+<li><a href="#zairu">Jupyter Notebook&#x8F7D;&#x5165;Python&#x4EE3;&#x7801;</a></li>
+<li><a href="#yilai">Jupyter Notebook&#x91CD;&#x65B0;&#x52A0;&#x8F7D;&#x6A21;&#x5757;&#x4F9D;&#x8D56;</a></li>
+<li><a href="#html">Jupyter Notebook&#x6267;&#x884C;HTML/CSS/JavaScript</a></li>
+<li><a href="#yingcang">Jupyter Notebook&#x9690;&#x85CF;&#x4EE3;&#x7801;</a></li>
+<li><a href="#yuancheng">Jupyter Notebook&#x8FDC;&#x7A0B;&#x8BBF;&#x95EE;</a></li>
+<li><a href="#ppt">Jupyter Notebook&#x751F;&#x6210;&#x7F51;&#x9875;&#x7248;PPT</a></li>
+</ul>
+</li>
+</ul>
+<p><img src="images/jupyter.png" alt="Jupyter"></p>
+<hr>
+<h2 id="&#x4E3A;&#x4EC0;&#x4E48;&#x4F7F;&#x7528;jupyter-notebook&#xFF1F;">&#x4E3A;&#x4EC0;&#x4E48;&#x4F7F;&#x7528;Jupyter Notebook&#xFF1F;</h2>
+<p>&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684;Jupyter Notebook&#x6570;&#x636E;&#x62A5;&#x544A;&#x6F14;&#x793A;</p>
+<hr>
+<div id="jiaohu"></div>
+
+<h3 id="&#x4EA4;&#x4E92;&#x5F0F;&#x8BA1;&#x7B97;">&#x4EA4;&#x4E92;&#x5F0F;&#x8BA1;&#x7B97;</h3>
+<ul>
+<li>&#x8F6F;&#x4EF6;&#x5F00;&#x53D1;&#x5DE5;&#x7A0B;&#xFF1A;&#x5DE5;&#x7A0B;/&#x76EE;&#x6807;&#x660E;&#x786E;&#xFF0C;&#x6309;&#x90E8;&#x5C31;&#x73ED;<ul>
+<li>&#x9700;&#x6C42;&#x5206;&#x6790;&#xFF0C;&#x8BBE;&#x8BA1;&#x67B6;&#x6784;&#xFF0C;&#x5F00;&#x53D1;&#x6A21;&#x5757;&#xFF0C;&#x6D4B;&#x8BD5;</li>
+</ul>
+</li>
+<li>&#x63A2;&#x7D22;/&#x7814;&#x7A76;/&#x5B66;&#x4E60;&#xFF1A;&#x827A;&#x672F;/&#x76EE;&#x6807;&#x4E0D;&#x660E;&#x786E;&#xFF0C;&#x6478;&#x7D22;&#x524D;&#x8FDB;<ul>
+<li>&#x76EE;&#x7684;&#x662F;&#x62BD;&#x8C61;&#x7684;&#x6D1E;&#x5BDF;&#x76EE;&#x6807;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x673A;&#x68B0;&#x7684;&#x5B8C;&#x6210;&#x4EFB;&#x52A1;</li>
+<li>&#x901A;&#x8FC7;&#x6267;&#x884C;&#x4EE3;&#x7801;&#x6765;&#x7406;&#x89E3;&#x95EE;&#x9898;</li>
+<li>&#x8FED;&#x4EE3;&#x5F0F;&#x5730;&#x6539;&#x8FDB;&#x4EE3;&#x7801;&#x6765;&#x6539;&#x8FDB;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;</li>
+</ul>
+</li>
+</ul>
+<p>&#x5B9E;&#x65F6;&#x8FD0;&#x884C;&#x7684;&#x4EE3;&#x7801;&#x3001;&#x53D9;&#x4E8B;&#x6027;&#x7684;&#x6587;&#x672C;&#x548C;&#x53EF;&#x89C6;&#x5316;&#x88AB;&#x6574;&#x5408;&#x5728;&#x4E00;&#x8D77;&#xFF0C;&#x65B9;&#x4FBF;&#x4F7F;&#x7528;&#x4EE3;&#x7801;&#x548C;&#x6570;&#x636E;&#x6765;&#x5B8C;&#x6210;&#x6587;&#x6863;&#x3001;&#x8BB2;&#x8FF0;&#x6545;&#x4E8B;</p>
+<p>&#x79D1;&#x5B66;&#x8BA1;&#x7B97;&#x9886;&#x57DF;&#x901A;&#x8FC7; Matlab&#x3001;IDL &#x548C;Mathematica&#x7B49;&#x7A0B;&#x5E8F;&#x8BED;&#x8A00;&#x9996;&#x5148;&#x719F;&#x6089;&#x4E86;&#x4EBA;&#x673A;&#x4EA4;&#x4E92;&#x5F0F;&#x7684;&#x8BA1;&#x7B97;&#x65B9;&#x5F0F;&#xFF0C;Jupyter&#x5219;&#x662F;&#x6700;&#x65B0;&#x7684;&#x96C6;&#x5927;&#x6210;&#x8005;</p>
+<h4 id="&#x4EA4;&#x4E92;&#x5F0F;&#x7F16;&#x7A0B;&#x5DE5;&#x5177;">&#x4EA4;&#x4E92;&#x5F0F;&#x7F16;&#x7A0B;&#x5DE5;&#x5177;</h4>
+<ul>
+<li>&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x81EA;&#x5E26;Shell</li>
+<li>Python&#x81EA;&#x5E26;IDLE</li>
+<li>IPython&#xFF0C;&#x589E;&#x5F3A;&#x7248;Shell<ul>
+<li><strong>Jupyter Notebook</strong>&#xFF1A;&#x7F51;&#x9875;&#x7248;&#x4EA4;&#x4E92;&#x5F0F;&#x4EE3;&#x7801;&#x7B14;&#x8BB0;&#x5DE5;&#x5177;</li>
+<li>JupyterLab&#xFF1A;&#x4E0B;&#x4E00;&#x4EE3;Jupyter Notebook&#xFF0C;&#x6A21;&#x5757;&#x5316;&#x548C;&#x53EF;&#x6269;&#x5C55;&#x63A5;&#x53E3;&#xFF0C;&#x57FA;&#x4E8E;&#x7F51;&#x9875;&#x7684;IDE,&#x6D4B;&#x8BD5;&#x7248;</li>
+<li><a href="https://moderndata.plot.ly/nteract-revolutionizing-notebook-experience/" target="_blank">nteract &#x5BA2;&#x6237;&#x7AEF;</a>&#xFF1A;&#x684C;&#x9762;&#x7248;Jupyter Notebook&#xFF0C;&#x57FA;&#x4E8E;Electron&#xFF0C;&#x6D4B;&#x8BD5;&#x7248;</li>
+<li>JupyterHub&#xFF1A;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x591A;&#x4EBA;&#x6743;&#x9650;Jupyter Notebook&#x7CFB;&#x7EDF;</li>
+<li>&#x5176;&#x4ED6;&#x7F16;&#x8F91;&#x5668;&#x548C;IDE&#x5BF9;&#x4EA4;&#x4E92;&#x5F0F;&#x7F16;&#x7A0B;&#x7684;&#x652F;&#x6301;&#xFF1A;&#x5982;VScode/PyCharm</li>
+</ul>
+</li>
+</ul>
+<hr>
+<div id="jieshao"></div>
+
+<h2 id="jupyter-notebook">Jupyter Notebook</h2>
+<p>Jupyter&#x9879;&#x76EE;&#x662F;&#x4E00;&#x4E2A;<strong>&#x4EA4;&#x4E92;&#x5F0F;</strong>&#x7684;Python<!--科学计算和数据分析--><strong>&#x751F;&#x6001;&#x7CFB;&#x7EDF;</strong>&#xFF0C;&#x6700;&#x5E38;&#x7528;&#x7684;&#x662F;Jupyter Notebook</p>
+<ul>
+<li>Jupyter Notebook&#xFF0C;&#x539F;&#x540D;IPython Notbook&#xFF0C;&#x662F;IPython&#x7684;&#x52A0;&#x5F3A;&#x7F51;&#x9875;&#x7248;</li>
+<li>&#x540D;&#x5B57;&#x6E90;&#x81EA;Julia&#x3001;Python &#x548C; R&#xFF08;&#x6570;&#x636E;&#x79D1;&#x5B66;&#x7684;&#x4E09;&#x79CD;&#x5F00;&#x6E90;&#x8BED;&#x8A00;&#xFF09;</li>
+<li>&#x662F;&#x4E00;&#x6B3E;&#x7A0B;&#x5E8F;&#x5458;&#x548C;&#x79D1;&#x5B66;&#x5DE5;&#x4F5C;&#x8005;&#x7684;<strong>&#x7F16;&#x7A0B;/&#x6587;&#x6863;/&#x7B14;&#x8BB0;/&#x5C55;&#x793A;</strong>&#x8F6F;&#x4EF6;</li>
+<li>.ipynb&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x662F;&#x7528;&#x4E8E;&#x8BA1;&#x7B97;&#x578B;&#x53D9;&#x8FF0;&#x7684;<strong>JSON&#x6587;&#x6863;&#x683C;&#x5F0F;</strong>&#x7684;&#x6B63;&#x5F0F;&#x89C4;&#x8303;</li>
+</ul>
+<p>&#x4EA4;&#x4E92;&#x5F0F;&#x7684;&#x7F16;&#x7A0B;&#x73AF;&#x5883;&#xFF0C;&#x53CB;&#x597D;&#x7684;&#x754C;&#x9762;&#xFF0C;&#x4FBF;&#x4E8E;&#x5206;&#x4EAB;&#x7684;&#x6587;&#x6863;&#x683C;&#x5F0F;&#xFF0C;&#x5BF9;&#x6392;&#x7248;&#x8BED;&#x6CD5;&#x3001;&#x7ED8;&#x56FE;&#x3001;&#x6570;&#x5B66;&#x516C;&#x5F0F;&#x7684;&#x652F;&#x6301;&#xFF0C;&#x4F7F;&#x5979;&#x6210;&#x4E3A;&#x6700;&#x6D41;&#x884C;&#x7684;Python&#x79D1;&#x5B66;&#x8BA1;&#x7B97;&#x5DE5;&#x5177;</p>
+<ul>
+<li>&#x4F7F;&#x7528;&#x573A;&#x666F;&#xFF1A;&#x7F16;&#x7A0B;(&#x63A2;&#x7D22;&#x3001;&#x5B66;&#x4E60;&#x3001;&#x6570;&#x636E;&#x65B9;&#x5411;)&#xFF0C;&#x6587;&#x6863;&#xFF0C;&#x7B14;&#x8BB0;&#xFF0C;&#x6559;&#x5B66;&#xFF0C;&#x6F14;&#x8BB2;&#xFF0C;&#x6570;&#x636E;&#x5206;&#x6790;&#x62A5;&#x544A;<!--仪表板、甚至BI系统-->&#x7B49;&#x7B49;</li>
+<li>Jupyter Notebook &#x2248; Python + MATLAB + Word + Excel + PowerPoint</li>
+</ul>
+<hr>
+<div id="dakai"></div>
+
+<h3 id="&#x6253;&#x5F00;&#x65B9;&#x5F0F;">&#x6253;&#x5F00;&#x65B9;&#x5F0F;</h3>
+<p>Jupyter Notebook&#x662F;&#x4E00;&#x4E2A;&#x91C7;&#x7528;C/S&#x67B6;&#x6784;&#x7684;&#x7F51;&#x7AD9;&#xFF0C;&#x901A;&#x8FC7;Tornado&#x5EFA;&#x7ACB;WEB&#x670D;&#x52A1;&#x5668;&#x7AEF;&#xFF0C;&#x4F7F;&#x7528;&#x6D4F;&#x89C8;&#x5668;&#x4F5C;&#x4E3A;&#x5BA2;&#x6237;&#x7AEF;</p>
+<h4 id="1&#xFF1A;&#x547D;&#x4EE4;&#x884C;&#x8FDB;&#x5165;&#x5BF9;&#x5E94;&#x76EE;&#x5F55;">1&#xFF1A;&#x547D;&#x4EE4;&#x884C;&#x8FDB;&#x5165;&#x5BF9;&#x5E94;&#x76EE;&#x5F55;</h4>
+<p>&#x7528;Windows&#x63A7;&#x5236;&#x53F0;&#xFF08;windows&#x952E;+R&#xFF0C;&#x8F93;&#x5165;cmd&#x56DE;&#x8F66;&#xFF09;&#x6216;Anaconda Prompt&#x8FDB;&#x5165;&#x60F3;&#x4F5C;&#x4E3A;&#x5F00;&#x53D1;&#x76EE;&#x5F55;&#x7684;&#x78C1;&#x76D8;&#x76D8;&#x7B26;&#xFF0C;&#x8FDB;&#x5165;&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x67E5;&#x770B;&#x76EE;&#x5F55;</p>
+<pre><code class="lang-shell">e:
+cd python
+dir
+</code></pre>
+<h4 id="2&#xFF1A;&#x8F93;&#x5165;&#x547D;&#x4EE4;">2&#xFF1A;&#x8F93;&#x5165;&#x547D;&#x4EE4;</h4>
+<p>&#x4F1A;&#x81EA;&#x52A8;&#x5F39;&#x51FA;&#x6D4F;&#x89C8;&#x5668;&#x7A97;&#x53E3;&#x6253;&#x5F00;notebook</p>
+<pre><code class="lang-shell">jupyter notebook
+# &#x6216; jupyter-notebook
+</code></pre>
+<ul>
+<li>&#x672C;&#x5730;notebook&#x7684;&#x9ED8;&#x8BA4;URL&#x4E3A;&#xFF1A;<a href="http://localhost:8888" target="_blank">http://localhost:8888</a></li>
+<li>&#x5982;&#x679C;&#x60F3;&#x6362;&#x5176;&#x4ED6;&#x6D4F;&#x89C8;&#x5668;&#x6253;&#x5F00;&#xFF0C;&#x53EA;&#x8F93;&#x5165;&#x672C;&#x5730;&#x57DF;&#x540D;&#x7AEF;&#x53E3;&#x56DE;&#x8F66;&#x6253;&#x4E0D;&#x5F00;&#xFF0C;&#x4F1A;&#x63D0;&#x793A;&#x8F93;&#x5165;&#x5BC6;&#x7801;&#xFF0C;&#x9700;&#x8981;<strong>&#x62F7;&#x8D1D;&#x547D;&#x4EE4;&#x7A97;&#x53E3;&#x7684;&#x5B8C;&#x6574;URL</strong>&#x5230;&#x65B0;&#x6D4F;&#x89C8;&#x5668;&#x624D;&#x53EF;&#x4EE5;&#x6253;&#x5F00;&#xFF08;&#x5E26;token&#x53C2;&#x6570;&#x7684;url,&#x6CE8;&#x610F;&#x53C2;&#x6570;&#x7684;&#x7A7A;&#x683C;&#x53BB;&#x6389;&#xFF09;</li>
+<li><strong>&#x6CE8;&#x610F;&#xFF0C;&#x4E0D;&#x8981;&#x76F4;&#x63A5;&#x6253;&#x5F00;notebook</strong>&#xFF0C;&#x60F3;&#x8BA9;notebook&#x6253;&#x5F00;&#x6307;&#x5B9A;&#x76EE;&#x5F55;&#xFF0C;&#x53EA;&#x8981;&#x8FDB;&#x5165;&#x6B64;&#x76EE;&#x5F55;&#x540E;&#x6267;&#x884C;&#x547D;&#x4EE4;&#x5373;&#x53EF;</li>
+</ul>
+<h4 id="3&#xFF1A;&#x4F7F;&#x7528;&#x5B8C;&#x6210;&#xFF0C;&#x5173;&#x95ED;notebook&#x670D;&#x52A1;">3&#xFF1A;&#x4F7F;&#x7528;&#x5B8C;&#x6210;&#xFF0C;&#x5173;&#x95ED;notebook&#x670D;&#x52A1;</h4>
+<p>&#x5FEB;&#x6377;&#x952E;<code>CTRL+C</code>&#xFF0C;&#xFF08;Linux/MACOS&#xFF0C;5&#x79D2;&#x5185;&#x8F93;&#x5165;y&#x5173;&#x95ED;&#x670D;&#x52A1;&#xFF0C;&#x5426;&#x5219;&#x670D;&#x52A1;&#x4E0D;&#x4F1A;&#x5173;&#x95ED;&#x9700;&#x8981;&#x518D;&#x6309; CTRL+C&#xFF09;</p>
+<!--
+#### 本机打开
+按照`环境搭建`课件安装Python notebook库完成后，本机输入命令，会自动弹出浏览器窗口打开notebook
+
+```shell
+workon data_py3 # 进入虚拟环境
+
+jupyter-notebook
+```
+
+* 本地notebook的默认URL为：http://localhost:8888
+* 想让notebook打开指定目录，只要进入此目录后执行命令即可
+
+#### 远程打开（推荐）
+
+按照`环境搭建`课件配置远程访问Jupyter服务完成后，本机输入命令，调用远程访问配置打开服务
+
+```shell
+workon data_py3 # 进入虚拟环境
+
+jupyter-notebook --config ~/pydata/jupyter_server.py
+```
+
+然后在宿主机或局域网内其他计算机浏览器上输入Jupyter主机IP地址和端口号访问即可，例如：（根据自己的IP和端口修改）
+* 虚拟机网卡NAT模式（仅限宿主机访问），地址如：http://172.16.66.128:9999
+* 虚拟机网卡桥接模式（宿主机和局域网都可以访问），地址如：http://192.168.1.103:9999
+
+#### 关闭notebook服务
+
+虚拟机命令行按下快捷键CTRL+C，5秒内输入y关闭服务，否则服务不会关闭需要再按 CTRL+C
+-->
+<p><strong>&#x6CE8;&#x610F;&#xFF1A;</strong></p>
+<ul>
+<li>&#x53EA;&#x5173;&#x95ED;&#x7F51;&#x9875;&#x5E76;&#x6CA1;&#x6709;&#x5173;&#x95ED;notebook&#x670D;&#x52A1;&#xFF0C;&#x540E;&#x53F0;&#x4ECD;&#x5728;&#x8FD0;&#x884C;</li>
+<li>&#x5982;&#x679C;&#x865A;&#x62DF;&#x673A;&#x6216;&#x5BBF;&#x4E3B;&#x673A;&#x7535;&#x8111;&#x5F00;&#x542F;&#x67D0;&#x4E9B;WEB&#x76F8;&#x5173;&#x670D;&#x52A1;(&#x5982;&#x7F51;&#x7EDC;&#x4EE3;&#x7406;&#x6216;&#x53BB;&#x5E7F;&#x544A;&#x670D;&#x52A1;)&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;Jupyter Notebook&#x65E0;&#x6CD5;&#x8FD0;&#x884C;**</li>
+</ul>
+<hr>
+<div id="jiemian"></div>
+
+<h3 id="&#x754C;&#x9762;&#x64CD;&#x4F5C;">&#x754C;&#x9762;&#x64CD;&#x4F5C;</h3>
+<p>notebook&#x5206;&#x4E3A;&#x76EE;&#x5F55;&#x754C;&#x9762;&#x548C;&#x5185;&#x5BB9;&#x754C;&#x9762;</p>
+<h4 id="1&#xFF1A;&#x76EE;&#x5F55;&#x754C;&#x9762;&#x64CD;&#x4F5C;">1&#xFF1A;&#x76EE;&#x5F55;&#x754C;&#x9762;&#x64CD;&#x4F5C;</h4>
+<p><img src="images/jupyter-list.png" alt="Jupyter Notebook&#x76EE;&#x5F55;"></p>
+<ul>
+<li>&#x65B0;&#x5EFA;notebook&#x6587;&#x6863;<ul>
+<li>notebook&#x7684;&#x6587;&#x6863;&#x683C;&#x5F0F;&#x662F;<code>.ipynb</code>&#xFF0C;&#x4E00;&#x79CD;&#x7C7B;JSON&#x7684;&#x6587;&#x672C;&#x683C;&#x5F0F;</li>
+</ul>
+</li>
+<li>&#x542F;&#x52A8;&#x7EC8;&#x7AEF;&#xFF08;&#x5982;&#x679C;&#x670D;&#x52A1;&#x7AEF;&#x662F;Windows&#x4E0D;&#x652F;&#x6301;&#xFF09;</li>
+<li><strong>&#x5BFC;&#x5165;&#x5BFC;&#x51FA;&#x6587;&#x6863;</strong>&#xFF08;&#x76F4;&#x63A5;&#x5728;&#x7CFB;&#x7EDF;&#x76EE;&#x5F55;&#x5185;&#x590D;&#x5236;&#x7C98;&#x8D34;&#x540E;&#x70B9;&#x51FB;&#x53F3;&#x4E0A;&#x89D2;&#x6309;&#x94AE;&#x5237;&#x65B0;&#x9875;&#x9762;&#xFF09;</li>
+<li>Running-Shutdown&#xFF0C;&#x5173;&#x95ED;&#x6587;&#x6863;</li>
+</ul>
+<h4 id="2&#xFF1A;&#x5185;&#x5BB9;&#x754C;&#x9762;&#x64CD;&#x4F5C;">2&#xFF1A;&#x5185;&#x5BB9;&#x754C;&#x9762;&#x64CD;&#x4F5C;</h4>
+<p><img src="images/jupyter-article.png" alt="Jupyter Notebook&#x5185;&#x5BB9;"></p>
+<ul>
+<li>&#x6807;&#x9898;&#x680F;&#xFF1A;&#x70B9;&#x51FB;&#x6807;&#x9898;&#xFF08;&#x5982;Untitled&#xFF09;&#x4FEE;&#x6539;&#x6587;&#x6863;&#x540D;</li>
+<li>&#x83DC;&#x5355;&#x680F;<ul>
+<li>&#x5BFC;&#x822A;-File-Download as&#xFF0C;&#x53E6;&#x5B58;&#x4E3A;&#x5176;&#x4ED6;&#x683C;&#x5F0F;</li>
+</ul>
+</li>
+<li>&#x5DE5;&#x5177;&#x680F;&#xFF0C;&#x89C1;&#x4E0B;</li>
+<li>&#x7F16;&#x8F91;&#x533A;&#xFF0C;&#x89C1;&#x4E0B;</li>
+</ul>
+<!--
+    * 导航-Kernel
+        * Interrupt，中断代码执行（程序卡死时）
+        * Restart，重启Python内核（执行太慢时重置全部资源）
+        * Restart & Clear Output，重启并清除所有输出
+        * Restart & Run All，重启并重新运行所有代码
+-->
+<hr>
+<div id="danyuan"></div>
+
+<h3 id="cell&#x64CD;&#x4F5C;&#xFF08;&#x91CD;&#x8981;&#xFF09;">cell&#x64CD;&#x4F5C;&#xFF08;&#x91CD;&#x8981;&#xFF09;</h3>
+<p><strong>cell</strong>&#xFF1A;&#x4E00;&#x5BF9;In Out&#x4F1A;&#x8BDD;&#x88AB;&#x89C6;&#x4F5C;&#x4E00;&#x4E2A;&#x4EE3;&#x7801;&#x5355;&#x5143;&#xFF0C;&#x79F0;&#x4E3A;cell</p>
+<p>Jupyter&#x652F;&#x6301;&#x4E24;&#x79CD;&#x6A21;&#x5F0F;&#xFF1A;</p>
+<ul>
+<li>&#x7F16;&#x8F91;&#x6A21;&#x5F0F;&#xFF08;Enter&#xFF09;<ul>
+<li>&#x547D;&#x4EE4;&#x6A21;&#x5F0F;&#x4E0B;<code>&#x56DE;&#x8F66;Enter</code>&#x6216;<code>&#x9F20;&#x6807;&#x53CC;&#x51FB;</code>cell&#x8FDB;&#x5165;&#x7F16;&#x8F91;&#x6A21;&#x5F0F;</li>
+<li>&#x53EF;&#x4EE5;<strong>&#x64CD;&#x4F5C;cell&#x5185;&#x6587;&#x672C;</strong>&#x6216;&#x4EE3;&#x7801;&#xFF0C;&#x526A;&#x5207;&#xFF0F;&#x590D;&#x5236;&#xFF0F;&#x7C98;&#x8D34;&#x79FB;&#x52A8;&#x7B49;&#x64CD;&#x4F5C;</li>
+</ul>
+</li>
+<li>&#x547D;&#x4EE4;&#x6A21;&#x5F0F;&#xFF08;Esc&#xFF09;<ul>
+<li>&#x6309;<code>Esc</code>&#x9000;&#x51FA;&#x7F16;&#x8F91;&#xFF0C;&#x8FDB;&#x5165;&#x547D;&#x4EE4;&#x6A21;&#x5F0F;</li>
+<li>&#x53EF;&#x4EE5;<strong>&#x64CD;&#x4F5C;cell&#x5355;&#x5143;&#x672C;&#x8EAB;</strong>&#x8FDB;&#x884C;&#x526A;&#x5207;&#xFF0F;&#x590D;&#x5236;&#xFF0F;&#x7C98;&#x8D34;&#xFF0F;&#x79FB;&#x52A8;&#x7B49;&#x64CD;&#x4F5C;</li>
+<li>&#x597D;&#x7684;&#x7F16;&#x7A0B;&#x4E60;&#x60EF;&#x662F;&#xFF1A;&#x7F16;&#x8F91;&#x5185;&#x5BB9;&#x5B8C;&#x6210;&#x540E;&#x968F;&#x624B;&#x6309;ESC&#x8FDB;&#x5165;&#x547D;&#x4EE4;&#x6A21;&#x5F0F;</li>
+</ul>
+</li>
+</ul>
+<h4 id="&#x5DE5;&#x5177;&#x680F;&#x64CD;&#x4F5C;cell">&#x5DE5;&#x5177;&#x680F;&#x64CD;&#x4F5C;cell</h4>
+<p><img src="images/jupytertushi.png" alt=""></p>
+<p><strong>cell&#x6A21;&#x5F0F;&#x5206;&#x7C7B;</strong></p>
+<ul>
+<li>Code &#x4EE3;&#x7801;</li>
+<li>Markdown &#x89E3;&#x91CA;&#xFF0C;&#x6587;&#x6863;</li>
+<li>Raw NBConvert &#x5185;&#x5BB9;&#x4E1C;&#x897F;&#x539F;&#x6837;&#x663E;&#x793A;&#xFF0C;&#x6587;&#x672C;&#x4E0D;&#x89E3;&#x6790;</li>
+</ul>
+<h4 id="&#x5FEB;&#x6377;&#x952E;&#x64CD;&#x4F5C;cell">&#x5FEB;&#x6377;&#x952E;&#x64CD;&#x4F5C;cell</h4>
+<ul>
+<li><strong>&#x4E24;&#x79CD;&#x6A21;&#x5F0F;&#x90FD;&#x53EF;&#x4F7F;&#x7528;&#x7684;&#x5FEB;&#x6377;&#x952E;</strong><ul>
+<li><code>Shift+Enter</code>&#xFF0C;&#x6267;&#x884C;&#x672C;&#x5355;&#x5143;&#x4EE3;&#x7801;&#xFF0C;&#x5E76;&#x8DF3;&#x8F6C;&#x5230;&#x4E0B;&#x4E00;&#x5355;&#x5143;</li>
+<li><code>Ctrl+Enter</code>&#xFF0C;&#x6267;&#x884C;&#x672C;&#x5355;&#x5143;&#x4EE3;&#x7801;&#xFF0C;&#x7559;&#x5728;&#x672C;&#x5355;&#x5143;</li>
+</ul>
+</li>
+</ul>
+<p>cell&#x884C;&#x53F7;&#x524D;&#x7684; * &#xFF0C;&#x8868;&#x793A;&#x4EE3;&#x7801;&#x6B63;&#x5728;&#x8FD0;&#x884C;</p>
+<ul>
+<li><strong>&#x547D;&#x4EE4;&#x6A21;&#x5F0F;</strong>&#xFF1A;&#x6309;ESC&#x8FDB;&#x5165;<ul>
+<li><code>Y</code>&#xFF0C;cell&#x5207;&#x6362;&#x5230;Code&#x6A21;&#x5F0F;</li>
+<li><code>M</code>&#xFF0C;cell&#x5207;&#x6362;&#x5230;Markdown&#x6A21;&#x5F0F;</li>
+<li><code>A</code>&#xFF0C;&#x5728;&#x5F53;&#x524D;cell&#x7684;&#x4E0A;&#x9762;&#x6DFB;&#x52A0;cell</li>
+<li><code>B</code>&#xFF0C;&#x5728;&#x5F53;&#x524D;cell&#x7684;&#x4E0B;&#x9762;&#x6DFB;&#x52A0;cell</li>
+<li><code>&#x53CC;&#x51FB;D</code>&#xFF0C;&#x5220;&#x9664;&#x5F53;&#x524D;cell</li>
+<li><code>Z</code>&#xFF0C;&#x56DE;&#x9000;</li>
+<li><code>Ctrl+Shift+&#x51CF;&#x53F7;</code>&#xFF0C;&#x5206;&#x5272;cell&#xFF0C;&#x5728;&#x5149;&#x6807;&#x5904;</li>
+<li><code>Shift+M</code>&#xFF0C;&#x5408;&#x5E76;cell&#xFF0C;&#x5411;&#x4E0B;&#x5408;&#x5E76;</li>
+<li><code>L</code>&#xFF0C;&#x4E3A;&#x5F53;&#x524D;cell&#x52A0;&#x4E0A;&#x884C;&#x53F7;</li>
+</ul>
+</li>
+</ul>
+<!--
+    * `Ctrl+Shift+P`，对话框输入命令直接运行
+    * 快速跳转到首个cell，`Crtl+Home`
+    * 快速跳转到最后一个cell，`Crtl+End`
+-->
+<ul>
+<li><strong>&#x7F16;&#x8F91;&#x6A21;&#x5F0F;</strong>&#xFF1A;&#x6309;Enter&#x8FDB;&#x5165;<ul>
+<li>&#x591A;&#x5149;&#x6807;&#x64CD;&#x4F5C;&#xFF1A;<code>Ctrl&#x952E;&#x70B9;&#x51FB;&#x9F20;&#x6807;</code>&#xFF08;Mac:CMD+&#x70B9;&#x51FB;&#x9F20;&#x6807;&#xFF09;</li>
+<li>&#x56DE;&#x9000;&#xFF1A;<code>Ctrl+Z</code>&#xFF08;Mac:CMD+Z&#xFF09;</li>
+<li>&#x91CD;&#x505A;&#xFF1A;<code>Ctrl+Y</code>&#xFF08;Mac:CMD+Y)</li>
+<li>&#x8865;&#x5168;&#x4EE3;&#x7801;&#xFF1A;&#x53D8;&#x91CF;&#x3001;&#x65B9;&#x6CD5;&#x540E;&#x8DDF;<code>Tab&#x952E;</code></li>
+<li>&#x4E3A;&#x4E00;&#x884C;&#x6216;&#x591A;&#x884C;&#x4EE3;&#x7801;&#x6DFB;&#x52A0;/&#x53D6;&#x6D88;&#x6CE8;&#x91CA;&#xFF1A;<code>Ctrl+/</code>&#xFF08;Mac:CMD+/&#xFF09;</li>
+<li>&#x5C4F;&#x853D;&#x81EA;&#x52A8;&#x8F93;&#x51FA;&#x4FE1;&#x606F;&#xFF1A;&#x53EF;&#x5728;&#x6700;&#x540E;&#x4E00;&#x6761;&#x8BED;&#x53E5;&#x4E4B;&#x540E;&#x52A0;&#x4E00;&#x4E2A;&#x5206;&#x53F7;</li>
+</ul>
+</li>
+</ul>
+<hr>
+<div id="moshu"></div>
+
+<!--
+
+IPython魔术命令
+---
+
+**外部代码导入**：
+导入代码到Jupyter的cell中
+* 本地导入：`%load test.py`并运行cell
+* 网络导入：`%load 超链接`并运行cell
+    * 例：导入matplotlib中的一个小例子 [color example code](http://matplotlib.org/examples/color/color_cycle_demo.html)，
+    * `%load http://matplotlib.org/mpl_examples/color/color_cycle_demo.py`
+
+**运行Python文件**：`%run test.py`
+相当于load命令+“shift+enter”。
+
+**其他命令**：
+
+* `%pwd`，返回当前工作目录（字符串形式）
+* `%cd`，目录路径，切换工作目录 %cd E:/pyserver
+* `%env`，返回当前系统变量（以字典形式）
+* 
+* `!`，执行命令行：在命令前面加！`!conda info`
+* 
+* `?`，内省机制，在命令或变量名前加`?`并执行，可以显示该对象的信息，`??`可查看对象源代码(如果可见)，例如`?%magic`
+* `%quickref`，显示 IPython 快速参考
+* `%magic`，显示所有魔术命令的详细文档
+* 
+* `%whos %who_ls %who`，显示interactive命名空间中定义的变量
+* `%xdel variable`，删除 variable，并尝试清除其在 IPython 中的对象上的一切引用
+* `%reset`，删除 interactive 命名空间中的全部变量
+-->
+<!--
+%debug，从最新的异常跟踪的底部进入交互式调试器
+%pdb，在异常发生后自动进入调试器
+-->
+<h2 id="ipython&#x9B54;&#x672F;&#x547D;&#x4EE4;">IPython&#x9B54;&#x672F;&#x547D;&#x4EE4;</h2>
+<p>&#x4EE5;<code>! %</code>&#x7B49;&#x7279;&#x6B8A;&#x7B26;&#x53F7;&#x5F00;&#x5934;&#x7684;&#x547D;&#x4EE4;&#xFF0C;&#x53EB;&#x9B54;&#x672F;(magic)&#x547D;&#x4EE4;&#xFF0C;&#x7528;&#x4E8E;&#x52A0;&#x5F3A;IPython shell&#x529F;&#x80FD;</p>
+<p>&#x4E0D;&#x80FD;&#x5728;&#x9664;IPython&#x4EE5;&#x5916;&#x7684;Python&#x73AF;&#x5883;&#x6267;&#x884C;</p>
+<ul>
+<li><code>!</code>&#xFF0C;&#x6267;&#x884C;shell&#x547D;&#x4EE4;&#xFF1A;&#x5728;&#x547D;&#x4EE4;&#x524D;&#x9762;&#x52A0;<code>!</code>&#xFF0C;&#x5982; <code>!conda info</code></li>
+<li>&#x4EE5;<code>%</code>&#x5F00;&#x5934;&#x7684;&#x4E3A;&#x884C;&#x547D;&#x4EE4;&#xFF0C;&#x53EA;&#x5BF9;&#x547D;&#x4EE4;&#x6240;&#x5728;&#x7684;&#x884C;&#x6709;&#x6548;</li>
+<li><code>%%</code>&#x5F00;&#x5934;&#x7684;&#x4E3A;&#x5355;&#x5143;&#x547D;&#x4EE4;&#xFF0C;&#x5355;&#x5143;&#x547D;&#x4EE4;&#x5FC5;&#x987B;&#x51FA;&#x73B0;&#x5728;&#x5355;&#x5143;&#x7B2C;&#x4E00;&#x884C;&#xFF0C;&#x5BF9;&#x6574;&#x4E2A;&#x5355;&#x5143;&#x90FD;&#x6709;&#x6548;</li>
+</ul>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x9B54;&#x672F;&#x547D;&#x4EE4;&#x540E;&#x9762;&#x4E0D;&#x80FD;&#x5E26;Python&#x6CE8;&#x91CA;&#xFF0C;&#x5426;&#x5219;&#x62A5;&#x9519;</p>
+<hr>
+<div id="shijian"></div>
+
+<h4 id="&#x5E94;&#x7528;&#xFF1A;&#x8BA1;&#x7B97;&#x4EE3;&#x7801;&#x6267;&#x884C;&#x65F6;&#x95F4;">&#x5E94;&#x7528;&#xFF1A;&#x8BA1;&#x7B97;&#x4EE3;&#x7801;&#x6267;&#x884C;&#x65F6;&#x95F4;</h4>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x65F6;&#x95F4;&#x5355;&#x4F4D;&#xFF1A;&#x79D2;s&#xFF0C;&#x6BEB;&#x79D2;ms&#xFF0C;&#x5FAE;&#x79D2;&#xB5;s&#xFF0C;&#x7EB3;&#x79D2;ns&#xFF0C;&#x6BCF;&#x4E2A;&#x5355;&#x4F4D;&#x76F8;&#x5DEE;1000&#x500D;</p>
+<ul>
+<li><code>%time</code> &#x4E00;&#x6B21;&#x6267;&#x884C;&#x4E00;&#x6761;&#x4EE3;&#x7801;&#xFF0C;&#x62A5;&#x544A;&#x65F6;&#x95F4;</li>
+<li><code>%timeit</code> &#x4E00;&#x6761;&#x4EE3;&#x7801;&#x81EA;&#x52A8;&#x6267;&#x884C;&#x591A;&#x6B21;&#xFF0C;&#x7B97;&#x5E73;&#x5747;&#x65F6;&#x95F4;</li>
+<li></li>
+<li><code>%%time</code> &#x4E00;&#x6B21;&#x6267;&#x884C;cell&#x4E2D;&#x5168;&#x90E8;&#x4EE3;&#x7801;&#xFF0C;&#x62A5;&#x544A;&#x65F6;&#x95F4;</li>
+<li><code>%%timeit</code> cell&#x4E2D;&#x5168;&#x90E8;&#x4EE3;&#x7801;&#x81EA;&#x52A8;&#x6267;&#x884C;&#x591A;&#x6B21;&#xFF0C;&#x7B97;&#x5E73;&#x5747;&#x65F6;&#x95F4;</li>
+</ul>
+<p>&#x672C;cell&#x5185;&#x7684;<code>%%</code>&#x9B54;&#x672F;&#x547D;&#x4EE4;&#x524D;&#x4E0D;&#x80FD;&#x6709;&#x5176;&#x4ED6;&#x4EE3;&#x7801;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x8F93;&#x51FA;&#x5355;&#x884C;&#x6267;&#x884C;&#x65F6;&#x95F4;</span>
+%time abc = <span class="hljs-number">123</span> * <span class="hljs-number">99999999</span> <span class="hljs-comment"># #&#x7EB3;&#x79D2;&#x7EA7;&#x65E0;&#x6CD5;&#x533A;&#x5206;&#xFF0C;&#x5FC5;&#x987B;&#x7528;%timeit</span>
+%timeit abc = <span class="hljs-number">123</span> * <span class="hljs-number">99999999</span>
+
+<span class="hljs-comment"># &#x8F93;&#x51FA;&#x591A;&#x884C;&#x6267;&#x884C;&#x65F6;&#x95F4;</span>
+%%time
+abc = <span class="hljs-number">123</span> * <span class="hljs-number">99999999</span>
+<span class="hljs-comment">#...&#x591A;&#x884C;&#x6784;&#x6210;&#x7684;&#x4EE3;&#x7801;&#x5355;&#x5143;</span>
+
+%%timeit
+abc = <span class="hljs-number">123</span> * <span class="hljs-number">99999999</span>
+<span class="hljs-comment">#...&#x591A;&#x884C;&#x6784;&#x6210;&#x7684;&#x4EE3;&#x7801;&#x5355;&#x5143;</span>
+</code></pre>
+<hr>
+<div id="zairu"></div>
+
+<h4 id="&#x5E94;&#x7528;&#xFF1A;&#x8F7D;&#x5165;python&#x4EE3;&#x7801;">&#x5E94;&#x7528;&#xFF1A;&#x8F7D;&#x5165;Python&#x4EE3;&#x7801;</h4>
+<p><strong>&#x5BFC;&#x5165;&#x5916;&#x90E8;&#x4EE3;&#x7801;&#x5230;notebook&#x7684;cell&#x4E2D;</strong></p>
+<pre><code class="lang-python">%load test.py
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x5C06;&#x4E0B;&#x5217;Python&#x6570;&#x636E;&#x5206;&#x6790;&#x5E38;&#x7528;&#x5E93;&#x5199;&#x5165;py&#x6587;&#x4EF6;&#xFF0C;&#x4F7F;&#x7528;&#x65F6;&#x76F4;&#x63A5;&#x5BFC;&#x5165;notebook</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+<span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt
+<span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd
+
+<span class="hljs-comment"># plt.style.use(&apos;seaborn&apos;)  # &#x66F4;&#x6362;&#x56FE;&#x50CF;&#x6837;&#x5F0F;</span>
+plt.rcParams[<span class="hljs-string">&apos;font.family&apos;</span>] = [<span class="hljs-string">&apos;Arial Unicode MS&apos;</span>, <span class="hljs-string">&apos;Microsoft Yahei&apos;</span>, <span class="hljs-string">&apos;SimHei&apos;</span>, <span class="hljs-string">&apos;sans-serif&apos;</span>]  <span class="hljs-comment"># &#x89E3;&#x51B3;&#x4E2D;&#x6587;&#x4E71;&#x7801;</span>
+<span class="hljs-comment"># plt.rcParams[&apos;axes.unicode_minus&apos;] = False  # &#x5982;&#x679C;&#x5B57;&#x4F53;&#x4E3A;SimHei&#x9ED1;&#x4F53;,&#x8D1F;&#x53F7;&#x4E71;&#x7801;,&#x89E3;&#x51B3;</span>
+
+<span class="hljs-comment"># MAC&#x7535;&#x8111;&#x89E3;&#x51B3;&#x56FE;&#x7247;&#x6A21;&#x7CCA;&#x9B54;&#x672F;&#x547D;&#x4EE4;</span>
+<span class="hljs-comment"># %config InlineBackend.figure_format = &apos;retina&apos;</span>
+</code></pre>
+<p><strong>&#x8FD0;&#x884C;Python&#x6587;&#x4EF6;</strong>&#xFF1A;&#x76F8;&#x5F53;&#x4E8E; <code>load&#x547D;&#x4EE4; + Shift+Enter</code></p>
+<pre><code class="lang-python">%run test.py
+</code></pre>
+<hr>
+<div id="yilai"></div>
+
+<h4 id="&#x5E94;&#x7528;&#xFF1A;&#x91CD;&#x65B0;&#x52A0;&#x8F7D;&#x6A21;&#x5757;&#x4F9D;&#x8D56;">&#x5E94;&#x7528;&#xFF1A;&#x91CD;&#x65B0;&#x52A0;&#x8F7D;&#x6A21;&#x5757;&#x4F9D;&#x8D56;</h4>
+<p>Python&#x8F7D;&#x5165;&#x6A21;&#x5757;&#x6267;&#x884C;&#x65F6;&#xFF0C;&#x6240;&#x6709;&#x6A21;&#x5757;&#x53D8;&#x91CF;&#x3001;&#x51FD;&#x6570;&#x3001;&#x5F15;&#x7528;&#x4F1A;&#x4FDD;&#x5B58;&#x5728;&#x672C;&#x6A21;&#x5757;&#x7684;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#xFF0C;&#x518D;&#x6B21;&#x8F7D;&#x5165;&#x4F1A;&#x76F4;&#x63A5;&#x5F15;&#x7528;&#x6B64;&#x547D;&#x540D;&#x7A7A;&#x95F4;</p>
+<ul>
+<li>&#x4F20;&#x7EDF;&#x5F00;&#x53D1;&#x6A21;&#x5F0F;&#x6BCF;&#x6B21;&#x6267;&#x884C;&#x4F1A;&#x91CD;&#x65B0;&#x8F7D;&#x5165;&#x8FD0;&#x884C;&#x6240;&#x6709;&#x76F8;&#x5173;&#x5E93;&#x4EE3;&#x7801;</li>
+<li>notebook(IPython)&#x4EA4;&#x4E92;&#x5F0F;&#x5F00;&#x53D1;&#x6A21;&#x5F0F;&#x4E0D;&#x4F1A;&#x6267;&#x884C;&#x6240;&#x6709;&#x4EE3;&#x7801;&#xFF0C;&#x9020;&#x6210;&#x95EE;&#x9898;&#xFF1A;<ul>
+<li>notebook&#x5F15;&#x7528;&#x7684;&#x811A;&#x672C;&#x81EA;&#x5DF1;&#x5F15;&#x7528;&#x7684;&#x6A21;&#x5757;&#x5185;&#x5BB9;&#x5982;&#x679C;&#x53D1;&#x751F;&#x6539;&#x53D8;&#xFF0C;notebook&#x518D;&#x6B21;&#x6267;&#x884C;&#x4E0D;&#x4F1A;&#x66F4;&#x65B0;&#x95F4;&#x63A5;&#x5F15;&#x7528;&#x6A21;&#x5757;&#x5185;&#x5BB9;</li>
+</ul>
+</li>
+</ul>
+<p>1&#xFF1A;py&#x6A21;&#x5757;1</p>
+<pre><code class="lang-python"><span class="hljs-comment"># module/module1.py</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">m1</span><span class="hljs-params">()</span>:</span>
+    print(<span class="hljs-string">&apos;module1.py&#x8F7D;&#x5165;&apos;</span>)
+</code></pre>
+<p>2&#xFF1A;py&#x6A21;&#x5757;2&#x8C03;&#x7528;py&#x6A21;&#x5757;1</p>
+<pre><code class="lang-python"><span class="hljs-comment"># module/module2.py</span>
+
+<span class="hljs-keyword">import</span> module.module1 <span class="hljs-keyword">as</span> mo
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">m2</span><span class="hljs-params">()</span>:</span>
+    print(<span class="hljs-string">&apos;module2.py&#x8F7D;&#x5165;bb&apos;</span>)
+</code></pre>
+<p>3&#xFF1A;Jupyter&#x6267;&#x884C;&#x9B54;&#x672F;&#x547D;&#x4EE4;&#xFF0C;&#x6267;&#x884C;py&#x6A21;&#x5757;2</p>
+<pre><code class="lang-python">%run module/module2.py
+
+m2()
+mo.m1()
+</code></pre>
+<p>4.&#x4FEE;&#x6539;module1.py&#x6570;&#x503C;&#x540E;&#x518D;&#x6B21;&#x6267;&#x884C;&#xFF0C;&#x8F93;&#x51FA;&#x4E0D;&#x53D8;</p>
+<p><strong>&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#xFF1A;</strong></p>
+<ul>
+<li>&#x65B9;&#x6CD5;1&#xFF1A;&#x4F7F;&#x7528;IPython&#x9B54;&#x672F;&#x547D;&#x4EE4;<ul>
+<li>&#x8F7D;&#x5165;IPython&#x6A21;&#x5757;</li>
+<li>&#x6BCF;&#x6B21;&#x8FD0;&#x884C;&#x90FD;&#x91CD;&#x8F7D;&#x6240;&#x6709;&#x5173;&#x8054;&#x6A21;&#x5757;</li>
+</ul>
+</li>
+</ul>
+<p>&#x9700;&#x8981;&#x91CD;&#x542F;&#x5185;&#x6838;&#x540E;&#x8FD0;&#x884C;</p>
+<pre><code class="lang-python">%reload_ext autoreload
+%autoreload <span class="hljs-number">2</span>
+
+%run module2.py
+
+m2()
+mo.m1()
+</code></pre>
+<ul>
+<li>&#x65B9;&#x6CD5;2&#xFF1A;&#x65B9;&#x5F0F;1&#x4E0D;&#x8D77;&#x4F5C;&#x7528;&#x65F6;&#xFF0C;&#x6BCF;&#x6B21;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x52A0;&#x8F7D;&#x95F4;&#x63A5;&#x5173;&#x8054;&#x6A21;&#x5757;&#x65F6;&#xFF1A;<ul>
+<li>&#x91CD;&#x542F;Jupyter Notebook&#x5185;&#x6838;&#xFF08;notebook&#x5BFC;&#x822A; - Kernel - Restart&#xFF09;</li>
+</ul>
+</li>
+</ul>
+<p><strong>&#x53E6;&#x5916;&#xFF1A;&#x5982;&#x679C;&#x4F7F;&#x7528;import&#x65B9;&#x5F0F;&#x8F7D;&#x5165;&#xFF0C;&#x76F4;&#x63A5;&#x8F7D;&#x5165;&#x6A21;&#x5757;&#x4FEE;&#x6539;&#x90FD;&#x4E0D;&#x4F1A;&#x53D8;&#xFF0C;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#x540C;&#x4E0A;</strong></p>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x4E00;&#x79CD;&#x8F7D;&#x5165;&#x6A21;&#x5757;&#x65B9;&#x5F0F;</span>
+<span class="hljs-keyword">from</span> module.module2 <span class="hljs-keyword">import</span> *
+
+m2()
+mo.m1()
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x6216;&#x8005;&#x53E6;&#x4E00;&#x79CD;&#x8F7D;&#x5165;&#x6A21;&#x5757;&#x65B9;&#x5F0F;</span>
+<span class="hljs-keyword">import</span> module.module2
+
+module.module2.m2()
+module.module2.mo.m1()
+</code></pre>
+<hr>
+<div id="html"></div>
+
+<h4 id="&#x5E94;&#x7528;&#xFF1A;&#x6267;&#x884C;htmlcssjavascript">&#x5E94;&#x7528;&#xFF1A;&#x6267;&#x884C;HTML/CSS/JavaScript</h4>
+<p>&#x5728;cell&#x4E2D;&#x4EE5;Markdown&#x6A21;&#x5F0F;&#x6267;&#x884C;HTML/CSS/JS</p>
+<ul>
+<li>&#xFF08;HTML&#x652F;&#x6301;&#xFF0C;CSS&#x53EA;&#x652F;&#x6301;&#x884C;&#x5185;&#x6837;&#x5F0F;&#xFF0C;JS&#x4E0D;&#x652F;&#x6301;&#xFF09;</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;###&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;class1&quot;</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">&quot;color:#ff0;&quot;</span>&gt;</span>aaaaaaaaaaa<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;###&quot;</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;id1&quot;</span>&gt;</span>bbbbbbbbbbbbbbbb<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">style</span>&gt;</span><span class="css">
+<span class="hljs-class">.class1</span><span class="hljs-rules">{<span class="hljs-rule"><span class="hljs-attribute">background</span>:<span class="hljs-value"><span class="hljs-hexcolor">#0f0</span></span></span>;}</span>
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+<span class="hljs-keyword">var</span> ida = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;id1&apos;</span>);
+ida.style.background = <span class="hljs-string">&apos;#f00&apos;</span>;
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</code></pre>
+<!--
+**调用py库载入执行HTML/CSS/JS**
+* 在cell中以原生方式执行HTML/CSS/JS，HTML/CSS/JS全支持
+* 优点：非IPython环境也支持
+* 缺点：书写复杂
+
+```python
+from IPython.display import HTML
+
+HTML('''
+<a href="###" class="class2" style="color:#ff0;">aaaaaaaaaaa</a>
+<a href="###" id="id2">bbbbbbbbbbbbbbbb</a>
+
+<style>
+.class2{background:#0f0;}
+</style>
+
+<script>
+var ida2 = document.getElementById('id2');
+ida2.style.background = '#f00';
+</script>
+''')
+```
+-->
+<p><strong>IPython&#x4E13;&#x7528;&#x9B54;&#x672F;&#x547D;&#x4EE4; <code>%%HTML</code> &#x8F7D;&#x5165;HTML/CSS/JS</strong></p>
+<ul>
+<li>&#x5728;cell&#x4E2D;&#x4EE5;&#x539F;&#x751F;HTML&#x65B9;&#x5F0F;&#x6267;&#x884C;&#xFF0C;HTML/CSS/JS&#x5168;&#x652F;&#x6301;</li>
+<li><strong>&#x4F18;&#x70B9;&#xFF1A;&#x4E66;&#x5199;&#x7B80;&#x5355;&#xFF0C;&#x63A8;&#x8350;</strong></li>
+<li>&#x7F3A;&#x70B9;&#xFF1A;&#x975E;IPython&#x73AF;&#x5883;&#x4E0D;&#x652F;&#x6301;</li>
+</ul>
+<pre><code class="lang-html">%%HTML
+
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;###&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;class3&quot;</span> <span class="hljs-attribute">style</span>=<span class="hljs-value">&quot;color:#ff0;&quot;</span>&gt;</span>aaaaaaaaaaa<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;###&quot;</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;id3&quot;</span>&gt;</span>bbbbbbbbbbbbbbbb<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">style</span>&gt;</span><span class="css">
+<span class="hljs-class">.class3</span><span class="hljs-rules">{<span class="hljs-rule"><span class="hljs-attribute">background</span>:<span class="hljs-value"><span class="hljs-hexcolor">#0f0</span></span></span>;}</span>
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+<span class="hljs-keyword">var</span> ida3 = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;id3&apos;</span>);
+ida3.style.background = <span class="hljs-string">&apos;#f00&apos;</span>;
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</code></pre>
+<hr>
+<div id="yingcang"></div>
+
+<h4 id="&#x5E94;&#x7528;&#xFF1A;jupyter-notebook&#x9690;&#x85CF;&#x4EE3;&#x7801;">&#x5E94;&#x7528;&#xFF1A;Jupyter Notebook&#x9690;&#x85CF;&#x4EE3;&#x7801;</h4>
+<p>&#x7528;&#x4E8E;ipynb&#x6587;&#x4EF6;&#x548C;HTML&#x6587;&#x4EF6;&#xFF0C;&#x9ED8;&#x8BA4;&#x53EA;&#x663E;&#x793A;&#x89E3;&#x91CA;&#x548C;&#x6267;&#x884C;&#x7ED3;&#x679C;&#xFF0C;&#x70B9;&#x51FB;&#x6309;&#x94AE;&#x9690;&#x85CF;/&#x663E;&#x793A;&#x4EE3;&#x7801;&#xFF0C;&#x8F93;&#x51FA;&#x6570;&#x636E;&#x5206;&#x6790;&#x62A5;&#x544A;&#x65F6;&#x7528;</p>
+<pre><code class="lang-html">%%HTML
+
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+code_show=<span class="hljs-literal">true</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">code_toggle</span>(<span class="hljs-params"></span>) </span>{
+ <span class="hljs-keyword">if</span> (code_show){
+ $(<span class="hljs-string">&apos;div.input&apos;</span>).hide();
+ } <span class="hljs-keyword">else</span> {
+ $(<span class="hljs-string">&apos;div.input&apos;</span>).show();
+ }
+ code_show = !code_show
+}
+$( <span class="hljs-built_in">document</span> ).ready(code_toggle);
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">action</span>=<span class="hljs-value">&quot;javascript:code_toggle()&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;submit&quot;</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;&#x70B9;&#x51FB;&#x6309;&#x94AE;&#x663E;&#x793A;/&#x9690;&#x85CF;&#x6587;&#x6863;&#x4EE3;&#x7801;&#xFF01;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span>
+</code></pre>
+<hr>
+<div id="yuancheng"></div>
+
+<h2 id="&#x5E94;&#x7528;&#xFF1A;jupyter-notebook&#x8FDC;&#x7A0B;&#x8BBF;&#x95EE;">&#x5E94;&#x7528;&#xFF1A;Jupyter Notebook&#x8FDC;&#x7A0B;&#x8BBF;&#x95EE;</h2>
+<p>Jupyter Notebook&#x9ED8;&#x8BA4;&#x53EA;&#x80FD;&#x5728;&#x672C;&#x5730;&#x8BBF;&#x95EE;&#xFF0C;&#x53EF;&#x4EE5;&#x628A;&#x5B83;&#x914D;&#x7F6E;&#x5728;&#x9AD8;&#x6027;&#x80FD;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#xFF0C;&#x672C;&#x5730;&#x7535;&#x8111;&#x76F4;&#x63A5;&#x901A;&#x8FC7;&#x6D4F;&#x89C8;&#x5668;&#x8FDC;&#x7A0B;&#x8BBF;&#x95EE;Jupyter&#x6267;&#x884C;&#x5927;&#x89C4;&#x6A21;&#x9AD8;&#x6027;&#x80FD;&#x8BA1;&#x7B97;</p>
+<p><strong>1. &#x751F;&#x6210;sha1&#x52A0;&#x5BC6;&#x5BC6;&#x7801;</strong>&#xFF1A;</p>
+<pre><code>from IPython.lib import passwd
+passwd()
+
+# Enter password: # &#x8FD9;&#x91CC;&#x8F93;&#x5165;&#x4F60;&#x7684;&#x5BC6;&#x7801;&#x56DE;&#x8F66;
+# Verify password: # &#x518D;&#x6B21;&#x8F93;&#x5165;&#x5BC6;&#x7801;&#x56DE;&#x8F66;
+# &#x5C06;&#x751F;&#x6210;&#x7684;sha1&#x5B57;&#x7B26;&#x4E32;&#x4FDD;&#x5B58;&#x597D;&#xFF08;&#x547D;&#x4EE4;&#x7A97;&#x53E3;&#x53F3;&#x952E; - &#x6807;&#x8BB0; - &#x9009;&#x4E2D;&#x540E;&#x56DE;&#x8F66;&#x4FDD;&#x5B58;&#xFF09;
+</code></pre><p><strong>2. &#x7F16;&#x8F91;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</strong>&#xFF1A;&#x5728;&#x81EA;&#x5B9A;&#x4E49;&#x76EE;&#x5F55;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;py&#x6587;&#x4EF6;&#xFF0C;&#x4F8B;&#x5982;<code>E:/pyserver/jupyter/jupyter_server.py</code>,&#x91CC;&#x9762;&#x6DFB;&#x52A0;&#x914D;&#x7F6E;&#xFF1A;</p>
+<pre><code>#&#x7528;&#x4E8E;Jupyter&#x8FDC;&#x7A0B;&#x8BBF;&#x95EE;&#x7684;&#x914D;&#x7F6E;
+
+c.NotebookApp.ip = &apos;*&apos; #&#x6240;&#x6709;ip&#x90FD;&#x80FD;&#x8BBF;&#x95EE;
+c.NotebookApp.open_browser = False #&#x6267;&#x884C;&#x662F;&#x662F;&#x5426;&#x6253;&#x5F00;&#x6D4F;&#x89C8;&#x5668;&#x663E;&#x793A;&#x9875;&#x9762;&#xFF0C;&#x4E0D;&#x6253;&#x5F00;
+c.NotebookApp.port = 9999   #&#x81EA;&#x5DF1;&#x8BBE;&#x4E00;&#x4E2A;&#x7AEF;&#x53E3;&#x53F7;&#xFF0C;&#x53EF;&#x6539;&#xFF0C;&#x4E0D;&#x51B2;&#x7A81;&#x5C31;&#x884C;
+c.NotebookApp.password = u&apos;sha1:61d200d041e4:3f4b884348c940c569e1211d30e4affb701def15&apos;  #&#x586B;&#x5165;&#x7B2C;&#x4E00;&#x6B65;&#x751F;&#x6210;sha1&#x5BC6;&#x7801;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x8FD9;&#x91CC;&#x662F;`nihao`&#x751F;&#x6210;&#x7684;&#xFF0C;&#x6539;&#x4E3A;&#x81EA;&#x5DF1;&#x7684;
+
+c.NotebookApp.notebook_dir = u&apos;E:/pyserver&apos; #&#x9009;&#x586B;&#xFF0C;&#x8FDC;&#x7A0B;&#x6253;&#x5F00;Jupyter&#x540E;&#x9ED8;&#x8BA4;&#x7684;&#x76EE;&#x5F55;
+</code></pre><p><strong>3. &#x8C03;&#x7528;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6253;&#x5F00;Jupyter</strong>&#xFF1A;</p>
+<pre><code>jupyter notebook --config E:/pyserver/jupyter/jupyter_server.py
+</code></pre><p><strong>4 &#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;URL&#x5730;&#x5740;&#xFF0C;&#x6253;&#x5F00;Jupyter Notebook</strong>&#xFF1A;</p>
+<pre><code>URL&#x5730;&#x5740;&#x4E00;&#x822C;&#x4E3A;&#xFF1A;http://&#x4F60;&#x7684;IP&#x5730;&#x5740;:&#x8BBE;&#x5B9A;&#x7AEF;&#x53E3;&#x53F7;
+</code></pre><ul>
+<li>&#x83B7;&#x53D6;&#x672C;&#x673A;IP&#x5730;&#x5740;&#xFF1A;<ul>
+<li>Windows&#xFF0C;&#x547D;&#x4EE4;&#x884C;&#x8F93;&#x5165;<code>ipconfig</code></li>
+<li>Linux/MAC&#xFF0C;&#x547D;&#x4EE4;&#x884C;&#x8F93;&#x5165;<code>ifconfig</code></li>
+</ul>
+</li>
+<li>&#x5982;&#x591A;&#x4EBA;&#x591A;&#x9879;&#x76EE;&#x5927;&#x89C4;&#x6A21;&#x4F7F;&#x7528;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#xFF0C;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x7528;&#x5B98;&#x65B9;<code>JupyterHUB</code>&#x5DE5;&#x5177;</li>
+</ul>
+<hr>
+<div id="ppt"></div>
+
+<h2 id="&#x5E94;&#x7528;&#xFF1A;jupyter-notebook&#x751F;&#x6210;&#x7F51;&#x9875;&#x7248;ppt">&#x5E94;&#x7528;&#xFF1A;Jupyter Notebook&#x751F;&#x6210;&#x7F51;&#x9875;&#x7248;PPT</h2>
+<ol>
+<li>&#x83DC;&#x5355;&#x680F; - View - Cell Toolbar - SlideShow
+ &#x6CE8;&#xFF1A;&#x9ED8;&#x8BA4;&#x6B63;&#x5E38;&#x72B6;&#x6001;&#x662F;None</li>
+<li>Cell&#x53F3;&#x4E0A;&#x89D2;&#x4F1A;&#x51FA;&#x73B0;&#x5E7B;&#x706F;&#x9009;&#x9879;&#xFF0C;&#x4F9D;&#x6B21;&#x4E3A;&#xFF1A;<ul>
+<li>Slide&#xFF1A;&#x5355;&#x4E2A;view&#xFF0C;&#x5DE6;&#x53F3;&#x6ED1;&#x52A8;&#x5207;&#x6362;</li>
+<li>Sub-Slide&#xFF1A;Cell&#x7684;sub-cell&#xFF0C;&#x4E0A;&#x4E0B;&#x6ED1;&#x52A8;&#x5207;&#x6362;</li>
+<li>Fragment&#xFF1A;Slide&#x6216;Sub-Slide&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x53EF;&#x4EE5;&#x6309;&#x6B21;&#x5E8F;&#x52A8;&#x6001;&#x5C55;&#x793A;&#xFF0C;&#x5355;&#x51FB;&#x4E00;&#x6B21;&#x51FA;&#x73B0;&#x4E00;&#x6761;</li>
+<li>Skip&#xFF1A;&#x8DF3;&#x8FC7;&#xFF0C;&#x6CE8;&#x91CA;&#x975E;&#x6F14;&#x793A;&#x4EE3;&#x7801;&#xFF0C;&#x4E0D;&#x663E;&#x793A;&#x5728;&#x5E7B;&#x706F;&#x4E2D;</li>
+<li>Notes&#xFF1A;&#x5728;&#x9875;&#x9762;&#x6309;s&#x5C31;&#x53EF;&#x4EE5;&#x8DF3;&#x51FA;&#x6765;&#x7684;&#x6CE8;&#x91CA;&#xFF08;&#x76EE;&#x524D;&#x65E0;&#x6548;&#xFF09;</li>
+</ul>
+</li>
+</ol>
+<p>&#x8BBE;&#x7F6E;&#x597D;&#x5E7B;&#x706F;&#x663E;&#x793A;Cell&#x540E;&#xFF1A;</p>
+<p><strong>&#x751F;&#x6210;HTML&#x5E7B;&#x706F;&#x6F14;&#x793A;&#x6587;&#x7A3F;&#x6587;&#x4EF6;&#xFF1A;</strong></p>
+<ul>
+<li>aaa&#x4E3A;ipynb&#x6587;&#x4EF6;&#x540D;&#xFF0C;bbb&#x4E3A;&#x751F;&#x6210;HTML&#x6587;&#x4EF6;&#x540D;</li>
+<li>&#x751F;&#x6210;&#x540E;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x53CC;&#x51FB;&#x6253;&#x5F00;&#xFF0C;&#x6309;<code>F11</code>&#x5168;&#x5C4F;&#xFF0C;&#x70B9;&#x51FB;<code>&#x7A7A;&#x683C;&#x952E;</code>&#x6216;&#x9F20;&#x6807;&#x70B9;&#x51FB;&#x53F3;&#x4E0B;&#x89D2;&#x63A7;&#x5236;&#x53F0;&#x64AD;&#x653E;</li>
+<li>&#x6587;&#x4EF6;&#x540D;&#x4E0D;&#x80FD;&#x542B;&#x6709;&#x7A7A;&#x683C;</li>
+<li>&#x5E38;&#x89C1;&#x5FEB;&#x6377;&#x952E;<ul>
+<li>f&#xFF0C;&#x5168;&#x5C4F;&#xFF0C;ESC&#x5173;&#x95ED;&#x5168;&#x5C4F;</li>
+<li>b&#xFF0C;&#x7184;&#x706F;</li>
+<li>o&#xFF0C;&#x663E;&#x793A;&#x5E7B;&#x706F;&#x9875;&#x9762;&#x5217;&#x8868;</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-bash">jupyter-nbconvert --to slides aaa.ipynb --reveal-prefix  <span class="hljs-string">&apos;https://cdn.bootcss.com/reveal.js/3.5.0&apos;</span> --output bbb
+</code></pre>
+<p><strong>&#x6216;&#x8005;&#x4E5F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5728;&#x7EBF;&#x5F00;&#x542F;&#x5E7B;&#x706F;&#x670D;&#x52A1;</strong></p>
+<pre><code class="lang-bash">jupyter-nbconvert aaa.ipynb --to slides --post serve
+</code></pre>
+<p>&#x6CE8;&#x610F;&#xFF1A;</p>
+<ul>
+<li>&#x76F4;&#x63A5;&#x5728;&#x7EBF;&#x5F00;&#x542F;&#x670D;&#x52A1;&#x4F1A;&#x5148;&#x751F;&#x6210;HTML&#x6587;&#x4EF6;&#xFF0C;&#x518D;&#x5F00;&#x542F;HTTP&#x670D;&#x52A1;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#xFF0C;&#x4F46;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x7684;&#x6587;&#x4EF6;&#x5E7B;&#x706F;&#x8D44;&#x6E90;&#xFF08;&#x5728;&#x7EBF;JS&#x5E7B;&#x706F;&#x5E93;&#xFF09;&#x4F1A;&#x8F7D;&#x5165;&#x5931;&#x8D25;&#xFF0C;&#x5BFC;&#x81F4;&#x53CC;&#x51FB;&#x6253;&#x5F00;&#x7684;&#x6587;&#x4EF6;&#x65E0;&#x6CD5;&#x64AD;&#x653E;&#x5E7B;&#x706F;</li>
+<li>&#x79BB;&#x7EBF;&#x751F;&#x6210;&#x7684;HTML&#x6587;&#x4EF6;&#xFF0C;&#x53CC;&#x51FB;&#x6253;&#x5F00;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x64AD;&#x653E;</li>
+<li>&#x7528; Files - Download as - Reveal.js slide &#x53E6;&#x5B58;&#x7684;&#x7F51;&#x9875;&#x6587;&#x4EF6;&#x4E5F;&#x662F;&#x5E7B;&#x706F;&#x6587;&#x4EF6;&#xFF0C;&#x53EA;&#x662F;&#x7531;&#x4E8E;&#x8F7D;&#x5165;&#x5E7B;&#x706F;JS&#x5E93;&#x5931;&#x8D25;&#x4E0D;&#x80FD;&#x64AD;&#x653E;&#xFF08;&#x65B0;&#x7248;Jupyter&#x53EF;&#x4EE5;&#x64AD;&#x653E;&#x4F46;&#x6709;&#x5176;&#x4ED6;BUG&#xFF09;</li>
+</ul>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../md/rumen-anaconda.html" class="navigation navigation-prev " aria-label="Previous page: Python发行版：Anaconda"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../md/rumen-conda.html" class="navigation navigation-next " aria-label="Next page: 包和环境管理器：conda"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
