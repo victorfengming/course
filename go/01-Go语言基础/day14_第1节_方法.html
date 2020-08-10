@@ -1,0 +1,1555 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第1节_方法 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="day14_第2节_接口.html" />
+    
+    
+    <link rel="prev" href="day13-结构体.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Go语言基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="day01_第1节_知名编程语言或系统的发展简史.html">
+            
+                <a href="day01_第1节_知名编程语言或系统的发展简史.html">
+            
+                    
+                    第1节_知名编程语言或系统的发展简史
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="day01_第2节_Go语言的前世今生.html">
+            
+                <a href="day01_第2节_Go语言的前世今生.html">
+            
+                    
+                    第2节_Go语言的前世今生
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="day01_第3节_Go语言logo和版本.html">
+            
+                <a href="day01_第3节_Go语言logo和版本.html">
+            
+                    
+                    第3节_Go语言logo和版本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="day01_第4节_Go语言的核心特性.html">
+            
+                <a href="day01_第4节_Go语言的核心特性.html">
+            
+                    
+                    第4节_Go语言的核心特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="day01_第5节_Go语言的优势和其他语言的对比.html">
+            
+                <a href="day01_第5节_Go语言的优势和其他语言的对比.html">
+            
+                    
+                    第5节_Go语言的优势和其他语言的对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="day01_第6节_Go语言能做什么.html">
+            
+                <a href="day01_第6节_Go语言能做什么.html">
+            
+                    
+                    第6节_Go语言能做什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="day01_第7节_Go语言环境搭建.html">
+            
+                <a href="day01_第7节_Go语言环境搭建.html">
+            
+                    
+                    第7节_Go语言环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="day01_第8节_第一个程序HelloWorld.html">
+            
+                <a href="day01_第8节_第一个程序HelloWorld.html">
+            
+                    
+                    第8节_第一个程序HelloWorld
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="day01_第9节_Go的命令以及Go的执行原理.html">
+            
+                <a href="day01_第9节_Go的命令以及Go的执行原理.html">
+            
+                    
+                    第9节_Go的命令以及Go的执行原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="day01_第10节_安装Goland开发工具.html">
+            
+                <a href="day01_第10节_安装Goland开发工具.html">
+            
+                    
+                    第10节_安装Goland开发工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="day01_第11节_编码规范.html">
+            
+                <a href="day01_第11节_编码规范.html">
+            
+                    
+                    第11节_编码规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="day02_基本语法.html">
+            
+                <a href="day02_基本语法.html">
+            
+                    
+                    基本语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="day03_数据类型&运算符.html">
+            
+                <a href="day03_数据类型&运算符.html">
+            
+                    
+                    数据类型&运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="day03_键盘输入和打印输出.html">
+            
+                <a href="day03_键盘输入和打印输出.html">
+            
+                    
+                    键盘输入和打印输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="day04_分支语句.html">
+            
+                <a href="day04_分支语句.html">
+            
+                    
+                    分支语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="day05_循环语句.html">
+            
+                <a href="day05_循环语句.html">
+            
+                    
+                    循环语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="day06_数组.html">
+            
+                <a href="day06_数组.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="day07_Slice的使用.html">
+            
+                <a href="day07_Slice的使用.html">
+            
+                    
+                    Slice的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.19" data-path="day08_Map的使用.html">
+            
+                <a href="day08_Map的使用.html">
+            
+                    
+                    Map的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.20" data-path="day09_string.html">
+            
+                <a href="day09_string.html">
+            
+                    
+                    string
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.21" data-path="day10_函数.html">
+            
+                <a href="day10_函数.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.22" data-path="day11_包的管理.html">
+            
+                <a href="day11_包的管理.html">
+            
+                    
+                    包的管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.23" data-path="day12_指针.html">
+            
+                <a href="day12_指针.html">
+            
+                    
+                    指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.24" data-path="day13-结构体.html">
+            
+                <a href="day13-结构体.html">
+            
+                    
+                    结构体
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.25" data-path="day14_第1节_方法.html">
+            
+                <a href="day14_第1节_方法.html">
+            
+                    
+                    第1节_方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.26" data-path="day14_第2节_接口.html">
+            
+                <a href="day14_第2节_接口.html">
+            
+                    
+                    第2节_接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.27" data-path="day14_第3节-OOP编程.html">
+            
+                <a href="day14_第3节-OOP编程.html">
+            
+                    
+                    第3节-OOP编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.28" data-path="day14_第4节-type.html">
+            
+                <a href="day14_第4节-type.html">
+            
+                    
+                    第4节-type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.29" data-path="day15_错误处理.html">
+            
+                <a href="day15_错误处理.html">
+            
+                    
+                    错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Go语言基础进阶
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../02-Go语言基础进阶/day16_file操作.html">
+            
+                <a href="../02-Go语言基础进阶/day16_file操作.html">
+            
+                    
+                    01file操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../02-Go语言基础进阶/day17_Go语言并发Goroutine.html">
+            
+                <a href="../02-Go语言基础进阶/day17_Go语言并发Goroutine.html">
+            
+                    
+                    02Go语言并发Goroutine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../02-Go语言基础进阶/day18_channel通道.html">
+            
+                <a href="../02-Go语言基础进阶/day18_channel通道.html">
+            
+                    
+                    03channel通道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../02-Go语言基础进阶/day19_Go语言反射.html">
+            
+                <a href="../02-Go语言基础进阶/day19_Go语言反射.html">
+            
+                    
+                    04Go语言反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    MySQL数据库基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../03-MySQL数据库基础/day23_学习笔记.html">
+            
+                <a href="../03-MySQL数据库基础/day23_学习笔记.html">
+            
+                    
+                    01学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../03-MySQL数据库基础/day23_数据库基础知识和基础操作.html">
+            
+                <a href="../03-MySQL数据库基础/day23_数据库基础知识和基础操作.html">
+            
+                    
+                    02数据库基础知识和基础操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../03-MySQL数据库基础/day24_查询和复杂查询.html">
+            
+                <a href="../03-MySQL数据库基础/day24_查询和复杂查询.html">
+            
+                    
+                    03查询和复杂查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    beego框架
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../04-beego框架/day36_beego框架介绍和流程分析.html">
+            
+                <a href="../04-beego框架/day36_beego框架介绍和流程分析.html">
+            
+                    
+                    beego框架介绍和流程分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../04-beego框架/day37_beego框架总结及数据库连接配置.html">
+            
+                <a href="../04-beego框架/day37_beego框架总结及数据库连接配置.html">
+            
+                    
+                    beego框架总结及数据库连接配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    beego开发博客系统
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../05-beego框架开发博客系统/day38_项目搭建_登录注册和Session功能开发.html">
+            
+                <a href="../05-beego框架开发博客系统/day38_项目搭建_登录注册和Session功能开发.html">
+            
+                    
+                    项目搭建_登录注册和Session功能开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../05-beego框架开发博客系统/day39_写文章_项目首页和查看文章详情功能开发.html">
+            
+                <a href="../05-beego框架开发博客系统/day39_写文章_项目首页和查看文章详情功能开发.html">
+            
+                    
+                    写文章_项目首页和查看文章详情功能开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../05-beego框架开发博客系统/day40_修改文章_删除文章和文章标签功能开发.html">
+            
+                <a href="../05-beego框架开发博客系统/day40_修改文章_删除文章和文章标签功能开发.html">
+            
+                    
+                    修改文章_删除文章和文章标签功能开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../05-beego框架开发博客系统/day41_首页功能扩展_图片上传和关于功能开发.html">
+            
+                <a href="../05-beego框架开发博客系统/day41_首页功能扩展_图片上传和关于功能开发.html">
+            
+                    
+                    首页功能扩展_图片上传和关于功能开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" >
+            
+                <span>
+            
+                    
+                    iris框架
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../06-iris框架/day54_web开发介绍、iris框架安装、HTTP请求和返回、iris路由处理.html">
+            
+                <a href="../06-iris框架/day54_web开发介绍、iris框架安装、HTTP请求和返回、iris路由处理.html">
+            
+                    
+                    web开发介绍、iris框架安装、HTTP请求和返回、iris路由处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../06-iris框架/day55_框架设置、mvc包、session使用、项目搭建和资源导入.html">
+            
+                <a href="../06-iris框架/day55_框架设置、mvc包、session使用、项目搭建和资源导入.html">
+            
+                    
+                    框架设置、mvc包、session使用、项目搭建和资源导入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <span>
+            
+                    
+                    微服务特性
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../07-微服务特性/day76_微服务简介及特性介绍.html">
+            
+                <a href="../07-微服务特性/day76_微服务简介及特性介绍.html">
+            
+                    
+                    微服务简介及特性介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <span>
+            
+                    
+                    protobuf
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../08-protobuf/day77_Protobuf介绍.html">
+            
+                <a href="../08-protobuf/day77_Protobuf介绍.html">
+            
+                    
+                    Protobuf介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" >
+            
+                <span>
+            
+                    
+                    微服务管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../09-微服务管理/day78_微服务管理_上.html">
+            
+                <a href="../09-微服务管理/day78_微服务管理_上.html">
+            
+                    
+                    微服务管理_上
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../09-微服务管理/day78_微服务管理_下.md">
+            
+                <span>
+            
+                    
+                    微服务管理_下
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" >
+            
+                <span>
+            
+                    
+                    RPC&gRPC
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="../10-RPC远程调用机制/day80_RPC远程过程调用.html">
+            
+                <a href="../10-RPC远程调用机制/day80_RPC远程过程调用.html">
+            
+                    
+                    RPC远程过程调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="../11-gRPC远程调用机制/day81_gRPC远程调用机制介绍.html">
+            
+                <a href="../11-gRPC远程调用机制/day81_gRPC远程调用机制介绍.html">
+            
+                    
+                    gRPC远程调用机制介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="../11-gRPC远程调用机制/day82_gRPC使用.html">
+            
+                <a href="../11-gRPC远程调用机制/day82_gRPC使用.html">
+            
+                    
+                    gRPC使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" >
+            
+                <span>
+            
+                    
+                    go-micro
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.5.1" data-path="../12-go-micro微服务框架/day83_go-micro框架介绍.html">
+            
+                <a href="../12-go-micro微服务框架/day83_go-micro框架介绍.html">
+            
+                    
+                    go-micro框架介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.2" data-path="../12-go-micro微服务框架/day84_go-micro使用1.html">
+            
+                <a href="../12-go-micro微服务框架/day84_go-micro使用1.html">
+            
+                    
+                    go-micro使用1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.3" data-path="../12-go-micro微服务框架/day85_go-micro使用2.html">
+            
+                <a href="../12-go-micro微服务框架/day85_go-micro使用2.html">
+            
+                    
+                    go-micro使用2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" >
+            
+                <span>
+            
+                    
+                    RESTful
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../13-RESTful设计/day86_RESTful标准设计.html">
+            
+                <a href="../13-RESTful设计/day86_RESTful标准设计.html">
+            
+                    
+                    RESTful标准设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" >
+            
+                <span>
+            
+                    
+                    区块链
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../14-区块链/day01_初始区块链家族1.html">
+            
+                <a href="../14-区块链/day01_初始区块链家族1.html">
+            
+                    
+                    初始区块链家族1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="../14-区块链/day02_区块链基础入门.html">
+            
+                <a href="../14-区块链/day02_区块链基础入门.html">
+            
+                    
+                    区块链基础入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.3" data-path="../14-区块链/day03_区块链的本质.html">
+            
+                <a href="../14-区块链/day03_区块链的本质.html">
+            
+                    
+                    区块链的本质
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.4" data-path="../14-区块链/day04_区块链的特性.html">
+            
+                <a href="../14-区块链/day04_区块链的特性.html">
+            
+                    
+                    区块链的特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第1节_方法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x65B9;&#x6CD5;">&#x65B9;&#x6CD5;</h1>
+<blockquote>
+<p>create by victor</p>
+</blockquote>
+<h2 id="11-&#x4EC0;&#x4E48;&#x662F;&#x65B9;&#x6CD5;">1.1 &#x4EC0;&#x4E48;&#x662F;&#x65B9;&#x6CD5;</h2>
+<p>Go &#x8BED;&#x8A00;&#x4E2D;&#x540C;&#x65F6;&#x6709;&#x51FD;&#x6570;&#x548C;&#x65B9;&#x6CD5;&#x3002;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x4E86;&#x63A5;&#x53D7;&#x8005;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x63A5;&#x53D7;&#x8005;&#x53EF;&#x4EE5;&#x662F;&#x547D;&#x540D;&#x7C7B;&#x578B;&#x6216;&#x8005;&#x7ED3;&#x6784;&#x4F53;&#x7C7B;&#x578B;&#x7684;&#x4E00;&#x4E2A;&#x503C;&#x6216;&#x8005;&#x662F;&#x4E00;&#x4E2A;&#x6307;&#x9488;&#x3002;&#x6240;&#x6709;&#x7ED9;&#x5B9A;&#x7C7B;&#x578B;&#x7684;&#x65B9;&#x6CD5;&#x5C5E;&#x4E8E;&#x8BE5;&#x7C7B;&#x578B;&#x7684;&#x65B9;&#x6CD5;&#x96C6;</p>
+<p>&#x65B9;&#x6CD5;&#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x5B83;&#x5E26;&#x6709;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684;&#x63A5;&#x6536;&#x5668;&#x7C7B;&#x578B;&#xFF0C;&#x5B83;&#x662F;&#x5728;func&#x5173;&#x952E;&#x5B57;&#x548C;&#x65B9;&#x6CD5;&#x540D;&#x4E4B;&#x95F4;&#x7F16;&#x5199;&#x7684;&#x3002;&#x63A5;&#x6536;&#x5668;&#x53EF;&#x4EE5;&#x662F;struct&#x7C7B;&#x578B;&#x6216;&#x975E;struct&#x7C7B;&#x578B;&#x3002;&#x63A5;&#x6536;&#x65B9;&#x53EF;&#x4EE5;&#x5728;&#x65B9;&#x6CD5;&#x5185;&#x90E8;&#x8BBF;&#x95EE;&#x3002;</p>
+<p>&#x65B9;&#x6CD5;&#x80FD;&#x7ED9;&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x7C7B;&#x578B;&#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x884C;&#x4E3A;&#x3002;&#x5B83;&#x548C;&#x51FD;&#x6570;&#x7684;&#x533A;&#x522B;&#x5728;&#x4E8E;&#x65B9;&#x6CD5;&#x6709;&#x4E00;&#x4E2A;&#x63A5;&#x6536;&#x8005;&#xFF0C;&#x7ED9;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x63A5;&#x6536;&#x8005;&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x5C31;&#x53D8;&#x6210;&#x4E86;&#x65B9;&#x6CD5;&#x3002;&#x63A5;&#x6536;&#x8005;&#x53EF;&#x4EE5;&#x662F;&#x503C;&#x63A5;&#x6536;&#x8005;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x6307;&#x9488;&#x63A5;&#x6536;&#x8005;&#x3002;</p>
+<p>&#x5728;&#x8C03;&#x7528;&#x65B9;&#x6CD5;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x503C;&#x7C7B;&#x578B;&#x65E2;&#x53EF;&#x4EE5;&#x8C03;&#x7528;&#x503C;&#x63A5;&#x6536;&#x8005;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x8C03;&#x7528;&#x6307;&#x9488;&#x63A5;&#x6536;&#x8005;&#x7684;&#x65B9;&#x6CD5;&#xFF1B;&#x6307;&#x9488;&#x7C7B;&#x578B;&#x65E2;&#x53EF;&#x4EE5;&#x8C03;&#x7528;&#x6307;&#x9488;&#x63A5;&#x6536;&#x8005;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x8C03;&#x7528;&#x503C;&#x63A5;&#x6536;&#x8005;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x4E0D;&#x7BA1;&#x65B9;&#x6CD5;&#x7684;&#x63A5;&#x6536;&#x8005;&#x662F;&#x4EC0;&#x4E48;&#x7C7B;&#x578B;&#xFF0C;&#x8BE5;&#x7C7B;&#x578B;&#x7684;&#x503C;&#x548C;&#x6307;&#x9488;&#x90FD;&#x53EF;&#x4EE5;&#x8C03;&#x7528;&#xFF0C;&#x4E0D;&#x5FC5;&#x4E25;&#x683C;&#x7B26;&#x5408;&#x63A5;&#x6536;&#x8005;&#x7684;&#x7C7B;&#x578B;&#x3002;</p>
+<h2 id="12-&#x65B9;&#x6CD5;&#x7684;&#x8BED;&#x6CD5;">1.2 &#x65B9;&#x6CD5;&#x7684;&#x8BED;&#x6CD5;</h2>
+<p>&#x5B9A;&#x4E49;&#x65B9;&#x6CD5;&#x7684;&#x8BED;&#x6CD5;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> (t Type) methodName(parameter list)(<span class="hljs-keyword">return</span> list) {
+
+}
+<span class="hljs-keyword">func</span> funcName(parameter list)(<span class="hljs-keyword">return</span> list){
+
+}
+</code></pre>
+<p>&#x5B9E;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (  
+    <span class="hljs-string">&quot;fmt&quot;</span>
+)
+
+<span class="hljs-keyword">type</span> Employee <span class="hljs-keyword">struct</span> {  
+    name     <span class="hljs-keyword">string</span>
+    salary   <span class="hljs-keyword">int</span>
+    currency <span class="hljs-keyword">string</span>
+}
+
+<span class="hljs-comment">/*
+ displaySalary() method has Employee as the receiver type
+*/</span>
+<span class="hljs-keyword">func</span> (e Employee) displaySalary() {  
+    fmt.Printf(<span class="hljs-string">&quot;Salary of %s is %s%d&quot;</span>, e.name, e.currency, e.salary)
+}
+
+<span class="hljs-keyword">func</span> main() {  
+    emp1 := Employee {
+        name:     <span class="hljs-string">&quot;Sam Adolf&quot;</span>,
+        salary:   <span class="hljs-number">5000</span>,
+        currency: <span class="hljs-string">&quot;$&quot;</span>,
+    }
+    emp1.displaySalary() <span class="hljs-comment">//Calling displaySalary() method of Employee type</span>
+}
+</code></pre>
+<p><strong>&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x76F8;&#x540C;&#x7684;&#x65B9;&#x6CD5;&#x540D;</strong></p>
+<p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;fmt&quot;</span>
+    <span class="hljs-string">&quot;math&quot;</span>
+)
+
+<span class="hljs-keyword">type</span> Rectangle <span class="hljs-keyword">struct</span> {
+    width, height <span class="hljs-keyword">float64</span>
+}
+<span class="hljs-keyword">type</span> Circle <span class="hljs-keyword">struct</span> {
+    radius <span class="hljs-keyword">float64</span>
+}
+
+
+<span class="hljs-keyword">func</span> (r Rectangle) area() <span class="hljs-keyword">float64</span> {
+    <span class="hljs-keyword">return</span> r.width * r.height
+}
+<span class="hljs-comment">//&#x8BE5; method &#x5C5E;&#x4E8E; Circle &#x7C7B;&#x578B;&#x5BF9;&#x8C61;&#x4E2D;&#x7684;&#x65B9;&#x6CD5;</span>
+<span class="hljs-keyword">func</span> (c Circle) area() <span class="hljs-keyword">float64</span> {
+    <span class="hljs-keyword">return</span> c.radius * c.radius * math.Pi
+}
+<span class="hljs-keyword">func</span> main() {
+    r1 := Rectangle{<span class="hljs-number">12</span>, <span class="hljs-number">2</span>}
+    r2 := Rectangle{<span class="hljs-number">9</span>, <span class="hljs-number">4</span>}
+    c1 := Circle{<span class="hljs-number">10</span>}
+    c2 := Circle{<span class="hljs-number">25</span>}
+    fmt.Println(<span class="hljs-string">&quot;Area of r1 is: &quot;</span>, r1.area())
+    fmt.Println(<span class="hljs-string">&quot;Area of r2 is: &quot;</span>, r2.area())
+    fmt.Println(<span class="hljs-string">&quot;Area of c1 is: &quot;</span>, c1.area())
+    fmt.Println(<span class="hljs-string">&quot;Area of c2 is: &quot;</span>, c2.area())
+}
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x7ED3;&#x679C;</p>
+<pre><code>Area of r1 is:  24
+Area of r2 is:  36
+Area of c1 is:  314.1592653589793
+Area of c2 is:  1963.4954084936207
+</code></pre><ul>
+<li>&#x867D;&#x7136;method&#x7684;&#x540D;&#x5B57;&#x4E00;&#x6A21;&#x4E00;&#x6837;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x63A5;&#x6536;&#x8005;&#x4E0D;&#x4E00;&#x6837;&#xFF0C;&#x90A3;&#x4E48;method&#x5C31;&#x4E0D;&#x4E00;&#x6837;</li>
+<li>method&#x91CC;&#x9762;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x63A5;&#x6536;&#x8005;&#x7684;&#x5B57;&#x6BB5;</li>
+<li>&#x8C03;&#x7528;method&#x901A;&#x8FC7;.&#x8BBF;&#x95EE;&#xFF0C;&#x5C31;&#x50CF;struct&#x91CC;&#x9762;&#x8BBF;&#x95EE;&#x5B57;&#x6BB5;&#x4E00;&#x6837; </li>
+</ul>
+<h2 id="13-&#x65B9;&#x6CD5;&#x548C;&#x51FD;&#x6570;">1.3 &#x65B9;&#x6CD5;&#x548C;&#x51FD;&#x6570;</h2>
+<p>&#x65E2;&#x7136;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x6709;&#x4E86;&#x51FD;&#x6570;&#xFF0C;&#x4E3A;&#x4EC0;&#x4E48;&#x8FD8;&#x8981;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#xFF1F;</p>
+<p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (  
+    <span class="hljs-string">&quot;fmt&quot;</span>
+)
+
+<span class="hljs-keyword">type</span> Employee <span class="hljs-keyword">struct</span> {  
+    name     <span class="hljs-keyword">string</span>
+    salary   <span class="hljs-keyword">int</span>
+    currency <span class="hljs-keyword">string</span>
+}
+
+<span class="hljs-comment">/*
+ displaySalary() method converted to function with Employee as parameter
+*/</span>
+<span class="hljs-keyword">func</span> displaySalary(e Employee) {  
+    fmt.Printf(<span class="hljs-string">&quot;Salary of %s is %s%d&quot;</span>, e.name, e.currency, e.salary)
+}
+
+<span class="hljs-keyword">func</span> main() {  
+    emp1 := Employee{
+        name:     <span class="hljs-string">&quot;Sam Adolf&quot;</span>,
+        salary:   <span class="hljs-number">5000</span>,
+        currency: <span class="hljs-string">&quot;$&quot;</span>,
+    }
+    displaySalary(emp1)
+}
+</code></pre>
+<blockquote>
+<p>&#x5728;&#x4E0A;&#x9762;&#x7684;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;displaySalary&#x65B9;&#x6CD5;&#x88AB;&#x8F6C;&#x6362;&#x4E3A;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x800C;Employee struct&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x7ED9;&#x5B83;&#x3002;&#x8FD9;&#x4E2A;&#x7A0B;&#x5E8F;&#x4E5F;&#x4EA7;&#x751F;&#x4E86;&#x76F8;&#x540C;&#x7684;&#x8F93;&#x51FA;&#xFF1A;Salary of Sam Adolf is $5000.&#x3002;</p>
+</blockquote>
+<p>&#x4E3A;&#x4EC0;&#x4E48;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7528;&#x51FD;&#x6570;&#x6765;&#x5199;&#x76F8;&#x540C;&#x7684;&#x7A0B;&#x5E8F;&#x5462;?&#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x4E2A;&#x539F;&#x56E0;</p>
+<ol>
+<li>Go&#x4E0D;&#x662F;&#x4E00;&#x79CD;&#x7EAF;&#x7CB9;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#xFF0C;&#x5B83;&#x4E0D;&#x652F;&#x6301;&#x7C7B;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x7C7B;&#x578B;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#x4E00;&#x79CD;&#x5B9E;&#x73B0;&#x7C7B;&#x4F3C;&#x4E8E;&#x7C7B;&#x7684;&#x884C;&#x4E3A;&#x7684;&#x65B9;&#x6CD5;&#x3002;</li>
+<li>&#x76F8;&#x540C;&#x540D;&#x79F0;&#x7684;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x7C7B;&#x578B;&#x4E0A;&#x5B9A;&#x4E49;&#xFF0C;&#x800C;&#x5177;&#x6709;&#x76F8;&#x540C;&#x540D;&#x79F0;&#x7684;&#x51FD;&#x6570;&#x662F;&#x4E0D;&#x5141;&#x8BB8;&#x7684;&#x3002;&#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x6709;&#x4E00;&#x4E2A;&#x6B63;&#x65B9;&#x5F62;&#x548C;&#x5706;&#x5F62;&#x7684;&#x7ED3;&#x6784;&#x3002;&#x53EF;&#x4EE5;&#x5728;&#x6B63;&#x65B9;&#x5F62;&#x548C;&#x5706;&#x5F62;&#x4E0A;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;Area&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x8FD9;&#x662F;&#x5728;&#x4E0B;&#x9762;&#x7684;&#x7A0B;&#x5E8F;&#x4E2D;&#x5B8C;&#x6210;&#x7684;&#x3002;</li>
+</ol>
+<h2 id="14-&#x53D8;&#x91CF;&#x4F5C;&#x7528;&#x57DF;">1.4 &#x53D8;&#x91CF;&#x4F5C;&#x7528;&#x57DF;</h2>
+<p>&#x4F5C;&#x7528;&#x57DF;&#x4E3A;&#x5DF2;&#x58F0;&#x660E;&#x6807;&#x8BC6;&#x7B26;&#x6240;&#x8868;&#x793A;&#x7684;&#x5E38;&#x91CF;&#x3001;&#x7C7B;&#x578B;&#x3001;&#x53D8;&#x91CF;&#x3001;&#x51FD;&#x6570;&#x6216;&#x5305;&#x5728;&#x6E90;&#x4EE3;&#x7801;&#x4E2D;&#x7684;&#x4F5C;&#x7528;&#x8303;&#x56F4;&#x3002;</p>
+<p>Go &#x8BED;&#x8A00;&#x4E2D;&#x53D8;&#x91CF;&#x53EF;&#x4EE5;&#x5728;&#x4E09;&#x4E2A;&#x5730;&#x65B9;&#x58F0;&#x660E;&#xFF1A;</p>
+<ul>
+<li>&#x51FD;&#x6570;&#x5185;&#x5B9A;&#x4E49;&#x7684;&#x53D8;&#x91CF;&#x79F0;&#x4E3A;&#x5C40;&#x90E8;&#x53D8;&#x91CF;</li>
+<li>&#x51FD;&#x6570;&#x5916;&#x5B9A;&#x4E49;&#x7684;&#x53D8;&#x91CF;&#x79F0;&#x4E3A;&#x5168;&#x5C40;&#x53D8;&#x91CF;</li>
+<li>&#x51FD;&#x6570;&#x5B9A;&#x4E49;&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x79F0;&#x4E3A;&#x5F62;&#x5F0F;&#x53C2;&#x6570;</li>
+</ul>
+<p><strong>&#x5C40;&#x90E8;&#x53D8;&#x91CF;</strong></p>
+<p>&#x5728;&#x51FD;&#x6570;&#x4F53;&#x5185;&#x58F0;&#x660E;&#x7684;&#x53D8;&#x91CF;&#x79F0;&#x4E4B;&#x4E3A;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#xFF0C;&#x5B83;&#x4EEC;&#x7684;&#x4F5C;&#x7528;&#x57DF;&#x53EA;&#x5728;&#x51FD;&#x6570;&#x4F53;&#x5185;&#xFF0C;&#x53C2;&#x6570;&#x548C;&#x8FD4;&#x56DE;&#x503C;&#x53D8;&#x91CF;&#x4E5F;&#x662F;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x3002;</p>
+<p><strong>&#x5168;&#x5C40;&#x53D8;&#x91CF;</strong></p>
+<p>&#x5728;&#x51FD;&#x6570;&#x4F53;&#x5916;&#x58F0;&#x660E;&#x7684;&#x53D8;&#x91CF;&#x79F0;&#x4E4B;&#x4E3A;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF0C;&#x9996;&#x5B57;&#x6BCD;&#x5927;&#x5199;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x53EF;&#x4EE5;&#x5728;&#x6574;&#x4E2A;&#x5305;&#x751A;&#x81F3;&#x5916;&#x90E8;&#x5305;&#xFF08;&#x88AB;&#x5BFC;&#x51FA;&#x540E;&#xFF09;&#x4F7F;&#x7528;&#x3002;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> <span class="hljs-string">&quot;fmt&quot;</span>
+
+<span class="hljs-comment">/* &#x58F0;&#x660E;&#x5168;&#x5C40;&#x53D8;&#x91CF; */</span>
+<span class="hljs-keyword">var</span> g <span class="hljs-keyword">int</span>
+
+<span class="hljs-keyword">func</span> main() {
+
+   <span class="hljs-comment">/* &#x58F0;&#x660E;&#x5C40;&#x90E8;&#x53D8;&#x91CF; */</span>
+   <span class="hljs-keyword">var</span> a, b <span class="hljs-keyword">int</span>
+
+   <span class="hljs-comment">/* &#x521D;&#x59CB;&#x5316;&#x53C2;&#x6570; */</span>
+   a = <span class="hljs-number">10</span>
+   b = <span class="hljs-number">20</span>
+   g = a + b
+
+   fmt.Printf(<span class="hljs-string">&quot;&#x7ED3;&#x679C;&#xFF1A; a = %d, b = %d and g = %d\n&quot;</span>, a, b, g)
+}
+</code></pre>
+<p><code>&#x7ED3;&#x679C;</code></p>
+<pre><code class="lang-go">&#x7ED3;&#x679C;&#xFF1A; a = <span class="hljs-number">10</span>, b = <span class="hljs-number">20</span> and g = <span class="hljs-number">30</span>
+</code></pre>
+<p><strong>&#x5F62;&#x5F0F;&#x53C2;&#x6570;</strong></p>
+<p>&#x5F62;&#x5F0F;&#x53C2;&#x6570;&#x4F1A;&#x4F5C;&#x4E3A;&#x51FD;&#x6570;&#x7684;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x6765;&#x4F7F;&#x7528;</p>
+<p><strong>&#x6307;&#x9488;&#x4F5C;&#x4E3A;&#x63A5;&#x6536;&#x8005;</strong></p>
+<p>&#x82E5;&#x4E0D;&#x662F;&#x4EE5;&#x6307;&#x9488;&#x4F5C;&#x4E3A;&#x63A5;&#x6536;&#x8005;&#xFF0C;&#x5B9E;&#x9645;&#x53EA;&#x662F;&#x83B7;&#x53D6;&#x4E86;&#x4E00;&#x4E2A;copy&#xFF0C;&#x800C;&#x4E0D;&#x80FD;&#x771F;&#x6B63;&#x6539;&#x53D8;&#x63A5;&#x6536;&#x8005;&#x7684;&#x4E2D;&#x7684;&#x6570;&#x636E;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> (b *Box) SetColor(c Color) {
+    b.color = c
+}
+</code></pre>
+<p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;fmt&quot;</span>
+)
+
+<span class="hljs-keyword">type</span> Rectangle <span class="hljs-keyword">struct</span> {
+    width, height <span class="hljs-keyword">int</span>
+}
+
+<span class="hljs-keyword">func</span> (r *Rectangle) setVal() {
+    r.height = <span class="hljs-number">20</span>
+}
+
+<span class="hljs-keyword">func</span> main() {
+    p := Rectangle{<span class="hljs-number">1</span>, <span class="hljs-number">2</span>}
+    s := p
+    p.setVal()
+    fmt.Println(p.height, s.height)
+}
+</code></pre>
+<p>&#x7ED3;&#x679C;</p>
+<pre><code class="lang-go"><span class="hljs-number">20</span> <span class="hljs-number">2</span>
+</code></pre>
+<p>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x90A3;&#x4E2A;*&#xFF0C;&#x5219;&#x503C;&#x5C31;&#x662F;<code>2 2</code></p>
+<h2 id="15-method&#x7EE7;&#x627F;">1.5 method&#x7EE7;&#x627F;</h2>
+<p>method&#x662F;&#x53EF;&#x4EE5;&#x7EE7;&#x627F;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x533F;&#x540D;&#x5B57;&#x6BB5;&#x5B9E;&#x73B0;&#x4E86;&#x4E00;&#x4E2A;method&#xFF0C;&#x90A3;&#x4E48;&#x5305;&#x542B;&#x8FD9;&#x4E2A;&#x533F;&#x540D;&#x5B57;&#x6BB5;&#x7684;struct&#x4E5F;&#x80FD;&#x8C03;&#x7528;&#x8BE5;method</p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> <span class="hljs-string">&quot;fmt&quot;</span>
+
+<span class="hljs-keyword">type</span> Human <span class="hljs-keyword">struct</span> {
+    name  <span class="hljs-keyword">string</span>
+    age   <span class="hljs-keyword">int</span>
+    phone <span class="hljs-keyword">string</span>
+}
+<span class="hljs-keyword">type</span> Student <span class="hljs-keyword">struct</span> {
+    Human  <span class="hljs-comment">//&#x533F;&#x540D;&#x5B57;&#x6BB5;</span>
+    school <span class="hljs-keyword">string</span>
+}
+<span class="hljs-keyword">type</span> Employee <span class="hljs-keyword">struct</span> {
+    Human   <span class="hljs-comment">//&#x533F;&#x540D;&#x5B57;&#x6BB5;</span>
+    company <span class="hljs-keyword">string</span>
+}
+
+<span class="hljs-keyword">func</span> (h *Human) SayHi() {
+    fmt.Printf(<span class="hljs-string">&quot;Hi, I am %s you can call me on %s\n&quot;</span>, h.name, h.phone)
+}
+<span class="hljs-keyword">func</span> main() {
+    mark := Student{Human{<span class="hljs-string">&quot;Mark&quot;</span>, <span class="hljs-number">25</span>, <span class="hljs-string">&quot;222-222-YYYY&quot;</span>}, <span class="hljs-string">&quot;MIT&quot;</span>}
+    sam := Employee{Human{<span class="hljs-string">&quot;Sam&quot;</span>, <span class="hljs-number">45</span>, <span class="hljs-string">&quot;111-888-XXXX&quot;</span>}, <span class="hljs-string">&quot;Golang Inc&quot;</span>}
+    mark.SayHi()
+    sam.SayHi()
+}
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-go">Hi, I am Mark you can call me on <span class="hljs-number">222</span><span class="hljs-number">-222</span>-YYYY
+Hi, I am Sam you can call me on <span class="hljs-number">111</span><span class="hljs-number">-888</span>-XXXX
+</code></pre>
+<h2 id="16-method&#x91CD;&#x5199;">1.6 method&#x91CD;&#x5199;</h2>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> <span class="hljs-string">&quot;fmt&quot;</span>
+
+<span class="hljs-keyword">type</span> Human <span class="hljs-keyword">struct</span> {
+    name  <span class="hljs-keyword">string</span>
+    age   <span class="hljs-keyword">int</span>
+    phone <span class="hljs-keyword">string</span>
+}
+<span class="hljs-keyword">type</span> Student <span class="hljs-keyword">struct</span> {
+    Human  <span class="hljs-comment">//&#x533F;&#x540D;&#x5B57;&#x6BB5;</span>
+    school <span class="hljs-keyword">string</span>
+}
+<span class="hljs-keyword">type</span> Employee <span class="hljs-keyword">struct</span> {
+    Human   <span class="hljs-comment">//&#x533F;&#x540D;&#x5B57;&#x6BB5;</span>
+    company <span class="hljs-keyword">string</span>
+}
+
+<span class="hljs-comment">//Human&#x5B9A;&#x4E49;method</span>
+<span class="hljs-keyword">func</span> (h *Human) SayHi() {
+    fmt.Printf(<span class="hljs-string">&quot;Hi, I am %s you can call me on %s\n&quot;</span>, h.name, h.phone)
+}
+
+<span class="hljs-comment">//Employee&#x7684;method&#x91CD;&#x5199;Human&#x7684;method</span>
+<span class="hljs-keyword">func</span> (e *Employee) SayHi() {
+    fmt.Printf(<span class="hljs-string">&quot;Hi, I am %s, I work at %s. Call me on %s\n&quot;</span>, e.name,
+        e.company, e.phone) <span class="hljs-comment">//Yes you can split into 2 lines here.</span>
+}
+<span class="hljs-keyword">func</span> main() {
+    mark := Student{Human{<span class="hljs-string">&quot;Mark&quot;</span>, <span class="hljs-number">25</span>, <span class="hljs-string">&quot;222-222-YYYY&quot;</span>}, <span class="hljs-string">&quot;MIT&quot;</span>}
+    sam := Employee{Human{<span class="hljs-string">&quot;Sam&quot;</span>, <span class="hljs-number">45</span>, <span class="hljs-string">&quot;111-888-XXXX&quot;</span>}, <span class="hljs-string">&quot;Golang Inc&quot;</span>}
+    mark.SayHi()
+    sam.SayHi()
+}
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-go">Hi, I am Mark you can call me on <span class="hljs-number">222</span><span class="hljs-number">-222</span>-YYYY
+Hi, I am Sam, I work at Golang Inc. Call me on <span class="hljs-number">111</span><span class="hljs-number">-888</span>-XXXX
+</code></pre>
+<ul>
+<li>&#x65B9;&#x6CD5;&#x662F;&#x53EF;&#x4EE5;&#x7EE7;&#x627F;&#x548C;&#x91CD;&#x5199;&#x7684;</li>
+<li>&#x5B58;&#x5728;&#x7EE7;&#x627F;&#x5173;&#x7CFB;&#x65F6;&#xFF0C;&#x6309;&#x7167;&#x5C31;&#x8FD1;&#x539F;&#x5219;&#xFF0C;&#x8FDB;&#x884C;&#x8C03;&#x7528;</li>
+</ul>
+<p>&#x5343;&#x950B;Go&#x8BED;&#x8A00;&#x7684;&#x5B66;&#x4E60;&#x7FA4;&#xFF1A;784190273</p>
+<p>&#x4F5C;&#x8005;B&#x7AD9;&#xFF1A;</p>
+<p><a href="https://space.bilibili.com/353694001" target="_blank">https://space.bilibili.com/353694001</a></p>
+<p>&#x5BF9;&#x5E94;&#x89C6;&#x9891;&#x5730;&#x5740;&#xFF1A;</p>
+<p><a href="https://www.bilibili.com/video/av56018934" target="_blank">https://www.bilibili.com/video/av56018934</a></p>
+<p><a href="https://www.bilibili.com/video/av47467197" target="_blank">https://www.bilibili.com/video/av47467197</a></p>
+<p>&#x6E90;&#x4EE3;&#x7801;&#xFF1A;</p>
+<p><a href="https://github.com/rubyhan1314/go_advanced" target="_blank">https://github.com/rubyhan1314/go_advanced</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="day13-结构体.html" class="navigation navigation-prev " aria-label="Previous page: 结构体">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="day14_第2节_接口.html" class="navigation navigation-next " aria-label="Next page: 第2节_接口">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第1节_方法","level":"1.2.25","depth":2,"next":{"title":"第2节_接口","level":"1.2.26","depth":2,"path":"01-Go语言基础/day14_第2节_接口.md","ref":"01-Go语言基础/day14_第2节_接口.md","articles":[]},"previous":{"title":"结构体","level":"1.2.24","depth":2,"path":"01-Go语言基础/day13-结构体.md","ref":"01-Go语言基础/day13-结构体.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"01-Go语言基础/day14_第1节_方法.md","mtime":"2020-08-10T03:24:34.837Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-10T08:26:41.953Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

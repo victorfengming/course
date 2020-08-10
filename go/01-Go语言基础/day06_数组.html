@@ -1,0 +1,1448 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>数组 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="day07_Slice的使用.html" />
+    
+    
+    <link rel="prev" href="day05_循环语句.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Go语言基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="day01_第1节_知名编程语言或系统的发展简史.html">
+            
+                <a href="day01_第1节_知名编程语言或系统的发展简史.html">
+            
+                    
+                    第1节_知名编程语言或系统的发展简史
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="day01_第2节_Go语言的前世今生.html">
+            
+                <a href="day01_第2节_Go语言的前世今生.html">
+            
+                    
+                    第2节_Go语言的前世今生
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="day01_第3节_Go语言logo和版本.html">
+            
+                <a href="day01_第3节_Go语言logo和版本.html">
+            
+                    
+                    第3节_Go语言logo和版本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="day01_第4节_Go语言的核心特性.html">
+            
+                <a href="day01_第4节_Go语言的核心特性.html">
+            
+                    
+                    第4节_Go语言的核心特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="day01_第5节_Go语言的优势和其他语言的对比.html">
+            
+                <a href="day01_第5节_Go语言的优势和其他语言的对比.html">
+            
+                    
+                    第5节_Go语言的优势和其他语言的对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="day01_第6节_Go语言能做什么.html">
+            
+                <a href="day01_第6节_Go语言能做什么.html">
+            
+                    
+                    第6节_Go语言能做什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="day01_第7节_Go语言环境搭建.html">
+            
+                <a href="day01_第7节_Go语言环境搭建.html">
+            
+                    
+                    第7节_Go语言环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="day01_第8节_第一个程序HelloWorld.html">
+            
+                <a href="day01_第8节_第一个程序HelloWorld.html">
+            
+                    
+                    第8节_第一个程序HelloWorld
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="day01_第9节_Go的命令以及Go的执行原理.html">
+            
+                <a href="day01_第9节_Go的命令以及Go的执行原理.html">
+            
+                    
+                    第9节_Go的命令以及Go的执行原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="day01_第10节_安装Goland开发工具.html">
+            
+                <a href="day01_第10节_安装Goland开发工具.html">
+            
+                    
+                    第10节_安装Goland开发工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="day01_第11节_编码规范.html">
+            
+                <a href="day01_第11节_编码规范.html">
+            
+                    
+                    第11节_编码规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="day02_基本语法.html">
+            
+                <a href="day02_基本语法.html">
+            
+                    
+                    基本语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="day03_数据类型&运算符.html">
+            
+                <a href="day03_数据类型&运算符.html">
+            
+                    
+                    数据类型&运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="day03_键盘输入和打印输出.html">
+            
+                <a href="day03_键盘输入和打印输出.html">
+            
+                    
+                    键盘输入和打印输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="day04_分支语句.html">
+            
+                <a href="day04_分支语句.html">
+            
+                    
+                    分支语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="day05_循环语句.html">
+            
+                <a href="day05_循环语句.html">
+            
+                    
+                    循环语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.17" data-path="day06_数组.html">
+            
+                <a href="day06_数组.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="day07_Slice的使用.html">
+            
+                <a href="day07_Slice的使用.html">
+            
+                    
+                    Slice的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.19" data-path="day08_Map的使用.html">
+            
+                <a href="day08_Map的使用.html">
+            
+                    
+                    Map的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.20" data-path="day09_string.html">
+            
+                <a href="day09_string.html">
+            
+                    
+                    string
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.21" data-path="day10_函数.html">
+            
+                <a href="day10_函数.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.22" data-path="day11_包的管理.html">
+            
+                <a href="day11_包的管理.html">
+            
+                    
+                    包的管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.23" data-path="day12_指针.html">
+            
+                <a href="day12_指针.html">
+            
+                    
+                    指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.24" data-path="day13-结构体.html">
+            
+                <a href="day13-结构体.html">
+            
+                    
+                    结构体
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.25" data-path="day14_第1节_方法.html">
+            
+                <a href="day14_第1节_方法.html">
+            
+                    
+                    第1节_方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.26" data-path="day14_第2节_接口.html">
+            
+                <a href="day14_第2节_接口.html">
+            
+                    
+                    第2节_接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.27" data-path="day14_第3节-OOP编程.html">
+            
+                <a href="day14_第3节-OOP编程.html">
+            
+                    
+                    第3节-OOP编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.28" data-path="day14_第4节-type.html">
+            
+                <a href="day14_第4节-type.html">
+            
+                    
+                    第4节-type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.29" data-path="day15_错误处理.html">
+            
+                <a href="day15_错误处理.html">
+            
+                    
+                    错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Go语言基础进阶
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../02-Go语言基础进阶/day16_file操作.html">
+            
+                <a href="../02-Go语言基础进阶/day16_file操作.html">
+            
+                    
+                    01file操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../02-Go语言基础进阶/day17_Go语言并发Goroutine.html">
+            
+                <a href="../02-Go语言基础进阶/day17_Go语言并发Goroutine.html">
+            
+                    
+                    02Go语言并发Goroutine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../02-Go语言基础进阶/day18_channel通道.html">
+            
+                <a href="../02-Go语言基础进阶/day18_channel通道.html">
+            
+                    
+                    03channel通道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../02-Go语言基础进阶/day19_Go语言反射.html">
+            
+                <a href="../02-Go语言基础进阶/day19_Go语言反射.html">
+            
+                    
+                    04Go语言反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    MySQL数据库基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../03-MySQL数据库基础/day23_学习笔记.html">
+            
+                <a href="../03-MySQL数据库基础/day23_学习笔记.html">
+            
+                    
+                    01学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../03-MySQL数据库基础/day23_数据库基础知识和基础操作.html">
+            
+                <a href="../03-MySQL数据库基础/day23_数据库基础知识和基础操作.html">
+            
+                    
+                    02数据库基础知识和基础操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../03-MySQL数据库基础/day24_查询和复杂查询.html">
+            
+                <a href="../03-MySQL数据库基础/day24_查询和复杂查询.html">
+            
+                    
+                    03查询和复杂查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    beego框架
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../04-beego框架/day36_beego框架介绍和流程分析.html">
+            
+                <a href="../04-beego框架/day36_beego框架介绍和流程分析.html">
+            
+                    
+                    beego框架介绍和流程分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../04-beego框架/day37_beego框架总结及数据库连接配置.html">
+            
+                <a href="../04-beego框架/day37_beego框架总结及数据库连接配置.html">
+            
+                    
+                    beego框架总结及数据库连接配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    beego开发博客系统
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../05-beego框架开发博客系统/day38_项目搭建_登录注册和Session功能开发.html">
+            
+                <a href="../05-beego框架开发博客系统/day38_项目搭建_登录注册和Session功能开发.html">
+            
+                    
+                    项目搭建_登录注册和Session功能开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../05-beego框架开发博客系统/day39_写文章_项目首页和查看文章详情功能开发.html">
+            
+                <a href="../05-beego框架开发博客系统/day39_写文章_项目首页和查看文章详情功能开发.html">
+            
+                    
+                    写文章_项目首页和查看文章详情功能开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../05-beego框架开发博客系统/day40_修改文章_删除文章和文章标签功能开发.html">
+            
+                <a href="../05-beego框架开发博客系统/day40_修改文章_删除文章和文章标签功能开发.html">
+            
+                    
+                    修改文章_删除文章和文章标签功能开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../05-beego框架开发博客系统/day41_首页功能扩展_图片上传和关于功能开发.html">
+            
+                <a href="../05-beego框架开发博客系统/day41_首页功能扩展_图片上传和关于功能开发.html">
+            
+                    
+                    首页功能扩展_图片上传和关于功能开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" >
+            
+                <span>
+            
+                    
+                    iris框架
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../06-iris框架/day54_web开发介绍、iris框架安装、HTTP请求和返回、iris路由处理.html">
+            
+                <a href="../06-iris框架/day54_web开发介绍、iris框架安装、HTTP请求和返回、iris路由处理.html">
+            
+                    
+                    web开发介绍、iris框架安装、HTTP请求和返回、iris路由处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../06-iris框架/day55_框架设置、mvc包、session使用、项目搭建和资源导入.html">
+            
+                <a href="../06-iris框架/day55_框架设置、mvc包、session使用、项目搭建和资源导入.html">
+            
+                    
+                    框架设置、mvc包、session使用、项目搭建和资源导入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <span>
+            
+                    
+                    微服务特性
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../07-微服务特性/day76_微服务简介及特性介绍.html">
+            
+                <a href="../07-微服务特性/day76_微服务简介及特性介绍.html">
+            
+                    
+                    微服务简介及特性介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <span>
+            
+                    
+                    protobuf
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../08-protobuf/day77_Protobuf介绍.html">
+            
+                <a href="../08-protobuf/day77_Protobuf介绍.html">
+            
+                    
+                    Protobuf介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" >
+            
+                <span>
+            
+                    
+                    微服务管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../09-微服务管理/day78_微服务管理_上.html">
+            
+                <a href="../09-微服务管理/day78_微服务管理_上.html">
+            
+                    
+                    微服务管理_上
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../09-微服务管理/day78_微服务管理_下.md">
+            
+                <span>
+            
+                    
+                    微服务管理_下
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" >
+            
+                <span>
+            
+                    
+                    RPC&gRPC
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="../10-RPC远程调用机制/day80_RPC远程过程调用.html">
+            
+                <a href="../10-RPC远程调用机制/day80_RPC远程过程调用.html">
+            
+                    
+                    RPC远程过程调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="../11-gRPC远程调用机制/day81_gRPC远程调用机制介绍.html">
+            
+                <a href="../11-gRPC远程调用机制/day81_gRPC远程调用机制介绍.html">
+            
+                    
+                    gRPC远程调用机制介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="../11-gRPC远程调用机制/day82_gRPC使用.html">
+            
+                <a href="../11-gRPC远程调用机制/day82_gRPC使用.html">
+            
+                    
+                    gRPC使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" >
+            
+                <span>
+            
+                    
+                    go-micro
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.5.1" data-path="../12-go-micro微服务框架/day83_go-micro框架介绍.html">
+            
+                <a href="../12-go-micro微服务框架/day83_go-micro框架介绍.html">
+            
+                    
+                    go-micro框架介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.2" data-path="../12-go-micro微服务框架/day84_go-micro使用1.html">
+            
+                <a href="../12-go-micro微服务框架/day84_go-micro使用1.html">
+            
+                    
+                    go-micro使用1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.3" data-path="../12-go-micro微服务框架/day85_go-micro使用2.html">
+            
+                <a href="../12-go-micro微服务框架/day85_go-micro使用2.html">
+            
+                    
+                    go-micro使用2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" >
+            
+                <span>
+            
+                    
+                    RESTful
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../13-RESTful设计/day86_RESTful标准设计.html">
+            
+                <a href="../13-RESTful设计/day86_RESTful标准设计.html">
+            
+                    
+                    RESTful标准设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" >
+            
+                <span>
+            
+                    
+                    区块链
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../14-区块链/day01_初始区块链家族1.html">
+            
+                <a href="../14-区块链/day01_初始区块链家族1.html">
+            
+                    
+                    初始区块链家族1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="../14-区块链/day02_区块链基础入门.html">
+            
+                <a href="../14-区块链/day02_区块链基础入门.html">
+            
+                    
+                    区块链基础入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.3" data-path="../14-区块链/day03_区块链的本质.html">
+            
+                <a href="../14-区块链/day03_区块链的本质.html">
+            
+                    
+                    区块链的本质
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.4" data-path="../14-区块链/day04_区块链的特性.html">
+            
+                <a href="../14-区块链/day04_区块链的特性.html">
+            
+                    
+                    区块链的特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >数组</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x4E00;&#x3001;&#x6570;&#x7EC4;array">&#x4E00;&#x3001;&#x6570;&#x7EC4;(Array)</h1>
+<blockquote>
+<p>create by victor</p>
+</blockquote>
+<h2 id="11-&#x4EC0;&#x4E48;&#x662F;&#x6570;&#x7EC4;">1.1 &#x4EC0;&#x4E48;&#x662F;&#x6570;&#x7EC4;</h2>
+<p>Go &#x8BED;&#x8A00;&#x63D0;&#x4F9B;&#x4E86;&#x6570;&#x7EC4;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x3002;
+&#x6570;&#x7EC4;&#x662F;&#x5177;&#x6709;&#x76F8;&#x540C;&#x552F;&#x4E00;&#x7C7B;&#x578B;&#x7684;&#x4E00;&#x7EC4;&#x5DF2;&#x7F16;&#x53F7;&#x4E14;&#x957F;&#x5EA6;&#x56FA;&#x5B9A;&#x7684;&#x6570;&#x636E;&#x9879;&#x5E8F;&#x5217;&#xFF0C;&#x8FD9;&#x79CD;&#x7C7B;&#x578B;&#x53EF;&#x4EE5;&#x662F;&#x4EFB;&#x610F;&#x7684;&#x539F;&#x59CB;&#x7C7B;&#x578B;&#x4F8B;&#x5982;&#x6574;&#x5F62;&#x3001;&#x5B57;&#x7B26;&#x4E32;&#x6216;&#x8005;&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;&#x3002;</p>
+<p>&#x6570;&#x7EC4;&#x5143;&#x7D20;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7D22;&#x5F15;&#xFF08;&#x4F4D;&#x7F6E;&#xFF09;&#x6765;&#x8BFB;&#x53D6;&#xFF08;&#x6216;&#x8005;&#x4FEE;&#x6539;&#xFF09;&#xFF0C;&#x7D22;&#x5F15;&#x4ECE;0&#x5F00;&#x59CB;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7D22;&#x5F15;&#x4E3A; 0&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x7D22;&#x5F15;&#x4E3A; 1&#xFF0C;&#x4EE5;&#x6B64;&#x7C7B;&#x63A8;&#x3002;&#x6570;&#x7EC4;&#x7684;&#x4E0B;&#x6807;&#x53D6;&#x503C;&#x8303;&#x56F4;&#x662F;&#x4ECE;0&#x5F00;&#x59CB;&#xFF0C;&#x5230;&#x957F;&#x5EA6;&#x51CF;1&#x3002;</p>
+<p>&#x6570;&#x7EC4;&#x4E00;&#x65E6;&#x5B9A;&#x4E49;&#x540E;&#xFF0C;&#x5927;&#x5C0F;&#x4E0D;&#x80FD;&#x66F4;&#x6539;&#x3002;</p>
+<h2 id="12-&#x6570;&#x7EC4;&#x7684;&#x8BED;&#x6CD5;">1.2 &#x6570;&#x7EC4;&#x7684;&#x8BED;&#x6CD5;</h2>
+<p><strong>&#x58F0;&#x660E;&#x548C;&#x521D;&#x59CB;&#x5316;&#x6570;&#x7EC4;</strong></p>
+<p>&#x9700;&#x8981;&#x6307;&#x660E;&#x6570;&#x7EC4;&#x7684;&#x5927;&#x5C0F;&#x548C;&#x5B58;&#x50A8;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3002;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">var</span> variable_name [SIZE] variable_type
+</code></pre>
+<p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">var</span> balance [<span class="hljs-number">10</span>] <span class="hljs-keyword">float32</span>
+<span class="hljs-keyword">var</span> balance = [<span class="hljs-number">5</span>]<span class="hljs-keyword">float32</span>{<span class="hljs-number">1000.0</span>, <span class="hljs-number">2.0</span>, <span class="hljs-number">3.4</span>, <span class="hljs-number">7.0</span>, <span class="hljs-number">50.0</span>}
+</code></pre>
+<p>&#x521D;&#x59CB;&#x5316;&#x6570;&#x7EC4;&#x4E2D; {} &#x4E2D;&#x7684;&#x5143;&#x7D20;&#x4E2A;&#x6570;&#x4E0D;&#x80FD;&#x5927;&#x4E8E; [] &#x4E2D;&#x7684;&#x6570;&#x5B57;&#x3002;
+&#x5982;&#x679C;&#x5FFD;&#x7565; [] &#x4E2D;&#x7684;&#x6570;&#x5B57;&#x4E0D;&#x8BBE;&#x7F6E;&#x6570;&#x7EC4;&#x5927;&#x5C0F;&#xFF0C;Go &#x8BED;&#x8A00;&#x4F1A;&#x6839;&#x636E;&#x5143;&#x7D20;&#x7684;&#x4E2A;&#x6570;&#x6765;&#x8BBE;&#x7F6E;&#x6570;&#x7EC4;&#x7684;&#x5927;&#x5C0F;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">var</span> balance = []<span class="hljs-keyword">float32</span>{<span class="hljs-number">1000.0</span>, <span class="hljs-number">2.0</span>, <span class="hljs-number">3.4</span>, <span class="hljs-number">7.0</span>, <span class="hljs-number">50.0</span>}
+</code></pre>
+<pre><code class="lang-go">balance[<span class="hljs-number">4</span>] = <span class="hljs-number">50.0</span>
+</code></pre>
+<p>&#x6570;&#x7EC4;&#x7684;&#x5176;&#x4ED6;&#x521B;&#x5EFA;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-go">  <span class="hljs-keyword">var</span> a [<span class="hljs-number">4</span>] <span class="hljs-keyword">float32</span> <span class="hljs-comment">// &#x7B49;&#x4EF7;&#x4E8E;&#xFF1A;var arr2 = [4]float32{}</span>
+  fmt.Println(a) <span class="hljs-comment">// [0 0 0 0]</span>
+  <span class="hljs-keyword">var</span> b = [<span class="hljs-number">5</span>] <span class="hljs-keyword">string</span>{<span class="hljs-string">&quot;ruby&quot;</span>, <span class="hljs-string">&quot;&#x738B;&#x4E8C;&#x72D7;&quot;</span>, <span class="hljs-string">&quot;rose&quot;</span>}
+  fmt.Println(b) <span class="hljs-comment">// [ruby &#x738B;&#x4E8C;&#x72D7; rose  ]</span>
+  <span class="hljs-keyword">var</span> c = [<span class="hljs-number">5</span>] <span class="hljs-keyword">int</span>{<span class="hljs-string">&apos;A&apos;</span>, <span class="hljs-string">&apos;B&apos;</span>, <span class="hljs-string">&apos;C&apos;</span>, <span class="hljs-string">&apos;D&apos;</span>, <span class="hljs-string">&apos;E&apos;</span>} <span class="hljs-comment">// byte</span>
+  fmt.Println(c) <span class="hljs-comment">// [65 66 67 68 69]</span>
+  d := [...] <span class="hljs-keyword">int</span>{<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>}<span class="hljs-comment">// &#x6839;&#x636E;&#x5143;&#x7D20;&#x7684;&#x4E2A;&#x6570;&#xFF0C;&#x8BBE;&#x7F6E;&#x6570;&#x7EC4;&#x7684;&#x5927;&#x5C0F;</span>
+  fmt.Println(d)<span class="hljs-comment">//[1 2 3 4 5]</span>
+  e := [<span class="hljs-number">5</span>] <span class="hljs-keyword">int</span>{<span class="hljs-number">4</span>: <span class="hljs-number">100</span>} <span class="hljs-comment">// [0 0 0 0 100]</span>
+  fmt.Println(e)
+  f := [...] <span class="hljs-keyword">int</span>{<span class="hljs-number">0</span>: <span class="hljs-number">1</span>, <span class="hljs-number">4</span>: <span class="hljs-number">1</span>, <span class="hljs-number">9</span>: <span class="hljs-number">1</span>} <span class="hljs-comment">// [1 0 0 0 1 0 0 0 0 1]</span>
+  fmt.Println(f)
+</code></pre>
+<p><strong>&#x8BBF;&#x95EE;&#x6570;&#x7EC4;&#x5143;&#x7D20;</strong></p>
+<pre><code class="lang-go"><span class="hljs-keyword">float32</span> salary = balance[<span class="hljs-number">9</span>]
+</code></pre>
+<p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> <span class="hljs-string">&quot;fmt&quot;</span>
+
+<span class="hljs-keyword">func</span> main() {
+   <span class="hljs-keyword">var</span> n [<span class="hljs-number">10</span>]<span class="hljs-keyword">int</span> <span class="hljs-comment">/* n &#x662F;&#x4E00;&#x4E2A;&#x957F;&#x5EA6;&#x4E3A; 10 &#x7684;&#x6570;&#x7EC4; */</span>
+   <span class="hljs-keyword">var</span> i,j <span class="hljs-keyword">int</span>
+
+   <span class="hljs-comment">/* &#x4E3A;&#x6570;&#x7EC4; n &#x521D;&#x59CB;&#x5316;&#x5143;&#x7D20; */</span>         
+   <span class="hljs-keyword">for</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i++ {
+      n[i] = i + <span class="hljs-number">100</span> <span class="hljs-comment">/* &#x8BBE;&#x7F6E;&#x5143;&#x7D20;&#x4E3A; i + 100 */</span>
+   }
+
+   <span class="hljs-comment">/* &#x8F93;&#x51FA;&#x6BCF;&#x4E2A;&#x6570;&#x7EC4;&#x5143;&#x7D20;&#x7684;&#x503C; */</span>
+   <span class="hljs-keyword">for</span> j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">10</span>; j++ {
+      fmt.Printf(<span class="hljs-string">&quot;Element[%d] = %d\n&quot;</span>, j, n[j] )
+   }
+}
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code class="lang-go">Element[<span class="hljs-number">0</span>] = <span class="hljs-number">100</span>
+Element[<span class="hljs-number">1</span>] = <span class="hljs-number">101</span>
+Element[<span class="hljs-number">2</span>] = <span class="hljs-number">102</span>
+Element[<span class="hljs-number">3</span>] = <span class="hljs-number">103</span>
+Element[<span class="hljs-number">4</span>] = <span class="hljs-number">104</span>
+Element[<span class="hljs-number">5</span>] = <span class="hljs-number">105</span>
+Element[<span class="hljs-number">6</span>] = <span class="hljs-number">106</span>
+Element[<span class="hljs-number">7</span>] = <span class="hljs-number">107</span>
+Element[<span class="hljs-number">8</span>] = <span class="hljs-number">108</span>
+Element[<span class="hljs-number">9</span>] = <span class="hljs-number">109</span>
+</code></pre>
+<p><strong>&#x6570;&#x7EC4;&#x7684;&#x957F;&#x5EA6;</strong></p>
+<p>&#x901A;&#x8FC7;&#x5C06;&#x6570;&#x7EC4;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x7ED9;len&#x51FD;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x83B7;&#x5F97;&#x6570;&#x7EC4;&#x7684;&#x957F;&#x5EA6;&#x3002;</p>
+<p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> <span class="hljs-string">&quot;fmt&quot;</span>
+
+<span class="hljs-keyword">func</span> main() {  
+    a := [...]<span class="hljs-keyword">float64</span>{<span class="hljs-number">67.7</span>, <span class="hljs-number">89.8</span>, <span class="hljs-number">21</span>, <span class="hljs-number">78</span>}
+    fmt.Println(<span class="hljs-string">&quot;length of a is&quot;</span>,<span class="hljs-built_in">len</span>(a))
+
+}
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>length of a is 4
+</code></pre><p>&#x60A8;&#x751A;&#x81F3;&#x53EF;&#x4EE5;&#x5FFD;&#x7565;&#x58F0;&#x660E;&#x4E2D;&#x6570;&#x7EC4;&#x7684;&#x957F;&#x5EA6;&#x5E76;&#x5C06;&#x5176;&#x66FF;&#x6362;&#x4E3A;&#x2026;&#x8BA9;&#x7F16;&#x8BD1;&#x5668;&#x4E3A;&#x4F60;&#x627E;&#x5230;&#x957F;&#x5EA6;&#x3002;&#x8FD9;&#x662F;&#x5728;&#x4E0B;&#x9762;&#x7684;&#x7A0B;&#x5E8F;&#x4E2D;&#x5B8C;&#x6210;&#x7684;&#x3002;</p>
+<p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (  
+    <span class="hljs-string">&quot;fmt&quot;</span>
+)
+
+<span class="hljs-keyword">func</span> main() {  
+    a := [...]<span class="hljs-keyword">int</span>{<span class="hljs-number">12</span>, <span class="hljs-number">78</span>, <span class="hljs-number">50</span>} <span class="hljs-comment">// ... makes the compiler determine the length</span>
+    fmt.Println(a)
+}
+</code></pre>
+<p>&#x904D;&#x5386;&#x6570;&#x7EC4;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> <span class="hljs-string">&quot;fmt&quot;</span>
+
+<span class="hljs-keyword">func</span> main() {  
+    a := [...]<span class="hljs-keyword">float64</span>{<span class="hljs-number">67.7</span>, <span class="hljs-number">89.8</span>, <span class="hljs-number">21</span>, <span class="hljs-number">78</span>}
+    <span class="hljs-keyword">for</span> i := <span class="hljs-number">0</span>; i &lt; <span class="hljs-built_in">len</span>(a); i++ { <span class="hljs-comment">//looping from 0 to the length of the array</span>
+        fmt.Printf(<span class="hljs-string">&quot;%d th element of a is %.2f\n&quot;</span>, i, a[i])
+    }
+}
+</code></pre>
+<p>&#x4F7F;&#x7528;range&#x904D;&#x5386;&#x6570;&#x7EC4;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> <span class="hljs-string">&quot;fmt&quot;</span>
+
+<span class="hljs-keyword">func</span> main() {  
+    a := [...]<span class="hljs-keyword">float64</span>{<span class="hljs-number">67.7</span>, <span class="hljs-number">89.8</span>, <span class="hljs-number">21</span>, <span class="hljs-number">78</span>}
+    sum := <span class="hljs-keyword">float64</span>(<span class="hljs-number">0</span>)
+    <span class="hljs-keyword">for</span> i, v := <span class="hljs-keyword">range</span> a {<span class="hljs-comment">//range returns both the index and value</span>
+        fmt.Printf(<span class="hljs-string">&quot;%d the element of a is %.2f\n&quot;</span>, i, v)
+        sum += v
+    }
+    fmt.Println(<span class="hljs-string">&quot;\nsum of all elements of a&quot;</span>,sum)
+}
+</code></pre>
+<p>&#x5982;&#x679C;&#x60A8;&#x53EA;&#x9700;&#x8981;&#x503C;&#x5E76;&#x5E0C;&#x671B;&#x5FFD;&#x7565;&#x7D22;&#x5F15;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4F7F;&#x7528;_ blank&#x6807;&#x8BC6;&#x7B26;&#x66FF;&#x6362;&#x7D22;&#x5F15;&#x6765;&#x5B9E;&#x73B0;&#x8FD9;&#x4E00;&#x70B9;&#x3002;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">for</span> _, v := <span class="hljs-keyword">range</span> a { <span class="hljs-comment">//ignores index  </span>
+}
+</code></pre>
+<h2 id="13-&#x591A;&#x7EF4;&#x6570;&#x7EC4;">1.3 &#x591A;&#x7EF4;&#x6570;&#x7EC4;</h2>
+<p>Go &#x8BED;&#x8A00;&#x652F;&#x6301;&#x591A;&#x7EF4;&#x6570;&#x7EC4;&#xFF0C;&#x4EE5;&#x4E0B;&#x4E3A;&#x5E38;&#x7528;&#x7684;&#x591A;&#x7EF4;&#x6570;&#x7EC4;&#x58F0;&#x660E;&#x8BED;&#x6CD5;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">var</span> variable_name [SIZE1][SIZE2]...[SIZEN] variable_type
+</code></pre>
+<pre><code class="lang-go"><span class="hljs-keyword">var</span> threedim [<span class="hljs-number">5</span>][<span class="hljs-number">10</span>][<span class="hljs-number">4</span>]<span class="hljs-keyword">int</span>
+</code></pre>
+<p>&#x4E09;&#x7EF4;&#x6570;&#x7EC4;</p>
+<pre><code class="lang-go">a = [<span class="hljs-number">3</span>][<span class="hljs-number">4</span>]<span class="hljs-keyword">int</span>{  
+ {<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>} ,   <span class="hljs-comment">/*  &#x7B2C;&#x4E00;&#x884C;&#x7D22;&#x5F15;&#x4E3A; 0 */</span>
+ {<span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>} ,   <span class="hljs-comment">/*  &#x7B2C;&#x4E8C;&#x884C;&#x7D22;&#x5F15;&#x4E3A; 1 */</span>
+ {<span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>, <span class="hljs-number">11</span>}   <span class="hljs-comment">/*  &#x7B2C;&#x4E09;&#x884C;&#x7D22;&#x5F15;&#x4E3A; 2 */</span>
+}
+</code></pre>
+<h2 id="14-&#x6570;&#x7EC4;&#x662F;&#x503C;&#x7C7B;&#x578B;">1.4 &#x6570;&#x7EC4;&#x662F;&#x503C;&#x7C7B;&#x578B;</h2>
+<p>&#x6570;&#x7EC4;&#x662F;&#x503C;&#x7C7B;&#x578B;
+Go&#x4E2D;&#x7684;&#x6570;&#x7EC4;&#x662F;&#x503C;&#x7C7B;&#x578B;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5F15;&#x7528;&#x7C7B;&#x578B;&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x5F53;&#x5B83;&#x4EEC;&#x88AB;&#x5206;&#x914D;&#x7ED9;&#x4E00;&#x4E2A;&#x65B0;&#x53D8;&#x91CF;&#x65F6;&#xFF0C;&#x5C06;&#x628A;&#x539F;&#x59CB;&#x6570;&#x7EC4;&#x7684;&#x526F;&#x672C;&#x5206;&#x914D;&#x7ED9;&#x65B0;&#x53D8;&#x91CF;&#x3002;&#x5982;&#x679C;&#x5BF9;&#x65B0;&#x53D8;&#x91CF;&#x8FDB;&#x884C;&#x4E86;&#x66F4;&#x6539;&#xFF0C;&#x5219;&#x4E0D;&#x4F1A;&#x5728;&#x539F;&#x59CB;&#x6570;&#x7EC4;&#x4E2D;&#x53CD;&#x6620;&#x3002;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> <span class="hljs-string">&quot;fmt&quot;</span>
+
+<span class="hljs-keyword">func</span> main() {  
+    a := [...]<span class="hljs-keyword">string</span>{<span class="hljs-string">&quot;USA&quot;</span>, <span class="hljs-string">&quot;China&quot;</span>, <span class="hljs-string">&quot;India&quot;</span>, <span class="hljs-string">&quot;Germany&quot;</span>, <span class="hljs-string">&quot;France&quot;</span>}
+    b := a <span class="hljs-comment">// a copy of a is assigned to b</span>
+    b[<span class="hljs-number">0</span>] = <span class="hljs-string">&quot;Singapore&quot;</span>
+    fmt.Println(<span class="hljs-string">&quot;a is &quot;</span>, a)
+    fmt.Println(<span class="hljs-string">&quot;b is &quot;</span>, b) 
+}
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>a is [USA China India Germany France]  
+b is [Singapore China India Germany France]
+</code></pre><p>&#x6570;&#x7EC4;&#x7684;&#x5927;&#x5C0F;&#x662F;&#x7C7B;&#x578B;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002;&#x56E0;&#x6B64;[5]int&#x548C;[25]int&#x662F;&#x4E0D;&#x540C;&#x7684;&#x7C7B;&#x578B;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x6570;&#x7EC4;&#x4E0D;&#x80FD;&#x88AB;&#x8C03;&#x6574;&#x5927;&#x5C0F;&#x3002;&#x4E0D;&#x8981;&#x62C5;&#x5FC3;&#x8FD9;&#x4E2A;&#x9650;&#x5236;&#xFF0C;&#x56E0;&#x4E3A;&#x5207;&#x7247;&#x7684;&#x5B58;&#x5728;&#x662F;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x3002;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">func</span> main() {  
+    a := [<span class="hljs-number">3</span>]<span class="hljs-keyword">int</span>{<span class="hljs-number">5</span>, <span class="hljs-number">78</span>, <span class="hljs-number">8</span>}
+    <span class="hljs-keyword">var</span> b [<span class="hljs-number">5</span>]<span class="hljs-keyword">int</span>
+    b = a <span class="hljs-comment">//not possible since [3]int and [5]int are distinct types</span>
+}
+</code></pre>
+<p>&#x5343;&#x950B;Go&#x8BED;&#x8A00;&#x7684;&#x5B66;&#x4E60;&#x7FA4;&#xFF1A;784190273</p>
+<p>&#x4F5C;&#x8005;B&#x7AD9;&#xFF1A;</p>
+<p><a href="https://space.bilibili.com/353694001" target="_blank">https://space.bilibili.com/353694001</a></p>
+<p>&#x5BF9;&#x5E94;&#x89C6;&#x9891;&#x5730;&#x5740;&#xFF1A;</p>
+<p><a href="https://www.bilibili.com/video/av56018934" target="_blank">https://www.bilibili.com/video/av56018934</a></p>
+<p><a href="https://www.bilibili.com/video/av47467197" target="_blank">https://www.bilibili.com/video/av47467197</a></p>
+<p>&#x6E90;&#x4EE3;&#x7801;&#xFF1A;</p>
+<p><a href="https://github.com/rubyhan1314/go_foundation" target="_blank">https://github.com/rubyhan1314/go_foundation</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="day05_循环语句.html" class="navigation navigation-prev " aria-label="Previous page: 循环语句">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="day07_Slice的使用.html" class="navigation navigation-next " aria-label="Next page: Slice的使用">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"数组","level":"1.2.17","depth":2,"next":{"title":"Slice的使用","level":"1.2.18","depth":2,"path":"01-Go语言基础/day07_Slice的使用.md","ref":"01-Go语言基础/day07_Slice的使用.md","articles":[]},"previous":{"title":"循环语句","level":"1.2.16","depth":2,"path":"01-Go语言基础/day05_循环语句.md","ref":"01-Go语言基础/day05_循环语句.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"01-Go语言基础/day06_数组.md","mtime":"2020-08-10T03:24:35.159Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-10T08:26:41.953Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

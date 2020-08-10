@@ -1,0 +1,1933 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>错误处理 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="day14_第4节-type.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Go语言基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="day01_第1节_知名编程语言或系统的发展简史.html">
+            
+                <a href="day01_第1节_知名编程语言或系统的发展简史.html">
+            
+                    
+                    第1节_知名编程语言或系统的发展简史
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="day01_第2节_Go语言的前世今生.html">
+            
+                <a href="day01_第2节_Go语言的前世今生.html">
+            
+                    
+                    第2节_Go语言的前世今生
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="day01_第3节_Go语言logo和版本.html">
+            
+                <a href="day01_第3节_Go语言logo和版本.html">
+            
+                    
+                    第3节_Go语言logo和版本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="day01_第4节_Go语言的核心特性.html">
+            
+                <a href="day01_第4节_Go语言的核心特性.html">
+            
+                    
+                    第4节_Go语言的核心特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="day01_第5节_Go语言的优势和其他语言的对比.html">
+            
+                <a href="day01_第5节_Go语言的优势和其他语言的对比.html">
+            
+                    
+                    第5节_Go语言的优势和其他语言的对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="day01_第6节_Go语言能做什么.html">
+            
+                <a href="day01_第6节_Go语言能做什么.html">
+            
+                    
+                    第6节_Go语言能做什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="day01_第7节_Go语言环境搭建.html">
+            
+                <a href="day01_第7节_Go语言环境搭建.html">
+            
+                    
+                    第7节_Go语言环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="day01_第8节_第一个程序HelloWorld.html">
+            
+                <a href="day01_第8节_第一个程序HelloWorld.html">
+            
+                    
+                    第8节_第一个程序HelloWorld
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="day01_第9节_Go的命令以及Go的执行原理.html">
+            
+                <a href="day01_第9节_Go的命令以及Go的执行原理.html">
+            
+                    
+                    第9节_Go的命令以及Go的执行原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="day01_第10节_安装Goland开发工具.html">
+            
+                <a href="day01_第10节_安装Goland开发工具.html">
+            
+                    
+                    第10节_安装Goland开发工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="day01_第11节_编码规范.html">
+            
+                <a href="day01_第11节_编码规范.html">
+            
+                    
+                    第11节_编码规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="day02_基本语法.html">
+            
+                <a href="day02_基本语法.html">
+            
+                    
+                    基本语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="day03_数据类型&运算符.html">
+            
+                <a href="day03_数据类型&运算符.html">
+            
+                    
+                    数据类型&运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="day03_键盘输入和打印输出.html">
+            
+                <a href="day03_键盘输入和打印输出.html">
+            
+                    
+                    键盘输入和打印输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="day04_分支语句.html">
+            
+                <a href="day04_分支语句.html">
+            
+                    
+                    分支语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="day05_循环语句.html">
+            
+                <a href="day05_循环语句.html">
+            
+                    
+                    循环语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="day06_数组.html">
+            
+                <a href="day06_数组.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="day07_Slice的使用.html">
+            
+                <a href="day07_Slice的使用.html">
+            
+                    
+                    Slice的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.19" data-path="day08_Map的使用.html">
+            
+                <a href="day08_Map的使用.html">
+            
+                    
+                    Map的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.20" data-path="day09_string.html">
+            
+                <a href="day09_string.html">
+            
+                    
+                    string
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.21" data-path="day10_函数.html">
+            
+                <a href="day10_函数.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.22" data-path="day11_包的管理.html">
+            
+                <a href="day11_包的管理.html">
+            
+                    
+                    包的管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.23" data-path="day12_指针.html">
+            
+                <a href="day12_指针.html">
+            
+                    
+                    指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.24" data-path="day13-结构体.html">
+            
+                <a href="day13-结构体.html">
+            
+                    
+                    结构体
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.25" data-path="day14_第1节_方法.html">
+            
+                <a href="day14_第1节_方法.html">
+            
+                    
+                    第1节_方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.26" data-path="day14_第2节_接口.html">
+            
+                <a href="day14_第2节_接口.html">
+            
+                    
+                    第2节_接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.27" data-path="day14_第3节-OOP编程.html">
+            
+                <a href="day14_第3节-OOP编程.html">
+            
+                    
+                    第3节-OOP编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.28" data-path="day14_第4节-type.html">
+            
+                <a href="day14_第4节-type.html">
+            
+                    
+                    第4节-type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.29" data-path="day15_错误处理.html">
+            
+                <a href="day15_错误处理.html">
+            
+                    
+                    错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Go语言基础进阶
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../02-Go语言基础进阶/day16_file操作.html">
+            
+                <a href="../02-Go语言基础进阶/day16_file操作.html">
+            
+                    
+                    01file操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../02-Go语言基础进阶/day17_Go语言并发Goroutine.html">
+            
+                <a href="../02-Go语言基础进阶/day17_Go语言并发Goroutine.html">
+            
+                    
+                    02Go语言并发Goroutine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../02-Go语言基础进阶/day18_channel通道.html">
+            
+                <a href="../02-Go语言基础进阶/day18_channel通道.html">
+            
+                    
+                    03channel通道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../02-Go语言基础进阶/day19_Go语言反射.html">
+            
+                <a href="../02-Go语言基础进阶/day19_Go语言反射.html">
+            
+                    
+                    04Go语言反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    MySQL数据库基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../03-MySQL数据库基础/day23_学习笔记.html">
+            
+                <a href="../03-MySQL数据库基础/day23_学习笔记.html">
+            
+                    
+                    01学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../03-MySQL数据库基础/day23_数据库基础知识和基础操作.html">
+            
+                <a href="../03-MySQL数据库基础/day23_数据库基础知识和基础操作.html">
+            
+                    
+                    02数据库基础知识和基础操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../03-MySQL数据库基础/day24_查询和复杂查询.html">
+            
+                <a href="../03-MySQL数据库基础/day24_查询和复杂查询.html">
+            
+                    
+                    03查询和复杂查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    beego框架
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../04-beego框架/day36_beego框架介绍和流程分析.html">
+            
+                <a href="../04-beego框架/day36_beego框架介绍和流程分析.html">
+            
+                    
+                    beego框架介绍和流程分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../04-beego框架/day37_beego框架总结及数据库连接配置.html">
+            
+                <a href="../04-beego框架/day37_beego框架总结及数据库连接配置.html">
+            
+                    
+                    beego框架总结及数据库连接配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    beego开发博客系统
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../05-beego框架开发博客系统/day38_项目搭建_登录注册和Session功能开发.html">
+            
+                <a href="../05-beego框架开发博客系统/day38_项目搭建_登录注册和Session功能开发.html">
+            
+                    
+                    项目搭建_登录注册和Session功能开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../05-beego框架开发博客系统/day39_写文章_项目首页和查看文章详情功能开发.html">
+            
+                <a href="../05-beego框架开发博客系统/day39_写文章_项目首页和查看文章详情功能开发.html">
+            
+                    
+                    写文章_项目首页和查看文章详情功能开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../05-beego框架开发博客系统/day40_修改文章_删除文章和文章标签功能开发.html">
+            
+                <a href="../05-beego框架开发博客系统/day40_修改文章_删除文章和文章标签功能开发.html">
+            
+                    
+                    修改文章_删除文章和文章标签功能开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../05-beego框架开发博客系统/day41_首页功能扩展_图片上传和关于功能开发.html">
+            
+                <a href="../05-beego框架开发博客系统/day41_首页功能扩展_图片上传和关于功能开发.html">
+            
+                    
+                    首页功能扩展_图片上传和关于功能开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" >
+            
+                <span>
+            
+                    
+                    iris框架
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../06-iris框架/day54_web开发介绍、iris框架安装、HTTP请求和返回、iris路由处理.html">
+            
+                <a href="../06-iris框架/day54_web开发介绍、iris框架安装、HTTP请求和返回、iris路由处理.html">
+            
+                    
+                    web开发介绍、iris框架安装、HTTP请求和返回、iris路由处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../06-iris框架/day55_框架设置、mvc包、session使用、项目搭建和资源导入.html">
+            
+                <a href="../06-iris框架/day55_框架设置、mvc包、session使用、项目搭建和资源导入.html">
+            
+                    
+                    框架设置、mvc包、session使用、项目搭建和资源导入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <span>
+            
+                    
+                    微服务特性
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../07-微服务特性/day76_微服务简介及特性介绍.html">
+            
+                <a href="../07-微服务特性/day76_微服务简介及特性介绍.html">
+            
+                    
+                    微服务简介及特性介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <span>
+            
+                    
+                    protobuf
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../08-protobuf/day77_Protobuf介绍.html">
+            
+                <a href="../08-protobuf/day77_Protobuf介绍.html">
+            
+                    
+                    Protobuf介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" >
+            
+                <span>
+            
+                    
+                    微服务管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../09-微服务管理/day78_微服务管理_上.html">
+            
+                <a href="../09-微服务管理/day78_微服务管理_上.html">
+            
+                    
+                    微服务管理_上
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../09-微服务管理/day78_微服务管理_下.md">
+            
+                <span>
+            
+                    
+                    微服务管理_下
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" >
+            
+                <span>
+            
+                    
+                    RPC&gRPC
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="../10-RPC远程调用机制/day80_RPC远程过程调用.html">
+            
+                <a href="../10-RPC远程调用机制/day80_RPC远程过程调用.html">
+            
+                    
+                    RPC远程过程调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="../11-gRPC远程调用机制/day81_gRPC远程调用机制介绍.html">
+            
+                <a href="../11-gRPC远程调用机制/day81_gRPC远程调用机制介绍.html">
+            
+                    
+                    gRPC远程调用机制介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="../11-gRPC远程调用机制/day82_gRPC使用.html">
+            
+                <a href="../11-gRPC远程调用机制/day82_gRPC使用.html">
+            
+                    
+                    gRPC使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" >
+            
+                <span>
+            
+                    
+                    go-micro
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.5.1" data-path="../12-go-micro微服务框架/day83_go-micro框架介绍.html">
+            
+                <a href="../12-go-micro微服务框架/day83_go-micro框架介绍.html">
+            
+                    
+                    go-micro框架介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.2" data-path="../12-go-micro微服务框架/day84_go-micro使用1.html">
+            
+                <a href="../12-go-micro微服务框架/day84_go-micro使用1.html">
+            
+                    
+                    go-micro使用1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.3" data-path="../12-go-micro微服务框架/day85_go-micro使用2.html">
+            
+                <a href="../12-go-micro微服务框架/day85_go-micro使用2.html">
+            
+                    
+                    go-micro使用2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" >
+            
+                <span>
+            
+                    
+                    RESTful
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../13-RESTful设计/day86_RESTful标准设计.html">
+            
+                <a href="../13-RESTful设计/day86_RESTful标准设计.html">
+            
+                    
+                    RESTful标准设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" >
+            
+                <span>
+            
+                    
+                    区块链
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../14-区块链/day01_初始区块链家族1.html">
+            
+                <a href="../14-区块链/day01_初始区块链家族1.html">
+            
+                    
+                    初始区块链家族1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="../14-区块链/day02_区块链基础入门.html">
+            
+                <a href="../14-区块链/day02_区块链基础入门.html">
+            
+                    
+                    区块链基础入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.3" data-path="../14-区块链/day03_区块链的本质.html">
+            
+                <a href="../14-区块链/day03_区块链的本质.html">
+            
+                    
+                    区块链的本质
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.4" data-path="../14-区块链/day04_区块链的特性.html">
+            
+                <a href="../14-区块链/day04_区块链的特性.html">
+            
+                    
+                    区块链的特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >错误处理</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x9519;&#x8BEF;&#x5904;&#x7406;">&#x9519;&#x8BEF;&#x5904;&#x7406;</h1>
+<blockquote>
+<p>create by victor</p>
+</blockquote>
+<p>&#x5728;&#x5B9E;&#x9645;&#x5DE5;&#x7A0B;&#x9879;&#x76EE;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x901A;&#x8FC7;&#x7A0B;&#x5E8F;&#x7684;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x5FEB;&#x901F;&#x5B9A;&#x4F4D;&#x95EE;&#x9898;&#xFF0C;&#x4F46;&#x662F;&#x53C8;&#x4E0D;&#x559C;&#x6B22;&#x9519;&#x8BEF;&#x5904;&#x7406;&#x4EE3;&#x7801;&#x5199;&#x7684;&#x5197;&#x4F59;&#x800C;&#x53C8;&#x5570;&#x55E6;&#x3002;<code>Go</code>&#x8BED;&#x8A00;&#x6CA1;&#x6709;&#x63D0;&#x4F9B;&#x50CF;<code>Java</code>&#x3001;<code>C#</code>&#x8BED;&#x8A00;&#x4E2D;&#x7684;<code>try...catch</code>&#x5F02;&#x5E38;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#xFF0C;&#x800C;&#x662F;&#x901A;&#x8FC7;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x503C;&#x9010;&#x5C42;&#x5F80;&#x4E0A;&#x629B;&#x3002;&#x8FD9;&#x79CD;&#x8BBE;&#x8BA1;&#xFF0C;&#x9F13;&#x52B1;&#x5DE5;&#x7A0B;&#x5E08;&#x5728;&#x4EE3;&#x7801;&#x4E2D;&#x663E;&#x5F0F;&#x7684;&#x68C0;&#x67E5;&#x9519;&#x8BEF;&#xFF0C;&#x800C;&#x975E;&#x5FFD;&#x7565;&#x9519;&#x8BEF;&#xFF0C;&#x597D;&#x5904;&#x5C31;&#x662F;&#x907F;&#x514D;&#x6F0F;&#x6389;&#x672C;&#x5E94;&#x5904;&#x7406;&#x7684;&#x9519;&#x8BEF;&#x3002;&#x4F46;&#x662F;&#x5E26;&#x6765;&#x4E00;&#x4E2A;&#x5F0A;&#x7AEF;&#xFF0C;&#x8BA9;&#x4EE3;&#x7801;&#x5570;&#x55E6;&#x3002;</p>
+<h2 id="11-&#x4EC0;&#x4E48;&#x662F;&#x9519;&#x8BEF;">1.1 &#x4EC0;&#x4E48;&#x662F;&#x9519;&#x8BEF;</h2>
+<p>&#x9519;&#x8BEF;&#x662F;&#x4EC0;&#x4E48;?</p>
+<p>&#x9519;&#x8BEF;&#x6307;&#x7684;&#x662F;&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x95EE;&#x9898;&#x7684;&#x5730;&#x65B9;&#x51FA;&#x73B0;&#x4E86;&#x95EE;&#x9898;&#x3002;&#x6BD4;&#x5982;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x65F6;&#x5931;&#x8D25;&#xFF0C;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x5728;&#x4EBA;&#x4EEC;&#x7684;&#x610F;&#x6599;&#x4E4B;&#x4E2D; &#x3002;</p>
+<p>&#x800C;&#x5F02;&#x5E38;&#x6307;&#x7684;&#x662F;&#x4E0D;&#x5E94;&#x8BE5;&#x51FA;&#x73B0;&#x95EE;&#x9898;&#x7684;&#x5730;&#x65B9;&#x51FA;&#x73B0;&#x4E86;&#x95EE;&#x9898;&#x3002;&#x6BD4;&#x5982;&#x5F15;&#x7528;&#x4E86;&#x7A7A;&#x6307;&#x9488;&#xFF0C;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x5728;&#x4EBA;&#x4EEC;&#x7684;&#x610F;&#x6599;&#x4E4B;&#x5916;&#x3002;&#x53EF;&#x89C1;&#xFF0C;&#x9519;&#x8BEF;&#x662F;&#x4E1A;&#x52A1;&#x8FC7;&#x7A0B;&#x7684;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x800C;&#x5F02;&#x5E38;&#x4E0D;&#x662F; &#x3002;</p>
+<p>Go&#x4E2D;&#x7684;&#x9519;&#x8BEF;&#x4E5F;&#x662F;&#x4E00;&#x79CD;&#x7C7B;&#x578B;&#x3002;&#x9519;&#x8BEF;&#x7528;&#x5185;&#x7F6E;&#x7684;<code>error</code> &#x7C7B;&#x578B;&#x8868;&#x793A;&#x3002;&#x5C31;&#x50CF;&#x5176;&#x4ED6;&#x7C7B;&#x578B;&#x7684;&#xFF0C;&#x5982;int&#xFF0C;float64&#xFF0C;&#x3002;&#x9519;&#x8BEF;&#x503C;&#x53EF;&#x4EE5;&#x5B58;&#x50A8;&#x5728;&#x53D8;&#x91CF;&#x4E2D;&#xFF0C;&#x4ECE;&#x51FD;&#x6570;&#x4E2D;&#x8FD4;&#x56DE;&#xFF0C;&#x7B49;&#x7B49;&#x3002;</p>
+<h2 id="12-&#x6F14;&#x793A;&#x9519;&#x8BEF;">1.2 &#x6F14;&#x793A;&#x9519;&#x8BEF;</h2>
+<p>&#x8BA9;&#x6211;&#x4EEC;&#x4ECE;&#x4E00;&#x4E2A;&#x793A;&#x4F8B;&#x7A0B;&#x5E8F;&#x5F00;&#x59CB;&#xFF0C;&#x8FD9;&#x4E2A;&#x7A0B;&#x5E8F;&#x5C1D;&#x8BD5;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (  
+    <span class="hljs-string">&quot;fmt&quot;</span>
+    <span class="hljs-string">&quot;os&quot;</span>
+)
+
+<span class="hljs-keyword">func</span> main() {  
+    f, err := os.Open(<span class="hljs-string">&quot;/test.txt&quot;</span>)
+    <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+        fmt.Println(err)
+        <span class="hljs-keyword">return</span>
+    }
+  <span class="hljs-comment">//&#x6839;&#x636E;f&#x8FDB;&#x884C;&#x6587;&#x4EF6;&#x7684;&#x8BFB;&#x6216;&#x5199;</span>
+    fmt.Println(f.Name(), <span class="hljs-string">&quot;opened successfully&quot;</span>)
+}
+</code></pre>
+<blockquote>
+<p>&#x5728;os&#x5305;&#x4E2D;&#x6709;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x7684;&#x529F;&#x80FD;&#x51FD;&#x6570;&#xFF1A;</p>
+<p>&#x200B;    func Open(name string) (file *File, err error)</p>
+<p>&#x5982;&#x679C;&#x6587;&#x4EF6;&#x5DF2;&#x7ECF;&#x6210;&#x529F;&#x6253;&#x5F00;&#xFF0C;&#x90A3;&#x4E48;Open&#x51FD;&#x6570;&#x5C06;&#x8FD4;&#x56DE;&#x6587;&#x4EF6;&#x5904;&#x7406;&#x3002;&#x5982;&#x679C;&#x5728;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x65F6;&#x51FA;&#x73B0;&#x9519;&#x8BEF;&#xFF0C;&#x5C06;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x975E;nil&#x9519;&#x8BEF;&#x3002;</p>
+</blockquote>
+<p>&#x200B;    </p>
+<p>&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x6216;&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#xFF0C;&#x90A3;&#x4E48;&#x6309;&#x7167;&#x60EF;&#x4F8B;&#xFF0C;&#x5B83;&#x5FC5;&#x987B;&#x662F;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x503C;&#x3002;&#x56E0;&#x6B64;&#xFF0C;<code>Open</code> &#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x7684;&#x503C;&#x662F;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x503C;&#x3002;</p>
+<p>&#x5904;&#x7406;&#x9519;&#x8BEF;&#x7684;&#x60EF;&#x7528;&#x65B9;&#x6CD5;&#x662F;&#x5C06;&#x8FD4;&#x56DE;&#x7684;&#x9519;&#x8BEF;&#x4E0E;nil&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#x3002;nil&#x503C;&#x8868;&#x793A;&#x6CA1;&#x6709;&#x53D1;&#x751F;&#x9519;&#x8BEF;&#xFF0C;&#x800C;&#x975E;nil&#x503C;&#x8868;&#x793A;&#x51FA;&#x73B0;&#x9519;&#x8BEF;&#x3002;&#x5728;&#x6211;&#x4EEC;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x68C0;&#x67E5;&#x9519;&#x8BEF;&#x662F;&#x5426;&#x4E3A;nil&#x3002;&#x5982;&#x679C;&#x5B83;&#x4E0D;&#x662F;nil&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x6253;&#x5370;&#x9519;&#x8BEF;&#x5E76;&#x4ECE;&#x4E3B;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x3002;</p>
+<p>&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>open /test.txt: No such file or directory
+</code></pre><p>&#x6211;&#x4EEC;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#xFF0C;&#x8BF4;&#x660E;&#x8BE5;&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#x3002;</p>
+<h2 id="13-&#x9519;&#x8BEF;&#x7C7B;&#x578B;&#x8868;&#x793A;">1.3 &#x9519;&#x8BEF;&#x7C7B;&#x578B;&#x8868;&#x793A;</h2>
+<p>Go &#x8BED;&#x8A00;&#x901A;&#x8FC7;&#x5185;&#x7F6E;&#x7684;&#x9519;&#x8BEF;&#x63A5;&#x53E3;&#x63D0;&#x4F9B;&#x4E86;&#x975E;&#x5E38;&#x7B80;&#x5355;&#x7684;&#x9519;&#x8BEF;&#x5904;&#x7406;&#x673A;&#x5236;&#x3002;</p>
+<p>&#x8BA9;&#x6211;&#x4EEC;&#x518D;&#x6DF1;&#x5165;&#x4E00;&#x70B9;&#xFF0C;&#x770B;&#x770B;&#x5982;&#x4F55;&#x5B9A;&#x4E49;&#x9519;&#x8BEF;&#x7C7B;&#x578B;&#x7684;&#x6784;&#x5EFA;&#x3002;&#x9519;&#x8BEF;&#x662F;&#x4E00;&#x4E2A;&#x5E26;&#x6709;&#x4EE5;&#x4E0B;&#x5B9A;&#x4E49;&#x7684;&#x63A5;&#x53E3;&#x7C7B;&#x578B;&#xFF0C;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">type</span> error <span class="hljs-keyword">interface</span> {
+    Error() <span class="hljs-keyword">string</span>
+}
+</code></pre>
+<p>&#x5B83;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x5E26;&#x6709;Error&#xFF08;&#xFF09;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x4EFB;&#x4F55;&#x5B9E;&#x73B0;&#x8FD9;&#x4E2A;&#x63A5;&#x53E3;&#x7684;&#x7C7B;&#x578B;&#x90FD;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x4F7F;&#x7528;&#x3002;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x63D0;&#x4F9B;&#x4E86;&#x5BF9;&#x9519;&#x8BEF;&#x7684;&#x63CF;&#x8FF0;&#x3002;</p>
+<p>&#x5F53;&#x6253;&#x5370;&#x9519;&#x8BEF;&#x65F6;&#xFF0C;fmt.Println&#x51FD;&#x6570;&#x5728;&#x5185;&#x90E8;&#x8C03;&#x7528;Error() &#x65B9;&#x6CD5;&#x6765;&#x83B7;&#x53D6;&#x9519;&#x8BEF;&#x7684;&#x63CF;&#x8FF0;&#x3002;&#x8FD9;&#x5C31;&#x662F;&#x9519;&#x8BEF;&#x63CF;&#x8FF0;&#x662F;&#x5982;&#x4F55;&#x5728;&#x4E00;&#x884C;&#x4E2D;&#x6253;&#x5370;&#x51FA;&#x6765;&#x7684;&#x3002;</p>
+<p><strong>&#x4ECE;&#x9519;&#x8BEF;&#x4E2D;&#x63D0;&#x53D6;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#x7684;&#x4E0D;&#x540C;&#x65B9;&#x6CD5;</strong></p>
+<p>&#x65E2;&#x7136;&#x6211;&#x4EEC;&#x77E5;&#x9053;&#x9519;&#x8BEF;&#x662F;&#x4E00;&#x79CD;&#x63A5;&#x53E3;&#x7C7B;&#x578B;&#xFF0C;&#x90A3;&#x4E48;&#x8BA9;&#x6211;&#x4EEC;&#x770B;&#x770B;&#x5982;&#x4F55;&#x63D0;&#x53D6;&#x66F4;&#x591A;&#x5173;&#x4E8E;&#x9519;&#x8BEF;&#x7684;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x5728;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4EC5;&#x4EC5;&#x662F;&#x6253;&#x5370;&#x4E86;&#x9519;&#x8BEF;&#x7684;&#x63CF;&#x8FF0;&#x3002;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x7684;&#x662F;&#x5BFC;&#x81F4;&#x9519;&#x8BEF;&#x7684;&#x6587;&#x4EF6;&#x7684;&#x5B9E;&#x9645;&#x8DEF;&#x5F84;&#x3002;&#x4E00;&#x79CD;&#x53EF;&#x80FD;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#x89E3;&#x6790;&#x9519;&#x8BEF;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x8FD9;&#x662F;&#x6211;&#x4EEC;&#x7A0B;&#x5E8F;&#x7684;&#x8F93;&#x51FA;&#xFF0C;</p>
+<pre><code>open /test.txt: No such file or directory
+</code></pre><p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x89E3;&#x6790;&#x8FD9;&#x4E2A;&#x9519;&#x8BEF;&#x6D88;&#x606F;&#x5E76;&#x4ECE;&#x4E2D;&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&quot;/test.txt&quot;&#x3002;&#x4F46;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x7CDF;&#x7CD5;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x5728;&#x65B0;&#x7248;&#x672C;&#x7684;&#x8BED;&#x8A00;&#x4E2D;&#xFF0C;&#x9519;&#x8BEF;&#x63CF;&#x8FF0;&#x53EF;&#x4EE5;&#x968F;&#x65F6;&#x66F4;&#x6539;&#xFF0C;&#x6211;&#x4EEC;&#x7684;&#x4EE3;&#x7801;&#x5C06;&#x4F1A;&#x4E2D;&#x65AD;&#x3002;</p>
+<p>&#x662F;&#x5426;&#x6709;&#x529E;&#x6CD5;&#x53EF;&#x9760;&#x5730;&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x540D;&#xFF1F;&#x7B54;&#x6848;&#x662F;&#x80AF;&#x5B9A;&#x7684;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x505A;&#x5230;&#xFF0C;&#x6807;&#x51C6;Go&#x5E93;&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x65B9;&#x5F0F;&#x63D0;&#x4F9B;&#x66F4;&#x591A;&#x5173;&#x4E8E;&#x9519;&#x8BEF;&#x7684;&#x4FE1;&#x606F;&#x3002;&#x8BA9;&#x6211;&#x4EEC;&#x4E00;&#x770B;&#x4E00;&#x770B;&#x3002;</p>
+<p> 1.&#x65AD;&#x8A00;&#x5E95;&#x5C42;&#x7ED3;&#x6784;&#x7C7B;&#x578B;&#x5E76;&#x4ECE;&#x7ED3;&#x6784;&#x5B57;&#x6BB5;&#x83B7;&#x53D6;&#x66F4;&#x591A;&#x4FE1;&#x606F;</p>
+<p>&#x5982;&#x679C;&#x4ED4;&#x7EC6;&#x9605;&#x8BFB;&#x6253;&#x5F00;&#x51FD;&#x6570;&#x7684;&#x6587;&#x6863;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5B83;&#x8FD4;&#x56DE;&#x7684;&#x662F;PathError&#x7C7B;&#x578B;&#x7684;&#x9519;&#x8BEF;&#x3002;PathError&#x662F;&#x4E00;&#x4E2A;struct&#x7C7B;&#x578B;&#xFF0C;&#x5B83;&#x5728;&#x6807;&#x51C6;&#x5E93;&#x4E2D;&#x7684;&#x5B9E;&#x73B0;&#x5982;&#x4E0B;&#xFF0C;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">type</span> PathError <span class="hljs-keyword">struct</span> {  
+    Op   <span class="hljs-keyword">string</span>
+    Path <span class="hljs-keyword">string</span>
+    Err  error
+}
+
+<span class="hljs-keyword">func</span> (e *PathError) Error() <span class="hljs-keyword">string</span> { <span class="hljs-keyword">return</span> e.Op + <span class="hljs-string">&quot; &quot;</span> + e.Path + <span class="hljs-string">&quot;: &quot;</span> + e.Err.Error() }
+</code></pre>
+<p>&#x4ECE;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x7406;&#x89E3;PathError&#x901A;&#x8FC7;&#x58F0;&#x660E;<code>Error()string</code>&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;&#x4E86;&#x9519;&#x8BEF;&#x63A5;&#x53E3;&#x3002;&#x8BE5;&#x65B9;&#x6CD5;&#x8FDE;&#x63A5;&#x64CD;&#x4F5C;&#x3001;&#x8DEF;&#x5F84;&#x548C;&#x5B9E;&#x9645;&#x9519;&#x8BEF;&#x5E76;&#x8FD4;&#x56DE;&#x5B83;&#x3002;&#x8FD9;&#x6837;&#x6211;&#x4EEC;&#x5C31;&#x5F97;&#x5230;&#x4E86;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#xFF0C;</p>
+<pre><code>open /test.txt: No such file or directory
+</code></pre><p>PathError&#x7ED3;&#x6784;&#x7684;&#x8DEF;&#x5F84;&#x5B57;&#x6BB5;&#x5305;&#x542B;&#x5BFC;&#x81F4;&#x9519;&#x8BEF;&#x7684;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;&#x3002;&#x8BA9;&#x6211;&#x4EEC;&#x4FEE;&#x6539;&#x4E0A;&#x9762;&#x5199;&#x7684;&#x7A0B;&#x5E8F;&#xFF0C;&#x5E76;&#x6253;&#x5370;&#x51FA;&#x8DEF;&#x5F84;&#x3002;</p>
+<p>&#x4FEE;&#x6539;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (  
+    <span class="hljs-string">&quot;fmt&quot;</span>
+    <span class="hljs-string">&quot;os&quot;</span>
+)
+
+<span class="hljs-keyword">func</span> main() {  
+    f, err := os.Open(<span class="hljs-string">&quot;/test.txt&quot;</span>)
+    <span class="hljs-keyword">if</span> err, ok := err.(*os.PathError); ok {
+        fmt.Println(<span class="hljs-string">&quot;File at path&quot;</span>, err.Path, <span class="hljs-string">&quot;failed to open&quot;</span>)
+        <span class="hljs-keyword">return</span>
+    }
+    fmt.Println(f.Name(), <span class="hljs-string">&quot;opened successfully&quot;</span>)
+}
+</code></pre>
+<p>&#x5728;&#x4E0A;&#x9762;&#x7684;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x7C7B;&#x578B;&#x65AD;&#x8A00;&#x83B7;&#x5F97;&#x9519;&#x8BEF;&#x63A5;&#x53E3;&#x7684;&#x57FA;&#x672C;&#x503C;&#x3002;&#x7136;&#x540E;&#x6211;&#x4EEC;&#x7528;&#x9519;&#x8BEF;&#x6765;&#x6253;&#x5370;&#x8DEF;&#x5F84;.&#x8FD9;&#x4E2A;&#x7A0B;&#x5E8F;&#x8F93;&#x51FA;,</p>
+<pre><code>File at path /test.txt failed to open
+</code></pre><ol>
+<li>&#x65AD;&#x8A00;&#x5E95;&#x5C42;&#x7ED3;&#x6784;&#x7C7B;&#x578B;&#xFF0C;&#x5E76;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x83B7;&#x53D6;&#x66F4;&#x591A;&#x4FE1;&#x606F;</li>
+</ol>
+<p>&#x83B7;&#x5F97;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#x7684;&#x7B2C;&#x4E8C;&#x79CD;&#x65B9;&#x6CD5;&#x662F;&#x65AD;&#x8A00;&#x5E95;&#x5C42;&#x7C7B;&#x578B;&#xFF0C;&#x5E76;&#x901A;&#x8FC7;&#x8C03;&#x7528;struct&#x7C7B;&#x578B;&#x7684;&#x65B9;&#x6CD5;&#x83B7;&#x53D6;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">type</span> DNSError <span class="hljs-keyword">struct</span> {  
+    ...
+}
+
+<span class="hljs-keyword">func</span> (e *DNSError) Error() <span class="hljs-keyword">string</span> {  
+    ...
+}
+<span class="hljs-keyword">func</span> (e *DNSError) Timeout() <span class="hljs-keyword">bool</span> {  
+    ... 
+}
+<span class="hljs-keyword">func</span> (e *DNSError) Temporary() <span class="hljs-keyword">bool</span> {  
+    ... 
+}
+</code></pre>
+<p>&#x4ECE;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;DNSError struct&#x6709;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;Timeout() bool&#x548C;Temporary() bool&#xFF0C;&#x5B83;&#x4EEC;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5E03;&#x5C14;&#x503C;&#xFF0C;&#x8868;&#x793A;&#x9519;&#x8BEF;&#x662F;&#x7531;&#x4E8E;&#x8D85;&#x65F6;&#x8FD8;&#x662F;&#x4E34;&#x65F6;&#x7684;&#x3002;</p>
+<p>&#x8BA9;&#x6211;&#x4EEC;&#x7F16;&#x5199;&#x4E00;&#x4E2A;&#x65AD;&#x8A00;*DNSError&#x7C7B;&#x578B;&#x7684;&#x7A0B;&#x5E8F;&#xFF0C;&#x5E76;&#x8C03;&#x7528;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#x6765;&#x786E;&#x5B9A;&#x9519;&#x8BEF;&#x662F;&#x4E34;&#x65F6;&#x7684;&#x8FD8;&#x662F;&#x8D85;&#x65F6;&#x7684;&#x3002;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (  
+    <span class="hljs-string">&quot;fmt&quot;</span>
+    <span class="hljs-string">&quot;net&quot;</span>
+)
+
+<span class="hljs-keyword">func</span> main() {  
+    addr, err := net.LookupHost(<span class="hljs-string">&quot;golangbot123.com&quot;</span>)
+    <span class="hljs-keyword">if</span> err, ok := err.(*net.DNSError); ok {
+        <span class="hljs-keyword">if</span> err.Timeout() {
+            fmt.Println(<span class="hljs-string">&quot;operation timed out&quot;</span>)
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> err.Temporary() {
+            fmt.Println(<span class="hljs-string">&quot;temporary error&quot;</span>)
+        } <span class="hljs-keyword">else</span> {
+            fmt.Println(<span class="hljs-string">&quot;generic error: &quot;</span>, err)
+        }
+        <span class="hljs-keyword">return</span>
+    }
+    fmt.Println(addr)
+}
+</code></pre>
+<p>&#x5728;&#x4E0A;&#x9762;&#x7684;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x6B63;&#x5728;&#x5C1D;&#x8BD5;&#x83B7;&#x53D6;&#x4E00;&#x4E2A;&#x65E0;&#x6548;&#x57DF;&#x540D;&#x7684;ip&#x5730;&#x5740;&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x65E0;&#x6548;&#x7684;&#x57DF;&#x540D;&#x3002;golangbot123.com&#x3002;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x58F0;&#x660E;&#x5B83;&#x6765;&#x8F93;&#x5165;*net.DNSError&#x6765;&#x83B7;&#x5F97;&#x9519;&#x8BEF;&#x7684;&#x6F5C;&#x5728;&#x4EF7;&#x503C;&#x3002;</p>
+<p>&#x5728;&#x6211;&#x4EEC;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x9519;&#x8BEF;&#x65E2;&#x4E0D;&#x662F;&#x6682;&#x65F6;&#x7684;&#xFF0C;&#x4E5F;&#x4E0D;&#x662F;&#x7531;&#x4E8E;&#x8D85;&#x65F6;&#xFF0C;&#x56E0;&#x6B64;&#x7A0B;&#x5E8F;&#x4F1A;&#x6253;&#x5370;&#x51FA;&#x6765;&#xFF0C;</p>
+<pre><code>generic error:  lookup golangbot123.com: no such host
+</code></pre><p>&#x5982;&#x679C;&#x9519;&#x8BEF;&#x662F;&#x4E34;&#x65F6;&#x7684;&#x6216;&#x8D85;&#x65F6;&#x7684;&#xFF0C;&#x90A3;&#x4E48;&#x76F8;&#x5E94;&#x7684;If&#x8BED;&#x53E5;&#x5C31;&#x4F1A;&#x6267;&#x884C;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x9002;&#x5F53;&#x5730;&#x5904;&#x7406;&#x5B83;&#x3002;</p>
+<p>3.&#x76F4;&#x63A5;&#x6BD4;&#x8F83;</p>
+<p>&#x83B7;&#x5F97;&#x66F4;&#x591A;&#x5173;&#x4E8E;&#x9519;&#x8BEF;&#x7684;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#x7684;&#x7B2C;&#x4E09;&#x79CD;&#x65B9;&#x6CD5;&#x662F;&#x76F4;&#x63A5;&#x4E0E;&#x7C7B;&#x578B;&#x9519;&#x8BEF;&#x7684;&#x53D8;&#x91CF;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#x3002;&#x8BA9;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#x6765;&#x7406;&#x89E3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x3002;</p>
+<p>filepath&#x5305;&#x7684;Glob&#x51FD;&#x6570;&#x7528;&#x4E8E;&#x8FD4;&#x56DE;&#x4E0E;&#x6A21;&#x5F0F;&#x5339;&#x914D;&#x7684;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x7684;&#x540D;&#x79F0;&#x3002;&#x5F53;&#x6A21;&#x5F0F;&#x51FA;&#x73B0;&#x9519;&#x8BEF;&#x65F6;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x5C06;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;ErrBadPattern&#x3002;</p>
+<p>&#x5728;filepath&#x5305;&#x4E2D;&#x5B9A;&#x4E49;&#x4E86;ErrBadPattern&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x8FF0;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">var</span> ErrBadPattern = errors.New(<span class="hljs-string">&quot;syntax error in pattern&quot;</span>)
+</code></pre>
+<p>errors.New()&#x7528;&#x4E8E;&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x9519;&#x8BEF;&#x3002;</p>
+<p>&#x5F53;&#x6A21;&#x5F0F;&#x51FA;&#x73B0;&#x9519;&#x8BEF;&#x65F6;&#xFF0C;&#x7531;Glob&#x51FD;&#x6570;&#x8FD4;&#x56DE;ErrBadPattern&#x3002;</p>
+<p>&#x8BA9;&#x6211;&#x4EEC;&#x5199;&#x4E00;&#x4E2A;&#x5C0F;&#x7A0B;&#x5E8F;&#x6765;&#x68C0;&#x67E5;&#x8FD9;&#x4E2A;&#x9519;&#x8BEF;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (  
+    <span class="hljs-string">&quot;fmt&quot;</span>
+    <span class="hljs-string">&quot;path/filepath&quot;</span>
+)
+
+<span class="hljs-keyword">func</span> main() {  
+    files, error := filepath.Glob(<span class="hljs-string">&quot;[&quot;</span>)
+    <span class="hljs-keyword">if</span> error != <span class="hljs-literal">nil</span> &amp;&amp; error == filepath.ErrBadPattern {
+        fmt.Println(error)
+        <span class="hljs-keyword">return</span>
+    }
+    fmt.Println(<span class="hljs-string">&quot;matched files&quot;</span>, files)
+}
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>syntax error in pattern
+</code></pre><p><strong>&#x4E0D;&#x8981;&#x5FFD;&#x7565;&#x9519;&#x8BEF;</strong></p>
+<p>&#x6C38;&#x8FDC;&#x4E0D;&#x8981;&#x5FFD;&#x7565;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x3002;&#x5FFD;&#x89C6;&#x9519;&#x8BEF;&#x4F1A;&#x62DB;&#x81F4;&#x9EBB;&#x70E6;&#x3002;&#x8BA9;&#x6211;&#x91CD;&#x65B0;&#x7F16;&#x5199;&#x4E00;&#x4E2A;&#x793A;&#x4F8B;&#xFF0C;&#x8BE5;&#x793A;&#x4F8B;&#x5217;&#x51FA;&#x4E86;&#x4E0E;&#x6A21;&#x5F0F;&#x5339;&#x914D;&#x7684;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x800C;&#x5FFD;&#x7565;&#x4E86;&#x9519;&#x8BEF;&#x5904;&#x7406;&#x4EE3;&#x7801;&#x3002;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (  
+    <span class="hljs-string">&quot;fmt&quot;</span>
+    <span class="hljs-string">&quot;path/filepath&quot;</span>
+)
+
+<span class="hljs-keyword">func</span> main() {  
+    files, _ := filepath.Glob(<span class="hljs-string">&quot;[&quot;</span>)
+    fmt.Println(<span class="hljs-string">&quot;matched files&quot;</span>, files)
+}
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x4ECE;&#x524D;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#x5DF2;&#x7ECF;&#x77E5;&#x9053;&#x6A21;&#x5F0F;&#x662F;&#x65E0;&#x6548;&#x7684;&#x3002;&#x6211;&#x5FFD;&#x7565;&#x4E86;Glob&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x7684;&#x9519;&#x8BEF;&#xFF0C;&#x65B9;&#x6CD5;&#x662F;&#x4F7F;&#x7528;&#x884C;&#x53F7;&#x4E2D;&#x7684;&#x7A7A;&#x767D;&#x6807;&#x8BC6;&#x7B26;&#x3002;</p>
+<pre><code>matched files []
+</code></pre><p>&#x7531;&#x4E8E;&#x6211;&#x4EEC;&#x5FFD;&#x7565;&#x4E86;&#x8FD9;&#x4E2A;&#x9519;&#x8BEF;&#xFF0C;&#x8F93;&#x51FA;&#x770B;&#x8D77;&#x6765;&#x597D;&#x50CF;&#x6CA1;&#x6709;&#x6587;&#x4EF6;&#x5339;&#x914D;&#x8FD9;&#x4E2A;&#x6A21;&#x5F0F;&#xFF0C;&#x4F46;&#x662F;&#x5B9E;&#x9645;&#x4E0A;&#x8FD9;&#x4E2A;&#x6A21;&#x5F0F;&#x672C;&#x8EAB;&#x662F;&#x7578;&#x5F62;&#x7684;&#x3002;&#x6240;&#x4EE5;&#x4E0D;&#x8981;&#x5FFD;&#x7565;&#x9519;&#x8BEF;&#x3002;</p>
+<h2 id="14-&#x81EA;&#x5B9A;&#x4E49;&#x9519;&#x8BEF;">1.4 &#x81EA;&#x5B9A;&#x4E49;&#x9519;&#x8BEF;</h2>
+<p>&#x521B;&#x5EFA;&#x81EA;&#x5B9A;&#x4E49;&#x9519;&#x8BEF;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;errors&#x5305;&#x4E0B;&#x7684;New()&#x51FD;&#x6570;&#xFF0C;&#x4EE5;&#x53CA;fmt&#x5305;&#x4E0B;&#x7684;&#xFF1A;Errorf()&#x51FD;&#x6570;&#x3002;</p>
+<pre><code class="lang-go"><span class="hljs-comment">//errors&#x5305;&#xFF1A;</span>
+<span class="hljs-keyword">func</span> New(text <span class="hljs-keyword">string</span>) error {}
+
+<span class="hljs-comment">//fmt&#x5305;&#xFF1A;</span>
+<span class="hljs-keyword">func</span> Errorf(format <span class="hljs-keyword">string</span>, a ...<span class="hljs-keyword">interface</span>{}) error {}
+</code></pre>
+<p>&#x5728;&#x4F7F;&#x7528;New()&#x51FD;&#x6570;&#x521B;&#x5EFA;&#x81EA;&#x5B9A;&#x4E49;&#x9519;&#x8BEF;&#x4E4B;&#x524D;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x4E86;&#x89E3;&#x5B83;&#x662F;&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x7684;&#x3002;&#x4E0B;&#x9762;&#x63D0;&#x4F9B;&#x4E86;&#x9519;&#x8BEF;&#x5305;&#x4E2D;&#x7684;&#x65B0;&#x529F;&#x80FD;&#x7684;&#x5B9E;&#x73B0;&#x3002;</p>
+<pre><code class="lang-go"><span class="hljs-comment">// Package errors implements functions to manipulate errors.</span>
+  <span class="hljs-keyword">package</span> errors
+
+  <span class="hljs-comment">// New returns an error that formats as the given text.</span>
+  <span class="hljs-keyword">func</span> New(text <span class="hljs-keyword">string</span>) error {
+      <span class="hljs-keyword">return</span> &amp;errorString{text}
+  }
+
+  <span class="hljs-comment">// errorString is a trivial implementation of error.</span>
+  <span class="hljs-keyword">type</span> errorString <span class="hljs-keyword">struct</span> {
+      s <span class="hljs-keyword">string</span>
+  }
+
+  <span class="hljs-keyword">func</span> (e *errorString) Error() <span class="hljs-keyword">string</span> {
+      <span class="hljs-keyword">return</span> e.s
+  }
+</code></pre>
+<p>&#x65E2;&#x7136;&#x6211;&#x4EEC;&#x77E5;&#x9053;&#x4E86;New()&#x51FD;&#x6570;&#x662F;&#x5982;&#x4F55;&#x5DE5;&#x4F5C;&#x7684;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x8BA9;&#x6211;&#x4EEC;&#x5728;&#x81EA;&#x5DF1;&#x7684;&#x7A0B;&#x5E8F;&#x4E2D;&#x4F7F;&#x7528;&#x5B83;&#x6765;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x9519;&#x8BEF;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x5C06;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x7A0B;&#x5E8F;&#xFF0C;&#x8BA1;&#x7B97;&#x4E00;&#x4E2A;&#x5706;&#x7684;&#x9762;&#x79EF;&#xFF0C;&#x5982;&#x679C;&#x534A;&#x5F84;&#x4E3A;&#x8D1F;&#xFF0C;&#x5C06;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x3002;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (  
+    <span class="hljs-string">&quot;errors&quot;</span>
+    <span class="hljs-string">&quot;fmt&quot;</span>
+    <span class="hljs-string">&quot;math&quot;</span>
+)
+
+<span class="hljs-keyword">func</span> circleArea(radius <span class="hljs-keyword">float64</span>) (<span class="hljs-keyword">float64</span>, error) {  
+    <span class="hljs-keyword">if</span> radius &lt; <span class="hljs-number">0</span> {
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>, errors.New(<span class="hljs-string">&quot;Area calculation failed, radius is less than zero&quot;</span>)
+    }
+    <span class="hljs-keyword">return</span> math.Pi * radius * radius, <span class="hljs-literal">nil</span>
+}
+
+<span class="hljs-keyword">func</span> main() {  
+    radius := <span class="hljs-number">-20.0</span>
+    area, err := circleArea(radius)
+    <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+        fmt.Println(err)
+        <span class="hljs-keyword">return</span>
+    }
+    fmt.Printf(<span class="hljs-string">&quot;Area of circle %0.2f&quot;</span>, area)
+}
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>Area calculation failed, radius is less than zero
+</code></pre><p>&#x4F7F;&#x7528;Errorf&#x5411;&#x9519;&#x8BEF;&#x6DFB;&#x52A0;&#x66F4;&#x591A;&#x4FE1;&#x606F;</p>
+<p>&#x4E0A;&#x9762;&#x7684;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x5F97;&#x5F88;&#x597D;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x6253;&#x5370;&#x51FA;&#x5BFC;&#x81F4;&#x9519;&#x8BEF;&#x7684;&#x5B9E;&#x9645;&#x534A;&#x5F84;&#xFF0C;&#x90A3;&#x5C31;&#x4E0D;&#x597D;&#x4E86;&#x3002;&#x8FD9;&#x5C31;&#x662F;fmt&#x5305;&#x7684;Errorf&#x51FD;&#x6570;&#x7684;&#x7528;&#x6B66;&#x4E4B;&#x5730;&#x3002;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x6839;&#x636E;&#x4E00;&#x4E2A;&#x683C;&#x5F0F;&#x8BF4;&#x660E;&#x5668;&#x683C;&#x5F0F;&#x5316;&#x9519;&#x8BEF;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x4F5C;&#x4E3A;&#x503C;&#x6765;&#x6EE1;&#x8DB3;&#x9519;&#x8BEF;&#x3002;</p>
+<p>&#x4F7F;&#x7528;Errorf&#x51FD;&#x6570;&#xFF0C;&#x4FEE;&#x6539;&#x7A0B;&#x5E8F;&#x3002;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (  
+    <span class="hljs-string">&quot;fmt&quot;</span>
+    <span class="hljs-string">&quot;math&quot;</span>
+)
+
+<span class="hljs-keyword">func</span> circleArea(radius <span class="hljs-keyword">float64</span>) (<span class="hljs-keyword">float64</span>, error) {  
+    <span class="hljs-keyword">if</span> radius &lt; <span class="hljs-number">0</span> {
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>, fmt.Errorf(<span class="hljs-string">&quot;Area calculation failed, radius %0.2f is less than zero&quot;</span>, radius)
+    }
+    <span class="hljs-keyword">return</span> math.Pi * radius * radius, <span class="hljs-literal">nil</span>
+}
+
+<span class="hljs-keyword">func</span> main() {  
+    radius := <span class="hljs-number">-20.0</span>
+    area, err := circleArea(radius)
+    <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+        fmt.Println(err)
+        <span class="hljs-keyword">return</span>
+    }
+    fmt.Printf(<span class="hljs-string">&quot;Area of circle %0.2f&quot;</span>, area)
+}
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>Area calculation failed, radius -20.00 is less than zero
+</code></pre><p>&#x4F7F;&#x7528;struct&#x7C7B;&#x578B;&#x548C;&#x5B57;&#x6BB5;&#x63D0;&#x4F9B;&#x5173;&#x4E8E;&#x9519;&#x8BEF;&#x7684;&#x66F4;&#x591A;&#x4FE1;&#x606F;</p>
+<p>&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5C06;&#x9519;&#x8BEF;&#x63A5;&#x53E3;&#x5B9E;&#x73B0;&#x4E3A;&#x9519;&#x8BEF;&#x7684;struct&#x7C7B;&#x578B;&#x3002;&#x8FD9;&#x7ED9;&#x6211;&#x4EEC;&#x63D0;&#x4F9B;&#x4E86;&#x66F4;&#x591A;&#x7684;&#x9519;&#x8BEF;&#x5904;&#x7406;&#x7684;&#x7075;&#x6D3B;&#x6027;&#x3002;&#x5728;&#x6211;&#x4EEC;&#x7684;&#x793A;&#x4F8B;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x8BBF;&#x95EE;&#x5BFC;&#x81F4;&#x9519;&#x8BEF;&#x7684;&#x534A;&#x5F84;&#xFF0C;&#x90A3;&#x4E48;&#x73B0;&#x5728;&#x552F;&#x4E00;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#x89E3;&#x6790;&#x9519;&#x8BEF;&#x63CF;&#x8FF0;&#x533A;&#x57DF;&#x8BA1;&#x7B97;&#x5931;&#x8D25;&#xFF0C;&#x534A;&#x5F84;-20.00&#x5C0F;&#x4E8E;&#x96F6;&#x3002;&#x8FD9;&#x4E0D;&#x662F;&#x4E00;&#x79CD;&#x6B63;&#x786E;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x56E0;&#x4E3A;&#x5982;&#x679C;&#x63CF;&#x8FF0;&#x53D1;&#x751F;&#x4E86;&#x53D8;&#x5316;&#xFF0C;&#x6211;&#x4EEC;&#x7684;&#x4EE3;&#x7801;&#x5C31;&#x4F1A;&#x4E2D;&#x65AD;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x5C06;&#x4F7F;&#x7528;&#x5728;&#x524D;&#x9762;&#x7684;&#x6559;&#x7A0B;&#x4E2D;&#x89E3;&#x91CA;&#x7684;&#x6807;&#x51C6;&#x5E93;&#x7684;&#x7B56;&#x7565;&#xFF0C;&#x5728;&#x201C;&#x65AD;&#x8A00;&#x5E95;&#x5C42;&#x7ED3;&#x6784;&#x7C7B;&#x578B;&#x5E76;&#x4ECE;struct&#x5B57;&#x6BB5;&#x83B7;&#x53D6;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#x201D;&#xFF0C;&#x5E76;&#x4F7F;&#x7528;struct&#x5B57;&#x6BB5;&#x6765;&#x63D0;&#x4F9B;&#x5BF9;&#x5BFC;&#x81F4;&#x9519;&#x8BEF;&#x7684;&#x534A;&#x5F84;&#x7684;&#x8BBF;&#x95EE;&#x3002;&#x6211;&#x4EEC;&#x5C06;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5B9E;&#x73B0;&#x9519;&#x8BEF;&#x63A5;&#x53E3;&#x7684;struct&#x7C7B;&#x578B;&#xFF0C;&#x5E76;&#x4F7F;&#x7528;&#x5B83;&#x7684;&#x5B57;&#x6BB5;&#x6765;&#x63D0;&#x4F9B;&#x5173;&#x4E8E;&#x9519;&#x8BEF;&#x7684;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x7B2C;&#x4E00;&#x6B65;&#x662F;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;struct&#x7C7B;&#x578B;&#x6765;&#x8868;&#x793A;&#x9519;&#x8BEF;&#x3002;&#x9519;&#x8BEF;&#x7C7B;&#x578B;&#x7684;&#x547D;&#x540D;&#x7EA6;&#x5B9A;&#x662F;&#xFF0C;&#x540D;&#x79F0;&#x5E94;&#x8BE5;&#x4EE5;&#x6587;&#x672C;Error&#x7ED3;&#x675F;&#x3002;&#x8BA9;&#x6211;&#x4EEC;&#x628A;struct&#x7C7B;&#x578B;&#x547D;&#x540D;&#x4E3A;areaError</p>
+<pre><code class="lang-go"><span class="hljs-keyword">type</span> areaError <span class="hljs-keyword">struct</span> {  
+    err    <span class="hljs-keyword">string</span>
+    radius <span class="hljs-keyword">float64</span>
+}
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;struct&#x7C7B;&#x578B;&#x6709;&#x4E00;&#x4E2A;&#x5B57;&#x6BB5;&#x534A;&#x5F84;&#xFF0C;&#x5B83;&#x5B58;&#x50A8;&#x4E86;&#x4E3A;&#x9519;&#x8BEF;&#x8D1F;&#x8D23;&#x7684;&#x534A;&#x5F84;&#x7684;&#x503C;&#xFF0C;&#x5E76;&#x4E14;&#x9519;&#x8BEF;&#x5B57;&#x6BB5;&#x5B58;&#x50A8;&#x4E86;&#x5B9E;&#x9645;&#x7684;&#x9519;&#x8BEF;&#x6D88;&#x606F;&#x3002;</p>
+<p>&#x4E0B;&#x4E00;&#x6B65;&#xFF0C;&#x662F;&#x5B9E;&#x73B0;error &#x63A5;&#x53E3;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> (e *areaError) Error() <span class="hljs-keyword">string</span> {  
+    <span class="hljs-keyword">return</span> fmt.Sprintf(<span class="hljs-string">&quot;radius %0.2f: %s&quot;</span>, e.radius, e.err)
+}
+</code></pre>
+<p>&#x5728;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x7247;&#x6BB5;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x6307;&#x9488;&#x63A5;&#x6536;&#x5668;&#x533A;&#x57DF;&#x9519;&#x8BEF;&#x6765;&#x5B9E;&#x73B0;&#x9519;&#x8BEF;&#x63A5;&#x53E3;&#x7684;Error() string&#x65B9;&#x6CD5;&#x3002;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x6253;&#x5370;&#x51FA;&#x534A;&#x5F84;&#x548C;&#x9519;&#x8BEF;&#x63CF;&#x8FF0;&#x3002;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (  
+    <span class="hljs-string">&quot;fmt&quot;</span>
+    <span class="hljs-string">&quot;math&quot;</span>
+)
+
+<span class="hljs-keyword">type</span> areaError <span class="hljs-keyword">struct</span> {  
+    err    <span class="hljs-keyword">string</span>
+    radius <span class="hljs-keyword">float64</span>
+}
+
+<span class="hljs-keyword">func</span> (e *areaError) Error() <span class="hljs-keyword">string</span> {  
+    <span class="hljs-keyword">return</span> fmt.Sprintf(<span class="hljs-string">&quot;radius %0.2f: %s&quot;</span>, e.radius, e.err)
+}
+
+<span class="hljs-keyword">func</span> circleArea(radius <span class="hljs-keyword">float64</span>) (<span class="hljs-keyword">float64</span>, error) {  
+    <span class="hljs-keyword">if</span> radius &lt; <span class="hljs-number">0</span> {
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>, &amp;areaError{<span class="hljs-string">&quot;radius is negative&quot;</span>, radius}
+    }
+    <span class="hljs-keyword">return</span> math.Pi * radius * radius, <span class="hljs-literal">nil</span>
+}
+
+<span class="hljs-keyword">func</span> main() {  
+    radius := <span class="hljs-number">-20.0</span>
+    area, err := circleArea(radius)
+    <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+        <span class="hljs-keyword">if</span> err, ok := err.(*areaError); ok {
+            fmt.Printf(<span class="hljs-string">&quot;Radius %0.2f is less than zero&quot;</span>, err.radius)
+            <span class="hljs-keyword">return</span>
+        }
+        fmt.Println(err)
+        <span class="hljs-keyword">return</span>
+    }
+    fmt.Printf(<span class="hljs-string">&quot;Area of circle %0.2f&quot;</span>, area)
+}
+</code></pre>
+<p>&#x7A0B;&#x5E8F;&#x8F93;&#x51FA;&#xFF1A;</p>
+<pre><code>Radius -20.00 is less than zero
+</code></pre><p>&#x4F7F;&#x7528;&#x7ED3;&#x6784;&#x7C7B;&#x578B;&#x7684;&#x65B9;&#x6CD5;&#x63D0;&#x4F9B;&#x5173;&#x4E8E;&#x9519;&#x8BEF;&#x7684;&#x66F4;&#x591A;&#x4FE1;&#x606F;</p>
+<p>&#x5728;&#x672C;&#x8282;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x7F16;&#x5199;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#x6765;&#x8BA1;&#x7B97;&#x77E9;&#x5F62;&#x7684;&#x9762;&#x79EF;&#x3002;&#x5982;&#x679C;&#x957F;&#x5EA6;&#x6216;&#x5BBD;&#x5EA6;&#x5C0F;&#x4E8E;0&#xFF0C;&#x8FD9;&#x4E2A;&#x7A0B;&#x5E8F;&#x5C06;&#x8F93;&#x51FA;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x3002;</p>
+<p>&#x7B2C;&#x4E00;&#x6B65;&#x662F;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7ED3;&#x6784;&#x6765;&#x8868;&#x793A;&#x9519;&#x8BEF;&#x3002;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">type</span> areaError <span class="hljs-keyword">struct</span> {  
+    err    <span class="hljs-keyword">string</span> <span class="hljs-comment">//error description</span>
+    length <span class="hljs-keyword">float64</span> <span class="hljs-comment">//length which caused the error</span>
+    width  <span class="hljs-keyword">float64</span> <span class="hljs-comment">//width which caused the error</span>
+}
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;&#x9519;&#x8BEF;&#x7ED3;&#x6784;&#x7C7B;&#x578B;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x63CF;&#x8FF0;&#x5B57;&#x6BB5;&#xFF0C;&#x4EE5;&#x53CA;&#x5BFC;&#x81F4;&#x9519;&#x8BEF;&#x7684;&#x957F;&#x5EA6;&#x548C;&#x5BBD;&#x5EA6;&#x3002;</p>
+<p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x6709;&#x4E86;&#x9519;&#x8BEF;&#x7C7B;&#x578B;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x5B9E;&#x73B0;&#x9519;&#x8BEF;&#x63A5;&#x53E3;&#xFF0C;&#x5E76;&#x5728;&#x9519;&#x8BEF;&#x7C7B;&#x578B;&#x4E0A;&#x6DFB;&#x52A0;&#x4E00;&#x4E9B;&#x65B9;&#x6CD5;&#x6765;&#x63D0;&#x4F9B;&#x5173;&#x4E8E;&#x9519;&#x8BEF;&#x7684;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#x3002;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> (e *areaError) Error() <span class="hljs-keyword">string</span> {  
+    <span class="hljs-keyword">return</span> e.err
+}
+
+<span class="hljs-keyword">func</span> (e *areaError) lengthNegative() <span class="hljs-keyword">bool</span> {  
+    <span class="hljs-keyword">return</span> e.length &lt; <span class="hljs-number">0</span>
+}
+
+<span class="hljs-keyword">func</span> (e *areaError) widthNegative() <span class="hljs-keyword">bool</span> {  
+    <span class="hljs-keyword">return</span> e.width &lt; <span class="hljs-number">0</span>
+}
+</code></pre>
+<p>&#x5728;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x7247;&#x6BB5;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x8FD4;&#x56DE;<code>Error() string</code> &#x65B9;&#x6CD5;&#x7684;&#x9519;&#x8BEF;&#x63CF;&#x8FF0;&#x3002;&#x5F53;&#x957F;&#x5EA6;&#x5C0F;&#x4E8E;0&#x65F6;&#xFF0C;lengthNegative() bool&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;true;&#x5F53;&#x5BBD;&#x5EA6;&#x5C0F;&#x4E8E;0&#x65F6;&#xFF0C;widthNegative() bool&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;true&#x3002;&#x8FD9;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#x63D0;&#x4F9B;&#x4E86;&#x66F4;&#x591A;&#x5173;&#x4E8E;&#x8BEF;&#x5DEE;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4ED6;&#x4EEC;&#x8BF4;&#x9762;&#x79EF;&#x8BA1;&#x7B97;&#x662F;&#x5426;&#x5931;&#x8D25;&#xFF0C;&#x56E0;&#x4E3A;&#x957F;&#x5EA6;&#x662F;&#x8D1F;&#x7684;&#xFF0C;&#x8FD8;&#x662F;&#x5BBD;&#x5EA6;&#x4E3A;&#x8D1F;&#x7684;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x4E86;struct&#x9519;&#x8BEF;&#x7C7B;&#x578B;&#x7684;&#x65B9;&#x6CD5;&#x6765;&#x63D0;&#x4F9B;&#x66F4;&#x591A;&#x5173;&#x4E8E;&#x9519;&#x8BEF;&#x7684;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x4E0B;&#x4E00;&#x6B65;&#x662F;&#x5199;&#x51FA;&#x9762;&#x79EF;&#x8BA1;&#x7B97;&#x51FD;&#x6570;&#x3002;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> rectArea(length, width <span class="hljs-keyword">float64</span>) (<span class="hljs-keyword">float64</span>, error) {  
+    err := <span class="hljs-string">&quot;&quot;</span>
+    <span class="hljs-keyword">if</span> length &lt; <span class="hljs-number">0</span> {
+        err += <span class="hljs-string">&quot;length is less than zero&quot;</span>
+    }
+    <span class="hljs-keyword">if</span> width &lt; <span class="hljs-number">0</span> {
+        <span class="hljs-keyword">if</span> err == <span class="hljs-string">&quot;&quot;</span> {
+            err = <span class="hljs-string">&quot;width is less than zero&quot;</span>
+        } <span class="hljs-keyword">else</span> {
+            err += <span class="hljs-string">&quot;, width is less than zero&quot;</span>
+        }
+    }
+    <span class="hljs-keyword">if</span> err != <span class="hljs-string">&quot;&quot;</span> {
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>, &amp;areaError{err, length, width}
+    }
+    <span class="hljs-keyword">return</span> length * width, <span class="hljs-literal">nil</span>
+}
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;rectArea&#x51FD;&#x6570;&#x68C0;&#x67E5;&#x957F;&#x5EA6;&#x6216;&#x5BBD;&#x5EA6;&#x662F;&#x5426;&#x5C0F;&#x4E8E;0&#xFF0C;&#x5982;&#x679C;&#x5B83;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x6D88;&#x606F;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x77E9;&#x5F62;&#x7684;&#x9762;&#x79EF;&#x4E3A;nil&#x3002;</p>
+<p>&#x4E3B;&#x51FD;&#x6570;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> main() {  
+    length, width := <span class="hljs-number">-5.0</span>, <span class="hljs-number">-9.0</span>
+    area, err := rectArea(length, width)
+    <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+        <span class="hljs-keyword">if</span> err, ok := err.(*areaError); ok {
+            <span class="hljs-keyword">if</span> err.lengthNegative() {
+                fmt.Printf(<span class="hljs-string">&quot;error: length %0.2f is less than zero\n&quot;</span>, err.length)
+
+            }
+            <span class="hljs-keyword">if</span> err.widthNegative() {
+                fmt.Printf(<span class="hljs-string">&quot;error: width %0.2f is less than zero\n&quot;</span>, err.width)
+
+            }
+        }
+        fmt.Println(err)
+        <span class="hljs-keyword">return</span>
+    }
+    fmt.Println(<span class="hljs-string">&quot;area of rect&quot;</span>, area)
+}
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>error: length -5.00 is less than zero  
+error: width -9.00 is less than zero
+</code></pre><h2 id="15-panic&#x548C;recover">1.5 panic()&#x548C;recover()</h2>
+<p>Golang&#x4E2D;&#x5F15;&#x5165;&#x4E24;&#x4E2A;&#x5185;&#x7F6E;&#x51FD;&#x6570;panic&#x548C;recover&#x6765;&#x89E6;&#x53D1;&#x548C;&#x7EC8;&#x6B62;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x6D41;&#x7A0B;&#xFF0C;&#x540C;&#x65F6;&#x5F15;&#x5165;&#x5173;&#x952E;&#x5B57;defer&#x6765;&#x5EF6;&#x8FDF;&#x6267;&#x884C;defer&#x540E;&#x9762;&#x7684;&#x51FD;&#x6570;&#x3002;
+&#x4E00;&#x76F4;&#x7B49;&#x5230;&#x5305;&#x542B;defer&#x8BED;&#x53E5;&#x7684;&#x51FD;&#x6570;&#x6267;&#x884C;&#x5B8C;&#x6BD5;&#x65F6;&#xFF0C;&#x5EF6;&#x8FDF;&#x51FD;&#x6570;&#xFF08;defer&#x540E;&#x7684;&#x51FD;&#x6570;&#xFF09;&#x624D;&#x4F1A;&#x88AB;&#x6267;&#x884C;&#xFF0C;&#x800C;&#x4E0D;&#x7BA1;&#x5305;&#x542B;defer&#x8BED;&#x53E5;&#x7684;&#x51FD;&#x6570;&#x662F;&#x901A;&#x8FC7;return&#x7684;&#x6B63;&#x5E38;&#x7ED3;&#x675F;&#xFF0C;&#x8FD8;&#x662F;&#x7531;&#x4E8E;panic&#x5BFC;&#x81F4;&#x7684;&#x5F02;&#x5E38;&#x7ED3;&#x675F;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x4E2D;&#x6267;&#x884C;&#x591A;&#x6761;defer&#x8BED;&#x53E5;&#xFF0C;&#x5B83;&#x4EEC;&#x7684;&#x6267;&#x884C;&#x987A;&#x5E8F;&#x4E0E;&#x58F0;&#x660E;&#x987A;&#x5E8F;&#x76F8;&#x53CD;&#x3002;
+&#x5F53;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x9047;&#x5230;&#x5F15;&#x7528;&#x7A7A;&#x6307;&#x9488;&#x3001;&#x4E0B;&#x6807;&#x8D8A;&#x754C;&#x6216;&#x663E;&#x5F0F;&#x8C03;&#x7528;panic&#x51FD;&#x6570;&#x7B49;&#x60C5;&#x51B5;&#xFF0C;&#x5219;&#x5148;&#x89E6;&#x53D1;panic&#x51FD;&#x6570;&#x7684;&#x6267;&#x884C;&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528;&#x5EF6;&#x8FDF;&#x51FD;&#x6570;&#x3002;&#x8C03;&#x7528;&#x8005;&#x7EE7;&#x7EED;&#x4F20;&#x9012;panic&#xFF0C;&#x56E0;&#x6B64;&#x8BE5;&#x8FC7;&#x7A0B;&#x4E00;&#x76F4;&#x5728;&#x8C03;&#x7528;&#x6808;&#x4E2D;&#x91CD;&#x590D;&#x53D1;&#x751F;&#xFF1A;&#x51FD;&#x6570;&#x505C;&#x6B62;&#x6267;&#x884C;&#xFF0C;&#x8C03;&#x7528;&#x5EF6;&#x8FDF;&#x6267;&#x884C;&#x51FD;&#x6570;&#x7B49;&#x3002;&#x5982;&#x679C;&#x4E00;&#x8DEF;&#x5728;&#x5EF6;&#x8FDF;&#x51FD;&#x6570;&#x4E2D;&#x6CA1;&#x6709;recover&#x51FD;&#x6570;&#x7684;&#x8C03;&#x7528;&#xFF0C;&#x5219;&#x4F1A;&#x5230;&#x8FBE;&#x8BE5;&#x534F;&#x7A0B;&#x7684;&#x8D77;&#x70B9;&#xFF0C;&#x8BE5;&#x534F;&#x7A0B;&#x7ED3;&#x675F;&#xFF0C;&#x7136;&#x540E;&#x7EC8;&#x6B62;&#x5176;&#x4ED6;&#x6240;&#x6709;&#x534F;&#x7A0B;&#xFF0C;&#x5305;&#x62EC;&#x4E3B;&#x534F;&#x7A0B;&#xFF08;&#x7C7B;&#x4F3C;&#x4E8E;C&#x8BED;&#x8A00;&#x4E2D;&#x7684;&#x4E3B;&#x7EBF;&#x7A0B;&#xFF0C;&#x8BE5;&#x534F;&#x7A0B;ID&#x4E3A;1&#xFF09;&#x3002;</p>
+<p>panic&#xFF1A;
+ 1&#x3001;&#x5185;&#x5EFA;&#x51FD;&#x6570;
+ 2&#x3001;&#x5047;&#x5982;&#x51FD;&#x6570;F&#x4E2D;&#x4E66;&#x5199;&#x4E86;panic&#x8BED;&#x53E5;&#xFF0C;&#x4F1A;&#x7EC8;&#x6B62;&#x5176;&#x540E;&#x8981;&#x6267;&#x884C;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x5728;panic&#x6240;&#x5728;&#x51FD;&#x6570;F&#x5185;&#x5982;&#x679C;&#x5B58;&#x5728;&#x8981;&#x6267;&#x884C;&#x7684;defer&#x51FD;&#x6570;&#x5217;&#x8868;&#xFF0C;&#x6309;&#x7167;defer&#x7684;&#x9006;&#x5E8F;&#x6267;&#x884C;
+ 3&#x3001;&#x8FD4;&#x56DE;&#x51FD;&#x6570;F&#x7684;&#x8C03;&#x7528;&#x8005;G&#xFF0C;&#x5728;G&#x4E2D;&#xFF0C;&#x8C03;&#x7528;&#x51FD;&#x6570;F&#x8BED;&#x53E5;&#x4E4B;&#x540E;&#x7684;&#x4EE3;&#x7801;&#x4E0D;&#x4F1A;&#x6267;&#x884C;&#xFF0C;&#x5047;&#x5982;&#x51FD;&#x6570;G&#x4E2D;&#x5B58;&#x5728;&#x8981;&#x6267;&#x884C;&#x7684;defer&#x51FD;&#x6570;&#x5217;&#x8868;&#xFF0C;&#x6309;&#x7167;defer&#x7684;&#x9006;&#x5E8F;&#x6267;&#x884C;&#xFF0C;&#x8FD9;&#x91CC;&#x7684;defer &#x6709;&#x70B9;&#x7C7B;&#x4F3C; try-catch-finally &#x4E2D;&#x7684; finally
+ 4&#x3001;&#x76F4;&#x5230;goroutine&#x6574;&#x4E2A;&#x9000;&#x51FA;&#xFF0C;&#x5E76;&#x62A5;&#x544A;&#x9519;&#x8BEF;</p>
+<p>recover&#xFF1A;
+ 1&#x3001;&#x5185;&#x5EFA;&#x51FD;&#x6570;
+ 2&#x3001;&#x7528;&#x6765;&#x63A7;&#x5236;&#x4E00;&#x4E2A;goroutine&#x7684;panicking&#x884C;&#x4E3A;&#xFF0C;&#x6355;&#x83B7;panic&#xFF0C;&#x4ECE;&#x800C;&#x5F71;&#x54CD;&#x5E94;&#x7528;&#x7684;&#x884C;&#x4E3A;
+ 3&#x3001;&#x4E00;&#x822C;&#x7684;&#x8C03;&#x7528;&#x5EFA;&#x8BAE;
+ a). &#x5728;defer&#x51FD;&#x6570;&#x4E2D;&#xFF0C;&#x901A;&#x8FC7;recever&#x6765;&#x7EC8;&#x6B62;&#x4E00;&#x4E2A;gojroutine&#x7684;panicking&#x8FC7;&#x7A0B;&#xFF0C;&#x4ECE;&#x800C;&#x6062;&#x590D;&#x6B63;&#x5E38;&#x4EE3;&#x7801;&#x7684;&#x6267;&#x884C;
+ b). &#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x901A;&#x8FC7;panic&#x4F20;&#x9012;&#x7684;error</p>
+<p>&#x7B80;&#x5355;&#x6765;&#x8BB2;&#xFF1A;go&#x4E2D;&#x53EF;&#x4EE5;&#x629B;&#x51FA;&#x4E00;&#x4E2A;panic&#x7684;&#x5F02;&#x5E38;&#xFF0C;&#x7136;&#x540E;&#x5728;defer&#x4E2D;&#x901A;&#x8FC7;recover&#x6355;&#x83B7;&#x8FD9;&#x4E2A;&#x5F02;&#x5E38;&#xFF0C;&#x7136;&#x540E;&#x6B63;&#x5E38;&#x5904;&#x7406;&#x3002;</p>
+<p>&#x9519;&#x8BEF;&#x548C;&#x5F02;&#x5E38;&#x4ECE;Golang&#x673A;&#x5236;&#x4E0A;&#x8BB2;&#xFF0C;&#x5C31;&#x662F;error&#x548C;panic&#x7684;&#x533A;&#x522B;&#x3002;&#x5F88;&#x591A;&#x5176;&#x4ED6;&#x8BED;&#x8A00;&#x4E5F;&#x4E00;&#x6837;&#xFF0C;&#x6BD4;&#x5982;C++/Java&#xFF0C;&#x6CA1;&#x6709;error&#x4F46;&#x6709;errno&#xFF0C;&#x6CA1;&#x6709;panic&#x4F46;&#x6709;throw&#x3002;</p>
+<p>Golang&#x9519;&#x8BEF;&#x548C;&#x5F02;&#x5E38;&#x662F;&#x53EF;&#x4EE5;&#x4E92;&#x76F8;&#x8F6C;&#x6362;&#x7684;&#xFF1A;</p>
+<ol>
+<li>&#x9519;&#x8BEF;&#x8F6C;&#x5F02;&#x5E38;&#xFF0C;&#x6BD4;&#x5982;&#x7A0B;&#x5E8F;&#x903B;&#x8F91;&#x4E0A;&#x5C1D;&#x8BD5;&#x8BF7;&#x6C42;&#x67D0;&#x4E2A;URL&#xFF0C;&#x6700;&#x591A;&#x5C1D;&#x8BD5;&#x4E09;&#x6B21;&#xFF0C;&#x5C1D;&#x8BD5;&#x4E09;&#x6B21;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x8BF7;&#x6C42;&#x5931;&#x8D25;&#x662F;&#x9519;&#x8BEF;&#xFF0C;&#x5C1D;&#x8BD5;&#x5B8C;&#x7B2C;&#x4E09;&#x6B21;&#x8FD8;&#x4E0D;&#x6210;&#x529F;&#x7684;&#x8BDD;&#xFF0C;&#x5931;&#x8D25;&#x5C31;&#x88AB;&#x63D0;&#x5347;&#x4E3A;&#x5F02;&#x5E38;&#x4E86;&#x3002;</li>
+<li>&#x5F02;&#x5E38;&#x8F6C;&#x9519;&#x8BEF;&#xFF0C;&#x6BD4;&#x5982;panic&#x89E6;&#x53D1;&#x7684;&#x5F02;&#x5E38;&#x88AB;recover&#x6062;&#x590D;&#x540E;&#xFF0C;&#x5C06;&#x8FD4;&#x56DE;&#x503C;&#x4E2D;error&#x7C7B;&#x578B;&#x7684;&#x53D8;&#x91CF;&#x8FDB;&#x884C;&#x8D4B;&#x503C;&#xFF0C;&#x4EE5;&#x4FBF;&#x4E0A;&#x5C42;&#x51FD;&#x6570;&#x7EE7;&#x7EED;&#x8D70;&#x9519;&#x8BEF;&#x5904;&#x7406;&#x6D41;&#x7A0B;&#x3002;</li>
+</ol>
+<p><strong>&#x4EC0;&#x4E48;&#x60C5;&#x51B5;&#x4E0B;&#x7528;&#x9519;&#x8BEF;&#x8868;&#x8FBE;&#xFF0C;&#x4EC0;&#x4E48;&#x60C5;&#x51B5;&#x4E0B;&#x7528;&#x5F02;&#x5E38;&#x8868;&#x8FBE;&#xFF0C;&#x5C31;&#x5F97;&#x6709;&#x4E00;&#x5957;&#x89C4;&#x5219;&#xFF0C;&#x5426;&#x5219;&#x5F88;&#x5BB9;&#x6613;&#x51FA;&#x73B0;&#x4E00;&#x5207;&#x7686;&#x9519;&#x8BEF;&#x6216;&#x4E00;&#x5207;&#x7686;&#x5F02;&#x5E38;&#x7684;&#x60C5;&#x51B5;&#x3002;</strong> </p>
+<p>&#x4EE5;&#x4E0B;&#x7ED9;&#x51FA;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x7684;&#x4F5C;&#x7528;&#x57DF;&#xFF08;&#x573A;&#x666F;&#xFF09;&#xFF1A;</p>
+<ol>
+<li>&#x7A7A;&#x6307;&#x9488;&#x5F15;&#x7528;</li>
+<li>&#x4E0B;&#x6807;&#x8D8A;&#x754C;</li>
+<li>&#x9664;&#x6570;&#x4E3A;0</li>
+<li>&#x4E0D;&#x5E94;&#x8BE5;&#x51FA;&#x73B0;&#x7684;&#x5206;&#x652F;&#xFF0C;&#x6BD4;&#x5982;default</li>
+<li>&#x8F93;&#x5165;&#x4E0D;&#x5E94;&#x8BE5;&#x5F15;&#x8D77;&#x51FD;&#x6570;&#x9519;&#x8BEF;</li>
+</ol>
+<p>&#x5176;&#x4ED6;&#x573A;&#x666F;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x9519;&#x8BEF;&#x5904;&#x7406;&#xFF0C;&#x8FD9;&#x4F7F;&#x5F97;&#x6211;&#x4EEC;&#x7684;&#x51FD;&#x6570;&#x63A5;&#x53E3;&#x5F88;&#x7CBE;&#x70BC;&#x3002;&#x5BF9;&#x4E8E;&#x5F02;&#x5E38;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x5728;&#x4E00;&#x4E2A;&#x5408;&#x9002;&#x7684;&#x4E0A;&#x6E38;&#x53BB;recover&#xFF0C;&#x5E76;&#x6253;&#x5370;&#x5806;&#x6808;&#x4FE1;&#x606F;&#xFF0C;&#x4F7F;&#x5F97;&#x90E8;&#x7F72;&#x540E;&#x7684;&#x7A0B;&#x5E8F;&#x4E0D;&#x4F1A;&#x7EC8;&#x6B62;&#x3002;</p>
+<p><strong>&#x8BF4;&#x660E;&#xFF1A; Golang&#x9519;&#x8BEF;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#x4E00;&#x76F4;&#x662F;&#x5F88;&#x591A;&#x4EBA;&#x8BDF;&#x75C5;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x6709;&#x4E9B;&#x4EBA;&#x5410;&#x69FD;&#x8BF4;&#x4E00;&#x534A;&#x7684;&#x4EE3;&#x7801;&#x90FD;&#x662F;&quot;if err != nil { / &#x6253;&#x5370; &amp;&amp; &#x9519;&#x8BEF;&#x5904;&#x7406; / }&quot;&#xFF0C;&#x4E25;&#x91CD;&#x5F71;&#x54CD;&#x6B63;&#x5E38;&#x7684;&#x5904;&#x7406;&#x903B;&#x8F91;&#x3002;&#x5F53;&#x6211;&#x4EEC;&#x533A;&#x5206;&#x9519;&#x8BEF;&#x548C;&#x5F02;&#x5E38;&#xFF0C;&#x6839;&#x636E;&#x89C4;&#x5219;&#x8BBE;&#x8BA1;&#x51FD;&#x6570;&#xFF0C;&#x5C31;&#x4F1A;&#x5927;&#x5927;&#x63D0;&#x9AD8;&#x53EF;&#x8BFB;&#x6027;&#x548C;&#x53EF;&#x7EF4;&#x62A4;&#x6027;&#x3002;</strong></p>
+<h2 id="16-&#x9519;&#x8BEF;&#x5904;&#x7406;&#x7684;&#x6B63;&#x786E;&#x59FF;&#x52BF;">1.6 &#x9519;&#x8BEF;&#x5904;&#x7406;&#x7684;&#x6B63;&#x786E;&#x59FF;&#x52BF;</h2>
+<p><strong>&#x59FF;&#x52BF;&#x4E00;&#xFF1A;&#x5931;&#x8D25;&#x7684;&#x539F;&#x56E0;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x65F6;&#xFF0C;&#x4E0D;&#x4F7F;&#x7528;error</strong></p>
+<p>&#x6211;&#x4EEC;&#x770B;&#x4E00;&#x4E2A;&#x6848;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> (self *AgentContext) CheckHostType(host_type <span class="hljs-keyword">string</span>) error {
+    <span class="hljs-keyword">switch</span> host_type {
+    <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;virtual_machine&quot;</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span>
+    <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;bare_metal&quot;</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span>
+    }
+    <span class="hljs-keyword">return</span> errors.New(<span class="hljs-string">&quot;CheckHostType ERROR:&quot;</span> + host_type)
+}
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x5931;&#x8D25;&#x7684;&#x539F;&#x56E0;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#xFF0C;&#x6240;&#x4EE5;&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x7C7B;&#x578B;&#x5E94;&#x8BE5;&#x4E3A;bool&#xFF0C;&#x800C;&#x4E0D;&#x662F;error&#xFF0C;&#x91CD;&#x6784;&#x4E00;&#x4E0B;&#x4EE3;&#x7801;&#xFF1A; </p>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> (self *AgentContext) IsValidHostType(hostType <span class="hljs-keyword">string</span>) <span class="hljs-keyword">bool</span> {
+    <span class="hljs-keyword">return</span> hostType == <span class="hljs-string">&quot;virtual_machine&quot;</span> || hostType == <span class="hljs-string">&quot;bare_metal&quot;</span>
+}
+</code></pre>
+<p>&#x8BF4;&#x660E;&#xFF1A;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#xFF0C;&#x5BFC;&#x81F4;&#x5931;&#x8D25;&#x7684;&#x539F;&#x56E0;&#x4E0D;&#x6B62;&#x4E00;&#x79CD;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x5BF9;I/O&#x64CD;&#x4F5C;&#x800C;&#x8A00;&#xFF0C;&#x7528;&#x6237;&#x9700;&#x8981;&#x4E86;&#x89E3;&#x66F4;&#x591A;&#x7684;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#xFF0C;&#x8FD9;&#x65F6;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x7C7B;&#x578B;&#x4E0D;&#x518D;&#x662F;&#x7B80;&#x5355;&#x7684;bool&#xFF0C;&#x800C;&#x662F;error&#x3002;</p>
+<p><strong>&#x59FF;&#x52BF;&#x4E8C;&#xFF1A;&#x6CA1;&#x6709;&#x5931;&#x8D25;&#x65F6;&#xFF0C;&#x4E0D;&#x4F7F;&#x7528;error</strong></p>
+<p>error&#x5728;Golang&#x4E2D;&#x662F;&#x5982;&#x6B64;&#x7684;&#x6D41;&#x884C;&#xFF0C;&#x4EE5;&#x81F3;&#x4E8E;&#x5F88;&#x591A;&#x4EBA;&#x8BBE;&#x8BA1;&#x51FD;&#x6570;&#x65F6;&#x4E0D;&#x7BA1;&#x4E09;&#x4E03;&#x4E8C;&#x5341;&#x4E00;&#x90FD;&#x4F7F;&#x7528;error&#xFF0C;&#x5373;&#x4F7F;&#x6CA1;&#x6709;&#x4E00;&#x4E2A;&#x5931;&#x8D25;&#x539F;&#x56E0;&#x3002;
+&#x6211;&#x4EEC;&#x770B;&#x4E00;&#x4E0B;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> (self *CniParam) setTenantId() error {
+    self.TenantId = self.PodNs
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span>
+}
+</code></pre>
+<p>&#x5BF9;&#x4E8E;&#x4E0A;&#x9762;&#x7684;&#x51FD;&#x6570;&#x8BBE;&#x8BA1;&#xFF0C;&#x5C31;&#x4F1A;&#x6709;&#x4E0B;&#x9762;&#x7684;&#x8C03;&#x7528;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-go">err := self.setTenantId()
+<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+    <span class="hljs-comment">// log</span>
+    <span class="hljs-comment">// free resource</span>
+    <span class="hljs-keyword">return</span> errors.New(...)
+}
+</code></pre>
+<p>&#x6839;&#x636E;&#x6211;&#x4EEC;&#x7684;&#x6B63;&#x786E;&#x59FF;&#x52BF;&#xFF0C;&#x91CD;&#x6784;&#x4E00;&#x4E0B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> (self *CniParam) setTenantId() {
+    self.TenantId = self.PodNs
+}
+</code></pre>
+<p>&#x4E8E;&#x662F;&#x8C03;&#x7528;&#x4EE3;&#x7801;&#x53D8;&#x4E3A;&#xFF1A;</p>
+<pre><code class="lang-go">self.setTenantId()
+</code></pre>
+<p><strong>&#x59FF;&#x52BF;&#x4E09;&#xFF1A;error&#x5E94;&#x653E;&#x5728;&#x8FD4;&#x56DE;&#x503C;&#x7C7B;&#x578B;&#x5217;&#x8868;&#x7684;&#x6700;&#x540E;</strong></p>
+<p>&#x5BF9;&#x4E8E;&#x8FD4;&#x56DE;&#x503C;&#x7C7B;&#x578B;error&#xFF0C;&#x7528;&#x6765;&#x4F20;&#x9012;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#xFF0C;&#x5728;Golang&#x4E2D;&#x901A;&#x5E38;&#x653E;&#x5728;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x3002;</p>
+<pre><code class="lang-go">resp, err := http.Get(url)
+<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+    <span class="hljs-keyword">return</span> nill, err
+}
+</code></pre>
+<p>bool&#x4F5C;&#x4E3A;&#x8FD4;&#x56DE;&#x503C;&#x7C7B;&#x578B;&#x65F6;&#x4E5F;&#x4E00;&#x6837;&#x3002;</p>
+<pre><code class="lang-go">value, ok := cache.Lookup(key) 
+<span class="hljs-keyword">if</span> !ok {
+    <span class="hljs-comment">// ...cache[key] does not exist&#x2026; </span>
+}
+</code></pre>
+<p><strong>&#x59FF;&#x52BF;&#x56DB;&#xFF1A;&#x9519;&#x8BEF;&#x503C;&#x7EDF;&#x4E00;&#x5B9A;&#x4E49;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x8DDF;&#x7740;&#x611F;&#x89C9;&#x8D70;</strong></p>
+<p>&#x5F88;&#x591A;&#x4EBA;&#x5199;&#x4EE3;&#x7801;&#x65F6;&#xFF0C;&#x5230;&#x5904;return errors.New(value)&#xFF0C;&#x800C;&#x9519;&#x8BEF;value&#x5728;&#x8868;&#x8FBE;&#x540C;&#x4E00;&#x4E2A;&#x542B;&#x4E49;&#x65F6;&#x4E5F;&#x53EF;&#x80FD;&#x5F62;&#x5F0F;&#x4E0D;&#x540C;&#xFF0C;&#x6BD4;&#x5982;&#x201C;&#x8BB0;&#x5F55;&#x4E0D;&#x5B58;&#x5728;&#x201D;&#x7684;&#x9519;&#x8BEF;value&#x53EF;&#x80FD;&#x4E3A;&#xFF1A;</p>
+<ol>
+<li>&quot;record is not existed.&quot;</li>
+<li>&quot;record is not exist!&quot;</li>
+<li>&quot;###record is not existed&#xFF01;&#xFF01;&#xFF01;&quot;</li>
+<li>...</li>
+</ol>
+<p>&#x8FD9;&#x4F7F;&#x5F97;&#x76F8;&#x540C;&#x7684;&#x9519;&#x8BEF;value&#x6492;&#x5728;&#x4E00;&#x5927;&#x7247;&#x4EE3;&#x7801;&#x91CC;&#xFF0C;&#x5F53;&#x4E0A;&#x5C42;&#x51FD;&#x6570;&#x8981;&#x5BF9;&#x7279;&#x5B9A;&#x9519;&#x8BEF;value&#x8FDB;&#x884C;&#x7EDF;&#x4E00;&#x5904;&#x7406;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x6F2B;&#x6E38;&#x6240;&#x6709;&#x4E0B;&#x5C42;&#x4EE3;&#x7801;&#xFF0C;&#x4EE5;&#x4FDD;&#x8BC1;&#x9519;&#x8BEF;value&#x7EDF;&#x4E00;&#xFF0C;&#x4E0D;&#x5E78;&#x7684;&#x662F;&#x6709;&#x65F6;&#x4F1A;&#x6709;&#x6F0F;&#x7F51;&#x4E4B;&#x9C7C;&#xFF0C;&#x800C;&#x4E14;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x4E25;&#x91CD;&#x963B;&#x788D;&#x4E86;&#x9519;&#x8BEF;value&#x7684;&#x91CD;&#x6784;&#x3002;</p>
+<p>&#x4E8E;&#x662F;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x53C2;&#x8003;C/C++&#x7684;&#x9519;&#x8BEF;&#x7801;&#x5B9A;&#x4E49;&#x6587;&#x4EF6;&#xFF0C;&#x5728;Golang&#x7684;&#x6BCF;&#x4E2A;&#x5305;&#x4E2D;&#x589E;&#x52A0;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x5BF9;&#x8C61;&#x5B9A;&#x4E49;&#x6587;&#x4EF6;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">var</span> ERR_EOF = errors.New(<span class="hljs-string">&quot;EOF&quot;</span>)
+<span class="hljs-keyword">var</span> ERR_CLOSED_PIPE = errors.New(<span class="hljs-string">&quot;io: read/write on closed pipe&quot;</span>)
+<span class="hljs-keyword">var</span> ERR_NO_PROGRESS = errors.New(<span class="hljs-string">&quot;multiple Read calls return no data or error&quot;</span>)
+<span class="hljs-keyword">var</span> ERR_SHORT_BUFFER = errors.New(<span class="hljs-string">&quot;short buffer&quot;</span>)
+<span class="hljs-keyword">var</span> ERR_SHORT_WRITE = errors.New(<span class="hljs-string">&quot;short write&quot;</span>)
+<span class="hljs-keyword">var</span> ERR_UNEXPECTED_EOF = errors.New(<span class="hljs-string">&quot;unexpected EOF&quot;</span>)
+</code></pre>
+<p><strong>&#x59FF;&#x52BF;&#x4E94;&#xFF1A;&#x9519;&#x8BEF;&#x9010;&#x5C42;&#x4F20;&#x9012;&#x65F6;&#xFF0C;&#x5C42;&#x5C42;&#x90FD;&#x52A0;&#x65E5;&#x5FD7;</strong></p>
+<p>&#x5C42;&#x5C42;&#x90FD;&#x52A0;&#x65E5;&#x5FD7;&#x975E;&#x5E38;&#x65B9;&#x4FBF;&#x6545;&#x969C;&#x5B9A;&#x4F4D;&#x3002;</p>
+<p>&#x8BF4;&#x660E;&#xFF1A;&#x81F3;&#x4E8E;&#x901A;&#x8FC7;&#x6D4B;&#x8BD5;&#x6765;&#x53D1;&#x73B0;&#x6545;&#x969C;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x65E5;&#x5FD7;&#xFF0C;&#x76EE;&#x524D;&#x5F88;&#x591A;&#x56E2;&#x961F;&#x8FD8;&#x5F88;&#x96BE;&#x505A;&#x5230;&#x3002;&#x5982;&#x679C;&#x4F60;&#x6216;&#x4F60;&#x7684;&#x56E2;&#x961F;&#x80FD;&#x505A;&#x5230;&#xFF0C;&#x90A3;&#x4E48;&#x8BF7;&#x5FFD;&#x7565;&#x8FD9;&#x4E2A;&#x59FF;&#x52BF;&#x3002;</p>
+<p><strong>&#x59FF;&#x52BF;&#x516D;&#xFF1A;&#x9519;&#x8BEF;&#x5904;&#x7406;&#x4F7F;&#x7528;defer</strong></p>
+<p>&#x6211;&#x4EEC;&#x4E00;&#x822C;&#x901A;&#x8FC7;&#x5224;&#x65AD;error&#x7684;&#x503C;&#x6765;&#x5904;&#x7406;&#x9519;&#x8BEF;&#xFF0C;&#x5982;&#x679C;&#x5F53;&#x524D;&#x64CD;&#x4F5C;&#x5931;&#x8D25;&#xFF0C;&#x9700;&#x8981;&#x5C06;&#x672C;&#x51FD;&#x6570;&#x4E2D;&#x5DF2;&#x7ECF;create&#x7684;&#x8D44;&#x6E90;destroy&#x6389;&#xFF0C;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> deferDemo() error {
+    err := createResource1()
+    <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+        <span class="hljs-keyword">return</span> ERR_CREATE_RESOURCE1_FAILED
+    }
+    err = createResource2()
+    <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+        destroyResource1()
+        <span class="hljs-keyword">return</span> ERR_CREATE_RESOURCE2_FAILED
+    }
+
+    err = createResource3()
+    <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+        destroyResource1()
+        destroyResource2()
+        <span class="hljs-keyword">return</span> ERR_CREATE_RESOURCE3_FAILED
+    }
+
+    err = createResource4()
+    <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+        destroyResource1()
+        destroyResource2()
+        destroyResource3()
+        <span class="hljs-keyword">return</span> ERR_CREATE_RESOURCE4_FAILED
+    } 
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span>
+}
+</code></pre>
+<p>&#x5F53;Golang&#x7684;&#x4EE3;&#x7801;&#x6267;&#x884C;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x9047;&#x5230;defer&#x7684;&#x95ED;&#x5305;&#x8C03;&#x7528;&#xFF0C;&#x5219;&#x538B;&#x5165;&#x5806;&#x6808;&#x3002;&#x5F53;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x65F6;&#xFF0C;&#x4F1A;&#x6309;&#x7167;&#x540E;&#x8FDB;&#x5148;&#x51FA;&#x7684;&#x987A;&#x5E8F;&#x8C03;&#x7528;&#x95ED;&#x5305;&#x3002;
+<strong>&#x5BF9;&#x4E8E;&#x95ED;&#x5305;&#x7684;&#x53C2;&#x6570;&#x662F;&#x503C;&#x4F20;&#x9012;&#xFF0C;&#x800C;&#x5BF9;&#x4E8E;&#x5916;&#x90E8;&#x53D8;&#x91CF;&#x5374;&#x662F;&#x5F15;&#x7528;&#x4F20;&#x9012;&#xFF0C;&#x6240;&#x4EE5;&#x95ED;&#x5305;&#x4E2D;&#x7684;&#x5916;&#x90E8;&#x53D8;&#x91CF;err&#x7684;&#x503C;&#x5C31;&#x53D8;&#x6210;&#x5916;&#x90E8;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x65F6;&#x6700;&#x65B0;&#x7684;err&#x503C;&#x3002;</strong>
+&#x6839;&#x636E;&#x8FD9;&#x4E2A;&#x7ED3;&#x8BBA;&#xFF0C;&#x6211;&#x4EEC;&#x91CD;&#x6784;&#x4E0A;&#x9762;&#x7684;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> deferDemo() error {
+    err := createResource1()
+    <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+        <span class="hljs-keyword">return</span> ERR_CREATE_RESOURCE1_FAILED
+    }
+    <span class="hljs-keyword">defer</span> <span class="hljs-keyword">func</span>() {
+        <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+            destroyResource1()
+        }
+    }()
+    err = createResource2()
+    <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+        <span class="hljs-keyword">return</span> ERR_CREATE_RESOURCE2_FAILED
+    }
+    <span class="hljs-keyword">defer</span> <span class="hljs-keyword">func</span>() {
+        <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+            destroyResource2()
+                   }
+    }()
+
+    err = createResource3()
+    <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+        <span class="hljs-keyword">return</span> ERR_CREATE_RESOURCE3_FAILED
+    }
+    <span class="hljs-keyword">defer</span> <span class="hljs-keyword">func</span>() {
+        <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+            destroyResource3()
+        }
+    }()
+
+    err = createResource4()
+    <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+        <span class="hljs-keyword">return</span> ERR_CREATE_RESOURCE4_FAILED
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span>
+}
+</code></pre>
+<p><strong>&#x59FF;&#x52BF;&#x4E03;&#xFF1A;&#x5F53;&#x5C1D;&#x8BD5;&#x51E0;&#x6B21;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x5931;&#x8D25;&#x65F6;&#xFF0C;&#x4E0D;&#x8981;&#x7ACB;&#x5373;&#x8FD4;&#x56DE;&#x9519;&#x8BEF;</strong></p>
+<p>&#x5982;&#x679C;&#x9519;&#x8BEF;&#x7684;&#x53D1;&#x751F;&#x662F;&#x5076;&#x7136;&#x6027;&#x7684;&#xFF0C;&#x6216;&#x7531;&#x4E0D;&#x53EF;&#x9884;&#x77E5;&#x7684;&#x95EE;&#x9898;&#x5BFC;&#x81F4;&#x3002;&#x4E00;&#x4E2A;&#x660E;&#x667A;&#x7684;&#x9009;&#x62E9;&#x662F;&#x91CD;&#x65B0;&#x5C1D;&#x8BD5;&#x5931;&#x8D25;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x6709;&#x65F6;&#x7B2C;&#x4E8C;&#x6B21;&#x6216;&#x7B2C;&#x4E09;&#x6B21;&#x5C1D;&#x8BD5;&#x65F6;&#x4F1A;&#x6210;&#x529F;&#x3002;&#x5728;&#x91CD;&#x8BD5;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x9650;&#x5236;&#x91CD;&#x8BD5;&#x7684;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#x6216;&#x91CD;&#x8BD5;&#x7684;&#x6B21;&#x6570;&#xFF0C;&#x9632;&#x6B62;&#x65E0;&#x9650;&#x5236;&#x7684;&#x91CD;&#x8BD5;&#x3002;</p>
+<p>&#x4E24;&#x4E2A;&#x6848;&#x4F8B;&#xFF1A;</p>
+<ol>
+<li>&#x6211;&#x4EEC;&#x5E73;&#x65F6;&#x4E0A;&#x7F51;&#x65F6;&#xFF0C;&#x5C1D;&#x8BD5;&#x8BF7;&#x6C42;&#x67D0;&#x4E2A;URL&#xFF0C;&#x6709;&#x65F6;&#x7B2C;&#x4E00;&#x6B21;&#x6CA1;&#x6709;&#x54CD;&#x5E94;&#xFF0C;&#x5F53;&#x6211;&#x4EEC;&#x518D;&#x6B21;&#x5237;&#x65B0;&#x65F6;&#xFF0C;&#x5C31;&#x6709;&#x4E86;&#x60CA;&#x559C;&#x3002;</li>
+<li>&#x56E2;&#x961F;&#x7684;&#x4E00;&#x4E2A;QA&#x66FE;&#x7ECF;&#x5EFA;&#x8BAE;&#x5F53;Neutron&#x7684;attach&#x64CD;&#x4F5C;&#x5931;&#x8D25;&#x65F6;&#xFF0C;&#x6700;&#x597D;&#x5C1D;&#x8BD5;&#x4E09;&#x6B21;&#xFF0C;&#x8FD9;&#x5728;&#x5F53;&#x65F6;&#x7684;&#x73AF;&#x5883;&#x4E0B;&#x9A8C;&#x8BC1;&#x679C;&#x7136;&#x662F;&#x6709;&#x6548;&#x7684;&#x3002;</li>
+</ol>
+<p><strong>&#x59FF;&#x52BF;&#x516B;&#xFF1A;&#x5F53;&#x4E0A;&#x5C42;&#x51FD;&#x6570;&#x4E0D;&#x5173;&#x5FC3;&#x9519;&#x8BEF;&#x65F6;&#xFF0C;&#x5EFA;&#x8BAE;&#x4E0D;&#x8FD4;&#x56DE;error</strong></p>
+<p>&#x5BF9;&#x4E8E;&#x4E00;&#x4E9B;&#x8D44;&#x6E90;&#x6E05;&#x7406;&#x76F8;&#x5173;&#x7684;&#x51FD;&#x6570;&#xFF08;destroy/delete/clear&#xFF09;&#xFF0C;&#x5982;&#x679C;&#x5B50;&#x51FD;&#x6570;&#x51FA;&#x9519;&#xFF0C;&#x6253;&#x5370;&#x65E5;&#x5FD7;&#x5373;&#x53EF;&#xFF0C;&#x800C;&#x65E0;&#x9700;&#x5C06;&#x9519;&#x8BEF;&#x8FDB;&#x4E00;&#x6B65;&#x53CD;&#x9988;&#x5230;&#x4E0A;&#x5C42;&#x51FD;&#x6570;&#xFF0C;&#x56E0;&#x4E3A;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4E0A;&#x5C42;&#x51FD;&#x6570;&#x662F;&#x4E0D;&#x5173;&#x5FC3;&#x6267;&#x884C;&#x7ED3;&#x679C;&#x7684;&#xFF0C;&#x6216;&#x8005;&#x5373;&#x4F7F;&#x5173;&#x5FC3;&#x4E5F;&#x65E0;&#x80FD;&#x4E3A;&#x529B;&#xFF0C;&#x4E8E;&#x662F;&#x6211;&#x4EEC;&#x5EFA;&#x8BAE;&#x5C06;&#x76F8;&#x5173;&#x51FD;&#x6570;&#x8BBE;&#x8BA1;&#x4E3A;&#x4E0D;&#x8FD4;&#x56DE;error&#x3002;</p>
+<p><strong>&#x59FF;&#x52BF;&#x4E5D;&#xFF1A;&#x5F53;&#x53D1;&#x751F;&#x9519;&#x8BEF;&#x65F6;&#xFF0C;&#x4E0D;&#x5FFD;&#x7565;&#x6709;&#x7528;&#x7684;&#x8FD4;&#x56DE;&#x503C;</strong></p>
+<p>&#x901A;&#x5E38;&#xFF0C;&#x5F53;&#x51FD;&#x6570;&#x8FD4;&#x56DE;non-nil&#x7684;error&#x65F6;&#xFF0C;&#x5176;&#x4ED6;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x662F;&#x672A;&#x5B9A;&#x4E49;&#x7684;(undefined)&#xFF0C;&#x8FD9;&#x4E9B;&#x672A;&#x5B9A;&#x4E49;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x5E94;&#x8BE5;&#x88AB;&#x5FFD;&#x7565;&#x3002;&#x7136;&#x800C;&#xFF0C;&#x6709;&#x5C11;&#x90E8;&#x5206;&#x51FD;&#x6570;&#x5728;&#x53D1;&#x751F;&#x9519;&#x8BEF;&#x65F6;&#xFF0C;&#x4ECD;&#x7136;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E9B;&#x6709;&#x7528;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x5F53;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x53D1;&#x751F;&#x9519;&#x8BEF;&#x65F6;&#xFF0C;Read&#x51FD;&#x6570;&#x4F1A;&#x8FD4;&#x56DE;&#x53EF;&#x4EE5;&#x8BFB;&#x53D6;&#x7684;&#x5B57;&#x8282;&#x6570;&#x4EE5;&#x53CA;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x3002;&#x5BF9;&#x4E8E;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;&#x5E94;&#x8BE5;&#x5C06;&#x8BFB;&#x53D6;&#x5230;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x548C;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x4E00;&#x8D77;&#x6253;&#x5370;&#x51FA;&#x6765;&#x3002;</p>
+<p><strong>&#x8BF4;&#x660E;&#xFF1A;&#x5BF9;&#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x8981;&#x6709;&#x6E05;&#x6670;&#x7684;&#x8BF4;&#x660E;&#xFF0C;&#x4EE5;&#x4FBF;&#x4E8E;&#x5176;&#x4ED6;&#x4EBA;&#x4F7F;&#x7528;&#x3002;</strong> </p>
+<h2 id="17-&#x5F02;&#x5E38;&#x5904;&#x7406;&#x7684;&#x6B63;&#x786E;&#x59FF;&#x52BF;">1.7 &#x5F02;&#x5E38;&#x5904;&#x7406;&#x7684;&#x6B63;&#x786E;&#x59FF;&#x52BF;</h2>
+<p><strong>&#x59FF;&#x52BF;&#x4E00;&#xFF1A;&#x5728;&#x7A0B;&#x5E8F;&#x5F00;&#x53D1;&#x9636;&#x6BB5;&#xFF0C;&#x575A;&#x6301;&#x901F;&#x9519;</strong></p>
+<p>&#x901F;&#x9519;&#xFF0C;&#x7B80;&#x5355;&#x6765;&#x8BB2;&#x5C31;&#x662F;&#x201C;&#x8BA9;&#x5B83;&#x6302;&#x201D;&#xFF0C;&#x53EA;&#x6709;&#x6302;&#x4E86;&#x4F60;&#x624D;&#x4F1A;&#x7B2C;&#x4E00;&#x65F6;&#x95F4;&#x77E5;&#x9053;&#x9519;&#x8BEF;&#x3002;&#x5728;&#x65E9;&#x671F;&#x5F00;&#x53D1;&#x4EE5;&#x53CA;&#x4EFB;&#x4F55;&#x53D1;&#x5E03;&#x9636;&#x6BB5;&#x4E4B;&#x524D;&#xFF0C;&#x6700;&#x7B80;&#x5355;&#x7684;&#x540C;&#x65F6;&#x4E5F;&#x53EF;&#x80FD;&#x662F;&#x6700;&#x597D;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#x8C03;&#x7528;panic&#x51FD;&#x6570;&#x6765;&#x4E2D;&#x65AD;&#x7A0B;&#x5E8F;&#x7684;&#x6267;&#x884C;&#x4EE5;&#x5F3A;&#x5236;&#x53D1;&#x751F;&#x9519;&#x8BEF;&#xFF0C;&#x4F7F;&#x5F97;&#x8BE5;&#x9519;&#x8BEF;&#x4E0D;&#x4F1A;&#x88AB;&#x5FFD;&#x7565;&#xFF0C;&#x56E0;&#x800C;&#x80FD;&#x591F;&#x88AB;&#x5C3D;&#x5FEB;&#x4FEE;&#x590D;&#x3002;</p>
+<p><strong>&#x59FF;&#x52BF;&#x4E8C;&#xFF1A;&#x5728;&#x7A0B;&#x5E8F;&#x90E8;&#x7F72;&#x540E;&#xFF0C;&#x5E94;&#x6062;&#x590D;&#x5F02;&#x5E38;&#x907F;&#x514D;&#x7A0B;&#x5E8F;&#x7EC8;&#x6B62;</strong></p>
+<p>&#x5728;Golang&#x4E2D;&#xFF0C;&#x67D0;&#x4E2A;Goroutine&#x5982;&#x679C;panic&#x4E86;&#xFF0C;&#x5E76;&#x4E14;&#x6CA1;&#x6709;recover&#xFF0C;&#x90A3;&#x4E48;&#x6574;&#x4E2A;Golang&#x8FDB;&#x7A0B;&#x5C31;&#x4F1A;&#x5F02;&#x5E38;&#x9000;&#x51FA;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x4E00;&#x65E6;Golang&#x7A0B;&#x5E8F;&#x90E8;&#x7F72;&#x540E;&#xFF0C;&#x5728;&#x4EFB;&#x4F55;&#x60C5;&#x51B5;&#x4E0B;&#x53D1;&#x751F;&#x7684;&#x5F02;&#x5E38;&#x90FD;&#x4E0D;&#x5E94;&#x8BE5;&#x5BFC;&#x81F4;&#x7A0B;&#x5E8F;&#x5F02;&#x5E38;&#x9000;&#x51FA;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x4E0A;&#x5C42;&#x51FD;&#x6570;&#x4E2D;&#x52A0;&#x4E00;&#x4E2A;&#x5EF6;&#x8FDF;&#x6267;&#x884C;&#x7684;recover&#x8C03;&#x7528;&#x6765;&#x8FBE;&#x5230;&#x8FD9;&#x4E2A;&#x76EE;&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x662F;&#x5426;&#x8FDB;&#x884C;recover&#x9700;&#x8981;&#x6839;&#x636E;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x6216;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6765;&#x5B9A;&#xFF0C;&#x9ED8;&#x8BA4;&#x9700;&#x8981;recover&#x3002;
+&#x8FD9;&#x4E2A;&#x59FF;&#x52BF;&#x7C7B;&#x4F3C;&#x4E8E;C&#x8BED;&#x8A00;&#x4E2D;&#x7684;&#x65AD;&#x8A00;&#xFF0C;&#x4F46;&#x8FD8;&#x662F;&#x6709;&#x533A;&#x522B;&#xFF1A;&#x4E00;&#x822C;&#x5728;Release&#x7248;&#x672C;&#x4E2D;&#xFF0C;&#x65AD;&#x8A00;&#x88AB;&#x5B9A;&#x4E49;&#x4E3A;&#x7A7A;&#x800C;&#x5931;&#x6548;&#xFF0C;&#x4F46;&#x9700;&#x8981;&#x6709;if&#x6821;&#x9A8C;&#x5B58;&#x5728;&#x8FDB;&#x884C;&#x5F02;&#x5E38;&#x4FDD;&#x62A4;&#xFF0C;&#x5C3D;&#x7BA1;&#x5951;&#x7EA6;&#x5F0F;&#x8BBE;&#x8BA1;&#x4E2D;&#x4E0D;&#x5EFA;&#x8BAE;&#x8FD9;&#x6837;&#x505A;&#x3002;&#x5728;Golang&#x4E2D;&#xFF0C;recover&#x5B8C;&#x5168;&#x53EF;&#x4EE5;&#x7EC8;&#x6B62;&#x5F02;&#x5E38;&#x5C55;&#x5F00;&#x8FC7;&#x7A0B;&#xFF0C;&#x7701;&#x65F6;&#x7701;&#x529B;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x5728;&#x8C03;&#x7528;recover&#x7684;&#x5EF6;&#x8FDF;&#x51FD;&#x6570;&#x4E2D;&#x4EE5;&#x6700;&#x5408;&#x7406;&#x7684;&#x65B9;&#x5F0F;&#x54CD;&#x5E94;&#x8BE5;&#x5F02;&#x5E38;&#xFF1A;</p>
+<ol>
+<li>&#x6253;&#x5370;&#x5806;&#x6808;&#x7684;&#x5F02;&#x5E38;&#x8C03;&#x7528;&#x4FE1;&#x606F;&#x548C;&#x5173;&#x952E;&#x7684;&#x4E1A;&#x52A1;&#x4FE1;&#x606F;&#xFF0C;&#x4EE5;&#x4FBF;&#x8FD9;&#x4E9B;&#x95EE;&#x9898;&#x4FDD;&#x7559;&#x53EF;&#x89C1;&#xFF1B;</li>
+<li>&#x5C06;&#x5F02;&#x5E38;&#x8F6C;&#x6362;&#x4E3A;&#x9519;&#x8BEF;&#xFF0C;&#x4EE5;&#x4FBF;&#x8C03;&#x7528;&#x8005;&#x8BA9;&#x7A0B;&#x5E8F;&#x6062;&#x590D;&#x5230;&#x5065;&#x5EB7;&#x72B6;&#x6001;&#x5E76;&#x7EE7;&#x7EED;&#x5B89;&#x5168;&#x8FD0;&#x884C;&#x3002;</li>
+</ol>
+<p>&#x6211;&#x4EEC;&#x770B;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> funcA() error {
+    <span class="hljs-keyword">defer</span> <span class="hljs-keyword">func</span>() {
+        <span class="hljs-keyword">if</span> p := <span class="hljs-built_in">recover</span>(); p != <span class="hljs-literal">nil</span> {
+            fmt.Printf(<span class="hljs-string">&quot;panic recover! p: %v&quot;</span>, p)
+            debug.PrintStack()
+        }
+    }()
+    <span class="hljs-keyword">return</span> funcB()
+}
+
+<span class="hljs-keyword">func</span> funcB() error {
+    <span class="hljs-comment">// simulation</span>
+    <span class="hljs-built_in">panic</span>(<span class="hljs-string">&quot;foo&quot;</span>)
+    <span class="hljs-keyword">return</span> errors.New(<span class="hljs-string">&quot;success&quot;</span>)
+}
+
+<span class="hljs-keyword">func</span> test() {
+    err := funcA()
+    <span class="hljs-keyword">if</span> err == <span class="hljs-literal">nil</span> {
+        fmt.Printf(<span class="hljs-string">&quot;err is nil\\n&quot;</span>)
+    } <span class="hljs-keyword">else</span> {
+        fmt.Printf(<span class="hljs-string">&quot;err is %v\\n&quot;</span>, err)
+    }
+}
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x671F;&#x671B;test&#x51FD;&#x6570;&#x7684;&#x8F93;&#x51FA;&#x662F;&#xFF1A;</p>
+<pre><code>err is foo
+</code></pre><p>&#x5B9E;&#x9645;&#x4E0A;test&#x51FD;&#x6570;&#x7684;&#x8F93;&#x51FA;&#x662F;&#xFF1A;</p>
+<pre><code>err is nil
+</code></pre><p>&#x539F;&#x56E0;&#x662F;panic&#x5F02;&#x5E38;&#x5904;&#x7406;&#x673A;&#x5236;&#x4E0D;&#x4F1A;&#x81EA;&#x52A8;&#x5C06;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x4F20;&#x9012;&#x7ED9;error&#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x5728;funcA&#x51FD;&#x6570;&#x4E2D;&#x8FDB;&#x884C;&#x663E;&#x5F0F;&#x7684;&#x4F20;&#x9012;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> funcA() (err error) {
+    <span class="hljs-keyword">defer</span> <span class="hljs-keyword">func</span>() {
+        <span class="hljs-keyword">if</span> p := <span class="hljs-built_in">recover</span>(); p != <span class="hljs-literal">nil</span> {
+            fmt.Println(<span class="hljs-string">&quot;panic recover! p:&quot;</span>, p)
+            str, ok := p.(<span class="hljs-keyword">string</span>)
+            <span class="hljs-keyword">if</span> ok {
+                err = errors.New(str)
+            } <span class="hljs-keyword">else</span> {
+                err = errors.New(<span class="hljs-string">&quot;panic&quot;</span>)
+            }
+            debug.PrintStack()
+        }
+    }()
+    <span class="hljs-keyword">return</span> funcB()
+}
+</code></pre>
+<p><strong>&#x59FF;&#x52BF;&#x4E09;&#xFF1A;&#x5BF9;&#x4E8E;&#x4E0D;&#x5E94;&#x8BE5;&#x51FA;&#x73B0;&#x7684;&#x5206;&#x652F;&#xFF0C;&#x4F7F;&#x7528;&#x5F02;&#x5E38;&#x5904;&#x7406;</strong></p>
+<p> &#x5F53;&#x67D0;&#x4E9B;&#x4E0D;&#x5E94;&#x8BE5;&#x53D1;&#x751F;&#x7684;&#x573A;&#x666F;&#x53D1;&#x751F;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x5E94;&#x8BE5;&#x8C03;&#x7528;panic&#x51FD;&#x6570;&#x6765;&#x89E6;&#x53D1;&#x5F02;&#x5E38;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x5F53;&#x7A0B;&#x5E8F;&#x5230;&#x8FBE;&#x4E86;&#x67D0;&#x6761;&#x903B;&#x8F91;&#x4E0A;&#x4E0D;&#x53EF;&#x80FD;&#x5230;&#x8FBE;&#x7684;&#x8DEF;&#x5F84;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">switch</span> s := suit(drawCard()); s {
+    <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Spades&quot;</span>:
+    <span class="hljs-comment">// ...</span>
+    <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Hearts&quot;</span>:
+    <span class="hljs-comment">// ...</span>
+    <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Diamonds&quot;</span>:
+    <span class="hljs-comment">// ... </span>
+    <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;Clubs&quot;</span>:
+    <span class="hljs-comment">// ...</span>
+    <span class="hljs-keyword">default</span>:
+        <span class="hljs-built_in">panic</span>(fmt.Sprintf(<span class="hljs-string">&quot;invalid suit %v&quot;</span>, s))
+}
+</code></pre>
+<p><strong>&#x59FF;&#x52BF;&#x56DB;&#xFF1A;&#x9488;&#x5BF9;&#x5165;&#x53C2;&#x4E0D;&#x5E94;&#x8BE5;&#x6709;&#x95EE;&#x9898;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x4F7F;&#x7528;panic&#x8BBE;&#x8BA1;</strong></p>
+<p>&#x5165;&#x53C2;&#x4E0D;&#x5E94;&#x8BE5;&#x6709;&#x95EE;&#x9898;&#x4E00;&#x822C;&#x6307;&#x7684;&#x662F;&#x786C;&#x7F16;&#x7801;&#xFF0C;&#x6211;&#x4EEC;&#x5148;&#x770B;&#x8FD9;&#x4E24;&#x4E2A;&#x51FD;&#x6570;&#xFF08;Compile&#x548C;MustCompile&#xFF09;&#xFF0C;&#x5176;&#x4E2D;MustCompile&#x51FD;&#x6570;&#x662F;&#x5BF9;Compile&#x51FD;&#x6570;&#x7684;&#x5305;&#x88C5;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> MustCompile(str <span class="hljs-keyword">string</span>) *Regexp {
+    regexp, error := Compile(str)
+    <span class="hljs-keyword">if</span> error != <span class="hljs-literal">nil</span> {
+        <span class="hljs-built_in">panic</span>(<span class="hljs-string">`regexp: Compile(`</span> + quote(str) + <span class="hljs-string">`): `</span> + error.Error())
+    }
+    <span class="hljs-keyword">return</span> regexp
+}
+</code></pre>
+<p>&#x6240;&#x4EE5;&#xFF0C;&#x5BF9;&#x4E8E;&#x540C;&#x65F6;&#x652F;&#x6301;&#x7528;&#x6237;&#x8F93;&#x5165;&#x573A;&#x666F;&#x548C;&#x786C;&#x7F16;&#x7801;&#x573A;&#x666F;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x4E00;&#x822C;&#x652F;&#x6301;&#x786C;&#x7F16;&#x7801;&#x573A;&#x666F;&#x7684;&#x51FD;&#x6570;&#x662F;&#x5BF9;&#x652F;&#x6301;&#x7528;&#x6237;&#x8F93;&#x5165;&#x573A;&#x666F;&#x51FD;&#x6570;&#x7684;&#x5305;&#x88C5;&#x3002;
+&#x5BF9;&#x4E8E;&#x53EA;&#x652F;&#x6301;&#x786C;&#x7F16;&#x7801;&#x5355;&#x4E00;&#x573A;&#x666F;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x51FD;&#x6570;&#x8BBE;&#x8BA1;&#x65F6;&#x76F4;&#x63A5;&#x4F7F;&#x7528;panic&#xFF0C;&#x5373;&#x8FD4;&#x56DE;&#x503C;&#x7C7B;&#x578B;&#x5217;&#x8868;&#x4E2D;&#x4E0D;&#x4F1A;&#x6709;error&#xFF0C;&#x8FD9;&#x4F7F;&#x5F97;&#x51FD;&#x6570;&#x7684;&#x8C03;&#x7528;&#x5904;&#x7406;&#x975E;&#x5E38;&#x65B9;&#x4FBF;&#xFF08;&#x6CA1;&#x6709;&#x4E86;&#x4E4F;&#x5473;&#x7684;&quot;if err != nil {/ &#x6253;&#x5370; &amp;&amp; &#x9519;&#x8BEF;&#x5904;&#x7406; /}&quot;&#x4EE3;&#x7801;&#x5757;&#xFF09;&#x3002;</p>
+<p>&#x672C;&#x6587;&#x90E8;&#x5206;&#x5185;&#x5BB9;&#x5F15;&#x81EA;<a href="https://www.jianshu.com/p/f30da01eea97" target="_blank">https://www.jianshu.com/p/f30da01eea97</a></p>
+<p>&#x5343;&#x950B;Go&#x8BED;&#x8A00;&#x7684;&#x5B66;&#x4E60;&#x7FA4;&#xFF1A;784190273</p>
+<p>&#x4F5C;&#x8005;B&#x7AD9;&#xFF1A;</p>
+<p><a href="https://space.bilibili.com/353694001" target="_blank">https://space.bilibili.com/353694001</a></p>
+<p>&#x5BF9;&#x5E94;&#x89C6;&#x9891;&#x5730;&#x5740;&#xFF1A;</p>
+<p><a href="https://www.bilibili.com/video/av56018934" target="_blank">https://www.bilibili.com/video/av56018934</a></p>
+<p><a href="https://www.bilibili.com/video/av47467197" target="_blank">https://www.bilibili.com/video/av47467197</a></p>
+<p>&#x6E90;&#x4EE3;&#x7801;&#xFF1A;</p>
+<p><a href="https://github.com/rubyhan1314/go_advanced" target="_blank">https://github.com/rubyhan1314/go_advanced</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="day14_第4节-type.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 第4节-type">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"错误处理","level":"1.2.29","depth":2,"next":{"title":"Go语言基础进阶","level":"1.3","depth":1,"ref":"","articles":[{"title":"01file操作","level":"1.3.1","depth":2,"path":"02-Go语言基础进阶/day16_file操作.md","ref":"02-Go语言基础进阶/day16_file操作.md","articles":[]},{"title":"02Go语言并发Goroutine","level":"1.3.2","depth":2,"path":"02-Go语言基础进阶/day17_Go语言并发Goroutine.md","ref":"02-Go语言基础进阶/day17_Go语言并发Goroutine.md","articles":[]},{"title":"03channel通道","level":"1.3.3","depth":2,"path":"02-Go语言基础进阶/day18_channel通道.md","ref":"02-Go语言基础进阶/day18_channel通道.md","articles":[]},{"title":"04Go语言反射","level":"1.3.4","depth":2,"path":"02-Go语言基础进阶/day19_Go语言反射.md","ref":"02-Go语言基础进阶/day19_Go语言反射.md","articles":[]}]},"previous":{"title":"第4节-type","level":"1.2.28","depth":2,"path":"01-Go语言基础/day14_第4节-type.md","ref":"01-Go语言基础/day14_第4节-type.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"01-Go语言基础/day15_错误处理.md","mtime":"2020-08-10T03:24:34.828Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-10T08:26:41.953Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

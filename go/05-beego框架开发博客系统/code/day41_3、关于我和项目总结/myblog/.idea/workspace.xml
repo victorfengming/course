@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5f539b56-28b8-4865-a0d2-21e44734993e" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../../.idea/Golang-100-Days.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Day01-15(Go语言基础)/day01_第4节_Go语言的核心特性.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Day01-15(Go语言基础)/day01_第4节_Go语言的核心特性.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Day01-15(Go语言基础)/day01_第9节_Go的命令以及Go的执行原理.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Day01-15(Go语言基础)/day01_第9节_Go的命令以及Go的执行原理.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Day01-15(Go语言基础)/day07_Slice的使用.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Day01-15(Go语言基础)/day07_Slice的使用.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="E:\Go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="777" />
+  </component>
+  <component name="ProjectId" id="1abe2cDar0mhZa4IEjr1qjMavqc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.gopath.indexing.explicitly.defined" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/views" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="myblog" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build main.go" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="71" key="#GOROOT" timestamp="1587008520964">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="#GOROOT/0.0.1536.824@0.0.1536.824" timestamp="1587008520964" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1587008900256">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587008900256" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1587008900256">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587008900256" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1587008900256">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587008900256" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1587008900256">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587008900256" />
+    <state x="377" y="112" width="782" height="600" key="find.popup" timestamp="1589527560204">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="377" y="112" width="782" height="600" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1589527560204" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1589527543910">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1589527543910" />
+  </component>
+</project>

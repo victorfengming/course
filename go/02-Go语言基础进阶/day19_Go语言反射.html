@@ -1,0 +1,1852 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>04Go语言反射 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="day18_channel通道.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Go语言基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../01-Go语言基础/day01_第1节_知名编程语言或系统的发展简史.html">
+            
+                <a href="../01-Go语言基础/day01_第1节_知名编程语言或系统的发展简史.html">
+            
+                    
+                    第1节_知名编程语言或系统的发展简史
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../01-Go语言基础/day01_第2节_Go语言的前世今生.html">
+            
+                <a href="../01-Go语言基础/day01_第2节_Go语言的前世今生.html">
+            
+                    
+                    第2节_Go语言的前世今生
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../01-Go语言基础/day01_第3节_Go语言logo和版本.html">
+            
+                <a href="../01-Go语言基础/day01_第3节_Go语言logo和版本.html">
+            
+                    
+                    第3节_Go语言logo和版本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../01-Go语言基础/day01_第4节_Go语言的核心特性.html">
+            
+                <a href="../01-Go语言基础/day01_第4节_Go语言的核心特性.html">
+            
+                    
+                    第4节_Go语言的核心特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../01-Go语言基础/day01_第5节_Go语言的优势和其他语言的对比.html">
+            
+                <a href="../01-Go语言基础/day01_第5节_Go语言的优势和其他语言的对比.html">
+            
+                    
+                    第5节_Go语言的优势和其他语言的对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../01-Go语言基础/day01_第6节_Go语言能做什么.html">
+            
+                <a href="../01-Go语言基础/day01_第6节_Go语言能做什么.html">
+            
+                    
+                    第6节_Go语言能做什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../01-Go语言基础/day01_第7节_Go语言环境搭建.html">
+            
+                <a href="../01-Go语言基础/day01_第7节_Go语言环境搭建.html">
+            
+                    
+                    第7节_Go语言环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../01-Go语言基础/day01_第8节_第一个程序HelloWorld.html">
+            
+                <a href="../01-Go语言基础/day01_第8节_第一个程序HelloWorld.html">
+            
+                    
+                    第8节_第一个程序HelloWorld
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../01-Go语言基础/day01_第9节_Go的命令以及Go的执行原理.html">
+            
+                <a href="../01-Go语言基础/day01_第9节_Go的命令以及Go的执行原理.html">
+            
+                    
+                    第9节_Go的命令以及Go的执行原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../01-Go语言基础/day01_第10节_安装Goland开发工具.html">
+            
+                <a href="../01-Go语言基础/day01_第10节_安装Goland开发工具.html">
+            
+                    
+                    第10节_安装Goland开发工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../01-Go语言基础/day01_第11节_编码规范.html">
+            
+                <a href="../01-Go语言基础/day01_第11节_编码规范.html">
+            
+                    
+                    第11节_编码规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../01-Go语言基础/day02_基本语法.html">
+            
+                <a href="../01-Go语言基础/day02_基本语法.html">
+            
+                    
+                    基本语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../01-Go语言基础/day03_数据类型&运算符.html">
+            
+                <a href="../01-Go语言基础/day03_数据类型&运算符.html">
+            
+                    
+                    数据类型&运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="../01-Go语言基础/day03_键盘输入和打印输出.html">
+            
+                <a href="../01-Go语言基础/day03_键盘输入和打印输出.html">
+            
+                    
+                    键盘输入和打印输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="../01-Go语言基础/day04_分支语句.html">
+            
+                <a href="../01-Go语言基础/day04_分支语句.html">
+            
+                    
+                    分支语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="../01-Go语言基础/day05_循环语句.html">
+            
+                <a href="../01-Go语言基础/day05_循环语句.html">
+            
+                    
+                    循环语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="../01-Go语言基础/day06_数组.html">
+            
+                <a href="../01-Go语言基础/day06_数组.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="../01-Go语言基础/day07_Slice的使用.html">
+            
+                <a href="../01-Go语言基础/day07_Slice的使用.html">
+            
+                    
+                    Slice的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.19" data-path="../01-Go语言基础/day08_Map的使用.html">
+            
+                <a href="../01-Go语言基础/day08_Map的使用.html">
+            
+                    
+                    Map的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.20" data-path="../01-Go语言基础/day09_string.html">
+            
+                <a href="../01-Go语言基础/day09_string.html">
+            
+                    
+                    string
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.21" data-path="../01-Go语言基础/day10_函数.html">
+            
+                <a href="../01-Go语言基础/day10_函数.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.22" data-path="../01-Go语言基础/day11_包的管理.html">
+            
+                <a href="../01-Go语言基础/day11_包的管理.html">
+            
+                    
+                    包的管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.23" data-path="../01-Go语言基础/day12_指针.html">
+            
+                <a href="../01-Go语言基础/day12_指针.html">
+            
+                    
+                    指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.24" data-path="../01-Go语言基础/day13-结构体.html">
+            
+                <a href="../01-Go语言基础/day13-结构体.html">
+            
+                    
+                    结构体
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.25" data-path="../01-Go语言基础/day14_第1节_方法.html">
+            
+                <a href="../01-Go语言基础/day14_第1节_方法.html">
+            
+                    
+                    第1节_方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.26" data-path="../01-Go语言基础/day14_第2节_接口.html">
+            
+                <a href="../01-Go语言基础/day14_第2节_接口.html">
+            
+                    
+                    第2节_接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.27" data-path="../01-Go语言基础/day14_第3节-OOP编程.html">
+            
+                <a href="../01-Go语言基础/day14_第3节-OOP编程.html">
+            
+                    
+                    第3节-OOP编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.28" data-path="../01-Go语言基础/day14_第4节-type.html">
+            
+                <a href="../01-Go语言基础/day14_第4节-type.html">
+            
+                    
+                    第4节-type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.29" data-path="../01-Go语言基础/day15_错误处理.html">
+            
+                <a href="../01-Go语言基础/day15_错误处理.html">
+            
+                    
+                    错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Go语言基础进阶
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="day16_file操作.html">
+            
+                <a href="day16_file操作.html">
+            
+                    
+                    01file操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="day17_Go语言并发Goroutine.html">
+            
+                <a href="day17_Go语言并发Goroutine.html">
+            
+                    
+                    02Go语言并发Goroutine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="day18_channel通道.html">
+            
+                <a href="day18_channel通道.html">
+            
+                    
+                    03channel通道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.4" data-path="day19_Go语言反射.html">
+            
+                <a href="day19_Go语言反射.html">
+            
+                    
+                    04Go语言反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    MySQL数据库基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../03-MySQL数据库基础/day23_学习笔记.html">
+            
+                <a href="../03-MySQL数据库基础/day23_学习笔记.html">
+            
+                    
+                    01学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../03-MySQL数据库基础/day23_数据库基础知识和基础操作.html">
+            
+                <a href="../03-MySQL数据库基础/day23_数据库基础知识和基础操作.html">
+            
+                    
+                    02数据库基础知识和基础操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../03-MySQL数据库基础/day24_查询和复杂查询.html">
+            
+                <a href="../03-MySQL数据库基础/day24_查询和复杂查询.html">
+            
+                    
+                    03查询和复杂查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    beego框架
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../04-beego框架/day36_beego框架介绍和流程分析.html">
+            
+                <a href="../04-beego框架/day36_beego框架介绍和流程分析.html">
+            
+                    
+                    beego框架介绍和流程分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../04-beego框架/day37_beego框架总结及数据库连接配置.html">
+            
+                <a href="../04-beego框架/day37_beego框架总结及数据库连接配置.html">
+            
+                    
+                    beego框架总结及数据库连接配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    beego开发博客系统
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../05-beego框架开发博客系统/day38_项目搭建_登录注册和Session功能开发.html">
+            
+                <a href="../05-beego框架开发博客系统/day38_项目搭建_登录注册和Session功能开发.html">
+            
+                    
+                    项目搭建_登录注册和Session功能开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../05-beego框架开发博客系统/day39_写文章_项目首页和查看文章详情功能开发.html">
+            
+                <a href="../05-beego框架开发博客系统/day39_写文章_项目首页和查看文章详情功能开发.html">
+            
+                    
+                    写文章_项目首页和查看文章详情功能开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../05-beego框架开发博客系统/day40_修改文章_删除文章和文章标签功能开发.html">
+            
+                <a href="../05-beego框架开发博客系统/day40_修改文章_删除文章和文章标签功能开发.html">
+            
+                    
+                    修改文章_删除文章和文章标签功能开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../05-beego框架开发博客系统/day41_首页功能扩展_图片上传和关于功能开发.html">
+            
+                <a href="../05-beego框架开发博客系统/day41_首页功能扩展_图片上传和关于功能开发.html">
+            
+                    
+                    首页功能扩展_图片上传和关于功能开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" >
+            
+                <span>
+            
+                    
+                    iris框架
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../06-iris框架/day54_web开发介绍、iris框架安装、HTTP请求和返回、iris路由处理.html">
+            
+                <a href="../06-iris框架/day54_web开发介绍、iris框架安装、HTTP请求和返回、iris路由处理.html">
+            
+                    
+                    web开发介绍、iris框架安装、HTTP请求和返回、iris路由处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../06-iris框架/day55_框架设置、mvc包、session使用、项目搭建和资源导入.html">
+            
+                <a href="../06-iris框架/day55_框架设置、mvc包、session使用、项目搭建和资源导入.html">
+            
+                    
+                    框架设置、mvc包、session使用、项目搭建和资源导入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <span>
+            
+                    
+                    微服务特性
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../07-微服务特性/day76_微服务简介及特性介绍.html">
+            
+                <a href="../07-微服务特性/day76_微服务简介及特性介绍.html">
+            
+                    
+                    微服务简介及特性介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <span>
+            
+                    
+                    protobuf
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../08-protobuf/day77_Protobuf介绍.html">
+            
+                <a href="../08-protobuf/day77_Protobuf介绍.html">
+            
+                    
+                    Protobuf介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" >
+            
+                <span>
+            
+                    
+                    微服务管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../09-微服务管理/day78_微服务管理_上.html">
+            
+                <a href="../09-微服务管理/day78_微服务管理_上.html">
+            
+                    
+                    微服务管理_上
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../09-微服务管理/day78_微服务管理_下.md">
+            
+                <span>
+            
+                    
+                    微服务管理_下
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" >
+            
+                <span>
+            
+                    
+                    RPC&gRPC
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="../10-RPC远程调用机制/day80_RPC远程过程调用.html">
+            
+                <a href="../10-RPC远程调用机制/day80_RPC远程过程调用.html">
+            
+                    
+                    RPC远程过程调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="../11-gRPC远程调用机制/day81_gRPC远程调用机制介绍.html">
+            
+                <a href="../11-gRPC远程调用机制/day81_gRPC远程调用机制介绍.html">
+            
+                    
+                    gRPC远程调用机制介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="../11-gRPC远程调用机制/day82_gRPC使用.html">
+            
+                <a href="../11-gRPC远程调用机制/day82_gRPC使用.html">
+            
+                    
+                    gRPC使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" >
+            
+                <span>
+            
+                    
+                    go-micro
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.5.1" data-path="../12-go-micro微服务框架/day83_go-micro框架介绍.html">
+            
+                <a href="../12-go-micro微服务框架/day83_go-micro框架介绍.html">
+            
+                    
+                    go-micro框架介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.2" data-path="../12-go-micro微服务框架/day84_go-micro使用1.html">
+            
+                <a href="../12-go-micro微服务框架/day84_go-micro使用1.html">
+            
+                    
+                    go-micro使用1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.3" data-path="../12-go-micro微服务框架/day85_go-micro使用2.html">
+            
+                <a href="../12-go-micro微服务框架/day85_go-micro使用2.html">
+            
+                    
+                    go-micro使用2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" >
+            
+                <span>
+            
+                    
+                    RESTful
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../13-RESTful设计/day86_RESTful标准设计.html">
+            
+                <a href="../13-RESTful设计/day86_RESTful标准设计.html">
+            
+                    
+                    RESTful标准设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" >
+            
+                <span>
+            
+                    
+                    区块链
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../14-区块链/day01_初始区块链家族1.html">
+            
+                <a href="../14-区块链/day01_初始区块链家族1.html">
+            
+                    
+                    初始区块链家族1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="../14-区块链/day02_区块链基础入门.html">
+            
+                <a href="../14-区块链/day02_区块链基础入门.html">
+            
+                    
+                    区块链基础入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.3" data-path="../14-区块链/day03_区块链的本质.html">
+            
+                <a href="../14-区块链/day03_区块链的本质.html">
+            
+                    
+                    区块链的本质
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.4" data-path="../14-区块链/day04_区块链的特性.html">
+            
+                <a href="../14-区块链/day04_区块链的特性.html">
+            
+                    
+                    区块链的特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >04Go语言反射</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x53CD;&#x5C04;reflect">&#x53CD;&#x5C04;reflect</h1>
+<h2 id="&#x4E00;&#x3001;&#x5F15;&#x5165;">&#x4E00;&#x3001;&#x5F15;&#x5165;</h2>
+<p>&#x5148;&#x770B;&#x5B98;&#x65B9;Doc&#x4E2D;Rob Pike&#x7ED9;&#x51FA;&#x7684;&#x5173;&#x4E8E;&#x53CD;&#x5C04;&#x7684;&#x5B9A;&#x4E49;&#xFF1A;</p>
+<pre><code>Reflection in computing is the ability of a program to examine its own structure, particularly through types; it&#x2019;s a form of metaprogramming. It&#x2019;s also a great source of confusion.
+(&#x5728;&#x8BA1;&#x7B97;&#x673A;&#x9886;&#x57DF;&#xFF0C;&#x53CD;&#x5C04;&#x662F;&#x4E00;&#x79CD;&#x8BA9;&#x7A0B;&#x5E8F;&#x2014;&#x2014;&#x4E3B;&#x8981;&#x662F;&#x901A;&#x8FC7;&#x7C7B;&#x578B;&#x2014;&#x2014;&#x7406;&#x89E3;&#x5176;&#x81EA;&#x8EAB;&#x7ED3;&#x6784;&#x7684;&#x4E00;&#x79CD;&#x80FD;&#x529B;&#x3002;&#x5B83;&#x662F;&#x5143;&#x7F16;&#x7A0B;&#x7684;&#x7EC4;&#x6210;&#x4E4B;&#x4E00;&#xFF0C;&#x540C;&#x65F6;&#x5B83;&#x4E5F;&#x662F;&#x4E00;&#x5927;&#x5F15;&#x4EBA;&#x56F0;&#x60D1;&#x7684;&#x96BE;&#x9898;&#x3002;)
+</code></pre><p>&#x7EF4;&#x57FA;&#x767E;&#x79D1;&#x4E2D;&#x7684;&#x5B9A;&#x4E49;&#xFF1A;</p>
+<pre><code>&#x5728;&#x8BA1;&#x7B97;&#x673A;&#x79D1;&#x5B66;&#x4E2D;&#xFF0C;&#x53CD;&#x5C04;&#x662F;&#x6307;&#x8BA1;&#x7B97;&#x673A;&#x7A0B;&#x5E8F;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#xFF08;Run time&#xFF09;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x3001;&#x68C0;&#x6D4B;&#x548C;&#x4FEE;&#x6539;&#x5B83;&#x672C;&#x8EAB;&#x72B6;&#x6001;&#x6216;&#x884C;&#x4E3A;&#x7684;&#x4E00;&#x79CD;&#x80FD;&#x529B;&#x3002;&#x7528;&#x6BD4;&#x55BB;&#x6765;&#x8BF4;&#xFF0C;&#x53CD;&#x5C04;&#x5C31;&#x662F;&#x7A0B;&#x5E8F;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x65F6;&#x5019;&#x80FD;&#x591F;&#x201C;&#x89C2;&#x5BDF;&#x201D;&#x5E76;&#x4E14;&#x4FEE;&#x6539;&#x81EA;&#x5DF1;&#x7684;&#x884C;&#x4E3A;&#x3002;
+</code></pre><p>&#x4E0D;&#x540C;&#x8BED;&#x8A00;&#x7684;&#x53CD;&#x5C04;&#x6A21;&#x578B;&#x4E0D;&#x5C3D;&#x76F8;&#x540C;&#xFF0C;&#x6709;&#x4E9B;&#x8BED;&#x8A00;&#x8FD8;&#x4E0D;&#x652F;&#x6301;&#x53CD;&#x5C04;&#x3002;&#x300A;Go &#x8BED;&#x8A00;&#x5723;&#x7ECF;&#x300B;&#x4E2D;&#x662F;&#x8FD9;&#x6837;&#x5B9A;&#x4E49;&#x53CD;&#x5C04;&#x7684;&#xFF1A;</p>
+<blockquote>
+<p>Go &#x8BED;&#x8A00;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x673A;&#x5236;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x66F4;&#x65B0;&#x53D8;&#x91CF;&#x548C;&#x68C0;&#x67E5;&#x5B83;&#x4EEC;&#x7684;&#x503C;&#x3001;&#x8C03;&#x7528;&#x5B83;&#x4EEC;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x7F16;&#x8BD1;&#x65F6;&#x5E76;&#x4E0D;&#x77E5;&#x9053;&#x8FD9;&#x4E9B;&#x53D8;&#x91CF;&#x7684;&#x5177;&#x4F53;&#x7C7B;&#x578B;&#xFF0C;&#x8FD9;&#x79F0;&#x4E3A;&#x53CD;&#x5C04;&#x673A;&#x5236;&#x3002;</p>
+</blockquote>
+<p>&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x7528;&#x53CD;&#x5C04;</p>
+<p>&#x9700;&#x8981;&#x53CD;&#x5C04;&#x7684; 2 &#x4E2A;&#x5E38;&#x89C1;&#x573A;&#x666F;&#xFF1A;</p>
+<ol>
+<li>&#x6709;&#x65F6;&#x4F60;&#x9700;&#x8981;&#x7F16;&#x5199;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x4F46;&#x662F;&#x5E76;&#x4E0D;&#x77E5;&#x9053;&#x4F20;&#x7ED9;&#x4F60;&#x7684;&#x53C2;&#x6570;&#x7C7B;&#x578B;&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x53EF;&#x80FD;&#x662F;&#x6CA1;&#x7EA6;&#x5B9A;&#x597D;&#xFF1B;&#x4E5F;&#x53EF;&#x80FD;&#x662F;&#x4F20;&#x5165;&#x7684;&#x7C7B;&#x578B;&#x5F88;&#x591A;&#xFF0C;&#x8FD9;&#x4E9B;&#x7C7B;&#x578B;&#x5E76;&#x4E0D;&#x80FD;&#x7EDF;&#x4E00;&#x8868;&#x793A;&#x3002;&#x8FD9;&#x65F6;&#x53CD;&#x5C04;&#x5C31;&#x4F1A;&#x7528;&#x7684;&#x4E0A;&#x4E86;&#x3002;</li>
+<li>&#x6709;&#x65F6;&#x5019;&#x9700;&#x8981;&#x6839;&#x636E;&#x67D0;&#x4E9B;&#x6761;&#x4EF6;&#x51B3;&#x5B9A;&#x8C03;&#x7528;&#x54EA;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x6BD4;&#x5982;&#x6839;&#x636E;&#x7528;&#x6237;&#x7684;&#x8F93;&#x5165;&#x6765;&#x51B3;&#x5B9A;&#x3002;&#x8FD9;&#x65F6;&#x5C31;&#x9700;&#x8981;&#x5BF9;&#x51FD;&#x6570;&#x548C;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#x8FDB;&#x884C;&#x53CD;&#x5C04;&#xFF0C;&#x5728;&#x8FD0;&#x884C;&#x671F;&#x95F4;&#x52A8;&#x6001;&#x5730;&#x6267;&#x884C;&#x51FD;&#x6570;&#x3002;</li>
+</ol>
+<p>&#x4F46;&#x662F;&#x5BF9;&#x4E8E;&#x53CD;&#x5C04;&#xFF0C;&#x8FD8;&#x662F;&#x6709;&#x51E0;&#x70B9;&#x4E0D;&#x592A;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x53CD;&#x5C04;&#x7684;&#x7406;&#x7531;&#xFF1A;</p>
+<ol>
+<li>&#x4E0E;&#x53CD;&#x5C04;&#x76F8;&#x5173;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x7ECF;&#x5E38;&#x662F;&#x96BE;&#x4EE5;&#x9605;&#x8BFB;&#x7684;&#x3002;&#x5728;&#x8F6F;&#x4EF6;&#x5DE5;&#x7A0B;&#x4E2D;&#xFF0C;&#x4EE3;&#x7801;&#x53EF;&#x8BFB;&#x6027;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x91CD;&#x8981;&#x7684;&#x6307;&#x6807;&#x3002;</li>
+<li>Go &#x8BED;&#x8A00;&#x4F5C;&#x4E3A;&#x4E00;&#x95E8;&#x9759;&#x6001;&#x8BED;&#x8A00;&#xFF0C;&#x7F16;&#x7801;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x7F16;&#x8BD1;&#x5668;&#x80FD;&#x63D0;&#x524D;&#x53D1;&#x73B0;&#x4E00;&#x4E9B;&#x7C7B;&#x578B;&#x9519;&#x8BEF;&#xFF0C;&#x4F46;&#x662F;&#x5BF9;&#x4E8E;&#x53CD;&#x5C04;&#x4EE3;&#x7801;&#x662F;&#x65E0;&#x80FD;&#x4E3A;&#x529B;&#x7684;&#x3002;&#x6240;&#x4EE5;&#x5305;&#x542B;&#x53CD;&#x5C04;&#x76F8;&#x5173;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x5F88;&#x53EF;&#x80FD;&#x4F1A;&#x8FD0;&#x884C;&#x5F88;&#x4E45;&#xFF0C;&#x624D;&#x4F1A;&#x51FA;&#x9519;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x7ECF;&#x5E38;&#x662F;&#x76F4;&#x63A5; panic&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x9020;&#x6210;&#x4E25;&#x91CD;&#x7684;&#x540E;&#x679C;&#x3002;</li>
+<li>&#x53CD;&#x5C04;&#x5BF9;&#x6027;&#x80FD;&#x5F71;&#x54CD;&#x8FD8;&#x662F;&#x6BD4;&#x8F83;&#x5927;&#x7684;&#xFF0C;&#x6BD4;&#x6B63;&#x5E38;&#x4EE3;&#x7801;&#x8FD0;&#x884C;&#x901F;&#x5EA6;&#x6162;&#x4E00;&#x5230;&#x4E24;&#x4E2A;&#x6570;&#x91CF;&#x7EA7;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#x4E2D;&#x5904;&#x4E8E;&#x8FD0;&#x884C;&#x6548;&#x7387;&#x5173;&#x952E;&#x4F4D;&#x7F6E;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x5C3D;&#x91CF;&#x907F;&#x514D;&#x4F7F;&#x7528;&#x53CD;&#x5C04;&#x7279;&#x6027;&#x3002;</li>
+</ol>
+<h2 id="&#x4E8C;&#x3001;&#x76F8;&#x5173;&#x57FA;&#x7840;">&#x4E8C;&#x3001;&#x76F8;&#x5173;&#x57FA;&#x7840;</h2>
+<p>&#x53CD;&#x5C04;&#x662F;&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x7684;&#xFF1F;&#x6211;&#x4EEC;&#x4EE5;&#x524D;&#x5B66;&#x4E60;&#x8FC7; interface&#xFF0C;&#x5B83;&#x662F; Go &#x8BED;&#x8A00;&#x5B9E;&#x73B0;&#x62BD;&#x8C61;&#x7684;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x5F3A;&#x5927;&#x7684;&#x5DE5;&#x5177;&#x3002;&#x5F53;&#x5411;&#x63A5;&#x53E3;&#x53D8;&#x91CF;&#x8D4B;&#x4E88;&#x4E00;&#x4E2A;&#x5B9E;&#x4F53;&#x7C7B;&#x578B;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x63A5;&#x53E3;&#x4F1A;&#x5B58;&#x50A8;&#x5B9E;&#x4F53;&#x7684;&#x7C7B;&#x578B;&#x4FE1;&#x606F;&#xFF0C;&#x53CD;&#x5C04;&#x5C31;&#x662F;&#x901A;&#x8FC7;&#x63A5;&#x53E3;&#x7684;&#x7C7B;&#x578B;&#x4FE1;&#x606F;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x53CD;&#x5C04;&#x5EFA;&#x7ACB;&#x5728;&#x7C7B;&#x578B;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x3002;</p>
+<p>Go &#x8BED;&#x8A00;&#x5728; reflect &#x5305;&#x91CC;&#x5B9A;&#x4E49;&#x4E86;&#x5404;&#x79CD;&#x7C7B;&#x578B;&#xFF0C;&#x5B9E;&#x73B0;&#x4E86;&#x53CD;&#x5C04;&#x7684;&#x5404;&#x79CD;&#x51FD;&#x6570;&#xFF0C;&#x901A;&#x8FC7;&#x5B83;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x68C0;&#x6D4B;&#x7C7B;&#x578B;&#x7684;&#x4FE1;&#x606F;&#x3001;&#x6539;&#x53D8;&#x7C7B;&#x578B;&#x7684;&#x503C;&#x3002;&#x5728;&#x8FDB;&#x884C;&#x66F4;&#x52A0;&#x8BE6;&#x7EC6;&#x7684;&#x4E86;&#x89E3;&#x4E4B;&#x524D;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x6E29;&#x4E60;&#x4E00;&#x4E0B;Go&#x8BED;&#x8A00;&#x76F8;&#x5173;&#x7684;&#x4E00;&#x4E9B;&#x7279;&#x6027;&#xFF0C;&#x6240;&#x8C13;&#x6E29;&#x6545;&#x77E5;&#x65B0;&#xFF0C;&#x4ECE;&#x8FD9;&#x4E9B;&#x7279;&#x6027;&#x4E2D;&#x4E86;&#x89E3;&#x5176;&#x53CD;&#x5C04;&#x673A;&#x5236;&#x662F;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x7684;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>&#x7279;&#x70B9;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>go&#x8BED;&#x8A00;&#x662F;&#x9759;&#x6001;&#x7C7B;&#x578B;&#x8BED;&#x8A00;&#x3002;</td>
+<td>&#x7F16;&#x8BD1;&#x65F6;&#x7C7B;&#x578B;&#x5DF2;&#x7ECF;&#x786E;&#x5B9A;&#xFF0C;&#x6BD4;&#x5982;&#x5BF9;&#x5DF2;&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x518D;&#x5B9A;&#x4E49;&#x540E;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x53CD;&#x5C04;&#x65F6;&#x5019;&#x9700;&#x8981;&#x786E;&#x8BA4;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4F55;&#x79CD;&#x7C7B;&#x578B;&#x3002;</td>
+</tr>
+<tr>
+<td>&#x7A7A;&#x63A5;&#x53E3;interface{}</td>
+<td>go&#x7684;&#x53CD;&#x5C04;&#x673A;&#x5236;&#x662F;&#x8981;&#x901A;&#x8FC7;&#x63A5;&#x53E3;&#x6765;&#x8FDB;&#x884C;&#x7684;&#xFF0C;&#x800C;&#x7C7B;&#x4F3C;&#x4E8E;Java&#x7684;Object&#x7684;&#x7A7A;&#x63A5;&#x53E3;&#x53EF;&#x4EE5;&#x548C;&#x4EFB;&#x4F55;&#x7C7B;&#x578B;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#xFF0C;&#x56E0;&#x6B64;&#x5BF9;&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7B49;&#x7684;&#x53CD;&#x5C04;&#x4E5F;&#x76F4;&#x63A5;&#x5229;&#x7528;&#x4E86;&#x8FD9;&#x4E00;&#x7279;&#x70B9;</td>
+</tr>
+</tbody>
+</table>
+<p>Go&#x8BED;&#x8A00;&#x7684;&#x7C7B;&#x578B;&#xFF1A;</p>
+<ul>
+<li><p>&#x53D8;&#x91CF;&#x5305;&#x62EC;&#xFF08;type, value&#xFF09;&#x4E24;&#x90E8;&#x5206;</p>
+<p>&#x200B;    &#x7406;&#x89E3;&#x8FD9;&#x4E00;&#x70B9;&#x5C31;&#x77E5;&#x9053;&#x4E3A;&#x4EC0;&#x4E48;nil != nil&#x4E86;</p>
+</li>
+<li><p>type &#x5305;&#x62EC; static type&#x548C;concrete type. &#x7B80;&#x5355;&#x6765;&#x8BF4; static type&#x662F;&#x4F60;&#x5728;&#x7F16;&#x7801;&#x662F;&#x770B;&#x89C1;&#x7684;&#x7C7B;&#x578B;(&#x5982;int&#x3001;string)&#xFF0C;concrete type&#x662F;runtime&#x7CFB;&#x7EDF;&#x770B;&#x89C1;&#x7684;&#x7C7B;&#x578B;</p>
+</li>
+<li><p>&#x7C7B;&#x578B;&#x65AD;&#x8A00;&#x80FD;&#x5426;&#x6210;&#x529F;&#xFF0C;&#x53D6;&#x51B3;&#x4E8E;&#x53D8;&#x91CF;&#x7684;concrete type&#xFF0C;&#x800C;&#x4E0D;&#x662F;static type&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x4E00;&#x4E2A; reader&#x53D8;&#x91CF;&#x5982;&#x679C;&#x5B83;&#x7684;concrete type&#x4E5F;&#x5B9E;&#x73B0;&#x4E86;write&#x65B9;&#x6CD5;&#x7684;&#x8BDD;&#xFF0C;&#x5B83;&#x4E5F;&#x53EF;&#x4EE5;&#x88AB;&#x7C7B;&#x578B;&#x65AD;&#x8A00;&#x4E3A;writer&#x3002;</p>
+</li>
+</ul>
+<p>Go&#x662F;&#x9759;&#x6001;&#x7C7B;&#x578B;&#x8BED;&#x8A00;&#x3002;&#x6BCF;&#x4E2A;&#x53D8;&#x91CF;&#x90FD;&#x62E5;&#x6709;&#x4E00;&#x4E2A;&#x9759;&#x6001;&#x7C7B;&#x578B;&#xFF0C;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x6BCF;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x7C7B;&#x578B;&#x5728;&#x7F16;&#x8BD1;&#x65F6;&#x90FD;&#x662F;&#x786E;&#x5B9A;&#x7684;&#xFF1A;int&#xFF0C;float32, *AutoType, []byte,  chan []int &#x8BF8;&#x5982;&#x6B64;&#x7C7B;&#x3002;</p>
+<p>&#x5728;&#x53CD;&#x5C04;&#x7684;&#x6982;&#x5FF5;&#x4E2D;&#xFF0C; &#x7F16;&#x8BD1;&#x65F6;&#x5C31;&#x77E5;&#x9053;&#x53D8;&#x91CF;&#x7C7B;&#x578B;&#x7684;&#x662F;&#x9759;&#x6001;&#x7C7B;&#x578B;&#xFF1B;&#x8FD0;&#x884C;&#x65F6;&#x624D;&#x77E5;&#x9053;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x7C7B;&#x578B;&#x7684;&#x53EB;&#x505A;&#x52A8;&#x6001;&#x7C7B;&#x578B;&#x3002;</p>
+<ul>
+<li><p>&#x9759;&#x6001;&#x7C7B;&#x578B;
+&#x9759;&#x6001;&#x7C7B;&#x578B;&#x5C31;&#x662F;&#x53D8;&#x91CF;&#x58F0;&#x660E;&#x65F6;&#x7684;&#x8D4B;&#x4E88;&#x7684;&#x7C7B;&#x578B;&#x3002;&#x6BD4;&#x5982;&#xFF1A;</p>
+<p>```go
+type MyInt int // int &#x5C31;&#x662F;&#x9759;&#x6001;&#x7C7B;&#x578B;</p>
+</li>
+</ul>
+<p>type A struct{
+    Name string  // string&#x5C31;&#x662F;&#x9759;&#x6001;
+}
+var i <em>int  // </em>int&#x5C31;&#x662F;&#x9759;&#x6001;&#x7C7B;&#x578B;</p>
+<pre><code>
+
+
+- &#x52A8;&#x6001;&#x7C7B;&#x578B;
+  &#x52A8;&#x6001;&#x7C7B;&#x578B;&#xFF1A;&#x8FD0;&#x884C;&#x65F6;&#x7ED9;&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#x8D4B;&#x503C;&#x65F6;&#xFF0C;&#x8FD9;&#x4E2A;&#x503C;&#x7684;&#x7C7B;&#x578B;(&#x5982;&#x679C;&#x503C;&#x4E3A;nil&#x7684;&#x65F6;&#x5019;&#x6CA1;&#x6709;&#x52A8;&#x6001;&#x7C7B;&#x578B;)&#x3002;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x52A8;&#x6001;&#x7C7B;&#x578B;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x53EF;&#x80FD;&#x6539;&#x53D8;&#xFF0C;&#x8FD9;&#x4E3B;&#x8981;&#x4F9D;&#x8D56;&#x4E8E;&#x5B83;&#x7684;&#x8D4B;&#x503C;&#xFF08;&#x524D;&#x63D0;&#x662F;&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#x662F;&#x63A5;&#x53E3;&#x7C7B;&#x578B;&#xFF09;&#x3002;
+
+```go
+var A interface{} // &#x9759;&#x6001;&#x7C7B;&#x578B;interface{}
+A = 10            // &#x9759;&#x6001;&#x7C7B;&#x578B;&#x4E3A;interface{}  &#x52A8;&#x6001;&#x4E3A;int
+A = &quot;String&quot;      // &#x9759;&#x6001;&#x7C7B;&#x578B;&#x4E3A;interface{}  &#x52A8;&#x6001;&#x4E3A;string
+var M *int
+A = M             // A&#x7684;&#x503C;&#x53EF;&#x4EE5;&#x6539;&#x53D8;
+</code></pre><p>Go&#x8BED;&#x8A00;&#x7684;&#x53CD;&#x5C04;&#x5C31;&#x662F;&#x5EFA;&#x7ACB;&#x5728;&#x7C7B;&#x578B;&#x4E4B;&#x4E0A;&#x7684;&#xFF0C;Golang&#x7684;&#x6307;&#x5B9A;&#x7C7B;&#x578B;&#x7684;&#x53D8;&#x91CF;&#x7684;&#x7C7B;&#x578B;&#x662F;&#x9759;&#x6001;&#x7684;&#xFF08;&#x4E5F;&#x5C31;&#x662F;&#x6307;&#x5B9A;int&#x3001;string&#x8FD9;&#x4E9B;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x5B83;&#x7684;type&#x662F;static type&#xFF09;&#xFF0C;&#x5728;&#x521B;&#x5EFA;&#x53D8;&#x91CF;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x5DF2;&#x7ECF;&#x786E;&#x5B9A;&#xFF0C;&#x53CD;&#x5C04;&#x4E3B;&#x8981;&#x4E0E;Golang&#x7684;interface&#x7C7B;&#x578B;&#x76F8;&#x5173;&#xFF08;&#x5B83;&#x7684;type&#x662F;concrete type&#xFF09;&#xFF0C;&#x53EA;&#x6709;interface&#x7C7B;&#x578B;&#x624D;&#x6709;&#x53CD;&#x5C04;&#x4E00;&#x8BF4;&#x3002;</p>
+<p>&#x5728;Golang&#x7684;&#x5B9E;&#x73B0;&#x4E2D;&#xFF0C;&#x6BCF;&#x4E2A;interface&#x53D8;&#x91CF;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x5BF9;&#x5E94;pair&#xFF0C;pair&#x4E2D;&#x8BB0;&#x5F55;&#x4E86;&#x5B9E;&#x9645;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x548C;&#x7C7B;&#x578B;:</p>
+<pre><code class="lang-go">(value, <span class="hljs-keyword">type</span>)
+</code></pre>
+<p>value&#x662F;&#x5B9E;&#x9645;&#x53D8;&#x91CF;&#x503C;&#xFF0C;type&#x662F;&#x5B9E;&#x9645;&#x53D8;&#x91CF;&#x7684;&#x7C7B;&#x578B;&#x3002;&#x4E00;&#x4E2A;interface{}&#x7C7B;&#x578B;&#x7684;&#x53D8;&#x91CF;&#x5305;&#x542B;&#x4E86;2&#x4E2A;&#x6307;&#x9488;&#xFF0C;&#x4E00;&#x4E2A;&#x6307;&#x9488;&#x6307;&#x5411;&#x503C;&#x7684;&#x7C7B;&#x578B;&#x3010;&#x5BF9;&#x5E94;concrete type&#x3011;&#xFF0C;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x6307;&#x9488;&#x6307;&#x5411;&#x5B9E;&#x9645;&#x7684;&#x503C;&#x3010;&#x5BF9;&#x5E94;value&#x3011;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x521B;&#x5EFA;&#x7C7B;&#x578B;&#x4E3A;*os.File&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x5176;&#x8D4B;&#x7ED9;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#x53D8;&#x91CF;r&#xFF1A;</p>
+<pre><code class="lang-go">tty, err := os.OpenFile(<span class="hljs-string">&quot;/dev/tty&quot;</span>, os.O_RDWR, <span class="hljs-number">0</span>)
+
+<span class="hljs-keyword">var</span> r io.Reader
+r = tty
+</code></pre>
+<p>&#x63A5;&#x53E3;&#x53D8;&#x91CF;r&#x7684;pair&#x4E2D;&#x5C06;&#x8BB0;&#x5F55;&#x5982;&#x4E0B;&#x4FE1;&#x606F;&#xFF1A;(tty, *os.File)&#xFF0C;&#x8FD9;&#x4E2A;pair&#x5728;&#x63A5;&#x53E3;&#x53D8;&#x91CF;&#x7684;&#x8FDE;&#x7EED;&#x8D4B;&#x503C;&#x8FC7;&#x7A0B;&#x4E2D;&#x662F;&#x4E0D;&#x53D8;&#x7684;&#xFF0C;&#x5C06;&#x63A5;&#x53E3;&#x53D8;&#x91CF;r&#x8D4B;&#x7ED9;&#x53E6;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#x53D8;&#x91CF;w:</p>
+<pre><code class="lang-go"><span class="hljs-keyword">var</span> w io.Writer
+w = r.(io.Writer)
+</code></pre>
+<p>&#x63A5;&#x53E3;&#x53D8;&#x91CF;w&#x7684;pair&#x4E0E;r&#x7684;pair&#x76F8;&#x540C;&#xFF0C;&#x90FD;&#x662F;:(tty, *os.File)&#xFF0C;&#x5373;&#x4F7F;w&#x662F;&#x7A7A;&#x63A5;&#x53E3;&#x7C7B;&#x578B;&#xFF0C;pair&#x4E5F;&#x662F;&#x4E0D;&#x53D8;&#x7684;&#x3002;</p>
+<p>interface&#x53CA;&#x5176;pair&#x7684;&#x5B58;&#x5728;&#xFF0C;&#x662F;Golang&#x4E2D;&#x5B9E;&#x73B0;&#x53CD;&#x5C04;&#x7684;&#x524D;&#x63D0;&#xFF0C;&#x7406;&#x89E3;&#x4E86;pair&#xFF0C;&#x5C31;&#x66F4;&#x5BB9;&#x6613;&#x7406;&#x89E3;&#x53CD;&#x5C04;&#x3002;&#x53CD;&#x5C04;&#x5C31;&#x662F;&#x7528;&#x6765;&#x68C0;&#x6D4B;&#x5B58;&#x50A8;&#x5728;&#x63A5;&#x53E3;&#x53D8;&#x91CF;&#x5185;&#x90E8;(&#x503C;value&#xFF1B;&#x7C7B;&#x578B;concrete type) pair&#x5BF9;&#x7684;&#x4E00;&#x79CD;&#x673A;&#x5236;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x8981;&#x7406;&#x89E3;&#x4E24;&#x4E2A;&#x57FA;&#x672C;&#x6982;&#x5FF5; Type &#x548C; Value&#xFF0C;&#x5B83;&#x4EEC;&#x4E5F;&#x662F; Go&#x8BED;&#x8A00;&#x5305;&#x4E2D; reflect &#x7A7A;&#x95F4;&#x91CC;&#x6700;&#x91CD;&#x8981;&#x7684;&#x4E24;&#x4E2A;&#x7C7B;&#x578B;&#x3002;</p>
+<h2 id="&#x4E09;&#x3001;type&#x548C;value">&#x4E09;&#x3001;Type&#x548C;Value</h2>
+<p>&#x6211;&#x4EEC;&#x4E00;&#x822C;&#x7528;&#x5230;&#x7684;&#x5305;&#x662F;reflect&#x5305;&#x3002;</p>
+<p>&#x65E2;&#x7136;&#x53CD;&#x5C04;&#x5C31;&#x662F;&#x7528;&#x6765;&#x68C0;&#x6D4B;&#x5B58;&#x50A8;&#x5728;&#x63A5;&#x53E3;&#x53D8;&#x91CF;&#x5185;&#x90E8;(&#x503C;value&#xFF1B;&#x7C7B;&#x578B;concrete type) pair&#x5BF9;&#x7684;&#x4E00;&#x79CD;&#x673A;&#x5236;&#x3002;&#x90A3;&#x4E48;&#x5728;Golang&#x7684;reflect&#x53CD;&#x5C04;&#x5305;&#x4E2D;&#x6709;&#x4EC0;&#x4E48;&#x6837;&#x7684;&#x65B9;&#x5F0F;&#x53EF;&#x4EE5;&#x8BA9;&#x6211;&#x4EEC;&#x76F4;&#x63A5;&#x83B7;&#x53D6;&#x5230;&#x53D8;&#x91CF;&#x5185;&#x90E8;&#x7684;&#x4FE1;&#x606F;&#x5462;&#xFF1F; &#x5B83;&#x63D0;&#x4F9B;&#x4E86;&#x4E24;&#x79CD;&#x7C7B;&#x578B;&#xFF08;&#x6216;&#x8005;&#x8BF4;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#xFF09;&#x8BA9;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5F88;&#x5BB9;&#x6613;&#x7684;&#x8BBF;&#x95EE;&#x63A5;&#x53E3;&#x53D8;&#x91CF;&#x5185;&#x5BB9;&#xFF0C;&#x5206;&#x522B;&#x662F;reflect.ValueOf() &#x548C; reflect.TypeOf()&#xFF0C;&#x770B;&#x770B;&#x5B98;&#x65B9;&#x7684;&#x89E3;&#x91CA;</p>
+<pre><code class="lang-go"><span class="hljs-comment">// ValueOf returns a new Value initialized to the concrete value</span>
+<span class="hljs-comment">// stored in the interface i.  ValueOf(nil) returns the zero </span>
+<span class="hljs-keyword">func</span> ValueOf(i <span class="hljs-keyword">interface</span>{}) Value {...}
+
+&#x7FFB;&#x8BD1;&#x4E00;&#x4E0B;&#xFF1A;ValueOf&#x7528;&#x6765;&#x83B7;&#x53D6;&#x8F93;&#x5165;&#x53C2;&#x6570;&#x63A5;&#x53E3;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x7684;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x63A5;&#x53E3;&#x4E3A;&#x7A7A;&#x5219;&#x8FD4;&#x56DE;<span class="hljs-number">0</span>
+
+
+<span class="hljs-comment">// TypeOf returns the reflection Type that represents the dynamic type of i.</span>
+<span class="hljs-comment">// If i is a nil interface value, TypeOf returns nil.</span>
+<span class="hljs-keyword">func</span> TypeOf(i <span class="hljs-keyword">interface</span>{}) Type {...}
+
+&#x7FFB;&#x8BD1;&#x4E00;&#x4E0B;&#xFF1A;TypeOf&#x7528;&#x6765;&#x52A8;&#x6001;&#x83B7;&#x53D6;&#x8F93;&#x5165;&#x53C2;&#x6570;&#x63A5;&#x53E3;&#x4E2D;&#x7684;&#x503C;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x5982;&#x679C;&#x63A5;&#x53E3;&#x4E3A;&#x7A7A;&#x5219;&#x8FD4;&#x56DE;<span class="hljs-literal">nil</span>
+</code></pre>
+<p>reflect.TypeOf()&#x662F;&#x83B7;&#x53D6;pair&#x4E2D;&#x7684;type&#xFF0C;reflect.ValueOf()&#x83B7;&#x53D6;pair&#x4E2D;&#x7684;value&#x3002;</p>
+<p>&#x9996;&#x5148;&#x9700;&#x8981;&#x628A;&#x5B83;&#x8F6C;&#x5316;&#x6210;reflect&#x5BF9;&#x8C61;(reflect.Type&#x6216;&#x8005;reflect.Value&#xFF0C;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x60C5;&#x51B5;&#x8C03;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x51FD;&#x6570;&#x3002;</p>
+<pre><code class="lang-go">t := reflect.TypeOf(i) <span class="hljs-comment">//&#x5F97;&#x5230;&#x7C7B;&#x578B;&#x7684;&#x5143;&#x6570;&#x636E;,&#x901A;&#x8FC7;t&#x6211;&#x4EEC;&#x80FD;&#x83B7;&#x53D6;&#x7C7B;&#x578B;&#x5B9A;&#x4E49;&#x91CC;&#x9762;&#x7684;&#x6240;&#x6709;&#x5143;&#x7D20;</span>
+v := reflect.ValueOf(i) <span class="hljs-comment">//&#x5F97;&#x5230;&#x5B9E;&#x9645;&#x7684;&#x503C;&#xFF0C;&#x901A;&#x8FC7;v&#x6211;&#x4EEC;&#x83B7;&#x53D6;&#x5B58;&#x50A8;&#x5728;&#x91CC;&#x9762;&#x7684;&#x503C;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x53BB;&#x6539;&#x53D8;&#x503C;</span>
+</code></pre>
+<p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;fmt&quot;</span>
+    <span class="hljs-string">&quot;reflect&quot;</span>
+)
+
+<span class="hljs-keyword">func</span> main() {
+    <span class="hljs-comment">//&#x53CD;&#x5C04;&#x64CD;&#x4F5C;&#xFF1A;&#x901A;&#x8FC7;&#x53CD;&#x5C04;&#xFF0C;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#x7C7B;&#x578B;&#x53D8;&#x91CF;&#x7684; &#x7C7B;&#x578B;&#x548C;&#x6570;&#x503C;</span>
+    <span class="hljs-keyword">var</span> x <span class="hljs-keyword">float64</span> =<span class="hljs-number">3.4</span>
+
+    fmt.Println(<span class="hljs-string">&quot;type:&quot;</span>,reflect.TypeOf(x)) <span class="hljs-comment">//type: float64</span>
+    fmt.Println(<span class="hljs-string">&quot;value:&quot;</span>,reflect.ValueOf(x)) <span class="hljs-comment">//value: 3.4</span>
+
+    fmt.Println(<span class="hljs-string">&quot;-------------------&quot;</span>)
+    <span class="hljs-comment">//&#x6839;&#x636E;&#x53CD;&#x5C04;&#x7684;&#x503C;&#xFF0C;&#x6765;&#x83B7;&#x53D6;&#x5BF9;&#x5E94;&#x7684;&#x7C7B;&#x578B;&#x548C;&#x6570;&#x503C;</span>
+    v := reflect.ValueOf(x)
+    fmt.Println(<span class="hljs-string">&quot;kind is float64: &quot;</span>,v.Kind() == reflect.Float64)
+    fmt.Println(<span class="hljs-string">&quot;type : &quot;</span>,v.Type())
+    fmt.Println(<span class="hljs-string">&quot;value : &quot;</span>,v.Float())
+}
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>type: float64
+value: 3.4
+-------------------
+kind is float64:  true
+type :  float64
+value :  3.4
+</code></pre><p>&#x8BF4;&#x660E;</p>
+<ol>
+<li>reflect.TypeOf&#xFF1A; &#x76F4;&#x63A5;&#x7ED9;&#x5230;&#x4E86;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x7684;type&#x7C7B;&#x578B;&#xFF0C;&#x5982;float64&#x3001;int&#x3001;&#x5404;&#x79CD;pointer&#x3001;struct &#x7B49;&#x7B49;&#x771F;&#x5B9E;&#x7684;&#x7C7B;&#x578B;</li>
+<li>reflect.ValueOf&#xFF1A;&#x76F4;&#x63A5;&#x7ED9;&#x5230;&#x4E86;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x7684;&#x5177;&#x4F53;&#x7684;&#x503C;&#xFF0C;&#x5982;1.2345&#x8FD9;&#x4E2A;&#x5177;&#x4F53;&#x6570;&#x503C;&#xFF0C;&#x6216;&#x8005;&#x7C7B;&#x4F3C;&amp;{1 &quot;Allen.Wu&quot; 25} &#x8FD9;&#x6837;&#x7684;&#x7ED3;&#x6784;&#x4F53;struct&#x7684;&#x503C;</li>
+<li>&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x660E;&#x53CD;&#x5C04;&#x53EF;&#x4EE5;&#x5C06;&#x201C;&#x63A5;&#x53E3;&#x7C7B;&#x578B;&#x53D8;&#x91CF;&#x201D;&#x8F6C;&#x6362;&#x4E3A;&#x201C;&#x53CD;&#x5C04;&#x7C7B;&#x578B;&#x5BF9;&#x8C61;&#x201D;&#xFF0C;&#x53CD;&#x5C04;&#x7C7B;&#x578B;&#x6307;&#x7684;&#x662F;reflect.Type&#x548C;reflect.Value&#x8FD9;&#x4E24;&#x79CD;</li>
+</ol>
+<p>Type &#x548C; Value &#x90FD;&#x5305;&#x542B;&#x4E86;&#x5927;&#x91CF;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5176;&#x4E2D;&#x7B2C;&#x4E00;&#x4E2A;&#x6709;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#x5E94;&#x8BE5;&#x662F; Kind&#xFF0C;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x8BE5;&#x7C7B;&#x578B;&#x7684;&#x5177;&#x4F53;&#x4FE1;&#x606F;&#xFF1A;Uint&#x3001;Float64 &#x7B49;&#x3002;Value &#x7C7B;&#x578B;&#x8FD8;&#x5305;&#x542B;&#x4E86;&#x4E00;&#x7CFB;&#x5217;&#x7C7B;&#x578B;&#x65B9;&#x6CD5;&#xFF0C;&#x6BD4;&#x5982; Int()&#xFF0C;&#x7528;&#x4E8E;&#x8FD4;&#x56DE;&#x5BF9;&#x5E94;&#x7684;&#x503C;&#x3002;&#x4EE5;&#x4E0B;&#x662F;Kind&#x7684;&#x79CD;&#x7C7B;&#xFF1A;</p>
+<pre><code class="lang-go">
+<span class="hljs-comment">// A Kind represents the specific kind of type that a Type represents.</span>
+<span class="hljs-comment">// The zero Kind is not a valid kind.</span>
+<span class="hljs-keyword">type</span> Kind <span class="hljs-keyword">uint</span>
+
+<span class="hljs-keyword">const</span> (
+    Invalid Kind = <span class="hljs-literal">iota</span>
+    Bool
+    Int
+    Int8
+    Int16
+    Int32
+    Int64
+    Uint
+    Uint8
+    Uint16
+    Uint32
+    Uint64
+    Uintptr
+    Float32
+    Float64
+    Complex64
+    Complex128
+    Array
+    Chan
+    Func
+    Interface
+    Map
+    Ptr
+    Slice
+    String
+    Struct
+    UnsafePointer
+)
+</code></pre>
+<h2 id="&#x56DB;&#x3001;&#x53CD;&#x5C04;&#x7684;&#x89C4;&#x5219;">&#x56DB;&#x3001;&#x53CD;&#x5C04;&#x7684;&#x89C4;&#x5219;</h2>
+<p>&#x5176;&#x5B9E;&#x53CD;&#x5C04;&#x7684;&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;&#x975E;&#x5E38;&#x7684;&#x7B80;&#x5355;&#xFF0C;&#x5C31;&#x662F;&#x901A;&#x8FC7;&#x5B9E;&#x4F53;&#x5BF9;&#x8C61;&#x83B7;&#x53D6;&#x53CD;&#x5C04;&#x5BF9;&#x8C61;(Value&#x3001;Type)&#xFF0C;&#x7136;&#x540E;&#x64CD;&#x4F5C;&#x76F8;&#x5E94;&#x7684;&#x65B9;&#x6CD5;&#x5373;&#x53EF;&#x3002;</p>
+<p>&#x4E0B;&#x56FE;&#x63CF;&#x8FF0;&#x4E86;&#x5B9E;&#x4F8B;&#x3001;Value&#x3001;Type &#x4E09;&#x8005;&#x4E4B;&#x95F4;&#x7684;&#x8F6C;&#x6362;&#x5173;&#x7CFB;&#xFF1A;</p>
+<p><img src="img/WX20190827-170219.png" alt="WX20190827-170219"></p>
+<p>&#x53CD;&#x5C04; API &#x7684;&#x5206;&#x7C7B;&#x603B;&#x7ED3;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><strong>1) &#x4ECE;&#x5B9E;&#x4F8B;&#x5230; Value</strong></p>
+<p>&#x901A;&#x8FC7;&#x5B9E;&#x4F8B;&#x83B7;&#x53D6; Value &#x5BF9;&#x8C61;&#xFF0C;&#x76F4;&#x63A5;&#x4F7F;&#x7528; reflect.ValueOf() &#x51FD;&#x6570;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> ValueOf(i <span class="hljs-keyword">interface</span> {}) Value
+</code></pre>
+<p><strong>2) &#x4ECE;&#x5B9E;&#x4F8B;&#x5230; Type</strong></p>
+<p>&#x901A;&#x8FC7;&#x5B9E;&#x4F8B;&#x83B7;&#x53D6;&#x53CD;&#x5C04;&#x5BF9;&#x8C61;&#x7684; Type&#xFF0C;&#x76F4;&#x63A5;&#x4F7F;&#x7528; reflect.TypeOf() &#x51FD;&#x6570;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> TypeOf(i <span class="hljs-keyword">interface</span>{}) Type
+</code></pre>
+<p><strong>3) &#x4ECE; Type &#x5230; Value</strong></p>
+<p>Type &#x91CC;&#x9762;&#x53EA;&#x6709;&#x7C7B;&#x578B;&#x4FE1;&#x606F;&#xFF0C;&#x6240;&#x4EE5;&#x76F4;&#x63A5;&#x4ECE;&#x4E00;&#x4E2A; Type &#x63A5;&#x53E3;&#x53D8;&#x91CF;&#x91CC;&#x9762;&#x662F;&#x65E0;&#x6CD5;&#x83B7;&#x5F97;&#x5B9E;&#x4F8B;&#x7684; Value &#x7684;&#xFF0C;&#x4F46;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8BE5; Type &#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x5B9E;&#x4F8B;&#x7684; Value&#x3002;reflect &#x5305;&#x63D0;&#x4F9B;&#x4E86;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#xFF0C;&#x793A;&#x4F8B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-comment">//New &#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4E00;&#x4E2A; Value&#xFF0C;&#x8BE5; Value &#x7684; type &#x4E3A; PtrTo(typ)&#xFF0C;&#x5373; Value &#x7684; Type &#x662F;&#x6307;&#x5B9A; typ &#x7684;&#x6307;&#x9488;&#x7C7B;&#x578B;</span>
+<span class="hljs-keyword">func</span> New(typ Type) Value
+<span class="hljs-comment">//Zero &#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4E00;&#x4E2A; typ &#x7C7B;&#x578B;&#x7684;&#x96F6;&#x4F73;&#xFF0C;&#x6CE8;&#x610F;&#x8FD4;&#x56DE;&#x7684; Value &#x4E0D;&#x80FD;&#x5BFB;&#x5740;&#xFF0C;&#x4F4D;&#x4E0D;&#x53EF;&#x6539;&#x53D8;</span>
+<span class="hljs-keyword">func</span> Zero(typ Type) Value
+</code></pre>
+<p>&#x5982;&#x679C;&#x77E5;&#x9053;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;&#x503C;&#x7684;&#x5E95;&#x5C42;&#x5B58;&#x653E;&#x5730;&#x5740;&#xFF0C;&#x5219;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x662F;&#x53EF;&#x4EE5;&#x4F9D;&#x636E; type &#x548C;&#x8BE5;&#x5730;&#x5740;&#x503C;&#x6062;&#x590D;&#x51FA; Value &#x7684;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> NewAt(typ Type, p unsafe.Pointer) Value
+</code></pre>
+<p><strong>4) &#x4ECE; Value &#x5230; Type</strong></p>
+<p>&#x4ECE;&#x53CD;&#x5C04;&#x5BF9;&#x8C61; Value &#x5230; Type &#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8C03;&#x7528; Value &#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x56E0;&#x4E3A; Value &#x5185;&#x90E8;&#x5B58;&#x653E;&#x7740;&#x5230; Type &#x7C7B;&#x578B;&#x7684;&#x6307;&#x9488;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> (v Value) Type() Type
+</code></pre>
+<p><strong>5) &#x4ECE; Value &#x5230;&#x5B9E;&#x4F8B;</strong></p>
+<p>Value &#x672C;&#x8EAB;&#x5C31;&#x5305;&#x542B;&#x7C7B;&#x578B;&#x548C;&#x503C;&#x4FE1;&#x606F;&#xFF0C;reflect &#x63D0;&#x4F9B;&#x4E86;&#x4E30;&#x5BCC;&#x7684;&#x65B9;&#x6CD5;&#x6765;&#x5B9E;&#x73B0;&#x4ECE; Value &#x5230;&#x5B9E;&#x4F8B;&#x7684;&#x8F6C;&#x6362;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-comment">//&#x8BE5;&#x65B9;&#x6CD5;&#x6700;&#x901A;&#x7528;&#xFF0C;&#x7528;&#x6765;&#x5C06; Value &#x8F6C;&#x6362;&#x4E3A;&#x7A7A;&#x63A5;&#x53E3;&#xFF0C;&#x8BE5;&#x7A7A;&#x63A5;&#x53E3;&#x5185;&#x90E8;&#x5B58;&#x653E;&#x5177;&#x4F53;&#x7C7B;&#x578B;&#x5B9E;&#x4F8B;</span>
+<span class="hljs-comment">//&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x63A5;&#x53E3;&#x7C7B;&#x578B;&#x67E5;&#x8BE2;&#x53BB;&#x8FD8;&#x539F;&#x4E3A;&#x5177;&#x4F53;&#x7684;&#x7C7B;&#x578B;</span>
+<span class="hljs-keyword">func</span> (v Value) Interface() &#xFF08;i <span class="hljs-keyword">interface</span>{})
+
+<span class="hljs-comment">//Value &#x81EA;&#x8EAB;&#x4E5F;&#x63D0;&#x4F9B;&#x4E30;&#x5BCC;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x76F4;&#x63A5;&#x5C06; Value &#x8F6C;&#x6362;&#x4E3A;&#x7B80;&#x5355;&#x7C7B;&#x578B;&#x5B9E;&#x4F8B;&#xFF0C;&#x5982;&#x679C;&#x7C7B;&#x578B;&#x4E0D;&#x5339;&#x914D;&#xFF0C;&#x5219;&#x76F4;&#x63A5;&#x5F15;&#x8D77; panic</span>
+<span class="hljs-keyword">func</span> (v Value) Bool () <span class="hljs-keyword">bool</span>
+<span class="hljs-keyword">func</span> (v Value) Float() <span class="hljs-keyword">float64</span>
+<span class="hljs-keyword">func</span> (v Value) Int() <span class="hljs-keyword">int64</span>
+<span class="hljs-keyword">func</span> (v Value) Uint() <span class="hljs-keyword">uint64</span>
+</code></pre>
+<p><strong>6) &#x4ECE; Value &#x7684;&#x6307;&#x9488;&#x5230;&#x503C;</strong></p>
+<p>&#x4ECE;&#x4E00;&#x4E2A;&#x6307;&#x9488;&#x7C7B;&#x578B;&#x7684; Value &#x83B7;&#x5F97;&#x503C;&#x7C7B;&#x578B; Value &#x6709;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#xFF0C;&#x793A;&#x4F8B;&#x5982;&#x4E0B;&#x3002;</p>
+<pre><code class="lang-go"><span class="hljs-comment">//&#x5982;&#x679C; v &#x7C7B;&#x578B;&#x662F;&#x63A5;&#x53E3;&#xFF0C;&#x5219; Elem() &#x8FD4;&#x56DE;&#x63A5;&#x53E3;&#x7ED1;&#x5B9A;&#x7684;&#x5B9E;&#x4F8B;&#x7684; Value&#xFF0C;&#x5982;&#x91C7; v &#x7C7B;&#x578B;&#x662F;&#x6307;&#x9488;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x6307;&#x9488;&#x503C;&#x7684; Value&#xFF0C;&#x5426;&#x5219;&#x5F15;&#x8D77; panic</span>
+<span class="hljs-keyword">func</span> (v Value) Elem() Value
+<span class="hljs-comment">//&#x5982;&#x679C; v &#x662F;&#x6307;&#x9488;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x6307;&#x9488;&#x503C;&#x7684; Value&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE; v &#x81EA;&#x8EAB;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x4E0D;&#x4F1A;&#x5F15;&#x8D77; panic</span>
+<span class="hljs-keyword">func</span> Indirect(v Value) Value
+</code></pre>
+<p><strong>7) Type &#x6307;&#x9488;&#x548C;&#x503C;&#x7684;&#x76F8;&#x4E92;&#x8F6C;&#x6362;</strong></p>
+<p>&#x6307;&#x9488;&#x7C7B;&#x578B; Type &#x5230;&#x503C;&#x7C7B;&#x578B; Type&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-comment">//t &#x5FC5;&#x987B;&#x662F; Array&#x3001;Chan&#x3001;Map&#x3001;Ptr&#x3001;Slice&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x5F15;&#x8D77; panic</span>
+<span class="hljs-comment">//Elem &#x8FD4;&#x56DE;&#x7684;&#x662F;&#x5176;&#x5185;&#x90E8;&#x5143;&#x7D20;&#x7684; Type</span>
+t.Elem() Type
+</code></pre>
+<p>&#x503C;&#x7C7B;&#x578B; Type &#x5230;&#x6307;&#x9488;&#x7C7B;&#x578B; Type&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-comment">//PtrTo &#x8FD4;&#x56DE;&#x7684;&#x662F;&#x6307;&#x5411; t &#x7684;&#x6307;&#x9488;&#x578B; Type</span>
+<span class="hljs-keyword">func</span> PtrTo(t Type) Type
+</code></pre>
+<p><strong>8) Value &#x503C;&#x7684;&#x53EF;&#x4FEE;&#x6539;&#x6027;</strong></p>
+<p>Value &#x503C;&#x7684;&#x4FEE;&#x6539;&#x6D89;&#x53CA;&#x5982;&#x4E0B;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-comment">//&#x901A;&#x8FC7; CanSet &#x5224;&#x65AD;&#x662F;&#x5426;&#x80FD;&#x4FEE;&#x6539;</span>
+<span class="hljs-keyword">func</span> (v Value ) CanSet() <span class="hljs-keyword">bool</span>
+<span class="hljs-comment">//&#x901A;&#x8FC7; Set &#x8FDB;&#x884C;&#x4FEE;&#x6539;</span>
+<span class="hljs-keyword">func</span> (v Value ) Set(x Value)
+</code></pre>
+<p>Value &#x503C;&#x5728;&#x4EC0;&#x4E48;&#x60C5;&#x51B5;&#x4E0B;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#xFF1F;&#x6211;&#x4EEC;&#x77E5;&#x9053;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#x4F20;&#x9012;&#x7ED9;&#x63A5;&#x53E3;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x5B8C;&#x5168;&#x7684;&#x503C;&#x62F7;&#x8D1D;&#xFF0C;&#x5982;&#x679C;&#x8C03;&#x7528;&#x53CD;&#x5C04;&#x7684;&#x65B9;&#x6CD5; reflect.ValueOf() &#x4F20;&#x8FDB;&#x53BB;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x503C;&#x7C7B;&#x578B;&#x53D8;&#x91CF;&#xFF0C; &#x5219;&#x83B7;&#x5F97;&#x7684; Value &#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x539F;&#x5BF9;&#x8C61;&#x7684;&#x4E00;&#x4E2A;&#x526F;&#x672C;&#xFF0C;&#x8FD9;&#x4E2A; Value &#x662F;&#x65E0;&#x8BBA;&#x5982;&#x4F55;&#x4E5F;&#x4E0D;&#x80FD;&#x88AB;&#x4FEE;&#x6539;&#x7684;&#x3002;</p>
+<p><strong>&#x6839;&#x636E; Go &#x5B98;&#x65B9;&#x5173;&#x4E8E;&#x53CD;&#x5C04;&#x7684;&#x535A;&#x5BA2;&#xFF0C;&#x53CD;&#x5C04;&#x6709;&#x4E09;&#x5927;&#x5B9A;&#x5F8B;&#xFF1A;</strong></p>
+<blockquote>
+<ol>
+<li>Reflection goes from interface value to reflection object.</li>
+<li>Reflection goes from reflection object to interface value.</li>
+<li>To modify a reflection object, the value must be settable.</li>
+</ol>
+</blockquote>
+<p>&#x7B2C;&#x4E00;&#x6761;&#x662F;&#x6700;&#x57FA;&#x672C;&#x7684;&#xFF1A;&#x53CD;&#x5C04;&#x53EF;&#x4EE5;&#x4ECE;&#x63A5;&#x53E3;&#x503C;&#x5F97;&#x5230;&#x53CD;&#x5C04;&#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x200B;        &#x53CD;&#x5C04;&#x662F;&#x4E00;&#x79CD;&#x68C0;&#x6D4B;&#x5B58;&#x50A8;&#x5728; interface&#x4E2D;&#x7684;&#x7C7B;&#x578B;&#x548C;&#x503C;&#x673A;&#x5236;&#x3002;&#x8FD9;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; TypeOf&#x51FD;&#x6570;&#x548C; ValueOf&#x51FD;&#x6570;&#x5F97;&#x5230;&#x3002;</p>
+<p>&#x7B2C;&#x4E8C;&#x6761;&#x5B9E;&#x9645;&#x4E0A;&#x548C;&#x7B2C;&#x4E00;&#x6761;&#x662F;&#x76F8;&#x53CD;&#x7684;&#x673A;&#x5236;&#xFF0C;&#x53CD;&#x5C04;&#x53EF;&#x4EE5;&#x4ECE;&#x53CD;&#x5C04;&#x5BF9;&#x8C61;&#x83B7;&#x5F97;&#x63A5;&#x53E3;&#x503C;&#x3002;</p>
+<p>&#x200B;        &#x5B83;&#x5C06; ValueOf&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x901A;&#x8FC7; Interface()&#x51FD;&#x6570;&#x53CD;&#x5411;&#x8F6C;&#x53D8;&#x6210; interface&#x53D8;&#x91CF;&#x3002;</p>
+<p>&#x524D;&#x4E24;&#x6761;&#x5C31;&#x662F;&#x8BF4; &#x63A5;&#x53E3;&#x578B;&#x53D8;&#x91CF;&#x548C; &#x53CD;&#x5C04;&#x7C7B;&#x578B;&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x76F8;&#x4E92;&#x8F6C;&#x5316;&#xFF0C;&#x53CD;&#x5C04;&#x7C7B;&#x578B;&#x5BF9;&#x8C61;&#x5B9E;&#x9645;&#x4E0A;&#x5C31;&#x662F;&#x6307;&#x7684;&#x524D;&#x9762;&#x8BF4;&#x7684; reflect.Type&#x548C; reflect.Value&#x3002;</p>
+<p>&#x7B2C;&#x4E09;&#x6761;&#x4E0D;&#x592A;&#x597D;&#x61C2;&#xFF1A;&#x5982;&#x679C;&#x9700;&#x8981;&#x64CD;&#x4F5C;&#x4E00;&#x4E2A;&#x53CD;&#x5C04;&#x53D8;&#x91CF;&#xFF0C;&#x5219;&#x5176;&#x503C;&#x5FC5;&#x987B;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x3002;</p>
+<p>&#x200B;        &#x53CD;&#x5C04;&#x53D8;&#x91CF;&#x53EF;&#x8BBE;&#x7F6E;&#x7684;&#x672C;&#x8D28;&#x662F;&#x5B83;&#x5B58;&#x50A8;&#x4E86;&#x539F;&#x53D8;&#x91CF;&#x672C;&#x8EAB;&#xFF0C;&#x8FD9;&#x6837;&#x5BF9;&#x53CD;&#x5C04;&#x53D8;&#x91CF;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x5C31;&#x4F1A;&#x53CD;&#x6620;&#x5230;&#x539F;&#x53D8;&#x91CF;&#x672C;&#x8EAB;&#xFF1B;&#x53CD;&#x4E4B;&#xFF0C;&#x5982;&#x679C;&#x53CD;&#x5C04;&#x53D8;&#x91CF;&#x4E0D;&#x80FD;&#x4EE3;&#x8868;&#x539F;&#x53D8;&#x91CF;&#xFF0C;&#x90A3;&#x4E48;&#x64CD;&#x4F5C;&#x4E86;&#x53CD;&#x5C04;&#x53D8;&#x91CF;&#xFF0C;&#x4E0D;&#x4F1A;&#x5BF9;&#x539F;&#x53D8;&#x91CF;&#x4EA7;&#x751F;&#x4EFB;&#x4F55;&#x5F71;&#x54CD;&#xFF0C;&#x8FD9;&#x4F1A;&#x7ED9;&#x4F7F;&#x7528;&#x8005;&#x5E26;&#x6765;&#x7591;&#x60D1;&#x3002;&#x6240;&#x4EE5;&#x7B2C;&#x4E8C;&#x79CD;&#x60C5;&#x51B5;&#x5728;&#x8BED;&#x8A00;&#x5C42;&#x9762;&#x662F;&#x4E0D;&#x88AB;&#x5141;&#x8BB8;&#x7684;&#x3002;</p>
+<h2 id="&#x4E94;&#x3001;&#x53CD;&#x5C04;&#x7684;&#x4F7F;&#x7528;">&#x4E94;&#x3001;&#x53CD;&#x5C04;&#x7684;&#x4F7F;&#x7528;</h2>
+<h3 id="51-&#x4ECE;relfectvalue&#x4E2D;&#x83B7;&#x53D6;&#x63A5;&#x53E3;interface&#x7684;&#x4FE1;&#x606F;">5.1 &#x4ECE;relfect.Value&#x4E2D;&#x83B7;&#x53D6;&#x63A5;&#x53E3;interface&#x7684;&#x4FE1;&#x606F;</h3>
+<p>&#x5F53;&#x6267;&#x884C;reflect.ValueOf(interface)&#x4E4B;&#x540E;&#xFF0C;&#x5C31;&#x5F97;&#x5230;&#x4E86;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;&#x4E3A;&#x201D;relfect.Value&#x201D;&#x53D8;&#x91CF;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5B83;&#x672C;&#x8EAB;&#x7684;Interface()&#x65B9;&#x6CD5;&#x83B7;&#x5F97;&#x63A5;&#x53E3;&#x53D8;&#x91CF;&#x7684;&#x771F;&#x5B9E;&#x5185;&#x5BB9;&#xFF0C;&#x7136;&#x540E;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7C7B;&#x578B;&#x5224;&#x65AD;&#x8FDB;&#x884C;&#x8F6C;&#x6362;&#xFF0C;&#x8F6C;&#x6362;&#x4E3A;&#x539F;&#x6709;&#x771F;&#x5B9E;&#x7C7B;&#x578B;&#x3002;&#x4E0D;&#x8FC7;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x80FD;&#x662F;&#x5DF2;&#x77E5;&#x539F;&#x6709;&#x7C7B;&#x578B;&#xFF0C;&#x4E5F;&#x6709;&#x53EF;&#x80FD;&#x662F;&#x672A;&#x77E5;&#x539F;&#x6709;&#x7C7B;&#x578B;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x4E0B;&#x9762;&#x5206;&#x4E24;&#x79CD;&#x60C5;&#x51B5;&#x8FDB;&#x884C;&#x8BF4;&#x660E;&#x3002;</p>
+<h4 id="&#x5DF2;&#x77E5;&#x539F;&#x6709;&#x7C7B;&#x578B;">&#x5DF2;&#x77E5;&#x539F;&#x6709;&#x7C7B;&#x578B;</h4>
+<p>&#x5DF2;&#x77E5;&#x7C7B;&#x578B;&#x540E;&#x8F6C;&#x6362;&#x4E3A;&#x5176;&#x5BF9;&#x5E94;&#x7684;&#x7C7B;&#x578B;&#x7684;&#x505A;&#x6CD5;&#x5982;&#x4E0B;&#xFF0C;&#x76F4;&#x63A5;&#x901A;&#x8FC7;Interface&#x65B9;&#x6CD5;&#x7136;&#x540E;&#x5F3A;&#x5236;&#x8F6C;&#x6362;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-go">realValue := value.Interface().(&#x5DF2;&#x77E5;&#x7684;&#x7C7B;&#x578B;)
+</code></pre>
+<p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;fmt&quot;</span>
+    <span class="hljs-string">&quot;reflect&quot;</span>
+)
+
+<span class="hljs-keyword">func</span> main() {
+    <span class="hljs-keyword">var</span> num <span class="hljs-keyword">float64</span> = <span class="hljs-number">1.2345</span>
+
+    pointer := reflect.ValueOf(&amp;num)
+    value := reflect.ValueOf(num)
+
+    <span class="hljs-comment">// &#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x201C;&#x5F3A;&#x5236;&#x8F6C;&#x6362;&#x201D;&#xFF0C;&#x4F46;&#x662F;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8F6C;&#x6362;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5982;&#x679C;&#x8F6C;&#x6362;&#x7684;&#x7C7B;&#x578B;&#x4E0D;&#x5B8C;&#x5168;&#x7B26;&#x5408;&#xFF0C;&#x5219;&#x76F4;&#x63A5;panic</span>
+    <span class="hljs-comment">// Golang &#x5BF9;&#x7C7B;&#x578B;&#x8981;&#x6C42;&#x975E;&#x5E38;&#x4E25;&#x683C;&#xFF0C;&#x7C7B;&#x578B;&#x4E00;&#x5B9A;&#x8981;&#x5B8C;&#x5168;&#x7B26;&#x5408;</span>
+    <span class="hljs-comment">// &#x5982;&#x4E0B;&#x4E24;&#x4E2A;&#xFF0C;&#x4E00;&#x4E2A;&#x662F;*float64&#xFF0C;&#x4E00;&#x4E2A;&#x662F;float64&#xFF0C;&#x5982;&#x679C;&#x5F04;&#x6DF7;&#xFF0C;&#x5219;&#x4F1A;panic</span>
+    convertPointer := pointer.Interface().(*<span class="hljs-keyword">float64</span>)
+    convertValue := value.Interface().(<span class="hljs-keyword">float64</span>)
+
+    fmt.Println(convertPointer)
+    fmt.Println(convertValue)
+}
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>0xc000098000
+1.2345
+</code></pre><p>&#x8BF4;&#x660E;</p>
+<ol>
+<li>&#x8F6C;&#x6362;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5982;&#x679C;&#x8F6C;&#x6362;&#x7684;&#x7C7B;&#x578B;&#x4E0D;&#x5B8C;&#x5168;&#x7B26;&#x5408;&#xFF0C;&#x5219;&#x76F4;&#x63A5;panic&#xFF0C;&#x7C7B;&#x578B;&#x8981;&#x6C42;&#x975E;&#x5E38;&#x4E25;&#x683C;&#xFF01;</li>
+<li>&#x8F6C;&#x6362;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8981;&#x533A;&#x5206;&#x662F;&#x6307;&#x9488;&#x8FD8;&#x662F;&#x6307;</li>
+<li>&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x53CD;&#x5C04;&#x53EF;&#x4EE5;&#x5C06;&#x201C;&#x53CD;&#x5C04;&#x7C7B;&#x578B;&#x5BF9;&#x8C61;&#x201D;&#x518D;&#x91CD;&#x65B0;&#x8F6C;&#x6362;&#x4E3A;&#x201C;&#x63A5;&#x53E3;&#x7C7B;&#x578B;&#x53D8;&#x91CF;&#x201D;</li>
+</ol>
+<h4 id="&#x672A;&#x77E5;&#x539F;&#x6709;&#x7C7B;&#x578B;">&#x672A;&#x77E5;&#x539F;&#x6709;&#x7C7B;&#x578B;</h4>
+<p>&#x5F88;&#x591A;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x80FD;&#x5E76;&#x4E0D;&#x77E5;&#x9053;&#x5176;&#x5177;&#x4F53;&#x7C7B;&#x578B;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#xFF0C;&#x8BE5;&#x5982;&#x4F55;&#x505A;&#x5462;&#xFF1F;&#x9700;&#x8981;&#x6211;&#x4EEC;&#x8FDB;&#x884C;&#x904D;&#x5386;&#x63A2;&#x6D4B;&#x5176;Filed&#x6765;&#x5F97;&#x77E5;&#xFF0C;&#x793A;&#x4F8B;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;fmt&quot;</span>
+    <span class="hljs-string">&quot;reflect&quot;</span>
+)
+
+
+
+
+<span class="hljs-keyword">type</span> Person <span class="hljs-keyword">struct</span> {
+    Name <span class="hljs-keyword">string</span>
+    Age <span class="hljs-keyword">int</span>
+    Sex <span class="hljs-keyword">string</span>
+}
+
+<span class="hljs-keyword">func</span> (p Person)Say(msg <span class="hljs-keyword">string</span>)  {
+    fmt.Println(<span class="hljs-string">&quot;hello&#xFF0C;&quot;</span>,msg)
+}
+<span class="hljs-keyword">func</span> (p Person)PrintInfo()  {
+    fmt.Printf(<span class="hljs-string">&quot;&#x59D3;&#x540D;&#xFF1A;%s,&#x5E74;&#x9F84;&#xFF1A;%d&#xFF0C;&#x6027;&#x522B;&#xFF1A;%s\n&quot;</span>,p.Name,p.Age,p.Sex)
+}
+
+
+
+<span class="hljs-keyword">func</span> main() {
+    p1 := Person{<span class="hljs-string">&quot;&#x738B;&#x4E8C;&#x72D7;&quot;</span>,<span class="hljs-number">30</span>,<span class="hljs-string">&quot;&#x7537;&quot;</span>}
+
+    DoFiledAndMethod(p1)
+
+}
+
+<span class="hljs-comment">// &#x901A;&#x8FC7;&#x63A5;&#x53E3;&#x6765;&#x83B7;&#x53D6;&#x4EFB;&#x610F;&#x53C2;&#x6570;</span>
+<span class="hljs-keyword">func</span> DoFiledAndMethod(input <span class="hljs-keyword">interface</span>{}) {
+
+    getType := reflect.TypeOf(input) <span class="hljs-comment">//&#x5148;&#x83B7;&#x53D6;input&#x7684;&#x7C7B;&#x578B;</span>
+    fmt.Println(<span class="hljs-string">&quot;get Type is :&quot;</span>, getType.Name()) <span class="hljs-comment">// Person</span>
+    fmt.Println(<span class="hljs-string">&quot;get Kind is : &quot;</span>, getType.Kind()) <span class="hljs-comment">// struct</span>
+
+    getValue := reflect.ValueOf(input)
+    fmt.Println(<span class="hljs-string">&quot;get all Fields is:&quot;</span>, getValue) <span class="hljs-comment">//{&#x738B;&#x4E8C;&#x72D7; 30 &#x7537;}</span>
+
+    <span class="hljs-comment">// &#x83B7;&#x53D6;&#x65B9;&#x6CD5;&#x5B57;&#x6BB5;</span>
+    <span class="hljs-comment">// 1. &#x5148;&#x83B7;&#x53D6;interface&#x7684;reflect.Type&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;NumField&#x8FDB;&#x884C;&#x904D;&#x5386;</span>
+    <span class="hljs-comment">// 2. &#x518D;&#x901A;&#x8FC7;reflect.Type&#x7684;Field&#x83B7;&#x53D6;&#x5176;Field</span>
+    <span class="hljs-comment">// 3. &#x6700;&#x540E;&#x901A;&#x8FC7;Field&#x7684;Interface()&#x5F97;&#x5230;&#x5BF9;&#x5E94;&#x7684;value</span>
+    <span class="hljs-keyword">for</span> i := <span class="hljs-number">0</span>; i &lt; getType.NumField(); i++ {
+        field := getType.Field(i)
+        value := getValue.Field(i).Interface() <span class="hljs-comment">//&#x83B7;&#x53D6;&#x7B2C;i&#x4E2A;&#x503C;</span>
+        fmt.Printf(<span class="hljs-string">&quot;&#x5B57;&#x6BB5;&#x540D;&#x79F0;:%s, &#x5B57;&#x6BB5;&#x7C7B;&#x578B;:%s, &#x5B57;&#x6BB5;&#x6570;&#x503C;:%v \n&quot;</span>, field.Name, field.Type, value)
+    }
+
+    <span class="hljs-comment">// &#x901A;&#x8FC7;&#x53CD;&#x5C04;&#xFF0C;&#x64CD;&#x4F5C;&#x65B9;&#x6CD5;</span>
+    <span class="hljs-comment">// 1. &#x5148;&#x83B7;&#x53D6;interface&#x7684;reflect.Type&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;.NumMethod&#x8FDB;&#x884C;&#x904D;&#x5386;</span>
+    <span class="hljs-comment">// 2. &#x518D;&#x516C;&#x56FD;reflect.Type&#x7684;Method&#x83B7;&#x53D6;&#x5176;Method</span>
+    <span class="hljs-keyword">for</span> i := <span class="hljs-number">0</span>; i &lt; getType.NumMethod(); i++ {
+        method := getType.Method(i)
+        fmt.Printf(<span class="hljs-string">&quot;&#x65B9;&#x6CD5;&#x540D;&#x79F0;:%s, &#x65B9;&#x6CD5;&#x7C7B;&#x578B;:%v \n&quot;</span>, method.Name, method.Type)
+    }
+}
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>get Type is : Person
+get Kind is :  struct
+get all Fields is: {&#x738B;&#x4E8C;&#x72D7; 30 &#x7537;}
+&#x5B57;&#x6BB5;&#x540D;&#x79F0;:Name, &#x5B57;&#x6BB5;&#x7C7B;&#x578B;:string, &#x5B57;&#x6BB5;&#x6570;&#x503C;:&#x738B;&#x4E8C;&#x72D7; 
+&#x5B57;&#x6BB5;&#x540D;&#x79F0;:Age, &#x5B57;&#x6BB5;&#x7C7B;&#x578B;:int, &#x5B57;&#x6BB5;&#x6570;&#x503C;:30 
+&#x5B57;&#x6BB5;&#x540D;&#x79F0;:Sex, &#x5B57;&#x6BB5;&#x7C7B;&#x578B;:string, &#x5B57;&#x6BB5;&#x6570;&#x503C;:&#x7537; 
+&#x65B9;&#x6CD5;&#x540D;&#x79F0;:PrintInfo, &#x65B9;&#x6CD5;&#x7C7B;&#x578B;:func(main.Person) 
+&#x65B9;&#x6CD5;&#x540D;&#x79F0;:Say, &#x65B9;&#x6CD5;&#x7C7B;&#x578B;:func(main.Person, string)
+</code></pre><p>&#x8BF4;&#x660E;</p>
+<p>&#x901A;&#x8FC7;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x53EF;&#x4EE5;&#x5F97;&#x77E5;&#x83B7;&#x53D6;&#x672A;&#x77E5;&#x7C7B;&#x578B;&#x7684;interface&#x7684;&#x5177;&#x4F53;&#x53D8;&#x91CF;&#x53CA;&#x5176;&#x7C7B;&#x578B;&#x7684;&#x6B65;&#x9AA4;&#x4E3A;&#xFF1A;</p>
+<ol>
+<li>&#x5148;&#x83B7;&#x53D6;interface&#x7684;reflect.Type&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;NumField&#x8FDB;&#x884C;&#x904D;&#x5386;</li>
+<li>&#x518D;&#x901A;&#x8FC7;reflect.Type&#x7684;Field&#x83B7;&#x53D6;&#x5176;Field</li>
+<li>&#x6700;&#x540E;&#x901A;&#x8FC7;Field&#x7684;Interface()&#x5F97;&#x5230;&#x5BF9;&#x5E94;&#x7684;value</li>
+</ol>
+<p>&#x901A;&#x8FC7;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x53EF;&#x4EE5;&#x5F97;&#x77E5;&#x83B7;&#x53D6;&#x672A;&#x77E5;&#x7C7B;&#x578B;&#x7684;interface&#x7684;&#x6240;&#x5C5E;&#x65B9;&#x6CD5;&#xFF08;&#x51FD;&#x6570;&#xFF09;&#x7684;&#x6B65;&#x9AA4;&#x4E3A;&#xFF1A;</p>
+<ol>
+<li>&#x5148;&#x83B7;&#x53D6;interface&#x7684;reflect.Type&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;NumMethod&#x8FDB;&#x884C;&#x904D;&#x5386;</li>
+<li>&#x518D;&#x5206;&#x522B;&#x901A;&#x8FC7;reflect.Type&#x7684;Method&#x83B7;&#x53D6;&#x5BF9;&#x5E94;&#x7684;&#x771F;&#x5B9E;&#x7684;&#x65B9;&#x6CD5;&#xFF08;&#x51FD;&#x6570;&#xFF09;</li>
+<li>&#x6700;&#x540E;&#x5BF9;&#x7ED3;&#x679C;&#x53D6;&#x5176;Name&#x548C;Type&#x5F97;&#x77E5;&#x5177;&#x4F53;&#x7684;&#x65B9;&#x6CD5;&#x540D;</li>
+<li>&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x53CD;&#x5C04;&#x53EF;&#x4EE5;&#x5C06;&#x201C;&#x53CD;&#x5C04;&#x7C7B;&#x578B;&#x5BF9;&#x8C61;&#x201D;&#x518D;&#x91CD;&#x65B0;&#x8F6C;&#x6362;&#x4E3A;&#x201C;&#x63A5;&#x53E3;&#x7C7B;&#x578B;&#x53D8;&#x91CF;&#x201D;</li>
+<li>struct &#x6216;&#x8005; struct &#x7684;&#x5D4C;&#x5957;&#x90FD;&#x662F;&#x4E00;&#x6837;&#x7684;&#x5224;&#x65AD;&#x5904;&#x7406;&#x65B9;&#x5F0F;</li>
+</ol>
+<p>&#x5982;&#x679C;&#x662F;struct&#x7684;&#x8BDD;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;Elem()</p>
+<pre><code class="lang-go">tag := t.Elem().Field(<span class="hljs-number">0</span>).Tag <span class="hljs-comment">//&#x83B7;&#x53D6;&#x5B9A;&#x4E49;&#x5728;struct&#x91CC;&#x9762;&#x7684;Tag&#x5C5E;&#x6027;</span>
+name := v.Elem().Field(<span class="hljs-number">0</span>).String() <span class="hljs-comment">//&#x83B7;&#x53D6;&#x5B58;&#x50A8;&#x5728;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x6BB5;&#x91CC;&#x9762;&#x7684;&#x503C;</span>
+</code></pre>
+<h3 id="52-&#x901A;&#x8FC7;reflectvalue&#x8BBE;&#x7F6E;&#x5B9E;&#x9645;&#x53D8;&#x91CF;&#x7684;&#x503C;">5.2 &#x901A;&#x8FC7;reflect.Value&#x8BBE;&#x7F6E;&#x5B9E;&#x9645;&#x53D8;&#x91CF;&#x7684;&#x503C;</h3>
+<p>reflect.Value&#x662F;&#x901A;&#x8FC7;reflect.ValueOf(X)&#x83B7;&#x5F97;&#x7684;&#xFF0C;&#x53EA;&#x6709;&#x5F53;X&#x662F;&#x6307;&#x9488;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x624D;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;reflec.Value&#x4FEE;&#x6539;&#x5B9E;&#x9645;&#x53D8;&#x91CF;X&#x7684;&#x503C;&#xFF0C;&#x5373;&#xFF1A;&#x8981;&#x4FEE;&#x6539;&#x53CD;&#x5C04;&#x7C7B;&#x578B;&#x7684;&#x5BF9;&#x8C61;&#x5C31;&#x4E00;&#x5B9A;&#x8981;&#x4FDD;&#x8BC1;&#x5176;&#x503C;&#x662F;&#x201C;addressable&#x201D;&#x7684;&#x3002;</p>
+<p>&#x8FD9;&#x91CC;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<p><img src="img/WX20190826-143547.png" alt="WX20190826-143547"></p>
+<p>&#x89E3;&#x91CA;&#x8D77;&#x6765;&#x5C31;&#x662F;&#xFF1A;Elem&#x8FD4;&#x56DE;&#x63A5;&#x53E3;v&#x5305;&#x542B;&#x7684;&#x503C;&#x6216;&#x6307;&#x9488;v&#x6307;&#x5411;&#x7684;&#x503C;&#x3002;&#x5982;&#x679C;v&#x7684;&#x7C7B;&#x578B;&#x4E0D;&#x662F;interface&#x6216;ptr&#xFF0C;&#x5B83;&#x4F1A;&#x6050;&#x614C;&#x3002;&#x5982;&#x679C;v&#x4E3A;&#x96F6;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x96F6;&#x503C;&#x3002;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;fmt&quot;</span>
+    <span class="hljs-string">&quot;reflect&quot;</span>
+)
+
+<span class="hljs-keyword">func</span> main() {
+
+    <span class="hljs-keyword">var</span> num <span class="hljs-keyword">float64</span> = <span class="hljs-number">1.2345</span>
+    fmt.Println(<span class="hljs-string">&quot;old value of pointer:&quot;</span>, num)
+
+    <span class="hljs-comment">// &#x901A;&#x8FC7;reflect.ValueOf&#x83B7;&#x53D6;num&#x4E2D;&#x7684;reflect.Value&#xFF0C;&#x6CE8;&#x610F;&#xFF0C;&#x53C2;&#x6570;&#x5FC5;&#x987B;&#x662F;&#x6307;&#x9488;&#x624D;&#x80FD;&#x4FEE;&#x6539;&#x5176;&#x503C;</span>
+    pointer := reflect.ValueOf(&amp;num)
+    newValue := pointer.Elem()
+
+    fmt.Println(<span class="hljs-string">&quot;type of pointer:&quot;</span>, newValue.Type())
+    fmt.Println(<span class="hljs-string">&quot;settability of pointer:&quot;</span>, newValue.CanSet())
+
+    <span class="hljs-comment">// &#x91CD;&#x65B0;&#x8D4B;&#x503C;</span>
+    newValue.SetFloat(<span class="hljs-number">77</span>)
+    fmt.Println(<span class="hljs-string">&quot;new value of pointer:&quot;</span>, num)
+
+    <span class="hljs-comment">////////////////////</span>
+    <span class="hljs-comment">// &#x5982;&#x679C;reflect.ValueOf&#x7684;&#x53C2;&#x6570;&#x4E0D;&#x662F;&#x6307;&#x9488;&#xFF0C;&#x4F1A;&#x5982;&#x4F55;&#xFF1F;</span>
+    <span class="hljs-comment">//pointer = reflect.ValueOf(num)</span>
+    <span class="hljs-comment">//newValue = pointer.Elem() // &#x5982;&#x679C;&#x975E;&#x6307;&#x9488;&#xFF0C;&#x8FD9;&#x91CC;&#x76F4;&#x63A5;panic&#xFF0C;&#x201C;panic: reflect: call of reflect.Value.Elem on float64 Value&#x201D;</span>
+}
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>old value of pointer: 1.2345
+type of pointer: float64
+settability of pointer: true
+new value of pointer: 77
+</code></pre><p>&#x8BF4;&#x660E;</p>
+<ol>
+<li>&#x9700;&#x8981;&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;&#x662F;<em> float64&#x8FD9;&#x4E2A;&#x6307;&#x9488;&#xFF0C;&#x7136;&#x540E;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;pointer.Elem()&#x53BB;&#x83B7;&#x53D6;&#x6240;&#x6307;&#x5411;&#x7684;Value&#xFF0C;<em>*&#x6CE8;&#x610F;&#x4E00;&#x5B9A;&#x8981;&#x662F;&#x6307;&#x9488;</em></em>&#x3002;</li>
+<li>&#x5982;&#x679C;&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;&#x4E0D;&#x662F;&#x6307;&#x9488;&#xFF0C;&#x800C;&#x662F;&#x53D8;&#x91CF;&#xFF0C;&#x90A3;&#x4E48;<ul>
+<li>&#x901A;&#x8FC7;Elem&#x83B7;&#x53D6;&#x539F;&#x59CB;&#x503C;&#x5BF9;&#x5E94;&#x7684;&#x5BF9;&#x8C61;&#x5219;&#x76F4;&#x63A5;panic</li>
+<li>&#x901A;&#x8FC7;CanSet&#x65B9;&#x6CD5;&#x67E5;&#x8BE2;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x8FD4;&#x56DE;false</li>
+</ul>
+</li>
+<li>newValue.CantSet()&#x8868;&#x793A;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x91CD;&#x65B0;&#x8BBE;&#x7F6E;&#x5176;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x8F93;&#x51FA;&#x7684;&#x662F;true&#x5219;&#x53EF;&#x4FEE;&#x6539;&#xFF0C;&#x5426;&#x5219;&#x4E0D;&#x80FD;&#x4FEE;&#x6539;&#xFF0C;&#x4FEE;&#x6539;&#x5B8C;&#x4E4B;&#x540E;&#x518D;&#x8FDB;&#x884C;&#x6253;&#x5370;&#x53D1;&#x73B0;&#x771F;&#x7684;&#x5DF2;&#x7ECF;&#x4FEE;&#x6539;&#x4E86;&#x3002;</li>
+<li>reflect.Value.Elem() &#x8868;&#x793A;&#x83B7;&#x53D6;&#x539F;&#x59CB;&#x503C;&#x5BF9;&#x5E94;&#x7684;&#x53CD;&#x5C04;&#x5BF9;&#x8C61;&#xFF0C;&#x53EA;&#x6709;&#x539F;&#x59CB;&#x5BF9;&#x8C61;&#x624D;&#x80FD;&#x4FEE;&#x6539;&#xFF0C;&#x5F53;&#x524D;&#x53CD;&#x5C04;&#x5BF9;&#x8C61;&#x662F;&#x4E0D;&#x80FD;&#x4FEE;&#x6539;&#x7684;</li>
+<li>&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x5982;&#x679C;&#x8981;&#x4FEE;&#x6539;&#x53CD;&#x5C04;&#x7C7B;&#x578B;&#x5BF9;&#x8C61;&#xFF0C;&#x5176;&#x503C;&#x5FC5;&#x987B;&#x662F;&#x201C;addressable&#x201D;&#x3010;&#x5BF9;&#x5E94;&#x7684;&#x8981;&#x4F20;&#x5165;&#x7684;&#x662F;&#x6307;&#x9488;&#xFF0C;&#x540C;&#x65F6;&#x8981;&#x901A;&#x8FC7;Elem&#x65B9;&#x6CD5;&#x83B7;&#x53D6;&#x539F;&#x59CB;&#x503C;&#x5BF9;&#x5E94;&#x7684;&#x53CD;&#x5C04;&#x5BF9;&#x8C61;&#x3011;</li>
+<li>struct &#x6216;&#x8005; struct &#x7684;&#x5D4C;&#x5957;&#x90FD;&#x662F;&#x4E00;&#x6837;&#x7684;&#x5224;&#x65AD;&#x5904;&#x7406;&#x65B9;&#x5F0F;</li>
+</ol>
+<h3 id="53-&#x901A;&#x8FC7;reflectvalue&#x6765;&#x8FDB;&#x884C;&#x65B9;&#x6CD5;&#x7684;&#x8C03;&#x7528;">5.3 &#x901A;&#x8FC7;reflect.Value&#x6765;&#x8FDB;&#x884C;&#x65B9;&#x6CD5;&#x7684;&#x8C03;&#x7528;</h3>
+<p>&#x8FD9;&#x7B97;&#x662F;&#x4E00;&#x4E2A;&#x9AD8;&#x7EA7;&#x7528;&#x6CD5;&#x4E86;&#xFF0C;&#x524D;&#x9762;&#x6211;&#x4EEC;&#x53EA;&#x8BF4;&#x5230;&#x5BF9;&#x7C7B;&#x578B;&#x3001;&#x53D8;&#x91CF;&#x7684;&#x51E0;&#x79CD;&#x53CD;&#x5C04;&#x7684;&#x7528;&#x6CD5;&#xFF0C;&#x5305;&#x62EC;&#x5982;&#x4F55;&#x83B7;&#x53D6;&#x5176;&#x503C;&#x3001;&#x5176;&#x7C7B;&#x578B;&#x3001;&#x4EE5;&#x53CA;&#x5982;&#x4F55;&#x91CD;&#x65B0;&#x8BBE;&#x7F6E;&#x65B0;&#x503C;&#x3002;&#x4F46;&#x662F;&#x5728;&#x9879;&#x76EE;&#x5E94;&#x7528;&#x4E2D;&#xFF0C;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x5E38;&#x7528;&#x5E76;&#x4E14;&#x5C5E;&#x4E8E;&#x9AD8;&#x7EA7;&#x7684;&#x7528;&#x6CD5;&#xFF0C;&#x5C31;&#x662F;&#x901A;&#x8FC7;reflect&#x6765;&#x8FDB;&#x884C;&#x65B9;&#x6CD5;&#x3010;&#x51FD;&#x6570;&#x3011;&#x7684;&#x8C03;&#x7528;&#x3002;&#x6BD4;&#x5982;&#x6211;&#x4EEC;&#x8981;&#x505A;&#x6846;&#x67B6;&#x5DE5;&#x7A0B;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9700;&#x8981;&#x53EF;&#x4EE5;&#x968F;&#x610F;&#x6269;&#x5C55;&#x65B9;&#x6CD5;&#xFF0C;&#x6216;&#x8005;&#x8BF4;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x65B9;&#x6CD5;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x4EC0;&#x4E48;&#x624B;&#x6BB5;&#x6765;&#x6269;&#x5C55;&#x8BA9;&#x7528;&#x6237;&#x80FD;&#x591F;&#x81EA;&#x5B9A;&#x4E49;&#x5462;&#xFF1F;&#x5173;&#x952E;&#x70B9;&#x5728;&#x4E8E;&#x7528;&#x6237;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x65B9;&#x6CD5;&#x662F;&#x672A;&#x53EF;&#x77E5;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;reflect&#x6765;&#x641E;&#x5B9A;&#x3002;</p>
+<p>Call()&#x65B9;&#x6CD5;&#xFF1A;</p>
+<p><img src="img/WX20190902-144001.png" alt="WX20190902-144001"></p>
+<p><strong>&#x901A;&#x8FC7;&#x53CD;&#x5C04;&#xFF0C;&#x8C03;&#x7528;&#x65B9;&#x6CD5;&#x3002;</strong></p>
+<p>&#x5148;&#x83B7;&#x53D6;&#x7ED3;&#x6784;&#x4F53;&#x5BF9;&#x8C61;&#xFF0C;&#x7136;&#x540E;</p>
+<p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;fmt&quot;</span>
+    <span class="hljs-string">&quot;reflect&quot;</span>
+)
+
+
+
+
+<span class="hljs-keyword">type</span> Person <span class="hljs-keyword">struct</span> {
+    Name <span class="hljs-keyword">string</span>
+    Age <span class="hljs-keyword">int</span>
+    Sex <span class="hljs-keyword">string</span>
+}
+
+<span class="hljs-keyword">func</span> (p Person)Say(msg <span class="hljs-keyword">string</span>)  {
+    fmt.Println(<span class="hljs-string">&quot;hello&#xFF0C;&quot;</span>,msg)
+}
+<span class="hljs-keyword">func</span> (p Person)PrintInfo()  {
+    fmt.Printf(<span class="hljs-string">&quot;&#x59D3;&#x540D;&#xFF1A;%s,&#x5E74;&#x9F84;&#xFF1A;%d&#xFF0C;&#x6027;&#x522B;&#xFF1A;%s\n&quot;</span>,p.Name,p.Age,p.Sex)
+}
+
+<span class="hljs-keyword">func</span> (p Person) Test(i,j <span class="hljs-keyword">int</span>,s <span class="hljs-keyword">string</span>){
+    fmt.Println(i,j,s)
+}
+
+
+<span class="hljs-comment">// &#x5982;&#x4F55;&#x901A;&#x8FC7;&#x53CD;&#x5C04;&#x6765;&#x8FDB;&#x884C;&#x65B9;&#x6CD5;&#x7684;&#x8C03;&#x7528;&#xFF1F;</span>
+<span class="hljs-comment">// &#x672C;&#x6765;&#x53EF;&#x4EE5;&#x7528;&#x7ED3;&#x6784;&#x4F53;&#x5BF9;&#x8C61;.&#x65B9;&#x6CD5;&#x540D;&#x79F0;()&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x7684;&#xFF0C;</span>
+<span class="hljs-comment">// &#x4F46;&#x662F;&#x5982;&#x679C;&#x8981;&#x901A;&#x8FC7;&#x53CD;&#x5C04;&#xFF0C;</span>
+<span class="hljs-comment">// &#x90A3;&#x4E48;&#x9996;&#x5148;&#x8981;&#x5C06;&#x65B9;&#x6CD5;&#x6CE8;&#x518C;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;MethodByName&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;&#x53CD;&#x5C04;&#x8C03;&#x52A8;mv.Call</span>
+
+<span class="hljs-keyword">func</span> main() {
+    p2 := Person{<span class="hljs-string">&quot;Ruby&quot;</span>,<span class="hljs-number">30</span>,<span class="hljs-string">&quot;&#x7537;&quot;</span>}
+    <span class="hljs-comment">// 1. &#x8981;&#x901A;&#x8FC7;&#x53CD;&#x5C04;&#x6765;&#x8C03;&#x7528;&#x8D77;&#x5BF9;&#x5E94;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5FC5;&#x987B;&#x8981;&#x5148;&#x901A;&#x8FC7;reflect.ValueOf(interface)&#x6765;&#x83B7;&#x53D6;&#x5230;reflect.Value&#xFF0C;</span>
+    <span class="hljs-comment">// &#x5F97;&#x5230;&#x201C;&#x53CD;&#x5C04;&#x7C7B;&#x578B;&#x5BF9;&#x8C61;&#x201D;&#x540E;&#x624D;&#x80FD;&#x505A;&#x4E0B;&#x4E00;&#x6B65;&#x5904;&#x7406;</span>
+    getValue := reflect.ValueOf(p2)
+
+    <span class="hljs-comment">// 2.&#x4E00;&#x5B9A;&#x8981;&#x6307;&#x5B9A;&#x53C2;&#x6570;&#x4E3A;&#x6B63;&#x786E;&#x7684;&#x65B9;&#x6CD5;&#x540D;</span>
+    <span class="hljs-comment">// &#x5148;&#x770B;&#x770B;&#x6CA1;&#x6709;&#x53C2;&#x6570;&#x7684;&#x8C03;&#x7528;&#x65B9;&#x6CD5;</span>
+
+    methodValue1 := getValue.MethodByName(<span class="hljs-string">&quot;PrintInfo&quot;</span>)
+    fmt.Printf(<span class="hljs-string">&quot;Kind : %s, Type : %s\n&quot;</span>,methodValue1.Kind(),methodValue1.Type())
+    methodValue1.Call(<span class="hljs-literal">nil</span>) <span class="hljs-comment">//&#x6CA1;&#x6709;&#x53C2;&#x6570;&#xFF0C;&#x76F4;&#x63A5;&#x5199;nil</span>
+
+    args1 := <span class="hljs-built_in">make</span>([]reflect.Value, <span class="hljs-number">0</span>) <span class="hljs-comment">//&#x6216;&#x8005;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7A7A;&#x7684;&#x5207;&#x7247;&#x4E5F;&#x53EF;&#x4EE5;</span>
+    methodValue1.Call(args1)
+
+    <span class="hljs-comment">// &#x6709;&#x53C2;&#x6570;&#x7684;&#x65B9;&#x6CD5;&#x8C03;&#x7528;</span>
+    methodValue2 := getValue.MethodByName(<span class="hljs-string">&quot;Say&quot;</span>)
+    fmt.Printf(<span class="hljs-string">&quot;Kind : %s, Type : %s\n&quot;</span>,methodValue2.Kind(),methodValue2.Type())
+    args2 := []reflect.Value{reflect.ValueOf(<span class="hljs-string">&quot;&#x53CD;&#x5C04;&#x673A;&#x5236;&quot;</span>)}
+    methodValue2.Call(args2)
+
+    methodValue3 := getValue.MethodByName(<span class="hljs-string">&quot;Test&quot;</span>)
+    fmt.Printf(<span class="hljs-string">&quot;Kind : %s, Type : %s\n&quot;</span>,methodValue3.Kind(),methodValue3.Type())
+    args3 := []reflect.Value{reflect.ValueOf(<span class="hljs-number">100</span>), reflect.ValueOf(<span class="hljs-number">200</span>),reflect.ValueOf(<span class="hljs-string">&quot;Hello&quot;</span>)}
+
+    methodValue3.Call(args3)
+}
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre><code>Kind : func, Type : func()
+&#x59D3;&#x540D;&#xFF1A;Ruby,&#x5E74;&#x9F84;&#xFF1A;30&#xFF0C;&#x6027;&#x522B;&#xFF1A;&#x7537;
+&#x59D3;&#x540D;&#xFF1A;Ruby,&#x5E74;&#x9F84;&#xFF1A;30&#xFF0C;&#x6027;&#x522B;&#xFF1A;&#x7537;
+Kind : func, Type : func(string)
+hello&#xFF0C; &#x53CD;&#x5C04;&#x673A;&#x5236;
+Kind : func, Type : func(int, int, string)
+100 200 Hello
+</code></pre><p><strong>&#x901A;&#x8FC7;&#x53CD;&#x5C04;&#xFF0C;&#x8C03;&#x7528;&#x51FD;&#x6570;&#x3002;</strong></p>
+<p>&#x9996;&#x5148;&#x6211;&#x4EEC;&#x8981;&#x5148;&#x786E;&#x8BA4;&#x4E00;&#x70B9;&#xFF0C;&#x51FD;&#x6570;&#x50CF;&#x666E;&#x901A;&#x7684;&#x53D8;&#x91CF;&#x4E00;&#x6837;&#xFF0C;&#x4E4B;&#x524D;&#x7684;&#x7AE0;&#x8282;&#x4E2D;&#x6211;&#x4EEC;&#x5728;&#x8BB2;&#x5230;&#x51FD;&#x6570;&#x7684;&#x672C;&#x8D28;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x662F;&#x53EF;&#x4EE5;&#x628A;&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x4E00;&#x79CD;&#x53D8;&#x91CF;&#x7C7B;&#x578B;&#x7684;&#xFF0C;&#x800C;&#x4E14;&#x662F;&#x5F15;&#x7528;&#x7C7B;&#x578B;&#x3002;&#x5982;&#x679C;&#x8BF4;Fun()&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x90A3;&#x4E48;f1 := Fun&#x4E5F;&#x662F;&#x53EF;&#x4EE5;&#x7684;&#xFF0C;&#x90A3;&#x4E48;f1&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x5982;&#x679C;&#x76F4;&#x63A5;&#x8C03;&#x7528;f1()&#xFF0C;&#x90A3;&#x4E48;&#x8FD0;&#x884C;&#x7684;&#x5C31;&#x662F;Fun()&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x5C31;&#x5148;&#x901A;&#x8FC7;ValueOf()&#x6765;&#x83B7;&#x53D6;&#x51FD;&#x6570;&#x7684;&#x53CD;&#x5C04;&#x5BF9;&#x8C61;&#xFF0C;&#x53EF;&#x4EE5;&#x5224;&#x65AD;&#x5B83;&#x7684;Kind&#xFF0C;&#x662F;&#x4E00;&#x4E2A;func&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x53EF;&#x4EE5;&#x6267;&#x884C;Call()&#x8FDB;&#x884C;&#x51FD;&#x6570;&#x7684;&#x8C03;&#x7528;&#x3002;</p>
+<p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;fmt&quot;</span>
+    <span class="hljs-string">&quot;reflect&quot;</span>
+)
+
+<span class="hljs-keyword">func</span> main() {
+    <span class="hljs-comment">//&#x51FD;&#x6570;&#x7684;&#x53CD;&#x5C04;</span>
+    f1 := fun1
+    value := reflect.ValueOf(f1)
+    fmt.Printf(<span class="hljs-string">&quot;Kind : %s , Type : %s\n&quot;</span>,value.Kind(),value.Type()) <span class="hljs-comment">//Kind : func , Type : func()</span>
+
+    value2 := reflect.ValueOf(fun2)
+    fmt.Printf(<span class="hljs-string">&quot;Kind : %s , Type : %s\n&quot;</span>,value2.Kind(),value2.Type()) <span class="hljs-comment">//Kind : func , Type : func(int, string)</span>
+
+
+    <span class="hljs-comment">//&#x901A;&#x8FC7;&#x53CD;&#x5C04;&#x8C03;&#x7528;&#x51FD;&#x6570;</span>
+    value.Call(<span class="hljs-literal">nil</span>)
+
+    value2.Call([]reflect.Value{reflect.ValueOf(<span class="hljs-number">100</span>),reflect.ValueOf(<span class="hljs-string">&quot;hello&quot;</span>)})
+
+}
+
+<span class="hljs-keyword">func</span> fun1(){
+    fmt.Println(<span class="hljs-string">&quot;&#x6211;&#x662F;&#x51FD;&#x6570;fun1()&#xFF0C;&#x65E0;&#x53C2;&#x7684;&#x3002;&#x3002;&quot;</span>)
+}
+
+<span class="hljs-keyword">func</span> fun2(i <span class="hljs-keyword">int</span>, s <span class="hljs-keyword">string</span>){
+    fmt.Println(<span class="hljs-string">&quot;&#x6211;&#x662F;&#x51FD;&#x6570;fun2()&#xFF0C;&#x6709;&#x53C2;&#x6570;&#x3002;&#x3002;&quot;</span>,i,s)
+}
+</code></pre>
+<p><strong>&#x8BF4;&#x660E;</strong></p>
+<ol>
+<li>&#x8981;&#x901A;&#x8FC7;&#x53CD;&#x5C04;&#x6765;&#x8C03;&#x7528;&#x8D77;&#x5BF9;&#x5E94;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5FC5;&#x987B;&#x8981;&#x5148;&#x901A;&#x8FC7;reflect.ValueOf(interface)&#x6765;&#x83B7;&#x53D6;&#x5230;reflect.Value&#xFF0C;&#x5F97;&#x5230;&#x201C;&#x53CD;&#x5C04;&#x7C7B;&#x578B;&#x5BF9;&#x8C61;&#x201D;&#x540E;&#x624D;&#x80FD;&#x505A;&#x4E0B;&#x4E00;&#x6B65;&#x5904;&#x7406;</li>
+<li>reflect.Value.MethodByName&#x8FD9;&#x4E2A;MethodByName&#xFF0C;&#x9700;&#x8981;&#x6307;&#x5B9A;&#x51C6;&#x786E;&#x771F;&#x5B9E;&#x7684;&#x65B9;&#x6CD5;&#x540D;&#x5B57;&#xFF0C;&#x5982;&#x679C;&#x9519;&#x8BEF;&#x5C06;&#x76F4;&#x63A5;panic&#xFF0C;MethodByName&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x503C;&#x5BF9;&#x5E94;&#x7684;reflect.Value&#x65B9;&#x6CD5;&#x7684;&#x540D;&#x5B57;&#x3002;</li>
+<li>[]reflect.Value&#xFF0C;&#x8FD9;&#x4E2A;&#x662F;&#x6700;&#x7EC8;&#x9700;&#x8981;&#x8C03;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x6CA1;&#x6709;&#x6216;&#x8005;&#x4E00;&#x4E2A;&#x6216;&#x8005;&#x591A;&#x4E2A;&#xFF0C;&#x6839;&#x636E;&#x5B9E;&#x9645;&#x53C2;&#x6570;&#x6765;&#x5B9A;&#x3002;</li>
+<li>reflect.Value&#x7684; Call &#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5C06;&#x6700;&#x7EC8;&#x8C03;&#x7528;&#x771F;&#x5B9E;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x53C2;&#x6570;&#x52A1;&#x5FC5;&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#xFF0C;&#x5982;&#x679C;reflect.Value.Kind&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x90A3;&#x4E48;&#x5C06;&#x76F4;&#x63A5;panic&#x3002;</li>
+<li>&#x672C;&#x6765;&#x53EF;&#x4EE5;&#x7528;&#x5BF9;&#x8C61;&#x8BBF;&#x95EE;&#x65B9;&#x6CD5;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x8981;&#x901A;&#x8FC7;&#x53CD;&#x5C04;&#xFF0C;&#x90A3;&#x4E48;&#x9996;&#x5148;&#x8981;&#x5C06;&#x65B9;&#x6CD5;&#x6CE8;&#x518C;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;MethodByName&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;&#x53CD;&#x5C04;&#x8C03;&#x7528;methodValue.Call</li>
+</ol>
+<h2 id=""> </h2>
+<p>&#x672C;&#x6587;&#x53C2;&#x7167;&#xFF1A;</p>
+<p><a href="http://www.sohu.com/a/313420275_657921" target="_blank">http://www.sohu.com/a/313420275_657921</a></p>
+<p><a href="https://studygolang.com/articles/12348?fr=sidebar" target="_blank">https://studygolang.com/articles/12348?fr=sidebar</a></p>
+<p><a href="http://c.biancheng.net/golang/" target="_blank">http://c.biancheng.net/golang/</a></p>
+<p>&#x5343;&#x950B;Go&#x8BED;&#x8A00;&#x7684;&#x5B66;&#x4E60;&#x7FA4;&#xFF1A;784190273</p>
+<p>github&#x77E5;&#x8BC6;&#x5E93;&#xFF1A;</p>
+<p><a href="https://github.com/rubyhan1314" target="_blank">https://github.com/rubyhan1314</a></p>
+<p>Golang&#x7F51;&#x5740;&#xFF1A;</p>
+<p><a href="https://www.qfgolang.com/" target="_blank">https://www.qfgolang.com/</a></p>
+<p>&#x4F5C;&#x8005;B&#x7AD9;&#xFF1A;</p>
+<p><a href="https://space.bilibili.com/353694001" target="_blank">https://space.bilibili.com/353694001</a></p>
+<p>&#x5BF9;&#x5E94;&#x89C6;&#x9891;&#x5730;&#x5740;&#xFF1A;</p>
+<p><a href="https://www.bilibili.com/video/av56018934" target="_blank">https://www.bilibili.com/video/av56018934</a></p>
+<p><a href="https://www.bilibili.com/video/av47467197" target="_blank">https://www.bilibili.com/video/av47467197</a></p>
+<p>&#x6E90;&#x4EE3;&#x7801;&#xFF1A;</p>
+<p><a href="https://github.com/rubyhan1314/go_reflect" target="_blank">https://github.com/rubyhan1314/go_reflect</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="day18_channel通道.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 03channel通道">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"04Go语言反射","level":"1.3.4","depth":2,"next":{"title":"MySQL数据库基础","level":"1.4","depth":1,"ref":"","articles":[{"title":"01学习笔记","level":"1.4.1","depth":2,"path":"03-MySQL数据库基础/day23_学习笔记.md","ref":"03-MySQL数据库基础/day23_学习笔记.md","articles":[]},{"title":"02数据库基础知识和基础操作","level":"1.4.2","depth":2,"path":"03-MySQL数据库基础/day23_数据库基础知识和基础操作.md","ref":"03-MySQL数据库基础/day23_数据库基础知识和基础操作.md","articles":[]},{"title":"03查询和复杂查询","level":"1.4.3","depth":2,"path":"03-MySQL数据库基础/day24_查询和复杂查询.md","ref":"03-MySQL数据库基础/day24_查询和复杂查询.md","articles":[]}]},"previous":{"title":"03channel通道","level":"1.3.3","depth":2,"path":"02-Go语言基础进阶/day18_channel通道.md","ref":"02-Go语言基础进阶/day18_channel通道.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"02-Go语言基础进阶/day19_Go语言反射.md","mtime":"2020-08-10T01:54:25.586Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-10T08:26:41.953Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
