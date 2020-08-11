@@ -1,0 +1,916 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>初始dockerfile · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="2020-07-26-docker_数据卷容器.html" />
+    
+    
+    <link rel="prev" href="2020-07-24-docker_具名挂载和匿名挂载.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="2020-07-01-docker_学习大纲.html">
+            
+                <a href="2020-07-01-docker_学习大纲.html">
+            
+                    
+                    学习大纲
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="2020-07-02-docker_概述.html">
+            
+                <a href="2020-07-02-docker_概述.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="2020-07-03-docker_历史.html">
+            
+                <a href="2020-07-03-docker_历史.html">
+            
+                    
+                    历史
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="2020-07-04-docker_能做设么么.html">
+            
+                <a href="2020-07-04-docker_能做设么么.html">
+            
+                    
+                    能做设么么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="2020-07-05-docker_名词概念.html">
+            
+                <a href="2020-07-05-docker_名词概念.html">
+            
+                    
+                    名词概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="2020-07-06-docker_安装.html">
+            
+                <a href="2020-07-06-docker_安装.html">
+            
+                    
+                    安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="2020-07-07-docker_阿里云镜像加速.html">
+            
+                <a href="2020-07-07-docker_阿里云镜像加速.html">
+            
+                    
+                    阿里云镜像加速
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="2020-07-08-docker_Run的流程和Docker原理.html">
+            
+                <a href="2020-07-08-docker_Run的流程和Docker原理.html">
+            
+                    
+                    Run的流程和Docker原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="2020-07-09-docker_常用命令.html">
+            
+                <a href="2020-07-09-docker_常用命令.html">
+            
+                    
+                    常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="2020-07-10-docker_容器命令.html">
+            
+                <a href="2020-07-10-docker_容器命令.html">
+            
+                    
+                    容器命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="2020-07-11-docker_常用其他命令.html">
+            
+                <a href="2020-07-11-docker_常用其他命令.html">
+            
+                    
+                    常用其他命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="2020-07-12-docker_进入容器的命令.html">
+            
+                <a href="2020-07-12-docker_进入容器的命令.html">
+            
+                    
+                    进入容器的命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="2020-07-13-docker_常用命令小结.html">
+            
+                <a href="2020-07-13-docker_常用命令小结.html">
+            
+                    
+                    常用命令小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="2020-07-14-docker_部署nginx.html">
+            
+                <a href="2020-07-14-docker_部署nginx.html">
+            
+                    
+                    部署nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="2020-07-15-docker_部署tomcat.html">
+            
+                <a href="2020-07-15-docker_部署tomcat.html">
+            
+                    
+                    部署tomcat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="2020-07-16-docker_部署es.html">
+            
+                <a href="2020-07-16-docker_部署es.html">
+            
+                    
+                    部署es
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="2020-07-17-docker_使用kibana连接es.html">
+            
+                <a href="2020-07-17-docker_使用kibana连接es.html">
+            
+                    
+                    使用kibana连接es
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="2020-07-18-docker_可视化面板安装.html">
+            
+                <a href="2020-07-18-docker_可视化面板安装.html">
+            
+                    
+                    可视化面板安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.19" data-path="2020-07-19-docker_镜像原理之联合文件系统.html">
+            
+                <a href="2020-07-19-docker_镜像原理之联合文件系统.html">
+            
+                    
+                    镜像原理之联合文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.20" data-path="2020-07-20-docker_镜像原理之分层理解.html">
+            
+                <a href="2020-07-20-docker_镜像原理之分层理解.html">
+            
+                    
+                    镜像原理之分层理解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.21" data-path="2020-07-21-docker_commit镜像.html">
+            
+                <a href="2020-07-21-docker_commit镜像.html">
+            
+                    
+                    commit镜像
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.22" data-path="2020-07-22-docker_容器数据卷.html">
+            
+                <a href="2020-07-22-docker_容器数据卷.html">
+            
+                    
+                    容器数据卷
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.23" data-path="2020-07-23-docker_容器数据卷2.html">
+            
+                <a href="2020-07-23-docker_容器数据卷2.html">
+            
+                    
+                    容器数据卷2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.24" data-path="2020-07-24-docker_具名挂载和匿名挂载.html">
+            
+                <a href="2020-07-24-docker_具名挂载和匿名挂载.html">
+            
+                    
+                    具名挂载和匿名挂载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.25" data-path="2020-07-25-docker_初始dockerfile.html">
+            
+                <a href="2020-07-25-docker_初始dockerfile.html">
+            
+                    
+                    初始dockerfile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.26" data-path="2020-07-26-docker_数据卷容器.html">
+            
+                <a href="2020-07-26-docker_数据卷容器.html">
+            
+                    
+                    数据卷容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >初始dockerfile</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x521D;&#x59CB;dockerfile">&#x521D;&#x59CB;dockerfile</h1>
+<p>dockerfile &#x5C31;&#x662F;&#x7528;&#x6765;&#x6784;&#x5EFA;docker&#x955C;&#x50CF;&#x7684;&#x6784;&#x5EFA;&#x6587;&#x4EF6;!&#x547D;&#x4EE4;&#x811A;&#x672C;! &#x5148;&#x4F53;&#x9A8C;&#x4E00;&#x4E0B;!</p>
+<p>```shell script</p>
+<h1 id="&#x901A;&#x8FC7;&#x8FD9;&#x811A;&#x672C;&#x53EF;&#x4EE5;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x955C;&#x50CF;&#x955C;&#x50CF;&#x662F;&#x4E00;&#x5C42;&#x4E00;&#x5C42;&#x7684;&#x811A;&#x672C;&#x662F;&#x4E00;&#x4E2A;&#x4E2A;&#x547D;&#x4EE4;&#x6BCF;&#x4E2A;&#x547D;&#x4EE4;&#x90FD;&#x662F;&#x4E00;&#x5C42;">&#x901A;&#x8FC7;&#x8FD9;&#x811A;&#x672C;&#x53EF;&#x4EE5;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x955C;&#x50CF;,&#x955C;&#x50CF;&#x662F;&#x4E00;&#x5C42;&#x4E00;&#x5C42;&#x7684;,&#x811A;&#x672C;&#x662F;&#x4E00;&#x4E2A;&#x4E2A;&#x547D;&#x4EE4;,&#x6BCF;&#x4E2A;&#x547D;&#x4EE4;&#x90FD;&#x662F;&#x4E00;&#x5C42;</h1>
+<pre><code>
+```shell script
+# &#x521B;&#x5EFA;&#x4E00;&#x4E2A;dockerfile&#x6587;&#x4EF6;,&#x540D;&#x5B57;&#x53EF;&#x4EE5;&#x968F;&#x673A; &#x5EFA;&#x8BAE;dockerfile
+# &#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x6307;&#x4EE4;(&#x5927;&#x5199;) &#x53C2;&#x6570;
+FROM centos
+
+VOLUME [&quot;volume01&quot;,&quot;volume02&quot;]
+
+CMD echo &quot;------end------&quot;
+
+CMD /bin/bash/
+
+# &#x8FD9;&#x91CC;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x90FD;&#x662F;&#x955C;&#x50CF;&#x7684;&#x4E00;&#x5C42;
+</code></pre><p>&#x8BD5;&#x4E00;&#x4E0B;</p>
+<p>```shell script
+[root@iz8g9301trfnpxz docker-test-volume]# docker build -f /home/docker-test-volume/dockerfile1 -t kuangshen/centos:1.0 .
+Sending build context to Docker daemon  2.048kB
+Step 1/4 : FROM centos
+ ---&gt; 831691599b88
+Step 2/4 : VOLUME [&quot;volume01&quot;,&quot;volume02&quot;]
+ ---&gt; Running in cfe1a7c20843
+Removing intermediate container cfe1a7c20843
+ ---&gt; e0877f9a102a
+Step 3/4 : CMD echo &quot;------end------&quot;
+ ---&gt; Running in 4ba75004d5d0
+Removing intermediate container 4ba75004d5d0
+ ---&gt; 04b1dbef792a
+Step 4/4 : CMD /bin/bash/
+ ---&gt; Running in 94b3954a4d3e
+Removing intermediate container 94b3954a4d3e
+ ---&gt; 5c7e025fc4ff
+Successfully built 5c7e025fc4ff
+Successfully tagged kuangshen/centos:1.0
+[root@iz8g9301trfnpxz docker-test-volume]# </p>
+<pre><code>&#x542F;&#x52A8;&#x4E00;&#x4E0B;&#x81EA;&#x5DF1;&#x5199;&#x7684;&#x5BB9;&#x5668;
+```shell script
+[root@iz8g9301trfnpxz docker-test-volume]# clear
+[root@iz8g9301trfnpxz docker-test-volume]# docker images
+REPOSITORY            TAG                 IMAGE ID            CREATED             SIZE
+kuangshen/centos      1.0                 5c7e025fc4ff        5 minutes ago       215MB
+tomcat02              1.0                 b17b415625d5        2 hours ago         657MB
+tomcat                latest              9a9ad4f631f8        2 days ago          647MB
+portainer/portainer   latest              62771b0b9b09        8 days ago          79.1MB
+mysql                 5.7                 8679ced16d20        8 days ago          448MB
+nginx                 latest              8cf1bfb43ff5        8 days ago          132MB
+redis                 latest              50541622f4f1        9 days ago          104MB
+centos                latest              831691599b88        6 weeks ago         215MB
+elasticsearch         7.6.2               f29a1ee41030        4 months ago        791MB
+elasticsearch         latest              5acf0e8da90b        22 months ago       486MB
+[root@iz8g9301trfnpxz docker-test-volume]# docker run -it 5c7e025fc4ff /bin/bash
+[root@1e52e32ab8e7 /]# ls
+bin  dev  etc  home  lib  lib64  lost+found  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var  volume01    volume02
+</code></pre><p>&#x4E0A;&#x9762;&#x7684;<code>volume01</code>&#x548C;<code>volume02</code>&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x81EA;&#x5DF1;&#x6302;&#x8F7D;&#x7684;,&#x8FD9;&#x4E2A;&#x5377;&#x548C;&#x5916;&#x90E8;&#x4E00;&#x5B9A;&#x662F;&#x6709;&#x4E00;&#x4E2A;&#x540C;&#x6B65;&#x7684;</p>
+<p>```shell script
+[root@iz8g9301trfnpxz home]# docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                   NAMES
+1e52e32ab8e7        5c7e025fc4ff        &quot;/bin/bash&quot;              2 minutes ago       Up 2 minutes                                goofy_feistel
+33d87d73cf81        nginx               &quot;/docker-entrypoint.&#x2026;&quot;   25 minutes ago      Up 25 minutes       0.0.0.0:32769-&gt;80/tcp   nginx03
+8ec30de68329        nginx               &quot;/docker-entrypoint.&#x2026;&quot;   28 minutes ago      Up 28 minutes       0.0.0.0:32768-&gt;80/tcp   nginx02
+[root@iz8g9301trfnpxz home]# docker inspect 1e52e32ab8e7
+[
+    {
+        &quot;Id&quot;: &quot;1e52e32ab8e7c00c87346c65bb75915dc4cfa557c03a78ae9cdb30fa2d6f125f&quot;,
+        &quot;Created&quot;: &quot;2020-07-31T02:44:24.621394005Z&quot;,
+        &quot;Path&quot;: &quot;/bin/bash&quot;,
+        &quot;Args&quot;: [],
+        &quot;State&quot;: {
+            &quot;Status&quot;: &quot;running&quot;,
+            &quot;Running&quot;: true,
+            &quot;Paused&quot;: false,
+            &quot;Restarting&quot;: false,
+            &quot;OOMKilled&quot;: false,
+            &quot;Dead&quot;: false,
+            &quot;Pid&quot;: 1318,
+            &quot;ExitCode&quot;: 0,
+            &quot;Error&quot;: &quot;&quot;,
+            &quot;StartedAt&quot;: &quot;2020-07-31T02:44:24.951669958Z&quot;,
+            &quot;FinishedAt&quot;: &quot;0001-01-01T00:00:00Z&quot;
+        },
+        &quot;Image&quot;: &quot;sha256:5c7e025fc4ff374c40b48eba10fccfeb6c6e00fb5499837e76755f8d22927229&quot;,
+        &quot;ResolvConfPath&quot;: &quot;/var/lib/docker/containers/1e52e32ab8e7c00c87346c65bb75915dc4cfa557c03a78ae9cdb30fa2d6f125f/resolv.conf&quot;,
+        &quot;HostnamePath&quot;: &quot;/var/lib/docker/containers/1e52e32ab8e7c00c87346c65bb75915dc4cfa557c03a78ae9cdb30fa2d6f125f/hostname&quot;,
+        &quot;HostsPath&quot;: &quot;/var/lib/docker/containers/1e52e32ab8e7c00c87346c65bb75915dc4cfa557c03a78ae9cdb30fa2d6f125f/hosts&quot;,
+        &quot;LogPath&quot;: &quot;/var/lib/docker/containers/1e52e32ab8e7c00c87346c65bb75915dc4cfa557c03a78ae9cdb30fa2d6f125f/1e52e32ab8e7c00c87346c65bb75915dc4cfa557c03a78ae9cdb30fa2d6f125f-json.log&quot;,
+        &quot;Name&quot;: &quot;/goofy_feistel&quot;,
+        &quot;RestartCount&quot;: 0,
+        &quot;Driver&quot;: &quot;overlay2&quot;,
+        &quot;Platform&quot;: &quot;linux&quot;,
+        &quot;MountLabel&quot;: &quot;&quot;,
+        &quot;ProcessLabel&quot;: &quot;&quot;,
+        &quot;AppArmorProfile&quot;: &quot;&quot;,
+        &quot;ExecIDs&quot;: null,
+        &quot;HostConfig&quot;: {
+            &quot;Binds&quot;: null,
+            &quot;ContainerIDFile&quot;: &quot;&quot;,
+            &quot;LogConfig&quot;: {
+                &quot;Type&quot;: &quot;json-file&quot;,
+                &quot;Config&quot;: {}
+            },
+            &quot;NetworkMode&quot;: &quot;default&quot;,
+            &quot;PortBindings&quot;: {},
+            &quot;RestartPolicy&quot;: {
+                &quot;Name&quot;: &quot;no&quot;,
+                &quot;MaximumRetryCount&quot;: 0
+            },
+            &quot;AutoRemove&quot;: false,
+            &quot;VolumeDriver&quot;: &quot;&quot;,
+            &quot;VolumesFrom&quot;: null,
+            &quot;CapAdd&quot;: null,
+            &quot;CapDrop&quot;: null,
+            &quot;Capabilities&quot;: null,
+            &quot;Dns&quot;: [],
+            &quot;DnsOptions&quot;: [],
+            &quot;DnsSearch&quot;: [],
+            &quot;ExtraHosts&quot;: null,
+            &quot;GroupAdd&quot;: null,
+            &quot;IpcMode&quot;: &quot;private&quot;,
+            &quot;Cgroup&quot;: &quot;&quot;,
+            &quot;Links&quot;: null,
+            &quot;OomScoreAdj&quot;: 0,
+            &quot;PidMode&quot;: &quot;&quot;,
+            &quot;Privileged&quot;: false,
+            &quot;PublishAllPorts&quot;: false,
+            &quot;ReadonlyRootfs&quot;: false,
+            &quot;SecurityOpt&quot;: null,
+            &quot;UTSMode&quot;: &quot;&quot;,
+            &quot;UsernsMode&quot;: &quot;&quot;,
+            &quot;ShmSize&quot;: 67108864,
+            &quot;Runtime&quot;: &quot;runc&quot;,
+            &quot;ConsoleSize&quot;: [
+                0,
+                0
+            ],
+            &quot;Isolation&quot;: &quot;&quot;,
+            &quot;CpuShares&quot;: 0,
+            &quot;Memory&quot;: 0,
+            &quot;NanoCpus&quot;: 0,
+            &quot;CgroupParent&quot;: &quot;&quot;,
+            &quot;BlkioWeight&quot;: 0,
+            &quot;BlkioWeightDevice&quot;: [],
+            &quot;BlkioDeviceReadBps&quot;: null,
+            &quot;BlkioDeviceWriteBps&quot;: null,
+            &quot;BlkioDeviceReadIOps&quot;: null,
+            &quot;BlkioDeviceWriteIOps&quot;: null,
+            &quot;CpuPeriod&quot;: 0,
+            &quot;CpuQuota&quot;: 0,
+            &quot;CpuRealtimePeriod&quot;: 0,
+            &quot;CpuRealtimeRuntime&quot;: 0,
+            &quot;CpusetCpus&quot;: &quot;&quot;,
+            &quot;CpusetMems&quot;: &quot;&quot;,
+            &quot;Devices&quot;: [],
+            &quot;DeviceCgroupRules&quot;: null,
+            &quot;DeviceRequests&quot;: null,
+            &quot;KernelMemory&quot;: 0,
+            &quot;KernelMemoryTCP&quot;: 0,
+            &quot;MemoryReservation&quot;: 0,
+            &quot;MemorySwap&quot;: 0,
+            &quot;MemorySwappiness&quot;: null,
+            &quot;OomKillDisable&quot;: false,
+            &quot;PidsLimit&quot;: null,
+            &quot;Ulimits&quot;: null,
+            &quot;CpuCount&quot;: 0,
+            &quot;CpuPercent&quot;: 0,
+            &quot;IOMaximumIOps&quot;: 0,
+            &quot;IOMaximumBandwidth&quot;: 0,
+            &quot;MaskedPaths&quot;: [
+                &quot;/proc/asound&quot;,
+                &quot;/proc/acpi&quot;,
+                &quot;/proc/kcore&quot;,
+                &quot;/proc/keys&quot;,
+                &quot;/proc/latency_stats&quot;,
+                &quot;/proc/timer_list&quot;,
+                &quot;/proc/timer_stats&quot;,
+                &quot;/proc/sched_debug&quot;,
+                &quot;/proc/scsi&quot;,
+                &quot;/sys/firmware&quot;
+            ],
+            &quot;ReadonlyPaths&quot;: [
+                &quot;/proc/bus&quot;,
+                &quot;/proc/fs&quot;,
+                &quot;/proc/irq&quot;,
+                &quot;/proc/sys&quot;,
+                &quot;/proc/sysrq-trigger&quot;
+            ]
+        },
+        &quot;GraphDriver&quot;: {
+            &quot;Data&quot;: {
+                &quot;LowerDir&quot;: &quot;/var/lib/docker/overlay2/b788b8fbe178271f742f242cd0cdced934cb5d4c004fe5fb6af6e7c03ac7a15c-init/diff:/var/lib/docker/overlay2/7be18956fd4a8679af67244a0bb9d19b4abc7e060c5712ce24bf3489c93ea32b/diff&quot;,
+                &quot;MergedDir&quot;: &quot;/var/lib/docker/overlay2/b788b8fbe178271f742f242cd0cdced934cb5d4c004fe5fb6af6e7c03ac7a15c/merged&quot;,
+                &quot;UpperDir&quot;: &quot;/var/lib/docker/overlay2/b788b8fbe178271f742f242cd0cdced934cb5d4c004fe5fb6af6e7c03ac7a15c/diff&quot;,
+                &quot;WorkDir&quot;: &quot;/var/lib/docker/overlay2/b788b8fbe178271f742f242cd0cdced934cb5d4c004fe5fb6af6e7c03ac7a15c/work&quot;
+            },
+            &quot;Name&quot;: &quot;overlay2&quot;
+        },
+        &quot;Mounts&quot;: [
+            {
+                &quot;Type&quot;: &quot;volume&quot;,
+                &quot;Name&quot;: &quot;e113c26dfe915b20080e5a9f7ae700713d4f443ca95b9e80d82d351ace6b88ca&quot;,
+                &quot;Source&quot;: &quot;/var/lib/docker/volumes/e113c26dfe915b20080e5a9f7ae700713d4f443ca95b9e80d82d351ace6b88ca/_data&quot;,
+                &quot;Destination&quot;: &quot;volume02&quot;,
+                &quot;Driver&quot;: &quot;local&quot;,
+                &quot;Mode&quot;: &quot;&quot;,
+                &quot;RW&quot;: true,
+                &quot;Propagation&quot;: &quot;&quot;
+            },
+            {
+                &quot;Type&quot;: &quot;volume&quot;,
+                &quot;Name&quot;: &quot;b78af0b69e7fdfa0c87d2247f895021f6772b52e0d57b0f6ac3bef66dfd58964&quot;,
+                &quot;Source&quot;: &quot;/var/lib/docker/volumes/b78af0b69e7fdfa0c87d2247f895021f6772b52e0d57b0f6ac3bef66dfd58964/_data&quot;,
+                &quot;Destination&quot;: &quot;volume01&quot;,
+                &quot;Driver&quot;: &quot;local&quot;,
+                &quot;Mode&quot;: &quot;&quot;,
+                &quot;RW&quot;: true,
+                &quot;Propagation&quot;: &quot;&quot;
+            }
+        ],
+        &quot;Config&quot;: {
+            &quot;Hostname&quot;: &quot;1e52e32ab8e7&quot;,
+            &quot;Domainname&quot;: &quot;&quot;,
+            &quot;User&quot;: &quot;&quot;,
+            &quot;AttachStdin&quot;: true,
+            &quot;AttachStdout&quot;: true,
+            &quot;AttachStderr&quot;: true,
+            &quot;Tty&quot;: true,
+            &quot;OpenStdin&quot;: true,
+            &quot;StdinOnce&quot;: true,
+            &quot;Env&quot;: [
+                &quot;PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin&quot;
+            ],
+            &quot;Cmd&quot;: [
+                &quot;/bin/bash&quot;
+            ],
+            &quot;Image&quot;: &quot;5c7e025fc4ff&quot;,
+            &quot;Volumes&quot;: {
+                &quot;volume01&quot;: {},
+                &quot;volume02&quot;: {}
+            },
+            &quot;WorkingDir&quot;: &quot;&quot;,
+            &quot;Entrypoint&quot;: null,
+            &quot;OnBuild&quot;: null,
+            &quot;Labels&quot;: {
+                &quot;org.label-schema.build-date&quot;: &quot;20200611&quot;,
+                &quot;org.label-schema.license&quot;: &quot;GPLv2&quot;,
+                &quot;org.label-schema.name&quot;: &quot;CentOS Base Image&quot;,
+                &quot;org.label-schema.schema-version&quot;: &quot;1.0&quot;,
+                &quot;org.label-schema.vendor&quot;: &quot;CentOS&quot;
+            }
+        },
+        &quot;NetworkSettings&quot;: {
+            &quot;Bridge&quot;: &quot;&quot;,
+            &quot;SandboxID&quot;: &quot;20dbaff762c3e3f81ec4497c34edcf3ff34842bddabb3d0705d1c90551729f4d&quot;,
+            &quot;HairpinMode&quot;: false,
+            &quot;LinkLocalIPv6Address&quot;: &quot;&quot;,
+            &quot;LinkLocalIPv6PrefixLen&quot;: 0,
+            &quot;Ports&quot;: {},
+            &quot;SandboxKey&quot;: &quot;/var/run/docker/netns/20dbaff762c3&quot;,
+            &quot;SecondaryIPAddresses&quot;: null,
+            &quot;SecondaryIPv6Addresses&quot;: null,
+            &quot;EndpointID&quot;: &quot;ce3538bdbc3b50aad38552ea578a45fd4f1db6cbc2e567012efc8b2421433691&quot;,
+            &quot;Gateway&quot;: &quot;172.17.0.1&quot;,
+            &quot;GlobalIPv6Address&quot;: &quot;&quot;,
+            &quot;GlobalIPv6PrefixLen&quot;: 0,
+            &quot;IPAddress&quot;: &quot;172.17.0.4&quot;,
+            &quot;IPPrefixLen&quot;: 16,
+            &quot;IPv6Gateway&quot;: &quot;&quot;,
+            &quot;MacAddress&quot;: &quot;02:42:ac:11:00:04&quot;,
+            &quot;Networks&quot;: {
+                &quot;bridge&quot;: {
+                    &quot;IPAMConfig&quot;: null,
+                    &quot;Links&quot;: null,
+                    &quot;Aliases&quot;: null,
+                    &quot;NetworkID&quot;: &quot;68c30b64280cd79fbbee1895f55c67d9febdb11a032fcbd4326319b1ea5c5075&quot;,
+                    &quot;EndpointID&quot;: &quot;ce3538bdbc3b50aad38552ea578a45fd4f1db6cbc2e567012efc8b2421433691&quot;,
+                    &quot;Gateway&quot;: &quot;172.17.0.1&quot;,
+                    &quot;IPAddress&quot;: &quot;172.17.0.4&quot;,
+                    &quot;IPPrefixLen&quot;: 16,
+                    &quot;IPv6Gateway&quot;: &quot;&quot;,
+                    &quot;GlobalIPv6Address&quot;: &quot;&quot;,
+                    &quot;GlobalIPv6PrefixLen&quot;: 0,
+                    &quot;MacAddress&quot;: &quot;02:42:ac:11:00:04&quot;,
+                    &quot;DriverOpts&quot;: null
+                }
+            }
+        }
+    }
+]</p>
+<h1 id="&#x5916;&#x90E8;&#x6302;&#x8F7D;&#x4FE1;&#x606F;">&#x5916;&#x90E8;&#x6302;&#x8F7D;&#x4FE1;&#x606F;</h1>
+<p>&quot;Mounts&quot;: [
+            {
+                &quot;Type&quot;: &quot;volume&quot;,
+                &quot;Name&quot;: &quot;e113c26dfe915b20080e5a9f7ae700713d4f443ca95b9e80d82d351ace6b88ca&quot;,
+                &quot;Source&quot;: &quot;/var/lib/docker/volumes/e113c26dfe915b20080e5a9f7ae700713d4f443ca95b9e80d82d351ace6b88ca/_data&quot;,
+                &quot;Destination&quot;: &quot;volume02&quot;,
+                &quot;Driver&quot;: &quot;local&quot;,
+                &quot;Mode&quot;: &quot;&quot;,
+                &quot;RW&quot;: true,
+                &quot;Propagation&quot;: &quot;&quot;
+            },
+            {
+                &quot;Type&quot;: &quot;volume&quot;,
+                &quot;Name&quot;: &quot;b78af0b69e7fdfa0c87d2247f895021f6772b52e0d57b0f6ac3bef66dfd58964&quot;,
+                &quot;Source&quot;: &quot;/var/lib/docker/volumes/b78af0b69e7fdfa0c87d2247f895021f6772b52e0d57b0f6ac3bef66dfd58964/_data&quot;,
+                &quot;Destination&quot;: &quot;volume01&quot;,
+                &quot;Driver&quot;: &quot;local&quot;,
+                &quot;Mode&quot;: &quot;&quot;,
+                &quot;RW&quot;: true,
+                &quot;Propagation&quot;: &quot;&quot;
+            }
+        ],</p>
+<pre><code>&#x6D4B;&#x8BD5;&#x4E00;&#x4E0B;&#x521A;&#x624D;&#x7684;&#x6587;&#x4EF6;&#x662F;&#x5426;&#x540C;&#x6B65;&#x51FA;&#x53BB;&#x4E86;
+```shell script
+[root@iz8g9301trfnpxz home]# cd /var/lib/docker/volumes/e113c26dfe915b20080e5a9f7ae700713d4f443ca95b9e80d82d351ace6b88ca/_data
+[root@iz8g9301trfnpxz _data]# ls
+[root@iz8g9301trfnpxz _data]# cd /var/lib/docker/volumes/b78af0b69e7fdfa0c87d2247f895021f6772b52e0d57b0f6ac3bef66dfd58964/_data
+[root@iz8g9301trfnpxz _data]# ls
+container.txt
+[root@iz8g9301trfnpxz _data]#
+</code></pre><p>&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x6211;&#x4EEC;&#x672A;&#x6765;&#x4F7F;&#x7528;&#x7684;&#x5341;&#x5206;&#x591A;,&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x901A;&#x5E38;&#x4F1A;&#x6784;&#x5EFA;&#x81EA;&#x5DF1;&#x7684;&#x955C;&#x50CF;</p>
+<p>&#x5047;&#x8BBE;&#x6784;&#x5EFA;&#x955C;&#x50CF;&#x7684;&#x65F6;&#x5019;&#x6CA1;&#x6709;&#x6302;&#x8F7D;&#x5377;,&#x8981;&#x624B;&#x52A8;&#x955C;&#x50CF;&#x6302;&#x8F7D; -v &#x5377;&#x540D;:&#x5BB9;&#x5668;&#x5185;&#x8DEF;&#x5F84;!</p>
+<p>&#x5BB9;&#x5668;&#x95F4;&#x4E5F;&#x53EF;&#x4EE5;&#x6570;&#x636E;&#x5171;&#x4EAB;</p>
+<h1 id="&#x6570;&#x636E;&#x5377;&#x5BB9;&#x5668;">&#x6570;&#x636E;&#x5377;&#x5BB9;&#x5668;</h1>
+<p>&#x6BD4;&#x5982;&#x6211;&#x4EEC;&#x4E24;&#x4E2A;mysql&#x540C;&#x6B65;&#x6570;&#x636E;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="2020-07-24-docker_具名挂载和匿名挂载.html" class="navigation navigation-prev " aria-label="Previous page: 具名挂载和匿名挂载">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="2020-07-26-docker_数据卷容器.html" class="navigation navigation-next " aria-label="Next page: 数据卷容器">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"初始dockerfile","tags":"docker","level":"1.2.25","depth":2,"next":{"title":"数据卷容器","level":"1.2.26","depth":2,"path":"base/2020-07-26-docker_数据卷容器.md","ref":"base/2020-07-26-docker_数据卷容器.md","articles":[]},"previous":{"title":"具名挂载和匿名挂载","level":"1.2.24","depth":2,"path":"base/2020-07-24-docker_具名挂载和匿名挂载.md","ref":"base/2020-07-24-docker_具名挂载和匿名挂载.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"base/2020-07-25-docker_初始dockerfile.md","mtime":"2020-07-31T03:12:30.188Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-11T06:15:57.455Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

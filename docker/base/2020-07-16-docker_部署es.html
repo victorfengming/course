@@ -1,0 +1,694 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>部署es · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="2020-07-17-docker_使用kibana连接es.html" />
+    
+    
+    <link rel="prev" href="2020-07-15-docker_部署tomcat.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="2020-07-01-docker_学习大纲.html">
+            
+                <a href="2020-07-01-docker_学习大纲.html">
+            
+                    
+                    学习大纲
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="2020-07-02-docker_概述.html">
+            
+                <a href="2020-07-02-docker_概述.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="2020-07-03-docker_历史.html">
+            
+                <a href="2020-07-03-docker_历史.html">
+            
+                    
+                    历史
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="2020-07-04-docker_能做设么么.html">
+            
+                <a href="2020-07-04-docker_能做设么么.html">
+            
+                    
+                    能做设么么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="2020-07-05-docker_名词概念.html">
+            
+                <a href="2020-07-05-docker_名词概念.html">
+            
+                    
+                    名词概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="2020-07-06-docker_安装.html">
+            
+                <a href="2020-07-06-docker_安装.html">
+            
+                    
+                    安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="2020-07-07-docker_阿里云镜像加速.html">
+            
+                <a href="2020-07-07-docker_阿里云镜像加速.html">
+            
+                    
+                    阿里云镜像加速
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="2020-07-08-docker_Run的流程和Docker原理.html">
+            
+                <a href="2020-07-08-docker_Run的流程和Docker原理.html">
+            
+                    
+                    Run的流程和Docker原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="2020-07-09-docker_常用命令.html">
+            
+                <a href="2020-07-09-docker_常用命令.html">
+            
+                    
+                    常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="2020-07-10-docker_容器命令.html">
+            
+                <a href="2020-07-10-docker_容器命令.html">
+            
+                    
+                    容器命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="2020-07-11-docker_常用其他命令.html">
+            
+                <a href="2020-07-11-docker_常用其他命令.html">
+            
+                    
+                    常用其他命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="2020-07-12-docker_进入容器的命令.html">
+            
+                <a href="2020-07-12-docker_进入容器的命令.html">
+            
+                    
+                    进入容器的命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="2020-07-13-docker_常用命令小结.html">
+            
+                <a href="2020-07-13-docker_常用命令小结.html">
+            
+                    
+                    常用命令小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="2020-07-14-docker_部署nginx.html">
+            
+                <a href="2020-07-14-docker_部署nginx.html">
+            
+                    
+                    部署nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="2020-07-15-docker_部署tomcat.html">
+            
+                <a href="2020-07-15-docker_部署tomcat.html">
+            
+                    
+                    部署tomcat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.16" data-path="2020-07-16-docker_部署es.html">
+            
+                <a href="2020-07-16-docker_部署es.html">
+            
+                    
+                    部署es
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="2020-07-17-docker_使用kibana连接es.html">
+            
+                <a href="2020-07-17-docker_使用kibana连接es.html">
+            
+                    
+                    使用kibana连接es
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="2020-07-18-docker_可视化面板安装.html">
+            
+                <a href="2020-07-18-docker_可视化面板安装.html">
+            
+                    
+                    可视化面板安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.19" data-path="2020-07-19-docker_镜像原理之联合文件系统.html">
+            
+                <a href="2020-07-19-docker_镜像原理之联合文件系统.html">
+            
+                    
+                    镜像原理之联合文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.20" data-path="2020-07-20-docker_镜像原理之分层理解.html">
+            
+                <a href="2020-07-20-docker_镜像原理之分层理解.html">
+            
+                    
+                    镜像原理之分层理解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.21" data-path="2020-07-21-docker_commit镜像.html">
+            
+                <a href="2020-07-21-docker_commit镜像.html">
+            
+                    
+                    commit镜像
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.22" data-path="2020-07-22-docker_容器数据卷.html">
+            
+                <a href="2020-07-22-docker_容器数据卷.html">
+            
+                    
+                    容器数据卷
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.23" data-path="2020-07-23-docker_容器数据卷2.html">
+            
+                <a href="2020-07-23-docker_容器数据卷2.html">
+            
+                    
+                    容器数据卷2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.24" data-path="2020-07-24-docker_具名挂载和匿名挂载.html">
+            
+                <a href="2020-07-24-docker_具名挂载和匿名挂载.html">
+            
+                    
+                    具名挂载和匿名挂载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.25" data-path="2020-07-25-docker_初始dockerfile.html">
+            
+                <a href="2020-07-25-docker_初始dockerfile.html">
+            
+                    
+                    初始dockerfile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.26" data-path="2020-07-26-docker_数据卷容器.html">
+            
+                <a href="2020-07-26-docker_数据卷容器.html">
+            
+                    
+                    数据卷容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >部署es</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <hr>
+<p>title: &quot;Docker&#x90E8;&#x7F72;elasticsearch&quot;</p>
+<h2 id="tags-docker-">tags: docker </h2>
+<h1 id="&#x4F5C;&#x4E1A;3&#x90E8;&#x7F72;eskibana">&#x4F5C;&#x4E1A;3:&#x90E8;&#x7F72;es+kibana</h1>
+<p>```shell script</p>
+<h1 id="es&#x66B4;&#x6F0F;&#x7684;&#x7AEF;&#x53E3;&#x5F88;&#x591A;">es&#x66B4;&#x6F0F;&#x7684;&#x7AEF;&#x53E3;&#x5F88;&#x591A;</h1>
+<h1 id="es-&#x5341;&#x5206;&#x8017;&#x5185;&#x5B58;">es &#x5341;&#x5206;&#x8017;&#x5185;&#x5B58;</h1>
+<h1 id="es-&#x7684;&#x6570;&#x636E;&#x4E00;&#x822C;&#x9700;&#x8981;&#x653E;&#x7F6E;&#x5230;&#x5B89;&#x5168;&#x76EE;&#x5F55;">es &#x7684;&#x6570;&#x636E;&#x4E00;&#x822C;&#x9700;&#x8981;&#x653E;&#x7F6E;&#x5230;&#x5B89;&#x5168;&#x76EE;&#x5F55;</h1>
+<h1 id="&#x5B98;&#x65B9;&#x8FD9;&#x4E48;&#x5199;&#x7684;">&#x5B98;&#x65B9;&#x8FD9;&#x4E48;&#x5199;&#x7684;</h1>
+<h1 id="&#x542F;&#x52A8;elasticsearch">&#x542F;&#x52A8;elasticsearch</h1>
+<p>docker run -d --name elasticsearch --net somenetwork -p 9200:9200 -p 9300:9300 -e &quot;discovery.type=single-node&quot; elasticsearch:7.6.2</p>
+<h1 id="-net-somenetwork">--net somenetwork</h1>
+<h1 id="&#x542F;&#x52A8;&#x4E86;-linux&#x5C31;&#x5361;&#x4F4F;&#x4E86;">&#x542F;&#x52A8;&#x4E86; linux&#x5C31;&#x5361;&#x4F4F;&#x4E86;</h1>
+<p>docker stats # &#x67E5;&#x770B;cpu&#x72B6;&#x6001;</p>
+<h1 id="es&#x662F;&#x5341;&#x5206;&#x8017;&#x5185;&#x5B58;&#x7684;-1&#x6838;2g-&#x73B0;&#x5728;&#x4ED6;&#x662F;&#x542F;&#x52A8;&#x4E0D;&#x8D77;&#x6765;&#x4E86;">es&#x662F;&#x5341;&#x5206;&#x8017;&#x5185;&#x5B58;&#x7684; 1&#x6838;2G &#x73B0;&#x5728;&#x4ED6;&#x662F;&#x542F;&#x52A8;&#x4E0D;&#x8D77;&#x6765;&#x4E86;</h1>
+<h1 id="&#x505C;&#x6B62;&#x6211;&#x4EEC;&#x7684;docker">&#x505C;&#x6B62;&#x6211;&#x4EEC;&#x7684;docker</h1>
+<h1 id="&#x6D4B;&#x8BD5;&#x4E00;&#x4E0B;es&#x662F;&#x5426;">&#x6D4B;&#x8BD5;&#x4E00;&#x4E0B;es&#x662F;&#x5426;</h1>
+<h1 id="&#x589E;&#x52A0;&#x5185;&#x5B58;&#x7684;&#x64CD;&#x4F5C;">&#x589E;&#x52A0;&#x5185;&#x5B58;&#x7684;&#x64CD;&#x4F5C;</h1>
+<h1 id="&#x8D76;&#x7D27;&#x5173;&#x95ED;">&#x8D76;&#x7D27;&#x5173;&#x95ED;</h1>
+<p>docker run -d --name elasticsearch -p 9200:9200 -p -e &quot;discovery.type=single-node&quot; -e ES_JAVA_OPTS=&quot;-Xms64m -Xmx512m&quot; elasticsearch:7.6.2</p>
+<pre><code>
+&#x8FD9;&#x56DE;&#x518D;&#x8BD5;&#x8BD5;
+```shell script
+[root@iz8g9301trfnpxz home]# docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                  NAMES
+f9277b55c181        nginx               &quot;/docker-entrypoint.&#x2026;&quot;   36 minutes ago      Up 36 minutes       0.0.0.0:3344-&gt;80/tcp   nginx01
+[root@iz8g9301trfnpxz home]# docker stop f9277b55c181
+f9277b55c181
+[root@iz8g9301trfnpxz home]# docker run -d --name elasticsearch02 -p 9200:9200 -e &quot;discovery.type=single-node&quot; -e ES_JAVA_OPTS=&quot;-Xms64m -Xmx512m&quot; elasticsearch:7.6.2
+f693ce46235c8b7a4106cda033e9e6211ffc0f978457be3ccf72abe23acac24a
+[root@iz8g9301trfnpxz home]# docker stats
+
+CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+f693ce46235c        elasticsearch02     0.05%               204.9MiB / 1.796GiB   11.14%              0B / 0B             0B / 0B             19
+
+CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+f693ce46235c        elasticsearch02     0.05%               204.9MiB / 1.796GiB   11.14%              0B / 0B             0B / 0B             19
+
+CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+f693ce46235c        elasticsearch02     98.78%              226.2MiB / 1.796GiB   12.30%              0B / 0B             0B / 0B             19
+
+CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+f693ce46235c        elasticsearch02     98.78%              226.2MiB / 1.796GiB   12.30%              0B / 0B             0B / 0B             19
+
+CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+f693ce46235c        elasticsearch02     98.14%              233.3MiB / 1.796GiB   12.68%              0B / 0B             0B / 0B             19
+
+CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+f693ce46235c        elasticsearch02     98.14%              233.3MiB / 1.796GiB   12.68%              0B / 0B             0B / 0B             19
+
+CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+f693ce46235c        elasticsearch02     99.96%              244.5MiB / 1.796GiB   13.29%              0B / 0B             0B / 0B             19
+
+CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+f693ce46235c        elasticsearch02     99.96%              244.5MiB / 1.796GiB   13.29%              0B / 0B             0B / 0B             19
+
+CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+f693ce46235c        elasticsearch02     97.79%              253.4MiB / 1.796GiB   13.78%              0B / 0B             0B / 0B             19
+
+CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+f693ce46235c        elasticsearch02     97.79%              253.4MiB / 1.796GiB   13.78%              0B / 0B             0B / 0B             19
+
+CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+f693ce46235c        elasticsearch02     98.67%              266.3MiB / 1.796GiB   14.47%              0B / 0B             0B / 0B             20
+
+CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+f693ce46235c        elasticsearch02     98.67%              266.3MiB / 1.796GiB   14.47%              0B / 0B             0B / 0B             20
+
+CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+f693ce46235c        elasticsearch02     99.21%              270.3MiB / 1.796GiB   14.70%              0B / 0B             0B / 0B             20
+
+CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+f693ce46235c        elasticsearch02     99.21%              270.3MiB / 1.796GiB   14.70%              0B / 0B             0B / 0B             20
+
+CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+f693ce46235c        elasticsearch02     95.08%              276.7MiB / 1.796GiB   15.04%              0B / 0B             0B / 0B             26
+
+CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+f693ce46235c        elasticsearch02     95.08%              276.7MiB / 1.796GiB   15.04%              0B / 0B             0B / 0B             26
+^C
+[root@iz8g9301trfnpxz home]# clear
+[root@iz8g9301trfnpxz home]# docker ps
+CONTAINER ID        IMAGE                 COMMAND                  CREATED             STATUS              PORTS                              NAMES
+f693ce46235c        elasticsearch:7.6.2   &quot;/usr/local/bin/dock&#x2026;&quot;   27 seconds ago      Up 26 seconds       0.0.0.0:9200-&gt;9200/tcp, 9300/tcp   elasticsearch02
+[root@iz8g9301trfnpxz home]# curl localhost:9200
+{
+  &quot;name&quot; : &quot;f693ce46235c&quot;,
+  &quot;cluster_name&quot; : &quot;docker-cluster&quot;,
+  &quot;cluster_uuid&quot; : &quot;woaoctzxSoWCx_ksjXFTbg&quot;,
+  &quot;version&quot; : {
+    &quot;number&quot; : &quot;7.6.2&quot;,
+    &quot;build_flavor&quot; : &quot;default&quot;,
+    &quot;build_type&quot; : &quot;docker&quot;,
+    &quot;build_hash&quot; : &quot;ef48eb35cf30adf4db14086e8aabd07ef6fb113f&quot;,
+    &quot;build_date&quot; : &quot;2020-03-26T06:34:37.794943Z&quot;,
+    &quot;build_snapshot&quot; : false,
+    &quot;lucene_version&quot; : &quot;8.4.0&quot;,
+    &quot;minimum_wire_compatibility_version&quot; : &quot;6.8.0&quot;,
+    &quot;minimum_index_compatibility_version&quot; : &quot;6.0.0-beta1&quot;
+  },
+  &quot;tagline&quot; : &quot;You Know, for Search&quot;
+}
+[root@iz8g9301trfnpxz home]#
+</code></pre><h1 id="&#x4F7F;&#x7528;kibana&#x8FDE;&#x63A5;elasticsearch">&#x4F7F;&#x7528;kibana&#x8FDE;&#x63A5;elasticsearch</h1>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="2020-07-15-docker_部署tomcat.html" class="navigation navigation-prev " aria-label="Previous page: 部署tomcat">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="2020-07-17-docker_使用kibana连接es.html" class="navigation navigation-next " aria-label="Next page: 使用kibana连接es">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"部署es","level":"1.2.16","depth":2,"next":{"title":"使用kibana连接es","level":"1.2.17","depth":2,"path":"base/2020-07-17-docker_使用kibana连接es.md","ref":"base/2020-07-17-docker_使用kibana连接es.md","articles":[]},"previous":{"title":"部署tomcat","level":"1.2.15","depth":2,"path":"base/2020-07-15-docker_部署tomcat.md","ref":"base/2020-07-15-docker_部署tomcat.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"base/2020-07-16-docker_部署es.md","mtime":"2020-07-31T03:08:44.016Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-11T06:15:57.455Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
