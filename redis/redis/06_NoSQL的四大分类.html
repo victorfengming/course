@@ -1,0 +1,442 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>NoSQL的四大分类 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="07_Redis概述.html" />
+    
+    
+    <link rel="prev" href="05_阿里巴巴实践分析.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="01_课程内容简介.html">
+            
+                <a href="01_课程内容简介.html">
+            
+                    
+                    课程内容简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="02_NoSQL概述.html">
+            
+                <a href="02_NoSQL概述.html">
+            
+                    
+                    NoSQL概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="03_当今企业架构分析.html">
+            
+                <a href="03_当今企业架构分析.html">
+            
+                    
+                    当今企业架构分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="04_什么是NoSQL.html">
+            
+                <a href="04_什么是NoSQL.html">
+            
+                    
+                    什么是NoSQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="05_阿里巴巴实践分析.html">
+            
+                <a href="05_阿里巴巴实践分析.html">
+            
+                    
+                    阿里巴巴实践分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.6" data-path="06_NoSQL的四大分类.html">
+            
+                <a href="06_NoSQL的四大分类.html">
+            
+                    
+                    NoSQL的四大分类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.7" data-path="07_Redis概述.html">
+            
+                <a href="07_Redis概述.html">
+            
+                    
+                    Redis概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.8" data-path="08_window下安装Redis.html">
+            
+                <a href="08_window下安装Redis.html">
+            
+                    
+                    window下安装Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.9" data-path="09_Linux下安装Redis.html">
+            
+                <a href="09_Linux下安装Redis.html">
+            
+                    
+                    Linux下安装Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.10" data-path="10_Redis_benchmark性能测试.html">
+            
+                <a href="10_Redis_benchmark性能测试.html">
+            
+                    
+                    Redis_benchmark性能测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11" data-path="11_Redis基础知识说明.html">
+            
+                <a href="11_Redis基础知识说明.html">
+            
+                    
+                    Redis基础知识说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.12" data-path="12_Redis_Key基础命令.html">
+            
+                <a href="12_Redis_Key基础命令.html">
+            
+                    
+                    Redis_Key基础命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.13" data-path="13_String字符串详解.html">
+            
+                <a href="13_String字符串详解.html">
+            
+                    
+                    String字符串详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >NoSQL的四大分类</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="nosql&#x7684;&#x56DB;&#x5927;&#x5206;&#x7C7B;">NoSQL&#x7684;&#x56DB;&#x5927;&#x5206;&#x7C7B;</h1>
+<h3 id="kv&#x952E;&#x503C;&#x5BF9;&#xFF1A;">KV&#x952E;&#x503C;&#x5BF9;&#xFF1A;</h3>
+<ul>
+<li>&#x65B0;&#x6D6A;&#xFF1A;Redis</li>
+<li>&#x7F8E;&#x56E2;&#xFF1A;Redis+Tair</li>
+<li>&#x963F;&#x91CC;&#xFF0C;&#x767E;&#x5EA6;&#xFF1A;Redis+memecache</li>
+</ul>
+<h2 id="&#x6587;&#x6863;&#x578B;&#x6570;&#x636E;&#x5E93;&#xFF08;bson&#x683C;&#x5F0F;&#x548C;json&#x4E00;&#x6837;&#xFF09;&#xFF1A;">&#x6587;&#x6863;&#x578B;&#x6570;&#x636E;&#x5E93;&#xFF08;bson&#x683C;&#x5F0F;&#x548C;json&#x4E00;&#x6837;&#xFF09;&#xFF1A;</h2>
+<ul>
+<li>MongoDB&#xFF08;&#x4E00;&#x822C;&#x5FC5;&#x987B;&#x8981;&#x638C;&#x63E1;&#xFF09;<ul>
+<li>MongoDB&#x662F;&#x4E00;&#x4E2A;&#x57FA;&#x4E8E;&#x5206;&#x5E03;&#x5F0F;&#x6587;&#x4EF6;&#x5B58;&#x50A8;&#x7684;&#x6570;&#x636E;&#x5E93;&#xFF0C;C++&#x7F16;&#x5199;&#xFF0C;&#x4E3B;&#x8981;&#x7528;&#x6765;&#x5904;&#x7406;&#x5927;&#x91CF;&#x7684;&#x6587;&#x6863;&#xFF01;</li>
+<li>MongoDB&#x662F;&#x4E00;&#x4E2A;&#x4ECB;&#x4E8E;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x548C;&#x975E;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x6570;&#x636E;&#x4E2D;&#x4E2D;&#x95F4;&#x7684;&#x4EA7;&#x54C1;&#xFF01;MongoDB&#x662F;&#x975E;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x529F;&#x80FD;&#x6700;&#x4E30;&#x5BCC;&#xFF0C;&#x6700;&#x50CF;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x7684;&#xFF01;</li>
+</ul>
+</li>
+<li>ConthDB</li>
+</ul>
+<h2 id="&#x5217;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x5E93;">&#x5217;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x5E93;</h2>
+<ul>
+<li>HBase</li>
+<li>&#x5206;&#x5E03;&#x5F0F;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;</li>
+</ul>
+<h2 id="&#x56FE;&#x5F62;&#x5173;&#x7CFB;&#x6570;&#x636E;&#x5E93;">&#x56FE;&#x5F62;&#x5173;&#x7CFB;&#x6570;&#x636E;&#x5E93;</h2>
+<p><img src="06_NoSQL%E7%9A%84%E5%9B%9B%E5%A4%A7%E5%88%86%E7%B1%BB.assets/1597148895964.png" alt="1597148895964"></p>
+<ul>
+<li>&#x4ED6;&#x4E0D;&#x662F;&#x5B58;&#x56FE;&#x5F62;&#x7684;&#xFF0C;&#x653E;&#x7684;&#x662F;&#x5173;&#x7CFB;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;&#x670B;&#x53CB;&#x5708;&#x793E;&#x4EA4;&#x7F51;&#x7EDC;&#xFF0C;&#x5E7F;&#x544A;&#x63A8;&#x8350;&#xFF01;</li>
+<li>Neo4j&#xFF0C;InfoGrid&#xFF1B;</li>
+</ul>
+<p><img src="06_NoSQL%E7%9A%84%E5%9B%9B%E5%A4%A7%E5%88%86%E7%B1%BB.assets/1597148962669.png" alt="1597148962669"></p>
+<p>&#x6D3B;&#x7740;&#x7684;&#x610F;&#x4E49;?&#x5E2E;&#x52A9;&#x66F4;&#x591A;&#x7684;&#x4EBA;</p>
+<p>&#x656C;&#x754F;&#x4E4B;&#x5FC3;&#x53EF;&#x4EE5;&#x4F7F;&#x4EBA;&#x8FDB;&#x6B65;!&#x5B87;&#x5B99;&#x79D1;&#x5E7B;</p>
+<hr>
+<p>&#x8FFD;&#x6C42;&#x5E78;&#x798F;(&#x5E2E;&#x52A9;&#x4ED6;&#x4EBA;,&#x611F;&#x6069;&#x4E4B;&#x5FC3;),&#x63A2;&#x7D22;&#x672A;&#x77E5;(&#x52AA;&#x529B;&#x5B66;&#x4E60;,&#x4E0D;&#x8981;&#x88AB;&#x793E;&#x4F1A;&#x629B;&#x5F03;)</p>
+<p>&#x5750;&#x7262;</p>
+<p>&#x8001;&#x4EBA;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="05_阿里巴巴实践分析.html" class="navigation navigation-prev " aria-label="Previous page: 阿里巴巴实践分析">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="07_Redis概述.html" class="navigation navigation-next " aria-label="Next page: Redis概述">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"NoSQL的四大分类","level":"1.1.6","depth":2,"next":{"title":"Redis概述","level":"1.1.7","depth":2,"path":"redis/07_Redis概述.md","ref":"redis/07_Redis概述.md","articles":[]},"previous":{"title":"阿里巴巴实践分析","level":"1.1.5","depth":2,"path":"redis/05_阿里巴巴实践分析.md","ref":"redis/05_阿里巴巴实践分析.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"redis/06_NoSQL的四大分类.md","mtime":"2020-08-12T00:18:08.704Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-12T04:05:27.745Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
