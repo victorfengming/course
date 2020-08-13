@@ -101,7 +101,9 @@ Spring   SpringMVC    SpringBoot
 
 
 
+
 ## 2、第一个Mybatis程序
+
 
 思路：搭建环境-->导入Mybatis-->编写代码-->测试！
 
@@ -1152,6 +1154,8 @@ public interface UserMapper {
 
 ## 9、Lombok
 
+
+
 ```java
 Project Lombok is a java library that automatically plugs into your editor and build tools, spicing up your java.
 Never write another getter or equals method again, with one annotation your class has a fully featured builder, Automate your logging variables, and much more.
@@ -1668,7 +1672,7 @@ select * from user where 1=1 and
 
 
 
-## 13、缓存 （了解）
+## 13、缓存
 
 ### 13.1、简介
 
