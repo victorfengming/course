@@ -1,0 +1,1683 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Mybatis课堂笔记 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="Mybatis课堂笔记.html">
+            
+                <a href="Mybatis课堂笔记.html">
+            
+                    
+                    Mybatis课堂笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Mybatis课堂笔记</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="mybatis-928">Mybatis-9.28</h2>
+<p>&#x73AF;&#x5883;&#xFF1A;</p>
+<ul>
+<li>JDK1.8</li>
+<li>Mysql 5.7</li>
+<li>maven 3.6.1</li>
+<li>IDEA</li>
+</ul>
+<p>&#x56DE;&#x987E;&#xFF1A;</p>
+<ul>
+<li>JDBC</li>
+<li>Mysql</li>
+<li>Java&#x57FA;&#x7840;</li>
+<li>Maven</li>
+<li>Junit</li>
+</ul>
+<p>SSM&#x6846;&#x67B6;&#xFF1A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x3002;  &#x6700;&#x597D;&#x7684;&#x65B9;&#x5F0F;&#xFF1A;&#x770B;&#x5B98;&#x7F51;&#x6587;&#x6863;&#xFF1B;</p>
+<h2 id="1&#x3001;&#x7B80;&#x4ECB;">1&#x3001;&#x7B80;&#x4ECB;</h2>
+<h3 id="11&#x3001;&#x4EC0;&#x4E48;&#x662F;mybatis">1.1&#x3001;&#x4EC0;&#x4E48;&#x662F;Mybatis</h3>
+<p><img src="Mybatis&#x8BFE;&#x5802;&#x7B14;&#x8BB0;.assets/1569633932712.png" alt="1569633932712"></p>
+<ul>
+<li>MyBatis &#x662F;&#x4E00;&#x6B3E;&#x4F18;&#x79C0;&#x7684;<strong>&#x6301;&#x4E45;&#x5C42;&#x6846;&#x67B6;</strong></li>
+<li>&#x5B83;&#x652F;&#x6301;&#x5B9A;&#x5236;&#x5316; SQL&#x3001;&#x5B58;&#x50A8;&#x8FC7;&#x7A0B;&#x4EE5;&#x53CA;&#x9AD8;&#x7EA7;&#x6620;&#x5C04;&#x3002;</li>
+<li>MyBatis &#x907F;&#x514D;&#x4E86;&#x51E0;&#x4E4E;&#x6240;&#x6709;&#x7684; JDBC &#x4EE3;&#x7801;&#x548C;&#x624B;&#x52A8;&#x8BBE;&#x7F6E;&#x53C2;&#x6570;&#x4EE5;&#x53CA;&#x83B7;&#x53D6;&#x7ED3;&#x679C;&#x96C6;&#x3002;</li>
+<li>MyBatis &#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7B80;&#x5355;&#x7684; XML &#x6216;&#x6CE8;&#x89E3;&#x6765;&#x914D;&#x7F6E;&#x548C;&#x6620;&#x5C04;&#x539F;&#x751F;&#x7C7B;&#x578B;&#x3001;&#x63A5;&#x53E3;&#x548C; Java &#x7684; POJO&#xFF08;Plain Old Java Objects&#xFF0C;&#x666E;&#x901A;&#x8001;&#x5F0F; Java &#x5BF9;&#x8C61;&#xFF09;&#x4E3A;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x8BB0;&#x5F55;&#x3002;</li>
+<li>MyBatis &#x672C;&#x662F;<a href="https://baike.baidu.com/item/apache/6265" target="_blank">apache</a>&#x7684;&#x4E00;&#x4E2A;&#x5F00;&#x6E90;&#x9879;&#x76EE;<a href="https://baike.baidu.com/item/iBatis" target="_blank">iBatis</a>, 2010&#x5E74;&#x8FD9;&#x4E2A;&#x9879;&#x76EE;&#x7531;apache software foundation &#x8FC1;&#x79FB;&#x5230;&#x4E86;google code&#xFF0C;&#x5E76;&#x4E14;&#x6539;&#x540D;&#x4E3A;MyBatis &#x3002;</li>
+<li>2013&#x5E74;11&#x6708;&#x8FC1;&#x79FB;&#x5230;Github&#x3002;</li>
+</ul>
+<p>&#x5982;&#x4F55;&#x83B7;&#x5F97;Mybatis&#xFF1F;</p>
+<ul>
+<li><p>maven&#x4ED3;&#x5E93;&#xFF1A;</p>
+<pre><code class="lang-xml"><span class="hljs-comment">&lt;!-- https://mvnrepository.com/artifact/org.mybatis/mybatis --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.mybatis<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>mybatis<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>3.5.2<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+</code></pre>
+</li>
+<li><p>Github &#xFF1A; <a href="https://github.com/mybatis/mybatis-3/releases" target="_blank">https://github.com/mybatis/mybatis-3/releases</a></p>
+</li>
+<li><p>&#x4E2D;&#x6587;&#x6587;&#x6863;&#xFF1A;<a href="https://mybatis.org/mybatis-3/zh/index.html" target="_blank">https://mybatis.org/mybatis-3/zh/index.html</a></p>
+</li>
+</ul>
+<h3 id="12&#x3001;&#x6301;&#x4E45;&#x5316;">1.2&#x3001;&#x6301;&#x4E45;&#x5316;</h3>
+<p>&#x6570;&#x636E;&#x6301;&#x4E45;&#x5316;</p>
+<ul>
+<li>&#x6301;&#x4E45;&#x5316;&#x5C31;&#x662F;&#x5C06;&#x7A0B;&#x5E8F;&#x7684;&#x6570;&#x636E;&#x5728;&#x6301;&#x4E45;&#x72B6;&#x6001;&#x548C;&#x77AC;&#x65F6;&#x72B6;&#x6001;&#x8F6C;&#x5316;&#x7684;&#x8FC7;&#x7A0B;</li>
+<li>&#x5185;&#x5B58;&#xFF1A;<strong>&#x65AD;&#x7535;&#x5373;&#x5931;</strong></li>
+<li>&#x6570;&#x636E;&#x5E93;(Jdbc)&#xFF0C;io&#x6587;&#x4EF6;&#x6301;&#x4E45;&#x5316;&#x3002;</li>
+<li>&#x751F;&#x6D3B;&#xFF1A;&#x51B7;&#x85CF;. &#x7F50;&#x5934;&#x3002;</li>
+</ul>
+<p><strong>&#x4E3A;&#x4EC0;&#x4E48;&#x9700;&#x8981;&#x9700;&#x8981;&#x6301;&#x4E45;&#x5316;&#xFF1F;</strong></p>
+<ul>
+<li><p>&#x6709;&#x4E00;&#x4E9B;&#x5BF9;&#x8C61;&#xFF0C;&#x4E0D;&#x80FD;&#x8BA9;&#x4ED6;&#x4E22;&#x6389;&#x3002;</p>
+</li>
+<li><p>&#x5185;&#x5B58;&#x592A;&#x8D35;&#x4E86;</p>
+</li>
+</ul>
+<h3 id="13&#x3001;&#x6301;&#x4E45;&#x5C42;">1.3&#x3001;&#x6301;&#x4E45;&#x5C42;</h3>
+<p>Dao&#x5C42;&#xFF0C;Service&#x5C42;&#xFF0C;Controller&#x5C42;&#x2026;.</p>
+<ul>
+<li>&#x5B8C;&#x6210;&#x6301;&#x4E45;&#x5316;&#x5DE5;&#x4F5C;&#x7684;&#x4EE3;&#x7801;&#x5757;</li>
+<li>&#x5C42;&#x754C;&#x9650;&#x5341;&#x5206;&#x660E;&#x663E;&#x3002;</li>
+</ul>
+<h3 id="14-&#x4E3A;&#x4EC0;&#x4E48;&#x9700;&#x8981;mybatis&#xFF1F;">1.4 &#x4E3A;&#x4EC0;&#x4E48;&#x9700;&#x8981;Mybatis&#xFF1F;</h3>
+<ul>
+<li>&#x5E2E;&#x52A9;&#x7A0B;&#x5E8F;&#x733F;&#x5C06;&#x6570;&#x636E;&#x5B58;&#x5165;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x3002;</li>
+<li>&#x65B9;&#x4FBF;</li>
+<li>&#x4F20;&#x7EDF;&#x7684;JDBC&#x4EE3;&#x7801;&#x592A;&#x590D;&#x6742;&#x4E86;&#x3002;&#x7B80;&#x5316;&#x3002;&#x6846;&#x67B6;&#x3002;&#x81EA;&#x52A8;&#x5316;&#x3002;</li>
+<li>&#x4E0D;&#x7528;Mybatis&#x4E5F;&#x53EF;&#x4EE5;&#x3002;&#x66F4;&#x5BB9;&#x6613;&#x4E0A;&#x624B;&#x3002; <strong>&#x6280;&#x672F;&#x6CA1;&#x6709;&#x9AD8;&#x4F4E;&#x4E4B;&#x5206;</strong></li>
+<li>&#x4F18;&#x70B9;&#xFF1A;<ul>
+<li>&#x7B80;&#x5355;&#x6613;&#x5B66;</li>
+<li>&#x7075;&#x6D3B;</li>
+<li>sql&#x548C;&#x4EE3;&#x7801;&#x7684;&#x5206;&#x79BB;&#xFF0C;&#x63D0;&#x9AD8;&#x4E86;&#x53EF;&#x7EF4;&#x62A4;&#x6027;&#x3002;</li>
+<li>&#x63D0;&#x4F9B;&#x6620;&#x5C04;&#x6807;&#x7B7E;&#xFF0C;&#x652F;&#x6301;&#x5BF9;&#x8C61;&#x4E0E;&#x6570;&#x636E;&#x5E93;&#x7684;orm&#x5B57;&#x6BB5;&#x5173;&#x7CFB;&#x6620;&#x5C04;</li>
+<li>&#x63D0;&#x4F9B;&#x5BF9;&#x8C61;&#x5173;&#x7CFB;&#x6620;&#x5C04;&#x6807;&#x7B7E;&#xFF0C;&#x652F;&#x6301;&#x5BF9;&#x8C61;&#x5173;&#x7CFB;&#x7EC4;&#x5EFA;&#x7EF4;&#x62A4;</li>
+<li>&#x63D0;&#x4F9B;xml&#x6807;&#x7B7E;&#xFF0C;&#x652F;&#x6301;&#x7F16;&#x5199;&#x52A8;&#x6001;sql&#x3002;</li>
+</ul>
+</li>
+</ul>
+<p><strong>&#x6700;&#x91CD;&#x8981;&#x7684;&#x4E00;&#x70B9;&#xFF1A;&#x4F7F;&#x7528;&#x7684;&#x4EBA;&#x591A;&#xFF01;</strong></p>
+<p>Spring   SpringMVC    SpringBoot</p>
+<h2 id="2&#x3001;&#x7B2C;&#x4E00;&#x4E2A;mybatis&#x7A0B;&#x5E8F;">2&#x3001;&#x7B2C;&#x4E00;&#x4E2A;Mybatis&#x7A0B;&#x5E8F;</h2>
+<p>&#x601D;&#x8DEF;&#xFF1A;&#x642D;&#x5EFA;&#x73AF;&#x5883;--&gt;&#x5BFC;&#x5165;Mybatis--&gt;&#x7F16;&#x5199;&#x4EE3;&#x7801;--&gt;&#x6D4B;&#x8BD5;&#xFF01;</p>
+<h3 id="21&#x3001;&#x642D;&#x5EFA;&#x73AF;&#x5883;">2.1&#x3001;&#x642D;&#x5EFA;&#x73AF;&#x5883;</h3>
+<p>&#x642D;&#x5EFA;&#x6570;&#x636E;&#x5E93;</p>
+<pre><code class="lang-java">CREATE DATABASE `mybatis`;
+
+USE `mybatis`;
+
+CREATE TABLE `user`(
+  `id` INT(<span class="hljs-number">20</span>) NOT NULL PRIMARY KEY,
+  `name` VARCHAR(<span class="hljs-number">30</span>) DEFAULT NULL,
+  `pwd` VARCHAR(<span class="hljs-number">30</span>) DEFAULT NULL
+)ENGINE=INNODB DEFAULT CHARSET=utf8;
+
+INSERT INTO `user`(`id`,`name`,`pwd`) VALUES 
+(<span class="hljs-number">1</span>,<span class="hljs-string">&apos;&#x72C2;&#x795E;&apos;</span>,<span class="hljs-string">&apos;123456&apos;</span>),
+(<span class="hljs-number">2</span>,<span class="hljs-string">&apos;&#x5F20;&#x4E09;&apos;</span>,<span class="hljs-string">&apos;123456&apos;</span>),
+(<span class="hljs-number">3</span>,<span class="hljs-string">&apos;&#x674E;&#x56DB;&apos;</span>,<span class="hljs-string">&apos;123890&apos;</span>)
+</code></pre>
+<p>&#x65B0;&#x5EFA;&#x9879;&#x76EE;</p>
+<ol>
+<li><p>&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x666E;&#x901A;&#x7684;maven&#x9879;&#x76EE;</p>
+</li>
+<li><p>&#x5220;&#x9664;src&#x76EE;&#x5F55;</p>
+</li>
+<li><p>&#x5BFC;&#x5165;maven&#x4F9D;&#x8D56;</p>
+<pre><code class="lang-xml">
+    <span class="hljs-comment">&lt;!--&#x5BFC;&#x5165;&#x4F9D;&#x8D56;--&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dependencies</span>&gt;</span>
+        <span class="hljs-comment">&lt;!--mysql&#x9A71;&#x52A8;--&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>mysql<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>mysql-connector-java<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>5.1.47<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+        <span class="hljs-comment">&lt;!--mybatis--&gt;</span>
+        <span class="hljs-comment">&lt;!-- https://mvnrepository.com/artifact/org.mybatis/mybatis --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.mybatis<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>mybatis<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>3.5.2<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+        <span class="hljs-comment">&lt;!--junit--&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>junit<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>junit<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>4.12<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">dependencies</span>&gt;</span>
+</code></pre>
+</li>
+</ol>
+<h3 id="22&#x3001;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6A21;&#x5757;">2.2&#x3001;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6A21;&#x5757;</h3>
+<ul>
+<li><p>&#x7F16;&#x5199;mybatis&#x7684;&#x6838;&#x5FC3;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+<pre><code class="lang-xml"><span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;UTF-8&quot;</span> <span class="hljs-meta">?&gt;</span></span>
+<span class="hljs-meta">&lt;!DOCTYPE configuration
+        PUBLIC &quot;-//mybatis.org//DTD Config 3.0//EN&quot;
+        &quot;http://mybatis.org/dtd/mybatis-3-config.dtd&quot;&gt;</span>
+<span class="hljs-comment">&lt;!--configuration&#x6838;&#x5FC3;&#x914D;&#x7F6E;&#x6587;&#x4EF6;--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">configuration</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">environments</span> <span class="hljs-attr">default</span>=<span class="hljs-string">&quot;development&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">environment</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;development&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">transactionManager</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;JDBC&quot;</span>/&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">dataSource</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;POOLED&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;driver&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;com.mysql.jdbc.Driver&quot;</span>/&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;url&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;jdbc:mysql://localhost:3306/mybatis?useSSL=true&amp;amp;useUnicode=true&amp;amp;characterEncoding=UTF-8&quot;</span>/&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;username&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;root&quot;</span>/&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;password&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;123456&quot;</span>/&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">dataSource</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">environment</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">environments</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">configuration</span>&gt;</span>
+</code></pre>
+</li>
+<li><p>&#x7F16;&#x5199;mybatis&#x5DE5;&#x5177;&#x7C7B;</p>
+<pre><code class="lang-java"><span class="hljs-comment">//sqlSessionFactory --&gt; sqlSession</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MybatisUtils</span> </span>{
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> SqlSessionFactory sqlSessionFactory;
+
+    <span class="hljs-keyword">static</span>{
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-comment">//&#x4F7F;&#x7528;Mybatis&#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x83B7;&#x53D6;sqlSessionFactory&#x5BF9;&#x8C61;</span>
+            String resource = <span class="hljs-string">&quot;mybatis-config.xml&quot;</span>;
+            InputStream inputStream = Resources.getResourceAsStream(resource);
+            sqlSessionFactory = <span class="hljs-keyword">new</span> SqlSessionFactoryBuilder().build(inputStream);
+        } <span class="hljs-keyword">catch</span> (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    <span class="hljs-comment">//&#x65E2;&#x7136;&#x6709;&#x4E86; SqlSessionFactory&#xFF0C;&#x987E;&#x540D;&#x601D;&#x4E49;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x4ECE;&#x4E2D;&#x83B7;&#x5F97; SqlSession &#x7684;&#x5B9E;&#x4F8B;&#x4E86;&#x3002;</span>
+    <span class="hljs-comment">// SqlSession &#x5B8C;&#x5168;&#x5305;&#x542B;&#x4E86;&#x9762;&#x5411;&#x6570;&#x636E;&#x5E93;&#x6267;&#x884C; SQL &#x547D;&#x4EE4;&#x6240;&#x9700;&#x7684;&#x6240;&#x6709;&#x65B9;&#x6CD5;&#x3002;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> SqlSession  <span class="hljs-title">getSqlSession</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">return</span> sqlSessionFactory.openSession();
+    }
+
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="23&#x3001;&#x7F16;&#x5199;&#x4EE3;&#x7801;">2.3&#x3001;&#x7F16;&#x5199;&#x4EE3;&#x7801;</h3>
+<ul>
+<li><p>&#x5B9E;&#x4F53;&#x7C7B;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.kuang.pojo;
+
+<span class="hljs-comment">//&#x5B9E;&#x4F53;&#x7C7B;</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">User</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> id;
+    <span class="hljs-keyword">private</span> String name;
+    <span class="hljs-keyword">private</span> String pwd;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">User</span><span class="hljs-params">()</span> </span>{
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">User</span><span class="hljs-params">(<span class="hljs-keyword">int</span> id, String name, String pwd)</span> </span>{
+        <span class="hljs-keyword">this</span>.id = id;
+        <span class="hljs-keyword">this</span>.name = name;
+        <span class="hljs-keyword">this</span>.pwd = pwd;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getId</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> id;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setId</span><span class="hljs-params">(<span class="hljs-keyword">int</span> id)</span> </span>{
+        <span class="hljs-keyword">this</span>.id = id;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getName</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> name;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setName</span><span class="hljs-params">(String name)</span> </span>{
+        <span class="hljs-keyword">this</span>.name = name;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getPwd</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> pwd;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setPwd</span><span class="hljs-params">(String pwd)</span> </span>{
+        <span class="hljs-keyword">this</span>.pwd = pwd;
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;User{&quot;</span> +
+                <span class="hljs-string">&quot;id=&quot;</span> + id +
+                <span class="hljs-string">&quot;, name=&apos;&quot;</span> + name + <span class="hljs-string">&apos;\&apos;&apos;</span> +
+                <span class="hljs-string">&quot;, pwd=&apos;&quot;</span> + pwd + <span class="hljs-string">&apos;\&apos;&apos;</span> +
+                <span class="hljs-string">&apos;}&apos;</span>;
+    }
+}
+</code></pre>
+</li>
+<li><p>Dao&#x63A5;&#x53E3;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">UserDao</span> </span>{
+    <span class="hljs-function">List&lt;User&gt; <span class="hljs-title">getUserList</span><span class="hljs-params">()</span></span>;
+}
+</code></pre>
+</li>
+<li><p>&#x63A5;&#x53E3;&#x5B9E;&#x73B0;&#x7C7B;&#x7531;&#x539F;&#x6765;&#x7684;UserDaoImpl&#x8F6C;&#x53D8;&#x4E3A;&#x4E00;&#x4E2A; Mapper&#x914D;&#x7F6E;&#x6587;&#x4EF6;.</p>
+<pre><code class="lang-xml"><span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;UTF-8&quot;</span> <span class="hljs-meta">?&gt;</span></span>
+        <span class="hljs-meta">&lt;!DOCTYPE mapper
+                PUBLIC &quot;-//mybatis.org//DTD Mapper 3.0//EN&quot;
+                &quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot;&gt;</span>
+        <span class="hljs-comment">&lt;!--namespace=&#x7ED1;&#x5B9A;&#x4E00;&#x4E2A;&#x5BF9;&#x5E94;&#x7684;Dao/Mapper&#x63A5;&#x53E3;--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mapper</span> <span class="hljs-attr">namespace</span>=<span class="hljs-string">&quot;com.kuang.dao.UserDao&quot;</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!--select&#x67E5;&#x8BE2;&#x8BED;&#x53E5;--&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;getUserList&quot;</span> <span class="hljs-attr">resultType</span>=<span class="hljs-string">&quot;com.kuang.pojo.User&quot;</span>&gt;</span>
+       select * from mybatis.user
+   <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">mapper</span>&gt;</span>
+</code></pre>
+</li>
+</ul>
+<h3 id="24&#x3001;&#x6D4B;&#x8BD5;">2.4&#x3001;&#x6D4B;&#x8BD5;</h3>
+<p>&#x6CE8;&#x610F;&#x70B9;&#xFF1A;</p>
+<p>org.apache.ibatis.binding.BindingException: Type interface com.kuang.dao.UserDao is not known to the MapperRegistry.</p>
+<p><strong>MapperRegistry&#x662F;&#x4EC0;&#x4E48;&#xFF1F;</strong></p>
+<p>&#x6838;&#x5FC3;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x6CE8;&#x518C; mappers</p>
+<ul>
+<li><p>junit&#x6D4B;&#x8BD5;</p>
+<p>```java
+@Test
+public void test(){</p>
+<pre><code>//&#x7B2C;&#x4E00;&#x6B65;&#xFF1A;&#x83B7;&#x5F97;SqlSession&#x5BF9;&#x8C61;
+SqlSession sqlSession = MybatisUtils.getSqlSession();
+</code></pre></li>
+</ul>
+<pre><code>  //&#x65B9;&#x5F0F;&#x4E00;&#xFF1A;getMapper
+  UserDao userDao = sqlSession.getMapper(UserDao.class);
+  List&lt;User&gt; userList = userDao.getUserList();
+
+  for (User user : userList) {
+      System.out.println(user);
+  }
+
+
+
+  //&#x5173;&#x95ED;SqlSession
+  sqlSession.close();
+</code></pre><p>  }</p>
+<pre><code>
+
+
+&#x4F60;&#x4EEC;&#x53EF;&#x4EE5;&#x80FD;&#x4F1A;&#x9047;&#x5230;&#x7684;&#x95EE;&#x9898;&#xFF1A;
+
+1. &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6CA1;&#x6709;&#x6CE8;&#x518C;
+2. &#x7ED1;&#x5B9A;&#x63A5;&#x53E3;&#x9519;&#x8BEF;&#x3002;
+3. &#x65B9;&#x6CD5;&#x540D;&#x4E0D;&#x5BF9;
+4. &#x8FD4;&#x56DE;&#x7C7B;&#x578B;&#x4E0D;&#x5BF9;
+5. Maven&#x5BFC;&#x51FA;&#x8D44;&#x6E90;&#x95EE;&#x9898;
+
+
+
+## 3&#x3001;CRUD
+
+### 1&#x3001;namespace
+
+namespace&#x4E2D;&#x7684;&#x5305;&#x540D;&#x8981;&#x548C; Dao/mapper &#x63A5;&#x53E3;&#x7684;&#x5305;&#x540D;&#x4E00;&#x81F4;&#xFF01;
+
+### 2&#x3001;select
+
+&#x9009;&#x62E9;&#xFF0C;&#x67E5;&#x8BE2;&#x8BED;&#x53E5;;
+
+- id : &#x5C31;&#x662F;&#x5BF9;&#x5E94;&#x7684;namespace&#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#x540D;&#xFF1B;
+- resultType&#xFF1A;Sql&#x8BED;&#x53E5;&#x6267;&#x884C;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#xFF01;
+- parameterType &#xFF1A; &#x53C2;&#x6570;&#x7C7B;&#x578B;&#xFF01;
+
+
+
+1. &#x7F16;&#x5199;&#x63A5;&#x53E3;
+
+   ```java
+   //&#x6839;&#x636E;ID&#x67E5;&#x8BE2;&#x7528;&#x6237;
+   User getUserById(int id);
+</code></pre><ol>
+<li><p>&#x7F16;&#x5199;&#x5BF9;&#x5E94;&#x7684;mapper&#x4E2D;&#x7684;sql&#x8BED;&#x53E5;</p>
+<pre><code class="lang-java">&lt;select id=&quot;getUserById&quot; parameterType=&quot;int&quot; resultType=&quot;com.kuang.pojo.User&quot;&gt;
+        select * from mybatis.user where id = #{id}
+&lt;/select&gt;
+</code></pre>
+</li>
+<li><p>&#x6D4B;&#x8BD5;</p>
+<pre><code class="lang-java">    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">getUserById</span><span class="hljs-params">()</span> </span>{
+        SqlSession sqlSession = MybatisUtils.getSqlSession();
+
+        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+
+        User user = mapper.getUserById(<span class="hljs-number">1</span>);
+        System.out.println(user);
+
+        sqlSession.close();
+    }
+</code></pre>
+</li>
+</ol>
+<h3 id="3&#x3001;insert">3&#x3001;Insert</h3>
+<pre><code class="lang-xml">    <span class="hljs-comment">&lt;!--&#x5BF9;&#x8C61;&#x4E2D;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x53D6;&#x51FA;&#x6765;--&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">insert</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;addUser&quot;</span> <span class="hljs-attr">parameterType</span>=<span class="hljs-string">&quot;com.kuang.pojo.User&quot;</span>&gt;</span>
+        insert into mybatis.user (id, name, pwd) values (#{id},#{name},#{pwd});
+    <span class="hljs-tag">&lt;/<span class="hljs-name">insert</span>&gt;</span>
+</code></pre>
+<h3 id="4&#x3001;update">4&#x3001;update</h3>
+<pre><code class="lang-xml">    <span class="hljs-tag">&lt;<span class="hljs-name">update</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;updateUser&quot;</span> <span class="hljs-attr">parameterType</span>=<span class="hljs-string">&quot;com.kuang.pojo.User&quot;</span>&gt;</span>
+        update mybatis.user set name=#{name},pwd=#{pwd}  where id = #{id} ;
+    <span class="hljs-tag">&lt;/<span class="hljs-name">update</span>&gt;</span>
+</code></pre>
+<h3 id="5&#x3001;delete">5&#x3001;Delete</h3>
+<pre><code class="lang-xml">    <span class="hljs-tag">&lt;<span class="hljs-name">delete</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;deleteUser&quot;</span> <span class="hljs-attr">parameterType</span>=<span class="hljs-string">&quot;int&quot;</span>&gt;</span>
+        delete from mybatis.user where id = #{id};
+    <span class="hljs-tag">&lt;/<span class="hljs-name">delete</span>&gt;</span>
+</code></pre>
+<p>&#x6CE8;&#x610F;&#x70B9;&#xFF1A;</p>
+<ul>
+<li>&#x589E;&#x5220;&#x6539;&#x9700;&#x8981;&#x63D0;&#x4EA4;&#x4E8B;&#x52A1;&#xFF01;</li>
+</ul>
+<h3 id="6&#x3001;&#x5206;&#x6790;&#x9519;&#x8BEF;">6&#x3001;&#x5206;&#x6790;&#x9519;&#x8BEF;</h3>
+<ul>
+<li>&#x6807;&#x7B7E;&#x4E0D;&#x8981;&#x5339;&#x914D;&#x9519;</li>
+<li>resource &#x7ED1;&#x5B9A;mapper&#xFF0C;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x8DEF;&#x5F84;&#xFF01;</li>
+<li>&#x7A0B;&#x5E8F;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5FC5;&#x987B;&#x7B26;&#x5408;&#x89C4;&#x8303;&#xFF01;</li>
+<li>NullPointerException&#xFF0C;&#x6CA1;&#x6709;&#x6CE8;&#x518C;&#x5230;&#x8D44;&#x6E90;!</li>
+<li>&#x8F93;&#x51FA;&#x7684;xml&#x6587;&#x4EF6;&#x4E2D;&#x5B58;&#x5728;&#x4E2D;&#x6587;&#x4E71;&#x7801;&#x95EE;&#x9898;&#xFF01;</li>
+<li>maven&#x8D44;&#x6E90;&#x6CA1;&#x6709;&#x5BFC;&#x51FA;&#x95EE;&#x9898;&#xFF01;</li>
+</ul>
+<h3 id="7&#x3001;&#x4E07;&#x80FD;map">7&#x3001;&#x4E07;&#x80FD;Map</h3>
+<p>&#x5047;&#x8BBE;&#xFF0C;&#x6211;&#x4EEC;&#x7684;&#x5B9E;&#x4F53;&#x7C7B;&#xFF0C;&#x6216;&#x8005;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x8868;&#xFF0C;&#x5B57;&#x6BB5;&#x6216;&#x8005;&#x53C2;&#x6570;&#x8FC7;&#x591A;&#xFF0C;&#x6211;&#x4EEC;&#x5E94;&#x5F53;&#x8003;&#x8651;&#x4F7F;&#x7528;Map&#xFF01;</p>
+<pre><code class="lang-java">    <span class="hljs-comment">//&#x4E07;&#x80FD;&#x7684;Map</span>
+    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">addUser2</span><span class="hljs-params">(Map&lt;String,Object&gt; map)</span></span>;
+</code></pre>
+<pre><code class="lang-xml">
+    <span class="hljs-comment">&lt;!--&#x5BF9;&#x8C61;&#x4E2D;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x53D6;&#x51FA;&#x6765;    &#x4F20;&#x9012;map&#x7684;key--&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">insert</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;addUser&quot;</span> <span class="hljs-attr">parameterType</span>=<span class="hljs-string">&quot;map&quot;</span>&gt;</span>
+        insert into mybatis.user (id, pwd) values (#{userid},#{passWord});
+    <span class="hljs-tag">&lt;/<span class="hljs-name">insert</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-xml">    @Test
+    public void addUser2(){
+        SqlSession sqlSession = MybatisUtils.getSqlSession();
+
+        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+
+
+        Map<span class="hljs-tag">&lt;<span class="hljs-name">String,</span> <span class="hljs-attr">Object</span>&gt;</span> map = new HashMap<span class="hljs-tag">&lt;<span class="hljs-name">String,</span> <span class="hljs-attr">Object</span>&gt;</span>();
+
+        map.put(&quot;userid&quot;,5);
+        map.put(&quot;passWord&quot;,&quot;2222333&quot;);
+
+        mapper.addUser2(map);
+
+        sqlSession.close();
+    }
+</code></pre>
+<p>Map&#x4F20;&#x9012;&#x53C2;&#x6570;&#xFF0C;&#x76F4;&#x63A5;&#x5728;sql&#x4E2D;&#x53D6;&#x51FA;key&#x5373;&#x53EF;&#xFF01;    &#x3010;parameterType=&quot;map&quot;&#x3011;</p>
+<p>&#x5BF9;&#x8C61;&#x4F20;&#x9012;&#x53C2;&#x6570;&#xFF0C;&#x76F4;&#x63A5;&#x5728;sql&#x4E2D;&#x53D6;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x5373;&#x53EF;&#xFF01;&#x3010;parameterType=&quot;Object&quot;&#x3011;</p>
+<p>&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x57FA;&#x672C;&#x7C7B;&#x578B;&#x53C2;&#x6570;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5728;sql&#x4E2D;&#x53D6;&#x5230;&#xFF01;</p>
+<p>&#x591A;&#x4E2A;&#x53C2;&#x6570;&#x7528;Map&#xFF0C;<strong>&#x6216;&#x8005;&#x6CE8;&#x89E3;&#xFF01;</strong></p>
+<h3 id="8&#x3001;&#x601D;&#x8003;&#x9898;">8&#x3001;&#x601D;&#x8003;&#x9898;</h3>
+<p>&#x6A21;&#x7CCA;&#x67E5;&#x8BE2;&#x600E;&#x4E48;&#x5199;&#xFF1F;</p>
+<ol>
+<li><p>Java&#x4EE3;&#x7801;&#x6267;&#x884C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F20;&#x9012;&#x901A;&#x914D;&#x7B26; % %</p>
+<pre><code class="lang-java">List&lt;User&gt; userList = mapper.getUserLike(<span class="hljs-string">&quot;%&#x674E;%&quot;</span>);
+</code></pre>
+</li>
+<li><p>&#x5728;sql&#x62FC;&#x63A5;&#x4E2D;&#x4F7F;&#x7528;&#x901A;&#x914D;&#x7B26;&#xFF01;</p>
+<pre><code class="lang-java">select * from mybatis.user where name like &quot;%&quot;#{value}&quot;%&quot;
+</code></pre>
+</li>
+</ol>
+<h2 id="4&#x3001;&#x914D;&#x7F6E;&#x89E3;&#x6790;">4&#x3001;&#x914D;&#x7F6E;&#x89E3;&#x6790;</h2>
+<h3 id="1&#x3001;&#x6838;&#x5FC3;&#x914D;&#x7F6E;&#x6587;&#x4EF6;">1&#x3001;&#x6838;&#x5FC3;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h3>
+<ul>
+<li><p>mybatis-config.xml</p>
+</li>
+<li><p>MyBatis &#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5305;&#x542B;&#x4E86;&#x4F1A;&#x6DF1;&#x6DF1;&#x5F71;&#x54CD; MyBatis &#x884C;&#x4E3A;&#x7684;&#x8BBE;&#x7F6E;&#x548C;&#x5C5E;&#x6027;&#x4FE1;&#x606F;&#x3002; </p>
+<pre><code class="lang-xml">configuration&#xFF08;&#x914D;&#x7F6E;&#xFF09;
+properties&#xFF08;&#x5C5E;&#x6027;&#xFF09;
+settings&#xFF08;&#x8BBE;&#x7F6E;&#xFF09;
+typeAliases&#xFF08;&#x7C7B;&#x578B;&#x522B;&#x540D;&#xFF09;
+typeHandlers&#xFF08;&#x7C7B;&#x578B;&#x5904;&#x7406;&#x5668;&#xFF09;
+objectFactory&#xFF08;&#x5BF9;&#x8C61;&#x5DE5;&#x5382;&#xFF09;
+plugins&#xFF08;&#x63D2;&#x4EF6;&#xFF09;
+environments&#xFF08;&#x73AF;&#x5883;&#x914D;&#x7F6E;&#xFF09;
+environment&#xFF08;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF09;
+transactionManager&#xFF08;&#x4E8B;&#x52A1;&#x7BA1;&#x7406;&#x5668;&#xFF09;
+dataSource&#xFF08;&#x6570;&#x636E;&#x6E90;&#xFF09;
+databaseIdProvider&#xFF08;&#x6570;&#x636E;&#x5E93;&#x5382;&#x5546;&#x6807;&#x8BC6;&#xFF09;
+mappers&#xFF08;&#x6620;&#x5C04;&#x5668;&#xFF09;
+</code></pre>
+</li>
+</ul>
+<h3 id="2&#x3001;&#x73AF;&#x5883;&#x914D;&#x7F6E;&#xFF08;environments&#xFF09;">2&#x3001;&#x73AF;&#x5883;&#x914D;&#x7F6E;&#xFF08;environments&#xFF09;</h3>
+<p>MyBatis &#x53EF;&#x4EE5;&#x914D;&#x7F6E;&#x6210;&#x9002;&#x5E94;&#x591A;&#x79CD;&#x73AF;&#x5883;</p>
+<p><strong>&#x4E0D;&#x8FC7;&#x8981;&#x8BB0;&#x4F4F;&#xFF1A;&#x5C3D;&#x7BA1;&#x53EF;&#x4EE5;&#x914D;&#x7F6E;&#x591A;&#x4E2A;&#x73AF;&#x5883;&#xFF0C;&#x4F46;&#x6BCF;&#x4E2A; SqlSessionFactory &#x5B9E;&#x4F8B;&#x53EA;&#x80FD;&#x9009;&#x62E9;&#x4E00;&#x79CD;&#x73AF;&#x5883;&#x3002;</strong></p>
+<p>&#x5B66;&#x4F1A;&#x4F7F;&#x7528;&#x914D;&#x7F6E;&#x591A;&#x5957;&#x8FD0;&#x884C;&#x73AF;&#x5883;&#xFF01;</p>
+<p>Mybatis&#x9ED8;&#x8BA4;&#x7684;&#x4E8B;&#x52A1;&#x7BA1;&#x7406;&#x5668;&#x5C31;&#x662F; JDBC  &#xFF0C; &#x8FDE;&#x63A5;&#x6C60; &#xFF1A; POOLED</p>
+<h3 id="3&#x3001;&#x5C5E;&#x6027;&#xFF08;properties&#xFF09;">3&#x3001;&#x5C5E;&#x6027;&#xFF08;properties&#xFF09;</h3>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;properties&#x5C5E;&#x6027;&#x6765;&#x5B9E;&#x73B0;&#x5F15;&#x7528;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+<p>&#x8FD9;&#x4E9B;&#x5C5E;&#x6027;&#x90FD;&#x662F;&#x53EF;&#x5916;&#x90E8;&#x914D;&#x7F6E;&#x4E14;&#x53EF;&#x52A8;&#x6001;&#x66FF;&#x6362;&#x7684;&#xFF0C;&#x65E2;&#x53EF;&#x4EE5;&#x5728;&#x5178;&#x578B;&#x7684; Java &#x5C5E;&#x6027;&#x6587;&#x4EF6;&#x4E2D;&#x914D;&#x7F6E;&#xFF0C;&#x4EA6;&#x53EF;&#x901A;&#x8FC7; properties &#x5143;&#x7D20;&#x7684;&#x5B50;&#x5143;&#x7D20;&#x6765;&#x4F20;&#x9012;&#x3002;&#x3010;db.properties&#x3011;</p>
+<p><img src="Mybatis&#x8BFE;&#x5802;&#x7B14;&#x8BB0;.assets/1569656528134.png" alt="1569656528134"></p>
+<p>&#x7F16;&#x5199;&#x4E00;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+<p>db.properties</p>
+<pre><code class="lang-properties">driver=com.mysql.jdbc.Driver
+url=jdbc:mysql://localhost:3306/mybatis?useSSL=true&amp;useUnicode=true&amp;characterEncoding=UTF-8
+username=root
+password=123456
+</code></pre>
+<p>&#x5728;&#x6838;&#x5FC3;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x6620;&#x5165;</p>
+<pre><code class="lang-xml">    <span class="hljs-comment">&lt;!--&#x5F15;&#x5165;&#x5916;&#x90E8;&#x914D;&#x7F6E;&#x6587;&#x4EF6;--&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">properties</span> <span class="hljs-attr">resource</span>=<span class="hljs-string">&quot;db.properties&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;username&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;root&quot;</span>/&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">property</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;pwd&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;11111&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">properties</span>&gt;</span>
+</code></pre>
+<ul>
+<li>&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5F15;&#x5165;&#x5916;&#x90E8;&#x6587;&#x4EF6;</li>
+<li>&#x53EF;&#x4EE5;&#x5728;&#x5176;&#x4E2D;&#x589E;&#x52A0;&#x4E00;&#x4E9B;&#x5C5E;&#x6027;&#x914D;&#x7F6E;</li>
+<li>&#x5982;&#x679C;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#x6709;&#x540C;&#x4E00;&#x4E2A;&#x5B57;&#x6BB5;&#xFF0C;&#x4F18;&#x5148;&#x4F7F;&#x7528;&#x5916;&#x90E8;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#xFF01;</li>
+</ul>
+<h3 id="4&#x3001;&#x7C7B;&#x578B;&#x522B;&#x540D;&#xFF08;typealiases&#xFF09;">4&#x3001;&#x7C7B;&#x578B;&#x522B;&#x540D;&#xFF08;typeAliases&#xFF09;</h3>
+<ul>
+<li>&#x7C7B;&#x578B;&#x522B;&#x540D;&#x662F;&#x4E3A; Java &#x7C7B;&#x578B;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x77ED;&#x7684;&#x540D;&#x5B57;&#x3002;&#x2018;</li>
+<li>&#x5B58;&#x5728;&#x7684;&#x610F;&#x4E49;&#x4EC5;&#x5728;&#x4E8E;&#x7528;&#x6765;&#x51CF;&#x5C11;&#x7C7B;&#x5B8C;&#x5168;&#x9650;&#x5B9A;&#x540D;&#x7684;&#x5197;&#x4F59;&#x3002;</li>
+</ul>
+<pre><code class="lang-xml">    <span class="hljs-comment">&lt;!--&#x53EF;&#x4EE5;&#x7ED9;&#x5B9E;&#x4F53;&#x7C7B;&#x8D77;&#x522B;&#x540D;--&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">typeAliases</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">typeAlias</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;com.kuang.pojo.User&quot;</span> <span class="hljs-attr">alias</span>=<span class="hljs-string">&quot;User&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">typeAliases</span>&gt;</span>
+</code></pre>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x5305;&#x540D;&#xFF0C;MyBatis &#x4F1A;&#x5728;&#x5305;&#x540D;&#x4E0B;&#x9762;&#x641C;&#x7D22;&#x9700;&#x8981;&#x7684; Java Bean&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;</p>
+<p>&#x626B;&#x63CF;&#x5B9E;&#x4F53;&#x7C7B;&#x7684;&#x5305;&#xFF0C;&#x5B83;&#x7684;&#x9ED8;&#x8BA4;&#x522B;&#x540D;&#x5C31;&#x4E3A;&#x8FD9;&#x4E2A;&#x7C7B;&#x7684; &#x7C7B;&#x540D;&#xFF0C;&#x9996;&#x5B57;&#x6BCD;&#x5C0F;&#x5199;&#xFF01;</p>
+<pre><code class="lang-xml"><span class="hljs-comment">&lt;!--&#x53EF;&#x4EE5;&#x7ED9;&#x5B9E;&#x4F53;&#x7C7B;&#x8D77;&#x522B;&#x540D;--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">typeAliases</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">package</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;com.kuang.pojo&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">typeAliases</span>&gt;</span>
+</code></pre>
+<p>&#x5728;&#x5B9E;&#x4F53;&#x7C7B;&#x6BD4;&#x8F83;&#x5C11;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F7F;&#x7528;&#x7B2C;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x5B9E;&#x4F53;&#x7C7B;&#x5341;&#x5206;&#x591A;&#xFF0C;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x7B2C;&#x4E8C;&#x79CD;&#x3002;</p>
+<p>&#x7B2C;&#x4E00;&#x79CD;&#x53EF;&#x4EE5;DIY&#x522B;&#x540D;&#xFF0C;&#x7B2C;&#x4E8C;&#x79CD;&#x5219;&#xB7;&#x4E0D;&#x884C;&#xB7;&#xFF0C;&#x5982;&#x679C;&#x975E;&#x8981;&#x6539;&#xFF0C;&#x9700;&#x8981;&#x5728;&#x5B9E;&#x4F53;&#x4E0A;&#x589E;&#x52A0;&#x6CE8;&#x89E3;</p>
+<pre><code class="lang-java"><span class="hljs-meta">@Alias</span>(<span class="hljs-string">&quot;user&quot;</span>)
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">User</span> </span>{}
+</code></pre>
+<h3 id="5&#x3001;&#x8BBE;&#x7F6E;">5&#x3001;&#x8BBE;&#x7F6E;</h3>
+<p>&#x8FD9;&#x662F; MyBatis &#x4E2D;&#x6781;&#x4E3A;&#x91CD;&#x8981;&#x7684;&#x8C03;&#x6574;&#x8BBE;&#x7F6E;&#xFF0C;&#x5B83;&#x4EEC;&#x4F1A;&#x6539;&#x53D8; MyBatis &#x7684;&#x8FD0;&#x884C;&#x65F6;&#x884C;&#x4E3A;&#x3002; </p>
+<p><img src="Mybatis&#x8BFE;&#x5802;&#x7B14;&#x8BB0;.assets/1569657659080.png" alt="1569657659080"></p>
+<p><img src="Mybatis&#x8BFE;&#x5802;&#x7B14;&#x8BB0;.assets/1569657672791.png" alt="1569657672791"></p>
+<h3 id="6&#x3001;&#x5176;&#x4ED6;&#x914D;&#x7F6E;">6&#x3001;&#x5176;&#x4ED6;&#x914D;&#x7F6E;</h3>
+<ul>
+<li><a href="https://mybatis.org/mybatis-3/zh/configuration.html#typeHandlers" target="_blank">typeHandlers&#xFF08;&#x7C7B;&#x578B;&#x5904;&#x7406;&#x5668;&#xFF09;</a></li>
+<li><a href="https://mybatis.org/mybatis-3/zh/configuration.html#objectFactory" target="_blank">objectFactory&#xFF08;&#x5BF9;&#x8C61;&#x5DE5;&#x5382;&#xFF09;</a></li>
+<li>plugins&#x63D2;&#x4EF6;<ul>
+<li>mybatis-generator-core</li>
+<li>mybatis-plus</li>
+<li>&#x901A;&#x7528;mapper</li>
+</ul>
+</li>
+</ul>
+<h3 id="7&#x3001;&#x6620;&#x5C04;&#x5668;&#xFF08;mappers&#xFF09;">7&#x3001;&#x6620;&#x5C04;&#x5668;&#xFF08;mappers&#xFF09;</h3>
+<p>MapperRegistry&#xFF1A;&#x6CE8;&#x518C;&#x7ED1;&#x5B9A;&#x6211;&#x4EEC;&#x7684;Mapper&#x6587;&#x4EF6;&#xFF1B;</p>
+<p>&#x65B9;&#x5F0F;&#x4E00;&#xFF1A; &#x3010;&#x63A8;&#x8350;&#x4F7F;&#x7528;&#x3011;</p>
+<pre><code class="lang-xml"><span class="hljs-comment">&lt;!--&#x6BCF;&#x4E00;&#x4E2A;Mapper.XML&#x90FD;&#x9700;&#x8981;&#x5728;Mybatis&#x6838;&#x5FC3;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x6CE8;&#x518C;&#xFF01;--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mappers</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mapper</span> <span class="hljs-attr">resource</span>=<span class="hljs-string">&quot;com/kuang/dao/UserMapper.xml&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mappers</span>&gt;</span>
+</code></pre>
+<p>&#x65B9;&#x5F0F;&#x4E8C;&#xFF1A;&#x4F7F;&#x7528;class&#x6587;&#x4EF6;&#x7ED1;&#x5B9A;&#x6CE8;&#x518C;</p>
+<pre><code class="lang-xml"><span class="hljs-comment">&lt;!--&#x6BCF;&#x4E00;&#x4E2A;Mapper.XML&#x90FD;&#x9700;&#x8981;&#x5728;Mybatis&#x6838;&#x5FC3;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x6CE8;&#x518C;&#xFF01;--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mappers</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mapper</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;com.kuang.dao.UserMapper&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mappers</span>&gt;</span>
+</code></pre>
+<p>&#x6CE8;&#x610F;&#x70B9;&#xFF1A;</p>
+<ul>
+<li>&#x63A5;&#x53E3;&#x548C;&#x4ED6;&#x7684;Mapper&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5FC5;&#x987B;&#x540C;&#x540D;&#xFF01;</li>
+<li>&#x63A5;&#x53E3;&#x548C;&#x4ED6;&#x7684;Mapper&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5FC5;&#x987B;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x5305;&#x4E0B;&#xFF01;</li>
+</ul>
+<p>&#x65B9;&#x5F0F;&#x4E09;&#xFF1A;&#x4F7F;&#x7528;&#x626B;&#x63CF;&#x5305;&#x8FDB;&#x884C;&#x6CE8;&#x5165;&#x7ED1;&#x5B9A;</p>
+<pre><code class="lang-xml"><span class="hljs-comment">&lt;!--&#x6BCF;&#x4E00;&#x4E2A;Mapper.XML&#x90FD;&#x9700;&#x8981;&#x5728;Mybatis&#x6838;&#x5FC3;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x6CE8;&#x518C;&#xFF01;--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mappers</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">package</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;com.kuang.dao&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mappers</span>&gt;</span>
+</code></pre>
+<p>&#x6CE8;&#x610F;&#x70B9;&#xFF1A;</p>
+<ul>
+<li>&#x63A5;&#x53E3;&#x548C;&#x4ED6;&#x7684;Mapper&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5FC5;&#x987B;&#x540C;&#x540D;&#xFF01;</li>
+<li>&#x63A5;&#x53E3;&#x548C;&#x4ED6;&#x7684;Mapper&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5FC5;&#x987B;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x5305;&#x4E0B;&#xFF01;</li>
+</ul>
+<p>&#x7EC3;&#x4E60;&#x65F6;&#x95F4;&#xFF1A;</p>
+<ul>
+<li>&#x5C06;&#x6570;&#x636E;&#x5E93;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5916;&#x90E8;&#x5F15;&#x5165;</li>
+<li>&#x5B9E;&#x4F53;&#x7C7B;&#x522B;&#x540D;</li>
+<li>&#x4FDD;&#x8BC1;UserMapper &#x63A5;&#x53E3; &#x548C; UserMapper .xml &#x6539;&#x4E3A;&#x4E00;&#x81F4;&#xFF01;&#x5E76;&#x4E14;&#x653E;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x5305;&#x4E0B;&#xFF01;</li>
+</ul>
+<h3 id="8&#x3001;&#x751F;&#x547D;&#x5468;&#x671F;&#x548C;&#x4F5C;&#x7528;&#x57DF;">8&#x3001;&#x751F;&#x547D;&#x5468;&#x671F;&#x548C;&#x4F5C;&#x7528;&#x57DF;</h3>
+<p><img src="Mybatis&#x8BFE;&#x5802;&#x7B14;&#x8BB0;.assets/1569660357745.png" alt="1569660357745"></p>
+<p>&#x751F;&#x547D;&#x5468;&#x671F;&#xFF0C;&#x548C;&#x4F5C;&#x7528;&#x57DF;&#xFF0C;&#x662F;&#x81F3;&#x5173;&#x91CD;&#x8981;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x9519;&#x8BEF;&#x7684;&#x4F7F;&#x7528;&#x4F1A;&#x5BFC;&#x81F4;&#x975E;&#x5E38;&#x4E25;&#x91CD;&#x7684;<strong>&#x5E76;&#x53D1;&#x95EE;&#x9898;</strong>&#x3002;</p>
+<p><strong>SqlSessionFactoryBuilder&#xFF1A;</strong></p>
+<ul>
+<li>&#x4E00;&#x65E6;&#x521B;&#x5EFA;&#x4E86; SqlSessionFactory&#xFF0C;&#x5C31;&#x4E0D;&#x518D;&#x9700;&#x8981;&#x5B83;&#x4E86;</li>
+<li>&#x5C40;&#x90E8;&#x53D8;&#x91CF;</li>
+</ul>
+<p><strong>SqlSessionFactory&#xFF1A;</strong></p>
+<ul>
+<li>&#x8BF4;&#x767D;&#x4E86;&#x5C31;&#x662F;&#x53EF;&#x4EE5;&#x60F3;&#x8C61;&#x4E3A; &#xFF1A;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x6C60;</li>
+<li>SqlSessionFactory &#x4E00;&#x65E6;&#x88AB;&#x521B;&#x5EFA;&#x5C31;&#x5E94;&#x8BE5;&#x5728;&#x5E94;&#x7528;&#x7684;&#x8FD0;&#x884C;&#x671F;&#x95F4;&#x4E00;&#x76F4;&#x5B58;&#x5728;&#xFF0C;<strong>&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x7406;&#x7531;&#x4E22;&#x5F03;&#x5B83;&#x6216;&#x91CD;&#x65B0;&#x521B;&#x5EFA;&#x53E6;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#x3002;</strong> </li>
+<li>&#x56E0;&#x6B64; SqlSessionFactory &#x7684;&#x6700;&#x4F73;&#x4F5C;&#x7528;&#x57DF;&#x662F;&#x5E94;&#x7528;&#x4F5C;&#x7528;&#x57DF;&#x3002; </li>
+<li>&#x6700;&#x7B80;&#x5355;&#x7684;&#x5C31;&#x662F;&#x4F7F;&#x7528;<strong>&#x5355;&#x4F8B;&#x6A21;&#x5F0F;</strong>&#x6216;&#x8005;&#x9759;&#x6001;&#x5355;&#x4F8B;&#x6A21;&#x5F0F;&#x3002;</li>
+</ul>
+<p><strong>SqlSession</strong></p>
+<ul>
+<li>&#x8FDE;&#x63A5;&#x5230;&#x8FDE;&#x63A5;&#x6C60;&#x7684;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;&#xFF01;</li>
+<li>SqlSession &#x7684;&#x5B9E;&#x4F8B;&#x4E0D;&#x662F;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x662F;&#x4E0D;&#x80FD;&#x88AB;&#x5171;&#x4EAB;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x5B83;&#x7684;&#x6700;&#x4F73;&#x7684;&#x4F5C;&#x7528;&#x57DF;&#x662F;&#x8BF7;&#x6C42;&#x6216;&#x65B9;&#x6CD5;&#x4F5C;&#x7528;&#x57DF;&#x3002;</li>
+<li>&#x7528;&#x5B8C;&#x4E4B;&#x540E;&#x9700;&#x8981;&#x8D76;&#x7D27;&#x5173;&#x95ED;&#xFF0C;&#x5426;&#x5219;&#x8D44;&#x6E90;&#x88AB;&#x5360;&#x7528;&#xFF01;</li>
+</ul>
+<p><img src="Mybatis&#x8BFE;&#x5802;&#x7B14;&#x8BB0;.assets/1569660737088.png" alt="1569660737088"></p>
+<p>&#x8FD9;&#x91CC;&#x9762;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;Mapper&#xFF0C;&#x5C31;&#x4EE3;&#x8868;&#x4E00;&#x4E2A;&#x5177;&#x4F53;&#x7684;&#x4E1A;&#x52A1;&#xFF01;</p>
+<h2 id="5&#x3001;&#x89E3;&#x51B3;&#x5C5E;&#x6027;&#x540D;&#x548C;&#x5B57;&#x6BB5;&#x540D;&#x4E0D;&#x4E00;&#x81F4;&#x7684;&#x95EE;&#x9898;">5&#x3001;&#x89E3;&#x51B3;&#x5C5E;&#x6027;&#x540D;&#x548C;&#x5B57;&#x6BB5;&#x540D;&#x4E0D;&#x4E00;&#x81F4;&#x7684;&#x95EE;&#x9898;</h2>
+<h3 id="1&#x3001;-&#x95EE;&#x9898;">1&#x3001; &#x95EE;&#x9898;</h3>
+<p>&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x5B57;&#x6BB5;</p>
+<p><img src="Mybatis&#x8BFE;&#x5802;&#x7B14;&#x8BB0;.assets/1569660831076.png" alt="1569660831076"></p>
+<p>&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#xFF0C;&#x62F7;&#x8D1D;&#x4E4B;&#x524D;&#x7684;&#xFF0C;&#x6D4B;&#x8BD5;&#x5B9E;&#x4F53;&#x7C7B;&#x5B57;&#x6BB5;&#x4E0D;&#x4E00;&#x81F4;&#x7684;&#x60C5;&#x51B5;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">User</span> </span>{
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> id;
+    <span class="hljs-keyword">private</span> String name;
+    <span class="hljs-keyword">private</span> String password;
+}
+</code></pre>
+<p>&#x6D4B;&#x8BD5;&#x51FA;&#x73B0;&#x95EE;&#x9898;</p>
+<p><img src="Mybatis&#x8BFE;&#x5802;&#x7B14;&#x8BB0;.assets/1569661145806.png" alt="1569661145806"></p>
+<pre><code class="lang-xml">//    select * from mybatis.user where id = #{id}
+//&#x7C7B;&#x578B;&#x5904;&#x7406;&#x5668;
+//    select id,name,pwd from mybatis.user where id = #{id}
+</code></pre>
+<p>&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<ul>
+<li><p>&#x8D77;&#x522B;&#x540D;</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;getUserById&quot;</span> <span class="hljs-attr">resultType</span>=<span class="hljs-string">&quot;com.kuang.pojo.User&quot;</span>&gt;</span>
+    select id,name,pwd as password from mybatis.user where id = #{id}
+<span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+</code></pre>
+</li>
+</ul>
+<h3 id="2&#x3001;resultmap">2&#x3001;resultMap</h3>
+<p>&#x7ED3;&#x679C;&#x96C6;&#x6620;&#x5C04;</p>
+<pre><code>id   name   pwd
+id   name   password
+</code></pre><pre><code class="lang-xml"><span class="hljs-comment">&lt;!--&#x7ED3;&#x679C;&#x96C6;&#x6620;&#x5C04;--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">resultMap</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;UserMap&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;User&quot;</span>&gt;</span>
+    <span class="hljs-comment">&lt;!--column&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;property&#x5B9E;&#x4F53;&#x7C7B;&#x4E2D;&#x7684;&#x5C5E;&#x6027;--&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">result</span> <span class="hljs-attr">column</span>=<span class="hljs-string">&quot;id&quot;</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;id&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">result</span> <span class="hljs-attr">column</span>=<span class="hljs-string">&quot;name&quot;</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;name&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">result</span> <span class="hljs-attr">column</span>=<span class="hljs-string">&quot;pwd&quot;</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;password&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">resultMap</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;getUserById&quot;</span> <span class="hljs-attr">resultMap</span>=<span class="hljs-string">&quot;UserMap&quot;</span>&gt;</span>
+    select * from mybatis.user where id = #{id}
+<span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+</code></pre>
+<ul>
+<li><code>resultMap</code> &#x5143;&#x7D20;&#x662F; MyBatis &#x4E2D;&#x6700;&#x91CD;&#x8981;&#x6700;&#x5F3A;&#x5927;&#x7684;&#x5143;&#x7D20;</li>
+<li>ResultMap &#x7684;&#x8BBE;&#x8BA1;&#x601D;&#x60F3;&#x662F;&#xFF0C;&#x5BF9;&#x4E8E;&#x7B80;&#x5355;&#x7684;&#x8BED;&#x53E5;&#x6839;&#x672C;&#x4E0D;&#x9700;&#x8981;&#x914D;&#x7F6E;&#x663E;&#x5F0F;&#x7684;&#x7ED3;&#x679C;&#x6620;&#x5C04;&#xFF0C;&#x800C;&#x5BF9;&#x4E8E;&#x590D;&#x6742;&#x4E00;&#x70B9;&#x7684;&#x8BED;&#x53E5;&#x53EA;&#x9700;&#x8981;&#x63CF;&#x8FF0;&#x5B83;&#x4EEC;&#x7684;&#x5173;&#x7CFB;&#x5C31;&#x884C;&#x4E86;&#x3002;</li>
+<li><code>ResultMap</code> &#x6700;&#x4F18;&#x79C0;&#x7684;&#x5730;&#x65B9;&#x5728;&#x4E8E;&#xFF0C;&#x867D;&#x7136;&#x4F60;&#x5DF2;&#x7ECF;&#x5BF9;&#x5B83;&#x76F8;&#x5F53;&#x4E86;&#x89E3;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x6839;&#x672C;&#x5C31;&#x4E0D;&#x9700;&#x8981;&#x663E;&#x5F0F;&#x5730;&#x7528;&#x5230;&#x4ED6;&#x4EEC;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x4E16;&#x754C;&#x603B;&#x662F;&#x8FD9;&#x4E48;&#x7B80;&#x5355;&#x5C31;&#x597D;&#x4E86;&#x3002;</li>
+</ul>
+<h2 id="6&#x3001;&#x65E5;&#x5FD7;">6&#x3001;&#x65E5;&#x5FD7;</h2>
+<h3 id="61&#x3001;&#x65E5;&#x5FD7;&#x5DE5;&#x5382;">6.1&#x3001;&#x65E5;&#x5FD7;&#x5DE5;&#x5382;</h3>
+<p>&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;&#xFF0C;&#x51FA;&#x73B0;&#x4E86;&#x5F02;&#x5E38;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x6392;&#x9519;&#x3002;&#x65E5;&#x5FD7;&#x5C31;&#x662F;&#x6700;&#x597D;&#x7684;&#x52A9;&#x624B;&#xFF01;</p>
+<p>&#x66FE;&#x7ECF;&#xFF1A;sout &#x3001;debug</p>
+<p>&#x73B0;&#x5728;&#xFF1A;&#x65E5;&#x5FD7;&#x5DE5;&#x5382;&#xFF01;</p>
+<p><img src="Mybatis&#x8BFE;&#x5802;&#x7B14;&#x8BB0;.assets/1569892155104.png" alt="1569892155104"></p>
+<ul>
+<li><p>SLF4J </p>
+</li>
+<li><p>LOG4J  &#x3010;&#x638C;&#x63E1;&#x3011;</p>
+</li>
+<li>LOG4J2</li>
+<li>JDK_LOGGING</li>
+<li>COMMONS_LOGGING</li>
+<li>STDOUT_LOGGING   &#x3010;&#x638C;&#x63E1;&#x3011;</li>
+<li>NO_LOGGING</li>
+</ul>
+<p>&#x5728;Mybatis&#x4E2D;&#x5177;&#x4F53;&#x4F7F;&#x7528;&#x90A3;&#x4E2A;&#x4E00;&#x65E5;&#x5FD7;&#x5B9E;&#x73B0;&#xFF0C;&#x5728;&#x8BBE;&#x7F6E;&#x4E2D;&#x8BBE;&#x5B9A;&#xFF01;</p>
+<p><strong>STDOUT_LOGGING&#x6807;&#x51C6;&#x65E5;&#x5FD7;&#x8F93;&#x51FA;</strong></p>
+<p>&#x5728;mybatis&#x6838;&#x5FC3;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x914D;&#x7F6E;&#x6211;&#x4EEC;&#x7684;&#x65E5;&#x5FD7;&#xFF01;</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">settings</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">setting</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;logImpl&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;STDOUT_LOGGING&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">settings</span>&gt;</span>
+</code></pre>
+<p><img src="Mybatis&#x8BFE;&#x5802;&#x7B14;&#x8BB0;.assets/1569892595060.png" alt="1569892595060"></p>
+<h3 id="62&#x3001;log4j">6.2&#x3001;Log4j</h3>
+<p>&#x4EC0;&#x4E48;&#x662F;Log4j&#xFF1F;</p>
+<ul>
+<li>Log4j&#x662F;<a href="https://baike.baidu.com/item/Apache/8512995" target="_blank">Apache</a>&#x7684;&#x4E00;&#x4E2A;&#x5F00;&#x6E90;&#x9879;&#x76EE;&#xFF0C;&#x901A;&#x8FC7;&#x4F7F;&#x7528;Log4j&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x63A7;&#x5236;&#x65E5;&#x5FD7;&#x4FE1;&#x606F;&#x8F93;&#x9001;&#x7684;&#x76EE;&#x7684;&#x5730;&#x662F;<a href="https://baike.baidu.com/item/&#x63A7;&#x5236;&#x53F0;/2438626" target="_blank">&#x63A7;&#x5236;&#x53F0;</a>&#x3001;&#x6587;&#x4EF6;&#x3001;<a href="https://baike.baidu.com/item/GUI" target="_blank">GUI</a>&#x7EC4;&#x4EF6;</li>
+<li>&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x63A7;&#x5236;&#x6BCF;&#x4E00;&#x6761;&#x65E5;&#x5FD7;&#x7684;&#x8F93;&#x51FA;&#x683C;&#x5F0F;&#xFF1B;</li>
+<li>&#x901A;&#x8FC7;&#x5B9A;&#x4E49;&#x6BCF;&#x4E00;&#x6761;&#x65E5;&#x5FD7;&#x4FE1;&#x606F;&#x7684;&#x7EA7;&#x522B;&#xFF0C;&#x6211;&#x4EEC;&#x80FD;&#x591F;&#x66F4;&#x52A0;&#x7EC6;&#x81F4;&#x5730;&#x63A7;&#x5236;&#x65E5;&#x5FD7;&#x7684;&#x751F;&#x6210;&#x8FC7;&#x7A0B;&#x3002;</li>
+<li>&#x901A;&#x8FC7;&#x4E00;&#x4E2A;<a href="https://baike.baidu.com/item/&#x914D;&#x7F6E;&#x6587;&#x4EF6;/286550" target="_blank">&#x914D;&#x7F6E;&#x6587;&#x4EF6;</a>&#x6765;&#x7075;&#x6D3B;&#x5730;&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#xFF0C;&#x800C;&#x4E0D;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x5E94;&#x7528;&#x7684;&#x4EE3;&#x7801;&#x3002;</li>
+</ul>
+<ol>
+<li><p>&#x5148;&#x5BFC;&#x5165;log4j&#x7684;&#x5305;</p>
+<pre><code class="lang-xml"><span class="hljs-comment">&lt;!-- https://mvnrepository.com/artifact/log4j/log4j --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>log4j<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>log4j<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>1.2.17<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+</code></pre>
+</li>
+<li><p>log4j.properties</p>
+<pre><code class="lang-properties">#&#x5C06;&#x7B49;&#x7EA7;&#x4E3A;DEBUG&#x7684;&#x65E5;&#x5FD7;&#x4FE1;&#x606F;&#x8F93;&#x51FA;&#x5230;console&#x548C;file&#x8FD9;&#x4E24;&#x4E2A;&#x76EE;&#x7684;&#x5730;&#xFF0C;console&#x548C;file&#x7684;&#x5B9A;&#x4E49;&#x5728;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;
+log4j.rootLogger=DEBUG,console,file
+
+#&#x63A7;&#x5236;&#x53F0;&#x8F93;&#x51FA;&#x7684;&#x76F8;&#x5173;&#x8BBE;&#x7F6E;
+log4j.appender.console = org.apache.log4j.ConsoleAppender
+log4j.appender.console.Target = System.out
+log4j.appender.console.Threshold=DEBUG
+log4j.appender.console.layout = org.apache.log4j.PatternLayout
+log4j.appender.console.layout.ConversionPattern=[%c]-%m%n
+
+#&#x6587;&#x4EF6;&#x8F93;&#x51FA;&#x7684;&#x76F8;&#x5173;&#x8BBE;&#x7F6E;
+log4j.appender.file = org.apache.log4j.RollingFileAppender
+log4j.appender.file.File=./log/kuang.log
+log4j.appender.file.MaxFileSize=10mb
+log4j.appender.file.Threshold=DEBUG
+log4j.appender.file.layout=org.apache.log4j.PatternLayout
+log4j.appender.file.layout.ConversionPattern=[%p][%d{yy-MM-dd}][%c]%m%n
+
+#&#x65E5;&#x5FD7;&#x8F93;&#x51FA;&#x7EA7;&#x522B;
+log4j.logger.org.mybatis=DEBUG
+log4j.logger.java.sql=DEBUG
+log4j.logger.java.sql.Statement=DEBUG
+log4j.logger.java.sql.ResultSet=DEBUG
+log4j.logger.java.sql.PreparedStatement=DEBUG
+</code></pre>
+</li>
+<li><p>&#x914D;&#x7F6E;log4j&#x4E3A;&#x65E5;&#x5FD7;&#x7684;&#x5B9E;&#x73B0;</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">settings</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">setting</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;logImpl&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">settings</span>&gt;</span>
+</code></pre>
+</li>
+<li><p>Log4j&#x7684;&#x4F7F;&#x7528;&#xFF01;&#xFF0C;&#x76F4;&#x63A5;&#x6D4B;&#x8BD5;&#x8FD0;&#x884C;&#x521A;&#x624D;&#x7684;&#x67E5;&#x8BE2;</p>
+<p><img src="Mybatis&#x8BFE;&#x5802;&#x7B14;&#x8BB0;.assets/1569893505842.png" alt="1569893505842"></p>
+</li>
+</ol>
+<p><strong>&#x7B80;&#x5355;&#x4F7F;&#x7528;</strong></p>
+<ol>
+<li><p>&#x5728;&#x8981;&#x4F7F;&#x7528;Log4j &#x7684;&#x7C7B;&#x4E2D;&#xFF0C;&#x5BFC;&#x5165;&#x5305;  import org.apache.log4j.Logger;</p>
+</li>
+<li><p>&#x65E5;&#x5FD7;&#x5BF9;&#x8C61;&#xFF0C;&#x53C2;&#x6570;&#x4E3A;&#x5F53;&#x524D;&#x7C7B;&#x7684;class</p>
+<pre><code class="lang-java"><span class="hljs-keyword">static</span> Logger logger = Logger.getLogger(UserDaoTest.class);
+</code></pre>
+</li>
+<li><p>&#x65E5;&#x5FD7;&#x7EA7;&#x522B;</p>
+<pre><code class="lang-java">logger.info(<span class="hljs-string">&quot;info:&#x8FDB;&#x5165;&#x4E86;testLog4j&quot;</span>);
+logger.debug(<span class="hljs-string">&quot;debug:&#x8FDB;&#x5165;&#x4E86;testLog4j&quot;</span>);
+logger.error(<span class="hljs-string">&quot;error:&#x8FDB;&#x5165;&#x4E86;testLog4j&quot;</span>);
+</code></pre>
+</li>
+</ol>
+<h2 id="7&#x3001;&#x5206;&#x9875;">7&#x3001;&#x5206;&#x9875;</h2>
+<p><strong>&#x601D;&#x8003;&#xFF1A;&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x5206;&#x9875;&#xFF1F;</strong></p>
+<ul>
+<li>&#x51CF;&#x5C11;&#x6570;&#x636E;&#x7684;&#x5904;&#x7406;&#x91CF;</li>
+</ul>
+<h3 id="71&#x3001;&#x4F7F;&#x7528;limit&#x5206;&#x9875;">7.1&#x3001;&#x4F7F;&#x7528;Limit&#x5206;&#x9875;</h3>
+<pre><code class="lang-sql">&#x8BED;&#x6CD5;&#xFF1A;<span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">from</span> <span class="hljs-keyword">user</span> <span class="hljs-keyword">limit</span> startIndex,pageSize;
+<span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">from</span> <span class="hljs-keyword">user</span> <span class="hljs-keyword">limit</span> <span class="hljs-number">3</span>;  #[0,n]
+</code></pre>
+<p>&#x4F7F;&#x7528;Mybatis&#x5B9E;&#x73B0;&#x5206;&#x9875;&#xFF0C;&#x6838;&#x5FC3;SQL</p>
+<ol>
+<li><p>&#x63A5;&#x53E3;</p>
+<pre><code class="lang-java"><span class="hljs-comment">//&#x5206;&#x9875;</span>
+<span class="hljs-function">List&lt;User&gt; <span class="hljs-title">getUserByLimit</span><span class="hljs-params">(Map&lt;String,Integer&gt; map)</span></span>;
+</code></pre>
+</li>
+<li><p>Mapper.xml</p>
+<pre><code class="lang-xml"><span class="hljs-comment">&lt;!--//&#x5206;&#x9875;--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;getUserByLimit&quot;</span> <span class="hljs-attr">parameterType</span>=<span class="hljs-string">&quot;map&quot;</span> <span class="hljs-attr">resultMap</span>=<span class="hljs-string">&quot;UserMap&quot;</span>&gt;</span>
+    select * from  mybatis.user limit #{startIndex},#{pageSize}
+<span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+</code></pre>
+</li>
+<li><p>&#x6D4B;&#x8BD5;</p>
+<pre><code class="lang-java"><span class="hljs-meta">@Test</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">getUserByLimit</span><span class="hljs-params">()</span></span>{
+SqlSession sqlSession = MybatisUtils.getSqlSession();
+UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+
+HashMap&lt;String, Integer&gt; map = <span class="hljs-keyword">new</span> HashMap&lt;String, Integer&gt;();
+    map.put(<span class="hljs-string">&quot;startIndex&quot;</span>,<span class="hljs-number">1</span>);
+    map.put(<span class="hljs-string">&quot;pageSize&quot;</span>,<span class="hljs-number">2</span>);
+
+    List&lt;User&gt; userList =  mapper.getUserByLimit(map);
+    <span class="hljs-keyword">for</span> (User user : userList) {
+    System.out.println(user);
+    }
+
+    sqlSession.close();
+    }
+</code></pre>
+</li>
+</ol>
+<h3 id="72&#x3001;rowbounds&#x5206;&#x9875;">7.2&#x3001;RowBounds&#x5206;&#x9875;</h3>
+<p>&#x4E0D;&#x518D;&#x4F7F;&#x7528;SQL&#x5B9E;&#x73B0;&#x5206;&#x9875;</p>
+<ol>
+<li><p>&#x63A5;&#x53E3;</p>
+<pre><code class="lang-java"><span class="hljs-comment">//&#x5206;&#x9875;2</span>
+<span class="hljs-function">List&lt;User&gt; <span class="hljs-title">getUserByRowBounds</span><span class="hljs-params">()</span></span>;
+</code></pre>
+</li>
+<li><p>mapper.xml</p>
+<pre><code class="lang-xml"><span class="hljs-comment">&lt;!--&#x5206;&#x9875;2--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;getUserByRowBounds&quot;</span> <span class="hljs-attr">resultMap</span>=<span class="hljs-string">&quot;UserMap&quot;</span>&gt;</span>
+    select * from  mybatis.user
+<span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+</code></pre>
+</li>
+<li><p>&#x6D4B;&#x8BD5;</p>
+<pre><code class="lang-java"><span class="hljs-meta">@Test</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">getUserByRowBounds</span><span class="hljs-params">()</span></span>{
+SqlSession sqlSession = MybatisUtils.getSqlSession();
+
+<span class="hljs-comment">//RowBounds&#x5B9E;&#x73B0;</span>
+RowBounds rowBounds = <span class="hljs-keyword">new</span> RowBounds(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>);
+
+<span class="hljs-comment">//&#x901A;&#x8FC7;Java&#x4EE3;&#x7801;&#x5C42;&#x9762;&#x5B9E;&#x73B0;&#x5206;&#x9875;</span>
+List&lt;User&gt; userList = sqlSession.selectList(<span class="hljs-string">&quot;com.kuang.dao.UserMapper.getUserByRowBounds&quot;</span>,<span class="hljs-keyword">null</span>,rowBounds);
+
+    <span class="hljs-keyword">for</span> (User user : userList) {
+    System.out.println(user);
+    }
+
+    sqlSession.close();
+    }
+</code></pre>
+</li>
+</ol>
+<h3 id="73&#x3001;&#x5206;&#x9875;&#x63D2;&#x4EF6;">7.3&#x3001;&#x5206;&#x9875;&#x63D2;&#x4EF6;</h3>
+<p><img src="Mybatis&#x8BFE;&#x5802;&#x7B14;&#x8BB0;.assets/1569896603103.png" alt="1569896603103"></p>
+<p>&#x4E86;&#x89E3;&#x5373;&#x53EF;&#xFF0C;&#x4E07;&#x4E00; &#x4EE5;&#x540E;&#x516C;&#x53F8;&#x7684;&#x67B6;&#x6784;&#x5E08;&#xFF0C;&#x8BF4;&#x8981;&#x4F7F;&#x7528;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x77E5;&#x9053;&#x5B83;&#x662F;&#x4EC0;&#x4E48;&#x4E1C;&#x897F;&#xFF01;</p>
+<h2 id="8&#x3001;&#x4F7F;&#x7528;&#x6CE8;&#x89E3;&#x5F00;&#x53D1;">8&#x3001;&#x4F7F;&#x7528;&#x6CE8;&#x89E3;&#x5F00;&#x53D1;</h2>
+<h3 id="81&#x3001;&#x9762;&#x5411;&#x63A5;&#x53E3;&#x7F16;&#x7A0B;">8.1&#x3001;&#x9762;&#x5411;&#x63A5;&#x53E3;&#x7F16;&#x7A0B;</h3>
+<p>- &#x5927;&#x5BB6;&#x4E4B;&#x524D;&#x90FD;&#x5B66;&#x8FC7;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7F16;&#x7A0B;&#xFF0C;&#x4E5F;&#x5B66;&#x4E60;&#x8FC7;&#x63A5;&#x53E3;&#xFF0C;&#x4F46;&#x5728;&#x771F;&#x6B63;&#x7684;&#x5F00;&#x53D1;&#x4E2D;&#xFF0C;&#x5F88;&#x591A;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x4F1A;&#x9009;&#x62E9;&#x9762;&#x5411;&#x63A5;&#x53E3;&#x7F16;&#x7A0B;
+- <strong>&#x6839;&#x672C;&#x539F;&#x56E0; :  ==&#x89E3;&#x8026;== , &#x53EF;&#x62D3;&#x5C55; , &#x63D0;&#x9AD8;&#x590D;&#x7528; , &#x5206;&#x5C42;&#x5F00;&#x53D1;&#x4E2D; , &#x4E0A;&#x5C42;&#x4E0D;&#x7528;&#x7BA1;&#x5177;&#x4F53;&#x7684;&#x5B9E;&#x73B0; , &#x5927;&#x5BB6;&#x90FD;&#x9075;&#x5B88;&#x5171;&#x540C;&#x7684;&#x6807;&#x51C6; , &#x4F7F;&#x5F97;&#x5F00;&#x53D1;&#x53D8;&#x5F97;&#x5BB9;&#x6613; , &#x89C4;&#x8303;&#x6027;&#x66F4;&#x597D;</strong>
+- &#x5728;&#x4E00;&#x4E2A;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x7CFB;&#x7EDF;&#x7684;&#x5404;&#x79CD;&#x529F;&#x80FD;&#x662F;&#x7531;&#x8BB8;&#x8BB8;&#x591A;&#x591A;&#x7684;&#x4E0D;&#x540C;&#x5BF9;&#x8C61;&#x534F;&#x4F5C;&#x5B8C;&#x6210;&#x7684;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5404;&#x4E2A;&#x5BF9;&#x8C61;&#x5185;&#x90E8;&#x662F;&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x81EA;&#x5DF1;&#x7684;,&#x5BF9;&#x7CFB;&#x7EDF;&#x8BBE;&#x8BA1;&#x4EBA;&#x5458;&#x6765;&#x8BB2;&#x5C31;&#x4E0D;&#x90A3;&#x4E48;&#x91CD;&#x8981;&#x4E86;&#xFF1B;
+- &#x800C;&#x5404;&#x4E2A;&#x5BF9;&#x8C61;&#x4E4B;&#x95F4;&#x7684;&#x534F;&#x4F5C;&#x5173;&#x7CFB;&#x5219;&#x6210;&#x4E3A;&#x7CFB;&#x7EDF;&#x8BBE;&#x8BA1;&#x7684;&#x5173;&#x952E;&#x3002;&#x5C0F;&#x5230;&#x4E0D;&#x540C;&#x7C7B;&#x4E4B;&#x95F4;&#x7684;&#x901A;&#x4FE1;&#xFF0C;&#x5927;&#x5230;&#x5404;&#x6A21;&#x5757;&#x4E4B;&#x95F4;&#x7684;&#x4EA4;&#x4E92;&#xFF0C;&#x5728;&#x7CFB;&#x7EDF;&#x8BBE;&#x8BA1;&#x4E4B;&#x521D;&#x90FD;&#x662F;&#x8981;&#x7740;&#x91CD;&#x8003;&#x8651;&#x7684;&#xFF0C;&#x8FD9;&#x4E5F;&#x662F;&#x7CFB;&#x7EDF;&#x8BBE;&#x8BA1;&#x7684;&#x4E3B;&#x8981;&#x5DE5;&#x4F5C;&#x5185;&#x5BB9;&#x3002;&#x9762;&#x5411;&#x63A5;&#x53E3;&#x7F16;&#x7A0B;&#x5C31;&#x662F;&#x6307;&#x6309;&#x7167;&#x8FD9;&#x79CD;&#x601D;&#x60F3;&#x6765;&#x7F16;&#x7A0B;&#x3002;</p>
+<p><strong>&#x5173;&#x4E8E;&#x63A5;&#x53E3;&#x7684;&#x7406;&#x89E3;</strong></p>
+<p>- &#x63A5;&#x53E3;&#x4ECE;&#x66F4;&#x6DF1;&#x5C42;&#x6B21;&#x7684;&#x7406;&#x89E3;&#xFF0C;&#x5E94;&#x662F;&#x5B9A;&#x4E49;&#xFF08;&#x89C4;&#x8303;&#xFF0C;&#x7EA6;&#x675F;&#xFF09;&#x4E0E;&#x5B9E;&#x73B0;&#xFF08;&#x540D;&#x5B9E;&#x5206;&#x79BB;&#x7684;&#x539F;&#x5219;&#xFF09;&#x7684;&#x5206;&#x79BB;&#x3002;
+- &#x63A5;&#x53E3;&#x7684;&#x672C;&#x8EAB;&#x53CD;&#x6620;&#x4E86;&#x7CFB;&#x7EDF;&#x8BBE;&#x8BA1;&#x4EBA;&#x5458;&#x5BF9;&#x7CFB;&#x7EDF;&#x7684;&#x62BD;&#x8C61;&#x7406;&#x89E3;&#x3002;
+- &#x63A5;&#x53E3;&#x5E94;&#x6709;&#x4E24;&#x7C7B;&#xFF1A;
+  - &#x7B2C;&#x4E00;&#x7C7B;&#x662F;&#x5BF9;&#x4E00;&#x4E2A;&#x4E2A;&#x4F53;&#x7684;&#x62BD;&#x8C61;&#xFF0C;&#x5B83;&#x53EF;&#x5BF9;&#x5E94;&#x4E3A;&#x4E00;&#x4E2A;&#x62BD;&#x8C61;&#x4F53;(abstract class)&#xFF1B;
+  - &#x7B2C;&#x4E8C;&#x7C7B;&#x662F;&#x5BF9;&#x4E00;&#x4E2A;&#x4E2A;&#x4F53;&#x67D0;&#x4E00;&#x65B9;&#x9762;&#x7684;&#x62BD;&#x8C61;&#xFF0C;&#x5373;&#x5F62;&#x6210;&#x4E00;&#x4E2A;&#x62BD;&#x8C61;&#x9762;&#xFF08;interface&#xFF09;&#xFF1B;
+- &#x4E00;&#x4E2A;&#x4F53;&#x6709;&#x53EF;&#x80FD;&#x6709;&#x591A;&#x4E2A;&#x62BD;&#x8C61;&#x9762;&#x3002;&#x62BD;&#x8C61;&#x4F53;&#x4E0E;&#x62BD;&#x8C61;&#x9762;&#x662F;&#x6709;&#x533A;&#x522B;&#x7684;&#x3002;</p>
+<p><strong>&#x4E09;&#x4E2A;&#x9762;&#x5411;&#x533A;&#x522B;</strong></p>
+<p>- &#x9762;&#x5411;&#x5BF9;&#x8C61;&#x662F;&#x6307;&#xFF0C;&#x6211;&#x4EEC;&#x8003;&#x8651;&#x95EE;&#x9898;&#x65F6;&#xFF0C;&#x4EE5;&#x5BF9;&#x8C61;&#x4E3A;&#x5355;&#x4F4D;&#xFF0C;&#x8003;&#x8651;&#x5B83;&#x7684;&#x5C5E;&#x6027;&#x53CA;&#x65B9;&#x6CD5; .
+- &#x9762;&#x5411;&#x8FC7;&#x7A0B;&#x662F;&#x6307;&#xFF0C;&#x6211;&#x4EEC;&#x8003;&#x8651;&#x95EE;&#x9898;&#x65F6;&#xFF0C;&#x4EE5;&#x4E00;&#x4E2A;&#x5177;&#x4F53;&#x7684;&#x6D41;&#x7A0B;&#xFF08;&#x4E8B;&#x52A1;&#x8FC7;&#x7A0B;&#xFF09;&#x4E3A;&#x5355;&#x4F4D;&#xFF0C;&#x8003;&#x8651;&#x5B83;&#x7684;&#x5B9E;&#x73B0; .
+- &#x63A5;&#x53E3;&#x8BBE;&#x8BA1;&#x4E0E;&#x975E;&#x63A5;&#x53E3;&#x8BBE;&#x8BA1;&#x662F;&#x9488;&#x5BF9;&#x590D;&#x7528;&#x6280;&#x672F;&#x800C;&#x8A00;&#x7684;&#xFF0C;&#x4E0E;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#xFF08;&#x8FC7;&#x7A0B;&#xFF09;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x95EE;&#x9898;.&#x66F4;&#x591A;&#x7684;&#x4F53;&#x73B0;&#x5C31;&#x662F;&#x5BF9;&#x7CFB;&#x7EDF;&#x6574;&#x4F53;&#x7684;&#x67B6;&#x6784;</p>
+<h3 id="82&#x3001;&#x4F7F;&#x7528;&#x6CE8;&#x89E3;&#x5F00;&#x53D1;">8.2&#x3001;&#x4F7F;&#x7528;&#x6CE8;&#x89E3;&#x5F00;&#x53D1;</h3>
+<ol>
+<li><p>&#x6CE8;&#x89E3;&#x5728;&#x63A5;&#x53E3;&#x4E0A;&#x5B9E;&#x73B0;</p>
+<pre><code class="lang-java"><span class="hljs-meta">@Select</span>(<span class="hljs-string">&quot;select * from user&quot;</span>)
+<span class="hljs-function">List&lt;User&gt; <span class="hljs-title">getUsers</span><span class="hljs-params">()</span></span>;
+</code></pre>
+</li>
+<li><p>&#x9700;&#x8981;&#x518D;&#x6838;&#x5FC3;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x7ED1;&#x5B9A;&#x63A5;&#x53E3;&#xFF01;</p>
+<pre><code class="lang-xml"><span class="hljs-comment">&lt;!--&#x7ED1;&#x5B9A;&#x63A5;&#x53E3;--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">mappers</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">mapper</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;com.kuang.dao.UserMapper&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mappers</span>&gt;</span>
+</code></pre>
+</li>
+<li><p>&#x6D4B;&#x8BD5;</p>
+</li>
+</ol>
+<p>&#x672C;&#x8D28;&#xFF1A;&#x53CD;&#x5C04;&#x673A;&#x5236;&#x5B9E;&#x73B0;</p>
+<p>&#x5E95;&#x5C42;&#xFF1A;&#x52A8;&#x6001;&#x4EE3;&#x7406;&#xFF01;</p>
+<p> <img src="Mybatis&#x8BFE;&#x5802;&#x7B14;&#x8BB0;.assets/1569898830704.png" alt="1569898830704"></p>
+<p><strong>Mybatis&#x8BE6;&#x7EC6;&#x7684;&#x6267;&#x884C;&#x6D41;&#x7A0B;&#xFF01;</strong></p>
+<p><img src="Mybatis&#x8BFE;&#x5802;&#x7B14;&#x8BB0;.assets/Temp.png" alt="1569898830704"></p>
+<h3 id="83&#x3001;crud">8.3&#x3001;CRUD</h3>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x5DE5;&#x5177;&#x7C7B;&#x521B;&#x5EFA;&#x7684;&#x65F6;&#x5019;&#x5B9E;&#x73B0;&#x81EA;&#x52A8;&#x63D0;&#x4EA4;&#x4E8B;&#x52A1;&#xFF01;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> SqlSession  <span class="hljs-title">getSqlSession</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-keyword">return</span> sqlSessionFactory.openSession(<span class="hljs-keyword">true</span>);
+}
+</code></pre>
+<p>&#x7F16;&#x5199;&#x63A5;&#x53E3;&#xFF0C;&#x589E;&#x52A0;&#x6CE8;&#x89E3;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">UserMapper</span> </span>{
+
+    <span class="hljs-meta">@Select</span>(<span class="hljs-string">&quot;select * from user&quot;</span>)
+    <span class="hljs-function">List&lt;User&gt; <span class="hljs-title">getUsers</span><span class="hljs-params">()</span></span>;
+
+    <span class="hljs-comment">// &#x65B9;&#x6CD5;&#x5B58;&#x5728;&#x591A;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x53C2;&#x6570;&#x524D;&#x9762;&#x5FC5;&#x987B;&#x52A0;&#x4E0A; @Param(&quot;id&quot;)&#x6CE8;&#x89E3;</span>
+    <span class="hljs-meta">@Select</span>(<span class="hljs-string">&quot;select * from user where id = #{id}&quot;</span>)
+    <span class="hljs-function">User <span class="hljs-title">getUserByID</span><span class="hljs-params">(@Param(<span class="hljs-string">&quot;id&quot;</span>)</span> <span class="hljs-keyword">int</span> id)</span>;
+
+
+    <span class="hljs-meta">@Insert</span>(<span class="hljs-string">&quot;insert into user(id,name,pwd) values (#{id},#{name},#{password})&quot;</span>)
+    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">addUser</span><span class="hljs-params">(User user)</span></span>;
+
+
+    <span class="hljs-meta">@Update</span>(<span class="hljs-string">&quot;update user set name=#{name},pwd=#{password} where id = #{id}&quot;</span>)
+    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">updateUser</span><span class="hljs-params">(User user)</span></span>;
+
+
+    <span class="hljs-meta">@Delete</span>(<span class="hljs-string">&quot;delete from user where id = #{uid}&quot;</span>)
+    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">deleteUser</span><span class="hljs-params">(@Param(<span class="hljs-string">&quot;uid&quot;</span>)</span> <span class="hljs-keyword">int</span> id)</span>;
+}
+</code></pre>
+<p>&#x6D4B;&#x8BD5;&#x7C7B;</p>
+<p>&#x3010;&#x6CE8;&#x610F;&#xFF1A;&#x6211;&#x4EEC;&#x5FC5;&#x987B;&#x8981;&#x8BB2;&#x63A5;&#x53E3;&#x6CE8;&#x518C;&#x7ED1;&#x5B9A;&#x5230;&#x6211;&#x4EEC;&#x7684;&#x6838;&#x5FC3;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#xFF01;&#x3011;</p>
+<p><strong>&#x5173;&#x4E8E;@Param() &#x6CE8;&#x89E3;</strong></p>
+<ul>
+<li>&#x57FA;&#x672C;&#x7C7B;&#x578B;&#x7684;&#x53C2;&#x6570;&#x6216;&#x8005;String&#x7C7B;&#x578B;&#xFF0C;&#x9700;&#x8981;&#x52A0;&#x4E0A;</li>
+<li>&#x5F15;&#x7528;&#x7C7B;&#x578B;&#x4E0D;&#x9700;&#x8981;&#x52A0;</li>
+<li>&#x5982;&#x679C;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x57FA;&#x672C;&#x7C7B;&#x578B;&#x7684;&#x8BDD;&#xFF0C;&#x53EF;&#x4EE5;&#x5FFD;&#x7565;&#xFF0C;&#x4F46;&#x662F;&#x5EFA;&#x8BAE;&#x5927;&#x5BB6;&#x90FD;&#x52A0;&#x4E0A;&#xFF01;</li>
+<li>&#x6211;&#x4EEC;&#x5728;SQL&#x4E2D;&#x5F15;&#x7528;&#x7684;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x8FD9;&#x91CC;&#x7684; @Param() &#x4E2D;&#x8BBE;&#x5B9A;&#x7684;&#x5C5E;&#x6027;&#x540D;&#xFF01;</li>
+</ul>
+<p><strong>#{}     ${} &#x533A;&#x522B;</strong></p>
+<h2 id="9&#x3001;lombok">9&#x3001;Lombok</h2>
+<pre><code class="lang-java">Project Lombok is a java library that automatically plugs into your editor and build tools, spicing up your java.
+Never write another getter or equals method again, with one annotation your <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">has</span> <span class="hljs-title">a</span> <span class="hljs-title">fully</span> <span class="hljs-title">featured</span> <span class="hljs-title">builder</span>, <span class="hljs-title">Automate</span> <span class="hljs-title">your</span> <span class="hljs-title">logging</span> <span class="hljs-title">variables</span>, <span class="hljs-title">and</span> <span class="hljs-title">much</span> <span class="hljs-title">more</span>.
+</span></code></pre>
+<ul>
+<li>java library</li>
+<li>plugs</li>
+<li>build tools</li>
+<li>with one annotation your class</li>
+</ul>
+<p>&#x4F7F;&#x7528;&#x6B65;&#x9AA4;&#xFF1A;</p>
+<ol>
+<li><p>&#x5728;IDEA&#x4E2D;&#x5B89;&#x88C5;Lombok&#x63D2;&#x4EF6;&#xFF01;</p>
+</li>
+<li><p>&#x5728;&#x9879;&#x76EE;&#x4E2D;&#x5BFC;&#x5165;lombok&#x7684;jar&#x5305;</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.projectlombok<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>lombok<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>1.18.10<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+</code></pre>
+</li>
+<li><p>&#x5728;&#x5B9E;&#x4F53;&#x7C7B;&#x4E0A;&#x52A0;&#x6CE8;&#x89E3;&#x5373;&#x53EF;&#xFF01;</p>
+<pre><code class="lang-java"><span class="hljs-meta">@Data</span>
+<span class="hljs-meta">@AllArgsConstructor</span>
+<span class="hljs-meta">@NoArgsConstructor</span>
+</code></pre>
+</li>
+</ol>
+<pre><code class="lang-java"><span class="hljs-meta">@Getter</span> and <span class="hljs-meta">@Setter</span>
+<span class="hljs-meta">@FieldNameConstants</span>
+<span class="hljs-meta">@ToString</span>
+<span class="hljs-meta">@EqualsAndHashCode</span>
+<span class="hljs-meta">@AllArgsConstructor</span>, <span class="hljs-meta">@RequiredArgsConstructor</span> and <span class="hljs-meta">@NoArgsConstructor</span>
+<span class="hljs-meta">@Log</span>, <span class="hljs-meta">@Log</span>4j, <span class="hljs-meta">@Log</span>4j2, <span class="hljs-meta">@Slf</span>4j, <span class="hljs-meta">@XSlf</span>4j, <span class="hljs-meta">@CommonsLog</span>, <span class="hljs-meta">@JBossLog</span>, <span class="hljs-meta">@Flogger</span>
+<span class="hljs-meta">@Data</span>
+<span class="hljs-meta">@Builder</span>
+<span class="hljs-meta">@Singular</span>
+<span class="hljs-meta">@Delegate</span>
+<span class="hljs-meta">@Value</span>
+<span class="hljs-meta">@Accessors</span>
+<span class="hljs-meta">@Wither</span>
+<span class="hljs-meta">@SneakyThrows</span>
+</code></pre>
+<p>&#x8BF4;&#x660E;&#xFF1A;</p>
+<pre><code>@Data&#xFF1A;&#x65E0;&#x53C2;&#x6784;&#x9020;&#xFF0C;get&#x3001;set&#x3001;tostring&#x3001;hashcode&#xFF0C;equals
+@AllArgsConstructor
+@NoArgsConstructor
+@EqualsAndHashCode
+@ToString
+@Getter
+</code></pre><h2 id="10&#x3001;&#x591A;&#x5BF9;&#x4E00;&#x5904;&#x7406;">10&#x3001;&#x591A;&#x5BF9;&#x4E00;&#x5904;&#x7406;</h2>
+<p>&#x591A;&#x5BF9;&#x4E00;&#xFF1A;</p>
+<p><img src="Mybatis&#x8BFE;&#x5802;&#x7B14;&#x8BB0;.assets/1569909163944.png" alt="1569909163944"></p>
+<ul>
+<li>&#x591A;&#x4E2A;&#x5B66;&#x751F;&#xFF0C;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;&#x8001;&#x5E08;</li>
+<li>&#x5BF9;&#x4E8E;&#x5B66;&#x751F;&#x8FD9;&#x8FB9;&#x800C;&#x8A00;&#xFF0C;  <strong>&#x5173;&#x8054;</strong> ..  &#x591A;&#x4E2A;&#x5B66;&#x751F;&#xFF0C;&#x5173;&#x8054;&#x4E00;&#x4E2A;&#x8001;&#x5E08;  &#x3010;&#x591A;&#x5BF9;&#x4E00;&#x3011;</li>
+<li>&#x5BF9;&#x4E8E;&#x8001;&#x5E08;&#x800C;&#x8A00;&#xFF0C; <strong>&#x96C6;&#x5408;</strong> &#xFF0C; &#x4E00;&#x4E2A;&#x8001;&#x5E08;&#xFF0C;&#x6709;&#x5F88;&#x591A;&#x5B66;&#x751F; &#x3010;&#x4E00;&#x5BF9;&#x591A;&#x3011;</li>
+</ul>
+<p><img src="Mybatis&#x8BFE;&#x5802;&#x7B14;&#x8BB0;.assets/1569909422471.png" alt="1569909422471"></p>
+<p>SQL&#xFF1A;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-string">`teacher`</span> (
+  <span class="hljs-string">`id`</span> <span class="hljs-built_in">INT</span>(<span class="hljs-number">10</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`name`</span> <span class="hljs-built_in">VARCHAR</span>(<span class="hljs-number">30</span>) <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  PRIMARY <span class="hljs-keyword">KEY</span> (<span class="hljs-string">`id`</span>)
+) <span class="hljs-keyword">ENGINE</span>=<span class="hljs-keyword">INNODB</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-keyword">CHARSET</span>=utf8
+
+<span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> teacher(<span class="hljs-string">`id`</span>, <span class="hljs-string">`name`</span>) <span class="hljs-keyword">VALUES</span> (<span class="hljs-number">1</span>, <span class="hljs-string">&apos;&#x79E6;&#x8001;&#x5E08;&apos;</span>); 
+
+<span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-string">`student`</span> (
+  <span class="hljs-string">`id`</span> <span class="hljs-built_in">INT</span>(<span class="hljs-number">10</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`name`</span> <span class="hljs-built_in">VARCHAR</span>(<span class="hljs-number">30</span>) <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  <span class="hljs-string">`tid`</span> <span class="hljs-built_in">INT</span>(<span class="hljs-number">10</span>) <span class="hljs-keyword">DEFAULT</span> <span class="hljs-literal">NULL</span>,
+  PRIMARY <span class="hljs-keyword">KEY</span> (<span class="hljs-string">`id`</span>),
+  <span class="hljs-keyword">KEY</span> <span class="hljs-string">`fktid`</span> (<span class="hljs-string">`tid`</span>),
+  <span class="hljs-keyword">CONSTRAINT</span> <span class="hljs-string">`fktid`</span> FOREIGN <span class="hljs-keyword">KEY</span> (<span class="hljs-string">`tid`</span>) <span class="hljs-keyword">REFERENCES</span> <span class="hljs-string">`teacher`</span> (<span class="hljs-string">`id`</span>)
+) <span class="hljs-keyword">ENGINE</span>=<span class="hljs-keyword">INNODB</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-keyword">CHARSET</span>=utf8
+
+
+<span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> <span class="hljs-string">`student`</span> (<span class="hljs-string">`id`</span>, <span class="hljs-string">`name`</span>, <span class="hljs-string">`tid`</span>) <span class="hljs-keyword">VALUES</span> (<span class="hljs-string">&apos;1&apos;</span>, <span class="hljs-string">&apos;&#x5C0F;&#x660E;&apos;</span>, <span class="hljs-string">&apos;1&apos;</span>); 
+<span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> <span class="hljs-string">`student`</span> (<span class="hljs-string">`id`</span>, <span class="hljs-string">`name`</span>, <span class="hljs-string">`tid`</span>) <span class="hljs-keyword">VALUES</span> (<span class="hljs-string">&apos;2&apos;</span>, <span class="hljs-string">&apos;&#x5C0F;&#x7EA2;&apos;</span>, <span class="hljs-string">&apos;1&apos;</span>); 
+<span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> <span class="hljs-string">`student`</span> (<span class="hljs-string">`id`</span>, <span class="hljs-string">`name`</span>, <span class="hljs-string">`tid`</span>) <span class="hljs-keyword">VALUES</span> (<span class="hljs-string">&apos;3&apos;</span>, <span class="hljs-string">&apos;&#x5C0F;&#x5F20;&apos;</span>, <span class="hljs-string">&apos;1&apos;</span>); 
+<span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> <span class="hljs-string">`student`</span> (<span class="hljs-string">`id`</span>, <span class="hljs-string">`name`</span>, <span class="hljs-string">`tid`</span>) <span class="hljs-keyword">VALUES</span> (<span class="hljs-string">&apos;4&apos;</span>, <span class="hljs-string">&apos;&#x5C0F;&#x674E;&apos;</span>, <span class="hljs-string">&apos;1&apos;</span>); 
+<span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> <span class="hljs-string">`student`</span> (<span class="hljs-string">`id`</span>, <span class="hljs-string">`name`</span>, <span class="hljs-string">`tid`</span>) <span class="hljs-keyword">VALUES</span> (<span class="hljs-string">&apos;5&apos;</span>, <span class="hljs-string">&apos;&#x5C0F;&#x738B;&apos;</span>, <span class="hljs-string">&apos;1&apos;</span>);
+</code></pre>
+<h3 id="&#x6D4B;&#x8BD5;&#x73AF;&#x5883;&#x642D;&#x5EFA;">&#x6D4B;&#x8BD5;&#x73AF;&#x5883;&#x642D;&#x5EFA;</h3>
+<ol>
+<li>&#x5BFC;&#x5165;lombok</li>
+<li>&#x65B0;&#x5EFA;&#x5B9E;&#x4F53;&#x7C7B; Teacher&#xFF0C;Student</li>
+<li>&#x5EFA;&#x7ACB;Mapper&#x63A5;&#x53E3;</li>
+<li>&#x5EFA;&#x7ACB;Mapper.XML&#x6587;&#x4EF6;</li>
+<li>&#x5728;&#x6838;&#x5FC3;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x7ED1;&#x5B9A;&#x6CE8;&#x518C;&#x6211;&#x4EEC;&#x7684;Mapper&#x63A5;&#x53E3;&#x6216;&#x8005;&#x6587;&#x4EF6;&#xFF01;&#x3010;&#x65B9;&#x5F0F;&#x5F88;&#x591A;&#xFF0C;&#x968F;&#x5FC3;&#x9009;&#x3011;</li>
+<li>&#x6D4B;&#x8BD5;&#x67E5;&#x8BE2;&#x662F;&#x5426;&#x80FD;&#x591F;&#x6210;&#x529F;&#xFF01;</li>
+</ol>
+<h3 id="&#x6309;&#x7167;&#x67E5;&#x8BE2;&#x5D4C;&#x5957;&#x5904;&#x7406;">&#x6309;&#x7167;&#x67E5;&#x8BE2;&#x5D4C;&#x5957;&#x5904;&#x7406;</h3>
+<pre><code class="lang-xml"><span class="hljs-comment">&lt;!--
+    &#x601D;&#x8DEF;:
+        1. &#x67E5;&#x8BE2;&#x6240;&#x6709;&#x7684;&#x5B66;&#x751F;&#x4FE1;&#x606F;
+        2. &#x6839;&#x636E;&#x67E5;&#x8BE2;&#x51FA;&#x6765;&#x7684;&#x5B66;&#x751F;&#x7684;tid&#xFF0C;&#x5BFB;&#x627E;&#x5BF9;&#x5E94;&#x7684;&#x8001;&#x5E08;&#xFF01;  &#x5B50;&#x67E5;&#x8BE2;
+    --&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;getStudent&quot;</span> <span class="hljs-attr">resultMap</span>=<span class="hljs-string">&quot;StudentTeacher&quot;</span>&gt;</span>
+    select * from student
+<span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">resultMap</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;StudentTeacher&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;Student&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">result</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;id&quot;</span> <span class="hljs-attr">column</span>=<span class="hljs-string">&quot;id&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">result</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;name&quot;</span> <span class="hljs-attr">column</span>=<span class="hljs-string">&quot;name&quot;</span>/&gt;</span>
+    <span class="hljs-comment">&lt;!--&#x590D;&#x6742;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5355;&#x72EC;&#x5904;&#x7406; &#x5BF9;&#x8C61;&#xFF1A; association &#x96C6;&#x5408;&#xFF1A; collection --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">association</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;teacher&quot;</span> <span class="hljs-attr">column</span>=<span class="hljs-string">&quot;tid&quot;</span> <span class="hljs-attr">javaType</span>=<span class="hljs-string">&quot;Teacher&quot;</span> <span class="hljs-attr">select</span>=<span class="hljs-string">&quot;getTeacher&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">resultMap</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;getTeacher&quot;</span> <span class="hljs-attr">resultType</span>=<span class="hljs-string">&quot;Teacher&quot;</span>&gt;</span>
+    select * from teacher where id = #{id}
+<span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+</code></pre>
+<h3 id="&#x6309;&#x7167;&#x7ED3;&#x679C;&#x5D4C;&#x5957;&#x5904;&#x7406;">&#x6309;&#x7167;&#x7ED3;&#x679C;&#x5D4C;&#x5957;&#x5904;&#x7406;</h3>
+<pre><code class="lang-xml"><span class="hljs-comment">&lt;!--&#x6309;&#x7167;&#x7ED3;&#x679C;&#x5D4C;&#x5957;&#x5904;&#x7406;--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;getStudent2&quot;</span> <span class="hljs-attr">resultMap</span>=<span class="hljs-string">&quot;StudentTeacher2&quot;</span>&gt;</span>
+    select s.id sid,s.name sname,t.name tname
+    from student s,teacher t
+    where s.tid = t.id;
+<span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">resultMap</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;StudentTeacher2&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;Student&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">result</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;id&quot;</span> <span class="hljs-attr">column</span>=<span class="hljs-string">&quot;sid&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">result</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;name&quot;</span> <span class="hljs-attr">column</span>=<span class="hljs-string">&quot;sname&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">association</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;teacher&quot;</span> <span class="hljs-attr">javaType</span>=<span class="hljs-string">&quot;Teacher&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">result</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;name&quot;</span> <span class="hljs-attr">column</span>=<span class="hljs-string">&quot;tname&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">association</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">resultMap</span>&gt;</span>
+</code></pre>
+<p>&#x56DE;&#x987E;Mysql &#x591A;&#x5BF9;&#x4E00;&#x67E5;&#x8BE2;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<ul>
+<li>&#x5B50;&#x67E5;&#x8BE2;</li>
+<li>&#x8054;&#x8868;&#x67E5;&#x8BE2;</li>
+</ul>
+<h2 id="11&#x3001;&#x4E00;&#x5BF9;&#x591A;&#x5904;&#x7406;">11&#x3001;&#x4E00;&#x5BF9;&#x591A;&#x5904;&#x7406;</h2>
+<p>&#x6BD4;&#x5982;&#xFF1A;&#x4E00;&#x4E2A;&#x8001;&#x5E08;&#x62E5;&#x6709;&#x591A;&#x4E2A;&#x5B66;&#x751F;&#xFF01;</p>
+<p>&#x5BF9;&#x4E8E;&#x8001;&#x5E08;&#x800C;&#x8A00;&#xFF0C;&#x5C31;&#x662F;&#x4E00;&#x5BF9;&#x591A;&#x7684;&#x5173;&#x7CFB;!</p>
+<h3 id="&#x73AF;&#x5883;&#x642D;&#x5EFA;">&#x73AF;&#x5883;&#x642D;&#x5EFA;</h3>
+<ol>
+<li>&#x73AF;&#x5883;&#x642D;&#x5EFA;&#xFF0C;&#x548C;&#x521A;&#x624D;&#x4E00;&#x6837;</li>
+</ol>
+<p><strong>&#x5B9E;&#x4F53;&#x7C7B;</strong></p>
+<pre><code class="lang-java"><span class="hljs-meta">@Data</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Student</span> </span>{
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> id;
+    <span class="hljs-keyword">private</span> String name;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> tid;
+
+}
+</code></pre>
+<pre><code class="lang-java"><span class="hljs-meta">@Data</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Teacher</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> id;
+    <span class="hljs-keyword">private</span> String name;
+
+    <span class="hljs-comment">//&#x4E00;&#x4E2A;&#x8001;&#x5E08;&#x62E5;&#x6709;&#x591A;&#x4E2A;&#x5B66;&#x751F;</span>
+    <span class="hljs-keyword">private</span> List&lt;Student&gt; students;
+}
+</code></pre>
+<h3 id="&#x6309;&#x7167;&#x7ED3;&#x679C;&#x5D4C;&#x5957;&#x5904;&#x7406;">&#x6309;&#x7167;&#x7ED3;&#x679C;&#x5D4C;&#x5957;&#x5904;&#x7406;</h3>
+<pre><code class="lang-xml">
+    <span class="hljs-comment">&lt;!--&#x6309;&#x7ED3;&#x679C;&#x5D4C;&#x5957;&#x67E5;&#x8BE2;--&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;getTeacher&quot;</span> <span class="hljs-attr">resultMap</span>=<span class="hljs-string">&quot;TeacherStudent&quot;</span>&gt;</span>
+        select s.id sid, s.name sname, t.name tname,t.id tid
+        from student s,teacher t
+        where s.tid = t.id and t.id = #{tid}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">resultMap</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;TeacherStudent&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;Teacher&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">result</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;id&quot;</span> <span class="hljs-attr">column</span>=<span class="hljs-string">&quot;tid&quot;</span>/&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">result</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;name&quot;</span> <span class="hljs-attr">column</span>=<span class="hljs-string">&quot;tname&quot;</span>/&gt;</span>
+        <span class="hljs-comment">&lt;!--&#x590D;&#x6742;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5355;&#x72EC;&#x5904;&#x7406; &#x5BF9;&#x8C61;&#xFF1A; association &#x96C6;&#x5408;&#xFF1A; collection
+        javaType=&quot;&quot; &#x6307;&#x5B9A;&#x5C5E;&#x6027;&#x7684;&#x7C7B;&#x578B;&#xFF01;
+        &#x96C6;&#x5408;&#x4E2D;&#x7684;&#x6CDB;&#x578B;&#x4FE1;&#x606F;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528;ofType&#x83B7;&#x53D6;
+        --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">collection</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;students&quot;</span> <span class="hljs-attr">ofType</span>=<span class="hljs-string">&quot;Student&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">result</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;id&quot;</span> <span class="hljs-attr">column</span>=<span class="hljs-string">&quot;sid&quot;</span>/&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">result</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;name&quot;</span> <span class="hljs-attr">column</span>=<span class="hljs-string">&quot;sname&quot;</span>/&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">result</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;tid&quot;</span> <span class="hljs-attr">column</span>=<span class="hljs-string">&quot;tid&quot;</span>/&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">collection</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">resultMap</span>&gt;</span>
+</code></pre>
+<h3 id="&#x6309;&#x7167;&#x67E5;&#x8BE2;&#x5D4C;&#x5957;&#x5904;&#x7406;">&#x6309;&#x7167;&#x67E5;&#x8BE2;&#x5D4C;&#x5957;&#x5904;&#x7406;</h3>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;getTeacher2&quot;</span> <span class="hljs-attr">resultMap</span>=<span class="hljs-string">&quot;TeacherStudent2&quot;</span>&gt;</span>
+    select * from mybatis.teacher where id = #{tid}
+<span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">resultMap</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;TeacherStudent2&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;Teacher&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">collection</span> <span class="hljs-attr">property</span>=<span class="hljs-string">&quot;students&quot;</span> <span class="hljs-attr">javaType</span>=<span class="hljs-string">&quot;ArrayList&quot;</span> <span class="hljs-attr">ofType</span>=<span class="hljs-string">&quot;Student&quot;</span> <span class="hljs-attr">select</span>=<span class="hljs-string">&quot;getStudentByTeacherId&quot;</span> <span class="hljs-attr">column</span>=<span class="hljs-string">&quot;id&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">resultMap</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;getStudentByTeacherId&quot;</span> <span class="hljs-attr">resultType</span>=<span class="hljs-string">&quot;Student&quot;</span>&gt;</span>
+    select * from mybatis.student where tid = #{tid}
+<span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+</code></pre>
+<h3 id="&#x5C0F;&#x7ED3;">&#x5C0F;&#x7ED3;</h3>
+<ol>
+<li>&#x5173;&#x8054; - association   &#x3010;&#x591A;&#x5BF9;&#x4E00;&#x3011;</li>
+<li>&#x96C6;&#x5408; - collection   &#x3010;&#x4E00;&#x5BF9;&#x591A;&#x3011;</li>
+<li>javaType    &amp;   ofType<ol>
+<li>JavaType  &#x7528;&#x6765;&#x6307;&#x5B9A;&#x5B9E;&#x4F53;&#x7C7B;&#x4E2D;&#x5C5E;&#x6027;&#x7684;&#x7C7B;&#x578B;</li>
+<li>ofType  &#x7528;&#x6765;&#x6307;&#x5B9A;&#x6620;&#x5C04;&#x5230;List&#x6216;&#x8005;&#x96C6;&#x5408;&#x4E2D;&#x7684; pojo&#x7C7B;&#x578B;&#xFF0C;&#x6CDB;&#x578B;&#x4E2D;&#x7684;&#x7EA6;&#x675F;&#x7C7B;&#x578B;&#xFF01;</li>
+</ol>
+</li>
+</ol>
+<p>&#x6CE8;&#x610F;&#x70B9;&#xFF1A;</p>
+<ul>
+<li>&#x4FDD;&#x8BC1;SQL&#x7684;&#x53EF;&#x8BFB;&#x6027;&#xFF0C;&#x5C3D;&#x91CF;&#x4FDD;&#x8BC1;&#x901A;&#x4FD7;&#x6613;&#x61C2;</li>
+<li>&#x6CE8;&#x610F;&#x4E00;&#x5BF9;&#x591A;&#x548C;&#x591A;&#x5BF9;&#x4E00;&#x4E2D;&#xFF0C;&#x5C5E;&#x6027;&#x540D;&#x548C;&#x5B57;&#x6BB5;&#x7684;&#x95EE;&#x9898;&#xFF01;</li>
+<li>&#x5982;&#x679C;&#x95EE;&#x9898;&#x4E0D;&#x597D;&#x6392;&#x67E5;&#x9519;&#x8BEF;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x65E5;&#x5FD7; &#xFF0C; &#x5EFA;&#x8BAE;&#x4F7F;&#x7528; Log4j</li>
+</ul>
+<p><strong>&#x6162;SQL       1s        1000s</strong>      </p>
+<p>&#x9762;&#x8BD5;&#x9AD8;&#x9891;</p>
+<ul>
+<li>Mysql&#x5F15;&#x64CE;</li>
+<li>InnoDB&#x5E95;&#x5C42;&#x539F;&#x7406;</li>
+<li>&#x7D22;&#x5F15;</li>
+<li>&#x7D22;&#x5F15;&#x4F18;&#x5316;&#xFF01;</li>
+</ul>
+<h2 id="12&#x3001;&#x52A8;&#x6001;-sql">12&#x3001;&#x52A8;&#x6001; SQL</h2>
+<p>==<strong>&#x4EC0;&#x4E48;&#x662F;&#x52A8;&#x6001;SQL&#xFF1A;&#x52A8;&#x6001;SQL&#x5C31;&#x662F;&#x6307;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x6761;&#x4EF6;&#x751F;&#x6210;&#x4E0D;&#x540C;&#x7684;SQL&#x8BED;&#x53E5;</strong>==</p>
+<p>&#x5229;&#x7528;&#x52A8;&#x6001; SQL &#x8FD9;&#x4E00;&#x7279;&#x6027;&#x53EF;&#x4EE5;&#x5F7B;&#x5E95;&#x6446;&#x8131;&#x8FD9;&#x79CD;&#x75DB;&#x82E6;&#x3002;</p>
+<pre><code class="lang-xml">&#x52A8;&#x6001; SQL &#x5143;&#x7D20;&#x548C; JSTL &#x6216;&#x57FA;&#x4E8E;&#x7C7B;&#x4F3C; XML &#x7684;&#x6587;&#x672C;&#x5904;&#x7406;&#x5668;&#x76F8;&#x4F3C;&#x3002;&#x5728; MyBatis &#x4E4B;&#x524D;&#x7684;&#x7248;&#x672C;&#x4E2D;&#xFF0C;&#x6709;&#x5F88;&#x591A;&#x5143;&#x7D20;&#x9700;&#x8981;&#x82B1;&#x65F6;&#x95F4;&#x4E86;&#x89E3;&#x3002;MyBatis 3 &#x5927;&#x5927;&#x7CBE;&#x7B80;&#x4E86;&#x5143;&#x7D20;&#x79CD;&#x7C7B;&#xFF0C;&#x73B0;&#x5728;&#x53EA;&#x9700;&#x5B66;&#x4E60;&#x539F;&#x6765;&#x4E00;&#x534A;&#x7684;&#x5143;&#x7D20;&#x4FBF;&#x53EF;&#x3002;MyBatis &#x91C7;&#x7528;&#x529F;&#x80FD;&#x5F3A;&#x5927;&#x7684;&#x57FA;&#x4E8E; OGNL &#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x6765;&#x6DD8;&#x6C70;&#x5176;&#x5B83;&#x5927;&#x90E8;&#x5206;&#x5143;&#x7D20;&#x3002;
+
+if
+choose (when, otherwise)
+trim (where, set)
+foreach
+</code></pre>
+<h3 id="&#x642D;&#x5EFA;&#x73AF;&#x5883;">&#x642D;&#x5EFA;&#x73AF;&#x5883;</h3>
+<pre><code class="lang-sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-string">`blog`</span> (
+  <span class="hljs-string">`id`</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">50</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span> <span class="hljs-keyword">COMMENT</span> <span class="hljs-string">&apos;&#x535A;&#x5BA2;id&apos;</span>,
+  <span class="hljs-string">`title`</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">100</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span> <span class="hljs-keyword">COMMENT</span> <span class="hljs-string">&apos;&#x535A;&#x5BA2;&#x6807;&#x9898;&apos;</span>,
+  <span class="hljs-string">`author`</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">30</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span> <span class="hljs-keyword">COMMENT</span> <span class="hljs-string">&apos;&#x535A;&#x5BA2;&#x4F5C;&#x8005;&apos;</span>,
+  <span class="hljs-string">`create_time`</span> datetime <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span> <span class="hljs-keyword">COMMENT</span> <span class="hljs-string">&apos;&#x521B;&#x5EFA;&#x65F6;&#x95F4;&apos;</span>,
+  <span class="hljs-string">`views`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">30</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span> <span class="hljs-keyword">COMMENT</span> <span class="hljs-string">&apos;&#x6D4F;&#x89C8;&#x91CF;&apos;</span>
+) <span class="hljs-keyword">ENGINE</span>=<span class="hljs-keyword">InnoDB</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-keyword">CHARSET</span>=utf8
+</code></pre>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x57FA;&#x7840;&#x5DE5;&#x7A0B;</p>
+<ol>
+<li><p>&#x5BFC;&#x5305;</p>
+</li>
+<li><p>&#x7F16;&#x5199;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+</li>
+<li><p>&#x7F16;&#x5199;&#x5B9E;&#x4F53;&#x7C7B;</p>
+<p>```java</p>
+<p>@Data
+public class Blog {</p>
+<pre><code>private int id;
+private String title;
+private String author;
+private Date createTime;
+private int views;
+</code></pre></li>
+</ol>
+<p>   }</p>
+<pre><code>
+4. &#x7F16;&#x5199;&#x5B9E;&#x4F53;&#x7C7B;&#x5BF9;&#x5E94;Mapper&#x63A5;&#x53E3; &#x548C; Mapper.XML&#x6587;&#x4EF6;
+
+
+
+### IF
+
+```xml
+&lt;select id=&quot;queryBlogIF&quot; parameterType=&quot;map&quot; resultType=&quot;blog&quot;&gt;
+    select * from mybatis.blog where 1=1
+    &lt;if test=&quot;title != null&quot;&gt;
+        and title = #{title}
+    &lt;/if&gt;
+    &lt;if test=&quot;author != null&quot;&gt;
+        and author = #{author}
+    &lt;/if&gt;
+&lt;/select&gt;
+</code></pre><h3 id="choose-when-otherwise">choose (when, otherwise)</h3>
+<pre><code class="lang-xml">
+    <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;queryBlogChoose&quot;</span> <span class="hljs-attr">parameterType</span>=<span class="hljs-string">&quot;map&quot;</span> <span class="hljs-attr">resultType</span>=<span class="hljs-string">&quot;blog&quot;</span>&gt;</span>
+        select * from mybatis.blog
+        <span class="hljs-tag">&lt;<span class="hljs-name">where</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">choose</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">when</span> <span class="hljs-attr">test</span>=<span class="hljs-string">&quot;title != null&quot;</span>&gt;</span>
+                    title = #{title}
+                <span class="hljs-tag">&lt;/<span class="hljs-name">when</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">when</span> <span class="hljs-attr">test</span>=<span class="hljs-string">&quot;author != null&quot;</span>&gt;</span>
+                    and author = #{author}
+                <span class="hljs-tag">&lt;/<span class="hljs-name">when</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">otherwise</span>&gt;</span>
+                    and views = #{views}
+                <span class="hljs-tag">&lt;/<span class="hljs-name">otherwise</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">choose</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">where</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+</code></pre>
+<h3 id="trim-whereset">trim (where,set)</h3>
+<pre><code class="lang-xml">select * from mybatis.blog
+<span class="hljs-tag">&lt;<span class="hljs-name">where</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">if</span> <span class="hljs-attr">test</span>=<span class="hljs-string">&quot;title != null&quot;</span>&gt;</span>
+        title = #{title}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">if</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">if</span> <span class="hljs-attr">test</span>=<span class="hljs-string">&quot;author != null&quot;</span>&gt;</span>
+        and author = #{author}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">if</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">where</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">update</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;updateBlog&quot;</span> <span class="hljs-attr">parameterType</span>=<span class="hljs-string">&quot;map&quot;</span>&gt;</span>
+    update mybatis.blog
+    <span class="hljs-tag">&lt;<span class="hljs-name">set</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">if</span> <span class="hljs-attr">test</span>=<span class="hljs-string">&quot;title != null&quot;</span>&gt;</span>
+            title = #{title},
+        <span class="hljs-tag">&lt;/<span class="hljs-name">if</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">if</span> <span class="hljs-attr">test</span>=<span class="hljs-string">&quot;author != null&quot;</span>&gt;</span>
+            author = #{author}
+        <span class="hljs-tag">&lt;/<span class="hljs-name">if</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">set</span>&gt;</span>
+    where id = #{id}
+<span class="hljs-tag">&lt;/<span class="hljs-name">update</span>&gt;</span>
+</code></pre>
+<p>==<strong>&#x6240;&#x8C13;&#x7684;&#x52A8;&#x6001;SQL&#xFF0C;&#x672C;&#x8D28;&#x8FD8;&#x662F;SQL&#x8BED;&#x53E5; &#xFF0C; &#x53EA;&#x662F;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;SQL&#x5C42;&#x9762;&#xFF0C;&#x53BB;&#x6267;&#x884C;&#x4E00;&#x4E2A;&#x903B;&#x8F91;&#x4EE3;&#x7801;</strong>==</p>
+<p>if</p>
+<p>where &#xFF0C; set  &#xFF0C; choose &#xFF0C;when</p>
+<h3 id="sql&#x7247;&#x6BB5;">SQL&#x7247;&#x6BB5;</h3>
+<p>&#x6709;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x80FD;&#x4F1A;&#x5C06;&#x4E00;&#x4E9B;&#x529F;&#x80FD;&#x7684;&#x90E8;&#x5206;&#x62BD;&#x53D6;&#x51FA;&#x6765;&#xFF0C;&#x65B9;&#x4FBF;&#x590D;&#x7528;&#xFF01;</p>
+<ol>
+<li><p>&#x4F7F;&#x7528;SQL&#x6807;&#x7B7E;&#x62BD;&#x53D6;&#x516C;&#x5171;&#x7684;&#x90E8;&#x5206;</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">sql</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;if-title-author&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">if</span> <span class="hljs-attr">test</span>=<span class="hljs-string">&quot;title != null&quot;</span>&gt;</span>
+        title = #{title}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">if</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">if</span> <span class="hljs-attr">test</span>=<span class="hljs-string">&quot;author != null&quot;</span>&gt;</span>
+        and author = #{author}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">if</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">sql</span>&gt;</span>
+</code></pre>
+</li>
+<li><p>&#x5728;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x7684;&#x5730;&#x65B9;&#x4F7F;&#x7528;Include&#x6807;&#x7B7E;&#x5F15;&#x7528;&#x5373;&#x53EF;</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;queryBlogIF&quot;</span> <span class="hljs-attr">parameterType</span>=<span class="hljs-string">&quot;map&quot;</span> <span class="hljs-attr">resultType</span>=<span class="hljs-string">&quot;blog&quot;</span>&gt;</span>
+    select * from mybatis.blog
+    <span class="hljs-tag">&lt;<span class="hljs-name">where</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">include</span> <span class="hljs-attr">refid</span>=<span class="hljs-string">&quot;if-title-author&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">include</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">where</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+</code></pre>
+</li>
+</ol>
+<p>&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#xFF1A;</p>
+<ul>
+<li>&#x6700;&#x597D;&#x57FA;&#x4E8E;&#x5355;&#x8868;&#x6765;&#x5B9A;&#x4E49;SQL&#x7247;&#x6BB5;&#xFF01;</li>
+<li>&#x4E0D;&#x8981;&#x5B58;&#x5728;where&#x6807;&#x7B7E;</li>
+</ul>
+<h3 id="foreach">Foreach</h3>
+<pre><code class="lang-sql"><span class="hljs-keyword">select</span> * <span class="hljs-keyword">from</span> <span class="hljs-keyword">user</span> <span class="hljs-keyword">where</span> <span class="hljs-number">1</span>=<span class="hljs-number">1</span> <span class="hljs-keyword">and</span> 
+
+  &lt;foreach item=<span class="hljs-string">&quot;id&quot;</span> collection=<span class="hljs-string">&quot;ids&quot;</span>
+      <span class="hljs-keyword">open</span>=<span class="hljs-string">&quot;(&quot;</span> separator=<span class="hljs-string">&quot;or&quot;</span> <span class="hljs-keyword">close</span>=<span class="hljs-string">&quot;)&quot;</span>&gt;
+        #{<span class="hljs-keyword">id</span>}
+  &lt;/foreach&gt;
+
+(<span class="hljs-keyword">id</span>=<span class="hljs-number">1</span> <span class="hljs-keyword">or</span> <span class="hljs-keyword">id</span>=<span class="hljs-number">2</span> <span class="hljs-keyword">or</span> <span class="hljs-keyword">id</span>=<span class="hljs-number">3</span>)
+</code></pre>
+<p><img src="Mybatis&#x8BFE;&#x5802;&#x7B14;&#x8BB0;.assets/1569979229205.png" alt="1569979229205"></p>
+<p><img src="Mybatis&#x8BFE;&#x5802;&#x7B14;&#x8BB0;.assets/1569979339190.png" alt="1569979339190"></p>
+<pre><code class="lang-xml"><span class="hljs-comment">&lt;!--
+        select * from mybatis.blog where 1=1 and (id=1 or id = 2 or id=3)
+
+        &#x6211;&#x4EEC;&#x73B0;&#x5728;&#x4F20;&#x9012;&#x4E00;&#x4E2A;&#x4E07;&#x80FD;&#x7684;map &#xFF0C; &#x8FD9;map&#x4E2D;&#x53EF;&#x4EE5;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x96C6;&#x5408;&#xFF01;
+--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;queryBlogForeach&quot;</span> <span class="hljs-attr">parameterType</span>=<span class="hljs-string">&quot;map&quot;</span> <span class="hljs-attr">resultType</span>=<span class="hljs-string">&quot;blog&quot;</span>&gt;</span>
+    select * from mybatis.blog
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">where</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">foreach</span> <span class="hljs-attr">collection</span>=<span class="hljs-string">&quot;ids&quot;</span> <span class="hljs-attr">item</span>=<span class="hljs-string">&quot;id&quot;</span> <span class="hljs-attr">open</span>=<span class="hljs-string">&quot;and (&quot;</span> <span class="hljs-attr">close</span>=<span class="hljs-string">&quot;)&quot;</span> <span class="hljs-attr">separator</span>=<span class="hljs-string">&quot;or&quot;</span>&gt;</span>
+            id = #{id}
+        <span class="hljs-tag">&lt;/<span class="hljs-name">foreach</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">where</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+</code></pre>
+<p>==&#x52A8;&#x6001;SQL&#x5C31;&#x662F;&#x5728;&#x62FC;&#x63A5;SQL&#x8BED;&#x53E5;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x8981;&#x4FDD;&#x8BC1;SQL&#x7684;&#x6B63;&#x786E;&#x6027;&#xFF0C;&#x6309;&#x7167;SQL&#x7684;&#x683C;&#x5F0F;&#xFF0C;&#x53BB;&#x6392;&#x5217;&#x7EC4;&#x5408;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;==</p>
+<p>&#x5EFA;&#x8BAE;&#xFF1A;</p>
+<ul>
+<li>&#x73B0;&#x5728;Mysql&#x4E2D;&#x5199;&#x51FA;&#x5B8C;&#x6574;&#x7684;SQL,&#x518D;&#x5BF9;&#x5E94;&#x7684;&#x53BB;&#x4FEE;&#x6539;&#x6210;&#x4E3A;&#x6211;&#x4EEC;&#x7684;&#x52A8;&#x6001;SQL&#x5B9E;&#x73B0;&#x901A;&#x7528;&#x5373;&#x53EF;&#xFF01;</li>
+</ul>
+<h2 id="13&#x3001;&#x7F13;&#x5B58;-&#xFF08;&#x4E86;&#x89E3;&#xFF09;">13&#x3001;&#x7F13;&#x5B58; &#xFF08;&#x4E86;&#x89E3;&#xFF09;</h2>
+<h3 id="131&#x3001;&#x7B80;&#x4ECB;">13.1&#x3001;&#x7B80;&#x4ECB;</h3>
+<pre><code>&#x67E5;&#x8BE2;  &#xFF1A;  &#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93; &#xFF0C;&#x8017;&#x8D44;&#x6E90;&#xFF01;
+    &#x4E00;&#x6B21;&#x67E5;&#x8BE2;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x7ED9;&#x4ED6;&#x6682;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x53D6;&#x5230;&#x7684;&#x5730;&#x65B9;&#xFF01;--&gt; &#x5185;&#x5B58; &#xFF1A; &#x7F13;&#x5B58;
+
+&#x6211;&#x4EEC;&#x518D;&#x6B21;&#x67E5;&#x8BE2;&#x76F8;&#x540C;&#x6570;&#x636E;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x76F4;&#x63A5;&#x8D70;&#x7F13;&#x5B58;&#xFF0C;&#x5C31;&#x4E0D;&#x7528;&#x8D70;&#x6570;&#x636E;&#x5E93;&#x4E86;
+</code></pre><ol>
+<li>&#x4EC0;&#x4E48;&#x662F;&#x7F13;&#x5B58; [ Cache ]&#xFF1F;<ul>
+<li>&#x5B58;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x7684;&#x4E34;&#x65F6;&#x6570;&#x636E;&#x3002;</li>
+<li>&#x5C06;&#x7528;&#x6237;&#x7ECF;&#x5E38;&#x67E5;&#x8BE2;&#x7684;&#x6570;&#x636E;&#x653E;&#x5728;&#x7F13;&#x5B58;&#xFF08;&#x5185;&#x5B58;&#xFF09;&#x4E2D;&#xFF0C;&#x7528;&#x6237;&#x53BB;&#x67E5;&#x8BE2;&#x6570;&#x636E;&#x5C31;&#x4E0D;&#x7528;&#x4ECE;&#x78C1;&#x76D8;&#x4E0A;(&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x6570;&#x636E;&#x6587;&#x4EF6;)&#x67E5;&#x8BE2;&#xFF0C;&#x4ECE;&#x7F13;&#x5B58;&#x4E2D;&#x67E5;&#x8BE2;&#xFF0C;&#x4ECE;&#x800C;&#x63D0;&#x9AD8;&#x67E5;&#x8BE2;&#x6548;&#x7387;&#xFF0C;&#x89E3;&#x51B3;&#x4E86;&#x9AD8;&#x5E76;&#x53D1;&#x7CFB;&#x7EDF;&#x7684;&#x6027;&#x80FD;&#x95EE;&#x9898;&#x3002;</li>
+</ul>
+</li>
+<li><p>&#x4E3A;&#x4EC0;&#x4E48;&#x4F7F;&#x7528;&#x7F13;&#x5B58;&#xFF1F;</p>
+<ul>
+<li>&#x51CF;&#x5C11;&#x548C;&#x6570;&#x636E;&#x5E93;&#x7684;&#x4EA4;&#x4E92;&#x6B21;&#x6570;&#xFF0C;&#x51CF;&#x5C11;&#x7CFB;&#x7EDF;&#x5F00;&#x9500;&#xFF0C;&#x63D0;&#x9AD8;&#x7CFB;&#x7EDF;&#x6548;&#x7387;&#x3002;</li>
+</ul>
+</li>
+<li><p>&#x4EC0;&#x4E48;&#x6837;&#x7684;&#x6570;&#x636E;&#x80FD;&#x4F7F;&#x7528;&#x7F13;&#x5B58;&#xFF1F;</p>
+<ul>
+<li>&#x7ECF;&#x5E38;&#x67E5;&#x8BE2;&#x5E76;&#x4E14;&#x4E0D;&#x7ECF;&#x5E38;&#x6539;&#x53D8;&#x7684;&#x6570;&#x636E;&#x3002;&#x3010;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7F13;&#x5B58;&#x3011;</li>
+</ul>
+</li>
+</ol>
+<h3 id="132&#x3001;mybatis&#x7F13;&#x5B58;">13.2&#x3001;Mybatis&#x7F13;&#x5B58;</h3>
+<ul>
+<li>MyBatis&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x5F3A;&#x5927;&#x7684;&#x67E5;&#x8BE2;&#x7F13;&#x5B58;&#x7279;&#x6027;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x975E;&#x5E38;&#x65B9;&#x4FBF;&#x5730;&#x5B9A;&#x5236;&#x548C;&#x914D;&#x7F6E;&#x7F13;&#x5B58;&#x3002;&#x7F13;&#x5B58;&#x53EF;&#x4EE5;&#x6781;&#x5927;&#x7684;&#x63D0;&#x5347;&#x67E5;&#x8BE2;&#x6548;&#x7387;&#x3002;</li>
+<li><p>MyBatis&#x7CFB;&#x7EDF;&#x4E2D;&#x9ED8;&#x8BA4;&#x5B9A;&#x4E49;&#x4E86;&#x4E24;&#x7EA7;&#x7F13;&#x5B58;&#xFF1A;<strong>&#x4E00;&#x7EA7;&#x7F13;&#x5B58;</strong>&#x548C;<strong>&#x4E8C;&#x7EA7;&#x7F13;&#x5B58;</strong></p>
+<ul>
+<li><p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53EA;&#x6709;&#x4E00;&#x7EA7;&#x7F13;&#x5B58;&#x5F00;&#x542F;&#x3002;&#xFF08;SqlSession&#x7EA7;&#x522B;&#x7684;&#x7F13;&#x5B58;&#xFF0C;&#x4E5F;&#x79F0;&#x4E3A;&#x672C;&#x5730;&#x7F13;&#x5B58;&#xFF09;</p>
+</li>
+<li><p>&#x4E8C;&#x7EA7;&#x7F13;&#x5B58;&#x9700;&#x8981;&#x624B;&#x52A8;&#x5F00;&#x542F;&#x548C;&#x914D;&#x7F6E;&#xFF0C;&#x4ED6;&#x662F;&#x57FA;&#x4E8E;namespace&#x7EA7;&#x522B;&#x7684;&#x7F13;&#x5B58;&#x3002;</p>
+</li>
+<li><p>&#x4E3A;&#x4E86;&#x63D0;&#x9AD8;&#x6269;&#x5C55;&#x6027;&#xFF0C;MyBatis&#x5B9A;&#x4E49;&#x4E86;&#x7F13;&#x5B58;&#x63A5;&#x53E3;Cache&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5B9E;&#x73B0;Cache&#x63A5;&#x53E3;&#x6765;&#x81EA;&#x5B9A;&#x4E49;&#x4E8C;&#x7EA7;&#x7F13;&#x5B58;</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="133&#x3001;&#x4E00;&#x7EA7;&#x7F13;&#x5B58;">13.3&#x3001;&#x4E00;&#x7EA7;&#x7F13;&#x5B58;</h3>
+<ul>
+<li>&#x4E00;&#x7EA7;&#x7F13;&#x5B58;&#x4E5F;&#x53EB;&#x672C;&#x5730;&#x7F13;&#x5B58;&#xFF1A;  SqlSession<ul>
+<li>&#x4E0E;&#x6570;&#x636E;&#x5E93;&#x540C;&#x4E00;&#x6B21;&#x4F1A;&#x8BDD;&#x671F;&#x95F4;&#x67E5;&#x8BE2;&#x5230;&#x7684;&#x6570;&#x636E;&#x4F1A;&#x653E;&#x5728;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x4E2D;&#x3002;</li>
+<li>&#x4EE5;&#x540E;&#x5982;&#x679C;&#x9700;&#x8981;&#x83B7;&#x53D6;&#x76F8;&#x540C;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x76F4;&#x63A5;&#x4ECE;&#x7F13;&#x5B58;&#x4E2D;&#x62FF;&#xFF0C;&#x6CA1;&#x5FC5;&#x987B;&#x518D;&#x53BB;&#x67E5;&#x8BE2;&#x6570;&#x636E;&#x5E93;&#xFF1B;</li>
+</ul>
+</li>
+</ul>
+<p>&#x6D4B;&#x8BD5;&#x6B65;&#x9AA4;&#xFF1A;</p>
+<ol>
+<li>&#x5F00;&#x542F;&#x65E5;&#x5FD7;&#xFF01;</li>
+<li>&#x6D4B;&#x8BD5;&#x5728;&#x4E00;&#x4E2A;Sesion&#x4E2D;&#x67E5;&#x8BE2;&#x4E24;&#x6B21;&#x76F8;&#x540C;&#x8BB0;&#x5F55;</li>
+<li>&#x67E5;&#x770B;&#x65E5;&#x5FD7;&#x8F93;&#x51FA;</li>
+</ol>
+<p><img src="Mybatis&#x8BFE;&#x5802;&#x7B14;&#x8BB0;.assets/1569983650437.png" alt="1569983650437"></p>
+<p>&#x7F13;&#x5B58;&#x5931;&#x6548;&#x7684;&#x60C5;&#x51B5;&#xFF1A;</p>
+<ol>
+<li><p>&#x67E5;&#x8BE2;&#x4E0D;&#x540C;&#x7684;&#x4E1C;&#x897F;</p>
+</li>
+<li><p>&#x589E;&#x5220;&#x6539;&#x64CD;&#x4F5C;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x6539;&#x53D8;&#x539F;&#x6765;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x6240;&#x4EE5;&#x5FC5;&#x5B9A;&#x4F1A;&#x5237;&#x65B0;&#x7F13;&#x5B58;&#xFF01;</p>
+<p><img src="Mybatis&#x8BFE;&#x5802;&#x7B14;&#x8BB0;.assets/1569983952321.png" alt="1569983952321"></p>
+</li>
+<li><p>&#x67E5;&#x8BE2;&#x4E0D;&#x540C;&#x7684;Mapper.xml</p>
+</li>
+<li><p>&#x624B;&#x52A8;&#x6E05;&#x7406;&#x7F13;&#x5B58;&#xFF01;</p>
+<p><img src="Mybatis&#x8BFE;&#x5802;&#x7B14;&#x8BB0;.assets/1569984008824.png" alt="1569984008824"></p>
+</li>
+</ol>
+<p>&#x5C0F;&#x7ED3;&#xFF1A;&#x4E00;&#x7EA7;&#x7F13;&#x5B58;&#x9ED8;&#x8BA4;&#x662F;&#x5F00;&#x542F;&#x7684;&#xFF0C;&#x53EA;&#x5728;&#x4E00;&#x6B21;SqlSession&#x4E2D;&#x6709;&#x6548;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x62FF;&#x5230;&#x8FDE;&#x63A5;&#x5230;&#x5173;&#x95ED;&#x8FDE;&#x63A5;&#x8FD9;&#x4E2A;&#x533A;&#x95F4;&#x6BB5;&#xFF01;</p>
+<p>&#x4E00;&#x7EA7;&#x7F13;&#x5B58;&#x5C31;&#x662F;&#x4E00;&#x4E2A;Map&#x3002;</p>
+<h3 id="134&#x3001;&#x4E8C;&#x7EA7;&#x7F13;&#x5B58;">13.4&#x3001;&#x4E8C;&#x7EA7;&#x7F13;&#x5B58;</h3>
+<ul>
+<li>&#x4E8C;&#x7EA7;&#x7F13;&#x5B58;&#x4E5F;&#x53EB;&#x5168;&#x5C40;&#x7F13;&#x5B58;&#xFF0C;&#x4E00;&#x7EA7;&#x7F13;&#x5B58;&#x4F5C;&#x7528;&#x57DF;&#x592A;&#x4F4E;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x8BDE;&#x751F;&#x4E86;&#x4E8C;&#x7EA7;&#x7F13;&#x5B58;</li>
+<li>&#x57FA;&#x4E8E;namespace&#x7EA7;&#x522B;&#x7684;&#x7F13;&#x5B58;&#xFF0C;&#x4E00;&#x4E2A;&#x540D;&#x79F0;&#x7A7A;&#x95F4;&#xFF0C;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;&#x4E8C;&#x7EA7;&#x7F13;&#x5B58;&#xFF1B;</li>
+<li>&#x5DE5;&#x4F5C;&#x673A;&#x5236;<ul>
+<li>&#x4E00;&#x4E2A;&#x4F1A;&#x8BDD;&#x67E5;&#x8BE2;&#x4E00;&#x6761;&#x6570;&#x636E;&#xFF0C;&#x8FD9;&#x4E2A;&#x6570;&#x636E;&#x5C31;&#x4F1A;&#x88AB;&#x653E;&#x5728;&#x5F53;&#x524D;&#x4F1A;&#x8BDD;&#x7684;&#x4E00;&#x7EA7;&#x7F13;&#x5B58;&#x4E2D;&#xFF1B;</li>
+<li>&#x5982;&#x679C;&#x5F53;&#x524D;&#x4F1A;&#x8BDD;&#x5173;&#x95ED;&#x4E86;&#xFF0C;&#x8FD9;&#x4E2A;&#x4F1A;&#x8BDD;&#x5BF9;&#x5E94;&#x7684;&#x4E00;&#x7EA7;&#x7F13;&#x5B58;&#x5C31;&#x6CA1;&#x4E86;&#xFF1B;&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x7684;&#x662F;&#xFF0C;&#x4F1A;&#x8BDD;&#x5173;&#x95ED;&#x4E86;&#xFF0C;&#x4E00;&#x7EA7;&#x7F13;&#x5B58;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x88AB;&#x4FDD;&#x5B58;&#x5230;&#x4E8C;&#x7EA7;&#x7F13;&#x5B58;&#x4E2D;&#xFF1B;</li>
+<li>&#x65B0;&#x7684;&#x4F1A;&#x8BDD;&#x67E5;&#x8BE2;&#x4FE1;&#x606F;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x4ECE;&#x4E8C;&#x7EA7;&#x7F13;&#x5B58;&#x4E2D;&#x83B7;&#x53D6;&#x5185;&#x5BB9;&#xFF1B;</li>
+<li>&#x4E0D;&#x540C;&#x7684;mapper&#x67E5;&#x51FA;&#x7684;&#x6570;&#x636E;&#x4F1A;&#x653E;&#x5728;&#x81EA;&#x5DF1;&#x5BF9;&#x5E94;&#x7684;&#x7F13;&#x5B58;&#xFF08;map&#xFF09;&#x4E2D;&#xFF1B;</li>
+</ul>
+</li>
+</ul>
+<p>&#x6B65;&#x9AA4;&#xFF1A;</p>
+<ol>
+<li><p>&#x5F00;&#x542F;&#x5168;&#x5C40;&#x7F13;&#x5B58;</p>
+<pre><code class="lang-xml"><span class="hljs-comment">&lt;!--&#x663E;&#x793A;&#x7684;&#x5F00;&#x542F;&#x5168;&#x5C40;&#x7F13;&#x5B58;--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">setting</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;cacheEnabled&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;true&quot;</span>/&gt;</span>
+</code></pre>
+</li>
+<li><p>&#x5728;&#x8981;&#x4F7F;&#x7528;&#x4E8C;&#x7EA7;&#x7F13;&#x5B58;&#x7684;Mapper&#x4E2D;&#x5F00;&#x542F;</p>
+<pre><code class="lang-xml"><span class="hljs-comment">&lt;!--&#x5728;&#x5F53;&#x524D;Mapper.xml&#x4E2D;&#x4F7F;&#x7528;&#x4E8C;&#x7EA7;&#x7F13;&#x5B58;--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">cache</span>/&gt;</span>
+</code></pre>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x53C2;&#x6570;</p>
+<pre><code class="lang-xml"><span class="hljs-comment">&lt;!--&#x5728;&#x5F53;&#x524D;Mapper.xml&#x4E2D;&#x4F7F;&#x7528;&#x4E8C;&#x7EA7;&#x7F13;&#x5B58;--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">cache</span>  <span class="hljs-attr">eviction</span>=<span class="hljs-string">&quot;FIFO&quot;</span>
+       <span class="hljs-attr">flushInterval</span>=<span class="hljs-string">&quot;60000&quot;</span>
+       <span class="hljs-attr">size</span>=<span class="hljs-string">&quot;512&quot;</span>
+       <span class="hljs-attr">readOnly</span>=<span class="hljs-string">&quot;true&quot;</span>/&gt;</span>
+</code></pre>
+</li>
+<li><p>&#x6D4B;&#x8BD5;</p>
+<ol>
+<li><p>&#x95EE;&#x9898;:&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5C06;&#x5B9E;&#x4F53;&#x7C7B;&#x5E8F;&#x5217;&#x5316;&#xFF01;&#x5426;&#x5219;&#x5C31;&#x4F1A;&#x62A5;&#x9519;&#xFF01;</p>
+<pre><code>Caused by: java.io.NotSerializableException: com.kuang.pojo.User
+</code></pre></li>
+</ol>
+</li>
+</ol>
+<p>&#x5C0F;&#x7ED3;&#xFF1A;</p>
+<ul>
+<li>&#x53EA;&#x8981;&#x5F00;&#x542F;&#x4E86;&#x4E8C;&#x7EA7;&#x7F13;&#x5B58;&#xFF0C;&#x5728;&#x540C;&#x4E00;&#x4E2A;Mapper&#x4E0B;&#x5C31;&#x6709;&#x6548;</li>
+<li>&#x6240;&#x6709;&#x7684;&#x6570;&#x636E;&#x90FD;&#x4F1A;&#x5148;&#x653E;&#x5728;&#x4E00;&#x7EA7;&#x7F13;&#x5B58;&#x4E2D;&#xFF1B;</li>
+<li>&#x53EA;&#x6709;&#x5F53;&#x4F1A;&#x8BDD;&#x63D0;&#x4EA4;&#xFF0C;&#x6216;&#x8005;&#x5173;&#x95ED;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x624D;&#x4F1A;&#x63D0;&#x4EA4;&#x5230;&#x4E8C;&#x7EA7;&#x7F13;&#x51B2;&#x4E2D;&#xFF01;</li>
+</ul>
+<h3 id="135&#x3001;&#x7F13;&#x5B58;&#x539F;&#x7406;">13.5&#x3001;&#x7F13;&#x5B58;&#x539F;&#x7406;</h3>
+<p><img src="Mybatis&#x8BFE;&#x5802;&#x7B14;&#x8BB0;.assets/1569985541106.png" alt="1569985541106"></p>
+<h3 id="136&#x3001;&#x81EA;&#x5B9A;&#x4E49;&#x7F13;&#x5B58;-ehcache">13.6&#x3001;&#x81EA;&#x5B9A;&#x4E49;&#x7F13;&#x5B58;-ehcache</h3>
+<pre><code class="lang-xml">Ehcache&#x662F;&#x4E00;&#x79CD;&#x5E7F;&#x6CDB;&#x4F7F;&#x7528;&#x7684;&#x5F00;&#x6E90;Java&#x5206;&#x5E03;&#x5F0F;&#x7F13;&#x5B58;&#x3002;&#x4E3B;&#x8981;&#x9762;&#x5411;&#x901A;&#x7528;&#x7F13;&#x5B58;
+</code></pre>
+<p>&#x8981;&#x5728;&#x7A0B;&#x5E8F;&#x4E2D;&#x4F7F;&#x7528;ehcache&#xFF0C;&#x5148;&#x8981;&#x5BFC;&#x5305;&#xFF01;</p>
+<pre><code class="lang-xml"><span class="hljs-comment">&lt;!-- https://mvnrepository.com/artifact/org.mybatis.caches/mybatis-ehcache --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.mybatis.caches<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>mybatis-ehcache<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>1.1.0<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+</code></pre>
+<p>&#x5728;mapper&#x4E2D;&#x6307;&#x5B9A;&#x4F7F;&#x7528;&#x6211;&#x4EEC;&#x7684;ehcache&#x7F13;&#x5B58;&#x5B9E;&#x73B0;&#xFF01;</p>
+<pre><code class="lang-xml"><span class="hljs-comment">&lt;!--&#x5728;&#x5F53;&#x524D;Mapper.xml&#x4E2D;&#x4F7F;&#x7528;&#x4E8C;&#x7EA7;&#x7F13;&#x5B58;--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">cache</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;org.mybatis.caches.ehcache.EhcacheCache&quot;</span>/&gt;</span>
+</code></pre>
+<p>ehcache.xml</p>
+<pre><code class="lang-xml"><span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;UTF-8&quot;</span><span class="hljs-meta">?&gt;</span></span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ehcache</span> <span class="hljs-attr">xmlns:xsi</span>=<span class="hljs-string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+         <span class="hljs-attr">xsi:noNamespaceSchemaLocation</span>=<span class="hljs-string">&quot;http://ehcache.org/ehcache.xsd&quot;</span>
+         <span class="hljs-attr">updateCheck</span>=<span class="hljs-string">&quot;false&quot;</span>&gt;</span>
+    <span class="hljs-comment">&lt;!--
+       diskStore&#xFF1A;&#x4E3A;&#x7F13;&#x5B58;&#x8DEF;&#x5F84;&#xFF0C;ehcache&#x5206;&#x4E3A;&#x5185;&#x5B58;&#x548C;&#x78C1;&#x76D8;&#x4E24;&#x7EA7;&#xFF0C;&#x6B64;&#x5C5E;&#x6027;&#x5B9A;&#x4E49;&#x78C1;&#x76D8;&#x7684;&#x7F13;&#x5B58;&#x4F4D;&#x7F6E;&#x3002;&#x53C2;&#x6570;&#x89E3;&#x91CA;&#x5982;&#x4E0B;&#xFF1A;
+       user.home &#x2013; &#x7528;&#x6237;&#x4E3B;&#x76EE;&#x5F55;
+       user.dir  &#x2013; &#x7528;&#x6237;&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;
+       java.io.tmpdir &#x2013; &#x9ED8;&#x8BA4;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;
+     --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">diskStore</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&quot;./tmpdir/Tmp_EhCache&quot;</span>/&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">defaultCache</span>
+            <span class="hljs-attr">eternal</span>=<span class="hljs-string">&quot;false&quot;</span>
+            <span class="hljs-attr">maxElementsInMemory</span>=<span class="hljs-string">&quot;10000&quot;</span>
+            <span class="hljs-attr">overflowToDisk</span>=<span class="hljs-string">&quot;false&quot;</span>
+            <span class="hljs-attr">diskPersistent</span>=<span class="hljs-string">&quot;false&quot;</span>
+            <span class="hljs-attr">timeToIdleSeconds</span>=<span class="hljs-string">&quot;1800&quot;</span>
+            <span class="hljs-attr">timeToLiveSeconds</span>=<span class="hljs-string">&quot;259200&quot;</span>
+            <span class="hljs-attr">memoryStoreEvictionPolicy</span>=<span class="hljs-string">&quot;LRU&quot;</span>/&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">cache</span>
+            <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;cloud_user&quot;</span>
+            <span class="hljs-attr">eternal</span>=<span class="hljs-string">&quot;false&quot;</span>
+            <span class="hljs-attr">maxElementsInMemory</span>=<span class="hljs-string">&quot;5000&quot;</span>
+            <span class="hljs-attr">overflowToDisk</span>=<span class="hljs-string">&quot;false&quot;</span>
+            <span class="hljs-attr">diskPersistent</span>=<span class="hljs-string">&quot;false&quot;</span>
+            <span class="hljs-attr">timeToIdleSeconds</span>=<span class="hljs-string">&quot;1800&quot;</span>
+            <span class="hljs-attr">timeToLiveSeconds</span>=<span class="hljs-string">&quot;1800&quot;</span>
+            <span class="hljs-attr">memoryStoreEvictionPolicy</span>=<span class="hljs-string">&quot;LRU&quot;</span>/&gt;</span>
+    <span class="hljs-comment">&lt;!--
+       defaultCache&#xFF1A;&#x9ED8;&#x8BA4;&#x7F13;&#x5B58;&#x7B56;&#x7565;&#xFF0C;&#x5F53;ehcache&#x627E;&#x4E0D;&#x5230;&#x5B9A;&#x4E49;&#x7684;&#x7F13;&#x5B58;&#x65F6;&#xFF0C;&#x5219;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x7F13;&#x5B58;&#x7B56;&#x7565;&#x3002;&#x53EA;&#x80FD;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x3002;
+     --&gt;</span>
+    <span class="hljs-comment">&lt;!--
+      name:&#x7F13;&#x5B58;&#x540D;&#x79F0;&#x3002;
+      maxElementsInMemory:&#x7F13;&#x5B58;&#x6700;&#x5927;&#x6570;&#x76EE;
+      maxElementsOnDisk&#xFF1A;&#x786C;&#x76D8;&#x6700;&#x5927;&#x7F13;&#x5B58;&#x4E2A;&#x6570;&#x3002;
+      eternal:&#x5BF9;&#x8C61;&#x662F;&#x5426;&#x6C38;&#x4E45;&#x6709;&#x6548;&#xFF0C;&#x4E00;&#x4F46;&#x8BBE;&#x7F6E;&#x4E86;&#xFF0C;timeout&#x5C06;&#x4E0D;&#x8D77;&#x4F5C;&#x7528;&#x3002;
+      overflowToDisk:&#x662F;&#x5426;&#x4FDD;&#x5B58;&#x5230;&#x78C1;&#x76D8;&#xFF0C;&#x5F53;&#x7CFB;&#x7EDF;&#x5F53;&#x673A;&#x65F6;
+      timeToIdleSeconds:&#x8BBE;&#x7F6E;&#x5BF9;&#x8C61;&#x5728;&#x5931;&#x6548;&#x524D;&#x7684;&#x5141;&#x8BB8;&#x95F2;&#x7F6E;&#x65F6;&#x95F4;&#xFF08;&#x5355;&#x4F4D;&#xFF1A;&#x79D2;&#xFF09;&#x3002;&#x4EC5;&#x5F53;eternal=false&#x5BF9;&#x8C61;&#x4E0D;&#x662F;&#x6C38;&#x4E45;&#x6709;&#x6548;&#x65F6;&#x4F7F;&#x7528;&#xFF0C;&#x53EF;&#x9009;&#x5C5E;&#x6027;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x662F;0&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x53EF;&#x95F2;&#x7F6E;&#x65F6;&#x95F4;&#x65E0;&#x7A77;&#x5927;&#x3002;
+      timeToLiveSeconds:&#x8BBE;&#x7F6E;&#x5BF9;&#x8C61;&#x5728;&#x5931;&#x6548;&#x524D;&#x5141;&#x8BB8;&#x5B58;&#x6D3B;&#x65F6;&#x95F4;&#xFF08;&#x5355;&#x4F4D;&#xFF1A;&#x79D2;&#xFF09;&#x3002;&#x6700;&#x5927;&#x65F6;&#x95F4;&#x4ECB;&#x4E8E;&#x521B;&#x5EFA;&#x65F6;&#x95F4;&#x548C;&#x5931;&#x6548;&#x65F6;&#x95F4;&#x4E4B;&#x95F4;&#x3002;&#x4EC5;&#x5F53;eternal=false&#x5BF9;&#x8C61;&#x4E0D;&#x662F;&#x6C38;&#x4E45;&#x6709;&#x6548;&#x65F6;&#x4F7F;&#x7528;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;0.&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5BF9;&#x8C61;&#x5B58;&#x6D3B;&#x65F6;&#x95F4;&#x65E0;&#x7A77;&#x5927;&#x3002;
+      diskPersistent&#xFF1A;&#x662F;&#x5426;&#x7F13;&#x5B58;&#x865A;&#x62DF;&#x673A;&#x91CD;&#x542F;&#x671F;&#x6570;&#x636E; Whether the disk store persists between restarts of the Virtual Machine. The default value is false.
+      diskSpoolBufferSizeMB&#xFF1A;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x8BBE;&#x7F6E;DiskStore&#xFF08;&#x78C1;&#x76D8;&#x7F13;&#x5B58;&#xFF09;&#x7684;&#x7F13;&#x5B58;&#x533A;&#x5927;&#x5C0F;&#x3002;&#x9ED8;&#x8BA4;&#x662F;30MB&#x3002;&#x6BCF;&#x4E2A;Cache&#x90FD;&#x5E94;&#x8BE5;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x4E00;&#x4E2A;&#x7F13;&#x51B2;&#x533A;&#x3002;
+      diskExpiryThreadIntervalSeconds&#xFF1A;&#x78C1;&#x76D8;&#x5931;&#x6548;&#x7EBF;&#x7A0B;&#x8FD0;&#x884C;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;120&#x79D2;&#x3002;
+      memoryStoreEvictionPolicy&#xFF1A;&#x5F53;&#x8FBE;&#x5230;maxElementsInMemory&#x9650;&#x5236;&#x65F6;&#xFF0C;Ehcache&#x5C06;&#x4F1A;&#x6839;&#x636E;&#x6307;&#x5B9A;&#x7684;&#x7B56;&#x7565;&#x53BB;&#x6E05;&#x7406;&#x5185;&#x5B58;&#x3002;&#x9ED8;&#x8BA4;&#x7B56;&#x7565;&#x662F;LRU&#xFF08;&#x6700;&#x8FD1;&#x6700;&#x5C11;&#x4F7F;&#x7528;&#xFF09;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x4E3A;FIFO&#xFF08;&#x5148;&#x8FDB;&#x5148;&#x51FA;&#xFF09;&#x6216;&#x662F;LFU&#xFF08;&#x8F83;&#x5C11;&#x4F7F;&#x7528;&#xFF09;&#x3002;
+      clearOnFlush&#xFF1A;&#x5185;&#x5B58;&#x6570;&#x91CF;&#x6700;&#x5927;&#x65F6;&#x662F;&#x5426;&#x6E05;&#x9664;&#x3002;
+      memoryStoreEvictionPolicy:&#x53EF;&#x9009;&#x7B56;&#x7565;&#x6709;&#xFF1A;LRU&#xFF08;&#x6700;&#x8FD1;&#x6700;&#x5C11;&#x4F7F;&#x7528;&#xFF0C;&#x9ED8;&#x8BA4;&#x7B56;&#x7565;&#xFF09;&#x3001;FIFO&#xFF08;&#x5148;&#x8FDB;&#x5148;&#x51FA;&#xFF09;&#x3001;LFU&#xFF08;&#x6700;&#x5C11;&#x8BBF;&#x95EE;&#x6B21;&#x6570;&#xFF09;&#x3002;
+      FIFO&#xFF0C;first in first out&#xFF0C;&#x8FD9;&#x4E2A;&#x662F;&#x5927;&#x5BB6;&#x6700;&#x719F;&#x7684;&#xFF0C;&#x5148;&#x8FDB;&#x5148;&#x51FA;&#x3002;
+      LFU&#xFF0C; Less Frequently Used&#xFF0C;&#x5C31;&#x662F;&#x4E0A;&#x9762;&#x4F8B;&#x5B50;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x7B56;&#x7565;&#xFF0C;&#x76F4;&#x767D;&#x4E00;&#x70B9;&#x5C31;&#x662F;&#x8BB2;&#x4E00;&#x76F4;&#x4EE5;&#x6765;&#x6700;&#x5C11;&#x88AB;&#x4F7F;&#x7528;&#x7684;&#x3002;&#x5982;&#x4E0A;&#x9762;&#x6240;&#x8BB2;&#xFF0C;&#x7F13;&#x5B58;&#x7684;&#x5143;&#x7D20;&#x6709;&#x4E00;&#x4E2A;hit&#x5C5E;&#x6027;&#xFF0C;hit&#x503C;&#x6700;&#x5C0F;&#x7684;&#x5C06;&#x4F1A;&#x88AB;&#x6E05;&#x51FA;&#x7F13;&#x5B58;&#x3002;
+      LRU&#xFF0C;Least Recently Used&#xFF0C;&#x6700;&#x8FD1;&#x6700;&#x5C11;&#x4F7F;&#x7528;&#x7684;&#xFF0C;&#x7F13;&#x5B58;&#x7684;&#x5143;&#x7D20;&#x6709;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x6233;&#xFF0C;&#x5F53;&#x7F13;&#x5B58;&#x5BB9;&#x91CF;&#x6EE1;&#x4E86;&#xFF0C;&#x800C;&#x53C8;&#x9700;&#x8981;&#x817E;&#x51FA;&#x5730;&#x65B9;&#x6765;&#x7F13;&#x5B58;&#x65B0;&#x7684;&#x5143;&#x7D20;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x90A3;&#x4E48;&#x73B0;&#x6709;&#x7F13;&#x5B58;&#x5143;&#x7D20;&#x4E2D;&#x65F6;&#x95F4;&#x6233;&#x79BB;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x6700;&#x8FDC;&#x7684;&#x5143;&#x7D20;&#x5C06;&#x88AB;&#x6E05;&#x51FA;&#x7F13;&#x5B58;&#x3002;
+   --&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">ehcache</span>&gt;</span>
+</code></pre>
+<p>Redis&#x6570;&#x636E;&#x5E93;&#x6765;&#x505A;&#x7F13;&#x5B58;&#xFF01;  K-V</p>
+<h2 id="&#x7EC3;&#x4E60;&#xFF1A;29&#x9053;&#x7EC3;&#x4E60;&#x9898;&#x5B9E;&#x6218;&#xFF01;">&#x7EC3;&#x4E60;&#xFF1A;29&#x9053;&#x7EC3;&#x4E60;&#x9898;&#x5B9E;&#x6218;&#xFF01;</h2>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Mybatis课堂笔记","level":"1.2","depth":1,"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"mybatis/Mybatis课堂笔记.md","mtime":"2019-10-02T03:36:13.605Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-13T05:11:07.601Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
