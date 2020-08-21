@@ -1,0 +1,934 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>PyQt5类的封装 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="note6-10.html" />
+    
+    
+    <link rel="prev" href="note1-5.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    笔记
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="note1-5.html">
+            
+                <a href="note1-5.html#PyQt5的第一课-环境的准备">
+            
+                    
+                    环境的准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="note1-5.html">
+            
+                <a href="note1-5.html#PyQt5的第二课-hellopyqt5">
+            
+                    
+                    hellopyqt5
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="note1-5.html">
+            
+                <a href="note1-5.html#PyQt5的第三课-pyqt5与qtdesigner对照分析">
+            
+                    
+                    pyqt5与qtdesigner对照分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="note1-5.html">
+            
+                <a href="note1-5.html#PyQt5的第四课-pyqt5设置窗体图标">
+            
+                    
+                    pyqt5设置窗体图标
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="note1-5.html">
+            
+                <a href="note1-5.html#PyQt5的第五课-pyqt5显示提示框">
+            
+                    
+                    pyqt5显示提示框
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="note6-10.html">
+            
+                <a href="note6-10.html#PyQt5的第六课-PyQt5类的封装">
+            
+                    
+                    PyQt5类的封装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="note6-10.html">
+            
+                <a href="note6-10.html#PyQt5的第七课-PyQt5消息盒子QMessageBox">
+            
+                    
+                    PyQt5消息盒子QMessageBox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="note6-10.html">
+            
+                <a href="note6-10.html#PyQt5的第八课-PyQt5窗体居中和布局">
+            
+                    
+                    PyQt5窗体居中和布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="note6-10.html">
+            
+                <a href="note6-10.html#PyQt5的第久课-PyQt5窗体绝对布局和相对布局">
+            
+                    
+                    PyQt5窗体绝对布局和相对布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="note6-10.html">
+            
+                <a href="note6-10.html#PyQt5的第时课-PyQt5网格布局QGridLayout">
+            
+                    
+                    PyQt5网格布局QGridLayout
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="note11-15.html">
+            
+                <a href="note11-15.html#PyQt5的第十一课-PyQt5三原色案例">
+            
+                    
+                    PyQt5三原色案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="note11-15.html">
+            
+                <a href="note11-15.html#PyQt5的第十二课-PyQt5三原色">
+            
+                    
+                    PyQt5三原色
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="note11-15.html">
+            
+                <a href="note11-15.html#PyQt5的第十三课-PyQt5复选框QCheckBox控件事件应用">
+            
+                    
+                    PyQt5复选框QCheckBox控件事件应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="note11-15.html">
+            
+                <a href="note11-15.html#PyQt5的第十四课-PyQt5滑块控件Qslider的应用">
+            
+                    
+                    PyQt5滑块控件Qslider的应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="note11-15.html">
+            
+                <a href="note11-15.html#PyQt5的第十五课-PyQt5进度条QProgressBar应用">
+            
+                    
+                    PyQt5进度条QProgressBar应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="note16-19.html">
+            
+                <a href="note16-19.html#PyQt5的第十六课-PyQt5载入图片QPixmap应用">
+            
+                    
+                    PyQt5载入图片QPixmap应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="note16-19.html">
+            
+                <a href="note16-19.html#PyQt5的第十七课-PyQt5下拉列表控件QComboBox">
+            
+                    
+                    PyQt5下拉列表控件QComboBox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="note16-19.html">
+            
+                <a href="note16-19.html#PyQt5的第十八课-PyQt5日历控件QCalendarWidget">
+            
+                    
+                    PyQt5日历控件QCalendarWidget
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.19" data-path="note16-19.html">
+            
+                <a href="note16-19.html#PyQt5的第十久课-PyQt5菜单menu应用,新建多窗口">
+            
+                    
+                    PyQt5菜单menu应用,新建多窗口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.20" data-path="socket.html">
+            
+                <a href="socket.html">
+            
+                    
+                    CS架构的建议聊天室
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    代码例子
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../demo/demo1.html">
+            
+                <a href="../demo/demo1.html">
+            
+                    
+                    演示1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../demo/demo2.html">
+            
+                <a href="../demo/demo2.html#起步">
+            
+                    
+                    起步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../demo/demo2.html">
+            
+                <a href="../demo/demo2.html#说明">
+            
+                    
+                    说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../demo/demo2.html">
+            
+                <a href="../demo/demo2.html#菜单栏和工具栏">
+            
+                    
+                    菜单栏和工具栏
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../demo/demo2.html">
+            
+                <a href="../demo/demo2.html#布局管理">
+            
+                    
+                    布局管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../demo/demo2.html">
+            
+                <a href="../demo/demo2.html#事件和信号">
+            
+                    
+                    事件和信号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../demo/demo2.html">
+            
+                <a href="../demo/demo2.html#对话框">
+            
+                    
+                    对话框
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../demo/demo2.html">
+            
+                <a href="../demo/demo2.html#控件">
+            
+                    
+                    控件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../demo/demo2.html">
+            
+                <a href="../demo/demo2.html#拖拽">
+            
+                    
+                    拖拽
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../demo/demo2.html">
+            
+                <a href="../demo/demo2.html#绘图">
+            
+                    
+                    绘图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../demo/demo2.html">
+            
+                <a href="../demo/demo2.html#39自定义组件">
+            
+                    
+                    39自定义组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >PyQt5类的封装</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="pyqt5&#x7684;&#x7B2C;&#x516D;&#x8BFE;-pyqt5&#x7C7B;&#x7684;&#x5C01;&#x88C5;">PyQt5&#x7684;&#x7B2C;&#x516D;&#x8BFE;-PyQt5&#x7C7B;&#x7684;&#x5C01;&#x88C5;</h1>
+<h3 id="&#x77E5;&#x8BC6;&#x56DE;&#x987E;">&#x77E5;&#x8BC6;&#x56DE;&#x987E;</h3>
+<ul>
+<li>&#x638C;&#x63E1;&#x7EAF;&#x4EE3;&#x7801;&#x5199;pyqt5&#x7A0B;&#x5E8F;</li>
+<li>&#x663E;&#x793A;&#x63D0;&#x793A;&#x6846;tooltip&#x529F;&#x80FD;(&#x8FD9;&#x4E2A;&#x73A9;&#x610F;&#x5728;&#x6240;&#x6709;&#x7684;&#x63A7;&#x4EF6;&#x4E2D;&#x90FD;&#x662F;&#x5B58;&#x5728;&#x7684;)</li>
+</ul>
+<h3 id="&#x4EE3;&#x7801;&#x5C01;&#x88C5;&#x601D;&#x8DEF;">&#x4EE3;&#x7801;&#x5C01;&#x88C5;&#x601D;&#x8DEF;</h3>
+<ul>
+<li>&#x5206;&#x6790;&#x54EA;&#x4E9B;&#x4EE3;&#x7801;&#x9700;&#x8981;&#x5C01;&#x88C5;:&#x9700;&#x8981;&#x5C01;&#x88C5;&#x7684;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x5BF9;&#x7A97;&#x4F53;&#x914D;&#x7F6E;&#x7684;&#x4EE3;&#x7801;</li>
+<li>&#x5229;&#x7528;&#x7C7B;&#x7684;&#x7EE7;&#x627F;&#x7279;&#x6027;</li>
+<li>&#x8C03;&#x7528;&#x7236;&#x7C7B;Qwidget&#x7684;&#x6784;&#x9020;&#x65B9;&#x6CD5;<code>super().__init__()</code></li>
+<li>&#x8C03;&#x7528;&#x81EA;&#x5DF1;&#x7684;&#x6784;&#x9020;&#x65B9;&#x6CD5;</li>
+</ul>
+<h3 id="&#x7528;&#x7C7B;&#x7684;&#x65B9;&#x5F0F;&#x53BB;&#x5B9E;&#x73B0;&#x7A7A;&#x7684;&#x7A97;&#x53E3;&#x7684;&#x4EE3;&#x7801;">&#x7528;&#x7C7B;&#x7684;&#x65B9;&#x5F0F;&#x53BB;&#x5B9E;&#x73B0;&#x7A7A;&#x7684;&#x7A97;&#x53E3;&#x7684;&#x4EE3;&#x7801;</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> sys
+
+<span class="hljs-keyword">from</span> PyQt5.QtWidgets <span class="hljs-keyword">import</span> QWidget,QApplication
+
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyClass</span><span class="hljs-params">(QWidget)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+        super().__init__()
+        self.initUI()
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">initUI</span><span class="hljs-params">(self)</span>:</span>
+        self.setWindowTitle(<span class="hljs-string">&quot;&#x5218;&#x91D1;&#x7389;&#x7F16;&#x7A0B;&quot;</span>)
+        self.setGeometry(<span class="hljs-number">30</span>,<span class="hljs-number">40</span>,<span class="hljs-number">300</span>,<span class="hljs-number">200</span>)
+        self.show()
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&apos;__main__&apos;</span>:
+    app = QApplication(sys.argv)
+    c = MyClass()
+    app.exec_()
+</code></pre>
+<h3 id="gui&#x4F4D;&#x7F6E;&#x5927;&#x5C0F;&#x51FD;&#x6570;setgeometry">GUI&#x4F4D;&#x7F6E;&#x5927;&#x5C0F;&#x51FD;&#x6570;setGeometry</h3>
+<ul>
+<li>&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x76F8;&#x5F53;&#x4E8E;resize&#x51FD;&#x6570;&#x548C;remove&#x51FD;&#x6570;&#x529F;&#x80FD;&#x7684;&#x5408;&#x4F53;</li>
+<li>&#x51FD;&#x6570;&#x4F7F;&#x7528;&#x683C;&#x5F0F;:
+  &#x63A7;&#x4EF6;&#x5BF9;&#x8C61;.setGeometry(X&#x8F74;,Y&#x8F74;,&#x5BBD;&#x5EA6;,&#x9AD8;&#x5EA6;)</li>
+</ul>
+<h3 id="&#x4FE1;&#x53F7;">&#x4FE1;&#x53F7;</h3>
+<ul>
+<li>&#x7A97;&#x4F53;&#x4E0A;&#x7684;&#x4FE1;&#x53F7;&#x88AB;app.exec_()&#x6B7B;&#x5FAA;&#x73AF;&#x76D1;&#x542C;&#x7740;.</li>
+<li>&#x4FE1;&#x53F7;&#x81F3;&#x5C11;&#x5728;QT&#x4E2D;&#x9488;&#x5BF9;&#x67D0;&#x4E2A;&#x53D1;&#x751F;&#x7684;&#x65F6;&#x95F4;&#x7684;&#x8BF4;&#x6CD5;</li>
+<li>&#x69FD;&#x662F;QT&#x4E2D;&#x53D1;&#x751F;&#x7684;&#x5177;&#x4F53;&#x7684;&#x67D0;&#x4E2A;&#x65F6;&#x95F4;,&#x5C31;&#x662F;&#x69FD;</li>
+<li>&#x7A97;&#x4F53;&#x4E0A;&#x7684;&#x5BF9;GUI&#x754C;&#x9762;&#x64CD;&#x4F5C;&#x884C;&#x4E3A;&#x90FD;&#x662F;&#x88AB;&#x76D1;&#x542C;&#x7740;&#x7684;</li>
+<li>GUI&#x662F;&#x88AB;&#x4E8B;&#x4EF6;&#x9A71;&#x52A8;&#x7684;</li>
+</ul>
+<h3 id="&#x4FE1;&#x53F7;&#x69FD;&#x7684;&#x7B80;&#x5355;&#x4F7F;&#x7528;">&#x4FE1;&#x53F7;&#x69FD;&#x7684;&#x7B80;&#x5355;&#x4F7F;&#x7528;</h3>
+<ul>
+<li>&#x683C;&#x5F0F;:&#x4FE1;&#x53F7;&#x6E90;.&#x4FE1;&#x53F7;.connect(&#x69FD;)</li>
+<li>&#x683C;&#x5F0F;&#x89E3;&#x91CA;:&#x4FE1;&#x53F7;&#x6E90;(&#x6309;&#x94AE;)&#x4FE1;&#x53F7;(clicked).connet(&#x67D0;&#x4E2A;&#x4E8B;&#x4EF6;&#x65B9;&#x6CD5;)</li>
+<li>&#x6CE8;&#x610F;:&#x5728;&#x7ED1;&#x5B9A;&#x4FE1;&#x53F7;&#x69FD;&#x7684;&#x8FC7;&#x7A0B;&#x6C47;&#x603B;,&#x6211;&#x4EEC;&#x7684;&#x69FD;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x4E0D;&#x52A0;&#x62EC;&#x53F7;&#x7684;,&#x4F20;&#x9012;&#x7684;&#x662F;&#x65B9;&#x6CD5;&#x7684;&#x5F15;&#x7528;&#x672C;&#x8EAB;
+&#x8BF4;&#x767D;&#x4E86;,&#x6211;&#x8981;&#x7684;&#x662F;&#x51FD;&#x6570;,&#x800C;&#x4E0D;&#x662F;&#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;,&#x8FD9;&#x91CC;&#x5982;&#x679C;&#x60F3;&#x8981;&#x52A0;&#x4E0A;&#x53C2;&#x6570;,&#x5C31;&#x7528;lambda &#x5427;!</li>
+</ul>
+<h3 id="&#x52A0;&#x5165;&#x4E86;&#x6309;&#x94AE;&#x7684;&#x70B9;&#x51FB;&#x5173;&#x95ED;&#x65F6;&#x95F4;&#x7684;&#x4EE3;&#x7801;">&#x52A0;&#x5165;&#x4E86;&#x6309;&#x94AE;&#x7684;&#x70B9;&#x51FB;&#x5173;&#x95ED;&#x65F6;&#x95F4;&#x7684;&#x4EE3;&#x7801;</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> sys
+
+<span class="hljs-keyword">from</span> PyQt5.QtWidgets <span class="hljs-keyword">import</span> QWidget, QApplication, QPushButton
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyClass</span><span class="hljs-params">(QWidget)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+        super().__init__()
+        self.initUI()
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">initUI</span><span class="hljs-params">(self)</span>:</span>
+        self.setWindowTitle(<span class="hljs-string">&quot;&#x5218;&#x91D1;&#x7389;&#x7F16;&#x7A0B;&quot;</span>)
+        self.setGeometry(<span class="hljs-number">30</span>,<span class="hljs-number">40</span>,<span class="hljs-number">300</span>,<span class="hljs-number">200</span>)
+        btn = QPushButton(<span class="hljs-string">&quot;&#x5173;&#x95ED;&quot;</span>,self)
+        btn.move(<span class="hljs-number">5</span>,<span class="hljs-number">6</span>)
+        <span class="hljs-comment"># &#x5C06;&#x4FE1;&#x53F7;&#x53D1;&#x9001;&#x5230;&#x4E00;&#x4E2A;&#x69FD;</span>
+        <span class="hljs-comment"># &#x8BBE;&#x7F6E;&#x6309;&#x94AE;&#x7684;&#x70B9;&#x51FB;&#x540E;&#x5173;&#x95ED;&#x7A97;&#x4F53;&#x7684;&#x65F6;&#x95F4;</span>
+        btn.clicked.connect(self.close)
+        self.show()
+
+app = QApplication(sys.argv)
+c = MyClass()
+app.exec_()
+</code></pre>
+<h3 id="&#x603B;&#x7ED3;&#x5F3A;&#x8C03;">&#x603B;&#x7ED3;&#x5F3A;&#x8C03;</h3>
+<ol>
+<li>&#x638C;&#x63E1;&#x7C7B;&#x7684;&#x7EE7;&#x627F;QWidget&#x7684;&#x57FA;&#x672C;&#x601D;&#x60F3;</li>
+<li>&#x638C;&#x63E1;&#x7C7B;&#x7684;&#x529F;&#x80FD;&#x5C01;&#x88C5;</li>
+<li>&#x638C;&#x63E1;setGeometry&#x51FD;&#x6570;</li>
+<li>&#x638C;&#x63E1;&#x7B80;&#x5355;&#x7684;&#x4FE1;&#x53F7;&#x69FD;&#x7684;&#x4F7F;&#x7528;</li>
+</ol>
+<h1 id="pyqt5&#x7684;&#x7B2C;&#x4E03;&#x8BFE;-pyqt5&#x6D88;&#x606F;&#x76D2;&#x5B50;qmessagebox">PyQt5&#x7684;&#x7B2C;&#x4E03;&#x8BFE;-PyQt5&#x6D88;&#x606F;&#x76D2;&#x5B50;QMessageBox</h1>
+<h3 id="&#x77E5;&#x8BC6;&#x56DE;&#x987E;">&#x77E5;&#x8BC6;&#x56DE;&#x987E;</h3>
+<ul>
+<li>&#x4F7F;&#x7528;&#x7C7B;&#x8FDB;&#x884C;pyqt5&#x7684;GUI&#x5F00;&#x53D1;&#x5C01;&#x88C5;</li>
+<li>&#x4F7F;&#x7528;setGeometry&#x54C8;&#x6570;:&#x5927;&#x5C0F;,&#x4F4D;&#x7F6E;</li>
+<li>&#x638C;&#x63E1;&#x7C7B;&#x7684;&#x7EE7;&#x627F;&#x4E0E;&#x5185;&#x90E8;&#x5C4C;&#x7528;</li>
+</ul>
+<h3 id="&#x6D88;&#x606F;&#x76D2;&#x5B50;">&#x6D88;&#x606F;&#x76D2;&#x5B50;</h3>
+<ul>
+<li>&#x4F7F;&#x7528;&#x7C7B;&#x5E93;QMessageBox</li>
+<li>&#x4E0D;&#x540C;&#x7684;&#x56FE;&#x6807;&#x7684;&#x6D88;&#x606F;&#x7C7B;&#x522B;:</li>
+<li>&#x5E26;&#x6709;&#x56FE;&#x6807;&#x7684;&#x6D88;&#x606F;&#x76D2;&#x5B50;setGeometry,&#x56FE;&#x6807;&#x53EF;&#x4EE5;&#x662F;&#x95EE;&#x53F7;question,&#x4FE1;&#x606F;information</li>
+</ul>
+<p>-&#x6CE8;&#x610F;:&#x4F7F;&#x7528;&#x6D88;&#x606F;&#x76D2;&#x5B50;&#x540E;,&#x6700;&#x540E;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6309;&#x94AE;&#x7C7B;&#x578B;&#x7684;&#x7ED3;&#x679C;,&#x6700;&#x540E;&#x8FD9;&#x4E2A;&#x7ED3;&#x679C;&#x662F;&#x6211;&#x4EEC;&#x4EBA;&#x673A;&#x4EA4;&#x4E92;&#x7684;&#x7ED3;&#x679C;</p>
+<p>&#x70B9;&#x51FB;&#x6309;&#x94AE;&#x51FA;&#x73B0;&#x6D88;&#x606F;&#x9009;&#x62E9;&#x6846;,&#x5904;&#x7406;&#x6D88;&#x606F;&#x9009;&#x62E9;&#x6846;&#x7684;&#x7ED3;&#x679C;
+&#x57FA;&#x7840;&#x7C7B;&#x5C01;&#x88C5;&#x7684;&#x4EE3;&#x7801;</p>
+<h3 id="&#x91CD;&#x5199;&#x5173;&#x95ED;&#x4E8B;&#x4EF6;-&#x601D;&#x8DEF;">&#x91CD;&#x5199;&#x5173;&#x95ED;&#x4E8B;&#x4EF6;-&#x601D;&#x8DEF;</h3>
+<ul>
+<li>&#x5F53;&#x70B9;&#x51FB;&#x5173;&#x95ED;&#x6309;&#x94AE;&#x7684;&#x65F6;&#x5019;,&#x6267;&#x884C;&#x7684;&#x662F;&#x7A97;&#x4F53;&#x7684;&#x5173;&#x95ED;,&#x800C;&#x7A97;&#x4F53;&#x7684;&#x5173;&#x95ED;,&#x7B49;&#x540C;&#x4E8E;&#x70B9;&#x51FB;&#x7A97;&#x53E3;&#x7684;&#x53F3;&#x4E0A;&#x89D2;&#x7684;&#x6309;&#x94AE;&#x7684;&#x6548;&#x679C;.&#x8FD9;&#x4E2A;&#x6548;&#x679C;&#x662F;QWidget&#x57FA;&#x7C7B;&#x6240;&#x5B9E;&#x73B0;&#x7684;</li>
+</ul>
+<p>-&#x63D0;&#x95EE;:&#x6211;&#x4E48;&#x8BE5;&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x6211;&#x4EEC;&#x81EA;&#x5DF1;&#x9700;&#x8981;&#x7684;&#x5173;&#x95ED;&#x65F6;&#x5019;&#x7684;&#x6548;&#x679C;&#x5462;?</p>
+<ul>
+<li><p>&#x91CD;&#x5199;&#x7236;&#x7C7B;&#x65B9;&#x6CD5;</p>
+</li>
+<li><p>&#x91CD;&#x65B0;&#x5199;&#x5173;&#x95ED;&#x4E8B;&#x4EF6;</p>
+<h3 id="qmessagebox&#x4F7F;&#x7528;&#x683C;&#x5F0F;">QMessageBox&#x4F7F;&#x7528;&#x683C;&#x5F0F;</h3>
+<p>&#x4F7F;&#x7528;&#x683C;&#x5F0F;:
+QMessageBox.question(self,&quot;&#x63D0;&#x793A;title&quot;,&quot;&#x6D88;&#x606F;&#x5185;&#x5BB9;&quot;,&quot;&#x9ED8;&#x8BA4;&#x9009;&#x4E2D;&#x503C;&quot;)</p>
+</li>
+</ul>
+<h3 id="&#x5982;&#x4F55;&#x963B;&#x6B62;&#x4E8B;&#x4EF6;&#x7684;&#x5173;&#x95ED;">&#x5982;&#x4F55;&#x963B;&#x6B62;&#x4E8B;&#x4EF6;&#x7684;&#x5173;&#x95ED;</h3>
+<ul>
+<li>&#x5229;&#x7528;&#x4F20;&#x8FC7;&#x6765;&#x7684;&#x65F6;&#x95F4;&#x5BF9;&#x8C61;</li>
+<li>&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x8F93;&#x51FA;&#x5F62;&#x5F0F;,&#x770B;&#x5230;&#x65F6;&#x95F4;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;,&#x731C;&#x6D4B;&#x5230;&#x5177;&#x4F53;&#x7684;&#x65B9;&#x6CD5;<pre><code class="lang-python">Event.accept()<span class="hljs-comment">#&#x540C;&#x610F;&#x5173;&#x95ED;</span>
+Event.ignore()<span class="hljs-comment">#&#x5FFD;&#x7565;&#x64CD;&#x4F5C;</span>
+</code></pre>
+</li>
+</ul>
+<h3 id="&#x603B;&#x7ED3;&#x5F3A;&#x8C03;">&#x603B;&#x7ED3;&#x5F3A;&#x8C03;</h3>
+<ul>
+<li>&#x638C;&#x63E1;&#x7684;&#x7C7B;&#x7684;&#x5C01;&#x88C5;&#x57FA;&#x672C;&#x4EE3;&#x7801;</li>
+</ul>
+<h1 id="pyqt5&#x7684;&#x7B2C;&#x516B;&#x8BFE;-pyqt5&#x7A97;&#x4F53;&#x5C45;&#x4E2D;&#x548C;&#x5E03;&#x5C40;">PyQt5&#x7684;&#x7B2C;&#x516B;&#x8BFE;-PyQt5&#x7A97;&#x4F53;&#x5C45;&#x4E2D;&#x548C;&#x5E03;&#x5C40;</h1>
+<h3 id="&#x77E5;&#x8BC6;&#x56DE;&#x987E;">&#x77E5;&#x8BC6;&#x56DE;&#x987E;</h3>
+<ol>
+<li>&#x7A97;&#x4F53;&#x4E8B;&#x4EF6;&#x7684;&#x91CD;&#x5199;,closeEvent&#x4E8B;&#x4EF6;</li>
+<li>QMessageBox&#x6D88;&#x606F;&#x6846;&#x7684;&#x4F7F;&#x7528;</li>
+</ol>
+<h3 id="&#x7A97;&#x4F53;&#x7684;&#x5C45;&#x4E2D;">&#x7A97;&#x4F53;&#x7684;&#x5C45;&#x4E2D;</h3>
+<ul>
+<li>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;,&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6DFB;&#x52A0;&#x7A97;&#x4F53;&#x4F4D;&#x7F6E;&#x7684;&#x51FD;&#x6570;,</li>
+<li>&#x624B;&#x52A8;&#x8C03;&#x6574;&#x5230;&#x5C4F;&#x5E55;&#x5C45;&#x4E2D;&#x4F4D;&#x7F6E;</li>
+<li>&#x901A;&#x8FC7;desktop()&#x51FD;&#x6570;&#x963F;&#x91CC;&#x83B7;&#x53D6;&#x684C;&#x9762;&#x63A7;&#x4EF6;&#x7684;&#x5BF9;&#x8C61;QDesktopWidget</li>
+<li>&#x901A;&#x8FC7;&#x684C;&#x9762;&#x5BF9;&#x8C61;&#x7684;width()&#x51FD;&#x6570;&#x6765;&#x83B7;&#x53D6;&#x5C4F;&#x5E55;&#x7684;&#x5BBD;&#x5EA6;&#x7684;&#x5206;&#x8FA8;&#x7387;</li>
+</ul>
+<h3 id="&#x6807;&#x7B7E;&#x6587;&#x672C;&#x63A7;&#x4EF6;">&#x6807;&#x7B7E;&#x6587;&#x672C;&#x63A7;&#x4EF6;</h3>
+<ul>
+<li>&#x4F7F;&#x7528;&#x7C7B;&#x5E93;Qlabel</li>
+<li>&#x4F7F;&#x7528;&#x683C;&#x5F0F;:
+lbl = QLabel(&quot;&#x7F16;&#x7A0B;&#x521B;&#x9020;&#x57CE;&#x5E02;&quot;,self)</li>
+</ul>
+<h3 id="&#x7EDD;&#x5BF9;&#x5E03;&#x5C40;">&#x7EDD;&#x5BF9;&#x5E03;&#x5C40;</h3>
+<ul>
+<li>&#x76F4;&#x63A5;&#x901A;&#x8FC7;move()&#x5230;&#x67D0;&#x4E2A;&#x50CF;&#x7D20;&#x70B9;&#x7684;&#x4F4D;&#x7F6E;</li>
+<li>&#x7279;&#x70B9;:&#x975E;&#x5E38;&#x7075;&#x6D3B;</li>
+<li>&#x5F31;&#x70B9;:&#x4E0D;&#x80FD;&#x968F;&#x7740;&#x7A97;&#x4F53;&#x7684;&#x5927;&#x5C0F;&#x800C;&#x53D8;&#x5316;</li>
+</ul>
+<h3 id="&#x603B;&#x7ED3;&#x5F3A;&#x8C03;">&#x603B;&#x7ED3;&#x5F3A;&#x8C03;</h3>
+<ol>
+<li>&#x638C;&#x63E1;&#x7A97;&#x4F53;&#x5C45;&#x4E2D;&#x5E03;&#x5C40;&#x7684;&#x65B9;&#x6CD5;</li>
+<li>&#x638C;&#x63E1;&#x5229;&#x7528;&#x7EDD;&#x5BF9;&#x5E03;&#x5C40;&#x7684;&#x65B9;&#x6CD5;&#x4EE5;&#x53CA;&#x4F18;&#x52A3;&#x52BF;</li>
+</ol>
+<h1 id="pyqt5&#x7684;&#x7B2C;&#x4E45;&#x8BFE;-pyqt5&#x7A97;&#x4F53;&#x7EDD;&#x5BF9;&#x5E03;&#x5C40;&#x548C;&#x76F8;&#x5BF9;&#x5E03;&#x5C40;">PyQt5&#x7684;&#x7B2C;&#x4E45;&#x8BFE;-PyQt5&#x7A97;&#x4F53;&#x7EDD;&#x5BF9;&#x5E03;&#x5C40;&#x548C;&#x76F8;&#x5BF9;&#x5E03;&#x5C40;</h1>
+<h3 id="&#x77E5;&#x8BC6;&#x56DE;&#x987E;">&#x77E5;&#x8BC6;&#x56DE;&#x987E;</h3>
+<ol>
+<li><p>&#x70B9;&#x5230;&#x4E86;&#x7A97;&#x4F53;&#x7684;&#x7EDD;&#x5BF9;&#x5E03;&#x5C40;</p>
+</li>
+<li><p>&#x7A97;&#x4F53;&#x7684;&#x5C45;&#x4E2D;&#x65B9;&#x5F0F;:&#x6839;&#x636E;&#x5DF2;&#x77E5;&#x50CF;&#x7D20;,&#x8BA1;&#x7B97;&#x7A97;&#x4F53;&#x7684;&#x8D77;&#x70B9;&#x4F4D;&#x7F6E;</p>
+</li>
+<li><p>Desktop()&#x51FD;&#x6570;,&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x662F;&#x5728;QApplication&#x7C7B;&#x4E2D;&#x7684;.&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x679C;QDesktopWidget&#x5BF9;&#x8C61;</p>
+</li>
+<li><p>&#x6807;&#x7B7E;&#x63A7;&#x4EF6;&#x7684;&#x4F7F;&#x7528;</p>
+</li>
+<li><p>&#x60F3;&#x8981;&#x83B7;&#x53D6;&#x6C34;&#x5E73;&#x65B9;&#x5411;,&#x8C03;&#x7528;width&#x51FD;&#x6570;</p>
+</li>
+<li><p>&#x60F3;&#x8981;&#x83B7;&#x53D6;&#x5782;&#x76F4;&#x65B9;&#x5411;,&#x8C03;&#x7528;height&#x51FD;&#x6570;</p>
+</li>
+</ol>
+<h3 id="&#x76F8;&#x5BF9;&#x5E03;&#x5C40;">&#x76F8;&#x5BF9;&#x5E03;&#x5C40;</h3>
+<ol>
+<li><p>&#x7EDD;&#x5BF9;&#x5E03;&#x5C40;&#x662F;&#x76F4;&#x63A5;&#x5C06;&#x63A7;&#x4EF6;&#x8F7D;&#x5165;&#x5230;&#x7A97;&#x4F53;&#x7684;&#x4F4D;&#x7F6E;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;.&#x4E00;&#x822C;&#x76F4;&#x63A5;&#x91C7;&#x7528;move&#x51FD;&#x6570;&#x79FB;&#x52A8;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x4F4D;&#x7F6E;&#x540E;&#x4E0D;&#x53D8;.</p>
+</li>
+<li><p>&#x76F8;&#x5BF9;&#x5E03;&#x5C40;&#x662F;&#x8981;&#x5C06;&#x63A7;&#x4EF6;&#x653E;&#x5230;&#x76D2;&#x5E03;&#x5C40;&#x4E2D;.&#x4E00;&#x822C;&#x662F;&#x8FD8;&#x8981;&#x52A0;&#x5165;&#x4E00;&#x4E2A;&#x76D2;&#x5E03;&#x5C40;.QHboxlayout(&#x6C34;&#x5E73;&#x65B9;&#x5411;) QVboxlayout(&#x5782;&#x76F4;&#x65B9;&#x5411;),&#x7F51;&#x683C;&#x5E03;&#x5C40;(QgridBoxla yout)</p>
+</li>
+</ol>
+<h3 id="&#x7EDD;&#x5BF9;&#x5E03;&#x5C40;&#x4E0E;&#x76F8;&#x5BF9;&#x5E03;&#x5C40;&#x7684;&#x4E0D;&#x540C;">&#x7EDD;&#x5BF9;&#x5E03;&#x5C40;&#x4E0E;&#x76F8;&#x5BF9;&#x5E03;&#x5C40;&#x7684;&#x4E0D;&#x540C;</h3>
+<ul>
+<li>&#x5E03;&#x5C40;&#x4E2D;&#x7684;&#x63A7;&#x4EF6;&#x53EF;&#x4EE5;&#x968F;&#x7740;&#x7A97;&#x4F53;&#x7684;&#x53D8;&#x5316;&#x800C;&#x53D8;&#x5316;</li>
+<li>&#x5E03;&#x5C40;&#x4E2D;&#x7684;&#x63A7;&#x4EF6;&#x4E4B;&#x95F4;&#x7684;&#x8DDD;&#x79BB;&#x53EF;&#x4EE5;&#x6309;&#x7167;&#x6BD4;&#x4F8B;&#x6765;&#x8C03;&#x8282;</li>
+</ul>
+<h3 id="qhboxlayout">QHBoxLayout</h3>
+<ul>
+<li><p>&#x8981;&#x662F;&#x6C34;&#x5E73;&#x76D2;&#x5E03;&#x5C40;&#x4E0D;&#x597D;&#x8BB0;&#x7684;&#x8BDD;,&#x90A3;&#x4F60;&#x770B;&#x8FD9;&#x4E2A;H&#x662F;&#x4E0D;&#x662F;,&#x4E2D;&#x95F4;&#x6709;&#x4E00;&#x4E2A;&#x6A2A;&#x7684;</p>
+</li>
+<li><p>&#x628A;&#x6240;&#x6709;&#x7684;&#x63A7;&#x4EF6;&#x53EA;&#x80FD;&#x5728;&#x6C34;&#x5E73;&#x53CD;&#x5411;&#x4E0A;&#x9762;&#x6392;&#x5217;,&#x4F1A;&#x81EA;&#x52A8;&#x4E00;&#x4E2A;&#x4E00;&#x4E2A;&#x6392;&#x5217;&#x4E0D;&#x4F1A;&#x91CD;&#x53E0;,&#x8FD9;&#x4E2A;&#x662F;&#x4E00;&#x4E2A;&#x7279;&#x6027;</p>
+</li>
+<li>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;,&#x5782;&#x76F4;&#x5C45;&#x4E2D;&#x7684;</li>
+<li>&#x8BB0;&#x5FC6;&#x65B9;&#x5F0F;:&#x770B;H&#x4E2D;&#x7684;&#x6A2A;&#x7EBF;,&#x5C31;&#x8BA4;&#x4E3A;&#x662F;&#x6C34;&#x5E73;&#x5E03;&#x5C40;</li>
+</ul>
+<h3 id="&#x5782;&#x76F4;&#x5E03;&#x5C40;&#x7684;&#x601D;&#x60F3;">&#x5782;&#x76F4;&#x5E03;&#x5C40;&#x7684;&#x601D;&#x60F3;</h3>
+<ul>
+<li>&#x589E;&#x52A0;&#x5F39;&#x7C27;</li>
+</ul>
+<h3 id="&#x5F39;&#x7C27;">&#x5F39;&#x7C27;</h3>
+<ul>
+<li>&#x5C31;&#x662F;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x76D2;&#x5E03;&#x5C40;&#x7684;addstretcfh&#x65B9;&#x6CD5;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;</li>
+<li>Addstretch(&#x5F39;&#x7C27;&#x6BD4;&#x4F8B;)</li>
+<li>&#x5F39;&#x7C27;&#x6BD4;&#x4F8B;:&#x662F;&#x6307;&#x5728;&#x7A97;&#x4F53;&#x4E2D;&#x8FDB;&#x884C;&#x6307;&#x5B9A;&#x7684;&#x6BD4;&#x4F8B;&#x5206;&#x5272;.</li>
+</ul>
+<h3 id="&#x603B;&#x7ED3;&#x5F3A;&#x8C03;">&#x603B;&#x7ED3;&#x5F3A;&#x8C03;</h3>
+<ol>
+<li>&#x638C;&#x63E1;&#x76F8;&#x5BF9;&#x5E03;&#x5C40;&#x4E0E;&#x7EDD;&#x5BF9;&#x5E03;&#x5C40;&#x7684;&#x533A;&#x522B;</li>
+<li>&#x638C;&#x63E1;&#x517C;&#x987E;&#x5730;&#x5E03;&#x5C40;&#x4E2D;&#x7684;&#x6C34;&#x5E73;&#x76D2;&#x5E03;&#x5C40;&#x4E0E;&#x5782;&#x76F4;&#x76D2;&#x5E03;&#x5C40;</li>
+<li>&#x638C;&#x63E1;&#x548C;&#x5E03;&#x5C40;&#x4E2D;&#x7684;&#x63A7;&#x4EF6;&#x6BD4;&#x4F8B;&#x6392;&#x5E03;&#x5173;&#x7CFB;</li>
+</ol>
+<h1 id="pyqt5&#x7684;&#x7B2C;&#x65F6;&#x8BFE;-pyqt5&#x7F51;&#x683C;&#x5E03;&#x5C40;qgridlayout">PyQt5&#x7684;&#x7B2C;&#x65F6;&#x8BFE;-PyQt5&#x7F51;&#x683C;&#x5E03;&#x5C40;QGridLayout</h1>
+<h3 id="&#x77E5;&#x8BC6;&#x56DE;&#x987E;">&#x77E5;&#x8BC6;&#x56DE;&#x987E;</h3>
+<ul>
+<li>&#x638C;&#x63E1;QHboxLayout&#x6C34;&#x5E73;&#x76D2;&#x5B50;&#x5E03;&#x5C40;</li>
+<li>&#x638C;&#x63E1;QVboxLayout&#x5782;&#x76F4;&#x76D2;&#x5B50;&#x5E03;&#x5C40;</li>
+<li>&#x76D2;&#x5B50;&#x5E03;&#x5C40;,&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7ED3;&#x5408;&#x81EA;&#x5E26;&#x7684;&quot;&#x5F39;&#x7C27;&#x529F;&#x80FD;&quot;addstrach</li>
+<li>LineEdit&#x7C7B;&#x5E93;&#x4F5C;&#x7528;:&#x5355;&#x884C;&#x6587;&#x672C;&#x6846;</li>
+</ul>
+<h3 id="&#x7F51;&#x683C;&#x5E03;&#x5C40;">&#x7F51;&#x683C;&#x5E03;&#x5C40;</h3>
+<table>
+    <tr>
+        <td>0,0</td><td>0,1</td>
+    </tr>
+    <tr>
+        <td>1,0</td><td>1,1</td>
+    </tr>
+    <tr>
+        <td>2,0</td><td>2,1</td>
+    </tr>
+</table>
+
+<pre><code class="lang-python">&#x7F51;&#x683C;&#x5E03;&#x5C40;&#x7684;&#x4F7F;&#x7528;&#x65F6;&#x9700;&#x8981;&#x6CE8;&#x610F;:
+<span class="hljs-number">1.</span> &#x8981;&#x5BFC;&#x5165;&#x7C7B;&#x5E93;QGridLayout
+<span class="hljs-number">2.</span> &#x8BE5;&#x5E03;&#x5C40;&#x7684;&#x7D22;&#x5F15;&#x9ED8;&#x8BA4;&#x4ECE;<span class="hljs-number">0</span>&#x5F00;&#x59CB;
+<span class="hljs-number">3.</span> &#x4F7F;&#x7528;&#x7F51;&#x683C;&#x5E03;&#x5C40;&#x524D;&#x5148;&#x8981;&#x8FDB;&#x884C;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x5316;
+</code></pre>
+<h3 id="&#x7F51;&#x683C;&#x5E03;&#x5C40;&#x8BBE;&#x7F6E;">&#x7F51;&#x683C;&#x5E03;&#x5C40;&#x8BBE;&#x7F6E;</h3>
+<ul>
+<li><p>&#x6211;&#x4EEC;&#x5176;&#x5B9E;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7F51;&#x683C;&#x5E03;&#x5C40;&#x5B9E;&#x4F8B;&#x5316;&#x540E;&#x7684;&#x5BF9;&#x8C61;,&#x76F4;&#x63A5;&#x901A;&#x8FC7;&#x4EE3;&#x7801;&#x63D0;&#x793A;&#x7684;&#x65B9;&#x5F0F;&#x770B;&#x5230;&#x5F88;&#x591A;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5B9E;&#x73B0;&#x7684;&#x65B9;&#x6CD5;.</p>
+</li>
+<li><p>&#x6BD4;&#x5982;:&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x8BBE;&#x7F6E;&#x7F51;&#x683C;&#x4E4B;&#x95F4;&#x7684;&#x7A7A;&#x95F4;&#x8DDD;&#x79BB;,&#x6211;&#x4EEC;&#x5462;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;setSpacing&#x6765;&#x8BBE;&#x7F6E;,</p>
+</li>
+<li><p>&#x4E3E;&#x4F8B;:Grid.setSpacing(&#x7A7A;&#x95F4;&#x7684;&#x50CF;&#x7D20;&#x503C;)</p>
+</li>
+<li><p>&#x6211;&#x4EEC;&#x8981;&#x5B66;&#x4F1A;&#x4E3E;&#x4E00;&#x53CD;&#x4E09;,&#x901A;&#x8FC7;set&#x7684;&#x65B9;&#x5F0F;&#x8BBE;&#x7F6E;&#x5176;&#x4ED6;&#x529F;&#x80FD;</p>
+</li>
+</ul>
+<h3 id="&#x591A;&#x884C;&#x6587;&#x672C;&#x6846;&#x7684;">&#x591A;&#x884C;&#x6587;&#x672C;&#x6846;&#x7684;</h3>
+<ul>
+<li>&#x4F7F;&#x7528;QTextEdit&#x8FD9;&#x4E2A;&#x7C7B;&#x5E93;</li>
+<li>&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x7C7B;&#x4F3C;&#x4E8E;&#x76F4;&#x63A5;&#x5BF9;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x5316;</li>
+</ul>
+<h3 id="&#x603B;&#x7ED3;&#x5F3A;&#x8C03;">&#x603B;&#x7ED3;&#x5F3A;&#x8C03;</h3>
+<ul>
+<li>&#x638C;&#x63E1;&#x7F51;&#x683C;&#x5E03;&#x5C40;&#x7684;&#x601D;&#x60F3;,QGridLayout</li>
+<li>&#x638C;&#x63E1;&#x65B0;&#x63A7;&#x4EF6;&#x591A;&#x884C;&#x6587;&#x672C;&#x6846;&#x7684;&#x4F7F;&#x7528;</li>
+<li>&#x6839;&#x636E;QTDesigner&#x6765;&#x4E86;&#x89E3;&#x65B0;&#x63A7;&#x4EF6;,&#x6216;&#x8005;&#x6839;&#x636E;pyqt5&#x4E2D;&#x63D0;&#x4F9B;&#x76EE;&#x5F55;&#x6765;&#x4E86;&#x89E3;&#x65B0;&#x63A7;&#x4EF6;</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="note1-5.html#PyQt5的第五课-pyqt5显示提示框" class="navigation navigation-prev " aria-label="Previous page: pyqt5显示提示框">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="note6-10.html#PyQt5的第七课-PyQt5消息盒子QMessageBox" class="navigation navigation-next " aria-label="Next page: PyQt5消息盒子QMessageBox">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"PyQt5类的封装","tags":"Python solution basis PyQt5","level":"1.2.6","depth":2,"next":{"title":"PyQt5消息盒子QMessageBox","level":"1.2.7","depth":2,"anchor":"#PyQt5的第七课-PyQt5消息盒子QMessageBox","path":"note/note6-10.md","ref":"./note/note6-10.md#PyQt5的第七课-PyQt5消息盒子QMessageBox","articles":[]},"previous":{"title":"pyqt5显示提示框","level":"1.2.5","depth":2,"anchor":"#PyQt5的第五课-pyqt5显示提示框","path":"note/note1-5.md","ref":"./note/note1-5.md#PyQt5的第五课-pyqt5显示提示框","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"note/note6-10.md","mtime":"2020-08-21T06:37:03.892Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-21T06:48:52.173Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
