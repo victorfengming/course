@@ -1,0 +1,612 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>es核心概念理解 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="08-elasticsearch-IK分词器插件.html" />
+    
+    
+    <link rel="prev" href="06-elasticsearch-kibana安装.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    base
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="01-elasticsearch-catlog.html">
+            
+                <a href="01-elasticsearch-catlog.html">
+            
+                    
+                    catlog
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="02-elasticsearch-聊DougCutting.html">
+            
+                <a href="02-elasticsearch-聊DougCutting.html">
+            
+                    
+                    聊DougCutting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="03-elasticsearch-概述.html">
+            
+                <a href="03-elasticsearch-概述.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="04-elasticsearch-和solr对比.html">
+            
+                <a href="04-elasticsearch-和solr对比.html">
+            
+                    
+                    和solr对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="05-elasticsearch-安装和head插件.html">
+            
+                <a href="05-elasticsearch-安装和head插件.html">
+            
+                    
+                    安装和head插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="06-elasticsearch-kibana安装.html">
+            
+                <a href="06-elasticsearch-kibana安装.html">
+            
+                    
+                    kibana安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.7" data-path="07-elasticsearch-es核心概念理解.html">
+            
+                <a href="07-elasticsearch-es核心概念理解.html">
+            
+                    
+                    es核心概念理解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="08-elasticsearch-IK分词器插件.html">
+            
+                <a href="08-elasticsearch-IK分词器插件.html">
+            
+                    
+                    IK分词器插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="09-elasticsearch-Rest风格.html">
+            
+                <a href="09-elasticsearch-Rest风格.html">
+            
+                    
+                    Rest风格
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="10-elasticsearch-文档基本操作.html">
+            
+                <a href="10-elasticsearch-文档基本操作.html">
+            
+                    
+                    文档基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="11_花式查询详解.html">
+            
+                <a href="11_花式查询详解.html">
+            
+                    
+                    花式查询详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="12_SpringBoot集成ES详解.html">
+            
+                <a href="12_SpringBoot集成ES详解.html">
+            
+                    
+                    SpringBoot集成ES详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="13_关于索引的API操作详解.html">
+            
+                <a href="13_关于索引的API操作详解.html">
+            
+                    
+                    关于索引的API操作详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="14_关于文档的API操作详解.html">
+            
+                <a href="14_关于文档的API操作详解.html">
+            
+                    
+                    关于文档的API操作详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="15_京东搜索_项目搭建.html">
+            
+                <a href="15_京东搜索_项目搭建.html">
+            
+                    
+                    京东搜索_项目搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="16_京东搜索_爬取数据.html">
+            
+                <a href="16_京东搜索_爬取数据.html">
+            
+                    
+                    京东搜索_爬取数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="17_京东搜索_业务编写.html">
+            
+                <a href="17_京东搜索_业务编写.html">
+            
+                    
+                    京东搜索_业务编写
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="18_京东搜索_前后端交互.html">
+            
+                <a href="18_京东搜索_前后端交互.html">
+            
+                    
+                    京东搜索_前后端交互
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.19" data-path="19_京东搜索_关键字高亮实现.html">
+            
+                <a href="19_京东搜索_关键字高亮实现.html">
+            
+                    
+                    京东搜索_关键字高亮实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.20" data-path="20_狂神聊ES小结.html">
+            
+                <a href="20_狂神聊ES小结.html">
+            
+                    
+                    狂神聊ES小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >es核心概念理解</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="es&#x6838;&#x5FC3;&#x6982;&#x5FF5;&#x7406;&#x89E3;">ES&#x6838;&#x5FC3;&#x6982;&#x5FF5;&#x7406;&#x89E3;</h1>
+<p>&#x6982;&#x8FF0;</p>
+<p>&#x5728;&#x524D;&#x9762;&#x7684;&#x5B66;&#x4E60;&#x4E2D;,&#x6211;&#x4EEC;&#x638C;&#x63E1;&#x4E86;es&#x662F;&#x4EC0;&#x4E48;,&#x540C;&#x65F6;&#x4E5F;&#x628A;es&#x7684;&#x670D;&#x52A1;&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x542F;&#x52A8;,&#x90A3;&#x4E48;es&#x662F;&#x5982;&#x4F55;&#x53BB;&#x5B58;&#x50A8;&#x6570;&#x636E;,&#x6570;&#x636E;&#x7ED3;&#x6784;&#x662F;&#x4EC0;&#x4E48;,&#x53C8;&#x662F;&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x641C;&#x7D22;&#x7684;&#x5462;?&#x6211;&#x4EEC;&#x5148;&#x6765;&#x804A;&#x804A;Elasticsearch&#x7684;&#x76F8;&#x5173;&#x6982;&#x5FF5;&#x5427;!</p>
+<p><strong>&#x96C6;&#x7FA4;,&#x8282;&#x70B9;,&#x7D22;&#x5F15;,&#x7C7B;&#x578B;,&#x6587;&#x6863;,&#x5206;&#x7247;,&#x6620;&#x5C04;</strong>&#x662F;&#x4EC0;&#x4E48;</p>
+<pre><code class="lang-java">elasticsearch&#x662F;&#x9762;&#x5411;&#x6587;&#x6863;&#x7684;,&#x5173;&#x7CFB;&#x884C;&#x6570;&#x636E;&#x5E93;&#x548C;elasticsearch&#x5BA2;&#x89C2;&#x7684;&#x5BF9;&#x6BD4;! &#x4E00;&#x5207;&#x90FD;&#x662F;json
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>RelationalDB</th>
+<th>Elasticsearch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x6570;&#x636E;&#x5E93;(database)</td>
+<td>&#x7D22;&#x5F15;(indices)</td>
+</tr>
+<tr>
+<td>&#x8868;(tables)</td>
+<td>types</td>
+</tr>
+<tr>
+<td>&#x884C;(rows)</td>
+<td>documents</td>
+</tr>
+<tr>
+<td>&#x5B57;&#x6BB5;(columns)</td>
+<td>fields</td>
+</tr>
+</tbody>
+</table>
+<p>&#x9762;&#x5411;&#x6587;&#x6863; &#x9762;&#x5411;&#x6587;&#x6863; &#x9762;&#x5411;&#x6587;&#x6863; ~~~~</p>
+<p>elasticsearch(&#x96C6;&#x7FA4;)&#x4E2D;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x591A;&#x4E2A;&#x7D22;&#x5F15;(&#x6570;&#x636E;&#x5E93;),&#x6BCF;&#x4E2A;&#x7D22;&#x5F15;&#x4E2D;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x591A;&#x4E2A;&#x7C7B;&#x578B;(&#x8868;),&#x6BCF;&#x4E2A;&#x7C7B;&#x578B;&#x5148;&#x53C8;&#x5305;&#x542B;&#x591A;&#x4E2A;&#x6587;&#x6863;(&#x884C;),&#x6BCF;&#x4E2A;&#x6587;&#x6863;&#x4E2D;&#x53C8;&#x5305;&#x542B;&#x591A;&#x4E2A;&#x5B57;&#x6BB5;(&#x5217;).</p>
+<h2 id="&#x7269;&#x7406;&#x8BBE;&#x8BA1;">&#x7269;&#x7406;&#x8BBE;&#x8BA1;</h2>
+<p>elasticsearch&#x5728;&#x540E;&#x53F0;&#x5427;&#x6BCF;&#x4E2A;<strong>&#x7D22;&#x5F15;&#x5212;&#x5206;&#x6210;&#x591A;&#x4E2A;&#x5206;&#x7247;</strong>,&#x6BCF;&#x4E2A;&#x5206;&#x7247;&#x53EF;&#x4EE5;&#x5728;&#x96C6;&#x7FA4;&#x4E2D;&#x7684;&#x4E0D;&#x540C;&#x670D;&#x52A1;&#x5668;&#x95F4;&#x8FC1;&#x79FB;</p>
+<p>  <img src="07-elasticsearch-es%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5%E7%90%86%E8%A7%A3.assets/1596629957996.png" alt="1596629957996"></p>
+<h2 id="&#x903B;&#x8F91;&#x8BBE;&#x8BA1;">&#x903B;&#x8F91;&#x8BBE;&#x8BA1;</h2>
+<p>&#x4E00;&#x4E2A;&#x7D22;&#x5F15;&#x7C7B;&#x578B;&#x4E2D;,&#x5305;&#x542B;&#x591A;&#x4E2A;&#x6587;&#x6863;,&#x6BD4;&#x5982;&#x6240;&#x6587;&#x6863;1,&#x6587;&#x6863;2.&#x5F53;&#x6211;&#x4EEC;&#x7D22;&#x5F15;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#x65F6;,&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8FD9;&#x6837;&#x7684;&#x4E00;&#x5404;&#x987A;&#x5E8F;&#x627E;&#x5230;&#x5B83;:&#x7D22;&#x5F15;&gt;&#x7C7B;&#x578B;</p>
+<p><code>&gt;</code>&#x6587;&#x6863;id,&#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x7EC4;&#x5408;&#x6211;&#x4EEC;&#x5C31;&#x80FD;&#x7D22;&#x5F15;&#x5230;&#x67D0;&#x4E2A;&#x5177;&#x4F53;&#x7684;&#x6587;&#x6863;. &#x6CE8;&#x610F;: id&#x4E0D;&#x5FC5;&#x662F;&#x6574;&#x6570;,&#x5B9E;&#x9645;&#x4E0A;&#x4ED6;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;.</p>
+<pre><code>&#x6587;&#x6863;
+</code></pre><table>
+<thead>
+<tr>
+<th>user</th>
+<th>name</th>
+<th>age</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>zhasna</td>
+<td>18</td>
+</tr>
+<tr>
+<td>2</td>
+<td>kaugshen</td>
+<td>23</td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img src="07-elasticsearch-es%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5%E7%90%86%E8%A7%A3.assets/1597974219649.png" alt="1597974219649"></p>
+<p>&#x4E4B;&#x524D;&#x8BF4;elasticsearch&#x662F;&#x9762;&#x5411;&#x6587;&#x6863;&#x7684;,name&#x5C31;&#x4E5F;&#x4E3A;&#x8FD9;&#x7D22;&#x5F15;&#x548C;&#x641C;&#x7D22;&#x6570;&#x636E;&#x7684;&#x6700;&#x5C0F;&#x5355;&#x4F4D;&#x662F;&#x6587;&#x6863;,elasticsearch&#x4E2D;,&#x6587;&#x6863;&#x6709;&#x51E0;&#x4E2A;&#x91CD;&#x8981;&#x5C5E;&#x6027;:</p>
+<ul>
+<li><p>&#x81EA;&#x6211;&#x5305;&#x542B;,&#x4E00;&#x7BC7;&#x6587;&#x6863;&#x540C;&#x65F6;&#x5305;&#x542B;&#x5B57;&#x6BB5;&#x548C;&#x5BF9;&#x5E94;&#x503C;,&#x4E5F;&#x5C31;&#x662F;&#x540C;&#x65F6;&#x5305;&#x542B;key:value!</p>
+</li>
+<li><p>&#x53EF;&#x4EE5;&#x662F;&#x5C42;&#x6B21;&#x578B;&#x7684;,&#x4E00;&#x4E2A;&#x6587;&#x6863;&#x4E2D;&#x5305;&#x542B;&#x6587;&#x6863;,&#x590D;&#x6742;&#x7684;&#x903B;&#x8F91;&#x5B9E;&#x4F53;&#x5C31;&#x662F;&#x8FD9;&#x4E48;&#x6765;&#x7684;!</p>
+</li>
+<li><p>&#x7075;&#x6D3B;&#x7684;&#x7ED3;&#x6784;,&#x6587;&#x6863;&#x4E0D;&#x4F9D;&#x8D56;&#x9884;&#x5148;&#x5B9A;&#x4E49;&#x7684;&#x6A21;&#x5F0F;,&#x6211;&#x4EEC;&#x77E5;&#x9053;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x4E2D;,&#x8981;&#x63D0;&#x524D;&#x5B9A;&#x4E49;&#x5B57;&#x6BB5;&#x624D;&#x80FD;&#x4F7F;&#x7528;,&#x5728;elasticsearch&#x4E2D;,&#x5BF9;&#x4E8E;&#x5B57;&#x6BB5;&#x662F;&#x975E;&#x5E38;&#x7075;&#x6D3B;&#x7684;,&#x6709;&#x65F6;&#x5019;,&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5FFD;&#x7565;&#x8BE5;&#x5B57;&#x6BB5;,&#x6216;&#x8005;&#x52A8;&#x6001;&#x7684;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5B57;&#x6BB5;.</p>
+<p>&#x5C3D;&#x7BA1;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x968F;&#x610F;&#x7684;&#x65B0;&#x589E;&#x6216;&#x8005;&#x5FFD;&#x7565;&#x67D0;&#x4E2A;&#x5B57;&#x6BB5;,&#x4F46;&#x662F;,&#x6BCF;&#x4E2A;&#x5B57;&#x6BB5;&#x7684;&#x7C7B;&#x578B;&#x975E;&#x5E38;&#x91CD;&#x8981;,&#x6BD4;&#x5982;&#x4E00;&#x4E2A;&#x5E74;&#x9F84;&#x5B57;&#x6BB5;&#x7C7B;&#x578B;,&#x53EF;&#x4EE5;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x6574;&#x578B;.&#x56E0;&#x4E3A;elasticsearch&#x4F1A;&#x4FDD;&#x5B58;&#x5B57;&#x6BB5;&#x548C;&#x7C7B;&#x578B;&#x4E4B;&#x95F4;&#x7684;&#x6620;&#x5C04;&#x53CA;&#x5176;&#x4ED6;&#x7684;&#x8BBE;&#x7F6E;.&#x8FD9;&#x79CD;&#x6620;&#x5C04;&#x5177;&#x4F53;&#x5230;&#x6BCF;&#x4E2A;&#x6620;&#x5C04;&#x7684;&#x6BCF;&#x79CD;&#x7C7B;&#x578B;,&#x8FD9;&#x4E5F;&#x662F;&#x4E3A;&#x4EC0;&#x4E48;&#x5728;elasticsearch&#x4E2D;,&#x7C7B;&#x578B;&#x6709;&#x65F6;&#x5019;&#x4E5F;&#x79F0;&#x4E3A;&#x6620;&#x5C04;&#x7C7B;&#x578B;.</p>
+</li>
+</ul>
+<pre><code>&#x7C7B;&#x578B;
+</code></pre><p>  <img src="07-elasticsearch-es%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5%E7%90%86%E8%A7%A3.assets/1596630612189.png" alt="1596630612189"></p>
+<p>&#x7C7B;&#x578B;&#x662F;&#x6587;&#x6863;&#x7684;&#x903B;&#x8F91;&#x5BB9;&#x5668;,&#x5C31;&#x50CF;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x4E00;&#x6837;,&#x8868;&#x683C;&#x662F;&#x884C;&#x7684;&#x5BB9;&#x5668;.&#x7C7B;&#x578B;&#x4E2D;&#x5BF9;&#x4E8E;&#x5B57;&#x6BB5;&#x7684;&#x5B9A;&#x4E49;&#x79F0;&#x4E3A;&#x6620;&#x5C04;,&#x6BD4;&#x5982;name&#x6620;&#x5C04;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;.&#x6211;&#x4EEC;&#x8BF4;&#x6587;&#x6863;&#x662F;&#x65E0;&#x6A21;&#x5F0F;&#x7684;,&#x4ED6;&#x4EEC;&#x4E0D;&#x9700;&#x8981;&#x62E5;&#x6709;&#x6620;&#x5C04;&#x4E2D;&#x6240;&#x5B9A;&#x4E49;&#x7684;&#x6240;&#x6709;&#x5B57;&#x6BB5;,&#x6BD4;&#x5982;&#x65B0;&#x589E;&#x4E00;&#x4E2A;&#x5B57;&#x6BB5;,&#x90A3;&#x4E48;elasticsearch&#x662F;&#x600E;&#x4E48;&#x505A;&#x7684;&#x5462;?</p>
+<p>elasticsearch&#x4F1A;&#x81EA;&#x52A8;&#x7684;&#x5C06;&#x65B0;&#x7684;&#x5B57;&#x6BB5;&#x52A0;&#x5165;&#x6620;&#x5C04;,&#x4F46;&#x662F;&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&#x7684;&#x4E0D;&#x786E;&#x5B9A;&#x5B83;&#x662F;&#x4EC0;&#x4E48;&#x7C7B;&#x578B;,elasticsearch&#x5C31;&#x5F00;&#x59CB;&#x731C;,&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x503C;&#x662F;18,&#x90A3;&#x4E48;elasticsearch&#x4F1A;&#x8BA4;&#x4E3A;&#x4ED6;&#x662F;&#x6574;&#x578B;.&#x4F46;&#x662F;elasticsearch&#x4E5F;&#x53EF;&#x80FD;&#x731C;&#x4E0D;&#x5BF9;,&#x6240;&#x6709;&#x6700;&#x5B89;&#x5168;&#x7684;&#x65B9;&#x5F0F;&#x5C31;&#x662F;&#x63D0;&#x524D;&#x5B9A;&#x4E49;&#x597D;&#x6240;&#x9700;&#x8981;&#x7684;&#x6620;&#x5C04;,&#x8FD9;&#x70B9;&#x8DDF;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x6B8A;&#x9014;&#x540C;&#x5F52;&#x4E86;,&#x5148;&#x5B9A;&#x4E49;&#x597D;&#x5B57;&#x6BB5;,&#x7136;&#x540E;&#x5728;&#x4F7F;&#x7528;,&#x522B;&#x6574;&#x4EC0;&#x4E48;&#x5E7A;&#x86FE;&#x5B50;.</p>
+<pre><code>&#x7D22;&#x5F15;
+</code></pre><p><strong>&#x5C31;&#x662F;&#x6570;&#x636E;&#x5E93;</strong></p>
+<p>&#x7D22;&#x5F15;&#x662F;&#x6620;&#x5C04;&#x7C7B;&#x578B;&#x7684;&#x5BB9;&#x5668;,elasticsearch&#x4E2D;&#x7684;&#x7D22;&#x5F15;&#x662F;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x5927;&#x7684;&#x6587;&#x6863;&#x96C6;&#x5408;.&#x7D22;&#x5F15;&#x5B58;&#x50A8;&#x4E86;&#x6620;&#x5C04;&#x7C7B;&#x578B;&#x5B57;&#x6BB5;&#x548C;&#x5176;&#x4ED6;&#x8BBE;&#x7F6E;,&#x7136;&#x540E;&#x4ED6;&#x4EEC;&#x5457;&#x5B58;&#x50A8;&#x5230;&#x4E86;&#x5404;&#x4E2A;&#x5206;&#x7247;&#x4E0A;&#x4E86;.&#x6211;&#x4EEC;&#x6765;&#x7814;&#x7A76;&#x4E0B;&#x5206;&#x7247;&#x662F;&#x5982;&#x4F55;&#x5DE5;&#x4F5C;&#x7684;.</p>
+<h3 id="&#x7269;&#x7406;&#x8BBE;&#x8BA1;-&#x8282;&#x70B9;&#x548C;&#x5206;&#x7247;-&#x5982;&#x4F55;&#x5DE5;&#x4F5C;">&#x7269;&#x7406;&#x8BBE;&#x8BA1;: &#x8282;&#x70B9;&#x548C;&#x5206;&#x7247; &#x5982;&#x4F55;&#x5DE5;&#x4F5C;</h3>
+<p><img src="07-elasticsearch-es%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5%E7%90%86%E8%A7%A3.assets/1596630840364.png" alt="1596630840364"></p>
+<p>&#x4E00;&#x4E2A;&#x96C6;&#x7FA4;&#x81F3;&#x5C11;&#x8981;&#x6709;&#x4E00;&#x4E2A;&#x8282;&#x70B9;,&#x513F;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x5C31;&#x662F;&#x4E00;&#x4E2A;elasticsearch&#x8FDB;&#x7A0B;,&#x8282;&#x70B9;&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x4E2A;&#x7D22;&#x5F15;&#x9ED8;&#x8BA4;&#x7684;,&#x5982;&#x679C;&#x4F60;&#x521B;&#x5EFA;&#x7D22;&#x5F15;,&#x90A3;&#x4E48;&#x7D22;&#x5F15;&#x5C06;&#x4F1A;&#x6709;5&#x4E2A;&#x5206;&#x7247;(primary shard,&#x53C8;&#x79F0;&#x4E3B;&#x5206;&#x7247;) &#x6784;&#x6210;&#x7684;,&#x6BCF;&#x4E2A;&#x4E3B;&#x5206;&#x7247;&#x4F1A;&#x6709;&#x4E00;&#x4E2A;&#x526F;&#x672C;(replica shard,&#x53C8;&#x79F0;&#x590D;&#x5236;&#x5206;&#x7247;)</p>
+<p><img src="07-elasticsearch-es%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5%E7%90%86%E8%A7%A3.assets/1596630793639.png" alt="1596630793639"></p>
+<p><img src="07-elasticsearch-es%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5%E7%90%86%E8%A7%A3.assets/1596630870602.png" alt="1596630870602"></p>
+<pre><code>&#x5012;&#x6392;&#x7D22;&#x5F15;
+</code></pre><p>elasticsearch&#x4F7F;&#x7528;&#x7684;&#x662F;&#x4E00;&#x79CD;&#x79F0;&#x4E3A;&#x5012;&#x6392;&#x7D22;&#x5F15;&#x7684;&#x7ED3;&#x6784;,&#x91C7;&#x7528;Lucene&#x5012;&#x6392;&#x7D22;&#x5F15;&#x4F5C;&#x4E3A;&#x5E95;&#x5C42;.&#x8FD9;&#x79CD;&#x7ED3;&#x6784;&#x9002;&#x7528;&#x4E8E;&#x5FEB;&#x901F;&#x7684;&#x5168;&#x6587;&#x641C;&#x7D22;,&#x4E00;&#x4E2A;&#x7D22;&#x5F15;&#x7531;&#x6587;&#x6863;&#x4E2D;&#x6240;&#x6709;&#x4E0D;&#x91CD;&#x590D;&#x7684;&#x5217;&#x8868;&#x6784;&#x6210;,&#x5BF9;&#x4E8E;&#x6BCF;&#x4E00;&#x4E2A;&#x8BCD;,&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x5B83;&#x7684;&#x6587;&#x6863;&#x5217;&#x8868;.&#x4F8B;&#x5982;,&#x73B0;&#x5728;&#x6709;&#x4E24;&#x4E2A;&#x6587;&#x6863;,&#x6BCF;&#x4E2A;&#x6587;&#x6863;&#x5305;&#x542B;&#x5982;&#x4E0B;&#x5185;&#x5BB9;.</p>
+<p><img src="07-elasticsearch-es%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5%E7%90%86%E8%A7%A3.assets/1596631073200.png" alt="1596631073200"></p>
+<p>&#x4E3A;&#x4E86;&#x521B;&#x5EFA;&#x5012;&#x6392;&#x7D22;&#x5F15;,&#x6211;&#x4EEC;&#x9996;&#x5148;&#x8981;&#x5C06;&#x6BCF;&#x4E2A;&#x6587;&#x6863;&#x62C6;&#x5206;&#x6210;&#x72EC;&#x7ACB;&#x7684;&#x8BCD;(&#x6216;&#x79F0;&#x4E3A;&#x8BCD;&#x6761;&#x6216;&#x8005;tokens),&#x7136;&#x540E;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x6240;&#x6709;&#x4E0D;&#x91CD;&#x590D;&#x7684;&#x8BCD;&#x6761;&#x7684;&#x6392;&#x5E8F;&#x5217;&#x8868;,&#x7136;&#x540E;&#x5217;&#x51FA;&#x6BCF;&#x4E2A;&#x8BCD;&#x6761;&#x51FA;&#x73B0;&#x5728;&#x54EA;&#x4E2A;&#x6587;&#x6863;:</p>
+<p><img src="07-elasticsearch-es%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5%E7%90%86%E8%A7%A3.assets/1596631181270.png" alt="1596631181270"></p>
+<p>&#x4E24;&#x4E2A;&#x6587;&#x6863;&#x90FD;&#x5339;&#x914D;,&#x4F46;&#x662F;&#x7B2C;&#x4E00;&#x4E2A;&#x6587;&#x6863;&#x6BD4;&#x7B2C;&#x4E8C;&#x4E2A;&#x5339;&#x914D;&#x7A0B;&#x5EA6;&#x66F4;&#x9AD8;.&#x5982;&#x679C;&#x6CA1;&#x6709;&#x522B;&#x7684;&#x6761;&#x4EF6;,&#x73B0;&#x5728;,&#x8FD9;&#x4E24;&#x4E2A;&#x5305;&#x542B;&#x5173;&#x952E;&#x5B57;&#x7684;&#x6587;&#x6863;&#x90FD;&#x5C06;&#x8FD4;&#x56DE;.</p>
+<p>&#x518D;&#x6765;&#x770B;&#x4E00;&#x4E2A;&#x793A;&#x4F8B;,&#x6BD4;&#x5982;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x535A;&#x5BA2;&#x6807;&#x7B7E;&#x6765;&#x641C;&#x7D22;&#x535A;&#x5BA2;&#x6587;&#x7AE0;.&#x90A3;&#x4E48;&#x5012;&#x6392;&#x7D22;&#x5F15;&#x5217;&#x8868;&#x5C31;&#x662F;&#x8FD9;&#x6837;&#x7684;&#x4E00;&#x4E2A;&#x7ED3;&#x6784;:</p>
+<p><img src="07-elasticsearch-es%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5%E7%90%86%E8%A7%A3.assets/1596631425757.png" alt="1596631425757"></p>
+<p>&#x5982;&#x679C;&#x8981;&#x641C;&#x7D22;&#x542B;&#x6709;python&#x6807;&#x7B7E;&#x7684;&#x6587;&#x7AE0;,&#x90A3;&#x76F8;&#x5BF9;&#x67E5;&#x627E;&#x6240;&#x6709;&#x539F;&#x59CB;&#x6570;&#x636E;&#x800C;&#x8A00;,&#x67E5;&#x627E;&#x5012;&#x6392;&#x7D22;&#x5F15;&#x540E;&#x7684;&#x6570;&#x636E;&#x5C06;&#x4F1A;&#x5FEB;&#x7684;&#x591A;.&#x53EA;&#x9700;&#x8981;&#x67E5;&#x770B;&#x6807;&#x7B7E;&#x8FD9;&#x4E00;&#x680F;,&#x7136;&#x540E;&#x83B7;&#x53D6;&#x76F8;&#x5173;&#x6587;&#x7AE0;id&#x5373;&#x53EF;.</p>
+<p>elasticsearch&#x7684;&#x7D22;&#x5F15;&#x548C;lucene&#x7684;&#x7D22;&#x5F15;&#x5BF9;&#x6BD4;</p>
+<p><img src="07-elasticsearch-es%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5%E7%90%86%E8%A7%A3.assets/1596631608625.png" alt="1596631608625"></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="06-elasticsearch-kibana安装.html" class="navigation navigation-prev " aria-label="Previous page: kibana安装">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="08-elasticsearch-IK分词器插件.html" class="navigation navigation-next " aria-label="Next page: IK分词器插件">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"es核心概念理解","level":"1.2.7","depth":2,"next":{"title":"IK分词器插件","level":"1.2.8","depth":2,"path":"base/08-elasticsearch-IK分词器插件.md","ref":"base/08-elasticsearch-IK分词器插件.md","articles":[]},"previous":{"title":"kibana安装","level":"1.2.6","depth":2,"path":"base/06-elasticsearch-kibana安装.md","ref":"base/06-elasticsearch-kibana安装.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"base/07-elasticsearch-es核心概念理解.md","mtime":"2020-08-21T01:43:41.703Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-21T01:49:18.925Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
