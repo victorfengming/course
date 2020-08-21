@@ -80,3 +80,25 @@ Java => Go
 
 bytedance => Go
 
+
+
+- [P1 1、ElasticSearch课程简介](https://www.bilibili.com/video/BV17a4y1x7zq?p=1)
+- [P2 2、聊聊Lucene创始人](https://www.bilibili.com/video/BV17a4y1x7zq?p=2)
+- [P3 3、ElasticSearch概述](https://www.bilibili.com/video/BV17a4y1x7zq?p=3)
+- [P4 4、Solr和ES的对比及选型](https://www.bilibili.com/video/BV17a4y1x7zq?p=4)
+- [P5 5、ES安装及head插件安装](https://www.bilibili.com/video/BV17a4y1x7zq?p=5)
+- [P6 6、Kibana的安装](https://www.bilibili.com/video/BV17a4y1x7zq?p=6)
+- [P7 7、ES核心概念理解](https://www.bilibili.com/video/BV17a4y1x7zq?p=7)
+- [P8 8、IK分词器详解](https://www.bilibili.com/video/BV17a4y1x7zq?p=8)
+- [P9 9、Rest风格操作](https://www.bilibili.com/video/BV17a4y1x7zq?p=9)
+- [P10 10、基本操作回顾](https://www.bilibili.com/video/BV17a4y1x7zq?p=10)
+- [P11 11、花式查询详解](https://www.bilibili.com/video/BV17a4y1x7zq?p=11)
+- [P12 12、SpringBoot集成ES详解](https://www.bilibili.com/video/BV17a4y1x7zq?p=12)
+- [P13 13、关于索引的API操作详解](https://www.bilibili.com/video/BV17a4y1x7zq?p=13)
+- [P14 14、关于文档的API操作详解](https://www.bilibili.com/video/BV17a4y1x7zq?p=14)
+- [P15 15、京东搜索：项目搭建](https://www.bilibili.com/video/BV17a4y1x7zq?p=15)
+- [P16 16、京东搜索：爬取数据](https://www.bilibili.com/video/BV17a4y1x7zq?p=16)
+- [P17 17、京东搜索：业务编写](https://www.bilibili.com/video/BV17a4y1x7zq?p=17)
+- [P18 18、京东搜索：前后端交互](https://www.bilibili.com/video/BV17a4y1x7zq?p=18)
+- [P19 19、京东搜索：关键字高亮实现](https://www.bilibili.com/video/BV17a4y1x7zq?p=19)
+- [P20 20、狂神聊ES小结](https://www.bilibili.com/video/BV17a4y1x7zq?p=20)
