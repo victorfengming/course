@@ -262,11 +262,11 @@ $ docker run -d -p 8500:8500 -e CONSUL_BIND_INTERFACE='eth0' --name=consul_serve
 我们需要知道这个container的内部IP， 使用下面的命令我们吧这个IP放到了环境变量 JOIN_IP 里。
 ```go
 
-$ JOIN_IP="$(docker inspect -f '{{ .NetworkSettings.IPAddress }}' node1)"
+$ JOIN_IP="$(docker inspect -f '{ { .NetworkSettings.IPAddress } }' node1)"
 ```
 也可以直接查看container的IP，如下命令：
 ```go
-$docker inspect -f '{{ .NetworkSettings.IPAddress }}' node1
+$docker inspect -f '{ { .NetworkSettings.IPAddress } }' node1
 ```
 
 #### 3.1.3、启动第二个节点
