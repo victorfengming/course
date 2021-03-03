@@ -1,0 +1,1357 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>安装ES和Kibana · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ancre-navigation/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="05_安装IK分词器.html" />
+    
+    
+    <link rel="prev" href="03_倒排索引.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../img/avator.png.icon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../img/avator.png.icon.ico' type="image/x-icon">
+    
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    狂神聊elasticsearch
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../base/01-elasticsearch-catlog.html">
+            
+                <a href="../base/01-elasticsearch-catlog.html">
+            
+                    
+                    catlog
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../base/02-elasticsearch-聊DougCutting.html">
+            
+                <a href="../base/02-elasticsearch-聊DougCutting.html">
+            
+                    
+                    聊DougCutting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../base/03-elasticsearch-概述.html">
+            
+                <a href="../base/03-elasticsearch-概述.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../base/04-elasticsearch-和solr对比.html">
+            
+                <a href="../base/04-elasticsearch-和solr对比.html">
+            
+                    
+                    和solr对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../base/05-elasticsearch-安装和head插件.html">
+            
+                <a href="../base/05-elasticsearch-安装和head插件.html">
+            
+                    
+                    安装和head插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../base/06-elasticsearch-kibana安装.html">
+            
+                <a href="../base/06-elasticsearch-kibana安装.html">
+            
+                    
+                    kibana安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../base/07-elasticsearch-es核心概念理解.html">
+            
+                <a href="../base/07-elasticsearch-es核心概念理解.html">
+            
+                    
+                    es核心概念理解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../base/08-elasticsearch-IK分词器插件.html">
+            
+                <a href="../base/08-elasticsearch-IK分词器插件.html">
+            
+                    
+                    IK分词器插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../base/09-elasticsearch-Rest风格.html">
+            
+                <a href="../base/09-elasticsearch-Rest风格.html">
+            
+                    
+                    Rest风格
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../base/10-elasticsearch-文档基本操作.html">
+            
+                <a href="../base/10-elasticsearch-文档基本操作.html">
+            
+                    
+                    文档基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../base/11_花式查询详解.html">
+            
+                <a href="../base/11_花式查询详解.html">
+            
+                    
+                    花式查询详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../base/12_SpringBoot集成ES详解.html">
+            
+                <a href="../base/12_SpringBoot集成ES详解.html">
+            
+                    
+                    SpringBoot集成ES详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../base/13_关于索引的API操作详解.html">
+            
+                <a href="../base/13_关于索引的API操作详解.html">
+            
+                    
+                    关于索引的API操作详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="../base/14_关于文档的API操作详解.html">
+            
+                <a href="../base/14_关于文档的API操作详解.html">
+            
+                    
+                    关于文档的API操作详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="../base/15_京东搜索_项目搭建.html">
+            
+                <a href="../base/15_京东搜索_项目搭建.html">
+            
+                    
+                    京东搜索_项目搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="../base/16_京东搜索_爬取数据.html">
+            
+                <a href="../base/16_京东搜索_爬取数据.html">
+            
+                    
+                    京东搜索_爬取数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="../base/17_京东搜索_业务编写.html">
+            
+                <a href="../base/17_京东搜索_业务编写.html">
+            
+                    
+                    京东搜索_业务编写
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="../base/18_京东搜索_前后端交互.html">
+            
+                <a href="../base/18_京东搜索_前后端交互.html">
+            
+                    
+                    京东搜索_前后端交互
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.19" data-path="../base/19_京东搜索_关键字高亮实现.html">
+            
+                <a href="../base/19_京东搜索_关键字高亮实现.html">
+            
+                    
+                    京东搜索_关键字高亮实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.20" data-path="../base/20_狂神聊ES小结.html">
+            
+                <a href="../base/20_狂神聊ES小结.html">
+            
+                    
+                    狂神聊ES小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    qf_elasticsearch
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="01_ES介绍.html">
+            
+                <a href="01_ES介绍.html">
+            
+                    
+                    ES介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="02_ES和Solr的区别.html">
+            
+                <a href="02_ES和Solr的区别.html">
+            
+                    
+                    ES和Solr的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="03_倒排索引.html">
+            
+                <a href="03_倒排索引.html">
+            
+                    
+                    倒排索引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.4" data-path="04_安装ES和Kibana.html">
+            
+                <a href="04_安装ES和Kibana.html">
+            
+                    
+                    安装ES和Kibana
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="05_安装IK分词器.html">
+            
+                <a href="05_安装IK分词器.html">
+            
+                    
+                    安装IK分词器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="06_Redis的结构.html">
+            
+                <a href="06_Redis的结构.html">
+            
+                    
+                    Redis的结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="07_ES的RESTful语法.html">
+            
+                <a href="07_ES的RESTful语法.html">
+            
+                    
+                    ES的RESTful语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="08_ES的索引操作.html">
+            
+                <a href="08_ES的索引操作.html">
+            
+                    
+                    ES的索引操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="09_ES的Field类型.html">
+            
+                <a href="09_ES的Field类型.html">
+            
+                    
+                    ES的Field类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="10_ES创建索引指定数据结构.html">
+            
+                <a href="10_ES创建索引指定数据结构.html">
+            
+                    
+                    ES创建索引指定数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="11_ES的文档操作.html">
+            
+                <a href="11_ES的文档操作.html">
+            
+                    
+                    ES的文档操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" >
+            
+                <span>
+            
+                    
+                    Java操作
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.12.1" data-path="12_Java操作ES.html">
+            
+                <a href="12_Java操作ES.html">
+            
+                    
+                    Java操作ES
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12.2" data-path="13_Java代码操作索引_create.html">
+            
+                <a href="13_Java代码操作索引_create.html">
+            
+                    
+                    Java代码操作索引_create
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12.3" data-path="14_Java代码操作索引_exists_delete.html">
+            
+                <a href="14_Java代码操作索引_exists_delete.html">
+            
+                    
+                    Java代码操作索引_exists_delete
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12.4" data-path="15_Java操作文档_添加文档.html">
+            
+                <a href="15_Java操作文档_添加文档.html">
+            
+                    
+                    Java操作文档_添加文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12.5" data-path="16_Java操作文档_修改删除文档.html">
+            
+                <a href="16_Java操作文档_修改删除文档.html">
+            
+                    
+                    Java操作文档_修改删除文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12.6" data-path="17_Java操作文档_批量操作.html">
+            
+                <a href="17_Java操作文档_批量操作.html">
+            
+                    
+                    Java操作文档_批量操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="18_准备测试数据.html">
+            
+                <a href="18_准备测试数据.html">
+            
+                    
+                    准备测试数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" >
+            
+                <span>
+            
+                    
+                    ES查询
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.14.1" data-path="19_ES查询_term查询.html">
+            
+                <a href="19_ES查询_term查询.html">
+            
+                    
+                    ES查询_term查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14.2" data-path="20_ES查询_terms查询.html">
+            
+                <a href="20_ES查询_terms查询.html">
+            
+                    
+                    ES查询_terms查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14.3" data-path="21_ES查询_match_all查询.html">
+            
+                <a href="21_ES查询_match_all查询.html">
+            
+                    
+                    ES查询_match_all查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14.4" data-path="22_ES查询_布尔matchl查询.html">
+            
+                <a href="22_ES查询_布尔matchl查询.html">
+            
+                    
+                    ES查询_布尔matchl查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14.5" data-path="23_ES查询_multiMatch查询.html">
+            
+                <a href="23_ES查询_multiMatch查询.html">
+            
+                    
+                    ES查询_multiMatch查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14.6" data-path="24_ES查询_id_ids查询.html">
+            
+                <a href="24_ES查询_id_ids查询.html">
+            
+                    
+                    ES查询_id_ids查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14.7" data-path="25_ES查询_prefix查询.html">
+            
+                <a href="25_ES查询_prefix查询.html">
+            
+                    
+                    ES查询_prefix查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14.8" data-path="26_ES查询_fuzzy查询.html">
+            
+                <a href="26_ES查询_fuzzy查询.html">
+            
+                    
+                    ES查询_fuzzy查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14.9" data-path="27_ES查询_wildcard查询.html">
+            
+                <a href="27_ES查询_wildcard查询.html">
+            
+                    
+                    ES查询_wildcard查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14.10" data-path="28_ES查询_range查询.html">
+            
+                <a href="28_ES查询_range查询.html">
+            
+                    
+                    ES查询_range查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14.11" data-path="29_ES查询_regexp查询.html">
+            
+                <a href="29_ES查询_regexp查询.html">
+            
+                    
+                    ES查询_regexp查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" >
+            
+                <span>
+            
+                    
+                    ES深分页
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.15.1" data-path="30_ES深分页scroll介绍.html">
+            
+                <a href="30_ES深分页scroll介绍.html">
+            
+                    
+                    ES深分页scroll介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15.2" data-path="31_ES深分页RESTful实现.html">
+            
+                <a href="31_ES深分页RESTful实现.html">
+            
+                    
+                    ES深分页RESTful实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15.3" data-path="32_ES深分页scroll的Java实现.html">
+            
+                <a href="32_ES深分页scroll的Java实现.html">
+            
+                    
+                    ES深分页scroll的Java实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="33_ES的delete_by_query.html">
+            
+                <a href="33_ES的delete_by_query.html">
+            
+                    
+                    ES的delete_by_query
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.17" data-path="34_ES的复合查询_bool查询.html">
+            
+                <a href="34_ES的复合查询_bool查询.html">
+            
+                    
+                    ES的复合查询_bool查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.18" data-path="35_ES的复合查询_boostringl查询.html">
+            
+                <a href="35_ES的复合查询_boostringl查询.html">
+            
+                    
+                    ES的复合查询_boostringl查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.19" data-path="36_ES的filter查询.html">
+            
+                <a href="36_ES的filter查询.html">
+            
+                    
+                    ES的filter查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.20" data-path="37_ES的高亮查询.html">
+            
+                <a href="37_ES的高亮查询.html">
+            
+                    
+                    ES的高亮查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.21" >
+            
+                <span>
+            
+                    
+                    ES的聚合查询
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.21.1" data-path="38_ES的聚合查询-cardinality.html">
+            
+                <a href="38_ES的聚合查询-cardinality.html">
+            
+                    
+                    ES的聚合查询-cardinality
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.21.2" data-path="39_ES的聚合查询-range.html">
+            
+                <a href="39_ES的聚合查询-range.html">
+            
+                    
+                    ES的聚合查询-range
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.21.3" data-path="40_ES的聚合查询-extended_stats.html">
+            
+                <a href="40_ES的聚合查询-extended_stats.html">
+            
+                    
+                    ES的聚合查询-extended_stats
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.22" >
+            
+                <span>
+            
+                    
+                    ES的经纬度查询
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.22.1" data-path="41_ES的经纬度查询_介绍.html">
+            
+                <a href="41_ES的经纬度查询_介绍.html">
+            
+                    
+                    ES的经纬度查询_介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.22.2" data-path="42_ES的经纬度查询_准备测试数据.html">
+            
+                <a href="42_ES的经纬度查询_准备测试数据.html">
+            
+                    
+                    ES的经纬度查询_准备测试数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.22.3" data-path="43_ES的经纬度查询_RESTful实现.html">
+            
+                <a href="43_ES的经纬度查询_RESTful实现.html">
+            
+                    
+                    ES的经纬度查询_RESTful实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.22.4" data-path="44_ES的经纬度查询_Java实现.html">
+            
+                <a href="44_ES的经纬度查询_Java实现.html">
+            
+                    
+                    ES的经纬度查询_Java实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >安装ES和Kibana</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x4E8C;elasticsearch&#x5B89;&#x88C5;"><b></b>&#x4E8C;.Elasticsearch&#x5B89;&#x88C5;</a></li><ul><li><span class="title-icon "></span><a href="#21-es-&#x5B89;&#x88C5;kibana"><b></b>2.1 ES &#x5B89;&#x88C5;&amp;Kibana</a></li><ul><li><span class="title-icon "></span><a href="#&#x51C6;&#x5907;&#x90E8;&#x5206;"><b></b>&#x51C6;&#x5907;&#x90E8;&#x5206;</a></li><li><span class="title-icon "></span><a href="#&#x4E00;&#x8D77;&#x6765;&#x64CD;&#x4F5C;"><b></b>&#x4E00;&#x8D77;&#x6765;&#x64CD;&#x4F5C;</a></li></ul></ul></ul></div><a href="#&#x4E8C;elasticsearch&#x5B89;&#x88C5;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><p><a href="https://www.bilibili.com/video/BV1Qz411e7yx?p=5" target="_blank">https://www.bilibili.com/video/BV1Qz411e7yx?p=5</a></p>
+<h1 id="&#x4E8C;elasticsearch&#x5B89;&#x88C5;"><a name="&#x4E8C;elasticsearch&#x5B89;&#x88C5;" class="anchor-navigation-ex-anchor" href="#&#x4E8C;elasticsearch&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8C;.Elasticsearch&#x5B89;&#x88C5;</h1>
+<h2 id="21-es-&#x5B89;&#x88C5;kibana"><a name="21-es-&#x5B89;&#x88C5;kibana" class="anchor-navigation-ex-anchor" href="#21-es-&#x5B89;&#x88C5;kibana"><i class="fa fa-link" aria-hidden="true"></i></a>2.1 <code>ES</code> &#x5B89;&#x88C5;&amp;<code>Kibana</code></h2>
+<h3 id="&#x51C6;&#x5907;&#x90E8;&#x5206;"><a name="&#x51C6;&#x5907;&#x90E8;&#x5206;" class="anchor-navigation-ex-anchor" href="#&#x51C6;&#x5907;&#x90E8;&#x5206;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x51C6;&#x5907;&#x90E8;&#x5206;</h3>
+<p>&#x53EF;&#x4EE5;&#x5728;<a href="http://hub.docker.com/&#x91CC;&#x9762;&#x641C;&#x7D22;" target="_blank">http://hub.docker.com/&#x91CC;&#x9762;&#x641C;&#x7D22;</a></p>
+<p><code>elasticsearch</code>&#x548C;<code>kibana</code></p>
+<p>&#x54B1;&#x4EEC;&#x7EDF;&#x4E00;&#x4E00;&#x4E0B;&#x7248;&#x672C;</p>
+<p>&#x7528;<code>6.5.4</code>&#x7684;&#x7248;&#x672C;</p>
+<p><a href="04_%E5%AE%89%E8%A3%85ES%E5%92%8CKibana.assets/1598358080059.png" data-lightbox="91c99df7-2daf-4f36-8a68-c1588eb59e1b" data-title="1598358080059"><img src="04_%E5%AE%89%E8%A3%85ES%E5%92%8CKibana.assets/1598358080059.png" alt="1598358080059"></a></p>
+<p><a href="04_%E5%AE%89%E8%A3%85ES%E5%92%8CKibana.assets/1598358221749.png" data-lightbox="fb363628-defc-4ce2-bcdb-a77f209ea451" data-title="1598358221749"><img src="04_%E5%AE%89%E8%A3%85ES%E5%92%8CKibana.assets/1598358221749.png" alt="1598358221749"></a></p>
+<h3 id="&#x4E00;&#x8D77;&#x6765;&#x64CD;&#x4F5C;"><a name="&#x4E00;&#x8D77;&#x6765;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x4E00;&#x8D77;&#x6765;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E00;&#x8D77;&#x6765;&#x64CD;&#x4F5C;</h3>
+<p>&#x5728;&#x670D;&#x52A1;&#x5668;&#x7684;<code>/opt/</code>&#x8DEF;&#x5F84;&#x4E0B;&#x9762;&#x521B;&#x5EFA;<code>docker_es</code>&#x76EE;&#x5F55;</p>
+<p>&#x521B;&#x5EFA;&#x6587;&#x4EF6;<code>docker-compose.yml</code>,&#x5185;&#x5BB9;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-yml"><span class="hljs-attr">version:</span> <span class="hljs-string">&quot;3.1&quot;</span>
+<span class="hljs-attr">services:</span> 
+<span class="hljs-attr">  elasticsearch:</span> 
+<span class="hljs-attr">    image:</span> daocloud.io/library/elasticsearch:<span class="hljs-number">6.5</span><span class="hljs-number">.4</span>
+<span class="hljs-attr">    restart:</span> always
+<span class="hljs-attr">    container_name:</span> elasticsearch
+<span class="hljs-attr">    ports:</span> 
+<span class="hljs-bullet">      -</span> <span class="hljs-number">9200</span>:<span class="hljs-number">9200</span>
+<span class="hljs-attr">  kibana:</span> 
+<span class="hljs-attr">    image:</span> daocloud.io/library/kibana:<span class="hljs-number">6.5</span><span class="hljs-number">.4</span>
+<span class="hljs-attr">    restart:</span> always
+<span class="hljs-attr">    container_name:</span> kibana
+<span class="hljs-attr">    ports:</span> 
+<span class="hljs-bullet">      -</span> <span class="hljs-number">5601</span>:<span class="hljs-number">5601</span>
+<span class="hljs-attr">    environment:</span> 
+<span class="hljs-bullet">      -</span> elasticsearch_url=http://<span class="hljs-number">39.106</span><span class="hljs-number">.139</span><span class="hljs-number">.40</span>:<span class="hljs-number">9200</span>
+      <span class="hljs-comment"># &#x4E0A;&#x9762;&#x8981;&#x586B;&#x4E0A;&#x4F60;&#x81EA;&#x5DF1;&#x7684;&#x865A;&#x62DF;&#x673A;&#x7684;ip&#x548C;&#x7AEF;&#x53E3;</span>
+<span class="hljs-attr">    depends_on:</span> 
+<span class="hljs-bullet">      -</span> elasticsearch
+</code></pre>
+<blockquote>
+<p>&#x4E0A;&#x9762;&#x8981;&#x6CE8;&#x610F;yml&#x6587;&#x4EF6;&#x7684;&#x5192;&#x53F7;&#x540E;&#x9762;&#x7684;&#x7A7A;&#x683C;&#x8981;&#x6709;,&#x4E0D;&#x80FD;&#x6709;tab&#x7F29;&#x8FDB;,&#x90FD;&#x662F;&#x8E29;&#x8FC7;&#x7684;&#x5751;,&#x6C57;&#x6C34;&#x7ECF;&#x9A8C;</p>
+</blockquote>
+<p><a href="04_%E5%AE%89%E8%A3%85ES%E5%92%8CKibana.assets/1598359315223.png" data-lightbox="f4275047-fd96-4da0-a20f-182d1a8e7c94" data-title="1598359315223"><img src="04_%E5%AE%89%E8%A3%85ES%E5%92%8CKibana.assets/1598359315223.png" alt="1598359315223"></a></p>
+<p>&#x7136;&#x540E;&#x5728;&#x76EE;&#x5F55;&#x4E2D;&#x8FD0;&#x884C;&#x547D;&#x4EE4;</p>
+<pre><code class="lang-shell">docker-compose up -d
+</code></pre>
+<p>&#x8BD5;&#x4E00;&#x4E0B;</p>
+<pre><code class="lang-shell">[root@iz8g9301trfnpxz docker_es]# docker-compose up -d
+Creating network &quot;docker_es_default&quot; with the default driver
+Pulling elasticsearch (daocloud.io/library/elasticsearch:6.5.4)...
+6.5.4: Pulling from library/elasticsearch
+a02a4930cb5d: Already exists
+dd8a94cca3f9: Pull complete
+bd73f551dee4: Pull complete
+70de352c4efc: Pull complete
+0b5ae4c7310f: Pull complete
+489d9f8b18f1: Pull complete
+8ba96caf5951: Pull complete
+f1df04f27c5f: Pull complete
+Digest: sha256:5ca85697b6273f63196b44c32311c5a2d1135af9cfd919e5922e49c5045d04b8
+Status: Downloaded newer image for daocloud.io/library/elasticsearch:6.5.4
+Pulling kibana (daocloud.io/library/kibana:6.5.4)...
+6.5.4: Pulling from library/kibana
+a02a4930cb5d: Already exists
+39999a66d2b5: Pull complete
+4b2aeb7c30c9: Pull complete
+00616cdd3c09: Pull complete
+e98987d4a5ba: Pull complete
+5dfef65737c6: Pull complete
+a8d538f84d1a: Pull complete
+961861c10f7a: Pull complete
+5ccab4bdbc02: Pull complete
+Digest: sha256:632ecebdf89a36052e3eba281fdfa621a2afe5cd6b8061ad380ba3b3f0b25c01
+Status: Downloaded newer image for daocloud.io/library/kibana:6.5.4
+Creating elasticsearch ... done
+Creating kibana        ... done
+</code></pre>
+<p>&#x5982;&#x679C;&#x662F;&#x4E0A;&#x9762;&#x8FD9;&#x6837;&#x5C31;&#x6210;&#x4E86;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x4E0D;&#x653E;&#x5FC3;,&#x4F60;&#x53EF;&#x4EE5;&#x6267;&#x884C;</p>
+<pre><code class="lang-shell">docker-compose logs -f
+</code></pre>
+<p>&#x67E5;&#x770B;&#x4E00;&#x4E0B;</p>
+<p>&#x3002;&#x3002;&#x3002;</p>
+<p>&#x5361;&#x4E86;</p>
+<pre><code class="lang-shell">
+[root@iz8g9301trfnpxz docker_es]# 
+docker
+dockre
+s
+
+
+
+
+
+[root@iz8g9301trfnpxz docker_es]# 
+
+
+
+[root@iz8g9301trfnpxz docker_es]# 
+[root@iz8g9301trfnpxz docker_es]# docker
+dokxer
+dokxer
+</code></pre>
+<p>&#x7136;&#x540E;&#x54B1;&#x4EEC;&#x8BBF;&#x95EE;&#x4E00;&#x4E0B;<code>ES</code></p>
+<p><a href="04_%E5%AE%89%E8%A3%85ES%E5%92%8CKibana.assets/1598360012487.png" data-lightbox="fd66fda4-414b-4571-8781-d9abd5b41861" data-title="1598360012487"><img src="04_%E5%AE%89%E8%A3%85ES%E5%92%8CKibana.assets/1598360012487.png" alt="1598360012487"></a></p>
+<p>&#x51FA;&#x73B0;&#x8FD4;&#x56DE;&#x7684;<code>json</code>&#x5B57;&#x7B26;&#x4E32;,&#x8BF4;&#x660E;<code>ES</code>&#x542F;&#x52A8;&#x6210;&#x529F;</p>
+<hr>
+<p>&#x7136;&#x540E;&#x6211;&#x4EEC;&#x8BBF;&#x95EE;&#x4E00;&#x4E0B;<code>kibana</code></p>
+<p><a href="04_%E5%AE%89%E8%A3%85ES%E5%92%8CKibana.assets/1598360150480.png" data-lightbox="88dffd7e-462e-4796-aa0a-d5f9aa6572c7" data-title="1598360150480"><img src="04_%E5%AE%89%E8%A3%85ES%E5%92%8CKibana.assets/1598360150480.png" alt="1598360150480"></a></p>
+<p>&#x8FDB;&#x6765;&#x4E4B;&#x540E;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x7684;kibana&#x7684;&#x9762;&#x677F;</p>
+<p><a href="04_%E5%AE%89%E8%A3%85ES%E5%92%8CKibana.assets/1598360181039.png" data-lightbox="e41132be-ba64-44c3-be21-9e519a0b279c" data-title="1598360181039"><img src="04_%E5%AE%89%E8%A3%85ES%E5%92%8CKibana.assets/1598360181039.png" alt="1598360181039"></a></p>
+<p>&#x6211;&#x4EEC;&#x4E3B;&#x8981;&#x5173;&#x6CE8;<code>dev Tools</code></p>
+<p>&#x54B1;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x8FD9;&#x6837;&#x7684;<code>Dev Tools</code>&#x4E2D;,&#x53BB;&#x7F16;&#x5199;&#x57FA;&#x4E8E;<code>RESful</code>&#x98CE;&#x683C;&#x7684;<code>WEB</code>&#x63A5;&#x53E3;,&#x53BB;&#x8BBF;&#x95EE;<code>ES</code></p>
+<p><a href="04_%E5%AE%89%E8%A3%85ES%E5%92%8CKibana.assets/1598360322609.png" data-lightbox="0b449a8d-5b50-411b-bf7a-2d3353aecb7b" data-title="1598360322609"><img src="04_%E5%AE%89%E8%A3%85ES%E5%92%8CKibana.assets/1598360322609.png" alt="1598360322609"></a></p>
+<p>&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#x4E86;</p>
+<hr>
+<p>&#x8FD8;&#x6709;&#x4E00;&#x4E2A;&#x9700;&#x8981;&#x5173;&#x6CE8;&#x7684;&#x5C31;&#x662F;<code>Management</code></p>
+<p><a href="04_%E5%AE%89%E8%A3%85ES%E5%92%8CKibana.assets/1598360372124.png" data-lightbox="28fc5fcd-7f9a-45bd-81ce-b8dc409dd18e" data-title="1598360372124"><img src="04_%E5%AE%89%E8%A3%85ES%E5%92%8CKibana.assets/1598360372124.png" alt="1598360372124"></a></p>
+<p>&#x8FD9;&#x91CC;&#x9762;&#x80FD;&#x770B;&#x5230;&#x5173;&#x4E8E;ES&#x7684;&#x4FE1;&#x606F;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="03_倒排索引.html" class="navigation navigation-prev " aria-label="Previous page: 倒排索引">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="05_安装IK分词器.html" class="navigation navigation-next " aria-label="Next page: 安装IK分词器">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"安装ES和Kibana","level":"1.3.4","depth":2,"next":{"title":"安装IK分词器","level":"1.3.5","depth":2,"path":"qf_es/05_安装IK分词器.md","ref":"./qf_es/05_安装IK分词器.md","articles":[]},"previous":{"title":"倒排索引","level":"1.3.3","depth":2,"path":"qf_es/03_倒排索引.md","ref":"./qf_es/03_倒排索引.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hide-element","chapter-fold","expandable-chapters","favicon","lightbox","splitter","-lunr","pageview-count","ancre-navigation"],"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"./img/avator.png.icon.ico","bookmark":"./img/avator.png.icon.ico"},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"qf_es/04_安装ES和Kibana.md","mtime":"2020-08-26T00:54:41.283Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-03T03:06:05.435Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
