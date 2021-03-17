@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>NoSQL概述 · GitBook</title>
+        <title>Redis_benchmark性能测试 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -82,10 +82,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="03_当今企业架构分析.html" />
+    <link rel="next" href="11_Redis基础知识说明.html" />
     
     
-    <link rel="prev" href="01_课程内容简介.html" />
+    <link rel="prev" href="09_Linux下安装Redis.html" />
     
 
     
@@ -163,7 +163,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.2" data-path="02_NoSQL概述.html">
+        <li class="chapter " data-level="1.2.2" data-path="02_NoSQL概述.html">
             
                 <a href="02_NoSQL概述.html">
             
@@ -286,7 +286,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.4" data-path="10_Redis_benchmark性能测试.html">
+        <li class="chapter active" data-level="1.3.4" data-path="10_Redis_benchmark性能测试.html">
             
                 <a href="10_Redis_benchmark性能测试.html">
             
@@ -1244,7 +1244,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >NoSQL概述</a>
+        <a href=".." >Redis_benchmark性能测试</a>
     </h1>
 </div>
 
@@ -1259,25 +1259,21 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#nosql&#x6982;&#x8FF0;"><b></b># NoSQL&#x6982;&#x8FF0;</a></li><li><span class="title-icon "></span><a href="#&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x7528;nosql"><b></b>## &#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x7528;Nosql</a></li></ul></div><a href="#nosql&#x6982;&#x8FF0;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="nosql&#x6982;&#x8FF0;"><a name="nosql&#x6982;&#x8FF0;" class="anchor-navigation-ex-anchor" href="#nosql&#x6982;&#x8FF0;"><i class="fa fa-link" aria-hidden="true"></i></a># NoSQL&#x6982;&#x8FF0;</h1>
-<h1 id="&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x7528;nosql"><a name="&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x7528;nosql" class="anchor-navigation-ex-anchor" href="#&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x7528;nosql"><i class="fa fa-link" aria-hidden="true"></i></a>## &#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x7528;Nosql</h1>
-<pre><code>1. &#x5355;&#x673A;mysql&#x65F6;&#x4EE3;
-</code></pre><p><a href="02_NoSQL%E6%A6%82%E8%BF%B0.assets/1597131595575.png" data-lightbox="fb9c288a-6464-4483-8505-597495c9d0a6" data-title="1597131595575"><img src="02_NoSQL%E6%A6%82%E8%BF%B0.assets/1597131595575.png" alt="1597131595575"></a></p>
-<p>90&#x5E74;&#x4EE3;,2000,&#x6211;&#x4EEC;&#x662F;&#x4E0A;&#x4E2A;&#x4E16;&#x7EAA;&#x7684;&#x4EBA;,  &#x8FD9;&#x4E2A;&#x65F6;&#x4EE3;&#x7684;&#x8001;&#x4EBA; </p>
-<p>90&#x5E74;&#x4EE3;,&#x4E00;&#x4E2A;&#x57FA;&#x672C;&#x7684;&#x7F51;&#x7AD9;&#x8BBF;&#x95EE;&#x91CF;&#x4E00;&#x822C;&#x4E0D;&#x4F1A;&#x592A;&#x5927;,&#x5355;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#x5B8C;&#x5168;&#x8DB3;&#x591F;!</p>
-<p>&#x90A3;&#x4E2A;&#x65F6;&#x5019;,&#x66F4;&#x591A;&#x7684;&#x53BB;&#x4F7F;&#x7528;&#x9759;&#x6001;html~&#x670D;&#x52A1;&#x5668;&#x6839;&#x672C;&#x6CA1;&#x6709;&#x592A;&#x5927;&#x538B;&#x529B;!</p>
-<p>&#x601D;&#x8003;&#x4E00;&#x4E0B;,&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;:&#x6574;&#x4E2A;&#x7F51;&#x7AD9;&#x7684;&#x74F6;&#x9888;&#x662F;&#x4EC0;&#x4E48;?</p>
-<p>1, &#x6570;&#x636E;&#x91CF;&#x5982;&#x679C;&#x592A;&#x5927;,&#x4E00;&#x4E2A;&#x673A;&#x5668;&#x653E;&#x4E0D;&#x4E0B;</p>
-<p>2, &#x6570;&#x636E;&#x7D22;&#x5F15; 300&#x4E07;&#x5C31;&#x4E00;&#x5B9A;&#x8981;&#x5EFA;&#x7ACB;&#x7D22;&#x5F15;(B+Tree),&#x4E00;&#x4E2A;&#x673A;&#x5668;&#x5185;&#x5B58;&#x4E5F;&#x653E;&#x4E0D;&#x4E0B;</p>
-<p>3, &#x8BBF;&#x95EE;&#x91CF;(&#x8BFB;&#x5199;&#x6DF7;&#x5408;),&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#x627F;&#x53D7;&#x4E0D;&#x4E86;liao</p>
-<p>&#x53EA;&#x8981;&#x4F60;&#x5F00;&#x59CB;&#x51FA;&#x73B0;&#x4EE5;&#x4E0A;&#x4E09;&#x79CD;&#x60C5;&#x51B5;&#x4E4B;&#x4E00;,&#x90A3;&#x4E48;&#x4F60;&#x5C31;&#x5FC5;&#x987B;&#x8981;&#x664B;&#x7EA7;!</p>
-<pre><code class="lang-java"><span class="hljs-number">2</span>, Memcached(&#x7F13;&#x5B58;) + MySQL + &#x5782;&#x76F4;&#x62C6;&#x5206; + &#x8BFB;&#x5199;&#x5206;&#x79BB;
-</code></pre>
-<p>&#x7F51;&#x7AD9;80%&#x7684;&#x60C5;&#x51B5;&#x90FD;&#x662F;&#x5728;&#x8BFB;,&#x6BCF;&#x6B21;&#x90FD;&#x8981;&#x53BB;&#x67E5;&#x8BE2;&#x6570;&#x636E;&#x5E93;&#x7684;&#x8BDD;&#x5341;&#x5206;&#x9EBB;&#x70E6;,! &#x6240;&#x6709;&#x8BF4;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x51CF;&#x8F7B;&#x6570;&#x636E;&#x538B;&#x529B;,&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7F13;&#x5B58;&#x6765;&#x4FDD;&#x8BC1;&#x6548;&#x7387;!</p>
-<p>&#x53D1;&#x5C55;&#x8FC7;&#x7A0B;:&#x4F18;&#x5316;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x548C;&#x7D22;&#x5F15;--&gt;&#x6587;&#x4EF6;&#x7F13;&#x5B58;(IO)--&gt;Memcached(&#x5F53;&#x65F6;&#x6700;&#x70ED;&#x95E8;&#x7684;&#x6280;&#x672F;! )</p>
-<p>&#x4E0D;&#x7F3A;&#x4EBA;,&#x7F3A;&#x4EBA;&#x624D;!(&#x60F3;&#x4E0D;&#x901A;,&#x4E3A;&#x4EC0;&#x4E48;&#x5F88;&#x591A;&#x725B;&#x4EBA;&#x4E0D;&#x8FDB;&#x5927;&#x5382;)</p>
-<p>&#x4F60;&#x4EEC;&#x7684;&#x7ADE;&#x4E89;&#x7684;&#x5BF9;&#x624B;&#x5E76;&#x4E0D;&#x662F;&#x4EBA;&#x624D;,&#x800C;&#x662F;&#x90A3;&#x4E9B;&#x56FE;&#x5B89;&#x7A33;&#x53C8;&#x8E0F;&#x5B9E;(&#x8001;&#x5B9E;&#x4EBA;)</p>
-<p><a href="02_NoSQL%E6%A6%82%E8%BF%B0.assets/1597132605891.png" data-lightbox="e7232edd-d581-45db-83e5-339fbac8eda5" data-title="1597132605891"><img src="02_NoSQL%E6%A6%82%E8%BF%B0.assets/1597132605891.png" alt="1597132605891"></a></p>
+                                <html><head></head><body><h3 id="&#x6027;&#x80FD;&#x6D4B;&#x8BD5;"><a name="&#x6027;&#x80FD;&#x6D4B;&#x8BD5;" class="anchor-navigation-ex-anchor" href="#&#x6027;&#x80FD;&#x6D4B;&#x8BD5;"><i class="fa fa-link" aria-hidden="true"></i></a>#&#x6027;&#x80FD;&#x6D4B;&#x8BD5;</h3>
+<p>redis-benchmark &#x662F;&#x4E00;&#x4E2A;&#x538B;&#x529B;&#x6D4B;&#x8BD5;&#x5DE5;&#x5177;</p>
+<p>&#x5B98;&#x65B9;&#x81EA;&#x5E26;&#x7684;&#x6027;&#x80FD;&#x6D4B;&#x8BD5;&#x5DE5;&#x5177;</p>
+<p>redis-benchmark&#x547D;&#x4EE4;&#x91C7;&#x7EB3;&#x6570;</p>
+<h3 id="&#x83DC;&#x9E1F;&#x6559;&#x7A0B;"><a name="&#x83DC;&#x9E1F;&#x6559;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#&#x83DC;&#x9E1F;&#x6559;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x83DC;&#x9E1F;&#x6559;&#x7A0B;</h3>
+<p><a href="10_Redis_benchmark%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95.assets/1597193793816.png" data-lightbox="b78da54a-02f3-4d4c-b7fe-b462306bb6b4" data-title="1597193793816"><img src="10_Redis_benchmark%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95.assets/1597193793816.png" alt="1597193793816"></a></p>
+<p><a href="10_Redis_benchmark%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95.assets/1597193809673.png" data-lightbox="fedb3c87-d6b2-452f-beb9-41ceeb7c134c" data-title="1597193809673"><img src="10_Redis_benchmark%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95.assets/1597193809673.png" alt="1597193809673"></a></p>
+<p>&#x6211;&#x4EEC;&#x6765;&#x7B80;&#x5355;&#x6D4B;&#x8BD5;&#x4E00;&#x4E0B;</p>
+<blockquote>
+<p>&#x6D4B;&#x8BD5;:100&#x4E2A;&#x5E76;&#x53D1;&#x8FDE;&#x63A5;     100000&#x4E2A;&#x8BF7;&#x6C42;</p>
+<p>redis-benchmark -h localhost -p 6379 -c 100 -n 100000</p>
+</blockquote>
+<p><a href="10_Redis_benchmark%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95.assets/1597194193885.png" data-lightbox="768bd1a7-d788-4322-b06c-edf1d5788e9c" data-title="1597194193885"><img src="10_Redis_benchmark%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95.assets/1597194193885.png" alt="1597194193885"></a></p>
+<p>&#x5206;&#x6790;&#x7ED3;&#x679C;</p>
+<p><a href="10_Redis_benchmark%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95.assets/1597194143929.png" data-lightbox="5b622189-0d39-4459-88b1-c381b6228dcb" data-title="1597194143929"><img src="10_Redis_benchmark%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95.assets/1597194143929.png" alt="1597194143929"></a></p>
 </body></html>
                                 
                                 </section>
@@ -1305,12 +1301,12 @@
 
             
                 
-                <a href="01_课程内容简介.html" class="navigation navigation-prev " aria-label="Previous page: 课程内容简介">
+                <a href="09_Linux下安装Redis.html" class="navigation navigation-prev " aria-label="Previous page: Linux下安装Redis">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="03_当今企业架构分析.html" class="navigation navigation-next " aria-label="Next page: 当今企业架构分析">
+                <a href="11_Redis基础知识说明.html" class="navigation navigation-next " aria-label="Next page: Redis基础知识说明">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1321,7 +1317,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"NoSQL概述","level":"1.2.2","depth":2,"next":{"title":"当今企业架构分析","level":"1.2.3","depth":2,"path":"redis/03_当今企业架构分析.md","ref":"redis/03_当今企业架构分析.md","articles":[]},"previous":{"title":"课程内容简介","level":"1.2.1","depth":2,"path":"redis/01_课程内容简介.md","ref":"redis/01_课程内容简介.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hide-element","chapter-fold","expandable-chapters","favicon","lightbox","splitter","-lunr","pageview-count","ancre-navigation"],"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"./img/avator.png.icon.ico","bookmark":"./img/avator.png.icon.ico"},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"ancre-navigation":{"showLevel":true,"associatedWithSummary":true,"mode":"float","printLog":false,"multipleH1":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"redis/02_NoSQL概述.md","mtime":"2020-08-12T11:53:49.830Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-17T13:13:35.898Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Redis_benchmark性能测试","level":"1.3.4","depth":2,"next":{"title":"Redis基础知识说明","level":"1.3.5","depth":2,"path":"redis/11_Redis基础知识说明.md","ref":"redis/11_Redis基础知识说明.md","articles":[]},"previous":{"title":"Linux下安装Redis","level":"1.3.3","depth":2,"path":"redis/09_Linux下安装Redis.md","ref":"redis/09_Linux下安装Redis.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hide-element","chapter-fold","expandable-chapters","favicon","lightbox","splitter","-lunr","pageview-count","ancre-navigation"],"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"./img/avator.png.icon.ico","bookmark":"./img/avator.png.icon.ico"},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"ancre-navigation":{"showLevel":true,"associatedWithSummary":true,"mode":"float","printLog":false,"multipleH1":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"redis/10_Redis_benchmark性能测试.md","mtime":"2020-08-12T11:53:49.925Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-17T13:13:35.898Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
