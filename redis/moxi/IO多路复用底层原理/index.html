@@ -1,0 +1,1481 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>从底层了解IO多路复用模型 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ancre-navigation/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="./" />
+    
+    
+    <link rel="prev" href="../../Redisredis/13_String字符串详解.md" />
+    
+
+    
+        <link rel="shortcut icon" href='../../img/avator.png.icon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../img/avator.png.icon.ico' type="image/x-icon">
+    
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    NoSQL概述
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../redis/01_课程内容简介.html">
+            
+                <a href="../../redis/01_课程内容简介.html">
+            
+                    
+                    课程内容简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../redis/02_NoSQL概述.html">
+            
+                <a href="../../redis/02_NoSQL概述.html">
+            
+                    
+                    NoSQL概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../redis/03_当今企业架构分析.html">
+            
+                <a href="../../redis/03_当今企业架构分析.html">
+            
+                    
+                    当今企业架构分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../redis/04_什么是NoSQL.html">
+            
+                <a href="../../redis/04_什么是NoSQL.html">
+            
+                    
+                    什么是NoSQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../redis/05_阿里巴巴实践分析.html">
+            
+                <a href="../../redis/05_阿里巴巴实践分析.html">
+            
+                    
+                    阿里巴巴实践分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../redis/06_NoSQL的四大分类.html">
+            
+                <a href="../../redis/06_NoSQL的四大分类.html">
+            
+                    
+                    NoSQL的四大分类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Redis入门
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../Redisredis/07_Redis概述.md">
+            
+                <span>
+            
+                    
+                    Redis概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../Redisredis/08_window下安装Redis.md">
+            
+                <span>
+            
+                    
+                    window下安装Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../Redisredis/09_Linux下安装Redis.md">
+            
+                <span>
+            
+                    
+                    Linux下安装Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../Redisredis/10_Redis_benchmark性能测试.md">
+            
+                <span>
+            
+                    
+                    Redis_benchmark性能测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../Redisredis/11_Redis基础知识说明.md">
+            
+                <span>
+            
+                    
+                    Redis基础知识说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../../Redisredis/12_Redis_Key基础命令.md">
+            
+                <span>
+            
+                    
+                    Redis_Key基础命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../../Redisredis/13_String字符串详解.md">
+            
+                <span>
+            
+                    
+                    String字符串详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./#从底层了解io多路复用模型">
+            
+                    
+                    从底层了解IO多路复用模型
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="./">
+            
+                <a href="./#前言">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="./">
+            
+                <a href="./#bio">
+            
+                    
+                    BIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="./">
+            
+                <a href="./#nio">
+            
+                    
+                    NIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="./">
+            
+                <a href="./#多路复用">
+            
+                    
+                    多路复用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="./">
+            
+                <a href="./#同样使用epoll，redis是轮询，nginx是阻塞？">
+            
+                    
+                    同样使用epoll，Redis是轮询，Nginx是阻塞？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="./">
+            
+                <a href="./#零拷贝">
+            
+                    
+                    零拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Redis中的数据结构/">
+            
+                <a href="../Redis中的数据结构/#redis中的数据结构">
+            
+                    
+                    Redis中的数据结构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Redis中的数据结构/">
+            
+                <a href="../Redis中的数据结构/#前言">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Redis中的数据结构/">
+            
+                <a href="../Redis中的数据结构/#字符串">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../Redis中的数据结构/">
+            
+                <a href="../Redis中的数据结构/#哈希">
+            
+                    
+                    哈希
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../Redis中的数据结构/">
+            
+                <a href="../Redis中的数据结构/#列表">
+            
+                    
+                    列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../Redis中的数据结构/">
+            
+                <a href="../Redis中的数据结构/#集合">
+            
+                    
+                    集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../Redis中的数据结构/">
+            
+                <a href="../Redis中的数据结构/#有序集合">
+            
+                    
+                    有序集合
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.6.1" data-path="../Redis中的数据结构/">
+            
+                <a href="../Redis中的数据结构/#小结">
+            
+                    
+                    小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Redis中的跳跃表/">
+            
+                <a href="../Redis中的跳跃表/#redis中的跳跃表">
+            
+                    
+                    Redis中的跳跃表
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Redis中的跳跃表/">
+            
+                <a href="../Redis中的跳跃表/#前言">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Redis中的跳跃表/">
+            
+                <a href="../Redis中的跳跃表/#什么是跳跃表">
+            
+                    
+                    什么是跳跃表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Redis中的跳跃表/">
+            
+                <a href="../Redis中的跳跃表/#redis中的跳跃表_1">
+            
+                    
+                    Redis中的跳跃表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Redis中的跳跃表/">
+            
+                <a href="../Redis中的跳跃表/#redis中跳跃表的实现">
+            
+                    
+                    Redis中跳跃表的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../Redis中的跳跃表/">
+            
+                <a href="../Redis中的跳跃表/#本文重点">
+            
+                    
+                    本文重点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../Redis中的跳跃表/">
+            
+                <a href="../Redis中的跳跃表/#来源">
+            
+                    
+                    来源
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Redis实现分布式锁/">
+            
+                <a href="../Redis实现分布式锁/#redis实现分布式锁">
+            
+                    
+                    Redis实现分布式锁
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Redis实现分布式锁/">
+            
+                <a href="../Redis实现分布式锁/#前言">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../Redis实现分布式锁/">
+            
+                <a href="../Redis实现分布式锁/#分布式锁满足的条件">
+            
+                    
+                    分布式锁满足的条件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../Redis实现分布式锁/">
+            
+                <a href="../Redis实现分布式锁/#加锁代码">
+            
+                    
+                    加锁代码
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.3.1" data-path="../Redis实现分布式锁/">
+            
+                <a href="../Redis实现分布式锁/#正确示例">
+            
+                    
+                    正确示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3.2" data-path="../Redis实现分布式锁/">
+            
+                <a href="../Redis实现分布式锁/#错误示例-1">
+            
+                    
+                    错误示例-1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3.3" data-path="../Redis实现分布式锁/">
+            
+                <a href="../Redis实现分布式锁/#错误示例-2">
+            
+                    
+                    错误示例-2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../Redis实现分布式锁/">
+            
+                <a href="../Redis实现分布式锁/#解锁代码">
+            
+                    
+                    解锁代码
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.4.1" data-path="../Redis实现分布式锁/">
+            
+                <a href="../Redis实现分布式锁/#正确示例_1">
+            
+                    
+                    正确示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.2" data-path="../Redis实现分布式锁/">
+            
+                <a href="../Redis实现分布式锁/#错误示例1">
+            
+                    
+                    错误示例1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.3" data-path="../Redis实现分布式锁/">
+            
+                <a href="../Redis实现分布式锁/#错误示例2">
+            
+                    
+                    错误示例2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../Redis实现分布式锁/">
+            
+                <a href="../Redis实现分布式锁/#总结">
+            
+                    
+                    总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Redis缓存穿透-布隆过滤器/">
+            
+                <a href="../Redis缓存穿透-布隆过滤器/#redis缓存穿透-布隆过滤器">
+            
+                    
+                    Redis缓存穿透-布隆过滤器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../Redis缓存穿透-布隆过滤器/">
+            
+                <a href="../Redis缓存穿透-布隆过滤器/#缓存穿透">
+            
+                    
+                    缓存穿透
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../Redis缓存穿透-布隆过滤器/">
+            
+                <a href="../Redis缓存穿透-布隆过滤器/#简单的解决方法">
+            
+                    
+                    简单的解决方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../Redis缓存穿透-布隆过滤器/">
+            
+                <a href="../Redis缓存穿透-布隆过滤器/#布隆过滤器">
+            
+                    
+                    布隆过滤器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.3.1" data-path="../Redis缓存穿透-布隆过滤器/">
+            
+                <a href="../Redis缓存穿透-布隆过滤器/#什么是布隆过滤器？">
+            
+                    
+                    什么是布隆过滤器？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.2" data-path="../Redis缓存穿透-布隆过滤器/">
+            
+                <a href="../Redis缓存穿透-布隆过滤器/#原理">
+            
+                    
+                    原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.3" data-path="../Redis缓存穿透-布隆过滤器/">
+            
+                <a href="../Redis缓存穿透-布隆过滤器/#使用">
+            
+                    
+                    使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3.4" data-path="../Redis缓存穿透-布隆过滤器/">
+            
+                <a href="../Redis缓存穿透-布隆过滤器/#代码分析">
+            
+                    
+                    代码分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../Redis缓存穿透-布隆过滤器/">
+            
+                <a href="../Redis缓存穿透-布隆过滤器/#参考">
+            
+                    
+                    参考
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../大白话谈IO模型/">
+            
+                <a href="../大白话谈IO模型/#通俗理解多种io模型">
+            
+                    
+                    通俗理解多种IO模型
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../大白话谈IO模型/">
+            
+                <a href="../大白话谈IO模型/#前言">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../大白话谈IO模型/">
+            
+                <a href="../大白话谈IO模型/#多种io模型">
+            
+                    
+                    多种IO模型
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.2.1" data-path="../大白话谈IO模型/">
+            
+                <a href="../大白话谈IO模型/#阻塞io模型">
+            
+                    
+                    阻塞IO模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.2" data-path="../大白话谈IO模型/">
+            
+                <a href="../大白话谈IO模型/#非阻塞io模型">
+            
+                    
+                    非阻塞IO模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.3" data-path="../大白话谈IO模型/">
+            
+                <a href="../大白话谈IO模型/#io复用模型">
+            
+                    
+                    IO复用模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.4" data-path="../大白话谈IO模型/">
+            
+                <a href="../大白话谈IO模型/#信号驱动io模型">
+            
+                    
+                    信号驱动IO模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.5" data-path="../大白话谈IO模型/">
+            
+                <a href="../大白话谈IO模型/#异步io模型">
+            
+                    
+                    异步IO模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.6" data-path="../大白话谈IO模型/">
+            
+                <a href="../大白话谈IO模型/#总结">
+            
+                    
+                    总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../大白话谈IO模型/">
+            
+                <a href="../大白话谈IO模型/#linux操作系统中的基础概念">
+            
+                    
+                    Linux操作系统中的基础概念
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.3.1" data-path="../大白话谈IO模型/">
+            
+                <a href="../大白话谈IO模型/#用户空间内核空间">
+            
+                    
+                    用户空间/内核空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.2" data-path="../大白话谈IO模型/">
+            
+                <a href="../大白话谈IO模型/#进程切换">
+            
+                    
+                    进程切换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.3" data-path="../大白话谈IO模型/">
+            
+                <a href="../大白话谈IO模型/#进程阻塞">
+            
+                    
+                    进程阻塞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.4" data-path="../大白话谈IO模型/">
+            
+                <a href="../大白话谈IO模型/#文件描述符">
+            
+                    
+                    文件描述符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.5" data-path="../大白话谈IO模型/">
+            
+                <a href="../大白话谈IO模型/#缓存io">
+            
+                    
+                    缓存IO
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../大白话谈IO模型/">
+            
+                <a href="../大白话谈IO模型/#io多路复用">
+            
+                    
+                    IO多路复用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.4.1" data-path="../大白话谈IO模型/">
+            
+                <a href="../大白话谈IO模型/#select">
+            
+                    
+                    select
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4.2" data-path="../大白话谈IO模型/">
+            
+                <a href="../大白话谈IO模型/#poll">
+            
+                    
+                    Poll
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >从底层了解IO多路复用模型</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x4ECE;&#x5E95;&#x5C42;&#x4E86;&#x89E3;io&#x591A;&#x8DEF;&#x590D;&#x7528;&#x6A21;&#x578B;"><b></b>&#x4ECE;&#x5E95;&#x5C42;&#x4E86;&#x89E3;IO&#x591A;&#x8DEF;&#x590D;&#x7528;&#x6A21;&#x578B;</a></li><ul><li><span class="title-icon "></span><a href="#&#x524D;&#x8A00;"><b></b>&#x524D;&#x8A00;</a></li><li><span class="title-icon "></span><a href="#bio"><b></b>BIO</a></li><li><span class="title-icon "></span><a href="#nio"><b></b>NIO</a></li><li><span class="title-icon "></span><a href="#&#x591A;&#x8DEF;&#x590D;&#x7528;"><b></b>&#x591A;&#x8DEF;&#x590D;&#x7528;</a></li><li><span class="title-icon "></span><a href="#&#x540C;&#x6837;&#x4F7F;&#x7528;epoll&#xFF0C;redis&#x662F;&#x8F6E;&#x8BE2;&#xFF0C;nginx&#x662F;&#x963B;&#x585E;&#xFF1F;"><b></b>&#x540C;&#x6837;&#x4F7F;&#x7528;epoll&#xFF0C;Redis&#x662F;&#x8F6E;&#x8BE2;&#xFF0C;Nginx&#x662F;&#x963B;&#x585E;&#xFF1F;</a></li><li><span class="title-icon "></span><a href="#&#x96F6;&#x62F7;&#x8D1D;"><b></b>&#x96F6;&#x62F7;&#x8D1D;</a></li></ul></ul></div><a href="#&#x4ECE;&#x5E95;&#x5C42;&#x4E86;&#x89E3;io&#x591A;&#x8DEF;&#x590D;&#x7528;&#x6A21;&#x578B;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x4ECE;&#x5E95;&#x5C42;&#x4E86;&#x89E3;io&#x591A;&#x8DEF;&#x590D;&#x7528;&#x6A21;&#x578B;"><a name="&#x4ECE;&#x5E95;&#x5C42;&#x4E86;&#x89E3;io&#x591A;&#x8DEF;&#x590D;&#x7528;&#x6A21;&#x578B;" class="anchor-navigation-ex-anchor" href="#&#x4ECE;&#x5E95;&#x5C42;&#x4E86;&#x89E3;io&#x591A;&#x8DEF;&#x590D;&#x7528;&#x6A21;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4ECE;&#x5E95;&#x5C42;&#x4E86;&#x89E3;IO&#x591A;&#x8DEF;&#x590D;&#x7528;&#x6A21;&#x578B;</h1>
+<h2 id="&#x524D;&#x8A00;"><a name="&#x524D;&#x8A00;" class="anchor-navigation-ex-anchor" href="#&#x524D;&#x8A00;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x524D;&#x8A00;</h2>
+<p>&#x5F53;&#x6211;&#x4EEC;&#x53BB;&#x9762;&#x8BD5;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x95EE;&#x5230;&#x4E86; redis&#xFF0C;nginx&#xFF0C;netty&#x4ED6;&#x4EEC;&#x7684;&#x5E95;&#x5C42;&#x6A21;&#x578B;&#x5206;&#x522B;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;</p>
+<ul>
+<li>redis -&gt; epoll</li>
+<li>nginx-&gt; epoll</li>
+<li>netty-&gt; epoll?</li>
+</ul>
+<p>&#x9700;&#x8981;&#x4ECE;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x5C42;&#x9762;&#x4E0A;&#x6765;&#x8C08;</p>
+<h2 id="bio"><a name="bio" class="anchor-navigation-ex-anchor" href="#bio"><i class="fa fa-link" aria-hidden="true"></i></a>BIO</h2>
+<p>&#x5F53;&#x6211;&#x4EEC;&#x5F00;&#x673A;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9996;&#x5148;&#x88AB;&#x52A0;&#x8F7D;&#x8FDB;&#x5185;&#x5B58;&#x7684;&#x662F;&#x6211;&#x4EEC;&#x7684;Kernel&#xFF08;&#x5185;&#x6838;&#xFF09;&#xFF0C;&#x5185;&#x6838;&#x662F;&#x7528;&#x4E8E;&#x7BA1;&#x7406;&#x6211;&#x4EEC;&#x7684;&#x786C;&#x4EF6;&#x7684;&#xFF0C;&#x540C;&#x65F6;&#x5185;&#x6838;&#x8FD8;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;GDT&#x8868;&#xFF0C;&#x7136;&#x540E;&#x5212;&#x5206;&#x4E24;&#x4E2A;&#x7A7A;&#x95F4;&#xFF08;&#x7528;&#x6237;&#x7A7A;&#x95F4;&#x548C;&#x5185;&#x6838;&#x7A7A;&#x95F4;&#xFF09;&#xFF0C;&#x540C;&#x65F6;&#x7A7A;&#x95F4;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x662F;&#x5F00;&#x542F;&#x4E86;&#x4FDD;&#x62A4;&#x6A21;&#x5F0F;&#xFF0C;&#x65E0;&#x6CD5;&#x88AB;&#x4FEE;&#x6539;&#x7684;&#x3002;</p>
+<p>&#x540C;&#x65F6;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;CPU&#x7684;&#x6982;&#x5FF5;&#xFF0C;CPU&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x6307;&#x4EE4;&#x96C6;&#xFF0C;&#x5E76;&#x4E14;&#x6307;&#x4EE4;&#x96C6;&#x662F;&#x5206;&#x4E86;&#x51E0;&#x4E2A;&#x7EA7;&#x522B;&#x7684;&#xFF0C;&#x5206;&#x522B;&#x662F;&#x4ECE;0~3&#x7684;&#xFF0C;Kernel&#x5C5E;&#x4E8E;0&#x7EA7;&#x522B;&#x3002;APP&#x53EA;&#x80FD;&#x7528;&#x7EA7;&#x522B;&#x4E3A;3&#x7684;&#x6307;&#x4EE4;&#x96C6;&#x3002;</p>
+<p>&#x4ECE;&#x4E0A;&#x9762;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x77E5;&#x9053;&#xFF0C;&#x6211;&#x4EEC;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x662F;&#x65E0;&#x6CD5;&#x76F4;&#x63A5;&#x8BBF;&#x95EE;&#x6211;&#x4EEC;&#x7684;Kernel&#x7684;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x7A0B;&#x5E8F;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x8BBF;&#x95EE;&#x6211;&#x4EEC;&#x7684;&#x78C1;&#x76D8;&#xFF0C;&#x58F0;&#x5361;&#xFF0C;&#x7F51;&#x5361;&#x7B49;&#x8BBE;&#x5907;&#xFF0C;&#x53EA;&#x6709;&#x5185;&#x6838;&#x624D;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#xFF0C;&#x90A3;&#x6211;&#x4EEC;&#x600E;&#x4E48;&#x529E;&#xFF1F;</p>
+<p>&#x53EA;&#x6709;APP&#x901A;&#x8FC7;&#x8C03;&#x7528;Kernel&#x63D0;&#x4F9B;&#x7684; syscall&#xFF08;&#x7CFB;&#x7EDF;&#x8F6F;&#x4E2D;&#x65AD;&#x548C;&#x786C;&#x4E2D;&#x65AD;&#xFF09;&#x6765;&#x83B7;&#x53D6;&#x786C;&#x4EF6;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x3002;</p>
+<ul>
+<li>&#x8F6F;&#x4E2D;&#x65AD;</li>
+<li>&#x786C;&#x4E2D;&#x65AD;&#xFF1A;&#x786C;&#x4E2D;&#x65AD;&#x6307;&#x7684;&#x662F;&#x6211;&#x4EEC;&#x7684;&#x952E;&#x76D8;&#xFF0C;&#x6309;&#x4E0B;&#x4E00;&#x4E2A;&#x6309;&#x952E;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x4F1A;&#x89E6;&#x53D1;&#x6211;&#x4EEC;&#x7684;&#x786C;&#x4E2D;&#x65AD;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5185;&#x6838;&#x4F1A;&#x6709;&#x4E00;&#x4E2A;&#x4E2D;&#x65AD;&#x53F7;&#xFF0C;&#x7136;&#x540E;&#x5F97;&#x5230;&#x4E00;&#x4E2A;callback&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</li>
+</ul>
+<p>&#x8BF4;&#x5230;&#x8FD9;&#x91CC;&#xFF0C;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x4E3A;&#x4E86;&#x5F15;&#x51FA;&#x4E00;&#x4E2A; &#x6982;&#x5FF5;&#xFF0C;&#x5C31;&#x662F; IO &#x548C; &#x5185;&#x6838;&#x4E4B;&#x95F4;&#x7684;&#x6210;&#x672C;&#x95EE;&#x9898;</p>
+<p><a href="images/image-20200701203511839.png" data-lightbox="84464228-328d-486c-86f6-343c5b3e8de2" data-title="image-20200701203511839"><img src="images/image-20200701203511839.png" alt="image-20200701203511839"></a></p>
+<pre><code class="lang-java"><span class="hljs-comment">/**
+ * &#x670D;&#x52A1;&#x5668;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;
+ * <span class="hljs-doctag">@author</span>: &#x964C;&#x6EAA;
+ * <span class="hljs-doctag">@create</span>: 2020-07-01-20:40
+ */</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TestSocket</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> IOException </span>{
+        ServerSocket server = <span class="hljs-keyword">new</span> ServerSocket(<span class="hljs-number">8090</span>);
+        System.out.println(<span class="hljs-string">&quot;step1: new ServerSocket(8090)&quot;</span>);
+        <span class="hljs-keyword">while</span>(<span class="hljs-keyword">true</span>) {
+            Socket client = server.accept();
+            System.out.println(<span class="hljs-string">&quot;step2: client &quot;</span> + client.getPort());
+            <span class="hljs-keyword">new</span> Thread(() -&gt; {
+                <span class="hljs-keyword">try</span> {
+                    InputStream in = client.getInputStream();
+                    BufferedReader reader = <span class="hljs-keyword">new</span> BufferedReader(<span class="hljs-keyword">new</span> InputStreamReader(in));
+                    <span class="hljs-keyword">while</span>(<span class="hljs-keyword">true</span>) {
+                        System.out.println(reader.readLine());
+                    }
+                } <span class="hljs-keyword">catch</span> (IOException e) {
+                    e.printStackTrace();
+                }
+            }, <span class="hljs-string">&quot;t1&quot;</span>).start();
+        }
+    }
+}
+</code></pre>
+<p>&#x6293;&#x53D6;&#x7A0B;&#x5E8F;&#x5BF9;&#x5185;&#x6838;&#x6709;&#x6CA1;&#x6709;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#xFF0C;&#x7136;&#x540E;&#x8F93;&#x51FA;</p>
+<pre><code>strace -ff -o ./ooxx java TestSocket
+</code></pre><p>&#x7136;&#x540E;&#x6211;&#x4EEC;&#x6267;&#x884C;&#x4E0A;&#x9762;&#x7684;&#x7A0B;&#x5E8F;&#xFF0C;&#x5F97;&#x5230;&#x6211;&#x4EEC;&#x7684;&#x7ED3;&#x679C;</p>
+<p><a href="images/image-20200701205141858.png" data-lightbox="9dff2c99-48c3-43fd-9df9-d074fa704d49" data-title="image-20200701205141858"><img src="images/image-20200701205141858.png" alt="image-20200701205141858"></a></p>
+<p>&#x7136;&#x540E;&#x6211;&#x4EEC;&#x5728;&#x901A;&#x8FC7;jps&#x547D;&#x4EE4;&#xFF0C;&#x67E5;&#x770B;&#x5F53;&#x524D;TestSocket&#x7684;&#x8FDB;&#x7A0B;&#x53F7;</p>
+<pre><code>jps
+
+2912 Jps
+2878 TestSocket
+</code></pre><p>&#x7136;&#x540E;&#x6211;&#x4EEC;&#x5728;&#x8FDB;&#x5165;&#x4E0B;&#x9762;&#x7684;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x542F;&#x52A8;2878&#x662F;&#x7EBF;&#x7A0B;&#x7684;id&#x53F7;&#xFF0C;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x5C31;&#x662F;&#x5B58;&#x653E;&#x8BE5;&#x7EBF;&#x7A0B;&#x7684;&#x4E00;&#x4E9B;&#x4FE1;&#x606F;</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> /proc/2878
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x5230;2878&#x8FDB;&#x7A0B;&#x4E0B;&#x7684;&#xFF0C;&#x901A;&#x8FC7;&#x67E5;&#x770B;task&#x76EE;&#x5F55;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6240;&#x6709;&#x7EBF;&#x7A0B;&#x6570;</p>
+<p><a href="images/image-20200701205539126.png" data-lightbox="4f963227-fab6-4920-8249-4a55d874af45" data-title="image-20200701205539126"><img src="images/image-20200701205539126.png" alt="image-20200701205539126"></a></p>
+<p>&#x8FD8;&#x6709;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;&#xFF0C;&#x5C31;&#x662F; fd&#x76EE;&#x5F55;&#xFF0C;&#x5728;&#x8BE5;&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x7684;&#x4E00;&#x4E9B;IO&#x6D41;</p>
+<p><a href="images/image-20200701205750115.png" data-lightbox="7e811c97-bb0b-4542-ab4d-5958f318a6c9" data-title="image-20200701205750115"><img src="images/image-20200701205750115.png" alt="image-20200701205750115"></a></p>
+<p>&#x4E0A;&#x9762;&#x7684;0,1,2&#xFF0C;&#x5206;&#x522B;&#x5BF9;&#x5E94;&#x7740; &#x8F93;&#x5165;&#x6D41;&#xFF0C;&#x8F93;&#x51FA;&#x6D41;&#x548C;&#x9519;&#x8BEF;&#x6D41;&#x3002;&#x5728;java&#x91CC;&#x9762;&#x6211;&#x4EEC;&#x6D41;&#x5C31;&#x662F;&#x5BF9;&#x8C61;&#xFF0C;&#x800C;&#x5728;linux&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x6D41;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x4E2A;&#x7684;&#x6587;&#x4EF6;&#x3002;&#x540E;&#x9762;&#x7684;4,5 &#x5C31;&#x5BF9;&#x5E94;&#x7740;&#x6211;&#x4EEC;&#x7684;socket&#x901A;&#x4FE1;&#xFF0C;&#x5206;&#x522B;&#x5BF9;&#x5E94;&#x7740;ipv4 &#x548C; ipv6</p>
+<p><a href="images/image-20200701205958499.png" data-lightbox="49edfca4-de8f-4b58-93e7-d3145b7937ef" data-title="image-20200701205958499"><img src="images/image-20200701205958499.png" alt="image-20200701205958499"></a></p>
+<p>&#x901A;&#x8FC7;netstat&#x547D;&#x4EE4;&#x67E5;&#x770B;</p>
+<p><a href="images/image-20200701210121933.png" data-lightbox="8f751561-c70c-49c3-b813-fea48ff1c438" data-title="image-20200701210121933"><img src="images/image-20200701210121933.png" alt="image-20200701210121933"></a></p>
+<p>&#x7136;&#x540E;&#x6211;&#x4EEC;&#x4F7F;&#x7528;nc&#x8FDE;&#x63A5; 8090&#x7AEF;&#x53E3;</p>
+<pre><code class="lang-bash">nc localhost 8090
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x6267;&#x884C;&#x5B8C;&#x540E;&#xFF0C;&#x901A;&#x8FC7;netstat&#x547D;&#x4EE4;&#x67E5;&#x770B;  &#xFF0C;&#x53D1;&#x73B0;&#x591A;&#x4E86;&#x4E2A;&#x8FDE;&#x63A5;&#x7684;&#x72B6;&#x6001;</p>
+<p><a href="images/image-20200701210428515.png" data-lightbox="68a270e3-38f5-4a6b-a5ce-0e6b0b571487" data-title="image-20200701210428515"><img src="images/image-20200701210428515.png" alt="image-20200701210428515"></a></p>
+<p>&#x7136;&#x540E;&#x5728;&#x770B;&#x6587;&#x4EF6;&#x91CC;&#x9762;&#xFF0C;&#x4E5F;&#x591A;&#x4E86;&#x4E00;&#x4E2A;socket</p>
+<p><a href="images/image-20200701210733202.png" data-lightbox="03e883a9-4e24-4313-8d2d-1b4e2cb037a9" data-title="image-20200701210733202"><img src="images/image-20200701210733202.png" alt="image-20200701210733202"></a></p>
+<p>&#x6211;&#x4EEC;&#x67E5;&#x770B;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#xFF0C;&#x53D1;&#x73B0;&#x901A;&#x8FC7;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x63A5;&#x6536;&#x4E86;&#x4E00;&#x4E2A;58181&#x7AEF;&#x53E3;&#x53F7;&#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x5728;&#x524D;&#x9762;&#x6211;&#x4EEC;&#x8FD8;&#x80FD;&#x591F;&#x770B;&#x5230;5&#xFF0C;&#x8FD9;&#x4E2A;5&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x5BF9;&#x5E94;&#x7684;&#x4E0A;&#x56FE;&#x91CC;&#x9762;&#x7684;socket&#xFF0C;&#x8D70;&#x7684;&#x662F;ipv4&#x3002;</p>
+<p><a href="images/image-20200701210907287.png" data-lightbox="310791e3-d4bd-4643-8e65-7c8548372579" data-title="image-20200701210907287"><img src="images/image-20200701210907287.png" alt="image-20200701210907287"></a></p>
+<p>&#x4ECE;&#x8FD9;&#x91CC;&#x5176;&#x5B9E;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x77E5;&#x9053;&#x4E86;&#xFF0C;&#x6211;&#x4EEC;&#x539F;&#x6765;&#x8C03;&#x7528;&#x4E2D;&#x5199;&#x7684;&#x4EE3;&#x7801;</p>
+<pre><code class="lang-java">Socket client = server.accept();
+</code></pre>
+<p>&#x5BF9;&#x5E94;&#x5230;&#x7CFB;&#x7EDF;&#x5C42;&#x9762;&#xFF0C;&#x4E5F;&#x662F;&#x8C03;&#x7528;&#x4E86;&#x7CFB;&#x7EDF;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x540C;&#x65F6;&#x5173;&#x4E8E;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#xFF0C;&#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;&#x65B9;&#x5F0F;</p>
+<ul>
+<li>bind</li>
+<li>connect</li>
+<li>listen</li>
+<li>select</li>
+<li>socket</li>
+</ul>
+<p>&#x9996;&#x5148;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x77E5;&#x9053;&#xFF0C;java&#x5176;&#x5B9E;&#x662F;&#x4E00;&#x79CD;&#x89E3;&#x91CA;&#x578B;&#x8BED;&#x8A00;&#xFF0C;&#x901A;&#x8FC7;JVM &#x865A;&#x62DF;&#x673A;&#x5C06;&#x6211;&#x4EEC;&#x7684;.java&#x6587;&#x4EF6;&#x8F6C;&#x6362;&#x4E3A;&#x5B57;&#x8282;&#x7801;&#x6587;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528;&#x6211;&#x4EEC;os&#x4E2D;&#x7684;syscall&#x65B9;&#x6CD5;&#xFF0C;&#x6211;&#x4EEC;&#x5FC5;&#x987B;&#x660E;&#x786E;&#x7684;&#x662F;&#xFF0C;&#x65E0;&#x8BBA;&#x600E;&#x4E48;&#x8C03;&#x7528;&#xFF0C;&#x4E00;&#x5B9A;&#x6700;&#x540E;&#x8981;&#x901A;&#x8FC7;&#x8C03;&#x7528;&#x5185;&#x6838;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528;&#x6211;&#x4EEC;&#x7684;&#x786C;&#x4EF6;&#x3002;</p>
+<p><a href="images/image-20200701213855739.png" data-lightbox="37ca2c17-7ad0-42d2-bb0e-a76d4cf85d08" data-title="image-20200701213855739"><img src="images/image-20200701213855739.png" alt="image-20200701213855739"></a></p>
+<p>&#x4E0A;&#x8FF0;&#x7684;&#x6A21;&#x578B;&#xFF0C;&#x5C31;&#x662F;BIO&#x7684;&#x901A;&#x4FE1;&#xFF0C;&#x662F;&#x8FD9;&#x91CC;&#x9762;&#x6709;&#x5F88;&#x591A;&#x963B;&#x585E;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x80FD;&#x591F;&#x901A;&#x8FC7;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x6765;&#x907F;&#x514D;&#x4E3B;&#x7EBF;&#x7A0B;&#x7684;&#x963B;&#x585E;&#x3002;</p>
+<p>&#x4F46;&#x662F;&#x4ECE;&#x4E0A;&#x9762;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x77E5;&#x9053;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x5927;&#x91CF;&#x7684;&#x8FDE;&#x63A5;&#x8FC7;&#x6765;&#xFF0C;&#x90A3;&#x670D;&#x52A1;&#x5668;&#x9700;&#x8981;&#x521B;&#x5EFA;&#x5F88;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x4E0E;&#x4E4B;&#x5BF9;&#x5E94;&#xFF0C;&#x5E76;&#x4E14;&#x7EBF;&#x7A0B;&#x7684;&#x521B;&#x5EFA;&#x4E5F;&#x662F;&#x9700;&#x8981;&#x6D88;&#x8017;&#x8D44;&#x6E90;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x7EBF;&#x7A0B;&#x4F7F;&#x7528;&#x7684;&#x6808;&#x662F;&#x72EC;&#x5360;&#x7684;&#xFF08;&#x6808;&#x5927;&#x5C0F;&#x9ED8;&#x8BA4;1MB&#xFF09;&#xFF0C;&#x540C;&#x65F6;CPU&#x7684;&#x8D44;&#x6E90;&#x8C03;&#x5EA6;&#x4E5F;&#x662F;&#x9700;&#x8981;&#x6D6A;&#x8D39;&#x3002;</p>
+<p>&#x6700;&#x6839;&#x672C;&#x7684;&#x539F;&#x56E0;&#x5C31;&#x662F;&#x56E0;&#x4E3A; BIO&#x662F;&#x963B;&#x585E;&#x7684;&#xFF0C;&#x624D;&#x4F1A;&#x9020;&#x6210;&#x4E0A;&#x9762;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
+<h2 id="nio"><a name="nio" class="anchor-navigation-ex-anchor" href="#nio"><i class="fa fa-link" aria-hidden="true"></i></a>NIO</h2>
+<p>&#x56E0;&#x4E3A;BIO&#x5B58;&#x5728;&#x7EBF;&#x7A0B;&#x963B;&#x585E;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x540E;&#x9762;&#x5C31;&#x63D0;&#x51FA;&#x4E86;NIO&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x5728;NIO&#x4E2D;&#xFF0C;&#x6709;C10K&#x7684;&#x95EE;&#x9898;&#xFF0C;C10K = 10000&#x4E2A;&#x5BA2;&#x6237;&#x7AEF;&#x3002;&#x4F46;&#x662F;&#x5728;&#x548C;&#x4F60;&#x8FDE;&#x63A5;&#x7684;&#x670D;&#x52A1;&#x5668;&#x4E2D;&#xFF0C;&#x5176;&#x5B9E;&#x6CA1;&#x6709;&#x591A;&#x5C11;&#x7ED9;&#x4F60;&#x53D1;&#x9001;&#x6570;&#x636E;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x505A;&#x7684;&#x5C31;&#x662F;&#xFF0C;&#x6BCF;&#x5F53;&#x6709;&#x4EBA;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x624D;&#x548C;&#x5B83;&#x8FDB;&#x884C;&#x8FDE;&#x63A5;&#x3002;</p>
+<p><a href="images/image-20200701215310148.png" data-lightbox="cb0f4a98-0eeb-4c35-befb-ade6fc0ff9b1" data-title="image-20200701215310148"><img src="images/image-20200701215310148.png" alt="image-20200701215310148"></a></p>
+<p>&#x4E5F;&#x5C31;&#x662F;&#x6BCF;&#x6B21;&#x90FD;&#x9700;&#x8981;&#x904D;&#x5386;10000&#x4E2A;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x662F;&#x975E;&#x5E38;&#x8017;&#x8D39;&#x65F6;&#x95F4;&#x5462;&#xFF0C;&#x56E0;&#x4E3A;&#x5F88;&#x591A;&#x5BA2;&#x6237;&#x7AEF;&#x53EF;&#x80FD;&#x5C31;&#x6CA1;&#x6709;&#x8BF7;&#x6C42;&#x7684;&#x53D1;&#x9001;&#x3002;</p>
+<h2 id="&#x591A;&#x8DEF;&#x590D;&#x7528;"><a name="&#x591A;&#x8DEF;&#x590D;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x591A;&#x8DEF;&#x590D;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x591A;&#x8DEF;&#x590D;&#x7528;</h2>
+<p>&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x4E0D;&#x9700;&#x8981;&#x904D;&#x5386;10K&#x4E2A;&#x5BA2;&#x6237;&#x7AEF;&#x4E86;&#xFF0C;&#x800C;&#x662F;&#x628A;&#x6211;&#x4EEC;&#x7684;fds&#x6587;&#x4EF6;&#x53D1;&#x9001;&#x7ED9;&#x5185;&#x6838;&#xFF0C;&#x7136;&#x540E;&#x5185;&#x6838;&#x53BB;&#x5224;&#x65AD;&#x6700;&#x540E;&#x9700;&#x8981;&#x8FDE;&#x63A5;&#x8BF6;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x4E0D;&#x7528;&#x904D;&#x5386;&#x5168;&#x90E8;&#x7684;&#x4E86;&#x3002;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x7684;Select&#x5C31;&#x662F;&#x591A;&#x8DEF;&#x590D;&#x7528;&#x5668;&#xFF0C;&#x901A;&#x8FC7;&#x591A;&#x8DEF;&#x590D;&#x7528;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x72B6;&#x6001;&#xFF0C;&#x7136;&#x540E;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7A0B;&#x5E8F;&#x53BB;&#x5224;&#x65AD;&#x8FD9;&#x4E9B;&#x72B6;&#x6001;&#x3002;</p>
+<p>&#x8BF4;&#x767D;&#x4E86;&#xFF0C;&#x5C31;&#x662F;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x591A;&#x8DEF;&#x590D;&#x7528;&#x5668;&#xFF0C;&#x6765;&#x5224;&#x65AD;&#x54EA;&#x4E9B;&#x8DEF;&#x53EF;&#x4EE5;&#x8D70;&#x901A;&#xFF0C;&#x7136;&#x540E;&#x4E0D;&#x9700;&#x8981;&#x8F6E;&#x8BE2;&#x5168;&#x90E8;&#x7684;&#x3002;</p>
+<p><a href="images/image-20200701215254768.png" data-lightbox="e9e14d14-517a-4401-91cd-042681ab4ba4" data-title="image-20200701215254768"><img src="images/image-20200701215254768.png" alt="image-20200701215254768"></a></p>
+<p>&#x8FD9;&#x4E2A;&#x6A21;&#x578B;&#xFF0C;&#x662F;&#x901A;&#x8FC7;select&#xFF0C;&#x5C06;fds&#x6587;&#x4EF6;&#x4EA4;&#x7ED9;&#x5185;&#x6838;&#x6765;&#x505A;&#x4E86;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5185;&#x6838;&#x9700;&#x8981;&#x5B8C;&#x6210;10K&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x4E3B;&#x52A8;&#x904D;&#x5386;&#xFF0C;&#x8FD9;&#x4E2A;10K&#x4E2A;&#x8C03;&#x7528;&#xFF0C;&#x5BF9;&#x6BD4;&#x4E4B;&#x524D;&#x7684;10K&#x6B21;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x6765;&#x8BF4;&#xFF0C;&#x662F;&#x66F4;&#x7701;&#x65F6;&#x95F4;&#x7684;&#xFF0C;&#x5B58;&#x5728;&#x4EE5;&#x4E0B;&#x7684;&#x95EE;&#x9898;</p>
+<ul>
+<li>&#x6BCF;&#x6B21;&#x4F20;&#x9012;&#x5F88;&#x591A;&#x6570;&#x636E;&#xFF08;&#x91CD;&#x590D;&#x52B3;&#x52A8;&#xFF09;</li>
+<li>&#x7136;&#x540E;&#x5185;&#x6838;&#x9700;&#x8981;&#x4E3B;&#x52A8;&#x53BB;&#x904D;&#x5386;&#xFF08; &#x590D;&#x6742;&#x5EA6;O(N) &#xFF09;</li>
+</ul>
+<p>&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#xFF0C;&#x901A;&#x8FC7;&#x5728;&#x5185;&#x6838;&#x4E2D;&#xFF0C;&#x5F00;&#x8F9F;&#x4E00;&#x4E2A;&#x7A7A;&#x95F4;&#xFF0C;&#x5F53;&#x6BCF;&#x6B21;&#x6765;&#x4E00;&#x4E2A;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x5C31;&#x628A;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x4E22;&#x5230;&#x5185;&#x6838;&#x4E2D;&#xFF0C;&#x8FD9;&#x6837;&#x4E0D;&#x9700;&#x8981;&#x6BCF;&#x6B21;&#x628A;10K&#x4E2A;&#x6587;&#x4EF6;&#x4F20;&#x9012;&#x5230;&#x5185;&#x6838;&#x4E86;&#x3002;</p>
+<p>&#x7136;&#x540E;&#x5728;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x57FA;&#x4E8E;&#x4E8B;&#x4EF6;&#x9A71;&#x52A8;&#x7684;&#x6A21;&#x578B;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x5F02;&#x6B65;&#x4E8B;&#x4EF6;&#x9A71;&#x52A8;&#x7684;&#x6D41;&#x7A0B;</p>
+<p><a href="images/image-20200702081602327.png" data-lightbox="ff9b5be5-8d9a-44f8-beaa-b5436a5b3f09" data-title="image-20200702081602327"><img src="images/image-20200702081602327.png" alt="image-20200702081602327"></a></p>
+<h2 id="&#x540C;&#x6837;&#x4F7F;&#x7528;epoll&#xFF0C;redis&#x662F;&#x8F6E;&#x8BE2;&#xFF0C;nginx&#x662F;&#x963B;&#x585E;&#xFF1F;"><a name="&#x540C;&#x6837;&#x4F7F;&#x7528;epoll&#xFF0C;redis&#x662F;&#x8F6E;&#x8BE2;&#xFF0C;nginx&#x662F;&#x963B;&#x585E;&#xFF1F;" class="anchor-navigation-ex-anchor" href="#&#x540C;&#x6837;&#x4F7F;&#x7528;epoll&#xFF0C;redis&#x662F;&#x8F6E;&#x8BE2;&#xFF0C;nginx&#x662F;&#x963B;&#x585E;&#xFF1F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x540C;&#x6837;&#x4F7F;&#x7528;epoll&#xFF0C;Redis&#x662F;&#x8F6E;&#x8BE2;&#xFF0C;Nginx&#x662F;&#x963B;&#x585E;&#xFF1F;</h2>
+<p>&#x6211;&#x4EEC;&#x901A;&#x8FC7;strace&#x547D;&#x4EE4;&#xFF0C;&#x67E5;&#x770B;nginx &#x548C; redis&#x7684;&#x8FD0;&#x884C;&#x6D41;&#x7A0B;&#xFF0C;&#x80FD;&#x591F;&#x53D1;&#x73B0; &#x540C;&#x6837;&#x662F;&#x4F7F;&#x7528;&#x4E86; epoll&#xFF0C;&#x4F46;&#x662F;nginx&#x662F;&#x963B;&#x585E;&#x7684;&#xFF0C;&#x800C;redis&#x5B83;&#x662F;&#x8F6E;&#x8BE2;&#xFF08;&#x975E;&#x963B;&#x585E;&#xFF09;&#x7684;&#x3002;</p>
+<p>&#x9996;&#x5148;&#x90A3;&#x662F;&#x56E0;&#x4E3A;Redis&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#xFF0C;&#x800C;&#x8FD9;&#x4E2A;&#x7EBF;&#x7A0B;&#x8981;&#x505A;&#x5F88;&#x591A;&#x4E8B;&#x60C5;&#xFF0C;&#x4F8B;&#x5982; &#x63A5;&#x6536;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;LRU&#xFF0C;LFU&#xFF08;&#x6DD8;&#x6C70;&#x8FC7;&#x6EE4;&#xFF09;&#x3001;RDB/AOF&#xFF08;fork&#x7EBF;&#x7A0B;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5907;&#x4EFD;&#xFF09;&#x3002;</p>
+<p>&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x5BF9;&#x4E8E;Redis&#x4E2D;&#x7684;C10K&#x95EE;&#x9898;&#xFF0C;redis&#x4E5F;&#x662F;&#x901A;&#x8FC7;epoll&#x7684;&#x4E8B;&#x4EF6;&#x9A71;&#x52A8;&#x6765;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x7684;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x901A;&#x8FC7;epoll&#x5C06;&#x6BCF;&#x4E2A;&#x9700;&#x8981;&#x8BFB;&#x53D6;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x64CD;&#x4F5C;&#x653E;&#x5728;&#x4E00;&#x4E2A;&#x539F;&#x5B50;&#x4E32;&#x884C;&#x5316;&#x7684;&#x961F;&#x5217;&#x4E2D;&#xFF0C;&#x5E76;&#x4E14;&#x4E00;&#x4E2A;&#x5BA2;&#x6237;&#x7AEF;&#x5305;&#x542B;&#x4EE5;&#x4E0B;&#x7684;&#x51E0;&#x4E2A;&#x64CD;&#x4F5C;&#xFF1A;read&#x3001;&#x8BA1;&#x7B97;&#x3001;write&#x7B49;</p>
+<p><a href="images/image-20200702083635139.png" data-lightbox="384904b2-c6d0-41f9-bb93-2a7ef707a07b" data-title="image-20200702083635139"><img src="images/image-20200702083635139.png" alt="image-20200702083635139"></a></p>
+<p>&#x5728;redis 6.X&#x7248;&#x672C;&#x4E2D;&#xFF0C;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;IO threads&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x9996;&#x5148;&#x5B83;&#x4E3A;&#x4E86;&#x7559;&#x4F4F;&#x4E32;&#x884C;&#x5316;&#x539F;&#x5B50;&#x6027;&#x7684;&#x7279;&#x70B9;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BA1;&#x7B97;&#x7684;&#x65F6;&#x5019;&#x8FD8;&#x662F;&#x4E32;&#x884C;&#x5316;&#x7684;&#x5904;&#x7406;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x8BFB;&#x53D6;&#x6570;&#x636E;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x591A;&#x7EBF;&#x7A0B;&#x8FDB;&#x884C;&#x5E76;&#x53D1;IO&#x8BFB;&#x53D6;</p>
+<p>&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x591A;&#x7EBF;&#x7A0B;&#x8BFB;&#x5462;&#xFF1F;&#x9996;&#x5148;&#x56E0;&#x4E3A;&#x8BFB;&#x64CD;&#x4F5C;&#x9700;&#x8981;&#x53D1;&#x751F;CPU&#x7684;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#xFF0C;&#x5982;&#x679C;&#x901A;&#x8FC7;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x8BFB;&#x53D6;&#xFF0C;&#x80FD;&#x591F;&#x5145;&#x5206;&#x53D1;&#x6325;CPU&#x7684;&#x591A;&#x6838;&#x4F5C;&#x7528;</p>
+<p><a href="images/image-20200702084219155.png" data-lightbox="953d38c4-fa92-45f5-ad27-906c01c56bea" data-title="image-20200702084219155"><img src="images/image-20200702084219155.png" alt="image-20200702084219155"></a></p>
+<p>&#x800C;nginx&#x53EA;&#x9700;&#x8981;&#x505A;&#x4E00;&#x4EF6;&#x4E8B;&#xFF0C;&#x5C31;&#x662F;&#x7B49;&#x7740;&#x5BA2;&#x6237;&#x7AEF;&#x8FC7;&#x6765;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x505A;&#x5176;&#x4ED6;&#x7684;&#x4E8B;&#x60C5;&#xFF0C;&#x6240;&#x4EE5;&#x4E5F;&#x5C31;&#x8BBE;&#x7F6E;&#x6210;&#x963B;&#x585E;&#x3002;</p>
+<h2 id="&#x96F6;&#x62F7;&#x8D1D;"><a name="&#x96F6;&#x62F7;&#x8D1D;" class="anchor-navigation-ex-anchor" href="#&#x96F6;&#x62F7;&#x8D1D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x96F6;&#x62F7;&#x8D1D;</h2>
+<p>&#x7528;kafka&#x6765;&#x8BB2;&#xFF0C;&#x9996;&#x5148;&#x8FD9;&#x91CC;&#x9762;&#x6709;&#x4E24;&#x4E2A;&#x89D2;&#x8272;&#xFF0C;&#x4E00;&#x4E2A;&#x662F;&#x6D88;&#x606F;&#x751F;&#x4EA7;&#x8005;&#xFF0C;&#x4E00;&#x4E2A;&#x662F;&#x6D88;&#x606F;&#x6D88;&#x8D39;&#x8005;</p>
+<p><a href="images/image-20200702090307355.png" data-lightbox="d0fc3fec-9af4-4124-b76e-a0bc2a36b1aa" data-title="image-20200702090307355"><img src="images/image-20200702090307355.png" alt="image-20200702090307355"></a></p>
+<p>&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x5F00;&#x8F9F;&#x4E86;&#x4E00;&#x4E2A;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#xFF0C;&#x80FD;&#x591F;&#x76F4;&#x63A5;&#x62B5;&#x8FBE;&#x78C1;&#x76D8;&#xFF0C;&#x80FD;&#x591F;&#x51CF;&#x5C11;kernel&#x7684;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x3002;</p>
+<p>&#x5728;&#x8BFB;&#x53D6;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x539F;&#x6765;&#x7684;&#x505A;&#x6CD5;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x9996;&#x5148;&#x8BF7;&#x6C42;kernel&#xFF0C;&#x7136;&#x540E;kernel&#x53D1;&#x8D77;&#x4E00;&#x4E2A;read&#x8BF7;&#x6C42;&#xFF0C;&#x8BFB;&#x53D6;&#x78C1;&#x76D8;&#x7684;&#x6587;&#x4EF6;&#x5230;&#x5185;&#x6838;&#x4E2D;&#xFF0C;&#x7136;&#x540E;kafka&#x5728;&#x8BFB;&#x53D6;kernel&#x4E2D;&#x7684;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x90A3;&#x4E48;&#x4EC0;&#x4E48;&#x662F;&#x96F6;&#x62F7;&#x8D1D;&#x5462;&#xFF1F;&#x96F6;&#x62F7;&#x8D1D;&#x5C31;&#x662F;&#x4E0D;&#x53D1;&#x751F;&#x62F7;&#x8D1D;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x96F6;&#x62F7;&#x8D1D;&#x7684;&#x524D;&#x63D0;&#x5C31;&#x662F;&#x6570;&#x636E;&#x4E0D;&#x9700;&#x8981;&#x52A0;&#x5DE5;&#xFF0C;&#x5728;JVM&#x4E2D;&#x6709;&#x4E00;&#x4E2A;RandomAccessFile&#xFF0C;&#x5B83;&#x80FD;&#x591F;&#x76F4;&#x63A5;&#x5F00;&#x8F9F;&#x4E00;&#x4E2A;&#x5806;&#x5185;&#x7A7A;&#x95F4;&#xFF0C;&#x6216;&#x8005;&#x5806;&#x5916;&#x7A7A;&#x95F4;&#x3002;</p>
+</body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../../Redisredis/13_String字符串详解.md" class="navigation navigation-prev " aria-label="Previous page: String字符串详解">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="./#前言" class="navigation navigation-next " aria-label="Next page: 前言">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"从底层了解IO多路复用模型","level":"1.4","depth":1,"next":{"title":"前言","level":"1.4.1","depth":2,"anchor":"#前言","path":"moxi/IO多路复用底层原理/README.md","ref":"moxi/IO多路复用底层原理/README.md#前言","articles":[]},"previous":{"title":"String字符串详解","level":"1.3.7","depth":2,"path":"Redisredis/13_String字符串详解.md","ref":"Redisredis/13_String字符串详解.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hide-element","chapter-fold","expandable-chapters","favicon","lightbox","splitter","-lunr","pageview-count","ancre-navigation"],"pluginsConfig":{"chapter-fold":{},"splitter":{},"search":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"./img/avator.png.icon.ico","bookmark":"./img/avator.png.icon.ico"},"lightbox":{"jquery":true,"sameUuid":false},"pageview-count":{},"ancre-navigation":{"showLevel":true,"associatedWithSummary":true,"mode":"float","printLog":false,"multipleH1":true,"float":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"moxi/IO多路复用底层原理/README.md","mtime":"2021-03-17T00:39:20.283Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-17T03:01:59.082Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
