@@ -46,7 +46,7 @@ redis服务 => 10个副本 ! (同时开启10个redis容器)
 
 ![1597820116318](11_docker_Swarm%E9%9B%86%E7%BE%A4%E5%BC%B9%E6%80%A7%E5%88%9B%E5%BB%BA%E6%9C%8D%E5%8A%A1.assets/1597820116318.png)
 
-```shell
+```cmd
 docker run # 容器启动 ! 不具有扩缩容器
 docker service # 服务! 具有扩缩容器,滚动更新!
 ```

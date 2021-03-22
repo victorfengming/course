@@ -7,14 +7,20 @@ tags: docker
 
 # commit镜像
 
-```shell script
+
+
+
+```cmd
 docker commit 提交容器成为一个新的副本
 # 命令和git原理类似
 docker commit -m="提交的描述信息" -a="作者" 容器id 目标镜像名:[TAG]
 
 ```
 实战
-```shell script
+
+
+
+```cmd
 [root@iz8g9301trfnpxz ~]# docker ps
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                    NAMES
 48d9ea6fdb71        tomcat              "catalina.sh run"   4 minutes ago       Up 4 minutes        0.0.0.0:8080->8080/tcp   interesting_almeida
@@ -37,7 +43,10 @@ elasticsearch         latest              5acf0e8da90b        22 months ago     
 ```
 
 学习方式说明:理解概念,但是一定要实践,最后实践与理论想结合一次搞定这个知识
-```shell script
+
+
+
+```cmd
 # 如果你想要保存当前容器的状态,就可以通过commit 提交,获得一个镜像
 # 就好比我们以前学习vm时候,快照
 ```

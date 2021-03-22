@@ -8,13 +8,13 @@
 
 用这个要快一点儿
 
-```shell
+```cmd
 curl -L https://get.daocloud.io/docker/compose/releases/download/1.25.5/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
 ```
 
 试一下
 
-```shell
+```cmd
 [root@iz8g9301trfnpxz ~]# curl -L https://get.daocloud.io/docker/compose/releases/download/1.25.5/docker-compose-`uname -s` - `uname -m` > /usr/local/bin/docker-compose
 curl: option -: is unknown
 curl: try 'curl --help' or 'curl --manual' for more information
@@ -32,7 +32,7 @@ docker-compose  jemalloc-config  jemalloc.sh  jeprof  libmcrypt-config  luajit  
 
 安装成功
 
-```shell
+```cmd
 [root@iz8g9301trfnpxz bin]# sudo chmod +x docker-compose 
 [root@iz8g9301trfnpxz bin]# docker-compose 
 Define and run multi-container applications with Docker.

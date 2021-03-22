@@ -8,13 +8,19 @@ tags: docker nginx
 # 作业1:部署nginx
 ## docker 安装nginx
 
-```shell script
+
+
+
+```cmd
 # 1.搜索镜像 search 建议大家去docker hub上面去搜索
 # 2.下载镜像 pull
 ```
 
 试一下
-```shell script
+
+
+
+```cmd
 [root@iz8g9301trfnpxz home]# docker pull nginx
 Using default tag: latest
 latest: Pulling from library/nginx

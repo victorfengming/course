@@ -9,12 +9,18 @@ tags: docker
 # 初始dockerfile
 dockerfile 就是用来构建docker镜像的构建文件!命令脚本! 先体验一下!
 
-```shell script
+
+
+
+```cmd
 # 通过这脚本可以生成一个镜像,镜像是一层一层的,脚本是一个个命令,每个命令都是一层
 
 ```
 
-```shell script
+
+
+
+```cmd
 # 创建一个dockerfile文件,名字可以随机 建议dockerfile
 # 文件中的内容指令(大写) 参数
 FROM centos
@@ -31,7 +37,10 @@ CMD /bin/bash/
 
 试一下
 
-```shell script
+
+
+
+```cmd
 [root@iz8g9301trfnpxz docker-test-volume]# docker build -f /home/docker-test-volume/dockerfile1 -t kuangshen/centos:1.0 .
 Sending build context to Docker daemon  2.048kB
 Step 1/4 : FROM centos
@@ -54,7 +63,10 @@ Successfully tagged kuangshen/centos:1.0
 
 ```
 启动一下自己写的容器
-```shell script
+
+
+
+```cmd
 [root@iz8g9301trfnpxz docker-test-volume]# clear
 [root@iz8g9301trfnpxz docker-test-volume]# docker images
 REPOSITORY            TAG                 IMAGE ID            CREATED             SIZE
@@ -76,7 +88,10 @@ bin  dev  etc  home  lib  lib64  lost+found  media  mnt  opt  proc  root  run  s
 
 上面的`volume01`和`volume02`就是我们自己挂载的,这个卷和外部一定是有一个同步的
 
-```shell script
+
+
+
+```cmd
 [root@iz8g9301trfnpxz home]# docker ps
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                   NAMES
 1e52e32ab8e7        5c7e025fc4ff        "/bin/bash"              2 minutes ago       Up 2 minutes                                goofy_feistel
@@ -336,7 +351,10 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 ```
 测试一下刚才的文件是否同步出去了
-```shell script
+
+
+
+```cmd
 [root@iz8g9301trfnpxz home]# cd /var/lib/docker/volumes/e113c26dfe915b20080e5a9f7ae700713d4f443ca95b9e80d82d351ace6b88ca/_data
 [root@iz8g9301trfnpxz _data]# ls
 [root@iz8g9301trfnpxz _data]# cd /var/lib/docker/volumes/b78af0b69e7fdfa0c87d2247f895021f6772b52e0d57b0f6ac3bef66dfd58964/_data

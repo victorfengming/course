@@ -8,7 +8,10 @@ tags: docker tomcat
 
 # 作业2:使用docker来装一个tomcat
 
-```shell script
+
+
+
+```cmd
 # 官方的使用
 docker run -it --rm tomcat:9.0
 # 我们之前的启动都是后台,停止了容器之后,容器还是可以查到 

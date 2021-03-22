@@ -6,7 +6,7 @@ docker-compose 单机部署项目!
 
 Docker Stack部署,集群部署!
 
-```shell
+```cmd
 # 单机
 docker-compose up -d wordpress.yaml
 # 集群

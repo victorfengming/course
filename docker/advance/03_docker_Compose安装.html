@@ -742,30 +742,30 @@
 <p><img src="03_docker_Compose%E5%AE%89%E8%A3%85.assets/1597804111053.png" alt="1597804111053"></p>
 <p>&#x4E0A;&#x9762;&#x90A3;&#x4E2A;&#x53EF;&#x80FD;&#x4F1A;&#x5F88;&#x6162;</p>
 <p>&#x7528;&#x8FD9;&#x4E2A;&#x8981;&#x5FEB;&#x4E00;&#x70B9;&#x513F;</p>
-<pre><code class="lang-shell">curl -L https://get.daocloud.io/docker/compose/releases/download/1.25.5/docker-compose-`uname -s`-`uname -m` &gt; /usr/local/bin/docker-compose
+<pre><code class="lang-cmd">curl -L https://get.daocloud.io/docker/compose/releases/download/<span class="hljs-number">1</span>.<span class="hljs-number">25</span>.<span class="hljs-number">5</span>/docker-compose-`uname -s`-`uname -m` &gt; /usr/local/bin/docker-compose
 </code></pre>
 <p>&#x8BD5;&#x4E00;&#x4E0B;</p>
-<pre><code class="lang-shell">[root@iz8g9301trfnpxz ~]# curl -L https://get.daocloud.io/docker/compose/releases/download/1.25.5/docker-compose-`uname -s` - `uname -m` &gt; /usr/local/bin/docker-compose
-curl: option -: is unknown
-curl: try &apos;curl --help&apos; or &apos;curl --manual&apos; for more information
-[root@iz8g9301trfnpxz ~]# curl -L https://get.daocloud.io/docker/compose/releases/download/1.25.5/docker-compose-`uname -s`-`uname -m` &gt; /usr/local/bin/docker-compose
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
+<pre><code class="lang-cmd">[root@iz8g9301trfnpxz ~]# curl -L https://get.daocloud.io/docker/compose/releases/download/<span class="hljs-number">1</span>.<span class="hljs-number">25</span>.<span class="hljs-number">5</span>/docker-compose-`uname -s` - `uname -m` &gt; /usr/local/bin/docker-compose
+<span class="hljs-function">curl: <span class="hljs-title">option</span> -: <span class="hljs-title">is</span> <span class="hljs-title">unknown</span>
+<span class="hljs-title">curl</span>: <span class="hljs-title">try</span> &apos;<span class="hljs-title">curl</span> --<span class="hljs-title">help</span>&apos; <span class="hljs-title">or</span> &apos;<span class="hljs-title">curl</span> --<span class="hljs-title">manual</span>&apos; <span class="hljs-title">for</span> <span class="hljs-title">more</span> <span class="hljs-title">information</span>
+[<span class="hljs-title">root</span>@<span class="hljs-title">iz8g9301trfnpxz</span> ~]# <span class="hljs-title">curl</span> -<span class="hljs-title">L</span> <span class="hljs-title">https</span>://<span class="hljs-title">get.daocloud.io</span>/<span class="hljs-title">docker</span>/<span class="hljs-title">compose</span>/<span class="hljs-title">releases</span>/<span class="hljs-title">download</span>/1.25.5/<span class="hljs-title">docker</span>-<span class="hljs-title">compose</span>-`<span class="hljs-title">uname</span> -<span class="hljs-title">s</span>`-`<span class="hljs-title">uname</span> -<span class="hljs-title">m</span>` &gt; /<span class="hljs-title">usr</span>/<span class="hljs-title">local</span>/<span class="hljs-title">bin</span>/<span class="hljs-title">docker</span>-<span class="hljs-title">compose</span>
+  % <span class="hljs-title">Total</span>    % <span class="hljs-title">Received</span> % <span class="hljs-title">Xferd</span>  <span class="hljs-title">Average</span> <span class="hljs-title">Speed</span>   <span class="hljs-title">Time</span>    <span class="hljs-title">Time</span>     <span class="hljs-title">Time</span>  <span class="hljs-title">Current</span>
+                                 <span class="hljs-title">Dload</span>  <span class="hljs-title">Upload</span>   <span class="hljs-title">Total</span>   <span class="hljs-title">Spent</span>    <span class="hljs-title">Left</span>  <span class="hljs-title">Speed</span>
 100   423  100   423    0     0    502      0 --:--:-- --:--:-- --:--:--   501
-100 16.7M  100 16.7M    0     0  8412k      0  0:00:02  0:00:02 --:--:-- 24.3M
-[root@iz8g9301trfnpxz ~]# cd /usr/local/bin/
-[root@iz8g9301trfnpxz bin]# ls
-docker-compose  jemalloc-config  jemalloc.sh  jeprof  libmcrypt-config  luajit  luajit-2.0.4  mcrypt  mdecrypt
-[root@iz8g9301trfnpxz bin]#
-</code></pre>
+100 16.7<span class="hljs-title">M</span>  100 16.7<span class="hljs-title">M</span>    0     0  8412<span class="hljs-title">k</span>      0  0:00:02  0:00:02 --:--:-- 24.3<span class="hljs-title">M</span>
+[<span class="hljs-title">root</span>@<span class="hljs-title">iz8g9301trfnpxz</span> ~]# <span class="hljs-title">cd</span> /<span class="hljs-title">usr</span>/<span class="hljs-title">local</span>/<span class="hljs-title">bin</span>/
+[<span class="hljs-title">root</span>@<span class="hljs-title">iz8g9301trfnpxz</span> <span class="hljs-title">bin</span>]# <span class="hljs-title">ls</span>
+<span class="hljs-title">docker</span>-<span class="hljs-title">compose</span>  <span class="hljs-title">jemalloc</span>-<span class="hljs-title">config</span>  <span class="hljs-title">jemalloc.sh</span>  <span class="hljs-title">jeprof</span>  <span class="hljs-title">libmcrypt</span>-<span class="hljs-title">config</span>  <span class="hljs-title">luajit</span>  <span class="hljs-title">luajit</span>-2.0.4  <span class="hljs-title">mcrypt</span>  <span class="hljs-title">mdecrypt</span>
+[<span class="hljs-title">root</span>@<span class="hljs-title">iz8g9301trfnpxz</span> <span class="hljs-title">bin</span>]#
+</span></code></pre>
 <p>&#x5B89;&#x88C5;&#x6210;&#x529F;</p>
-<pre><code class="lang-shell">[root@iz8g9301trfnpxz bin]# sudo chmod +x docker-compose 
+<pre><code class="lang-cmd">[root@iz8g9301trfnpxz bin]# sudo chmod +x docker-compose 
 [root@iz8g9301trfnpxz bin]# docker-compose 
 Define and run multi-container applications with Docker.
 
 
 [root@iz8g9301trfnpxz bin]# docker-compose -version
-docker-compose version 1.25.5, build 8a1c60f6
+docker-compose version <span class="hljs-number">1</span>.<span class="hljs-number">25</span>.<span class="hljs-number">5</span>, build <span class="hljs-number">8</span>a1c60f6
 </code></pre>
 
                                 
@@ -810,7 +810,7 @@ docker-compose version 1.25.5, build 8a1c60f6
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Compose安装","level":"1.3.3","depth":2,"next":{"title":"Compose初体验","level":"1.3.4","depth":2,"path":"advance/04_docker_Compose初体验.md","ref":"advance/04_docker_Compose初体验.md","articles":[]},"previous":{"title":"DockerCompose介绍","level":"1.3.2","depth":2,"path":"advance/02_docker_DockerCompose介绍.md","ref":"advance/02_docker_DockerCompose介绍.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"advance/03_docker_Compose安装.md","mtime":"2020-08-22T11:58:08.640Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-23T06:47:51.314Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Compose安装","level":"1.3.3","depth":2,"next":{"title":"Compose初体验","level":"1.3.4","depth":2,"path":"advance/04_docker_Compose初体验.md","ref":"advance/04_docker_Compose初体验.md","articles":[]},"previous":{"title":"DockerCompose介绍","level":"1.3.2","depth":2,"path":"advance/02_docker_DockerCompose介绍.md","ref":"advance/02_docker_DockerCompose介绍.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"advance/03_docker_Compose安装.md","mtime":"2021-03-22T11:46:35.486Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-22T11:57:43.280Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

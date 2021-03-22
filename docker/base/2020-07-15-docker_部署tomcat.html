@@ -738,25 +738,24 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x4F5C;&#x4E1A;2&#x4F7F;&#x7528;docker&#x6765;&#x88C5;&#x4E00;&#x4E2A;tomcat">&#x4F5C;&#x4E1A;2:&#x4F7F;&#x7528;docker&#x6765;&#x88C5;&#x4E00;&#x4E2A;tomcat</h1>
-<p>```shell script</p>
-<h1 id="&#x5B98;&#x65B9;&#x7684;&#x4F7F;&#x7528;">&#x5B98;&#x65B9;&#x7684;&#x4F7F;&#x7528;</h1>
-<p>docker run -it --rm tomcat:9.0</p>
-<h1 id="&#x6211;&#x4EEC;&#x4E4B;&#x524D;&#x7684;&#x542F;&#x52A8;&#x90FD;&#x662F;&#x540E;&#x53F0;&#x505C;&#x6B62;&#x4E86;&#x5BB9;&#x5668;&#x4E4B;&#x540E;&#x5BB9;&#x5668;&#x8FD8;&#x662F;&#x53EF;&#x4EE5;&#x67E5;&#x5230;">&#x6211;&#x4EEC;&#x4E4B;&#x524D;&#x7684;&#x542F;&#x52A8;&#x90FD;&#x662F;&#x540E;&#x53F0;,&#x505C;&#x6B62;&#x4E86;&#x5BB9;&#x5668;&#x4E4B;&#x540E;,&#x5BB9;&#x5668;&#x8FD8;&#x662F;&#x53EF;&#x4EE5;&#x67E5;&#x5230;</h1>
-<p>docker run -it --rm ,&#x4E00;&#x822C;&#x7528;&#x4E8E;&#x6D4B;&#x8BD5;,&#x7528;&#x5B8C;&#x5373;&#x5220;&#x9664;</p>
-<h1 id="&#x5148;&#x4E0B;&#x8F7D;-&#x5728;&#x542F;&#x52A8;">&#x5148;&#x4E0B;&#x8F7D; &#x5728;&#x542F;&#x52A8;</h1>
-<p>docker pull tomcat:9.0</p>
-<h1 id="&#x542F;&#x52A8;&#x8FD0;&#x884C;">&#x542F;&#x52A8;&#x8FD0;&#x884C;</h1>
-<p>docker run -d -p 3355:8080 --name tomcat01 tomcat</p>
-<h1 id="&#x6D4B;&#x8BD5;&#x8BBF;&#x95EE;&#x6CA1;&#x6709;&#x95EE;&#x9898;">&#x6D4B;&#x8BD5;&#x8BBF;&#x95EE;&#x6CA1;&#x6709;&#x95EE;&#x9898;</h1>
-<p>root@f1421fbdf093:/usr/local/tomcat# ls
-BUILDING.txt     LICENSE  README.md     RUNNING.txt  conf  logs        temp     webapps.dist
-CONTRIBUTING.md  NOTICE   RELEASE-NOTES  bin          lib   native-jni-lib  webapps  work
-root@f1421fbdf093:/usr/local/tomcat# cd webapps
-root@f1421fbdf093:/usr/local/tomcat/webapps# l</p>
-<h1 id="&#x8FDB;&#x5165;&#x5BB9;&#x5668;">&#x8FDB;&#x5165;&#x5BB9;&#x5668;</h1>
-<p>[root@iz8g9301trfnpxz home]# docker exec -it tomcat01 /bin/bash</p>
-<h1 id="&#x53D1;&#x73B0;&#x95EE;&#x9898;1linux-&#x547D;&#x4EE4;&#x5C11;&#x4E86;2&#x6CA1;&#x6709;webapps-&#x963F;&#x91CC;&#x4E91;&#x955C;&#x50CF;&#x7684;&#x539F;&#x56E0;&#x4ED6;&#x4F7F;&#x7528;&#x6700;&#x5C0F;&#x7684;">&#x53D1;&#x73B0;&#x95EE;&#x9898;:1,linux &#x547D;&#x4EE4;&#x5C11;&#x4E86;,2.&#x6CA1;&#x6709;webapps .&#x963F;&#x91CC;&#x4E91;&#x955C;&#x50CF;&#x7684;&#x539F;&#x56E0;,&#x4ED6;&#x4F7F;&#x7528;&#x6700;&#x5C0F;&#x7684;</h1>
-<p>```</p>
+<pre><code class="lang-cmd"># &#x5B98;&#x65B9;&#x7684;&#x4F7F;&#x7528;
+docker run -it --rm tomcat:<span class="hljs-number">9</span>.<span class="hljs-number">0</span>
+# &#x6211;&#x4EEC;&#x4E4B;&#x524D;&#x7684;&#x542F;&#x52A8;&#x90FD;&#x662F;&#x540E;&#x53F0;,&#x505C;&#x6B62;&#x4E86;&#x5BB9;&#x5668;&#x4E4B;&#x540E;,&#x5BB9;&#x5668;&#x8FD8;&#x662F;&#x53EF;&#x4EE5;&#x67E5;&#x5230; 
+docker run -it --rm ,&#x4E00;&#x822C;&#x7528;&#x4E8E;&#x6D4B;&#x8BD5;,&#x7528;&#x5B8C;&#x5373;&#x5220;&#x9664;
+# &#x5148;&#x4E0B;&#x8F7D; &#x5728;&#x542F;&#x52A8;
+docker pull tomcat:<span class="hljs-number">9</span>.<span class="hljs-number">0</span>
+# &#x542F;&#x52A8;&#x8FD0;&#x884C;
+docker run -d -p <span class="hljs-number">3355</span>:<span class="hljs-number">8080</span> --name tomcat01 tomcat
+# &#x6D4B;&#x8BD5;&#x8BBF;&#x95EE;&#x6CA1;&#x6709;&#x95EE;&#x9898;
+<span class="hljs-function">root@f1421fbdf093:/<span class="hljs-title">usr</span>/<span class="hljs-title">local</span>/<span class="hljs-title">tomcat</span># <span class="hljs-title">ls</span>
+<span class="hljs-title">BUILDING.txt</span>     <span class="hljs-title">LICENSE</span>  <span class="hljs-title">README.md</span>     <span class="hljs-title">RUNNING.txt</span>  <span class="hljs-title">conf</span>  <span class="hljs-title">logs</span>        <span class="hljs-title">temp</span>     <span class="hljs-title">webapps.dist</span>
+<span class="hljs-title">CONTRIBUTING.md</span>  <span class="hljs-title">NOTICE</span>   <span class="hljs-title">RELEASE</span>-<span class="hljs-title">NOTES</span>  <span class="hljs-title">bin</span>          <span class="hljs-title">lib</span>   <span class="hljs-title">native</span>-<span class="hljs-title">jni</span>-<span class="hljs-title">lib</span>  <span class="hljs-title">webapps</span>  <span class="hljs-title">work</span>
+<span class="hljs-title">root</span>@<span class="hljs-title">f1421fbdf093</span>:/<span class="hljs-title">usr</span>/<span class="hljs-title">local</span>/<span class="hljs-title">tomcat</span># <span class="hljs-title">cd</span> <span class="hljs-title">webapps</span>
+<span class="hljs-title">root</span>@<span class="hljs-title">f1421fbdf093</span>:/<span class="hljs-title">usr</span>/<span class="hljs-title">local</span>/<span class="hljs-title">tomcat</span>/<span class="hljs-title">webapps</span># <span class="hljs-title">l</span>
+# &#x8FDB;&#x5165;&#x5BB9;&#x5668;
+[<span class="hljs-title">root</span>@<span class="hljs-title">iz8g9301trfnpxz</span> <span class="hljs-title">home</span>]# <span class="hljs-title">docker</span> <span class="hljs-title">exec</span> -<span class="hljs-title">it</span> <span class="hljs-title">tomcat01</span> /<span class="hljs-title">bin</span>/<span class="hljs-title">bash</span>
+# &#x53D1;&#x73B0;&#x95EE;&#x9898;:1,<span class="hljs-title">linux</span> &#x547D;&#x4EE4;&#x5C11;&#x4E86;,2.&#x6CA1;&#x6709;<span class="hljs-title">webapps</span> .&#x963F;&#x91CC;&#x4E91;&#x955C;&#x50CF;&#x7684;&#x539F;&#x56E0;,&#x4ED6;&#x4F7F;&#x7528;&#x6700;&#x5C0F;&#x7684;
+</span></code></pre>
 <p>&#x601D;&#x8003;&#x95EE;&#x9898;:&#x6211;&#x4EEC;&#x6BCF;&#x6B21;&#x8FDB;&#x5165;&#x5BB9;&#x5668;&#x5341;&#x5206;&#x9EBB;&#x70E6;,&#x5982;&#x679C;&#x8981;&#x662F;&#x53EF;&#x4EE5;&#x5728;&#x5BB9;&#x5668;&#x5916;&#x90E8;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x6620;&#x5C04;&#x8DEF;&#x5F84;,&#x7136;&#x540E;&#x80FD;&#x591F;&#x5728;&#x6211;&#x4EEC;&#x7684;&#x5916;&#x90E8;&#x653E;&#x7F6E;&#x9879;&#x76EE;,&#x5C31;&#x81EA;&#x52A8;&#x540C;&#x6B65;&#x5230;&#x5185;&#x5BB9;&#x5C31;&#x597D;&#x4E86;! </p>
 <p>docker &#x5BB9;&#x5668; tomcat</p>
 <p>mysql&#x653E;&#x5230;docker &#x4E0D;&#x79D1;&#x5B66;</p>
@@ -804,7 +803,7 @@ root@f1421fbdf093:/usr/local/tomcat/webapps# l</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"部署tomcat","tags":"docker tomcat","level":"1.2.15","depth":2,"next":{"title":"部署es","level":"1.2.16","depth":2,"path":"base/2020-07-16-docker_部署es.md","ref":"base/2020-07-16-docker_部署es.md","articles":[]},"previous":{"title":"部署nginx","level":"1.2.14","depth":2,"path":"base/2020-07-14-docker_部署nginx.md","ref":"base/2020-07-14-docker_部署nginx.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"base/2020-07-15-docker_部署tomcat.md","mtime":"2020-08-12T11:53:49.681Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-23T06:47:51.314Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"部署tomcat","tags":"docker tomcat","level":"1.2.15","depth":2,"next":{"title":"部署es","level":"1.2.16","depth":2,"path":"base/2020-07-16-docker_部署es.md","ref":"base/2020-07-16-docker_部署es.md","articles":[]},"previous":{"title":"部署nginx","level":"1.2.14","depth":2,"path":"base/2020-07-14-docker_部署nginx.md","ref":"base/2020-07-14-docker_部署nginx.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"base/2020-07-15-docker_部署tomcat.md","mtime":"2021-03-22T11:56:23.556Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-22T11:57:43.280Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

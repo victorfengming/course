@@ -20,7 +20,7 @@ centos版本
 
 ```
 
-```shell
+```cmd
 ## 系统版本
 NAME="CentOS Linux"
 VERSION="7 (Core)"
@@ -60,13 +60,13 @@ $ sudo yum remove docker \
 
 2.# 需要的安装包
 
-```shell
+```cmd
 sudo yum install -y yum-utils
 ```
 
 # 3.设置镜像的仓库
 
-```shell
+```cmd
 sudo yum-config-manager \
     --add-repo \
     https://download.docker.com/linux/centos/docker-ce.repo
@@ -77,7 +77,7 @@ sudo yum-config-manager \
 
 docker阿里云国内镜像地址
 
-```shell
+```cmd
 sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
 # 推荐使用阿里云的
 ```
@@ -90,7 +90,7 @@ sudo yum makecache fast
 
 # 4. 现在就可以安装最新的docker的引擎
 
-```shell
+```cmd
 sudo yum install docker-ce docker-ce-cli containerd.io
 ```
 
@@ -99,13 +99,13 @@ docker-ee 是企业版本的
 
 # 5. 如果想要安装不是最新版本的,也可以指定安装的版本
 
-```shell
+```cmd
 sudo yum install docker-ce-<VERSION_STRING> docker-ce-cli-<VERSION_STRING> containerd.io
 ```
 
 安装完成之后就可以启动docker,最后helloworld
 
-```shell
+```cmd
 sudo systemctl start docker
 ```
 
@@ -113,7 +113,7 @@ sudo systemctl start docker
 6. 使用docker version 看看安装成功没
 
 
-```shell
+```cmd
 [root@iz8g9301trfnpxz /]# docker version
 Client: Docker Engine - Community
  Version:           19.03.12
@@ -151,7 +151,7 @@ Server: Docker Engine - Community
 
 7. docker helloworld
 
-```shell
+```cmd
 [root@iz8g9301trfnpxz /]# docker run hello-world
 
 Hello from Docker!
@@ -180,7 +180,7 @@ For more examples and ideas, visit:
 8. 查看一下下载的helloworld的镜像
    在不在
 
-```shell
+```cmd
 [root@iz8g9301trfnpxz /]# docker images
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 hello-world         latest              bf756fb1ae65        6 months ago        13.3kB

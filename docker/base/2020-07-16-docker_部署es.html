@@ -741,106 +741,114 @@
 <p>title: &quot;Docker&#x90E8;&#x7F72;elasticsearch&quot;</p>
 <h2 id="tags-docker-">tags: docker </h2>
 <h1 id="&#x4F5C;&#x4E1A;3&#x90E8;&#x7F72;eskibana">&#x4F5C;&#x4E1A;3:&#x90E8;&#x7F72;es+kibana</h1>
-<p>```shell script</p>
-<h1 id="es&#x66B4;&#x6F0F;&#x7684;&#x7AEF;&#x53E3;&#x5F88;&#x591A;">es&#x66B4;&#x6F0F;&#x7684;&#x7AEF;&#x53E3;&#x5F88;&#x591A;</h1>
-<h1 id="es-&#x5341;&#x5206;&#x8017;&#x5185;&#x5B58;">es &#x5341;&#x5206;&#x8017;&#x5185;&#x5B58;</h1>
-<h1 id="es-&#x7684;&#x6570;&#x636E;&#x4E00;&#x822C;&#x9700;&#x8981;&#x653E;&#x7F6E;&#x5230;&#x5B89;&#x5168;&#x76EE;&#x5F55;">es &#x7684;&#x6570;&#x636E;&#x4E00;&#x822C;&#x9700;&#x8981;&#x653E;&#x7F6E;&#x5230;&#x5B89;&#x5168;&#x76EE;&#x5F55;</h1>
-<h1 id="&#x5B98;&#x65B9;&#x8FD9;&#x4E48;&#x5199;&#x7684;">&#x5B98;&#x65B9;&#x8FD9;&#x4E48;&#x5199;&#x7684;</h1>
-<h1 id="&#x542F;&#x52A8;elasticsearch">&#x542F;&#x52A8;elasticsearch</h1>
-<p>docker run -d --name elasticsearch --net somenetwork -p 9200:9200 -p 9300:9300 -e &quot;discovery.type=single-node&quot; elasticsearch:7.6.2</p>
-<h1 id="-net-somenetwork">--net somenetwork</h1>
-<h1 id="&#x542F;&#x52A8;&#x4E86;-linux&#x5C31;&#x5361;&#x4F4F;&#x4E86;">&#x542F;&#x52A8;&#x4E86; linux&#x5C31;&#x5361;&#x4F4F;&#x4E86;</h1>
-<p>docker stats # &#x67E5;&#x770B;cpu&#x72B6;&#x6001;</p>
-<h1 id="es&#x662F;&#x5341;&#x5206;&#x8017;&#x5185;&#x5B58;&#x7684;-1&#x6838;2g-&#x73B0;&#x5728;&#x4ED6;&#x662F;&#x542F;&#x52A8;&#x4E0D;&#x8D77;&#x6765;&#x4E86;">es&#x662F;&#x5341;&#x5206;&#x8017;&#x5185;&#x5B58;&#x7684; 1&#x6838;2G &#x73B0;&#x5728;&#x4ED6;&#x662F;&#x542F;&#x52A8;&#x4E0D;&#x8D77;&#x6765;&#x4E86;</h1>
-<h1 id="&#x505C;&#x6B62;&#x6211;&#x4EEC;&#x7684;docker">&#x505C;&#x6B62;&#x6211;&#x4EEC;&#x7684;docker</h1>
-<h1 id="&#x6D4B;&#x8BD5;&#x4E00;&#x4E0B;es&#x662F;&#x5426;">&#x6D4B;&#x8BD5;&#x4E00;&#x4E0B;es&#x662F;&#x5426;</h1>
-<h1 id="&#x589E;&#x52A0;&#x5185;&#x5B58;&#x7684;&#x64CD;&#x4F5C;">&#x589E;&#x52A0;&#x5185;&#x5B58;&#x7684;&#x64CD;&#x4F5C;</h1>
-<h1 id="&#x8D76;&#x7D27;&#x5173;&#x95ED;">&#x8D76;&#x7D27;&#x5173;&#x95ED;</h1>
-<p>docker run -d --name elasticsearch -p 9200:9200 -p -e &quot;discovery.type=single-node&quot; -e ES_JAVA_OPTS=&quot;-Xms64m -Xmx512m&quot; elasticsearch:7.6.2</p>
-<pre><code>
-&#x8FD9;&#x56DE;&#x518D;&#x8BD5;&#x8BD5;
-```shell script
-[root@iz8g9301trfnpxz home]# docker ps
+<pre><code class="lang-cmd">
+# es&#x66B4;&#x6F0F;&#x7684;&#x7AEF;&#x53E3;&#x5F88;&#x591A;
+# es &#x5341;&#x5206;&#x8017;&#x5185;&#x5B58;
+# es &#x7684;&#x6570;&#x636E;&#x4E00;&#x822C;&#x9700;&#x8981;&#x653E;&#x7F6E;&#x5230;&#x5B89;&#x5168;&#x76EE;&#x5F55;
+# &#x5B98;&#x65B9;&#x8FD9;&#x4E48;&#x5199;&#x7684;
+# &#x542F;&#x52A8;elasticsearch
+
+docker run -d --name elasticsearch --<span class="hljs-built_in">net</span> somenetwork -p <span class="hljs-number">9200</span>:<span class="hljs-number">9200</span> -p <span class="hljs-number">9300</span>:<span class="hljs-number">9300</span> -e &quot;discovery.<span class="hljs-built_in">type</span>=single-node&quot; elasticsearch:<span class="hljs-number">7</span>.<span class="hljs-number">6</span>.<span class="hljs-number">2</span>
+
+# --<span class="hljs-built_in">net</span> somenetwork
+# &#x542F;&#x52A8;&#x4E86; linux&#x5C31;&#x5361;&#x4F4F;&#x4E86;
+
+docker stats # &#x67E5;&#x770B;cpu&#x72B6;&#x6001;
+
+# es&#x662F;&#x5341;&#x5206;&#x8017;&#x5185;&#x5B58;&#x7684; <span class="hljs-number">1</span>&#x6838;<span class="hljs-number">2</span>G &#x73B0;&#x5728;&#x4ED6;&#x662F;&#x542F;&#x52A8;&#x4E0D;&#x8D77;&#x6765;&#x4E86;
+
+# &#x505C;&#x6B62;&#x6211;&#x4EEC;&#x7684;docker
+
+# &#x6D4B;&#x8BD5;&#x4E00;&#x4E0B;es&#x662F;&#x5426;
+
+# &#x589E;&#x52A0;&#x5185;&#x5B58;&#x7684;&#x64CD;&#x4F5C;
+
+# &#x8D76;&#x7D27;&#x5173;&#x95ED;
+docker run -d --name elasticsearch -p <span class="hljs-number">9200</span>:<span class="hljs-number">9200</span> -p -e &quot;discovery.<span class="hljs-built_in">type</span>=single-node&quot; -e ES_JAVA_OPTS=&quot;-Xms64m -Xmx512m&quot; elasticsearch:<span class="hljs-number">7</span>.<span class="hljs-number">6</span>.<span class="hljs-number">2</span>
+</code></pre>
+<p>&#x8FD9;&#x56DE;&#x518D;&#x8BD5;&#x8BD5;</p>
+<pre><code class="lang-cmd">[root@iz8g9301trfnpxz home]# docker ps
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                  NAMES
-f9277b55c181        nginx               &quot;/docker-entrypoint.&#x2026;&quot;   36 minutes ago      Up 36 minutes       0.0.0.0:3344-&gt;80/tcp   nginx01
+f9277b55c181        nginx               &quot;/docker-entrypoint.&#x2026;&quot;   <span class="hljs-number">36</span> minutes ago      Up <span class="hljs-number">36</span> minutes       <span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>:<span class="hljs-number">3344</span>-&gt;<span class="hljs-number">80</span>/tcp   nginx01
 [root@iz8g9301trfnpxz home]# docker stop f9277b55c181
 f9277b55c181
-[root@iz8g9301trfnpxz home]# docker run -d --name elasticsearch02 -p 9200:9200 -e &quot;discovery.type=single-node&quot; -e ES_JAVA_OPTS=&quot;-Xms64m -Xmx512m&quot; elasticsearch:7.6.2
+[root@iz8g9301trfnpxz home]# docker run -d --name elasticsearch02 -p <span class="hljs-number">9200</span>:<span class="hljs-number">9200</span> -e &quot;discovery.<span class="hljs-built_in">type</span>=single-node&quot; -e ES_JAVA_OPTS=&quot;-Xms64m -Xmx512m&quot; elasticsearch:<span class="hljs-number">7</span>.<span class="hljs-number">6</span>.<span class="hljs-number">2</span>
 f693ce46235c8b7a4106cda033e9e6211ffc0f978457be3ccf72abe23acac24a
 [root@iz8g9301trfnpxz home]# docker stats
 
-CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
-f693ce46235c        elasticsearch02     0.05%               204.9MiB / 1.796GiB   11.14%              0B / 0B             0B / 0B             19
+CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               <span class="hljs-built_in">NET</span> I/O             BLOCK I/O           PIDS
+f693ce46235c        elasticsearch02     <span class="hljs-number">0</span>.<span class="hljs-number">05</span>%               <span class="hljs-number">204</span>.<span class="hljs-number">9</span>MiB / <span class="hljs-number">1</span>.<span class="hljs-number">796</span>GiB   <span class="hljs-number">11</span>.<span class="hljs-number">14</span>%              <span class="hljs-number">0</span>B / <span class="hljs-number">0</span>B             <span class="hljs-number">0</span>B / <span class="hljs-number">0</span>B             <span class="hljs-number">19</span>
 
-CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
-f693ce46235c        elasticsearch02     0.05%               204.9MiB / 1.796GiB   11.14%              0B / 0B             0B / 0B             19
+CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               <span class="hljs-built_in">NET</span> I/O             BLOCK I/O           PIDS
+f693ce46235c        elasticsearch02     <span class="hljs-number">0</span>.<span class="hljs-number">05</span>%               <span class="hljs-number">204</span>.<span class="hljs-number">9</span>MiB / <span class="hljs-number">1</span>.<span class="hljs-number">796</span>GiB   <span class="hljs-number">11</span>.<span class="hljs-number">14</span>%              <span class="hljs-number">0</span>B / <span class="hljs-number">0</span>B             <span class="hljs-number">0</span>B / <span class="hljs-number">0</span>B             <span class="hljs-number">19</span>
 
-CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
-f693ce46235c        elasticsearch02     98.78%              226.2MiB / 1.796GiB   12.30%              0B / 0B             0B / 0B             19
+CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               <span class="hljs-built_in">NET</span> I/O             BLOCK I/O           PIDS
+f693ce46235c        elasticsearch02     <span class="hljs-number">98</span>.<span class="hljs-number">78</span>%              <span class="hljs-number">226</span>.<span class="hljs-number">2</span>MiB / <span class="hljs-number">1</span>.<span class="hljs-number">796</span>GiB   <span class="hljs-number">12</span>.<span class="hljs-number">30</span>%              <span class="hljs-number">0</span>B / <span class="hljs-number">0</span>B             <span class="hljs-number">0</span>B / <span class="hljs-number">0</span>B             <span class="hljs-number">19</span>
 
-CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
-f693ce46235c        elasticsearch02     98.78%              226.2MiB / 1.796GiB   12.30%              0B / 0B             0B / 0B             19
+CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               <span class="hljs-built_in">NET</span> I/O             BLOCK I/O           PIDS
+f693ce46235c        elasticsearch02     <span class="hljs-number">98</span>.<span class="hljs-number">78</span>%              <span class="hljs-number">226</span>.<span class="hljs-number">2</span>MiB / <span class="hljs-number">1</span>.<span class="hljs-number">796</span>GiB   <span class="hljs-number">12</span>.<span class="hljs-number">30</span>%              <span class="hljs-number">0</span>B / <span class="hljs-number">0</span>B             <span class="hljs-number">0</span>B / <span class="hljs-number">0</span>B             <span class="hljs-number">19</span>
 
-CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
-f693ce46235c        elasticsearch02     98.14%              233.3MiB / 1.796GiB   12.68%              0B / 0B             0B / 0B             19
+CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               <span class="hljs-built_in">NET</span> I/O             BLOCK I/O           PIDS
+f693ce46235c        elasticsearch02     <span class="hljs-number">98</span>.<span class="hljs-number">14</span>%              <span class="hljs-number">233</span>.<span class="hljs-number">3</span>MiB / <span class="hljs-number">1</span>.<span class="hljs-number">796</span>GiB   <span class="hljs-number">12</span>.<span class="hljs-number">68</span>%              <span class="hljs-number">0</span>B / <span class="hljs-number">0</span>B             <span class="hljs-number">0</span>B / <span class="hljs-number">0</span>B             <span class="hljs-number">19</span>
 
-CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
-f693ce46235c        elasticsearch02     98.14%              233.3MiB / 1.796GiB   12.68%              0B / 0B             0B / 0B             19
+CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               <span class="hljs-built_in">NET</span> I/O             BLOCK I/O           PIDS
+f693ce46235c        elasticsearch02     <span class="hljs-number">98</span>.<span class="hljs-number">14</span>%              <span class="hljs-number">233</span>.<span class="hljs-number">3</span>MiB / <span class="hljs-number">1</span>.<span class="hljs-number">796</span>GiB   <span class="hljs-number">12</span>.<span class="hljs-number">68</span>%              <span class="hljs-number">0</span>B / <span class="hljs-number">0</span>B             <span class="hljs-number">0</span>B / <span class="hljs-number">0</span>B             <span class="hljs-number">19</span>
 
-CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
-f693ce46235c        elasticsearch02     99.96%              244.5MiB / 1.796GiB   13.29%              0B / 0B             0B / 0B             19
+CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               <span class="hljs-built_in">NET</span> I/O             BLOCK I/O           PIDS
+f693ce46235c        elasticsearch02     <span class="hljs-number">99</span>.<span class="hljs-number">96</span>%              <span class="hljs-number">244</span>.<span class="hljs-number">5</span>MiB / <span class="hljs-number">1</span>.<span class="hljs-number">796</span>GiB   <span class="hljs-number">13</span>.<span class="hljs-number">29</span>%              <span class="hljs-number">0</span>B / <span class="hljs-number">0</span>B             <span class="hljs-number">0</span>B / <span class="hljs-number">0</span>B             <span class="hljs-number">19</span>
 
-CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
-f693ce46235c        elasticsearch02     99.96%              244.5MiB / 1.796GiB   13.29%              0B / 0B             0B / 0B             19
+CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               <span class="hljs-built_in">NET</span> I/O             BLOCK I/O           PIDS
+f693ce46235c        elasticsearch02     <span class="hljs-number">99</span>.<span class="hljs-number">96</span>%              <span class="hljs-number">244</span>.<span class="hljs-number">5</span>MiB / <span class="hljs-number">1</span>.<span class="hljs-number">796</span>GiB   <span class="hljs-number">13</span>.<span class="hljs-number">29</span>%              <span class="hljs-number">0</span>B / <span class="hljs-number">0</span>B             <span class="hljs-number">0</span>B / <span class="hljs-number">0</span>B             <span class="hljs-number">19</span>
 
-CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
-f693ce46235c        elasticsearch02     97.79%              253.4MiB / 1.796GiB   13.78%              0B / 0B             0B / 0B             19
+CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               <span class="hljs-built_in">NET</span> I/O             BLOCK I/O           PIDS
+f693ce46235c        elasticsearch02     <span class="hljs-number">97</span>.<span class="hljs-number">79</span>%              <span class="hljs-number">253</span>.<span class="hljs-number">4</span>MiB / <span class="hljs-number">1</span>.<span class="hljs-number">796</span>GiB   <span class="hljs-number">13</span>.<span class="hljs-number">78</span>%              <span class="hljs-number">0</span>B / <span class="hljs-number">0</span>B             <span class="hljs-number">0</span>B / <span class="hljs-number">0</span>B             <span class="hljs-number">19</span>
 
-CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
-f693ce46235c        elasticsearch02     97.79%              253.4MiB / 1.796GiB   13.78%              0B / 0B             0B / 0B             19
+CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               <span class="hljs-built_in">NET</span> I/O             BLOCK I/O           PIDS
+f693ce46235c        elasticsearch02     <span class="hljs-number">97</span>.<span class="hljs-number">79</span>%              <span class="hljs-number">253</span>.<span class="hljs-number">4</span>MiB / <span class="hljs-number">1</span>.<span class="hljs-number">796</span>GiB   <span class="hljs-number">13</span>.<span class="hljs-number">78</span>%              <span class="hljs-number">0</span>B / <span class="hljs-number">0</span>B             <span class="hljs-number">0</span>B / <span class="hljs-number">0</span>B             <span class="hljs-number">19</span>
 
-CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
-f693ce46235c        elasticsearch02     98.67%              266.3MiB / 1.796GiB   14.47%              0B / 0B             0B / 0B             20
+CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               <span class="hljs-built_in">NET</span> I/O             BLOCK I/O           PIDS
+f693ce46235c        elasticsearch02     <span class="hljs-number">98</span>.<span class="hljs-number">67</span>%              <span class="hljs-number">266</span>.<span class="hljs-number">3</span>MiB / <span class="hljs-number">1</span>.<span class="hljs-number">796</span>GiB   <span class="hljs-number">14</span>.<span class="hljs-number">47</span>%              <span class="hljs-number">0</span>B / <span class="hljs-number">0</span>B             <span class="hljs-number">0</span>B / <span class="hljs-number">0</span>B             <span class="hljs-number">20</span>
 
-CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
-f693ce46235c        elasticsearch02     98.67%              266.3MiB / 1.796GiB   14.47%              0B / 0B             0B / 0B             20
+CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               <span class="hljs-built_in">NET</span> I/O             BLOCK I/O           PIDS
+f693ce46235c        elasticsearch02     <span class="hljs-number">98</span>.<span class="hljs-number">67</span>%              <span class="hljs-number">266</span>.<span class="hljs-number">3</span>MiB / <span class="hljs-number">1</span>.<span class="hljs-number">796</span>GiB   <span class="hljs-number">14</span>.<span class="hljs-number">47</span>%              <span class="hljs-number">0</span>B / <span class="hljs-number">0</span>B             <span class="hljs-number">0</span>B / <span class="hljs-number">0</span>B             <span class="hljs-number">20</span>
 
-CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
-f693ce46235c        elasticsearch02     99.21%              270.3MiB / 1.796GiB   14.70%              0B / 0B             0B / 0B             20
+CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               <span class="hljs-built_in">NET</span> I/O             BLOCK I/O           PIDS
+f693ce46235c        elasticsearch02     <span class="hljs-number">99</span>.<span class="hljs-number">21</span>%              <span class="hljs-number">270</span>.<span class="hljs-number">3</span>MiB / <span class="hljs-number">1</span>.<span class="hljs-number">796</span>GiB   <span class="hljs-number">14</span>.<span class="hljs-number">70</span>%              <span class="hljs-number">0</span>B / <span class="hljs-number">0</span>B             <span class="hljs-number">0</span>B / <span class="hljs-number">0</span>B             <span class="hljs-number">20</span>
 
-CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
-f693ce46235c        elasticsearch02     99.21%              270.3MiB / 1.796GiB   14.70%              0B / 0B             0B / 0B             20
+CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               <span class="hljs-built_in">NET</span> I/O             BLOCK I/O           PIDS
+f693ce46235c        elasticsearch02     <span class="hljs-number">99</span>.<span class="hljs-number">21</span>%              <span class="hljs-number">270</span>.<span class="hljs-number">3</span>MiB / <span class="hljs-number">1</span>.<span class="hljs-number">796</span>GiB   <span class="hljs-number">14</span>.<span class="hljs-number">70</span>%              <span class="hljs-number">0</span>B / <span class="hljs-number">0</span>B             <span class="hljs-number">0</span>B / <span class="hljs-number">0</span>B             <span class="hljs-number">20</span>
 
-CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
-f693ce46235c        elasticsearch02     95.08%              276.7MiB / 1.796GiB   15.04%              0B / 0B             0B / 0B             26
+CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               <span class="hljs-built_in">NET</span> I/O             BLOCK I/O           PIDS
+f693ce46235c        elasticsearch02     <span class="hljs-number">95</span>.<span class="hljs-number">08</span>%              <span class="hljs-number">276</span>.<span class="hljs-number">7</span>MiB / <span class="hljs-number">1</span>.<span class="hljs-number">796</span>GiB   <span class="hljs-number">15</span>.<span class="hljs-number">04</span>%              <span class="hljs-number">0</span>B / <span class="hljs-number">0</span>B             <span class="hljs-number">0</span>B / <span class="hljs-number">0</span>B             <span class="hljs-number">26</span>
 
-CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
-f693ce46235c        elasticsearch02     95.08%              276.7MiB / 1.796GiB   15.04%              0B / 0B             0B / 0B             26
+CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               <span class="hljs-built_in">NET</span> I/O             BLOCK I/O           PIDS
+f693ce46235c        elasticsearch02     <span class="hljs-number">95</span>.<span class="hljs-number">08</span>%              <span class="hljs-number">276</span>.<span class="hljs-number">7</span>MiB / <span class="hljs-number">1</span>.<span class="hljs-number">796</span>GiB   <span class="hljs-number">15</span>.<span class="hljs-number">04</span>%              <span class="hljs-number">0</span>B / <span class="hljs-number">0</span>B             <span class="hljs-number">0</span>B / <span class="hljs-number">0</span>B             <span class="hljs-number">26</span>
 ^C
 [root@iz8g9301trfnpxz home]# clear
 [root@iz8g9301trfnpxz home]# docker ps
 CONTAINER ID        IMAGE                 COMMAND                  CREATED             STATUS              PORTS                              NAMES
-f693ce46235c        elasticsearch:7.6.2   &quot;/usr/local/bin/dock&#x2026;&quot;   27 seconds ago      Up 26 seconds       0.0.0.0:9200-&gt;9200/tcp, 9300/tcp   elasticsearch02
-[root@iz8g9301trfnpxz home]# curl localhost:9200
+f693ce46235c        elasticsearch:<span class="hljs-number">7</span>.<span class="hljs-number">6</span>.<span class="hljs-number">2</span>   &quot;/usr/local/bin/dock&#x2026;&quot;   <span class="hljs-number">27</span> seconds ago      Up <span class="hljs-number">26</span> seconds       <span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>:<span class="hljs-number">9200</span>-&gt;<span class="hljs-number">9200</span>/tcp, <span class="hljs-number">9300</span>/tcp   elasticsearch02
+[root@iz8g9301trfnpxz home]# curl localhost:<span class="hljs-number">9200</span>
 {
   &quot;name&quot; : &quot;f693ce46235c&quot;,
   &quot;cluster_name&quot; : &quot;docker-cluster&quot;,
   &quot;cluster_uuid&quot; : &quot;woaoctzxSoWCx_ksjXFTbg&quot;,
   &quot;version&quot; : {
-    &quot;number&quot; : &quot;7.6.2&quot;,
+    &quot;number&quot; : &quot;<span class="hljs-number">7</span>.<span class="hljs-number">6</span>.<span class="hljs-number">2</span>&quot;,
     &quot;build_flavor&quot; : &quot;default&quot;,
     &quot;build_type&quot; : &quot;docker&quot;,
     &quot;build_hash&quot; : &quot;ef48eb35cf30adf4db14086e8aabd07ef6fb113f&quot;,
-    &quot;build_date&quot; : &quot;2020-03-26T06:34:37.794943Z&quot;,
+    &quot;build_date&quot; : &quot;<span class="hljs-number">2020</span>-<span class="hljs-number">03</span>-<span class="hljs-number">26</span>T06:<span class="hljs-number">34</span>:<span class="hljs-number">37</span>.<span class="hljs-number">794943</span>Z&quot;,
     &quot;build_snapshot&quot; : false,
-    &quot;lucene_version&quot; : &quot;8.4.0&quot;,
-    &quot;minimum_wire_compatibility_version&quot; : &quot;6.8.0&quot;,
-    &quot;minimum_index_compatibility_version&quot; : &quot;6.0.0-beta1&quot;
+    &quot;lucene_version&quot; : &quot;<span class="hljs-number">8</span>.<span class="hljs-number">4</span>.<span class="hljs-number">0</span>&quot;,
+    &quot;minimum_wire_compatibility_version&quot; : &quot;<span class="hljs-number">6</span>.<span class="hljs-number">8</span>.<span class="hljs-number">0</span>&quot;,
+    &quot;minimum_index_compatibility_version&quot; : &quot;<span class="hljs-number">6</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>-beta1&quot;
   },
-  &quot;tagline&quot; : &quot;You Know, for Search&quot;
+  &quot;tagline&quot; : &quot;You Know, <span class="hljs-keyword">for</span> Search&quot;
 }
 [root@iz8g9301trfnpxz home]#
-</code></pre><h1 id="&#x4F7F;&#x7528;kibana&#x8FDE;&#x63A5;elasticsearch">&#x4F7F;&#x7528;kibana&#x8FDE;&#x63A5;elasticsearch</h1>
+</code></pre>
+<h1 id="&#x4F7F;&#x7528;kibana&#x8FDE;&#x63A5;elasticsearch">&#x4F7F;&#x7528;kibana&#x8FDE;&#x63A5;elasticsearch</h1>
 
                                 
                                 </section>
@@ -884,7 +892,7 @@ f693ce46235c        elasticsearch:7.6.2   &quot;/usr/local/bin/dock&#x2026;&quot
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"部署es","level":"1.2.16","depth":2,"next":{"title":"使用kibana连接es","level":"1.2.17","depth":2,"path":"base/2020-07-17-docker_使用kibana连接es.md","ref":"base/2020-07-17-docker_使用kibana连接es.md","articles":[]},"previous":{"title":"部署tomcat","level":"1.2.15","depth":2,"path":"base/2020-07-15-docker_部署tomcat.md","ref":"base/2020-07-15-docker_部署tomcat.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"base/2020-07-16-docker_部署es.md","mtime":"2020-08-12T11:53:49.681Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-23T06:47:51.314Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"部署es","level":"1.2.16","depth":2,"next":{"title":"使用kibana连接es","level":"1.2.17","depth":2,"path":"base/2020-07-17-docker_使用kibana连接es.md","ref":"base/2020-07-17-docker_使用kibana连接es.md","articles":[]},"previous":{"title":"部署tomcat","level":"1.2.15","depth":2,"path":"base/2020-07-15-docker_部署tomcat.md","ref":"base/2020-07-15-docker_部署tomcat.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"base/2020-07-16-docker_部署es.md","mtime":"2021-03-22T11:56:23.497Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-22T11:57:43.280Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

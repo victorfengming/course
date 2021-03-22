@@ -26,7 +26,7 @@ python应用,计数器
 
 1. 创建文件夹
 
-```shell
+```cmd
 [root@iz8g9301trfnpxz home]# mkdir composetest
 [root@iz8g9301trfnpxz home]# cd composetest/
 [root@iz8g9301trfnpxz composetest]# ll
@@ -75,7 +75,7 @@ redis
 
 创建dockerfile
 
-```shell
+```cmd
 FROM python:3.7-alpine
 WORKDIR /code
 ENV FLASK_APP app.py
