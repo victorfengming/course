@@ -1,0 +1,1567 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)https://victorfengming.gitee.io/ -->
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="关于程序、设计以及架构 | 小明哥，Javaer ，Software Engineer">
+    <meta name="keywords" content="小明哥, mercyblitz, victor, 小明哥的技术博客">
+    <meta name="theme-color" content="#000000">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="小明哥的技术博客 - 小明哥的技术博客">
+
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="在这里探讨Python相关技术,分享一些个人总结的经验和学习中遇到的各种坑 o～(▔▽▔o～) ">
+
+    <meta property="og:image" content="https://victorfengming.gitee.io/img/avatar-mecyblitz.jpg">
+    <meta property="og:url" content="https://victorfengming.gitee.io/">
+    <meta property="og:site_name" content="小明哥的技术博客">
+
+    <title>小明哥的技术博客 - 小明哥的技术博客</title>
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="https://victorfengming.gitee.io/pwa/manifest.json">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://victorfengming.gitee.io/img/favicon.ico">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://victorfengming.gitee.io/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="./src/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./src/hux-blog.min.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="./src/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script src="./src/fastclick.min.js.下载"></script>
+    <script></script>
+    <style type="text/css">
+        .MathJax_Hover_Frame {
+            border-radius: .25em;
+            -webkit-border-radius: .25em;
+            -moz-border-radius: .25em;
+            -khtml-border-radius: .25em;
+            box-shadow: 0px 0px 15px #83A;
+            -webkit-box-shadow: 0px 0px 15px #83A;
+            -moz-box-shadow: 0px 0px 15px #83A;
+            -khtml-box-shadow: 0px 0px 15px #83A;
+            border: 1px solid #A6D ! important;
+            display: inline-block;
+            position: absolute
+        }
+
+        .MathJax_Menu_Button .MathJax_Hover_Arrow {
+            position: absolute;
+            cursor: pointer;
+            display: inline-block;
+            border: 2px solid #AAA;
+            border-radius: 4px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -khtml-border-radius: 4px;
+            font-family: 'Courier New', Courier;
+            font-size: 9px;
+            color: #F0F0F0
+        }
+
+        .MathJax_Menu_Button .MathJax_Hover_Arrow span {
+            display: block;
+            background-color: #AAA;
+            border: 1px solid;
+            border-radius: 3px;
+            line-height: 0;
+            padding: 4px
+        }
+
+        .MathJax_Hover_Arrow:hover {
+            color: white !important;
+            border: 2px solid #CCC !important
+        }
+
+        .MathJax_Hover_Arrow:hover span {
+            background-color: #CCC !important
+        }
+    </style>
+    <style type="text/css">#MathJax_About {
+        position: fixed;
+        left: 50%;
+        width: auto;
+        text-align: center;
+        border: 3px outset;
+        padding: 1em 2em;
+        background-color: #DDDDDD;
+        color: black;
+        cursor: default;
+        font-family: message-box;
+        font-size: 120%;
+        font-style: normal;
+        text-indent: 0;
+        text-transform: none;
+        line-height: normal;
+        letter-spacing: normal;
+        word-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        float: none;
+        z-index: 201;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -khtml-border-radius: 15px;
+        box-shadow: 0px 10px 20px #808080;
+        -webkit-box-shadow: 0px 10px 20px #808080;
+        -moz-box-shadow: 0px 10px 20px #808080;
+        -khtml-box-shadow: 0px 10px 20px #808080;
+        filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')
+    }
+
+    #MathJax_About.MathJax_MousePost {
+        outline: none
+    }
+
+    .MathJax_Menu {
+        position: absolute;
+        background-color: white;
+        color: black;
+        width: auto;
+        padding: 2px;
+        border: 1px solid #CCCCCC;
+        margin: 0;
+        cursor: default;
+        font: menu;
+        text-align: left;
+        text-indent: 0;
+        text-transform: none;
+        line-height: normal;
+        letter-spacing: normal;
+        word-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        float: none;
+        z-index: 201;
+        box-shadow: 0px 10px 20px #808080;
+        -webkit-box-shadow: 0px 10px 20px #808080;
+        -moz-box-shadow: 0px 10px 20px #808080;
+        -khtml-box-shadow: 0px 10px 20px #808080;
+        filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')
+    }
+
+    .MathJax_MenuItem {
+        padding: 2px 2em;
+        background: transparent
+    }
+
+    .MathJax_MenuArrow {
+        position: absolute;
+        right: .5em;
+        padding-top: .25em;
+        color: #666666;
+        font-size: .75em
+    }
+
+    .MathJax_MenuActive .MathJax_MenuArrow {
+        color: white
+    }
+
+    .MathJax_MenuArrow.RTL {
+        left: .5em;
+        right: auto
+    }
+
+    .MathJax_MenuCheck {
+        position: absolute;
+        left: .7em
+    }
+
+    .MathJax_MenuCheck.RTL {
+        right: .7em;
+        left: auto
+    }
+
+    .MathJax_MenuRadioCheck {
+        position: absolute;
+        left: 1em
+    }
+
+    .MathJax_MenuRadioCheck.RTL {
+        right: 1em;
+        left: auto
+    }
+
+    .MathJax_MenuLabel {
+        padding: 2px 2em 4px 1.33em;
+        font-style: italic
+    }
+
+    .MathJax_MenuRule {
+        border-top: 1px solid #CCCCCC;
+        margin: 4px 1px 0px
+    }
+
+    .MathJax_MenuDisabled {
+        color: GrayText
+    }
+
+    .MathJax_MenuActive {
+        background-color: Highlight;
+        color: HighlightText
+    }
+
+    .MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {
+        background-color: #E8E8E8
+    }
+
+    .MathJax_ContextMenu:focus {
+        outline: none
+    }
+
+    .MathJax_ContextMenu .MathJax_MenuItem:focus {
+        outline: none
+    }
+
+    #MathJax_AboutClose {
+        top: .2em;
+        right: .2em
+    }
+
+    .MathJax_Menu .MathJax_MenuClose {
+        top: -10px;
+        left: -10px
+    }
+
+    .MathJax_MenuClose {
+        position: absolute;
+        cursor: pointer;
+        display: inline-block;
+        border: 2px solid #AAA;
+        border-radius: 18px;
+        -webkit-border-radius: 18px;
+        -moz-border-radius: 18px;
+        -khtml-border-radius: 18px;
+        font-family: 'Courier New', Courier;
+        font-size: 24px;
+        color: #F0F0F0
+    }
+
+    .MathJax_MenuClose span {
+        display: block;
+        background-color: #AAA;
+        border: 1.5px solid;
+        border-radius: 18px;
+        -webkit-border-radius: 18px;
+        -moz-border-radius: 18px;
+        -khtml-border-radius: 18px;
+        line-height: 0;
+        padding: 8px 0 6px
+    }
+
+    .MathJax_MenuClose:hover {
+        color: white !important;
+        border: 2px solid #CCC !important
+    }
+
+    .MathJax_MenuClose:hover span {
+        background-color: #CCC !important
+    }
+
+    .MathJax_MenuClose:hover:focus {
+        outline: none
+    }
+    </style>
+    <style type="text/css">.MathJax_Preview .MJXf-math {
+        color: inherit !important
+    }
+    </style>
+    <style type="text/css">.MJX_Assistive_MathML {
+        position: absolute !important;
+        top: 0;
+        left: 0;
+        clip: rect(1px, 1px, 1px, 1px);
+        padding: 1px 0 0 0 !important;
+        border: 0 !important;
+        height: 1px !important;
+        width: 1px !important;
+        overflow: hidden !important;
+        display: block !important;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none
+    }
+
+    .MJX_Assistive_MathML.MJX_Assistive_MathML_Block {
+        width: 100% !important
+    }
+    </style>
+    <style type="text/css">#MathJax_Zoom {
+        position: absolute;
+        background-color: #F0F0F0;
+        overflow: auto;
+        display: block;
+        z-index: 301;
+        padding: .5em;
+        border: 1px solid black;
+        margin: 0;
+        font-weight: normal;
+        font-style: normal;
+        text-align: left;
+        text-indent: 0;
+        text-transform: none;
+        line-height: normal;
+        letter-spacing: normal;
+        word-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        float: none;
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+        box-shadow: 5px 5px 15px #AAAAAA;
+        -webkit-box-shadow: 5px 5px 15px #AAAAAA;
+        -moz-box-shadow: 5px 5px 15px #AAAAAA;
+        -khtml-box-shadow: 5px 5px 15px #AAAAAA;
+        filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')
+    }
+
+    #MathJax_ZoomOverlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 300;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        border: 0;
+        padding: 0;
+        margin: 0;
+        background-color: white;
+        opacity: 0;
+        filter: alpha(opacity=0)
+    }
+
+    #MathJax_ZoomFrame {
+        position: relative;
+        display: inline-block;
+        height: 0;
+        width: 0
+    }
+
+    #MathJax_ZoomEventTrap {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 302;
+        display: inline-block;
+        border: 0;
+        padding: 0;
+        margin: 0;
+        background-color: white;
+        opacity: 0;
+        filter: alpha(opacity=0)
+    }
+    </style>
+    <style type="text/css">.MathJax_Preview {
+        color: #888
+    }
+
+    #MathJax_Message {
+        position: fixed;
+        left: 1em;
+        bottom: 1.5em;
+        background-color: #E6E6E6;
+        border: 1px solid #959595;
+        margin: 0px;
+        padding: 2px 8px;
+        z-index: 102;
+        color: black;
+        font-size: 80%;
+        width: auto;
+        white-space: nowrap
+    }
+
+    #MathJax_MSIE_Frame {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0px;
+        z-index: 101;
+        border: 0px;
+        margin: 0px;
+        padding: 0px
+    }
+
+    .MathJax_Error {
+        color: #CC0000;
+        font-style: italic
+    }
+    </style>
+    <style type="text/css">.MJXp-script {
+        font-size: .8em
+    }
+
+    .MJXp-right {
+        -webkit-transform-origin: right;
+        -moz-transform-origin: right;
+        -ms-transform-origin: right;
+        -o-transform-origin: right;
+        transform-origin: right
+    }
+
+    .MJXp-bold {
+        font-weight: bold
+    }
+
+    .MJXp-italic {
+        font-style: italic
+    }
+
+    .MJXp-scr {
+        font-family: MathJax_Script, 'Times New Roman', Times, STIXGeneral, serif
+    }
+
+    .MJXp-frak {
+        font-family: MathJax_Fraktur, 'Times New Roman', Times, STIXGeneral, serif
+    }
+
+    .MJXp-sf {
+        font-family: MathJax_SansSerif, 'Times New Roman', Times, STIXGeneral, serif
+    }
+
+    .MJXp-cal {
+        font-family: MathJax_Caligraphic, 'Times New Roman', Times, STIXGeneral, serif
+    }
+
+    .MJXp-mono {
+        font-family: MathJax_Typewriter, 'Times New Roman', Times, STIXGeneral, serif
+    }
+
+    .MJXp-largeop {
+        font-size: 150%
+    }
+
+    .MJXp-largeop.MJXp-int {
+        vertical-align: -.2em
+    }
+
+    .MJXp-math {
+        display: inline-block;
+        line-height: 1.2;
+        text-indent: 0;
+        font-family: 'Times New Roman', Times, STIXGeneral, serif;
+        white-space: nowrap;
+        border-collapse: collapse
+    }
+
+    .MJXp-display {
+        display: block;
+        text-align: center;
+        margin: 1em 0
+    }
+
+    .MJXp-math span {
+        display: inline-block
+    }
+
+    .MJXp-box {
+        display: block !important;
+        text-align: center
+    }
+
+    .MJXp-box:after {
+        content: " "
+    }
+
+    .MJXp-rule {
+        display: block !important;
+        margin-top: .1em
+    }
+
+    .MJXp-char {
+        display: block !important
+    }
+
+    .MJXp-mo {
+        margin: 0 .15em
+    }
+
+    .MJXp-mfrac {
+        margin: 0 .125em;
+        vertical-align: .25em
+    }
+
+    .MJXp-denom {
+        display: inline-table !important;
+        width: 100%
+    }
+
+    .MJXp-denom > * {
+        display: table-row !important
+    }
+
+    .MJXp-surd {
+        vertical-align: top
+    }
+
+    .MJXp-surd > * {
+        display: block !important
+    }
+
+    .MJXp-script-box > * {
+        display: table !important;
+        height: 50%
+    }
+
+    .MJXp-script-box > * > * {
+        display: table-cell !important;
+        vertical-align: top
+    }
+
+    .MJXp-script-box > *:last-child > * {
+        vertical-align: bottom
+    }
+
+    .MJXp-script-box > * > * > * {
+        display: block !important
+    }
+
+    .MJXp-mphantom {
+        visibility: hidden
+    }
+
+    .MJXp-munderover, .MJXp-munder {
+        display: inline-table !important
+    }
+
+    .MJXp-over {
+        display: inline-block !important;
+        text-align: center
+    }
+
+    .MJXp-over > * {
+        display: block !important
+    }
+
+    .MJXp-munderover > *, .MJXp-munder > * {
+        display: table-row !important
+    }
+
+    .MJXp-mtable {
+        vertical-align: .25em;
+        margin: 0 .125em
+    }
+
+    .MJXp-mtable > * {
+        display: inline-table !important;
+        vertical-align: middle
+    }
+
+    .MJXp-mtr {
+        display: table-row !important
+    }
+
+    .MJXp-mtd {
+        display: table-cell !important;
+        text-align: center;
+        padding: .5em 0 0 .5em
+    }
+
+    .MJXp-mtr > .MJXp-mtd:first-child {
+        padding-left: 0
+    }
+
+    .MJXp-mtr:first-child > .MJXp-mtd {
+        padding-top: 0
+    }
+
+    .MJXp-mlabeledtr {
+        display: table-row !important
+    }
+
+    .MJXp-mlabeledtr > .MJXp-mtd:first-child {
+        padding-left: 0
+    }
+
+    .MJXp-mlabeledtr:first-child > .MJXp-mtd {
+        padding-top: 0
+    }
+
+    .MJXp-merror {
+        background-color: #FFFF88;
+        color: #CC0000;
+        border: 1px solid #CC0000;
+        padding: 1px 3px;
+        font-style: normal;
+        font-size: 90%
+    }
+
+    .MJXp-scale0 {
+        -webkit-transform: scaleX(.0);
+        -moz-transform: scaleX(.0);
+        -ms-transform: scaleX(.0);
+        -o-transform: scaleX(.0);
+        transform: scaleX(.0)
+    }
+
+    .MJXp-scale1 {
+        -webkit-transform: scaleX(.1);
+        -moz-transform: scaleX(.1);
+        -ms-transform: scaleX(.1);
+        -o-transform: scaleX(.1);
+        transform: scaleX(.1)
+    }
+
+    .MJXp-scale2 {
+        -webkit-transform: scaleX(.2);
+        -moz-transform: scaleX(.2);
+        -ms-transform: scaleX(.2);
+        -o-transform: scaleX(.2);
+        transform: scaleX(.2)
+    }
+
+    .MJXp-scale3 {
+        -webkit-transform: scaleX(.3);
+        -moz-transform: scaleX(.3);
+        -ms-transform: scaleX(.3);
+        -o-transform: scaleX(.3);
+        transform: scaleX(.3)
+    }
+
+    .MJXp-scale4 {
+        -webkit-transform: scaleX(.4);
+        -moz-transform: scaleX(.4);
+        -ms-transform: scaleX(.4);
+        -o-transform: scaleX(.4);
+        transform: scaleX(.4)
+    }
+
+    .MJXp-scale5 {
+        -webkit-transform: scaleX(.5);
+        -moz-transform: scaleX(.5);
+        -ms-transform: scaleX(.5);
+        -o-transform: scaleX(.5);
+        transform: scaleX(.5)
+    }
+
+    .MJXp-scale6 {
+        -webkit-transform: scaleX(.6);
+        -moz-transform: scaleX(.6);
+        -ms-transform: scaleX(.6);
+        -o-transform: scaleX(.6);
+        transform: scaleX(.6)
+    }
+
+    .MJXp-scale7 {
+        -webkit-transform: scaleX(.7);
+        -moz-transform: scaleX(.7);
+        -ms-transform: scaleX(.7);
+        -o-transform: scaleX(.7);
+        transform: scaleX(.7)
+    }
+
+    .MJXp-scale8 {
+        -webkit-transform: scaleX(.8);
+        -moz-transform: scaleX(.8);
+        -ms-transform: scaleX(.8);
+        -o-transform: scaleX(.8);
+        transform: scaleX(.8)
+    }
+
+    .MJXp-scale9 {
+        -webkit-transform: scaleX(.9);
+        -moz-transform: scaleX(.9);
+        -ms-transform: scaleX(.9);
+        -o-transform: scaleX(.9);
+        transform: scaleX(.9)
+    }
+
+    .MathJax_PHTML .noError {
+        vertical-align: ;
+        font-size: 90%;
+        text-align: left;
+        color: black;
+        padding: 1px 3px;
+        border: 1px solid
+    }
+    </style>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+<div id="MathJax_Message" style="display: none;"></div>
+
+<!-- Navigation -->
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://victorfengming.gitee.io/">victor</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div id="huxblog_navbar" class=" ">
+            <div class="navbar-collapse" style="height: 0px;">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="https://victorfengming.gitee.io/course/">汇总</a>
+                    </li>
+                    <li>
+                        <a href="https://victorfengming.gitee.io/file/">文件</a>
+                    </li>
+                    <li>
+                        <a href="https://victorfengming.gitee.io/">博客</a>
+                    </li>
+                    <li>
+                        <a href="https://victorfengming.gitee.io/blog/">旧版</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+    var __HuxNav__ = {
+        close: function () {
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function () {
+                // prevent frequently toggle
+                if ($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            }, 400)
+        },
+        open: function () {
+            $collapse.style.height = "auto";
+            $navbar.className += " in";
+        }
+    };
+    // Bind Event
+    $toggle.addEventListener('click', function (e) {
+        if ($navbar.className.indexOf('in') > 0) {
+            __HuxNav__.close()
+        } else {
+            __HuxNav__.open()
+        }
+    });
+    /**
+     * Since Fastclick is used to delegate 'touchstart' globally
+     * to hack 300ms delay in iOS by performing a fake 'click',
+     * Using 'e.stopPropagation' to stop 'touchstart' event from
+     * $toggle/$collapse will break global delegation.
+     *
+     * Instead, we use a 'e.target' filter to prevent handler
+     * added to document close HuxNav.
+     *
+     * Also, we use 'click' instead of 'touchstart' as compromise
+     */
+    document.addEventListener('click', function (e) {
+        if (e.target == $toggle) return;
+        if (e.target.className == 'icon-bar') return;
+        __HuxNav__.close();
+    })
+</script>
+
+
+<!-- Page Header -->
+
+<header class="intro-header" style="background-image: url(&#39;./src/home-bg2.jpg&#39;)">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+
+                    <h1 style="color: #fff0f0">IT知识宝藏大全</h1>
+                    <span class="subheading" style="color: #fff0f0">你的文档中心，开发查阅首选~~~</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<!-- Main Content -->
+<div class="container">
+    <!--    react -->
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+        <a href="http://victorfengming.gitee.io/react">
+            <div class="thumbnail" style="height: 280px;">
+                <img class="lazy" src="./src/img/react.png" width="300" height="150" alt="图片">
+                <div class="caption">
+                    <h3>
+                        react<br><small><br>前端</small>
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!--    promise -->
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+        <a href="http://victorfengming.gitee.io/promise">
+            <div class="thumbnail" style="height: 280px;">
+                <img class="lazy" src="./src/img/promise.jpg" width="300" height="150" alt="图片">
+                <div class="caption">
+                    <h3>
+                        promise<br><small><br>前端</small>
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!--    axios -->
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+        <a href="http://victorfengming.gitee.io/axios">
+            <div class="thumbnail" style="height: 280px;">
+                <img class="lazy" src="./src/img/axios.jpg" width="300" height="150" alt="图片">
+                <div class="caption">
+                    <h3>
+                        axios<br><small><br>前端</small>
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!--    vue -->
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+        <a href="http://victorfengming.gitee.io/vue">
+            <div class="thumbnail" style="height: 280px;">
+                <img class="lazy" src="./src/img/vue.jpg" width="300" height="150" alt="图片">
+                <div class="caption">
+                    <h3>
+                        vue<br><small><br>前端</small>
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!--    network -->
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+        <a href="./network/index.html">
+            <div class="thumbnail" style="height: 280px;">
+                <img class="lazy" src="./src/img/network.jpg" width="300" height="150" alt="图片">
+                <div class="caption">
+                    <h3>
+                        network<br><small><br>计算机网络</small>
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!--    elk -->
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+        <a href="http://victorfengming.gitee.io/elk">
+            <div class="thumbnail" style="height: 280px;">
+                <img class="lazy" src="./src/img/elk.png" width="300" height="150" alt="图片">
+                <div class="caption">
+                    <h3>
+                       <small><br>数据采集</small>
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!--    flink -->
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+        <a href="http://victorfengming.gitee.io/flink">
+            <div class="thumbnail" style="height: 280px;">
+                <img class="lazy" src="./src/img/flink.png" width="300" height="150" alt="图片">
+                <div class="caption">
+                    <h3>
+                        Flink<br><small><br>大数据</small>
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!--  分割线  -->
+
+
+    <!--    typescript -->
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+        <a href="http://victorfengming.gitee.io/typescript">
+            <div class="thumbnail" style="height: 280px;">
+                <img class="lazy" src="./src/img/typescript.png" width="300" height="150" alt="图片">
+                <div class="caption">
+                    <h3>
+                        typescript<br><small><br>typescript-js的扩展</small>
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!--  分割线  -->
+
+
+    <!--    hadoop -->
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+        <a href="http://victorfengming.gitee.io/hadoop">
+            <div class="thumbnail" style="height: 280px;">
+                <img class="lazy" src="./src/img/hadoop.png" width="300" height="150" alt="图片">
+                <div class="caption">
+                    <h3>
+                        <br>hadoop<small><br></small>
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!--  分割线  -->
+    <!--    zookeeper -->
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+        <a href="http://victorfengming.gitee.io/zookeeper">
+            <div class="thumbnail" style="height: 280px;">
+                <img class="lazy" src="./src/img/zookeeper.png" width="300" height="150" alt="图片">
+                <div class="caption">
+                    <h3>
+                        zookeeper<br><small><br>大数据</small>
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!--    kubernetes -->
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+        <a href="http://victorfengming.gitee.io/kubernetes">
+            <div class="thumbnail" style="height: 280px;">
+                <img class="lazy" src="./src/img/kubernetes.jpg" width="300" height="150" alt="图片">
+                <div class="caption">
+                    <h3>
+                        kubernetes<br><small><br>容器化</small>
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!--  分割线  -->
+    <!--    hive -->
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+        <a href="http://victorfengming.gitee.io/hive">
+            <div class="thumbnail" style="height: 280px;">
+                <img class="lazy" src="./src/img/hive.png" width="300" height="150" alt="图片">
+                <div class="caption">
+                    <h3>
+                        hive<br><small><br>大数据</small>
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!--  分割线  -->
+
+    <hr>
+    <!--    data algorithm -->
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+        <a href="http://victorfengming.gitee.io/data_algorithm">
+            <div class="thumbnail" style="height: 280px;">
+                <img class="lazy" src="./src/img/data_algorithm.png" width="300" height="150" alt="图片">
+                <div class="caption">
+                    <h3>
+                        Data Algorithm<br><small><br>数据结构与算法</small>
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!--  分割线  -->
+
+    <!--    shell -->
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+        <a href="http://victorfengming.gitee.io/shell">
+            <div class="thumbnail" style="height: 280px;">
+                <img class="lazy" src="./src/img/shell.png" width="300" height="150" alt="图片">
+                <div class="caption">
+                    <h3>
+                        <small>Shell脚本-大数据运维</small>
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!--  分割线  -->
+
+
+    <!--    Design Pattern -->
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+        <a href="http://victorfengming.gitee.io/design_pattern">
+            <div class="thumbnail" style="height: 280px;">
+                <img class="lazy" src="./src/img/design_pattern.png" width="300" height="150" alt="图片">
+                <div class="caption">
+                    <h3>
+                        Design Pattern<br><small><br>设计模式与设计思想</small>
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!--  分割线  -->
+    <!--    jvm  -->
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+        <a href="http://victorfengming.gitee.io/jvm">
+            <div class="thumbnail" style="height: 280px;">
+                <img class="lazy" src="./src/img/jvm.png" width="300" height="150" alt="图片">
+                <div class="caption">
+                    <h3>
+                        Java JVM<br><small><br>深入理解Java虚拟机</small>
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!--  分割线  -->
+
+    <hr>
+
+    <!--    // golang-->
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+        <a href="./go/index.html">
+            <div class="thumbnail" style="height: 280px;">
+                <img class="lazy" src="./src/img/golang.jpg" width="300" height="150" alt="图片">
+                <div class="caption">
+                    <h3>
+                        Golang<br><small>Google开发的一种静态强类型、编译型语言</small>
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!--    Python -->
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+        <a href="./python_book/index.html">
+            <div class="thumbnail" style="height: 280px;">
+                <img class="lazy" src="./src/img/python.jpg" width="300" height="150" alt="图片">
+                <div class="caption">
+                    <h3>
+                        Python<br><small>解释型、面向对象、动态数据类型的高级程序设计语言</small>
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!--    Java -->
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+        <a href="https://victorfengming.gitee.io/tags/Java/">
+            <div class="thumbnail" style="height: 280px;">
+                <img class="lazy" src="./src/img/java.jpg" width="300" height="150" alt="图片">
+                <div class="caption">
+                    <h3>
+                        Java<br><small>应用最广泛的,面向对象的高级程序设计语言</small>
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!--    前端 -->
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+        <a href="./front_page/index.html">
+            <div class="thumbnail" style="height: 280px;">
+                <img class="lazy" src="./src/img/html.jpg" width="300" height="150" alt="图片">
+                <div class="caption">
+                    <h3>
+                        前端<br><small>HTML+CSS+JS</small>
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <hr>
+
+    <!--    mysql -->
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+        <a href="./mysql/index.html">
+            <div class="thumbnail" style="height: 280px;">
+                <img class="lazy" src="./src/img/mysql.jpg" width="300" height="150" alt="图片">
+                <div class="caption">
+                    <h3>
+                        mysql<br><small>最流行的关系型数据库管理系统</small>
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!--    nosql -->
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+        <a href="./nosql/index.html">
+            <div class="thumbnail" style="height: 280px;">
+                <img class="lazy" src="./src/img/nosql.jpg" width="300" height="150" alt="图片">
+                <div class="caption">
+                    <h3>
+                        nosql<br><small>非关系型数据库是对关系型数据库的一种补充</small>
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+
+
+    <!--    redis -->
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+        <a href="./redis/index.html">
+            <div class="thumbnail" style="height: 280px;">
+                <img class="lazy" src="./src/img/redis.jpg" width="300" height="150" alt="图片">
+                <div class="caption">
+                    <h3>
+                        redis<br><small>C开发的,高性能,内存,键值对儿nosql数据库</small>
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+
+
+    <!--    mybatis -->
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+        <a href="./mybatis/index.html">
+            <div class="thumbnail" style="height: 280px;">
+                <img class="lazy" src="./src/img/mybatis.jpg" width="300" height="150" alt="图片">
+                <div class="caption">
+                    <h3>
+                        mybatis<br><small>支持定制化SQL,存储过程以及高级映射的优秀的持久层框架</small>
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <hr>
+    <!--    django -->
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+        <a href="./django/index.html">
+            <div class="thumbnail" style="height: 280px;">
+                <img class="lazy" src="./src/img/django.jpg" width="300" height="150" alt="图片">
+                <div class="caption">
+                    <h3>
+                        django<br><small>Python驱动的一个开源模型-视图-控制器风格的Web框架</small>
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+
+
+    <!--    beego -->
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+        <a href="./beego/index.html">
+            <div class="thumbnail" style="height: 280px;">
+                <img class="lazy" src="./src/img/beego.png" width="300" height="150" alt="图片">
+                <div class="caption">
+                    <h3>
+                        beego<br><small>Go应用的HTTP框架,用来快速开发API、Web及后端服务</small>
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+
+
+    <!--    flask -->
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+        <a href="./flask/index.html">
+            <div class="thumbnail" style="height: 280px;">
+                <img class="lazy" src="./src/img/flask.jpg" width="300" height="150" alt="图片">
+                <div class="caption">
+                    <h3>
+                        flask<br><small>使用 Python 编写的轻量级 Web 应用框架</small>
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!--    springboot -->
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+        <a href="http://victorfengming.gitee.io/springboot">
+            <div class="thumbnail" style="height: 280px;">
+                <img class="lazy" src="./src/img/springboot.jpg" width="300" height="150" alt="图片">
+                <div class="caption">
+                    <h3>
+                        springboot<br><small>简化新Spring应用的初始搭建以及开发过程的新框架</small>
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!--    springcloud -->
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+        <a href="http://victorfengming.gitee.io/springcloud">
+            <div class="thumbnail" style="height: 280px;">
+                <img class="lazy" src="./src/img/springcloud.jpg" width="300" height="150" alt="图片">
+                <div class="caption">
+                    <h3>
+                        springcloud<br><small>简化新Spring应用的初始搭建以及开发过程的新框架</small>
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <hr>
+    <!--    jenkins -->
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+        <a href="http://victorfengming.gitee.io/jenkins/">
+            <div class="thumbnail" style="height: 280px;">
+                <img class="lazy" src="./src/img/jenkins.jpg" width="300" height="150" alt="图片">
+                <div class="caption">
+                    <h3>
+                        jenkins<br><small>Jenkins是一个开源的,基于Java开发的一种持续集成工具</small>
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <hr>
+
+    <!--    docker -->
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+        <a href="http://victorfengming.gitee.io/docker">
+            <div class="thumbnail" style="height: 280px;">
+                <img class="lazy" src="./src/img/docker.jpg" width="300" height="150" alt="图片">
+                <div class="caption">
+                    <h3>
+                        Docker<br><small>基于Go的开源的应用容器引擎</small>
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+
+
+    <!--    elasticsearch -->
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+
+        <a href="./elasticsearch/index.html">
+            <div class="thumbnail" style="height: 280px;">
+                <img class="lazy" src="./src/img/elasticsearch.png" width="300" height="150" alt="图片">
+                <div class="caption">
+                    <h3>
+                        elasticsearch<br><small>RESTful 风格的分布式开源搜索和分析引擎</small>
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+
+
+    <hr>
+
+    <!--    git -->
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+        <a href="./git/index.html">
+            <div class="thumbnail" style="height: 280px;">
+                <img class="lazy" src="./src/img/git.jpg" width="300" height="150" alt="图片">
+                <div class="caption">
+                    <h3>
+                        Git<br><small>分布式的版本控制系统</small>
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!--    svn -->
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+        <a href="./svn/index.html">
+            <div class="thumbnail" style="height: 280px;">
+                <img class="lazy" src="./src/img/svn.jpg" width="300" height="150" alt="图片">
+                <div class="caption">
+                    <h3>
+                        SVN<br><small>开放源代码的版本控制系统</small>
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+
+
+
+    <hr>
+
+    <!--    data_science -->
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+        <a href="./data_science/index.html">
+            <div class="thumbnail" style="height: 280px;">
+                <img class="lazy" src="./src/img/data_science.jpg" width="300" height="150" alt="图片">
+                <div class="caption">
+                    <h3>
+                        Data Science<br><small>Python大数据相关,人工智能数据分析基础</small>
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+
+
+    <hr>
+
+
+    <!--    阿里巴巴书籍 -->
+    <!--    静态资源访问 pdf也支持 -->
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+        <a href="http://victorfengming.gitee.io/file/pdf/alibaba_architecture_design.pdf">
+            <div class="thumbnail" style="height: 280px;">
+                <img class="lazy" src="./src/img/alibaba.jpg" width="300" height="150" alt="图片">
+                <div class="caption">
+                    <h3>
+                        阿里巴巴<br><small>阿里巴巴中文站架构设计实践(何崚).pdf</small>
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <hr>
+    <!--    pyqt5 -->
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+        <a href="./pyqt5/index.html">
+            <div class="thumbnail" style="height: 280px;">
+                <img class="lazy" src="./src/img/pyqt5.jpg" width="300" height="150" alt="图片">
+                <div class="caption">
+                    <h3>
+                        pyqt5<br><small><br>用来创建Python GUI应用程序的工具包</small>
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+    <hr>
+    <!--    interview -->
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+        <a href="http://victorfengming.gitee.io/interview/">
+            <div class="thumbnail" style="height: 280px;">
+                <img class="lazy" src="./src/img/interview.png" width="300" height="150" alt="图片">
+                <div class="caption">
+                    <h3>
+                        interview<br><small><br>Java面试题</small>
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+    <hr>
+    <!--    scala -->
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+        <a href="http://victorfengming.gitee.io/scala/">
+            <div class="thumbnail" style="height: 280px;">
+                <img class="lazy" src="./src/img/scala.png" width="300" height="150" alt="图片">
+                <div class="caption">
+                    <h3>
+                        scala<br><small><br>大数据</small>
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <hr>
+    <!--    webpack -->
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+        <a href="http://victorfengming.gitee.io/webpack/">
+            <div class="thumbnail" style="height: 280px;">
+                <img class="lazy" src="./src/img/webpack.jpg" width="300" height="150" alt="图片">
+                <div class="caption">
+                    <h3>
+                        webpack<br><small><br>前端打包工具</small>
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <hr>
+
+
+</div>
+<!-- Add support for Mathjax by Voleking-->
+<!-- If you want to see formulars well in post preview, Maybe you should add this.-->
+<!-- However, most of the time formulars may not appear in the post preview, you can delete it.-->
+<script type="text/x-mathjax-config;executed=true">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true,
+    }
+  });
+
+
+
+
+
+</script>
+<script type="text/javascript" src="./src/MathJax.js.下载">
+</script>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- SNS Link -->
+
+
+                <ul class="list-inline text-center">
+                    <!--    下面的大图标-->
+
+                    <!--TODO 这里需要优化两次判断的结构代码,提升代码的复用性,目前就仅仅是实现其功能-->
+
+
+                    <li>
+                        <a target="_blank" href="https://github.com/victorfengming">
+  <span class="fa-stack fa-lg">
+    <svg t="1573781422256" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+         p-id="1775" width="64" height="64"><path
+            d="M512 12.64c-282.752 0-512 229.216-512 512 0 226.208 146.72 418.144 350.144 485.824 25.6 4.736 35.008-11.104 35.008-24.64 0-12.192-0.48-52.544-0.704-95.328-142.464 30.976-172.512-60.416-172.512-60.416-23.296-59.168-56.832-74.912-56.832-74.912-46.464-31.776 3.52-31.136 3.52-31.136 51.392 3.616 78.464 52.768 78.464 52.768 45.664 78.272 119.776 55.648 148.992 42.56 4.576-33.088 17.856-55.68 32.512-68.48-113.728-12.928-233.28-56.864-233.28-253.024 0-55.904 20-101.568 52.768-137.44-5.312-12.896-22.848-64.96 4.96-135.488 0 0 43.008-13.76 140.832 52.48 40.832-11.36 84.64-17.024 128.16-17.248 43.488 0.192 87.328 5.888 128.256 17.248 97.728-66.24 140.64-52.48 140.64-52.48 27.872 70.528 10.336 122.592 5.024 135.488 32.832 35.84 52.704 81.536 52.704 137.44 0 196.64-119.776 239.936-233.792 252.64 18.368 15.904 34.72 47.04 34.72 94.816 0 68.512-0.608 123.648-0.608 140.512 0 13.632 9.216 29.6 35.168 24.576 203.328-67.776 349.856-259.616 349.856-485.76 0-282.784-229.248-512-512-512z"
+            p-id="1776"></path></svg>
+  </span>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a target="_blank" href="https://gitee.com/victorfengming">
+  <span class="fa-stack fa-lg">
+   <svg t="1579070773478" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        p-id="479" width="64" height="64"><path
+           d="M967.736264 416.351648H450.10989v0.011253A45.010989 45.010989 0 0 0 405.098901 461.362637l-0.045011 112.527473a45.010989 45.010989 0 0 0 45.010989 45.022242L765.186813 618.901099a45.010989 45.010989 0 0 1 45.010989 45.010989v22.505494c0 74.571956-60.461011 135.032967-135.032967 135.032967H247.526681a45.010989 45.010989 0 0 1-45.010989-45.010989V348.835165h-0.011252c0-74.571956 60.449758-135.032967 135.032967-135.032967h630.075077v-0.022506a45.010989 45.010989 0 0 0 45.010989-44.988483l0.101274-112.527473H1012.747253a45.010989 45.010989 0 0 0-45.010989-45.033494L337.582418 11.252747C151.146901 11.252747 0 162.399648 0 348.835165v630.153846a45.010989 45.010989 0 0 0 45.010989 45.010989h663.912088c167.800967 0 303.824176-136.023209 303.824176-303.824176V461.362637a45.010989 45.010989 0 0 0-45.010989-45.010989z"
+           fill="#2c2c2c" p-id="480"></path></svg>
+  </span>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="tencent://AddContact/?fromId=45&amp;fromSubId=1&amp;subcmd=all&amp;uin=510510280&amp;website=www.oicqzone.com">
+  <span class="fa-stack fa-lg">
+    <svg t="1573781658746" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+         p-id="3172" width="64" height="64"><path
+            d="M510.191416 119.000668h8.924515c232.037381 0 246.911572 286.179436 246.911571 286.179436A222.517898 222.517898 0 0 0 772.572147 475.981254a666.958728 666.958728 0 0 1 67.231343 226.087704c4.164773 44.027606 0 59.496764-8.924514 59.496764s-44.622573-52.357153-44.622574-52.357152c-6.544644-18.443997-11.899353-22.60877-15.469158-22.608771a6.544644 6.544644 0 0 0-4.759742 0 220.138028 220.138028 0 0 1-59.496764 132.677785l-25.583608 20.2289c72.586052 0 86.270308 46.407476 86.270308 46.407476s-8.329547 7.139612-23.203738 7.139611a1617.122053 1617.122053 0 0 1-218.353125-35.698058H497.697096a1103.664977 1103.664977 0 0 1-207.04874 42.242703c-17.254062 0-28.558447 0-30.34335-10.709418s13.089288-44.622573 83.29547-46.407476a192.769516 192.769516 0 0 1-86.865276-142.792234c0-10.11445-4.164773-13.684256-5.949676-13.684256s-7.139612 13.684256-7.139612 13.684256c0 10.709418-33.913156 46.407476-33.913156 46.407476-8.329547 8.924515-13.684256 12.49432-17.849029 12.49432S182.364245 744.311661 182.364245 744.311661a598.537449 598.537449 0 0 1 67.826311-252.861248 552.129973 552.129973 0 0 0 13.089288-99.359597C271.014424 133.279892 467.353746 119.000668 510.191416 119.000668m0-118.993528c-178.490293 0-356.980586 118.993529-365.9051 388.51387a439.08612 439.08612 0 0 1-6.544644 59.496765 669.933566 669.933566 0 0 0-73.775988 297.483821 140.412364 140.412364 0 0 0 37.482961 94.599855 130.297914 130.297914 0 0 0 41.647735 28.558447 125.538173 125.538173 0 0 0 0 49.382314 138.032493 138.032493 0 0 0 147.551976 105.309273 1036.433634 1036.433634 0 0 0 222.517898-41.647735 1490.988913 1490.988913 0 0 0 229.65751 35.103091 143.98217 143.98217 0 0 0 110.069014-42.83767 124.943205 124.943205 0 0 0 31.533285-94.599855v-8.924515a134.462687 134.462687 0 0 0 41.052768-29.748382 182.060099 182.060099 0 0 0 30.34335-145.767073 807.966059 807.966059 0 0 0-69.611215-254.646151 148.741911 148.741911 0 0 1 0-32.128252 45.217541 45.217541 0 0 0 0-8.924515A542.015523 542.015523 0 0 0 836.828652 212.410588 337.941621 337.941621 0 0 0 520.900834 0.00714z m371.854777 431.351541z"
+            fill="" p-id="3173"></path></svg>
+  </span>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a target="_blank" href="http://weibo.com/p/1005055739661018">
+          <span class="fa-stack fa-lg">
+            <svg t="1573778966949" class="icon" viewBox="0 0 1193 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                 p-id="4201" width="64" height="64"><path
+                    d="M456.991736 557.336482c-107.598583 0-194.644628 74.956316-194.644629 166.838252s87.046045 166.838253 194.644629 166.838253c107.598583 0 194.644628-74.956316 194.644628-166.838253s-87.046045-166.838253-194.644628-166.838252zM391.707202 822.101535c-36.269185 0-66.493506-27.806375-66.493507-62.866588s29.015348-62.866588 66.493507-62.866588c36.269185 0 66.493506 27.806375 66.493506 62.866588S427.976387 822.101535 391.707202 822.101535z m93.090909-91.881936c-14.507674 0-26.597403-12.089728-26.597403-26.597403s12.089728-26.597403 26.597403-26.597403 26.597403 12.089728 26.597403 26.597403-12.089728 26.597403-26.597403 26.597403zM239.376623 281.690673C97.9268 394.125148-18.134593 600.859504 30.224321 661.308146c32.642267 41.105077 59.239669-19.343566 124.524203-89.46399 30.224321-32.642267 77.374262-54.403778 122.106258-90.672964 20.552538-16.92562 197.062574-35.060213 230.913813-35.060212 97.9268-99.135773 114.85242-207.943329 74.956316-258.720189-48.358914-59.239669-201.898465-16.92562-343.348288 94.299882z"
+                    fill="#2c2c2c" p-id="4202"></path><path
+                    d="M808.802834 560.9634C906.729634 461.827627 911.565525 377.199528 870.460449 326.422668c-47.149941-60.448642-211.570248-32.642267-351.811098 78.583235"
+                    fill="#2c2c2c" p-id="4203"></path><path
+                    d="M605.695396 353.020071c-14.507674 8.46281-25.38843 12.089728-29.015349 7.253837-1.208973-2.417946-1.208973-6.044864 1.208973-9.671783-16.92562-1.208973-33.85124-1.208973-50.776859-1.208973C235.749705 349.393152 0 500.514758 0 686.696576s235.749705 337.303424 527.112161 337.303424 527.112161-151.121606 527.11216-337.303424c0-170.465171-194.644628-309.497048-448.528925-333.676505zM481.171192 959.924439C275.645809 959.924439 108.807556 847.489965 108.807556 708.458087s166.838253-251.466352 372.363636-251.466351 372.363636 112.434475 372.363637 251.466351-166.838253 251.466352-372.363637 251.466352z"
+                    fill="#2c2c2c" p-id="4204"></path><path
+                    d="M1021.582054 423.140496c-3.626919 0-6.044864 0-9.671782-1.208973-18.134593-4.835891-29.015348-24.179457-22.970485-42.31405 2.417946-7.253837 3.626919-16.92562 3.626919-29.015348 0-65.284534-53.194805-119.688312-119.688312-119.688312-19.343566 0-33.85124-15.716647-33.851239-33.851239s15.716647-33.85124 33.851239-33.85124c103.971665 0 187.390791 84.628099 187.390791 187.390791 0 18.134593-2.417946 33.85124-6.044864 48.358914-4.835891 14.507674-18.134593 24.179457-32.642267 24.179457z"
+                    fill="#2c2c2c" p-id="4205"></path><path
+                    d="M1146.106257 473.917355c-2.417946 0-6.044864 0-8.46281-1.208972-20.552538-4.835891-32.642267-25.38843-27.806375-45.940969 6.044864-24.179457 8.46281-47.149941 8.46281-71.329397C1118.299882 201.898465 991.357733 74.956316 836.609209 74.956316c-20.552538 0-37.478158-16.92562-37.478158-37.478158S816.056671 0 836.609209 0c197.062574 0 356.646989 159.584416 356.646989 356.646989 0 29.015348-3.626919 59.239669-10.880755 88.255018-3.626919 18.134593-19.343566 29.015348-36.269186 29.015348z"
+                    fill="#2c2c2c" p-id="4206"></path></svg>
+          </span>
+                        </a>
+                    </li>
+
+
+                </ul>
+
+                <p class="copyright text-muted">
+                    Copyright © victor 2020
+                    <br>
+                    Powered by <a href="http://huangxuan.me">Hux Blog</a> |
+                    <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="100px"
+                            height="20px"
+                            src="https://ghbtns.com/github-btn.html?user=huxpro&amp;repo=huxpro.github.io&amp;type=star&amp;count=true">
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="./src/jquery.min.js.下载"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<!-- Currently, only navbar scroll-down effect at desktop still depends on this -->
+<script src="./src/bootstrap.min.js.下载"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="./src/hux-blog.min.js.下载"></script>
+
+<!-- Service Worker -->
+
+<script src="./src/snackbar.js.下载"></script>
+<script src="./src/sw-registration.js.下载"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+        var d = document, t = 'script',
+            o = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) {
+            o.addEventListener('load', function (e) {
+                c(null, e);
+            }, false);
+        }
+        s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<script>
+    async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function () {
+        var $nav = document.querySelector("nav");
+        if ($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+</body>
+</html>
