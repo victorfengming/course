@@ -1,0 +1,1694 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第9节_Go的命令以及Go的执行原理 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="day01_第10节_安装Goland开发工具.html" />
+    
+    
+    <link rel="prev" href="day01_第8节_第一个程序HelloWorld.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Go语言基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="day01_第1节_知名编程语言或系统的发展简史.html">
+            
+                <a href="day01_第1节_知名编程语言或系统的发展简史.html">
+            
+                    
+                    第1节_知名编程语言或系统的发展简史
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="day01_第2节_Go语言的前世今生.html">
+            
+                <a href="day01_第2节_Go语言的前世今生.html">
+            
+                    
+                    第2节_Go语言的前世今生
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="day01_第3节_Go语言logo和版本.html">
+            
+                <a href="day01_第3节_Go语言logo和版本.html">
+            
+                    
+                    第3节_Go语言logo和版本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="day01_第4节_Go语言的核心特性.html">
+            
+                <a href="day01_第4节_Go语言的核心特性.html">
+            
+                    
+                    第4节_Go语言的核心特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="day01_第5节_Go语言的优势和其他语言的对比.html">
+            
+                <a href="day01_第5节_Go语言的优势和其他语言的对比.html">
+            
+                    
+                    第5节_Go语言的优势和其他语言的对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="day01_第6节_Go语言能做什么.html">
+            
+                <a href="day01_第6节_Go语言能做什么.html">
+            
+                    
+                    第6节_Go语言能做什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="day01_第7节_Go语言环境搭建.html">
+            
+                <a href="day01_第7节_Go语言环境搭建.html">
+            
+                    
+                    第7节_Go语言环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="day01_第8节_第一个程序HelloWorld.html">
+            
+                <a href="day01_第8节_第一个程序HelloWorld.html">
+            
+                    
+                    第8节_第一个程序HelloWorld
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.9" data-path="day01_第9节_Go的命令以及Go的执行原理.html">
+            
+                <a href="day01_第9节_Go的命令以及Go的执行原理.html">
+            
+                    
+                    第9节_Go的命令以及Go的执行原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="day01_第10节_安装Goland开发工具.html">
+            
+                <a href="day01_第10节_安装Goland开发工具.html">
+            
+                    
+                    第10节_安装Goland开发工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="day01_第11节_编码规范.html">
+            
+                <a href="day01_第11节_编码规范.html">
+            
+                    
+                    第11节_编码规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="day02_基本语法.html">
+            
+                <a href="day02_基本语法.html">
+            
+                    
+                    基本语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="day03_数据类型&运算符.html">
+            
+                <a href="day03_数据类型&运算符.html">
+            
+                    
+                    数据类型&运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="day03_键盘输入和打印输出.html">
+            
+                <a href="day03_键盘输入和打印输出.html">
+            
+                    
+                    键盘输入和打印输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="day04_分支语句.html">
+            
+                <a href="day04_分支语句.html">
+            
+                    
+                    分支语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="day05_循环语句.html">
+            
+                <a href="day05_循环语句.html">
+            
+                    
+                    循环语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="day06_数组.html">
+            
+                <a href="day06_数组.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="day07_Slice的使用.html">
+            
+                <a href="day07_Slice的使用.html">
+            
+                    
+                    Slice的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.19" data-path="day08_Map的使用.html">
+            
+                <a href="day08_Map的使用.html">
+            
+                    
+                    Map的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.20" data-path="day09_string.html">
+            
+                <a href="day09_string.html">
+            
+                    
+                    string
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.21" data-path="day10_函数.html">
+            
+                <a href="day10_函数.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.22" data-path="day11_包的管理.html">
+            
+                <a href="day11_包的管理.html">
+            
+                    
+                    包的管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.23" data-path="day12_指针.html">
+            
+                <a href="day12_指针.html">
+            
+                    
+                    指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.24" data-path="day13-结构体.html">
+            
+                <a href="day13-结构体.html">
+            
+                    
+                    结构体
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.25" data-path="day14_第1节_方法.html">
+            
+                <a href="day14_第1节_方法.html">
+            
+                    
+                    第1节_方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.26" data-path="day14_第2节_接口.html">
+            
+                <a href="day14_第2节_接口.html">
+            
+                    
+                    第2节_接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.27" data-path="day14_第3节-OOP编程.html">
+            
+                <a href="day14_第3节-OOP编程.html">
+            
+                    
+                    第3节-OOP编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.28" data-path="day14_第4节-type.html">
+            
+                <a href="day14_第4节-type.html">
+            
+                    
+                    第4节-type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.29" data-path="day15_错误处理.html">
+            
+                <a href="day15_错误处理.html">
+            
+                    
+                    错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Go语言基础进阶
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../02-Go语言基础进阶/day16_file操作.html">
+            
+                <a href="../02-Go语言基础进阶/day16_file操作.html">
+            
+                    
+                    01file操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../02-Go语言基础进阶/day17_Go语言并发Goroutine.html">
+            
+                <a href="../02-Go语言基础进阶/day17_Go语言并发Goroutine.html">
+            
+                    
+                    02Go语言并发Goroutine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../02-Go语言基础进阶/day18_channel通道.html">
+            
+                <a href="../02-Go语言基础进阶/day18_channel通道.html">
+            
+                    
+                    03channel通道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../02-Go语言基础进阶/day19_Go语言反射.html">
+            
+                <a href="../02-Go语言基础进阶/day19_Go语言反射.html">
+            
+                    
+                    04Go语言反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    MySQL数据库基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../03-MySQL数据库基础/day23_学习笔记.html">
+            
+                <a href="../03-MySQL数据库基础/day23_学习笔记.html">
+            
+                    
+                    01学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../03-MySQL数据库基础/day23_数据库基础知识和基础操作.html">
+            
+                <a href="../03-MySQL数据库基础/day23_数据库基础知识和基础操作.html">
+            
+                    
+                    02数据库基础知识和基础操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../03-MySQL数据库基础/day24_查询和复杂查询.html">
+            
+                <a href="../03-MySQL数据库基础/day24_查询和复杂查询.html">
+            
+                    
+                    03查询和复杂查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    beego框架
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../04-beego框架/day36_beego框架介绍和流程分析.html">
+            
+                <a href="../04-beego框架/day36_beego框架介绍和流程分析.html">
+            
+                    
+                    beego框架介绍和流程分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../04-beego框架/day37_beego框架总结及数据库连接配置.html">
+            
+                <a href="../04-beego框架/day37_beego框架总结及数据库连接配置.html">
+            
+                    
+                    beego框架总结及数据库连接配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    beego开发博客系统
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../05-beego框架开发博客系统/day38_项目搭建_登录注册和Session功能开发.html">
+            
+                <a href="../05-beego框架开发博客系统/day38_项目搭建_登录注册和Session功能开发.html">
+            
+                    
+                    项目搭建_登录注册和Session功能开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../05-beego框架开发博客系统/day39_写文章_项目首页和查看文章详情功能开发.html">
+            
+                <a href="../05-beego框架开发博客系统/day39_写文章_项目首页和查看文章详情功能开发.html">
+            
+                    
+                    写文章_项目首页和查看文章详情功能开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../05-beego框架开发博客系统/day40_修改文章_删除文章和文章标签功能开发.html">
+            
+                <a href="../05-beego框架开发博客系统/day40_修改文章_删除文章和文章标签功能开发.html">
+            
+                    
+                    修改文章_删除文章和文章标签功能开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../05-beego框架开发博客系统/day41_首页功能扩展_图片上传和关于功能开发.html">
+            
+                <a href="../05-beego框架开发博客系统/day41_首页功能扩展_图片上传和关于功能开发.html">
+            
+                    
+                    首页功能扩展_图片上传和关于功能开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" >
+            
+                <span>
+            
+                    
+                    iris框架
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../06-iris框架/day54_web开发介绍、iris框架安装、HTTP请求和返回、iris路由处理.html">
+            
+                <a href="../06-iris框架/day54_web开发介绍、iris框架安装、HTTP请求和返回、iris路由处理.html">
+            
+                    
+                    web开发介绍、iris框架安装、HTTP请求和返回、iris路由处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../06-iris框架/day55_框架设置、mvc包、session使用、项目搭建和资源导入.html">
+            
+                <a href="../06-iris框架/day55_框架设置、mvc包、session使用、项目搭建和资源导入.html">
+            
+                    
+                    框架设置、mvc包、session使用、项目搭建和资源导入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <span>
+            
+                    
+                    微服务特性
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../07-微服务特性/day76_微服务简介及特性介绍.html">
+            
+                <a href="../07-微服务特性/day76_微服务简介及特性介绍.html">
+            
+                    
+                    微服务简介及特性介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <span>
+            
+                    
+                    protobuf
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../08-protobuf/day77_Protobuf介绍.html">
+            
+                <a href="../08-protobuf/day77_Protobuf介绍.html">
+            
+                    
+                    Protobuf介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" >
+            
+                <span>
+            
+                    
+                    微服务管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../09-微服务管理/day78_微服务管理_上.html">
+            
+                <a href="../09-微服务管理/day78_微服务管理_上.html">
+            
+                    
+                    微服务管理_上
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../09-微服务管理/day79_微服务管理_下.html">
+            
+                <a href="../09-微服务管理/day79_微服务管理_下.html">
+            
+                    
+                    微服务管理_下
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" >
+            
+                <span>
+            
+                    
+                    RPC&gRPC
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="../10-RPC远程调用机制/day80_RPC远程过程调用.html">
+            
+                <a href="../10-RPC远程调用机制/day80_RPC远程过程调用.html">
+            
+                    
+                    RPC远程过程调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="../11-gRPC远程调用机制/day81_gRPC远程调用机制介绍.html">
+            
+                <a href="../11-gRPC远程调用机制/day81_gRPC远程调用机制介绍.html">
+            
+                    
+                    gRPC远程调用机制介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="../11-gRPC远程调用机制/day82_gRPC使用.html">
+            
+                <a href="../11-gRPC远程调用机制/day82_gRPC使用.html">
+            
+                    
+                    gRPC使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" >
+            
+                <span>
+            
+                    
+                    go-micro
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.5.1" data-path="../12-go-micro微服务框架/day83_go-micro框架介绍.html">
+            
+                <a href="../12-go-micro微服务框架/day83_go-micro框架介绍.html">
+            
+                    
+                    go-micro框架介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.2" data-path="../12-go-micro微服务框架/day84_go-micro使用1.html">
+            
+                <a href="../12-go-micro微服务框架/day84_go-micro使用1.html">
+            
+                    
+                    go-micro使用1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.3" data-path="../12-go-micro微服务框架/day85_go-micro使用2.html">
+            
+                <a href="../12-go-micro微服务框架/day85_go-micro使用2.html">
+            
+                    
+                    go-micro使用2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" >
+            
+                <span>
+            
+                    
+                    RESTful
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../13-RESTful设计/day86_RESTful标准设计.html">
+            
+                <a href="../13-RESTful设计/day86_RESTful标准设计.html">
+            
+                    
+                    RESTful标准设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" >
+            
+                <span>
+            
+                    
+                    区块链
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../14-区块链/day01_初始区块链家族1.html">
+            
+                <a href="../14-区块链/day01_初始区块链家族1.html">
+            
+                    
+                    初始区块链家族1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="../14-区块链/day02_区块链基础入门.html">
+            
+                <a href="../14-区块链/day02_区块链基础入门.html">
+            
+                    
+                    区块链基础入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.3" data-path="../14-区块链/day03_区块链的本质.html">
+            
+                <a href="../14-区块链/day03_区块链的本质.html">
+            
+                    
+                    区块链的本质
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.4" data-path="../14-区块链/day04_区块链的特性.html">
+            
+                <a href="../14-区块链/day04_区块链的特性.html">
+            
+                    
+                    区块链的特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第9节_Go的命令以及Go的执行原理</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="go&#x7684;&#x6267;&#x884C;&#x539F;&#x7406;&#x4EE5;&#x53CA;go&#x7684;&#x547D;&#x4EE4;">Go&#x7684;&#x6267;&#x884C;&#x539F;&#x7406;&#x4EE5;&#x53CA;Go&#x7684;&#x547D;&#x4EE4;</h1>
+<blockquote>
+<p>create by victor</p>
+</blockquote>
+<h2 id="&#x4E00;&#x3001;go&#x7684;&#x6E90;&#x7801;&#x6587;&#x4EF6;">&#x4E00;&#x3001;Go&#x7684;&#x6E90;&#x7801;&#x6587;&#x4EF6;</h2>
+<p> Go &#x7684;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x5206;&#x7C7B;&#xFF1A;</p>
+<p><img src="img/yuanmawenjian1.png" alt="yuanmawenjian1"></p>
+<p>&#x5982;&#x4E0A;&#x56FE;&#xFF0C;&#x5206;&#x4E3A;&#x4E09;&#x7C7B;&#xFF1A;</p>
+<p><strong>1&#x3001;&#x547D;&#x4EE4;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#xFF1A;</strong></p>
+<p>&#x58F0;&#x660E;&#x81EA;&#x5DF1;&#x5C5E;&#x4E8E; main &#x4EE3;&#x7801;&#x5305;&#x3001;&#x5305;&#x542B;&#x65E0;&#x53C2;&#x6570;&#x58F0;&#x660E;&#x548C;&#x7ED3;&#x679C;&#x58F0;&#x660E;&#x7684; main &#x51FD;&#x6570;&#x3002;</p>
+<p>&#x547D;&#x4EE4;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x88AB;&#x5B89;&#x88C5;&#x4EE5;&#x540E;&#xFF0C;GOPATH &#x5982;&#x679C;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5DE5;&#x4F5C;&#x533A;&#xFF0C;&#x90A3;&#x4E48;&#x76F8;&#x5E94;&#x7684;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x4F1A;&#x88AB;&#x5B58;&#x653E;&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x533A;&#x7684; bin &#x6587;&#x4EF6;&#x5939;&#x4E0B;&#xFF1B;&#x5982;&#x679C;&#x6709;&#x591A;&#x4E2A;&#x5DE5;&#x4F5C;&#x533A;&#xFF0C;&#x5C31;&#x4F1A;&#x5B89;&#x88C5;&#x5230; GOBIN &#x6307;&#x5411;&#x7684;&#x76EE;&#x5F55;&#x4E0B;&#x3002;</p>
+<p>&#x547D;&#x4EE4;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x662F; Go &#x7A0B;&#x5E8F;&#x7684;&#x5165;&#x53E3;&#x3002;</p>
+<p>&#x540C;&#x4E00;&#x4E2A;&#x4EE3;&#x7801;&#x5305;&#x4E2D;&#x6700;&#x597D;&#x4E5F;&#x4E0D;&#x8981;&#x653E;&#x591A;&#x4E2A;&#x547D;&#x4EE4;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x3002;&#x591A;&#x4E2A;&#x547D;&#x4EE4;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x867D;&#x7136;&#x53EF;&#x4EE5;&#x5206;&#x5F00;&#x5355;&#x72EC; go run &#x8FD0;&#x884C;&#x8D77;&#x6765;&#xFF0C;&#x4F46;&#x662F;&#x65E0;&#x6CD5;&#x901A;&#x8FC7; go build &#x548C; go install&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x5148;&#x6253;&#x5F00;&#x4E0A;&#x6B21;&#x8BFE;&#x7684;hello&#x76EE;&#x5F55;&#xFF0C;&#x7136;&#x540E;&#x590D;&#x5236;helloworld.go&#x4E3A;helloworld2.go&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x4FEE;&#x6539;&#x91CC;&#x9762;&#x7684;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+<span class="hljs-keyword">import</span> <span class="hljs-string">&quot;fmt&quot;</span>
+<span class="hljs-keyword">func</span> main(){
+    fmt.Println(<span class="hljs-string">&quot;&#x6211;&#x662F;&#x7B2C;&#x4E8C;&#x4E2A;helloworld&#x6587;&#x4EF6;&quot;</span>)
+    fmt.Print(<span class="hljs-string">&quot;Go Go Go !!!&quot;</span>)
+}
+</code></pre>
+<p>hello&#x76EE;&#x5F55;&#x4E0B;&#x6709;&#x4E24;&#x4E2A;go&#x6587;&#x4EF6;&#x4E86;&#xFF0C;&#x4E00;&#x4E2A;&#x662F;helloworld.go&#xFF0C;&#x4E00;&#x4E2A;&#x662F;helloworld2.go&#x3002;&#x5148;&#x8BF4;&#x660E;&#x4E00;&#x4E0B;&#xFF0C;&#x5728;&#x4E0A;&#x8FF0;&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x653E;&#x4E86;&#x4E24;&#x4E2A;&#x547D;&#x4EE4;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#xFF0C;&#x540C;&#x65F6;&#x90FD;&#x58F0;&#x660E;&#x81EA;&#x5DF1;&#x5C5E;&#x4E8E; main &#x4EE3;&#x7801;&#x5305;&#x3002;</p>
+<p><img src="img/gomingling1.png" alt="gomingling1"></p>
+<p>&#x6253;&#x5F00;&#x7EC8;&#x7AEF;&#xFF0C;&#x8FDB;&#x5165;hello&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8FD9;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-shell">localhost:~ ruby cd go/src/hello
+localhost:hello ruby ls
+helloworld.go    helloworld2.go
+</code></pre>
+<p>&#x7136;&#x540E;&#x6211;&#x4EEC;&#x5206;&#x522B;&#x6267;&#x884C;go run&#x547D;&#x4EE4;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x4E24;&#x4E2A;go&#x6587;&#x4EF6;&#x90FD;&#x53EF;&#x4EE5;&#x88AB;&#x6267;&#x884C;&#xFF1A;</p>
+<pre><code class="lang-shell">localhost:hello ruby$ go run helloworld.go
+HelloWorld
+Go Go Go !!!localhost:hello ruby$ go run helloworld2.go
+&#x6211;&#x662F;&#x7B2C;&#x4E8C;&#x4E2A;helloworld&#x6587;&#x4EF6;
+Go Go Go !!!
+</code></pre>
+<p><img src="img/gomingling2.png" alt="gomingling2"></p>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x6267;&#x884C; go build &#x548C; go install &#xFF0C;&#x770B;&#x770B;&#x4F1A;&#x53D1;&#x751F;&#x4EC0;&#x4E48;&#xFF1A;</p>
+<pre><code class="lang-shell">localhost:hello ruby$ go build 
+# hello
+./helloworld2.go:3:6: main redeclared in this block
+    previous declaration at ./helloworld.go:3:6
+localhost:hello ruby$ go install
+# hello
+./helloworld2.go:3:6: main redeclared in this block
+    previous declaration at ./helloworld.go:3:6
+localhost:hello ruby$
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x6548;&#x679C;&#x56FE;&#xFF1A;</p>
+<p><img src="img/gomingling3.png" alt="gomingling3"></p>
+<p>&#x8FD9;&#x4E5F;&#x5C31;&#x8BC1;&#x660E;&#x4E86;&#x591A;&#x4E2A;&#x547D;&#x4EE4;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x867D;&#x7136;&#x53EF;&#x4EE5;&#x5206;&#x5F00;&#x5355;&#x72EC; go run &#x8FD0;&#x884C;&#x8D77;&#x6765;&#xFF0C;&#x4F46;&#x662F;&#x65E0;&#x6CD5;&#x901A;&#x8FC7; go build &#x548C; go install&#x3002;</p>
+<p>&#x540C;&#x7406;&#xFF0C;&#x5982;&#x679C;&#x547D;&#x4EE4;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x548C;&#x5E93;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x4E5F;&#x4F1A;&#x51FA;&#x73B0;&#x8FD9;&#x6837;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x5E93;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x4E0D;&#x80FD;&#x901A;&#x8FC7; go build &#x548C; go install &#x8FD9;&#x79CD;&#x5E38;&#x89C4;&#x7684;&#x65B9;&#x6CD5;&#x7F16;&#x8BD1;&#x548C;&#x5B89;&#x88C5;&#x3002;&#x5177;&#x4F53;&#x4F8B;&#x5B50;&#x548C;&#x4E0A;&#x8FF0;&#x7C7B;&#x4F3C;&#xFF0C;&#x8FD9;&#x91CC;&#x5C31;&#x4E0D;&#x518D;&#x8D34;&#x4EE3;&#x7801;&#x4E86;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x547D;&#x4EE4;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x5E94;&#x8BE5;&#x662F;&#x88AB;&#x5355;&#x72EC;&#x653E;&#x5728;&#x4E00;&#x4E2A;&#x4EE3;&#x7801;&#x5305;&#x4E2D;&#x3002;</p>
+<p><strong>2&#x3001;&#x5E93;&#x6E90;&#x7801;&#x6587;&#x4EF6;</strong></p>
+<p>&#x5E93;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x5C31;&#x662F;&#x4E0D;&#x5177;&#x5907;&#x547D;&#x4EE4;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x4E0A;&#x8FF0;&#x4E24;&#x4E2A;&#x7279;&#x5F81;&#x7684;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x3002;&#x5B58;&#x5728;&#x4E8E;&#x67D0;&#x4E2A;&#x4EE3;&#x7801;&#x5305;&#x4E2D;&#x7684;&#x666E;&#x901A;&#x7684;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x5E93;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x88AB;&#x5B89;&#x88C5;&#x540E;&#xFF0C;&#x76F8;&#x5E94;&#x7684;&#x5F52;&#x6863;&#x6587;&#x4EF6;&#xFF08;.a &#x6587;&#x4EF6;&#xFF09;&#x4F1A;&#x88AB;&#x5B58;&#x653E;&#x5230;&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x533A;&#x7684; pkg &#x7684;&#x5E73;&#x53F0;&#x76F8;&#x5173;&#x76EE;&#x5F55;&#x4E0B;&#x3002;</p>
+<p><strong>3&#x3001;&#x6D4B;&#x8BD5;&#x6E90;&#x7801;&#x6587;&#x4EF6;</strong></p>
+<p>&#x540D;&#x79F0;&#x4EE5; _test.go &#x4E3A;&#x540E;&#x7F00;&#x7684;&#x4EE3;&#x7801;&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x4E14;&#x5FC5;&#x987B;&#x5305;&#x542B; Test &#x6216;&#x8005; Benchmark &#x540D;&#x79F0;&#x524D;&#x7F00;&#x7684;&#x51FD;&#x6570;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> TestXXX( t *testing.T) {
+
+}
+</code></pre>
+<p>&#x540D;&#x79F0;&#x4EE5; Test &#x4E3A;&#x540D;&#x79F0;&#x524D;&#x7F00;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x53EA;&#x80FD;&#x63A5;&#x53D7; *testing.T &#x7684;&#x53C2;&#x6570;&#xFF0C;&#x8FD9;&#x79CD;&#x6D4B;&#x8BD5;&#x51FD;&#x6570;&#x662F;&#x529F;&#x80FD;&#x6D4B;&#x8BD5;&#x51FD;&#x6570;&#x3002;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> BenchmarkXXX( b *testing.B) {
+
+}
+</code></pre>
+<p>&#x540D;&#x79F0;&#x4EE5; Benchmark &#x4E3A;&#x540D;&#x79F0;&#x524D;&#x7F00;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x53EA;&#x80FD;&#x63A5;&#x53D7; *testing.B &#x7684;&#x53C2;&#x6570;&#xFF0C;&#x8FD9;&#x79CD;&#x6D4B;&#x8BD5;&#x51FD;&#x6570;&#x662F;&#x6027;&#x80FD;&#x6D4B;&#x8BD5;&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x73B0;&#x5728;&#x7B54;&#x6848;&#x5C31;&#x5F88;&#x660E;&#x663E;&#x4E86;&#xFF1A;</p>
+<p>&#x547D;&#x4EE4;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x662F;&#x53EF;&#x4EE5;&#x5355;&#x72EC;&#x8FD0;&#x884C;&#x7684;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; go run &#x547D;&#x4EE4;&#x76F4;&#x63A5;&#x8FD0;&#x884C;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; go build &#x6216; go install &#x547D;&#x4EE4;&#x5F97;&#x5230;&#x76F8;&#x5E94;&#x7684;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x3002;&#x6240;&#x4EE5;&#x547D;&#x4EE4;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x662F;&#x53EF;&#x4EE5;&#x5728;&#x673A;&#x5668;&#x7684;&#x4EFB;&#x4F55;&#x76EE;&#x5F55;&#x4E0B;&#x8FD0;&#x884C;&#x7684;&#x3002;</p>
+<p>&#x4E3E;&#x4E2A;&#x6817;&#x5B50;&#xFF1A;</p>
+<p>&#x6BD4;&#x5982;&#x5E73;&#x65F6;&#x6211;&#x4EEC;&#x5728; LeetCode &#x4E0A;&#x5237;&#x7B97;&#x6CD5;&#x9898;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x5199;&#x7684;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#xFF0C;&#x8FD9;&#x5C31;&#x662F;&#x547D;&#x4EE4;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x7535;&#x8111;&#x7684;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A; go &#x6587;&#x4EF6;&#x5C31;&#x53EF;&#x4EE5;&#x5F00;&#x59CB;&#x5237;&#x9898;&#x4E86;&#xFF0C;&#x5199;&#x5B8C;&#x5C31;&#x53EF;&#x4EE5;&#x8FD0;&#x884C;&#xFF0C;&#x5BF9;&#x6BD4;&#x6267;&#x884C;&#x7ED3;&#x679C;&#xFF0C;&#x7B54;&#x6848;&#x5BF9;&#x4E86;&#x5C31;&#x53EF;&#x4EE5;&#x63D0;&#x4EA4;&#x4EE3;&#x7801;&#x3002;</p>
+<p>&#x4F46;&#x662F;&#x516C;&#x53F8;&#x9879;&#x76EE;&#x91CC;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x5C31;&#x4E0D;&#x80FD;&#x8FD9;&#x6837;&#x4E86;&#xFF0C;&#x53EA;&#x80FD;&#x5B58;&#x653E;&#x5728; GOPATH &#x76EE;&#x5F55;&#x4E0B;&#x3002;&#x56E0;&#x4E3A;&#x516C;&#x53F8;&#x9879;&#x76EE;&#x4E0D;&#x53EF;&#x80FD;&#x53EA;&#x6709;&#x547D;&#x4EE4;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x7684;&#xFF0C;&#x80AF;&#x5B9A;&#x662F;&#x5305;&#x542B;&#x5E93;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#xFF0C;&#x751A;&#x81F3;&#x5305;&#x542B;&#x6D4B;&#x8BD5;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x7684;&#x3002;</p>
+<h2 id="&#x4E8C;&#x3001;go&#x7684;&#x547D;&#x4EE4;">&#x4E8C;&#x3001;Go&#x7684;&#x547D;&#x4EE4;</h2>
+<p>&#x76EE;&#x524D;Go&#x7684;&#x6700;&#x65B0;&#x7248;1.12&#x91CC;&#x9762;&#x57FA;&#x672C;&#x547D;&#x4EE4;&#x6709;&#x4EE5;&#x4E0B;17&#x4E2A;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x6253;&#x5F00;&#x7EC8;&#x7AEF;&#x8F93;&#x5165;&#xFF1A;go help&#x5373;&#x53EF;&#x770B;&#x5230;Go&#x7684;&#x8FD9;&#x4E9B;&#x547D;&#x4EE4;&#x4EE5;&#x53CA;&#x7B80;&#x4ECB;&#x3002;</p>
+<pre><code class="lang-shell">    bug         start a bug report
+    build       compile packages and dependencies
+    clean       remove object files and cached files
+    doc         show documentation for package or symbol
+    env         print Go environment information
+    fix         update packages to use new APIs
+    fmt         gofmt (reformat) package sources
+    generate    generate Go files by processing source
+    get         download and install packages and dependencies
+    install     compile and install packages and dependencies
+    list        list packages or modules
+    mod         module maintenance
+    run         compile and run Go program
+    test        test packages
+    tool        run specified go tool
+    version     print Go version
+    vet         report likely mistakes in packages
+</code></pre>
+<p>&#x5176;&#x4E2D;&#x548C;&#x7F16;&#x8BD1;&#x76F8;&#x5173;&#x7684;&#x6709;build&#x3001;get&#x3001;install&#x3001;run&#x8FD9;4&#x4E2A;&#x3002;&#x63A5;&#x4E0B;&#x6765;&#x5C31;&#x4F9D;&#x6B21;&#x770B;&#x770B;&#x8FD9;&#x56DB;&#x4E2A;&#x7684;&#x4F5C;&#x7528;&#x3002;</p>
+<p>&#x5728;&#x8BE6;&#x7EC6;&#x5206;&#x6790;&#x8FD9;4&#x4E2A;&#x547D;&#x4EE4;&#x4E4B;&#x524D;&#xFF0C;&#x5148;&#x7F57;&#x5217;&#x4E00;&#x4E0B;&#x901A;&#x7528;&#x7684;&#x547D;&#x4EE4;&#x6807;&#x8BB0;&#xFF0C;&#x4EE5;&#x4E0B;&#x8FD9;&#x4E9B;&#x547D;&#x4EE4;&#x90FD;&#x53EF;&#x9002;&#x7528;&#x7684;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x540D;&#x79F0;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-a</td>
+<td>&#x7528;&#x4E8E;&#x5F3A;&#x5236;&#x91CD;&#x65B0;&#x7F16;&#x8BD1;&#x6240;&#x6709;&#x6D89;&#x53CA;&#x7684; Go &#x8BED;&#x8A00;&#x4EE3;&#x7801;&#x5305;&#xFF08;&#x5305;&#x62EC; Go &#x8BED;&#x8A00;&#x6807;&#x51C6;&#x5E93;&#x4E2D;&#x7684;&#x4EE3;&#x7801;&#x5305;&#xFF09;&#xFF0C;&#x5373;&#x4F7F;&#x5B83;&#x4EEC;&#x5DF2;&#x7ECF;&#x662F;&#x6700;&#x65B0;&#x7684;&#x4E86;&#x3002;&#x8BE5;&#x6807;&#x8BB0;&#x53EF;&#x4EE5;&#x8BA9;&#x6211;&#x4EEC;&#x6709;&#x673A;&#x4F1A;&#x901A;&#x8FC7;&#x6539;&#x52A8;&#x5E95;&#x5C42;&#x7684;&#x4EE3;&#x7801;&#x5305;&#x505A;&#x4E00;&#x4E9B;&#x5B9E;&#x9A8C;&#x3002;</td>
+</tr>
+<tr>
+<td>-n</td>
+<td>&#x4F7F;&#x547D;&#x4EE4;&#x4EC5;&#x6253;&#x5370;&#x5176;&#x6267;,&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#x7528;&#x5230;&#x7684;&#x6240;&#x6709;&#x547D;&#x4EE4;&#xFF0C;&#x800C;&#x4E0D;&#x53BB;&#x771F;&#x6B63;&#x6267;&#x884C;&#x5B83;&#x4EEC;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x53EA;&#x60F3;&#x67E5;&#x770B;&#x6216;&#x8005;&#x9A8C;&#x8BC1;&#x547D;&#x4EE4;&#x7684;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#xFF0C;&#x800C;&#x4E0D;&#x60F3;&#x6539;&#x53D8;&#x4EFB;&#x4F55;&#x4E1C;&#x897F;&#xFF0C;&#x4F7F;&#x7528;&#x5B83;&#x6B63;&#x597D;&#x5408;&#x9002;&#x3002;</td>
+</tr>
+<tr>
+<td>-race</td>
+<td>&#x7528;&#x4E8E;&#x68C0;&#x6D4B;&#x5E76;&#x62A5;&#x544A;&#x6307;&#x5B9A; Go &#x8BED;&#x8A00;&#x7A0B;&#x5E8F;&#x4E2D;&#x5B58;&#x5728;&#x7684;&#x6570;&#x636E;&#x7ADE;&#x4E89;&#x95EE;&#x9898;&#x3002;&#x5F53;&#x7528; Go &#x8BED;&#x8A00;&#x7F16;&#x5199;&#x5E76;&#x53D1;&#x7A0B;&#x5E8F;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8FD9;&#x662F;&#x5F88;&#x91CD;&#x8981;&#x7684;&#x68C0;&#x6D4B;&#x624B;&#x6BB5;&#x4E4B;&#x4E00;&#x3002;</td>
+</tr>
+<tr>
+<td>-v</td>
+<td>&#x7528;&#x4E8E;&#x6253;&#x5370;&#x547D;&#x4EE4;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#x6D89;&#x53CA;&#x7684;&#x4EE3;&#x7801;&#x5305;&#x3002;&#x8FD9;&#x4E00;&#x5B9A;&#x5305;&#x62EC;&#x6211;&#x4EEC;&#x6307;&#x5B9A;&#x7684;&#x76EE;&#x6807;&#x4EE3;&#x7801;&#x5305;&#xFF0C;&#x5E76;&#x4E14;&#x6709;&#x65F6;&#x8FD8;&#x4F1A;&#x5305;&#x62EC;&#x8BE5;&#x4EE3;&#x7801;&#x5305;&#x76F4;&#x63A5;&#x6216;&#x95F4;&#x63A5;&#x4F9D;&#x8D56;&#x7684;&#x90A3;&#x4E9B;&#x4EE3;&#x7801;&#x5305;&#x3002;&#x8FD9;&#x4F1A;&#x8BA9;&#x4F60;&#x77E5;&#x9053;&#x54EA;&#x4E9B;&#x4EE3;&#x7801;&#x5305;&#x88AB;&#x6267;&#x884C;&#x8FC7;&#x4E86;&#x3002;</td>
+</tr>
+<tr>
+<td>-work</td>
+<td>&#x7528;&#x4E8E;&#x6253;&#x5370;&#x547D;&#x4EE4;&#x6267;&#x884C;&#x65F6;&#x751F;&#x6210;&#x548C;&#x4F7F;&#x7528;&#x7684;&#x4E34;&#x65F6;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#x7684;&#x540D;&#x5B57;&#xFF0C;&#x4E14;&#x547D;&#x4EE4;&#x6267;&#x884C;&#x5B8C;&#x6210;&#x540E;&#x4E0D;&#x5220;&#x9664;&#x5B83;&#x3002;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6587;&#x4EF6;&#x53EF;&#x80FD;&#x4F1A;&#x5BF9;&#x4F60;&#x6709;&#x7528;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4ECE;&#x4FA7;&#x9762;&#x4E86;&#x89E3;&#x547D;&#x4EE4;&#x7684;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x6DFB;&#x52A0;&#x6B64;&#x6807;&#x8BB0;&#xFF0C;&#x90A3;&#x4E48;&#x4E34;&#x65F6;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#x4F1A;&#x5728;&#x547D;&#x4EE4;&#x6267;&#x884C;&#x5B8C;&#x6BD5;&#x524D;&#x5220;&#x9664;&#x3002;</td>
+</tr>
+<tr>
+<td>-x</td>
+<td>&#x4F7F;&#x547D;&#x4EE4;&#x6253;&#x5370;&#x5176;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#x7528;&#x5230;&#x7684;&#x6240;&#x6709;&#x547D;&#x4EE4;&#xFF0C;&#x5E76;&#x540C;&#x65F6;&#x6267;&#x884C;&#x5B83;&#x4EEC;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1-go-run">1. go run</h3>
+<p>&#x4E13;&#x95E8;&#x7528;&#x6765;&#x8FD0;&#x884C;&#x547D;&#x4EE4;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x7684;&#x547D;&#x4EE4;&#xFF0C;<strong>&#x6CE8;&#x610F;&#xFF0C;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x4E0D;&#x662F;&#x7528;&#x6765;&#x8FD0;&#x884C;&#x6240;&#x6709; Go &#x7684;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x7684;&#xFF01;</strong></p>
+<p>go run &#x547D;&#x4EE4;&#x53EA;&#x80FD;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x4EE5;&#x53CA;&#x82E5;&#x5E72;&#x4E2A;&#x5E93;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#xFF08;&#x5FC5;&#x987B;&#x540C;&#x5C5E;&#x4E8E; main &#x5305;&#xFF09;&#x4F5C;&#x4E3A;&#x6587;&#x4EF6;&#x53C2;&#x6570;&#xFF0C;&#x4E14;<strong>&#x4E0D;&#x80FD;&#x63A5;&#x53D7;&#x6D4B;&#x8BD5;&#x6E90;&#x7801;&#x6587;&#x4EF6;</strong>&#x3002;&#x5B83;&#x5728;&#x6267;&#x884C;&#x65F6;&#x4F1A;&#x68C0;&#x67E5;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x7684;&#x7C7B;&#x578B;&#x3002;&#x5982;&#x679C;&#x53C2;&#x6570;&#x4E2D;&#x6709;&#x591A;&#x4E2A;&#x6216;&#x8005;&#x6CA1;&#x6709;&#x547D;&#x4EE4;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#xFF0C;&#x90A3;&#x4E48; go run &#x547D;&#x4EE4;&#x5C31;&#x53EA;&#x4F1A;&#x6253;&#x5370;&#x9519;&#x8BEF;&#x63D0;&#x793A;&#x4FE1;&#x606F;&#x5E76;&#x9000;&#x51FA;&#xFF0C;&#x800C;&#x4E0D;&#x4F1A;&#x7EE7;&#x7EED;&#x6267;&#x884C;&#x3002;</p>
+<p>&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x5177;&#x4F53;&#x5E72;&#x4E86;&#x4E9B;&#x4EC0;&#x4E48;&#x4E8B;&#x60C5;&#x5462;&#xFF1F;&#x6765;&#x5206;&#x6790;&#x5206;&#x6790;&#xFF0C;&#x6211;&#x4EEC;&#x5148;&#x91CD;&#x65B0;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x6587;&#x4EF6;&#xFF1A;mytest.go&#xFF0C;&#x5E76;&#x52A0;&#x5165;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+<span class="hljs-keyword">import</span> <span class="hljs-string">&quot;fmt&quot;</span>
+<span class="hljs-keyword">func</span> main(){
+    fmt.Println(<span class="hljs-string">&quot;HelloWorld&quot;</span>)
+    fmt.Println(<span class="hljs-string">&quot;&#x4F60;&#x597D;&#xFF0C;Go!!!&quot;</span>)
+}
+</code></pre>
+<p>&#x6267;&#x884C;go run &#x914D;&#x5408;-n&#xFF1A;</p>
+<pre><code class="lang-shell">localhost:hello ruby$ go run -n mytest.go 
+
+#
+# command-line-arguments
+#
+
+mkdir -p $WORK/b001/
+cat &gt;$WORK/b001/importcfg &lt;&lt; &apos;EOF&apos; # internal
+# import config
+packagefile fmt=/usr/local/go/pkg/darwin_amd64/fmt.a
+packagefile runtime=/usr/local/go/pkg/darwin_amd64/runtime.a
+EOF
+cd /Users/ruby/go/src/hello
+/usr/local/go/pkg/tool/darwin_amd64/compile -o $WORK/b001/_pkg_.a -trimpath $WORK/b001 -p main -complete -buildid ieg41NOobNF0eqq3xgnP/ieg41NOobNF0eqq3xgnP -dwarf=false -goversion go1.12.1 -D _/Users/ruby/go/src/hello -importcfg $WORK/b001/importcfg -pack -c=4 ./mytest.go
+/usr/local/go/pkg/tool/darwin_amd64/buildid -w $WORK/b001/_pkg_.a # internal
+cat &gt;$WORK/b001/importcfg.link &lt;&lt; &apos;EOF&apos; # internal
+... # &#x6B64;&#x5904;&#x7701;&#x7565;
+EOF
+mkdir -p $WORK/b001/exe/
+cd .
+/usr/local/go/pkg/tool/darwin_amd64/link -o $WORK/b001/exe/mytest -importcfg $WORK/b001/importcfg.link -s -w -buildmode=exe -buildid=vpgT856LhbZPXp6WeHib/ieg41NOobNF0eqq3xgnP/ieg41NOobNF0eqq3xgnP/vpgT856LhbZPXp6WeHib -extld=clang $WORK/b001/_pkg_.a
+$WORK/b001/exe/mytest
+localhost:hello ruby$
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x6548;&#x679C;&#x56FE;&#xFF1A;</p>
+<p><img src="img/gomingling4.gif" alt="gomingling4"></p>
+<p>&#x8FD9;&#x91CC;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x521B;&#x5EFA;&#x4E86;&#x4E24;&#x4E2A;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x5939; b001 &#x548C; exe&#xFF0C;&#x5148;&#x6267;&#x884C;&#x4E86; compile &#x547D;&#x4EE4;&#xFF0C;&#x7136;&#x540E; link&#xFF0C;&#x751F;&#x6210;&#x4E86;&#x5F52;&#x6863;&#x6587;&#x4EF6;.a &#x548C; &#x6700;&#x7EC8;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#xFF0C;&#x6700;&#x7EC8;&#x7684;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x653E;&#x5728; exe &#x6587;&#x4EF6;&#x5939;&#x91CC;&#x9762;&#x3002;&#x547D;&#x4EE4;&#x7684;&#x6700;&#x540E;&#x4E00;&#x6B65;&#x5C31;&#x662F;&#x6267;&#x884C;&#x4E86;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x603B;&#x7ED3;&#x4E00;&#x4E0B;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;</p>
+<p><img src="img/gomingling5.jpg" alt="gomingling5"></p>
+<p>&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x751F;&#x6210;&#x7684;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x53EF;&#x4EE5;&#x7528;<code>go run -work</code>&#x770B;&#x5230;&#xFF0C;&#x6BD4;&#x5982;&#x5F53;&#x524D;&#x751F;&#x6210;&#x7684;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x5939;&#x662F;&#x5982;&#x4E0B;&#x7684;&#x8DEF;&#x5F84;&#xFF1A;</p>
+<pre><code class="lang-shell">localhost:hello ruby$ go run -work mytest.go 
+WORK=/var/folders/kt/nlhsnpgn6lgd_q16f8j83sbh0000gn/T/go-build593750496
+HelloWorld
+&#x4F60;&#x597D;&#xFF0C;Go!!!
+localhost:hello ruby$
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x8FDB;&#x5165;&#xFF1A;<code>/var/folders/kt/nlhsnpgn6lgd_q16f8j83sbh0000gn/T/go-build593750496</code>&#x76EE;&#x5F55;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5982;&#x4E0B;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#xFF1A;</p>
+<p><img src="img/gomingling6.png" alt="gomingling6"></p>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x6700;&#x7EC8;<code>go run</code>&#x547D;&#x4EE4;&#x662F;&#x751F;&#x6210;&#x4E86;2&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x4E00;&#x4E2A;&#x662F;&#x5F52;&#x6863;&#x6587;&#x4EF6;&#xFF0C;&#x4E00;&#x4E2A;&#x662F;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x3002;</p>
+<p>go run &#x547D;&#x4EE4;&#x5728;&#x7B2C;&#x4E8C;&#x6B21;&#x6267;&#x884C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5982;&#x679C;&#x53D1;&#x73B0;&#x5BFC;&#x5165;&#x7684;&#x4EE3;&#x7801;&#x5305;&#x6CA1;&#x6709;&#x53D1;&#x751F;&#x53D8;&#x5316;&#xFF0C;&#x90A3;&#x4E48; go run &#x4E0D;&#x4F1A;&#x518D;&#x6B21;&#x7F16;&#x8BD1;&#x8FD9;&#x4E2A;&#x5BFC;&#x5165;&#x7684;&#x4EE3;&#x7801;&#x5305;&#x3002;&#x76F4;&#x63A5;&#x9759;&#x6001;&#x94FE;&#x63A5;&#x8FDB;&#x6765;&#x3002;</p>
+<pre><code class="lang-shell">localhost:hello ruby$ go run -n mytest.go 
+mkdir -p $WORK/b001/
+cat &gt;$WORK/b001/importcfg.link &lt;&lt; &apos;EOF&apos; # internal
+packagefile command-line-arguments=/Users/ruby/Library/Caches/go-build/6b/6b9577027c8da20b0ae6da790267f558b3b71eea1feb44039fb933b35eaef6f9-d
+packagefile fmt=/usr/local/go/pkg/darwin_amd64/fmt.a
+...
+EOF
+mkdir -p $WORK/b001/exe/
+cd .
+/usr/local/go/pkg/tool/darwin_amd64/link -o $WORK/b001/exe/mytest -importcfg $WORK/b001/importcfg.link -s -w -buildmode=exe -buildid=goiqf_1cemqljgOYzSRA/ieg41NOobNF0eqq3xgnP/MVbHdxOky1BGK6Aq_4bM/goiqf_1cemqljgOYzSRA -extld=clang /Users/ruby/Library/Caches/go-build/6b/6b9577027c8da20b0ae6da790267f558b3b71eea1feb44039fb933b35eaef6f9-d
+$WORK/b001/exe/mytest
+localhost:hello ruby$
+</code></pre>
+<h3 id="2-go-build">2. go build</h3>
+<p>go build &#x547D;&#x4EE4;&#x4E3B;&#x8981;&#x662F;&#x7528;&#x4E8E;&#x6D4B;&#x8BD5;&#x7F16;&#x8BD1;&#x3002;&#x5728;&#x5305;&#x7684;&#x7F16;&#x8BD1;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x82E5;&#x6709;&#x5FC5;&#x8981;&#xFF0C;&#x4F1A;&#x540C;&#x65F6;&#x7F16;&#x8BD1;&#x4E0E;&#x4E4B;&#x76F8;&#x5173;&#x8054;&#x7684;&#x5305;&#x3002;</p>
+<ol>
+<li>&#x5982;&#x679C;&#x662F;&#x666E;&#x901A;&#x5305;&#xFF0C;&#x5F53;&#x4F60;&#x6267;&#x884C;go build&#x547D;&#x4EE4;&#x540E;&#xFF0C;&#x4E0D;&#x4F1A;&#x4EA7;&#x751F;&#x4EFB;&#x4F55;&#x6587;&#x4EF6;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x662F;main&#x5305;&#xFF0C;&#x5F53;&#x53EA;&#x6267;&#x884C;go build&#x547D;&#x4EE4;&#x540E;&#xFF0C;&#x4F1A;&#x5728;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E0B;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x3002;&#x5982;&#x679C;&#x9700;&#x8981;&#x5728;$GOPATH/bin&#x76EE;&#x5F55;&#x4E0B;&#x751F;&#x6210;&#x76F8;&#x5E94;&#x7684;exe&#x6587;&#x4EF6;&#xFF0C;&#x9700;&#x8981;&#x6267;&#x884C;go install &#x6216;&#x8005;&#x4F7F;&#x7528; go build -o &#x8DEF;&#x5F84;/&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x67D0;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x6709;&#x591A;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x800C;&#x4F60;&#x53EA;&#x60F3;&#x7F16;&#x8BD1;&#x5176;&#x4E2D;&#x67D0;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x5728; go build &#x4E4B;&#x540E;&#x52A0;&#x4E0A;&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x4F8B;&#x5982; go build a.go&#xFF1B;go build &#x547D;&#x4EE4;&#x9ED8;&#x8BA4;&#x4F1A;&#x7F16;&#x8BD1;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6240;&#x6709;go&#x6587;&#x4EF6;&#x3002;</li>
+<li>&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x7F16;&#x8BD1;&#x8F93;&#x51FA;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;go build -o &#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x662F;&#x4F60;&#x7684;package&#x540D;(&#x975E;main&#x5305;)&#xFF0C;&#x6216;&#x8005;&#x662F;&#x7B2C;&#x4E00;&#x4E2A;&#x6E90;&#x6587;&#x4EF6;&#x7684;&#x6587;&#x4EF6;&#x540D;(main&#x5305;)&#x3002;</li>
+<li>go build &#x4F1A;&#x5FFD;&#x7565;&#x76EE;&#x5F55;&#x4E0B;&#x4EE5;&#x201D;_&#x201D;&#x6216;&#x8005;&#x201D;.&#x201D;&#x5F00;&#x5934;&#x7684;go&#x6587;&#x4EF6;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x4F60;&#x7684;&#x6E90;&#x4EE3;&#x7801;&#x9488;&#x5BF9;&#x4E0D;&#x540C;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x9700;&#x8981;&#x4E0D;&#x540C;&#x7684;&#x5904;&#x7406;&#xFF0C;&#x90A3;&#x4E48;&#x4F60;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x540E;&#x7F00;&#x6765;&#x547D;&#x540D;&#x6587;&#x4EF6;&#x3002;</li>
+</ol>
+<p>&#x5F53;&#x4EE3;&#x7801;&#x5305;&#x4E2D;&#x6709;&#x4E14;&#x4EC5;&#x6709;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5728;&#x6587;&#x4EF6;&#x5939;&#x6240;&#x5728;&#x76EE;&#x5F55;&#x4E2D;&#x6267;&#x884C; go build &#x547D;&#x4EE4;&#xFF0C;&#x4F1A;&#x5728;&#x8BE5;&#x76EE;&#x5F55;&#x4E0B;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x4E0E;&#x76EE;&#x5F55;&#x540C;&#x540D;&#x7684;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x3002;</p>
+<pre><code class="lang-shell">// &#x5047;&#x8BBE;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x5939;&#x540D;&#x53EB; hello
+localhost:hello ruby$ pwd
+/Users/ruby/go/src/hello
+localhost:hello ruby$ ls
+helloworld.go
+localhost:hello ruby$ go build
+localhost:hello ruby$ ls
+hello        helloworld.go
+localhost:hello ruby$
+</code></pre>
+<p>&#x4E8E;&#x662F;&#x5728;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x76F4;&#x63A5;&#x751F;&#x6210;&#x4E86;&#x4EE5;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x5939;&#x4E3A;&#x540D;&#x7684;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#xFF08; &#x5728; Mac &#x5E73;&#x53F0;&#x4E0B;&#x662F; Unix executable &#x6587;&#x4EF6;&#xFF0C;&#x5728; Windows &#x5E73;&#x53F0;&#x4E0B;&#x662F; exe &#x6587;&#x4EF6;&#xFF09;</p>
+<p><img src="img/gomingling7.png" alt="gomingling7"></p>
+<p>&#x4F46;&#x662F;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5982;&#x679C;&#x4F7F;&#x7528; go install &#x547D;&#x4EE4;&#xFF0C;&#x5982;&#x679C; GOPATH &#x91CC;&#x9762;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5DE5;&#x4F5C;&#x533A;&#xFF0C;&#x5C31;&#x4F1A;&#x5728;&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x533A;&#x7684; bin &#x76EE;&#x5F55;&#x4E0B;&#x751F;&#x6210;&#x76F8;&#x5E94;&#x7684;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x3002;&#x5982;&#x679C; GOPATH &#x4E0B;&#x6709;&#x591A;&#x4E2A;&#x5DE5;&#x4F5C;&#x533A;&#xFF0C;&#x5219;&#x662F;&#x5728; GOBIN &#x4E0B;&#x751F;&#x6210;&#x5BF9;&#x5E94;&#x7684;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x3002;</p>
+<pre><code class="lang-shell">localhost:hello ruby$ go install
+go install hello: open /usr/local/go/bin/hello: permission denied
+localhost:hello ruby$
+</code></pre>
+<p><img src="img/gomingling8.png" alt="gomingling8"></p>
+<blockquote>
+<p>&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x662F;&#x56E0;&#x4E3A;&#x5B83;&#x9700;&#x8981;&#x521B;&#x5EFA;bin&#x76EE;&#x5F55;&#xFF0C;&#x7136;&#x540E;&#x628A;&#x53EF;&#x521A;&#x624D;&#x7684;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x653E;&#x8FDB;&#x53BB;&#xFF0C;&#x800C;&#x76EE;&#x524D;&#x6211;&#x4EEC;&#x5728;gopath&#x4E0B;&#x8FD8;&#x6CA1;&#x6709;bin&#x76EE;&#x5F55;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x9700;&#x8981;&#x5148;&#x521B;&#x5EFA;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x800C;&#x666E;&#x901A;&#x7528;&#x6237;&#x6CA1;&#x6709;&#x76F4;&#x63A5;&#x521B;&#x5EFA;&#x6587;&#x4EF6;&#x5939;&#x7684;&#x6743;&#x9650;&#xFF0C;&#x8FD9;&#x4E2A;&#x548C;Go&#x8BED;&#x8A00;&#x7684;&#x547D;&#x4EE4;&#x662F;&#x6CA1;&#x6709;&#x5173;&#x7CFB;&#x7684;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x52A0;&#x4E0A;sudo &#x6765;&#x6267;&#x884C;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#xFF0C;&#x8868;&#x793A;&#x4F7F;&#x7528;&#x7BA1;&#x7406;&#x5458;&#x7684;&#x8EAB;&#x4EFD;&#x6267;&#x884C;&#xFF0C;&#x7136;&#x540E;&#x8F93;&#x5165;&#x5BC6;&#x7801;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;bin&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x4E86;&#x3002;</p>
+</blockquote>
+<p>&#x518D;&#x6B21;&#x6267;&#x884C;&#xFF1A;</p>
+<pre><code class="lang-shell">localhost:hello ruby$ sudo go install
+Password:
+localhost:hello ruby$
+</code></pre>
+<p>&#x6267;&#x884C;&#x5B8C; go install &#x4F1A;&#x53D1;&#x73B0;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x4E0D;&#x89C1;&#x4E86;&#xFF01;&#x53BB;&#x54EA;&#x91CC;&#x4E86;&#x5462;&#xFF1F;&#x5176;&#x5B9E;&#x662F;&#x88AB;&#x79FB;&#x52A8;&#x5230;&#x4E86; bin &#x76EE;&#x5F55;&#x4E0B;&#x4E86;&#xFF08;&#x5982;&#x679C; GOPATH &#x4E0B;&#x6709;&#x591A;&#x4E2A;&#x5DE5;&#x4F5C;&#x533A;&#xFF0C;&#x5C31;&#x4F1A;&#x653E;&#x5728;GOBIN &#x76EE;&#x5F55;&#x4E0B;&#xFF09;&#x3002;</p>
+<p>&#x67E5;&#x770B;&#x76EE;&#x5F55;&#xFF1A;</p>
+<p><img src="img/gomingling9.png" alt="gomingling9"></p>
+<p>&#x90A3; go build &#x548C; go install &#x7A76;&#x7ADF;&#x5E72;&#x4E86;&#x4E9B;&#x4EC0;&#x4E48;&#x5462;&#xFF1F;</p>
+<p>&#x5148;&#x6765;&#x8BF4;&#x8BF4; go build&#x3002;go build &#x7528;&#x4E8E;&#x7F16;&#x8BD1;&#x6211;&#x4EEC;&#x6307;&#x5B9A;&#x7684;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x6216;&#x4EE3;&#x7801;&#x5305;&#x4EE5;&#x53CA;&#x5B83;&#x4EEC;&#x7684;&#x4F9D;&#x8D56;&#x5305;&#x3002;&#x4F46;&#x662F;<strong>&#x6CE8;&#x610F;&#x5982;&#x679C;&#x7528;&#x6765;&#x7F16;&#x8BD1;&#x975E;&#x547D;&#x4EE4;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#xFF0C;&#x5373;&#x5E93;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#xFF0C;go build &#x6267;&#x884C;&#x5B8C;&#x662F;&#x4E0D;&#x4F1A;&#x4EA7;&#x751F;&#x4EFB;&#x4F55;&#x7ED3;&#x679C;&#x7684;&#x3002;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;go build &#x547D;&#x4EE4;&#x53EA;&#x662F;&#x68C0;&#x67E5;&#x5E93;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x7684;&#x6709;&#x6548;&#x6027;&#xFF0C;&#x53EA;&#x4F1A;&#x505A;&#x68C0;&#x67E5;&#x6027;&#x7684;&#x7F16;&#x8BD1;&#xFF0C;&#x800C;&#x4E0D;&#x4F1A;&#x8F93;&#x51FA;&#x4EFB;&#x4F55;&#x7ED3;&#x679C;&#x6587;&#x4EF6;&#x3002;</strong></p>
+<p>go build &#x7F16;&#x8BD1;&#x547D;&#x4EE4;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#xFF0C;&#x5219;&#x4F1A;&#x5728;&#x8BE5;&#x547D;&#x4EE4;&#x7684;&#x6267;&#x884C;&#x76EE;&#x5F55;&#x4E2D;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#xFF0C;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E5F;&#x5370;&#x8BC1;&#x4E86;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x3002;</p>
+<p>go build &#x540E;&#x9762;&#x4E0D;&#x8FFD;&#x52A0;&#x76EE;&#x5F55;&#x8DEF;&#x5F84;&#x7684;&#x8BDD;&#xFF0C;&#x5B83;&#x5C31;&#x628A;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4F5C;&#x4E3A;&#x4EE3;&#x7801;&#x5305;&#x5E76;&#x8FDB;&#x884C;&#x7F16;&#x8BD1;&#x3002;go build &#x547D;&#x4EE4;&#x540E;&#x9762;&#x5982;&#x679C;&#x8DDF;&#x4E86;&#x4EE3;&#x7801;&#x5305;&#x5BFC;&#x5165;&#x8DEF;&#x5F84;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#xFF0C;&#x90A3;&#x4E48;&#x8BE5;&#x4EE3;&#x7801;&#x5305;&#x53CA;&#x5176;&#x4F9D;&#x8D56;&#x90FD;&#x4F1A;&#x88AB;&#x7F16;&#x8BD1;&#x3002;</p>
+<p>go build &#x547D;&#x4EE4;&#x7A76;&#x7ADF;&#x505A;&#x4E86;&#x4E9B;&#x4EC0;&#x4E48;&#x5462;&#xFF1F;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x6267;&#x884C;-n&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x6765;&#x67E5;&#x770B;&#xFF1A;</p>
+<pre><code class="lang-shell">localhost:hello ruby$ go build -n
+
+#
+# hello
+#
+
+mkdir -p $WORK/b001/
+cat &gt;$WORK/b001/importcfg &lt;&lt; &apos;EOF&apos; # internal
+# import config
+packagefile fmt=/usr/local/go/pkg/darwin_amd64/fmt.a
+packagefile runtime=/usr/local/go/pkg/darwin_amd64/runtime.a
+EOF
+cd /Users/ruby/go/src/hello
+/usr/local/go/pkg/tool/darwin_amd64/compile -o $WORK/b001/_pkg_.a -trimpath $WORK/b001 -p main -complete -buildid PXDetO1R1NhLFMK5QGUc/PXDetO1R1NhLFMK5QGUc -goversion go1.12.1 -D &quot;&quot; -importcfg $WORK/b001/importcfg -pack -c=4 ./helloworld.go
+/usr/local/go/pkg/tool/darwin_amd64/buildid -w $WORK/b001/_pkg_.a # internal
+cat &gt;$WORK/b001/importcfg.link &lt;&lt; &apos;EOF&apos; # internal
+packagefile hello=$WORK/b001/_pkg_.a
+...
+EOF
+mkdir -p $WORK/b001/exe/
+cd .
+/usr/local/go/pkg/tool/darwin_amd64/link -o $WORK/b001/exe/a.out -importcfg $WORK/b001/importcfg.link -buildmode=exe -buildid=diTh1q6kcbGRIX3aj3mU/PXDetO1R1NhLFMK5QGUc/PXDetO1R1NhLFMK5QGUc/diTh1q6kcbGRIX3aj3mU -extld=clang $WORK/b001/_pkg_.a
+/usr/local/go/pkg/tool/darwin_amd64/buildid -w $WORK/b001/exe/a.out # internal
+mv $WORK/b001/exe/a.out hello
+localhost:hello ruby$
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x548C; go run &#x5927;&#x4F53;&#x76F8;&#x540C;&#xFF0C;&#x552F;&#x4E00;&#x4E0D;&#x540C;&#x7684;&#x5C31;&#x662F;&#x5728;&#x6700;&#x540E;&#x4E00;&#x6B65;&#xFF0C;go run &#x662F;&#x6267;&#x884C;&#x4E86;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#xFF0C;&#x4F46;&#x662F; go build &#x547D;&#x4EE4;&#xFF0C;&#x53EA;&#x662F;&#x628A;&#x5E93;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x7F16;&#x8BD1;&#x4E86;&#x4E00;&#x904D;&#xFF0C;&#x7136;&#x540E;&#x628A;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x79FB;&#x52A8;&#x5230;&#x4E86;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x3002;</p>
+<p>&#x603B;&#x7ED3;&#x4E00;&#x4E0B;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;</p>
+<p><img src="img/gomingling10.jpg" alt="gomingling10"></p>
+<p>&#x6700;&#x540E;&#xFF1A;</p>
+<p><img src="img/zhixingyuanli.png" alt=""></p>
+<h3 id="3-go-install">3. go install</h3>
+<p>go install &#x547D;&#x4EE4;&#x662F;&#x7528;&#x6765;&#x7F16;&#x8BD1;&#x5E76;&#x5B89;&#x88C5;&#x4EE3;&#x7801;&#x5305;&#x6216;&#x8005;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x7684;&#x3002;</p>
+<p>go install &#x547D;&#x4EE4;&#x5728;&#x5185;&#x90E8;&#x5B9E;&#x9645;&#x4E0A;&#x5206;&#x6210;&#x4E86;&#x4E24;&#x6B65;&#x64CD;&#x4F5C;&#xFF1A;&#x7B2C;&#x4E00;&#x6B65;&#x662F;&#x751F;&#x6210;&#x7ED3;&#x679C;&#x6587;&#x4EF6;(&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x6216;&#x8005;.a&#x5305;)&#xFF0C;&#x7B2C;&#x4E8C;&#x6B65;&#x4F1A;&#x628A;&#x7F16;&#x8BD1;&#x597D;&#x7684;&#x7ED3;&#x679C;&#x79FB;&#x5230;<code>$GOPATH/pkg</code>&#x6216;&#x8005;&#x200B;<code>$GOPATH/bin</code>&#x3002;</p>
+<p>&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#xFF1A; &#x4E00;&#x822C;&#x662F; go install &#x5E26;main&#x51FD;&#x6570;&#x7684;go&#x6587;&#x4EF6;&#x4EA7;&#x751F;&#x7684;&#xFF0C;&#x6709;&#x51FD;&#x6570;&#x5165;&#x53E3;&#xFF0C;&#x6240;&#x6709;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8FD0;&#x884C;&#x3002;</p>
+<p>.a&#x5E94;&#x7528;&#x5305;&#xFF1A; &#x4E00;&#x822C;&#x662F; go install &#x4E0D;&#x5305;&#x542B;main&#x51FD;&#x6570;&#x7684;go&#x6587;&#x4EF6;&#x4EA7;&#x751F;&#x7684;&#xFF0C;&#x6CA1;&#x6709;&#x51FD;&#x6570;&#x5165;&#x53E3;&#xFF0C;&#x53EA;&#x80FD;&#x88AB;&#x8C03;&#x7528;&#x3002;</p>
+<p>go install &#x7528;&#x4E8E;&#x7F16;&#x8BD1;&#x5E76;&#x5B89;&#x88C5;&#x6307;&#x5B9A;&#x7684;&#x4EE3;&#x7801;&#x5305;&#x53CA;&#x5B83;&#x4EEC;&#x7684;&#x4F9D;&#x8D56;&#x5305;&#x3002;&#x5F53;&#x6307;&#x5B9A;&#x7684;&#x4EE3;&#x7801;&#x5305;&#x7684;&#x4F9D;&#x8D56;&#x5305;&#x8FD8;&#x6CA1;&#x6709;&#x88AB;&#x7F16;&#x8BD1;&#x548C;&#x5B89;&#x88C5;&#x65F6;&#xFF0C;&#x8BE5;&#x547D;&#x4EE4;&#x4F1A;&#x5148;&#x53BB;&#x5904;&#x7406;&#x4F9D;&#x8D56;&#x5305;&#x3002;&#x4E0E; go build &#x547D;&#x4EE4;&#x4E00;&#x6837;&#xFF0C;&#x4F20;&#x7ED9; go install &#x547D;&#x4EE4;&#x7684;&#x4EE3;&#x7801;&#x5305;&#x53C2;&#x6570;&#x5E94;&#x8BE5;&#x4EE5;&#x5BFC;&#x5165;&#x8DEF;&#x5F84;&#x7684;&#x5F62;&#x5F0F;&#x63D0;&#x4F9B;&#x3002;&#x5E76;&#x4E14;&#xFF0C;go build &#x547D;&#x4EE4;&#x7684;&#x7EDD;&#x5927;&#x591A;&#x6570;&#x6807;&#x8BB0;&#x4E5F;&#x90FD;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;
+&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;go install &#x547D;&#x4EE4;&#x53EA;&#x6BD4; go build &#x547D;&#x4EE4;&#x591A;&#x505A;&#x4E86;&#x4E00;&#x4EF6;&#x4E8B;&#xFF0C;&#x5373;&#xFF1A;&#x5B89;&#x88C5;&#x7F16;&#x8BD1;&#x540E;&#x7684;&#x7ED3;&#x679C;&#x6587;&#x4EF6;&#x5230;&#x6307;&#x5B9A;&#x76EE;&#x5F55;&#x3002;</p>
+<p>&#x5B89;&#x88C5;&#x4EE3;&#x7801;&#x5305;&#x4F1A;&#x5728;&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x533A;&#x7684; pkg &#x7684;&#x5E73;&#x53F0;&#x76F8;&#x5173;&#x76EE;&#x5F55;&#x4E0B;&#x751F;&#x6210;&#x5F52;&#x6863;&#x6587;&#x4EF6;&#xFF08;&#x5373; .a &#x6587;&#x4EF6;&#xFF09;&#x3002;
+&#x5B89;&#x88C5;&#x547D;&#x4EE4;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x4F1A;&#x5728;&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x533A;&#x7684; bin &#x76EE;&#x5F55;&#xFF08;&#x5982;&#x679C; GOPATH &#x4E0B;&#x6709;&#x591A;&#x4E2A;&#x5DE5;&#x4F5C;&#x533A;&#xFF0C;&#x5C31;&#x4F1A;&#x653E;&#x5728; GOBIN &#x76EE;&#x5F55;&#x4E0B;&#xFF09;&#x751F;&#x6210;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x540C;&#x6837;&#xFF0C;go install &#x547D;&#x4EE4;&#x5982;&#x679C;&#x540E;&#x9762;&#x4E0D;&#x8FFD;&#x52A0;&#x4EFB;&#x4F55;&#x53C2;&#x6570;&#xFF0C;&#x5B83;&#x4F1A;&#x628A;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4F5C;&#x4E3A;&#x4EE3;&#x7801;&#x5305;&#x5E76;&#x5B89;&#x88C5;&#x3002;&#x8FD9;&#x548C; go build &#x547D;&#x4EE4;&#x662F;&#x5B8C;&#x5168;&#x4E00;&#x6837;&#x7684;&#x3002;</p>
+<p>go install &#x547D;&#x4EE4;&#x540E;&#x9762;&#x5982;&#x679C;&#x8DDF;&#x4E86;&#x4EE3;&#x7801;&#x5305;&#x5BFC;&#x5165;&#x8DEF;&#x5F84;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#xFF0C;&#x90A3;&#x4E48;&#x8BE5;&#x4EE3;&#x7801;&#x5305;&#x53CA;&#x5176;&#x4F9D;&#x8D56;&#x90FD;&#x4F1A;&#x88AB;&#x5B89;&#x88C5;&#x3002;</p>
+<p>go install &#x547D;&#x4EE4;&#x540E;&#x9762;&#x5982;&#x679C;&#x8DDF;&#x4E86;&#x547D;&#x4EE4;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x4EE5;&#x53CA;&#x76F8;&#x5173;&#x5E93;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x7684;&#x8BDD;&#xFF0C;&#x53EA;&#x6709;&#x8FD9;&#x4E9B;&#x6587;&#x4EF6;&#x4F1A;&#x88AB;&#x7F16;&#x8BD1;&#x5E76;&#x5B89;&#x88C5;&#x3002;</p>
+<p>go install &#x547D;&#x4EE4;&#x7A76;&#x7ADF;&#x505A;&#x4E86;&#x4E9B;&#x4EC0;&#x4E48;&#x5462;&#xFF1F;</p>
+<pre><code class="lang-shell">localhost:hello ruby$ go install -n
+
+#
+# hello
+#
+
+mkdir -p $WORK/b001/
+cat &gt;$WORK/b001/importcfg &lt;&lt; &apos;EOF&apos; # internal
+# import config
+packagefile fmt=/usr/local/go/pkg/darwin_amd64/fmt.a
+packagefile runtime=/usr/local/go/pkg/darwin_amd64/runtime.a
+EOF
+cd /Users/ruby/go/src/hello
+/usr/local/go/pkg/tool/darwin_amd64/compile -o $WORK/b001/_pkg_.a -trimpath $WORK/b001 -p main -complete -buildid E1CTs4eXkD5M28s_FQXT/E1CTs4eXkD5M28s_FQXT -goversion go1.12.1 -D &quot;&quot; -importcfg $WORK/b001/importcfg -pack -c=4 ./helloworld.go
+/usr/local/go/pkg/tool/darwin_amd64/buildid -w $WORK/b001/_pkg_.a # internal
+cat &gt;$WORK/b001/importcfg.link &lt;&lt; &apos;EOF&apos; # internal
+packagefile hello=$WORK/b001/_pkg_.a
+packagefile fmt=/usr/local/go/pkg/darwin_amd64/fmt.a
+...
+EOF
+mkdir -p $WORK/b001/exe/
+cd .
+/usr/local/go/pkg/tool/darwin_amd64/link -o $WORK/b001/exe/a.out -importcfg $WORK/b001/importcfg.link -buildmode=exe -buildid=FJ6kJTmN9rcWcwLhqfiQ/E1CTs4eXkD5M28s_FQXT/E1CTs4eXkD5M28s_FQXT/FJ6kJTmN9rcWcwLhqfiQ -extld=clang $WORK/b001/_pkg_.a
+/usr/local/go/pkg/tool/darwin_amd64/buildid -w $WORK/b001/exe/a.out # internal
+mkdir -p /usr/local/go/bin/
+mv $WORK/b001/exe/a.out /usr/local/go/bin/hello
+localhost:hello ruby$
+</code></pre>
+<p>&#x524D;&#x9762;&#x51E0;&#x6B65;&#x4F9D;&#x65E7;&#x548C; go run &#x3001;go build &#x5B8C;&#x5168;&#x4E00;&#x81F4;&#xFF0C;&#x53EA;&#x662F;&#x6700;&#x540E;&#x4E00;&#x6B65;&#x7684;&#x5DEE;&#x522B;&#xFF0C;go install &#x4F1A;&#x628A;&#x547D;&#x4EE4;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x5B89;&#x88C5;&#x5230;&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x533A;&#x7684; bin &#x76EE;&#x5F55;&#xFF08;&#x5982;&#x679C; GOPATH &#x4E0B;&#x6709;&#x591A;&#x4E2A;&#x5DE5;&#x4F5C;&#x533A;&#xFF0C;&#x5C31;&#x4F1A;&#x653E;&#x5728; GOBIN &#x76EE;&#x5F55;&#x4E0B;&#xFF09;&#x3002;&#x5982;&#x679C;&#x662F;&#x5E93;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#xFF0C;&#x5C31;&#x4F1A;&#x88AB;&#x5B89;&#x88C5;&#x5230;&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x533A;&#x7684; pkg &#x7684;&#x5E73;&#x53F0;&#x76F8;&#x5173;&#x76EE;&#x5F55;&#x4E0B;&#x3002;</p>
+<p>&#x603B;&#x7ED3;&#x4E00;&#x4E0B;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;</p>
+<p><img src="img/gomingling11.jpg" alt="gomingling11"></p>
+<p>&#x5728;&#x5B89;&#x88C5;&#x591A;&#x4E2A;&#x5E93;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x65F6;&#x6709;&#x53EF;&#x80FD;&#x9047;&#x5230;&#x5982;&#x4E0B;&#x7684;&#x95EE;&#x9898;&#xFF1A;</p>
+<pre><code class="lang-shell">localhost:hello ruby$  go install envir.go fpath.go ipath.go pnode.go util.go
+go install: no install location for .go files listed on command line (GOBIN not set)
+</code></pre>
+<p>&#x800C;&#x4E14;&#xFF0C;&#x5728;&#x6211;&#x4EEC;&#x4E3A;&#x73AF;&#x5883;&#x53D8;&#x91CF; GOBIN &#x8BBE;&#x7F6E;&#x4E86;&#x6B63;&#x786E;&#x7684;&#x503C;&#x4E4B;&#x540E;&#xFF0C;&#x8FD9;&#x4E2A;&#x9519;&#x8BEF;&#x63D0;&#x793A;&#x4FE1;&#x606F;&#x4ECD;&#x7136;&#x4F1A;&#x51FA;&#x73B0;&#x3002;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#xFF0C;&#x53EA;&#x6709;&#x5728;&#x5B89;&#x88C5;&#x547D;&#x4EE4;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x547D;&#x4EE4;&#x7A0B;&#x5E8F;&#x624D;&#x4F1A;&#x5C06;&#x73AF;&#x5883;&#x53D8;&#x91CF; GOBIN &#x7684;&#x503C;&#x4F5C;&#x4E3A;&#x7ED3;&#x679C;&#x6587;&#x4EF6;&#x7684;&#x5B58;&#x653E;&#x76EE;&#x5F55;&#x3002;&#x800C;&#x5728;&#x5B89;&#x88C5;&#x5E93;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x5728;&#x547D;&#x4EE4;&#x7A0B;&#x5E8F;&#x5185;&#x90E8;&#x7684;&#x4EE3;&#x8868;&#x7ED3;&#x679C;&#x6587;&#x4EF6;&#x5B58;&#x653E;&#x76EE;&#x5F55;&#x8DEF;&#x5F84;&#x7684;&#x90A3;&#x4E2A;&#x53D8;&#x91CF;&#x4E0D;&#x4F1A;&#x88AB;&#x8D4B;&#x503C;&#x3002;&#x6700;&#x540E;&#xFF0C;&#x547D;&#x4EE4;&#x7A0B;&#x5E8F;&#x4F1A;&#x53D1;&#x73B0;&#x5B83;&#x4F9D;&#x7136;&#x662F;&#x4E2A;&#x65E0;&#x6548;&#x7684;&#x7A7A;&#x503C;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x547D;&#x4EE4;&#x7A0B;&#x5E8F;&#x4F1A;&#x540C;&#x6837;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5173;&#x4E8E;&#x201C;&#x65E0;&#x5B89;&#x88C5;&#x4F4D;&#x7F6E;&#x201D;&#x7684;&#x9519;&#x8BEF;&#x3002;&#x8FD9;&#x5C31;&#x5F15;&#x51FA;&#x4E00;&#x4E2A;&#x7ED3;&#x8BBA;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x80FD;&#x4F7F;&#x7528;&#x5B89;&#x88C5;&#x4EE3;&#x7801;&#x5305;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x5B89;&#x88C5;&#x5E93;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#xFF0C;&#x800C;&#x4E0D;&#x80FD;&#x5728; go install &#x547D;&#x4EE4;&#x7F57;&#x5217;&#x5E76;&#x5B89;&#x88C5;&#x5B83;&#x4EEC;&#x3002;&#x53E6;&#x5916;&#xFF0C;go install &#x547D;&#x4EE4;&#x76EE;&#x524D;&#x65E0;&#x6CD5;&#x63A5;&#x53D7;&#x6807;&#x8BB0;<code>-o</code>&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x7ED3;&#x679C;&#x6587;&#x4EF6;&#x7684;&#x5B58;&#x653E;&#x4F4D;&#x7F6E;&#x3002;&#x8FD9;&#x4E5F;&#x4ECE;&#x4FA7;&#x9762;&#x8BF4;&#x660E;&#x4E86;
+ go install &#x547D;&#x4EE4;&#x4E0D;&#x652F;&#x6301;&#x9488;&#x5BF9;&#x5E93;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x7684;&#x5B89;&#x88C5;&#x64CD;&#x4F5C;&#x3002;</p>
+<h3 id="4-go-get">4. go get</h3>
+<p>go get &#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x4ECE;&#x8FDC;&#x7A0B;&#x4EE3;&#x7801;&#x4ED3;&#x5E93;&#xFF08;&#x6BD4;&#x5982; Github &#xFF09;&#x4E0A;&#x4E0B;&#x8F7D;&#x5E76;&#x5B89;&#x88C5;&#x4EE3;&#x7801;&#x5305;&#x3002;<strong>&#x6CE8;&#x610F;&#xFF0C;go get &#x547D;&#x4EE4;&#x4F1A;&#x628A;&#x5F53;&#x524D;&#x7684;&#x4EE3;&#x7801;&#x5305;&#x4E0B;&#x8F7D;&#x5230; $GOPATH &#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5DE5;&#x4F5C;&#x533A;&#x7684; src &#x76EE;&#x5F55;&#x4E2D;&#xFF0C;&#x5E76;&#x5B89;&#x88C5;&#x3002;</strong></p>
+<blockquote>
+<p>&#x4F7F;&#x7528; go get &#x4E0B;&#x8F7D;&#x7B2C;&#x4E09;&#x65B9;&#x5305;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F9D;&#x65E7;&#x4F1A;&#x4E0B;&#x8F7D;&#x5230; $GOPATH &#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5DE5;&#x4F5C;&#x7A7A;&#x95F4;&#xFF0C;&#x800C;&#x975E; vendor &#x76EE;&#x5F55;&#x3002;&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x94FE;&#x4E2D;&#x5E76;&#x6CA1;&#x6709;&#x771F;&#x6B63;&#x610F;&#x4E49;&#x4E0A;&#x7684;&#x5305;&#x4F9D;&#x8D56;&#x7BA1;&#x7406;&#xFF0C;&#x4E0D;&#x8FC7;&#x597D;&#x5728;&#x6709;&#x4E0D;&#x5C11;&#x7B2C;&#x4E09;&#x65B9;&#x5DE5;&#x5177;&#x53EF;&#x9009;&#x3002;</p>
+</blockquote>
+<p>&#x5982;&#x679C;&#x5728; go get &#x4E0B;&#x8F7D;&#x8FC7;&#x7A0B;&#x4E2D;&#x52A0;&#x5165;<code>-d</code> &#x6807;&#x8BB0;&#xFF0C;&#x90A3;&#x4E48;&#x4E0B;&#x8F7D;&#x64CD;&#x4F5C;&#x53EA;&#x4F1A;&#x6267;&#x884C;&#x4E0B;&#x8F7D;&#x52A8;&#x4F5C;&#xFF0C;&#x800C;&#x4E0D;&#x6267;&#x884C;&#x5B89;&#x88C5;&#x52A8;&#x4F5C;&#x3002;&#x6BD4;&#x5982;&#x6709;&#x4E9B;&#x975E;&#x5E38;&#x7279;&#x6B8A;&#x7684;&#x4EE3;&#x7801;&#x5305;&#x5728;&#x5B89;&#x88C5;&#x8FC7;&#x7A0B;&#x4E2D;&#x9700;&#x8981;&#x6709;&#x7279;&#x6B8A;&#x7684;&#x5904;&#x7406;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5148;&#x4E0B;&#x8F7D;&#x4E0B;&#x6765;&#xFF0C;&#x6240;&#x4EE5;&#x5C31;&#x4F1A;&#x7528;&#x5230;<code>-d</code> &#x6807;&#x8BB0;&#x3002;</p>
+<p>&#x8FD8;&#x6709;&#x4E00;&#x4E2A;&#x5F88;&#x6709;&#x7528;&#x7684;&#x6807;&#x8BB0;&#x662F;<code>-u</code>&#x6807;&#x8BB0;&#xFF0C;&#x52A0;&#x4E0A;&#x5B83;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x7F51;&#x7EDC;&#x6765;&#x66F4;&#x65B0;&#x5DF2;&#x6709;&#x7684;&#x4EE3;&#x7801;&#x5305;&#x53CA;&#x5176;&#x4F9D;&#x8D56;&#x5305;&#x3002;&#x5982;&#x679C;&#x5DF2;&#x7ECF;&#x4E0B;&#x8F7D;&#x8FC7;&#x4E00;&#x4E2A;&#x4EE3;&#x7801;&#x5305;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x4E2A;&#x4EE3;&#x7801;&#x5305;&#x53C8;&#x6709;&#x66F4;&#x65B0;&#x4E86;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x7528;<code>-u</code>&#x6807;&#x8BB0;&#x6765;&#x66F4;&#x65B0;&#x672C;&#x5730;&#x7684;&#x5BF9;&#x5E94;&#x7684;&#x4EE3;&#x7801;&#x5305;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x52A0;&#x8FD9;&#x4E2A;<code>-u</code>&#x6807;&#x8BB0;&#xFF0C;&#x6267;&#x884C; go get &#x4E00;&#x4E2A;&#x5DF2;&#x6709;&#x7684;&#x4EE3;&#x7801;&#x5305;&#xFF0C;&#x4F1A;&#x53D1;&#x73B0;&#x547D;&#x4EE4;&#x4EC0;&#x4E48;&#x90FD;&#x4E0D;&#x6267;&#x884C;&#x3002;&#x53EA;&#x6709;&#x52A0;&#x4E86;<code>-u</code>&#x6807;&#x8BB0;&#xFF0C;&#x547D;&#x4EE4;&#x4F1A;&#x53BB;&#x6267;&#x884C; git pull &#x547D;&#x4EE4;&#x62C9;&#x53D6;&#x6700;&#x65B0;&#x7684;&#x4EE3;&#x7801;&#x5305;&#x7684;&#x6700;&#x65B0;&#x7248;&#x672C;&#xFF0C;&#x4E0B;&#x8F7D;&#x5E76;&#x5B89;&#x88C5;&#x3002;</p>
+<p>&#x547D;&#x4EE4; go get &#x8FD8;&#x6709;&#x4E00;&#x4E2A;&#x5F88;&#x503C;&#x5F97;&#x79F0;&#x9053;&#x7684;&#x529F;&#x80FD;&#x2014;&#x2014;&#x667A;&#x80FD;&#x4E0B;&#x8F7D;&#x3002;&#x5728;&#x4F7F;&#x7528;&#x5B83;&#x68C0;&#x51FA;&#x6216;&#x66F4;&#x65B0;&#x4EE3;&#x7801;&#x5305;&#x4E4B;&#x540E;&#xFF0C;&#x5B83;&#x4F1A;&#x5BFB;&#x627E;&#x4E0E;&#x672C;&#x5730;&#x5DF2;&#x5B89;&#x88C5; Go &#x8BED;&#x8A00;&#x7684;&#x7248;&#x672C;&#x53F7;&#x76F8;&#x5BF9;&#x5E94;&#x7684;&#x6807;&#x7B7E;&#xFF08;tag&#xFF09;&#x6216;&#x5206;&#x652F;&#xFF08;branch&#xFF09;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x672C;&#x673A;&#x5B89;&#x88C5; Go &#x8BED;&#x8A00;&#x7684;&#x7248;&#x672C;&#x662F;1.x&#xFF0C;&#x90A3;&#x4E48; go get &#x547D;&#x4EE4;&#x4F1A;&#x5728;&#x8BE5;&#x4EE3;&#x7801;&#x5305;&#x7684;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;&#x4E2D;&#x5BFB;&#x627E;&#x540D;&#x4E3A; &#x201C;go1&#x201D; &#x7684;&#x6807;&#x7B7E;&#x6216;&#x8005;&#x5206;&#x652F;&#x3002;&#x5982;&#x679C;&#x627E;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x6807;&#x7B7E;&#x6216;&#x8005;&#x5206;&#x652F;&#xFF0C;&#x5219;&#x5C06;&#x672C;&#x5730;&#x4EE3;&#x7801;&#x5305;&#x7684;&#x7248;&#x672C;&#x5207;&#x6362;&#x5230;&#x6B64;&#x6807;&#x7B7E;&#x6216;&#x8005;&#x5206;&#x652F;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x627E;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x6807;&#x7B7E;&#x6216;&#x8005;&#x5206;&#x652F;&#xFF0C;&#x5219;&#x5C06;&#x672C;&#x5730;&#x4EE3;&#x7801;&#x5305;&#x7684;&#x7248;&#x672C;&#x5207;&#x6362;&#x5230;&#x4E3B;&#x5E72;&#x7684;&#x6700;&#x65B0;&#x7248;&#x672C;&#x3002;</p>
+<p>go get &#x5E38;&#x7528;&#x7684;&#x4E00;&#x4E9B;&#x6807;&#x8BB0;&#x5982;&#x4E0B;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x6807;&#x8BB0;&#x540D;&#x79F0;</th>
+<th>&#x6807;&#x8BB0;&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-d</td>
+<td>&#x8BA9;&#x547D;&#x4EE4;&#x7A0B;&#x5E8F;&#x53EA;&#x6267;&#x884C;&#x4E0B;&#x8F7D;&#x52A8;&#x4F5C;&#xFF0C;&#x800C;&#x4E0D;&#x6267;&#x884C;&#x5B89;&#x88C5;&#x52A8;&#x4F5C;&#x3002;</td>
+</tr>
+<tr>
+<td>-f</td>
+<td>&#x4EC5;&#x5728;&#x4F7F;&#x7528;<code>-u</code>&#x6807;&#x8BB0;&#x65F6;&#x624D;&#x6709;&#x6548;&#x3002;&#x8BE5;&#x6807;&#x8BB0;&#x4F1A;&#x8BA9;&#x547D;&#x4EE4;&#x7A0B;&#x5E8F;&#x5FFD;&#x7565;&#x6389;&#x5BF9;&#x5DF2;&#x4E0B;&#x8F7D;&#x4EE3;&#x7801;&#x5305;&#x7684;&#x5BFC;&#x5165;&#x8DEF;&#x5F84;&#x7684;&#x68C0;&#x67E5;&#x3002;&#x5982;&#x679C;&#x4E0B;&#x8F7D;&#x5E76;&#x5B89;&#x88C5;&#x7684;&#x4EE3;&#x7801;&#x5305;&#x6240;&#x5C5E;&#x7684;&#x9879;&#x76EE;&#x662F;&#x4F60;&#x4ECE;&#x522B;&#x4EBA;&#x90A3;&#x91CC; Fork &#x8FC7;&#x6765;&#x7684;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x6837;&#x505A;&#x5C31;&#x5C24;&#x4E3A;&#x91CD;&#x8981;&#x4E86;&#x3002;</td>
+</tr>
+<tr>
+<td>-fix</td>
+<td>&#x8BA9;&#x547D;&#x4EE4;&#x7A0B;&#x5E8F;&#x5728;&#x4E0B;&#x8F7D;&#x4EE3;&#x7801;&#x5305;&#x540E;&#x5148;&#x6267;&#x884C;&#x4FEE;&#x6B63;&#x52A8;&#x4F5C;&#xFF0C;&#x800C;&#x540E;&#x518D;&#x8FDB;&#x884C;&#x7F16;&#x8BD1;&#x548C;&#x5B89;&#x88C5;&#x3002;</td>
+</tr>
+<tr>
+<td>-insecure</td>
+<td>&#x5141;&#x8BB8;&#x547D;&#x4EE4;&#x7A0B;&#x5E8F;&#x4F7F;&#x7528;&#x975E;&#x5B89;&#x5168;&#x7684; scheme&#xFF08;&#x5982; HTTP &#xFF09;&#x53BB;&#x4E0B;&#x8F7D;&#x6307;&#x5B9A;&#x7684;&#x4EE3;&#x7801;&#x5305;&#x3002;&#x5982;&#x679C;&#x4F60;&#x7528;&#x7684;&#x4EE3;&#x7801;&#x4ED3;&#x5E93;&#xFF08;&#x5982;&#x516C;&#x53F8;&#x5185;&#x90E8;&#x7684; Gitlab &#xFF09;&#x6CA1;&#x6709;HTTPS &#x652F;&#x6301;&#xFF0C;&#x53EF;&#x4EE5;&#x6DFB;&#x52A0;&#x6B64;&#x6807;&#x8BB0;&#x3002;&#x8BF7;&#x5728;&#x786E;&#x5B9A;&#x5B89;&#x5168;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x4F7F;&#x7528;&#x5B83;&#x3002;</td>
+</tr>
+<tr>
+<td>-t</td>
+<td>&#x8BA9;&#x547D;&#x4EE4;&#x7A0B;&#x5E8F;&#x540C;&#x65F6;&#x4E0B;&#x8F7D;&#x5E76;&#x5B89;&#x88C5;&#x6307;&#x5B9A;&#x7684;&#x4EE3;&#x7801;&#x5305;&#x4E2D;&#x7684;&#x6D4B;&#x8BD5;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x4E2D;&#x4F9D;&#x8D56;&#x7684;&#x4EE3;&#x7801;&#x5305;&#x3002;</td>
+</tr>
+<tr>
+<td>-u</td>
+<td>&#x8BA9;&#x547D;&#x4EE4;&#x5229;&#x7528;&#x7F51;&#x7EDC;&#x6765;&#x66F4;&#x65B0;&#x5DF2;&#x6709;&#x4EE3;&#x7801;&#x5305;&#x53CA;&#x5176;&#x4F9D;&#x8D56;&#x5305;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8BE5;&#x547D;&#x4EE4;&#x53EA;&#x4F1A;&#x4ECE;&#x7F51;&#x7EDC;&#x4E0A;&#x4E0B;&#x8F7D;&#x672C;&#x5730;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x4EE3;&#x7801;&#x5305;&#xFF0C;&#x800C;&#x4E0D;&#x4F1A;&#x66F4;&#x65B0;&#x5DF2;&#x6709;&#x7684;&#x4EE3;&#x7801;&#x5305;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<p>go get &#x547D;&#x4EE4;&#x7A76;&#x7ADF;&#x505A;&#x4E86;&#x4E9B;&#x4EC0;&#x4E48;&#x5462;&#xFF1F;&#x6211;&#x4EEC;&#x8FD8;&#x662F;&#x6765;&#x6253;&#x5370;&#x4E00;&#x4E0B;&#x6BCF;&#x4E00;&#x6B65;&#x7684;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x3002;</p>
+<pre><code class="lang-shell">localhost:hello ruby$ go get -x github.com/go-errors/errors
+cd .
+git clone https://github.com/go-errors/errors /Users/ruby/go/src/github.com/go-errors/errors
+cd /Users/ruby/go/src/github.com/go-errors/errors
+git submodule update --init --recursive
+cd /Users/ruby/go/src/github.com/go-errors/errors
+git show-ref
+cd /Users/ruby/go/src/github.com/go-errors/errors
+git submodule update --init --recursive
+WORK=/var/folders/kt/nlhsnpgn6lgd_q16f8j83sbh0000gn/T/go-build188558329
+localhost:hello ruby$
+</code></pre>
+<p>&#x6548;&#x679C;&#x56FE;&#xFF1A;</p>
+<p><img src="img/gomingling12.png" alt="gomingling12"></p>
+<p>&#x8FD9;&#x91CC;&#x53EF;&#x4EE5;&#x5F88;&#x660E;&#x663E;&#x7684;&#x770B;&#x5230;&#xFF0C;&#x6267;&#x884C;&#x5B8C; go get &#x547D;&#x4EE4;&#x4EE5;&#x540E;&#xFF0C;&#x4F1A;&#x8C03;&#x7528; git clone &#x65B9;&#x6CD5;&#x4E0B;&#x8F7D;&#x6E90;&#x7801;&#xFF0C;&#x5E76;&#x7F16;&#x8BD1;&#xFF0C;&#x6700;&#x7EC8;&#x4F1A;&#x628A;&#x5E93;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x7F16;&#x8BD1;&#x6210;&#x5F52;&#x6863;&#x6587;&#x4EF6;&#x5B89;&#x88C5;&#x5230; pkg &#x5BF9;&#x5E94;&#x7684;&#x76F8;&#x5173;&#x5E73;&#x53F0;&#x76EE;&#x5F55;&#x4E0B;&#x3002;</p>
+<p><img src="img/gomingling13.png" alt="gomingling13"></p>
+<p>&#x603B;&#x7ED3;&#x4E00;&#x4E0B;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;</p>
+<p><img src="img/gomingling14.jpg" alt="gomingling14"></p>
+<h3 id="5-&#x5176;&#x4ED6;&#x547D;&#x4EE4;">5. &#x5176;&#x4ED6;&#x547D;&#x4EE4;</h3>
+<p><strong>go clean</strong></p>
+<p>go clean &#x547D;&#x4EE4;&#x662F;&#x7528;&#x6765;&#x79FB;&#x9664;&#x5F53;&#x524D;&#x6E90;&#x7801;&#x5305;&#x91CC;&#x9762;&#x7F16;&#x8BD1;&#x751F;&#x6210;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x4E9B;&#x6587;&#x4EF6;&#x5305;&#x62EC;</p>
+<ul>
+<li>_obj/ &#x65E7;&#x7684;object&#x76EE;&#x5F55;&#xFF0C;&#x7531;Makefiles&#x9057;&#x7559;</li>
+<li>_test/ &#x65E7;&#x7684;test&#x76EE;&#x5F55;&#xFF0C;&#x7531;Makefiles&#x9057;&#x7559;</li>
+<li>_testmain.go &#x65E7;&#x7684;gotest&#x6587;&#x4EF6;&#xFF0C;&#x7531;Makefiles&#x9057;&#x7559;</li>
+<li>test.out &#x65E7;&#x7684;test&#x8BB0;&#x5F55;&#xFF0C;&#x7531;Makefiles&#x9057;&#x7559;</li>
+<li>build.out &#x65E7;&#x7684;test&#x8BB0;&#x5F55;&#xFF0C;&#x7531;Makefiles&#x9057;&#x7559;</li>
+<li>*.[568ao] object&#x6587;&#x4EF6;&#xFF0C;&#x7531;Makefiles&#x9057;&#x7559;</li>
+<li>DIR(.exe) &#x7531; go build &#x4EA7;&#x751F;</li>
+<li>DIR.test(.exe) &#x7531; go test -c &#x4EA7;&#x751F;</li>
+<li>MAINFILE(.exe) &#x7531; go build MAINFILE.go&#x4EA7;&#x751F;</li>
+</ul>
+<p><strong>go fmt</strong></p>
+<p>go fmt &#x547D;&#x4EE4;&#x4E3B;&#x8981;&#x662F;&#x7528;&#x6765;&#x5E2E;&#x4F60;&#x683C;&#x5F0F;&#x5316;&#x6240;&#x5199;&#x597D;&#x7684;&#x4EE3;&#x7801;&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x6BD4;&#x5982;&#x6211;&#x4EEC;&#x5199;&#x4E86;&#x4E00;&#x4E2A;&#x683C;&#x5F0F;&#x5F88;&#x7CDF;&#x7CD5;&#x7684; test.go &#x6587;&#x4EF6;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x4F7F;&#x7528; fmt go test.go &#x547D;&#x4EE4;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x8BA9;go&#x5E2E;&#x6211;&#x4EEC;&#x683C;&#x5F0F;&#x5316;&#x6211;&#x4EEC;&#x7684;&#x4EE3;&#x7801;&#x6587;&#x4EF6;&#x3002;&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x4E00;&#x822C;&#x5F88;&#x5C11;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x7684;&#x5F00;&#x53D1;&#x5DE5;&#x5177;&#x4E00;&#x822C;&#x90FD;&#x5E26;&#x6709;&#x4FDD;&#x5B58;&#x65F6;&#x81EA;&#x52A8;&#x683C;&#x5F0F;&#x5316;&#x529F;&#x80FD;&#xFF0C;&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#x5E95;&#x5C42;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x8C03;&#x7528;&#x4E86; go fmt &#x547D;&#x4EE4;&#x800C;&#x5DF2;&#x3002;</p>
+<p>&#x4F7F;&#x7528;go fmt&#x547D;&#x4EE4;&#xFF0C;&#x66F4;&#x591A;&#x65F6;&#x5019;&#x662F;&#x7528;gofmt&#xFF0C;&#x800C;&#x4E14;&#x9700;&#x8981;&#x53C2;&#x6570;-w&#xFF0C;&#x5426;&#x5219;&#x683C;&#x5F0F;&#x5316;&#x7ED3;&#x679C;&#x4E0D;&#x4F1A;&#x5199;&#x5165;&#x6587;&#x4EF6;&#x3002;gofmt -w src&#xFF0C;&#x53EF;&#x4EE5;&#x683C;&#x5F0F;&#x5316;&#x6574;&#x4E2A;&#x9879;&#x76EE;&#x3002;</p>
+<p><strong>go test</strong></p>
+<p>go test &#x547D;&#x4EE4;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x8BFB;&#x53D6;&#x6E90;&#x7801;&#x76EE;&#x5F55;&#x4E0B;&#x9762;&#x540D;&#x4E3A;*_test.go&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x751F;&#x6210;&#x5E76;&#x8FD0;&#x884C;&#x6D4B;&#x8BD5;&#x7528;&#x7684;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x3002;&#x9ED8;&#x8BA4;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x4EFB;&#x4F55;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x5B83;&#x4F1A;&#x81EA;&#x52A8;&#x628A;&#x4F60;&#x6E90;&#x7801;&#x5305;&#x4E0B;&#x9762;&#x6240;&#x6709;test&#x6587;&#x4EF6;&#x6D4B;&#x8BD5;&#x5B8C;&#x6BD5;&#xFF0C;&#x5F53;&#x7136;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x5E26;&#x4E0A;&#x53C2;&#x6570;&#xFF0C;&#x8BE6;&#x60C5;&#x8BF7;&#x53C2;&#x8003;go help testflag</p>
+<p><strong>go doc</strong></p>
+<p>go doc &#x547D;&#x4EE4;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x5F88;&#x5F3A;&#x5927;&#x7684;&#x6587;&#x6863;&#x5DE5;&#x5177;&#x3002;</p>
+<p>&#x5982;&#x4F55;&#x67E5;&#x770B;&#x76F8;&#x5E94;package&#x7684;&#x6587;&#x6863;&#x5462;&#xFF1F; &#x4F8B;&#x5982;builtin&#x5305;&#xFF0C;&#x90A3;&#x4E48;&#x6267;&#x884C;go doc builtin&#xFF1B;&#x5982;&#x679C;&#x662F;http&#x5305;&#xFF0C;&#x90A3;&#x4E48;&#x6267;&#x884C;go doc net/http&#xFF1B;&#x67E5;&#x770B;&#x67D0;&#x4E00;&#x4E2A;&#x5305;&#x91CC;&#x9762;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x90A3;&#x4E48;&#x6267;&#x884C;go doc fmt Printf&#xFF1B;&#x4E5F;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x76F8;&#x5E94;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x6267;&#x884C;go doc -src fmt Printf&#xFF1B;</p>
+<pre><code class="lang-shell"># &#x67E5;&#x770B;net/http&#x5305;
+localhost:hello ruby$ go doc net/http
+# &#x67E5;&#x770B;time&#x5305;
+localhost:hello ruby$ go doc time
+# &#x67E5;&#x770B;&#x67D0;&#x4E2A;&#x5305;&#x91CC;&#x7684;&#x6307;&#x5B9A;&#x51FD;&#x6570;
+localhost:hello ruby$ go doc fmt Printf
+</code></pre>
+<p>&#x901A;&#x8FC7;&#x547D;&#x4EE4;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x6267;&#x884C; go doc -http=:&#x7AEF;&#x53E3;&#x53F7;&#xFF0C;&#x6BD4;&#x5982;godoc -http=:8080&#x3002;&#x7136;&#x540E;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x6253;&#x5F00;127.0.0.1:8080&#xFF0C;&#x4F60;&#x5C06;&#x4F1A;&#x770B;&#x5230;&#x4E00;&#x4E2A;golang.org&#x7684;&#x672C;&#x5730;copy&#x7248;&#x672C;&#xFF0C;&#x901A;&#x8FC7;&#x5B83;&#x4F60;&#x53EF;&#x4EE5;&#x67E5;&#x8BE2;pkg&#x6587;&#x6863;&#x7B49;&#x5176;&#x5B83;&#x5185;&#x5BB9;&#x3002;&#x5982;&#x679C;&#x4F60;&#x8BBE;&#x7F6E;&#x4E86;GOPATH&#xFF0C;&#x5728;pkg&#x5206;&#x7C7B;&#x4E0B;&#xFF0C;&#x4E0D;&#x4F46;&#x4F1A;&#x5217;&#x51FA;&#x6807;&#x51C6;&#x5305;&#x7684;&#x6587;&#x6863;&#xFF0C;&#x8FD8;&#x4F1A;&#x5217;&#x51FA;&#x4F60;&#x672C;&#x5730;GOPATH&#x4E2D;&#x6240;&#x6709;&#x9879;&#x76EE;&#x7684;&#x76F8;&#x5173;&#x6587;&#x6863;&#xFF0C;&#x8FD9;&#x5BF9;&#x4E8E;&#x7ECF;&#x5E38;&#x88AB;&#x9650;&#x5236;&#x8BBF;&#x95EE;&#x7684;&#x7528;&#x6237;&#x6765;&#x8BF4;&#x662F;&#x4E00;&#x4E2A;&#x4E0D;&#x9519;&#x7684;&#x9009;&#x62E9;&#x3002;</p>
+<pre><code class="lang-shell">localhost:hello ruby$ godoc -http=:9527
+</code></pre>
+<p>go fix &#x7528;&#x6765;&#x4FEE;&#x590D;&#x4EE5;&#x524D;&#x8001;&#x7248;&#x672C;&#x7684;&#x4EE3;&#x7801;&#x5230;&#x65B0;&#x7248;&#x672C;&#xFF0C;&#x4F8B;&#x5982;go1&#x4E4B;&#x524D;&#x8001;&#x7248;&#x672C;&#x7684;&#x4EE3;&#x7801;&#x8F6C;&#x5316;&#x5230;go1</p>
+<p>go version &#x67E5;&#x770B;go&#x5F53;&#x524D;&#x7684;&#x7248;&#x672C;</p>
+<p>go env &#x67E5;&#x770B;&#x5F53;&#x524D;go&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;</p>
+<p>go list &#x5217;&#x51FA;&#x5F53;&#x524D;&#x5168;&#x90E8;&#x5B89;&#x88C5;&#x7684;package</p>
+<p>&#x672C;&#x6587;&#x90E8;&#x95E8;&#x6587;&#x5B57;&#x548C;&#x56FE;&#x7247;&#x5F15;&#x81EA;&#xFF1A;<a href="https://www.jianshu.com/p/35a4ec1b3067" target="_blank">https://www.jianshu.com/p/35a4ec1b3067</a></p>
+<p>&#x5343;&#x950B;Go&#x8BED;&#x8A00;&#x7684;&#x5B66;&#x4E60;&#x7FA4;&#xFF1A;784190273</p>
+<p>&#x5BF9;&#x5E94;&#x89C6;&#x9891;&#x5730;&#x5740;&#xFF1A;</p>
+<p><a href="https://www.bilibili.com/video/av56018934" target="_blank">https://www.bilibili.com/video/av56018934</a></p>
+<p><a href="https://www.bilibili.com/video/av47467197" target="_blank">https://www.bilibili.com/video/av47467197</a></p>
+<p>&#x6E90;&#x4EE3;&#x7801;&#xFF1A;</p>
+<p><a href="https://github.com/rubyhan1314/go_foundation" target="_blank">https://github.com/rubyhan1314/go_foundation</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="day01_第8节_第一个程序HelloWorld.html" class="navigation navigation-prev " aria-label="Previous page: 第8节_第一个程序HelloWorld">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="day01_第10节_安装Goland开发工具.html" class="navigation navigation-next " aria-label="Next page: 第10节_安装Goland开发工具">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第9节_Go的命令以及Go的执行原理","level":"1.2.9","depth":2,"next":{"title":"第10节_安装Goland开发工具","level":"1.2.10","depth":2,"path":"01-Go语言基础/day01_第10节_安装Goland开发工具.md","ref":"01-Go语言基础/day01_第10节_安装Goland开发工具.md","articles":[]},"previous":{"title":"第8节_第一个程序HelloWorld","level":"1.2.8","depth":2,"path":"01-Go语言基础/day01_第8节_第一个程序HelloWorld.md","ref":"01-Go语言基础/day01_第8节_第一个程序HelloWorld.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"01-Go语言基础/day01_第9节_Go的命令以及Go的执行原理.md","mtime":"2020-08-10T03:24:35.263Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-04T06:50:51.724Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

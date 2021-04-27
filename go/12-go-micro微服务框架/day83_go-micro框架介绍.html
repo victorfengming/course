@@ -1,0 +1,1553 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>go-micro框架介绍 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="day84_go-micro使用1.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Go语言基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../01-Go语言基础/day01_第1节_知名编程语言或系统的发展简史.html">
+            
+                <a href="../01-Go语言基础/day01_第1节_知名编程语言或系统的发展简史.html">
+            
+                    
+                    第1节_知名编程语言或系统的发展简史
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../01-Go语言基础/day01_第2节_Go语言的前世今生.html">
+            
+                <a href="../01-Go语言基础/day01_第2节_Go语言的前世今生.html">
+            
+                    
+                    第2节_Go语言的前世今生
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../01-Go语言基础/day01_第3节_Go语言logo和版本.html">
+            
+                <a href="../01-Go语言基础/day01_第3节_Go语言logo和版本.html">
+            
+                    
+                    第3节_Go语言logo和版本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../01-Go语言基础/day01_第4节_Go语言的核心特性.html">
+            
+                <a href="../01-Go语言基础/day01_第4节_Go语言的核心特性.html">
+            
+                    
+                    第4节_Go语言的核心特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../01-Go语言基础/day01_第5节_Go语言的优势和其他语言的对比.html">
+            
+                <a href="../01-Go语言基础/day01_第5节_Go语言的优势和其他语言的对比.html">
+            
+                    
+                    第5节_Go语言的优势和其他语言的对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../01-Go语言基础/day01_第6节_Go语言能做什么.html">
+            
+                <a href="../01-Go语言基础/day01_第6节_Go语言能做什么.html">
+            
+                    
+                    第6节_Go语言能做什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../01-Go语言基础/day01_第7节_Go语言环境搭建.html">
+            
+                <a href="../01-Go语言基础/day01_第7节_Go语言环境搭建.html">
+            
+                    
+                    第7节_Go语言环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../01-Go语言基础/day01_第8节_第一个程序HelloWorld.html">
+            
+                <a href="../01-Go语言基础/day01_第8节_第一个程序HelloWorld.html">
+            
+                    
+                    第8节_第一个程序HelloWorld
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../01-Go语言基础/day01_第9节_Go的命令以及Go的执行原理.html">
+            
+                <a href="../01-Go语言基础/day01_第9节_Go的命令以及Go的执行原理.html">
+            
+                    
+                    第9节_Go的命令以及Go的执行原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../01-Go语言基础/day01_第10节_安装Goland开发工具.html">
+            
+                <a href="../01-Go语言基础/day01_第10节_安装Goland开发工具.html">
+            
+                    
+                    第10节_安装Goland开发工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../01-Go语言基础/day01_第11节_编码规范.html">
+            
+                <a href="../01-Go语言基础/day01_第11节_编码规范.html">
+            
+                    
+                    第11节_编码规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../01-Go语言基础/day02_基本语法.html">
+            
+                <a href="../01-Go语言基础/day02_基本语法.html">
+            
+                    
+                    基本语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../01-Go语言基础/day03_数据类型&运算符.html">
+            
+                <a href="../01-Go语言基础/day03_数据类型&运算符.html">
+            
+                    
+                    数据类型&运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="../01-Go语言基础/day03_键盘输入和打印输出.html">
+            
+                <a href="../01-Go语言基础/day03_键盘输入和打印输出.html">
+            
+                    
+                    键盘输入和打印输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="../01-Go语言基础/day04_分支语句.html">
+            
+                <a href="../01-Go语言基础/day04_分支语句.html">
+            
+                    
+                    分支语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="../01-Go语言基础/day05_循环语句.html">
+            
+                <a href="../01-Go语言基础/day05_循环语句.html">
+            
+                    
+                    循环语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="../01-Go语言基础/day06_数组.html">
+            
+                <a href="../01-Go语言基础/day06_数组.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="../01-Go语言基础/day07_Slice的使用.html">
+            
+                <a href="../01-Go语言基础/day07_Slice的使用.html">
+            
+                    
+                    Slice的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.19" data-path="../01-Go语言基础/day08_Map的使用.html">
+            
+                <a href="../01-Go语言基础/day08_Map的使用.html">
+            
+                    
+                    Map的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.20" data-path="../01-Go语言基础/day09_string.html">
+            
+                <a href="../01-Go语言基础/day09_string.html">
+            
+                    
+                    string
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.21" data-path="../01-Go语言基础/day10_函数.html">
+            
+                <a href="../01-Go语言基础/day10_函数.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.22" data-path="../01-Go语言基础/day11_包的管理.html">
+            
+                <a href="../01-Go语言基础/day11_包的管理.html">
+            
+                    
+                    包的管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.23" data-path="../01-Go语言基础/day12_指针.html">
+            
+                <a href="../01-Go语言基础/day12_指针.html">
+            
+                    
+                    指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.24" data-path="../01-Go语言基础/day13-结构体.html">
+            
+                <a href="../01-Go语言基础/day13-结构体.html">
+            
+                    
+                    结构体
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.25" data-path="../01-Go语言基础/day14_第1节_方法.html">
+            
+                <a href="../01-Go语言基础/day14_第1节_方法.html">
+            
+                    
+                    第1节_方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.26" data-path="../01-Go语言基础/day14_第2节_接口.html">
+            
+                <a href="../01-Go语言基础/day14_第2节_接口.html">
+            
+                    
+                    第2节_接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.27" data-path="../01-Go语言基础/day14_第3节-OOP编程.html">
+            
+                <a href="../01-Go语言基础/day14_第3节-OOP编程.html">
+            
+                    
+                    第3节-OOP编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.28" data-path="../01-Go语言基础/day14_第4节-type.html">
+            
+                <a href="../01-Go语言基础/day14_第4节-type.html">
+            
+                    
+                    第4节-type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.29" data-path="../01-Go语言基础/day15_错误处理.html">
+            
+                <a href="../01-Go语言基础/day15_错误处理.html">
+            
+                    
+                    错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Go语言基础进阶
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../02-Go语言基础进阶/day16_file操作.html">
+            
+                <a href="../02-Go语言基础进阶/day16_file操作.html">
+            
+                    
+                    01file操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../02-Go语言基础进阶/day17_Go语言并发Goroutine.html">
+            
+                <a href="../02-Go语言基础进阶/day17_Go语言并发Goroutine.html">
+            
+                    
+                    02Go语言并发Goroutine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../02-Go语言基础进阶/day18_channel通道.html">
+            
+                <a href="../02-Go语言基础进阶/day18_channel通道.html">
+            
+                    
+                    03channel通道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../02-Go语言基础进阶/day19_Go语言反射.html">
+            
+                <a href="../02-Go语言基础进阶/day19_Go语言反射.html">
+            
+                    
+                    04Go语言反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    MySQL数据库基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../03-MySQL数据库基础/day23_学习笔记.html">
+            
+                <a href="../03-MySQL数据库基础/day23_学习笔记.html">
+            
+                    
+                    01学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../03-MySQL数据库基础/day23_数据库基础知识和基础操作.html">
+            
+                <a href="../03-MySQL数据库基础/day23_数据库基础知识和基础操作.html">
+            
+                    
+                    02数据库基础知识和基础操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../03-MySQL数据库基础/day24_查询和复杂查询.html">
+            
+                <a href="../03-MySQL数据库基础/day24_查询和复杂查询.html">
+            
+                    
+                    03查询和复杂查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    beego框架
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../04-beego框架/day36_beego框架介绍和流程分析.html">
+            
+                <a href="../04-beego框架/day36_beego框架介绍和流程分析.html">
+            
+                    
+                    beego框架介绍和流程分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../04-beego框架/day37_beego框架总结及数据库连接配置.html">
+            
+                <a href="../04-beego框架/day37_beego框架总结及数据库连接配置.html">
+            
+                    
+                    beego框架总结及数据库连接配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    beego开发博客系统
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../05-beego框架开发博客系统/day38_项目搭建_登录注册和Session功能开发.html">
+            
+                <a href="../05-beego框架开发博客系统/day38_项目搭建_登录注册和Session功能开发.html">
+            
+                    
+                    项目搭建_登录注册和Session功能开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../05-beego框架开发博客系统/day39_写文章_项目首页和查看文章详情功能开发.html">
+            
+                <a href="../05-beego框架开发博客系统/day39_写文章_项目首页和查看文章详情功能开发.html">
+            
+                    
+                    写文章_项目首页和查看文章详情功能开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../05-beego框架开发博客系统/day40_修改文章_删除文章和文章标签功能开发.html">
+            
+                <a href="../05-beego框架开发博客系统/day40_修改文章_删除文章和文章标签功能开发.html">
+            
+                    
+                    修改文章_删除文章和文章标签功能开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../05-beego框架开发博客系统/day41_首页功能扩展_图片上传和关于功能开发.html">
+            
+                <a href="../05-beego框架开发博客系统/day41_首页功能扩展_图片上传和关于功能开发.html">
+            
+                    
+                    首页功能扩展_图片上传和关于功能开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" >
+            
+                <span>
+            
+                    
+                    iris框架
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../06-iris框架/day54_web开发介绍、iris框架安装、HTTP请求和返回、iris路由处理.html">
+            
+                <a href="../06-iris框架/day54_web开发介绍、iris框架安装、HTTP请求和返回、iris路由处理.html">
+            
+                    
+                    web开发介绍、iris框架安装、HTTP请求和返回、iris路由处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../06-iris框架/day55_框架设置、mvc包、session使用、项目搭建和资源导入.html">
+            
+                <a href="../06-iris框架/day55_框架设置、mvc包、session使用、项目搭建和资源导入.html">
+            
+                    
+                    框架设置、mvc包、session使用、项目搭建和资源导入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <span>
+            
+                    
+                    微服务特性
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../07-微服务特性/day76_微服务简介及特性介绍.html">
+            
+                <a href="../07-微服务特性/day76_微服务简介及特性介绍.html">
+            
+                    
+                    微服务简介及特性介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <span>
+            
+                    
+                    protobuf
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../08-protobuf/day77_Protobuf介绍.html">
+            
+                <a href="../08-protobuf/day77_Protobuf介绍.html">
+            
+                    
+                    Protobuf介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" >
+            
+                <span>
+            
+                    
+                    微服务管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../09-微服务管理/day78_微服务管理_上.html">
+            
+                <a href="../09-微服务管理/day78_微服务管理_上.html">
+            
+                    
+                    微服务管理_上
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../09-微服务管理/day79_微服务管理_下.html">
+            
+                <a href="../09-微服务管理/day79_微服务管理_下.html">
+            
+                    
+                    微服务管理_下
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" >
+            
+                <span>
+            
+                    
+                    RPC&gRPC
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="../10-RPC远程调用机制/day80_RPC远程过程调用.html">
+            
+                <a href="../10-RPC远程调用机制/day80_RPC远程过程调用.html">
+            
+                    
+                    RPC远程过程调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="../11-gRPC远程调用机制/day81_gRPC远程调用机制介绍.html">
+            
+                <a href="../11-gRPC远程调用机制/day81_gRPC远程调用机制介绍.html">
+            
+                    
+                    gRPC远程调用机制介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="../11-gRPC远程调用机制/day82_gRPC使用.html">
+            
+                <a href="../11-gRPC远程调用机制/day82_gRPC使用.html">
+            
+                    
+                    gRPC使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" >
+            
+                <span>
+            
+                    
+                    go-micro
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="3.5.1" data-path="day83_go-micro框架介绍.html">
+            
+                <a href="day83_go-micro框架介绍.html">
+            
+                    
+                    go-micro框架介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.2" data-path="day84_go-micro使用1.html">
+            
+                <a href="day84_go-micro使用1.html">
+            
+                    
+                    go-micro使用1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.3" data-path="day85_go-micro使用2.html">
+            
+                <a href="day85_go-micro使用2.html">
+            
+                    
+                    go-micro使用2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" >
+            
+                <span>
+            
+                    
+                    RESTful
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../13-RESTful设计/day86_RESTful标准设计.html">
+            
+                <a href="../13-RESTful设计/day86_RESTful标准设计.html">
+            
+                    
+                    RESTful标准设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" >
+            
+                <span>
+            
+                    
+                    区块链
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../14-区块链/day01_初始区块链家族1.html">
+            
+                <a href="../14-区块链/day01_初始区块链家族1.html">
+            
+                    
+                    初始区块链家族1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="../14-区块链/day02_区块链基础入门.html">
+            
+                <a href="../14-区块链/day02_区块链基础入门.html">
+            
+                    
+                    区块链基础入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.3" data-path="../14-区块链/day03_区块链的本质.html">
+            
+                <a href="../14-区块链/day03_区块链的本质.html">
+            
+                    
+                    区块链的本质
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.4" data-path="../14-区块链/day04_区块链的特性.html">
+            
+                <a href="../14-区块链/day04_区块链的特性.html">
+            
+                    
+                    区块链的特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >go-micro框架介绍</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="go-micro&#x4ECB;&#x7ECD;&#x53CA;&#x73AF;&#x5883;&#x642D;&#x5EFA;">go-micro&#x4ECB;&#x7ECD;&#x53CA;&#x73AF;&#x5883;&#x642D;&#x5EFA;</h1>
+<hr>
+<p><strong>create by victor</strong></p>
+<h2 id="&#x4E00;&#x3001;micro&#x6846;&#x67B6;&#x4ECB;&#x7ECD;">&#x4E00;&#x3001;micro&#x6846;&#x67B6;&#x4ECB;&#x7ECD;</h2>
+<h3 id="11&#x3001;&#x80CC;&#x666F;">1.1&#x3001;&#x80CC;&#x666F;</h3>
+<p>&#x5728;&#x672C;&#x8BFE;&#x7A0B;&#x7684;&#x524D;&#x9762;&#x7684;&#x5185;&#x5BB9;&#x4E2D;&#xFF0C;&#x5DF2;&#x7ECF;&#x5B66;&#x4E60;&#x4E86;&#x5FAE;&#x670D;&#x52A1;&#x4E4B;&#x95F4;&#x901A;&#x4FE1;&#x91C7;&#x7528;&#x7684;&#x901A;&#x4FE1;&#x534F;&#x8BAE;&#xFF0C;&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x670D;&#x52A1;&#x7684;&#x6CE8;&#x518C;&#x548C;&#x53D1;&#x73B0;&#xFF0C;&#x642D;&#x5EFA;&#x670D;&#x52A1;&#x7BA1;&#x7406;&#x96C6;&#x7FA4;&#xFF0C;&#x4EE5;&#x53CA;&#x670D;&#x52A1;&#x4E0E;&#x670D;&#x52A1;&#x4E4B;&#x95F4;&#x7684;RPC&#x901A;&#x4FE1;&#x65B9;&#x5F0F;&#x3002;&#x5177;&#x4F53;&#x7684;&#x5185;&#x5BB9;&#x5305;&#x62EC;&#xFF1A;protobuf&#x534F;&#x8BAE;&#xFF0C;consul&#x53CA;docker&#x90E8;&#x7F72;consul&#x96C6;&#x7FA4;&#xFF0C;gRPC&#x6846;&#x67B6;&#x7684;&#x4F7F;&#x7528;&#x7B49;&#x5177;&#x4F53;&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x6848;&#x3002;</p>
+<p>&#x4EE5;&#x4E0A;&#x8FD9;&#x4E9B;&#x5177;&#x4F53;&#x7684;&#x65B9;&#x6848;&#x90FD;&#x662F;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x5FAE;&#x670D;&#x52A1;&#x5B9E;&#x8DF5;&#x8FC7;&#x7A0B;&#x4E2D;&#x5177;&#x4F53;&#x7684;&#x67D0;&#x4E2A;&#x95EE;&#x9898;&#x800C;&#x63D0;&#x51FA;&#x7684;&#xFF0C;&#x5B9E;&#x73B0;&#x5FAE;&#x670D;&#x52A1;&#x67B6;&#x6784;&#x7684;&#x9879;&#x76EE;&#x5F00;&#x53D1;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5728;&#x5177;&#x4F53;&#x7684;&#x9879;&#x76EE;&#x5F00;&#x53D1;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x805A;&#x7126;&#x7684;&#x662F;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x7684;&#x5F00;&#x53D1;&#x548C;&#x529F;&#x80FD;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x5927;&#x91CF;&#x7684;&#x73AF;&#x5883;&#x914D;&#x7F6E;&#xFF0C;&#x8C03;&#x8BD5;&#x642D;&#x5EFA;&#x7B49;&#x57FA;&#x7840;&#x6027;&#x5DE5;&#x4F5C;&#x4F1A;&#x8017;&#x8D39;&#x76F8;&#x5F53;&#x4E00;&#x90E8;&#x5206;&#x7684;&#x7CBE;&#x529B;&#xFF0C;&#x56E0;&#x6B64;&#x6709;&#x5FC5;&#x8981;&#x5C06;&#x5FAE;&#x670D;&#x52A1;&#x67B6;&#x6784;&#x4E2D;&#x6240;&#x6D89;&#x53CA;&#x5230;&#x7684;&#xFF0C;&#x76F8;&#x5173;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x505A;&#x96C6;&#x4E2D;&#x7BA1;&#x7406;&#x548C;&#x7EF4;&#x62A4;&#x3002;&#x8FD9;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x8981;&#x5B66;&#x4E60;&#x7684;Micro&#x3002;</p>
+<h3 id="12&#x3001;&#x6982;&#x8FF0;">1.2&#x3001;&#x6982;&#x8FF0;</h3>
+<p>Micro&#x662F;&#x4E00;&#x4E2A;&#x7B80;&#x5316;&#x5206;&#x5E03;&#x5F0F;&#x5F00;&#x53D1;&#x7684;&#x5FAE;&#x670D;&#x52A1;&#x751F;&#x6001;&#x7CFB;&#x7EDF;&#xFF0C;&#x8BE5;&#x7CFB;&#x7EDF;&#x4E3A;&#x5F00;&#x53D1;&#x5206;&#x5E03;&#x5F0F;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x63D0;&#x4F9B;&#x4E86;&#x9AD8;&#x6548;&#xFF0C;&#x4FBF;&#x6377;&#x7684;&#x6A21;&#x5757;&#x6784;&#x5EFA;&#x3002;&#x4E3B;&#x8981;&#x76EE;&#x7684;&#x662F;&#x7B80;&#x5316;&#x5206;&#x5E03;&#x5F0F;&#x7CFB;&#x7EDF;&#x7684;&#x5F00;&#x53D1;&#x3002;</p>
+<p>&#x5B66;&#x4E60;&#x5B8C;&#x8BE5;&#x6846;&#x67B6;&#x4EE5;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x65B9;&#x4FBF;&#x5F00;&#x53D1;&#x8005;&#x4EEC;&#x975E;&#x5E38;&#x7B80;&#x5355;&#x7684;&#x5F00;&#x53D1;&#x51FA;&#x5FAE;&#x670D;&#x52A1;&#x67B6;&#x6784;&#x7684;&#x9879;&#x76EE;&#xFF0C;&#x5E76;&#x4E14;&#x968F;&#x7740;&#x4E1A;&#x52A1;&#x6A21;&#x5757;&#x7684;&#x589E;&#x52A0;&#x548C;&#x529F;&#x80FD;&#x7684;&#x589E;&#x52A0;&#xFF0C;Micro&#x8FD8;&#x80FD;&#x591F;&#x63D0;&#x4F9B;&#x7BA1;&#x7406;&#x5FAE;&#x670D;&#x52A1;&#x73AF;&#x5883;&#x7684;&#x5DE5;&#x5177;&#x548C;&#x529F;&#x80FD;&#x3002;</p>
+<h3 id="13&#x3001;micro&#x7EC4;&#x6210;">1.3&#x3001;micro&#x7EC4;&#x6210;</h3>
+<p>micro&#x662F;&#x4E00;&#x4E2A;&#x5FAE;&#x670D;&#x52A1;&#x5DE5;&#x5177;&#x5305;&#xFF0C;&#x662F;&#x7531;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x5DE5;&#x5177;&#x5305;&#x7EC4;&#x6210;&#x7684;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;</p>
+<p><img src="img/micro&#x5E73;&#x53F0;&#x7EC4;&#x6210;.png" alt="micro"></p>
+<ul>
+<li><p><strong>Go Micro&#xFF1A;</strong>&#x7528;&#x4E8E;&#x5728;Go&#x4E2D;&#x7F16;&#x5199;&#x5FAE;&#x670D;&#x52A1;&#x7684;&#x63D2;&#x4EF6;&#x5F0F;RPC&#x6846;&#x67B6;&#x3002;&#x5B83;&#x63D0;&#x4F9B;&#x4E86;&#x7528;&#x4E8E;&#x670D;&#x52A1;&#x53D1;&#x73B0;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x8D1F;&#x8F7D;&#x5E73;&#x8861;&#xFF0C;&#x7F16;&#x7801;&#xFF0C;&#x540C;&#x6B65;&#x548C;&#x5F02;&#x6B65;&#x901A;&#x4FE1;&#x5E93;&#x3002;</p>
+</li>
+<li><p><strong>API&#xFF1A;</strong> API&#x4E3B;&#x8981;&#x8D1F;&#x8D23;&#x63D0;&#x4F9B;&#x5C06;HTTP&#x8BF7;&#x6C42;&#x8DEF;&#x7531;&#x5230;&#x76F8;&#x5E94;&#x5FAE;&#x670D;&#x52A1;&#x7684;API&#x7F51;&#x5173;&#x3002;&#x5B83;&#x5145;&#x5F53;&#x5355;&#x4E2A;&#x5165;&#x53E3;&#x70B9;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x4F5C;&#x53CD;&#x5411;&#x4EE3;&#x7406;&#x6216;&#x5C06;HTTP&#x8BF7;&#x6C42;&#x8F6C;&#x6362;&#x4E3A;RPC&#x3002;</p>
+</li>
+<li><p><strong>Sidecar&#xFF1A;</strong>&#x4E00;&#x79CD;&#x5BF9;&#x8BED;&#x8A00;&#x900F;&#x660E;&#x7684;RPC&#x4EE3;&#x7406;&#xFF0C;&#x5177;&#x6709;go-micro&#x4F5C;&#x4E3A;HTTP&#x7AEF;&#x70B9;&#x7684;&#x6240;&#x6709;&#x529F;&#x80FD;&#x3002;&#x867D;&#x7136;Go&#x662F;&#x6784;&#x5EFA;&#x5FAE;&#x670D;&#x52A1;&#x7684;&#x4F1F;&#x5927;&#x8BED;&#x8A00;&#xFF0C;&#x4F46;&#x60A8;&#x4E5F;&#x53EF;&#x80FD;&#x5E0C;&#x671B;&#x4F7F;&#x7528;&#x5176;&#x4ED6;&#x8BED;&#x8A00;&#xFF0C;&#x56E0;&#x6B64;Sidecar&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x5C06;&#x5176;&#x4ED6;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x96C6;&#x6210;&#x5230;Micro&#x4E16;&#x754C;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+</li>
+<li><p><strong>Web&#xFF1A;</strong>&#x7528;&#x4E8E;Micro Web&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x4EEA;&#x8868;&#x677F;&#x548C;&#x53CD;&#x5411;&#x4EE3;&#x7406;&#x3002;&#x6211;&#x4EEC;&#x8BA4;&#x4E3A;&#x5E94;&#x8BE5;&#x57FA;&#x4E8E;&#x5FAE;&#x670D;&#x52A1;&#x5EFA;&#x7ACB;web&#x5E94;&#x7528;&#xFF0C;&#x56E0;&#x6B64;&#x88AB;&#x89C6;&#x4E3A;&#x5FAE;&#x670D;&#x52A1;&#x9886;&#x57DF;&#x7684;&#x4E00;&#x7B49;&#x516C;&#x6C11;&#x3002;&#x5B83;&#x7684;&#x884C;&#x4E3A;&#x975E;&#x5E38;&#x50CF;API&#x53CD;&#x5411;&#x4EE3;&#x7406;&#xFF0C;&#x4F46;&#x4E5F;&#x5305;&#x62EC;&#x5BF9;web sockets&#x7684;&#x652F;&#x6301;&#x3002;</p>
+</li>
+<li><p><strong>CLI&#xFF1A;</strong>&#x4E00;&#x4E2A;&#x76F4;&#x63A5;&#x7684;&#x547D;&#x4EE4;&#x884C;&#x754C;&#x9762;&#x6765;&#x4E0E;&#x4F60;&#x7684;&#x5FAE;&#x670D;&#x52A1;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#x3002;&#x5B83;&#x8FD8;&#x4F7F;&#x60A8;&#x53EF;&#x4EE5;&#x5229;&#x7528;Sidecar&#x4F5C;&#x4E3A;&#x4EE3;&#x7406;&#xFF0C;&#x60A8;&#x53EF;&#x80FD;&#x4E0D;&#x60F3;&#x76F4;&#x63A5;&#x8FDE;&#x63A5;&#x5230;&#x670D;&#x52A1;&#x6CE8;&#x518C;&#x8868;&#x3002;</p>
+</li>
+<li><p><strong>Bot&#xFF1A;</strong>Hubot&#x98CE;&#x683C;&#x7684;bot&#xFF0C;&#x4F4D;&#x4E8E;&#x60A8;&#x7684;&#x5FAE;&#x670D;&#x52A1;&#x5E73;&#x53F0;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;Slack&#xFF0C;HipChat&#xFF0C;XMPP&#x7B49;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#x3002;&#x5B83;&#x901A;&#x8FC7;&#x6D88;&#x606F;&#x4F20;&#x9012;&#x63D0;&#x4F9B;CLI&#x7684;&#x529F;&#x80FD;&#x3002;&#x53EF;&#x4EE5;&#x6DFB;&#x52A0;&#x5176;&#x4ED6;&#x547D;&#x4EE4;&#x6765;&#x81EA;&#x52A8;&#x6267;&#x884C;&#x5E38;&#x89C1;&#x7684;&#x64CD;&#x4F5C;&#x4EFB;&#x52A1;&#x3002;</p>
+</li>
+</ul>
+<h3 id="14&#x3001;&#x5DE5;&#x5177;&#x5305;&#x4ECB;&#x7ECD;">1.4&#x3001;&#x5DE5;&#x5177;&#x5305;&#x4ECB;&#x7ECD;</h3>
+<h4 id="141&#x3001;api">1.4.1&#x3001;API</h4>
+<p>&#x542F;&#x7528;API&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x7F51;&#x5173;&#x6216;&#x4EE3;&#x7406;&#xFF0C;&#x6765;&#x4F5C;&#x4E3A;&#x5FAE;&#x670D;&#x52A1;&#x8BBF;&#x95EE;&#x7684;&#x5355;&#x4E00;&#x5165;&#x53E3;&#x3002;&#x5B83;&#x5E94;&#x8BE5;&#x5728;&#x60A8;&#x7684;&#x57FA;&#x7840;&#x67B6;&#x6784;&#x7684;&#x8FB9;&#x7F18;&#x8FD0;&#x884C;&#x3002;&#x5B83;&#x5C06;HTTP&#x8BF7;&#x6C42;&#x8F6C;&#x6362;&#x4E3A;RPC&#x5E76;&#x8F6C;&#x53D1;&#x7ED9;&#x76F8;&#x5E94;&#x7684;&#x670D;&#x52A1;&#x3002;
+<img src="img/api.png" alt="API&#x5DE5;&#x5177;"></p>
+<h4 id="142&#x3001;web">1.4.2&#x3001;Web</h4>
+<p>UI&#x662F;go-micro&#x7684;web&#x7248;&#x672C;&#xFF0C;&#x5141;&#x8BB8;&#x901A;&#x8FC7;UI&#x4EA4;&#x4E92;&#x8BBF;&#x95EE;&#x73AF;&#x5883;&#x3002;&#x5728;&#x672A;&#x6765;&#xFF0C;&#x5B83;&#x4E5F;&#x5C06;&#x662F;&#x4E00;&#x79CD;&#x805A;&#x5408;Micro Web&#x670D;&#x52A1;&#x7684;&#x65B9;&#x5F0F;&#x3002;&#x5B83;&#x5305;&#x542B;&#x4E00;&#x79CD;Web&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x4EE3;&#x7406;&#x65B9;&#x5F0F;&#x3002;&#x5C06;/[name]&#x901A;&#x8FC7;&#x6CE8;&#x518C;&#x8868;&#x8DEF;&#x7531;&#x5230;&#x76F8;&#x5E94;&#x7684;&#x670D;&#x52A1;&#x3002;Web UI&#x5C06;&#x524D;&#x7F00;&#x201C;go.micro.web&#x3002;&#x201D;&#xFF08;&#x53EF;&#x4EE5;&#x914D;&#x7F6E;&#xFF09;&#x6DFB;&#x52A0;&#x5230;&#x540D;&#x79F0;&#x4E2D;&#xFF0C;&#x5728;&#x6CE8;&#x518C;&#x8868;&#x4E2D;&#x67E5;&#x627E;&#x5B83;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x8FDB;&#x884C;&#x53CD;&#x5411;&#x4EE3;&#x7406;&#x3002;
+<img src="img/web.png" alt="web&#x5DE5;&#x5177;"></p>
+<h4 id="143&#x3001;sidecar">1.4.3&#x3001;Sidecar</h4>
+<p>&#x8BE5;Sidecar&#x662F;go-micro&#x7684;HTTP&#x63A5;&#x53E3;&#x7248;&#x672C;&#x3002;&#x8FD9;&#x662F;&#x5C06;&#x975E;Go&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x96C6;&#x6210;&#x5230;Micro&#x73AF;&#x5883;&#x4E2D;&#x7684;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#x3002;
+<img src="img/car.png" alt="sidecar&#x5DE5;&#x5177;"></p>
+<h4 id="144&#x3001;bot">1.4.4&#x3001;Bot</h4>
+<p>Bot&#x662F;&#x4E00;&#x4E2A;Hubot&#x98CE;&#x683C;&#x7684;&#x5DE5;&#x5177;&#xFF0C;&#x4F4D;&#x4E8E;&#x60A8;&#x7684;&#x5FAE;&#x670D;&#x52A1;&#x5E73;&#x53F0;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;Slack&#xFF0C;HipChat&#xFF0C;XMPP&#x7B49;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#x3002;&#x5B83;&#x901A;&#x8FC7;&#x6D88;&#x606F;&#x4F20;&#x9012;&#x63D0;&#x4F9B;CLI&#x7684;&#x529F;&#x80FD;&#x3002;&#x53EF;&#x4EE5;&#x6DFB;&#x52A0;&#x5176;&#x4ED6;&#x547D;&#x4EE4;&#x6765;&#x81EA;&#x52A8;&#x6267;&#x884C;&#x5E38;&#x7528;&#x64CD;&#x4F5C;&#x4EFB;&#x52A1;&#x3002;
+<img src="img/bot.png" alt="bot&#x5DE5;&#x5177;"></p>
+<h4 id="145&#x3001;cli">1.4.5&#x3001;CLI</h4>
+<p>Micro CLI&#x662F;go-micro&#x7684;&#x547D;&#x4EE4;&#x884C;&#x7248;&#x672C;&#xFF0C;&#x5B83;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x89C2;&#x5BDF;&#x548C;&#x4E0E;&#x8FD0;&#x884C;&#x73AF;&#x5883;&#x4EA4;&#x4E92;&#x7684;&#x65B9;&#x5F0F;&#x3002;</p>
+<h4 id="146&#x3001;go-micro">1.4.6&#x3001;Go-Micro</h4>
+<p>Go-micro&#x662F;&#x5FAE;&#x670D;&#x52A1;&#x7684;&#x72EC;&#x7ACB;RPC&#x6846;&#x67B6;&#x3002;&#x5B83;&#x662F;&#x8BE5;&#x5DE5;&#x5177;&#x5305;&#x7684;&#x6838;&#x5FC3;&#xFF0C;&#x5E76;&#x53D7;&#x5230;&#x4E0A;&#x8FF0;&#x6240;&#x6709;&#x7EC4;&#x4EF6;&#x7684;&#x5F71;&#x54CD;&#x3002;&#x5728;&#x8FD9;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x770B;&#x770B;go-micro&#x7684;&#x6BCF;&#x4E2A;&#x7279;&#x5F81;&#x3002;
+<img src="img/go-micro.png" alt="go-micro"></p>
+<h3 id="15&#x3001;go-micro&#x7279;&#x6027;">1.5&#x3001;Go-Micro&#x7279;&#x6027;</h3>
+<ul>
+<li><p>Registry&#xFF1A;&#x4E3B;&#x8981;&#x8D1F;&#x8D23;&#x670D;&#x52A1;&#x6CE8;&#x518C;&#x548C;&#x53D1;&#x73B0;&#x529F;&#x80FD;&#x3002;&#x6211;&#x4EEC;&#x4E4B;&#x524D;&#x5B66;&#x4E60;&#x8FC7;&#x7684;consul&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x548C;&#x6B64;&#x5904;&#x7684;Registry&#x7ED3;&#x5408;&#x8D77;&#x6765;&#xFF0C;&#x5B9E;&#x73B0;&#x670D;&#x52A1;&#x7684;&#x53D1;&#x73B0;&#x529F;&#x80FD;&#x3002;</p>
+</li>
+<li><p>Selector&#xFF1A;selector&#x4E3B;&#x8981;&#x7684;&#x4F5C;&#x7528;&#x662F;&#x5B9E;&#x73B0;&#x670D;&#x52A1;&#x7684;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x529F;&#x80FD;&#x3002;&#x5F53;&#x67D0;&#x4E2A;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x8D77;&#x8BF7;&#x6C42;&#x65F6;&#xFF0C;&#x5C06;&#x9996;&#x5148;&#x67E5;&#x8BE2;&#x670D;&#x52A1;&#x6CE8;&#x518C;&#x8868;&#xFF0C;&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x7CFB;&#x7EDF;&#x4E2D;&#x53EF;&#x7528;&#x7684;&#x670D;&#x52A1;&#x5217;&#x8868;&#xFF0C;&#x7136;&#x540E;&#x4ECE;&#x4E2D;&#x9009;&#x62E9;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x8FDB;&#x884C;&#x67E5;&#x8BE2;&#xFF0C;&#x4FDD;&#x8BC1;&#x8282;&#x70B9;&#x53EF;&#x7528;&#x3002;</p>
+</li>
+<li><p>Broker&#xFF1A;Broker&#x662F;go-micro&#x6846;&#x67B6;&#x4E2D;&#x4E8B;&#x4EF6;&#x53D1;&#x5E03;&#x548C;&#x8BA2;&#x9605;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x4E3B;&#x8981;&#x662F;&#x7528;&#x6D88;&#x606F;&#x961F;&#x5217;&#x7684;&#x65B9;&#x5F0F;&#x5B9E;&#x73B0;&#x4FE1;&#x606F;&#x7684;&#x63A5;&#x6536;&#x548C;&#x53D1;&#x5E03;&#xFF0C;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x7CFB;&#x7EDF;&#x95F4;&#x7684;&#x5F02;&#x6B65;&#x529F;&#x80FD;&#x3002;</p>
+</li>
+<li><p>Codec&#xFF1A;go-micro&#x4E2D;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x8FC7;&#x7A0B;&#x4E2D;&#x7684;&#x7F16;&#x7801;&#x548C;&#x89E3;&#x7801;&#x63A5;&#x53E3;&#x3002;go-micro&#x4E2D;&#x6709;&#x591A;&#x91CD;&#x7F16;&#x7801;&#x65B9;&#x5F0F;&#xFF0C;&#x9ED8;&#x8BA4;&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x662F;protobuf&#xFF0C;&#x9664;&#x6B64;&#x4E4B;&#x5916;&#xFF0C;&#x8FD8;&#x6709;json&#x7B49;&#x683C;&#x5F0F;&#x3002;</p>
+</li>
+<li><p>Transport&#xFF1A;go-micro&#x6846;&#x67B6;&#x4E2D;&#x7684;&#x901A;&#x4FE1;&#x63A5;&#x53E3;&#xFF0C;&#x6709;&#x5F88;&#x591A;&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x6848;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#xFF0C;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;&#x7684;&#x662F;http&#x5F62;&#x5F0F;&#x7684;&#x901A;&#x4FE1;&#x65B9;&#x5F0F;&#xFF0C;&#x9664;&#x6B64;&#x4EE5;&#x5916;&#xFF0C;&#x8FD8;&#x6709;grpc&#x7B49;&#x901A;&#x4FE1;&#x65B9;&#x5F0F;&#x3002;</p>
+</li>
+<li><p>Client&#x548C;Server&#xFF1A;&#x5206;&#x522B;&#x662F;go-micro&#x4E2D;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x63A5;&#x53E3;&#x548C;&#x670D;&#x52A1;&#x7AEF;&#x63A5;&#x53E3;&#x3002;client&#x8D1F;&#x8D23;&#x8C03;&#x7528;&#xFF0C;server&#x8D1F;&#x8D23;&#x7B49;&#x5F85;&#x8BF7;&#x6C42;&#x5904;&#x7406;&#x3002;</p>
+</li>
+</ul>
+<h3 id="16&#x3001;&#x73AF;&#x5883;&#x5B89;&#x88C5;">1.6&#x3001;&#x73AF;&#x5883;&#x5B89;&#x88C5;</h3>
+<h4 id="161&#x3001;&#x5B89;&#x88C5;consul">1.6.1&#x3001;&#x5B89;&#x88C5;consul</h4>
+<p>consul&#x73AF;&#x5883;&#x662F;go-micro&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;&#x7684;&#x670D;&#x52A1;&#x53D1;&#x73B0;&#x65B9;&#x5F0F;&#x3002;&#x5728;&#x4E4B;&#x524D;&#x7684;&#x8BFE;&#x7A0B;&#x4E2D;&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x8FC7;&#x3002;</p>
+<h4 id="162&#x3001;&#x5B89;&#x88C5;protobuf&#x548C;&#x4F9D;&#x8D56;">1.6.2&#x3001;&#x5B89;&#x88C5;protobuf&#x548C;&#x4F9D;&#x8D56;</h4>
+<p>&#x5173;&#x4E8E;protobuf&#x76F8;&#x5173;&#x77E5;&#x8BC6;&#xFF0C;&#x6211;&#x4EEC;&#x4E4B;&#x524D;&#x4E5F;&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x5E76;&#x5B66;&#x4E60;&#x8FC7;&#xFF0C;&#x6B64;&#x5904;&#x4E0D;&#x518D;&#x8D58;&#x8FF0;&#x3002;</p>
+<h4 id="163&#x3001;micro&#x5DE5;&#x5177;&#x5305;&#x5B89;&#x88C5;&#xFF08;&#x53EF;&#x9009;&#x62E9;&#xFF09;">1.6.3&#x3001;micro&#x5DE5;&#x5177;&#x5305;&#x5B89;&#x88C5;&#xFF08;&#x53EF;&#x9009;&#x62E9;&#xFF09;</h4>
+<p>&#x524D;&#x9762;&#x8BF4;&#x8FC7;&#xFF0C;micro&#x662F;&#x4E00;&#x4E2A;&#x5FAE;&#x670D;&#x52A1;&#x7CFB;&#x7EDF;&#xFF0C;&#x63D0;&#x4F9B;&#x4E86;&#x5F88;&#x591A;&#x5DE5;&#x5177;&#x5305;&#xFF0C;&#x53EF;&#x4EE5;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x8FDB;&#x884C;&#x5F00;&#x53D1;&#x548C;&#x8C03;&#x8BD5;&#x3002;
+<img src="img/WX20190815-102639@2x.png" alt="microg&#x5DE5;&#x5177;&#x5305;"></p>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#x5B89;&#x88C5;micro&#x7684;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x5DE5;&#x5177;&#x5305;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">go</span> get -u github.com/micro/micro
+</code></pre>
+<h4 id="164&#x3001;1go-micro&#x5B89;&#x88C5;">1.6.4&#x3001;1Go-micro&#x5B89;&#x88C5;</h4>
+<p>&#x4F7F;&#x7528;go-micro&#x6846;&#x67B6;&#x4E4B;&#x524D;&#xFF0C;&#x9996;&#x5148;&#x9700;&#x8981;&#x5B89;&#x88C5;go-micro&#x6846;&#x67B6;&#xFF0C;&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">go</span> get github.com/micro/<span class="hljs-keyword">go</span>-micro
+</code></pre>
+<p>&#x5B89;&#x88C5;&#x5B8C;&#x6BD5;&#x540E;&#xFF0C;&#x80FD;&#x591F;&#x5728;$GOPATH&#x76EE;&#x5F55;&#x4E0B;&#x9762;&#x627E;&#x5230;go-micro&#x7684;&#x6E90;&#x7801;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;
+<img src="img/WX20190705-164152@2x.png" alt="&#x5B89;&#x88C5;go-micro"></p>
+<p>go-micro&#x7684;&#x6E90;&#x7801;&#x5728;github&#x4E0A;&#x53EF;&#x4EE5;&#x627E;&#x5230;&#xFF0C;&#x94FE;&#x63A5;&#x5982;&#x4E0B;&#xFF1A;<a href="https://github.com/micro/go-micro" target="_blank">https://github.com/micro/go-micro</a></p>
+<h2 id="&#x4E8C;&#x3001;&#x521B;&#x5EFA;&#x5FAE;&#x670D;&#x52A1;">&#x4E8C;&#x3001;&#x521B;&#x5EFA;&#x5FAE;&#x670D;&#x52A1;</h2>
+<h3 id="21&#x3001;&#x670D;&#x52A1;&#x7684;&#x5B9A;&#x4E49;">2.1&#x3001;&#x670D;&#x52A1;&#x7684;&#x5B9A;&#x4E49;</h3>
+<p>&#x5728;micro&#x6846;&#x67B6;&#x4E2D;&#xFF0C;&#x670D;&#x52A1;&#x7528;&#x63A5;&#x53E3;&#x6765;&#x8FDB;&#x884C;&#x5B9A;&#x4E49;&#xFF0C;&#x670D;&#x52A1;&#x88AB;&#x5B9A;&#x4E49;&#x4E3A;Service&#xFF0C;&#x5B8C;&#x6574;&#x7684;&#x63A5;&#x53E3;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">type</span> Service <span class="hljs-keyword">interface</span> {
+    Init(...Option)
+    Options() Options
+    Client() client.Client
+    Server() server.Server
+    Run() error
+    String() <span class="hljs-keyword">string</span>
+}
+</code></pre>
+<p>&#x5728;&#x8BE5;&#x63A5;&#x53E3;&#x4E2D;&#xFF0C;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x5B9E;&#x4F8B;&#x5177;&#x4F53;&#x8981;&#x5305;&#x542B;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5206;&#x522B;&#x662F;&#xFF1A;Init&#x3001;Options&#x3001;Client&#x3001;Server&#x3001;Run&#x3001;String&#x7B49;6&#x4E2A;&#x65B9;&#x6CD5;&#x3002;</p>
+<h3 id="22&#x3001;&#x521D;&#x59CB;&#x5316;&#x670D;&#x52A1;&#x5B9E;&#x4F8B;">2.2&#x3001;&#x521D;&#x59CB;&#x5316;&#x670D;&#x52A1;&#x5B9E;&#x4F8B;</h3>
+<p>micro&#x6846;&#x67B6;&#xFF0C;&#x9664;&#x4E86;&#x63D0;&#x4F9B;Service&#x7684;&#x5B9A;&#x4E49;&#x5916;&#xFF0C;&#x63D0;&#x4F9B;&#x521B;&#x5EFA;&#x670D;&#x52A1;&#x5B9E;&#x4F8B;&#x7684;&#x65B9;&#x6CD5;&#x4F9B;&#x5F00;&#x53D1;&#x8005;&#x8C03;&#x7528;&#xFF1A;</p>
+<pre><code class="lang-go">service := micro.NewService()
+</code></pre>
+<p>&#x5982;&#x4E0A;&#x662F;&#x6700;&#x7B80;&#x5355;&#x4E00;&#x79CD;&#x521B;&#x5EFA;service&#x5B9E;&#x4F8B;&#x7684;&#x65B9;&#x5F0F;&#x3002;NewService&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;Options&#x7C7B;&#x578B;&#x7684;&#x53EF;&#x9009;&#x9879;&#x53C2;&#x6570;&#x3002;NewService&#x7684;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> NewService(opts ...Option) Service {
+    <span class="hljs-keyword">return</span> newService(opts...)
+}
+</code></pre>
+<h4 id="221&#x3001;options&#x53EF;&#x9009;&#x9879;&#x914D;&#x7F6E;">2.2.1&#x3001;Options&#x53EF;&#x9009;&#x9879;&#x914D;&#x7F6E;</h4>
+<p>&#x5173;&#x4E8E;Options&#x53EF;&#x914D;&#x7F6E;&#x9009;&#x9879;&#xFF0C;&#x6709;&#x5F88;&#x591A;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x7684;&#x8BBE;&#x7F6E;&#x9879;&#x3002;micro&#x6846;&#x67B6;&#x5305;&#x4E2D;&#x5305;&#x542B;&#x4E86;options.go&#x6587;&#x4EF6;&#xFF0C;&#x5B9A;&#x4E49;&#x4E86;&#x8BE6;&#x7EC6;&#x7684;&#x53EF;&#x9009;&#x9879;&#x914D;&#x7F6E;&#x7684;&#x5185;&#x5BB9;&#x3002;&#x6700;&#x57FA;&#x672C;&#x5E38;&#x89C1;&#x7684;&#x914D;&#x7F6E;&#x9879;&#x6709;&#xFF1A;&#x670D;&#x52A1;&#x540D;&#x79F0;&#xFF0C;&#x670D;&#x52A1;&#x7684;&#x7248;&#x672C;&#xFF0C;&#x670D;&#x52A1;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x670D;&#x52A1;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-comment">//&#x670D;&#x52A1;&#x540D;&#x79F0;</span>
+<span class="hljs-keyword">func</span> Name(n <span class="hljs-keyword">string</span>) Option {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">func</span>(o *Options) {
+        o.Server.Init(server.Name(n))
+    }
+}
+
+<span class="hljs-comment">//&#x670D;&#x52A1;&#x7248;&#x672C;</span>
+<span class="hljs-keyword">func</span> Version(v <span class="hljs-keyword">string</span>) Option {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">func</span>(o *Options) {
+        o.Server.Init(server.Version(v))
+    }
+}
+
+<span class="hljs-comment">//&#x670D;&#x52A1;&#x90E8;&#x7F72;&#x5730;&#x5740;</span>
+<span class="hljs-keyword">func</span> Address(addr <span class="hljs-keyword">string</span>) Option {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">func</span>(o *Options) {
+        o.Server.Init(server.Address(addr))
+    }
+}
+
+<span class="hljs-comment">//&#x5143;&#x6570;&#x636E;&#x9879;&#x8BBE;&#x7F6E;</span>
+<span class="hljs-keyword">func</span> Metadata(md <span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>]<span class="hljs-keyword">string</span>) Option {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">func</span>(o *Options) {
+        o.Server.Init(server.Metadata(md))
+    }
+}
+</code></pre>
+<p>&#x5B8C;&#x6574;&#x7684;&#x5B9E;&#x4F8B;&#x5316;&#x5BF9;&#x8C61;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> main() {
+    <span class="hljs-comment">//&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x670D;&#x52A1;&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;</span>
+    service := micro.NewService(
+        micro.Name(<span class="hljs-string">&quot;helloservice&quot;</span>),
+        micro.Version(<span class="hljs-string">&quot;v1.0.0&quot;</span>),
+    )
+}
+</code></pre>
+<p>&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8C03;&#x7528;micro.Name&#x4E3A;&#x670D;&#x52A1;&#x8BBE;&#x7F6E;&#x540D;&#x79F0;&#xFF0C;&#x8BBE;&#x7F6E;&#x7248;&#x672C;&#x53F7;&#x7B49;&#x4FE1;&#x606F;&#x3002;&#x5728;&#x5BF9;&#x5E94;&#x7684;&#x51FD;&#x6570;&#x5185;&#x90E8;&#xFF0C;&#x8C03;&#x7528;&#x4E86;server.Server.Init&#x51FD;&#x6570;&#x5BF9;&#x914D;&#x7F6E;&#x9879;&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;&#x3002;</p>
+<h3 id="23&#x3001;&#x5B9A;&#x4E49;&#x670D;&#x52A1;&#x63A5;&#x53E3;&#x5B9E;&#x73B0;&#x670D;&#x52A1;&#x4E1A;&#x52A1;&#x903B;&#x8F91;">2.3&#x3001;&#x5B9A;&#x4E49;&#x670D;&#x52A1;&#x63A5;&#x53E3;,&#x5B9E;&#x73B0;&#x670D;&#x52A1;&#x4E1A;&#x52A1;&#x903B;&#x8F91;</h3>
+<p>&#x5728;&#x524D;&#x9762;&#x7684;&#x8BFE;&#x7A0B;&#x4E2D;&#xFF0C;&#x5DF2;&#x7ECF;&#x5B66;&#x4E60;&#x638C;&#x63E1;&#x4E86;&#x4F7F;&#x7528;protobuf&#x5B9A;&#x4E49;&#x670D;&#x52A1;&#x63A5;&#x53E3;&#xFF0C;&#x5E76;&#x5BF9;&#x670D;&#x52A1;&#x8FDB;&#x884C;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x3002;&#x4F7F;&#x7528;protobuf&#x5B9A;&#x4E49;&#x670D;&#x52A1;&#x63A5;&#x53E3;&#x5E76;&#x81EA;&#x52A8;&#x751F;&#x6210;go&#x8BED;&#x8A00;&#x6587;&#x4EF6;,&#x9700;&#x8981;&#x7ECF;&#x8FC7;&#x4EE5;&#x4E0B;&#x51E0;&#x4E2A;&#x6B65;&#x9AA4;&#xFF0C;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x793A;&#x4F8B;&#x8FDB;&#x884C;&#x8BF4;&#x660E;&#xFF1A;</p>
+<blockquote>
+<font size="2" color="gray">&#x6211;&#x4EEC;&#x4F9D;&#x7136;&#x901A;&#x8FC7;&#x6848;&#x4F8B;&#x6765;&#x8BB2;&#x89E3;&#x76F8;&#x5173;&#x7684;&#x77E5;&#x8BC6;&#x70B9;&#xFF1A;&#x5728;&#x5B66;&#x6821;&#x7684;&#x6559;&#x52A1;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x6709;&#x5B66;&#x751F;&#x4FE1;&#x606F;&#x7BA1;&#x7406;&#x7684;&#x9700;&#x6C42;&#x3002;&#x5B66;&#x751F;&#x4FE1;&#x606F;&#x5305;&#x542B;&#x5B66;&#x751F;&#x59D3;&#x540D;&#xFF0C;&#x5B66;&#x751F;&#x73ED;&#x7EA7;&#xFF0C;&#x5B66;&#x4E60;&#x6210;&#x7EE9;&#x7EC4;&#x6210;&#xFF1B;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x5B66;&#x751F;&#x59D3;&#x540D;&#x67E5;&#x8BE2;&#x5B66;&#x751F;&#x7684;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#xFF0C;&#x6211;&#x4EEC;&#x901A;&#x8FC7;rpc&#x8C03;&#x7528;&#x548C;&#x5B66;&#x751F;&#x670D;&#x52A1;&#x6765;&#x5B9E;&#x73B0;&#x8BE5;&#x6848;&#x4F8B;&#x3002;</font>
+
+</blockquote>
+<h4 id="231&#x3001;&#x5B9A;&#x4E49;proto&#x6587;&#x4EF6;">2.3.1&#x3001;&#x5B9A;&#x4E49;.proto&#x6587;&#x4EF6;</h4>
+<p>&#x4F7F;&#x7528;proto3&#x8BED;&#x6CD5;&#x5B9A;&#x4E49;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x4F53;&#x548C;&#x670D;&#x52A1;&#x65B9;&#x6CD5;&#x3002;&#x5177;&#x4F53;&#x5B9A;&#x4E49;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-go">syntax = <span class="hljs-string">&apos;proto3&apos;</span>;
+<span class="hljs-keyword">package</span> message;
+
+<span class="hljs-comment">//&#x5B66;&#x751F;&#x6570;&#x636E;&#x4F53;</span>
+message Student {
+    <span class="hljs-keyword">string</span> name = <span class="hljs-number">1</span>; <span class="hljs-comment">//&#x59D3;&#x540D;</span>
+    <span class="hljs-keyword">string</span> classes = <span class="hljs-number">2</span>; <span class="hljs-comment">//&#x73ED;&#x7EA7;</span>
+    <span class="hljs-keyword">int32</span> grade = <span class="hljs-number">3</span>; <span class="hljs-comment">//&#x5206;&#x6570;</span>
+}
+
+<span class="hljs-comment">//&#x8BF7;&#x6C42;&#x6570;&#x636E;&#x4F53;&#x5B9A;&#x4E49;</span>
+message StudentRequest {
+    <span class="hljs-keyword">string</span> name = <span class="hljs-number">1</span>;
+}
+
+<span class="hljs-comment">//&#x5B66;&#x751F;&#x670D;&#x52A1;</span>
+service StudentService {
+    <span class="hljs-comment">//&#x67E5;&#x8BE2;&#x5B66;&#x751F;&#x4FE1;&#x606F;&#x670D;&#x52A1;</span>
+    rpc GetStudent (StudentRequest) returns (Student);
+}
+</code></pre>
+<h4 id="232&#x3001;&#x7F16;&#x8BD1;proto&#x6587;&#x4EF6;">2.3.2&#x3001;&#x7F16;&#x8BD1;.proto&#x6587;&#x4EF6;</h4>
+<p>&#x5728;&#x539F;&#x6765;&#x5B66;&#x4E60;gRPC&#x6846;&#x67B6;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x662F;&#x5C06;.proto&#x6587;&#x4EF6;&#x6309;&#x7167;grpc&#x63D2;&#x4EF6;&#x7684;&#x6807;&#x51C6;&#x6765;&#x8FDB;&#x884C;&#x7F16;&#x8BD1;&#x3002;&#x800C;&#x73B0;&#x5728;&#xFF0C;&#x6211;&#x4EEC;&#x5B66;&#x4E60;&#x7684;&#x662F;go-micro&#xFF0C;&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x6309;&#x7167;micro&#x63D2;&#x4EF6;&#x6765;&#x8FDB;&#x884C;&#x7F16;&#x8BD1;&#x3002;micro&#x6846;&#x67B6;&#x4E2D;&#x7684;protobuf&#x63D2;&#x4EF6;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5355;&#x72EC;&#x5B89;&#x88C5;&#x3002;</p>
+<ul>
+<li><p>&#x5B89;&#x88C5;micro&#x6846;&#x67B6;&#x7684;protobuf&#x63D2;&#x4EF6;</p>
+<pre><code class="lang-go">  <span class="hljs-keyword">go</span> get github.com/micro/protobuf/{proto,protoc-gen-<span class="hljs-keyword">go</span>}
+</code></pre>
+<p>  &#x901A;&#x8FC7;&#x4E0A;&#x8FF0;&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x6210;&#x529F;&#x5B89;&#x88C5;proto&#x63D2;&#x4EF6;,&#x5B89;&#x88C5;&#x6210;&#x529F;&#x540E;&#x53EF;&#x4EE5;&#x5728;&#x672C;&#x5730;&#x73AF;&#x5883;&#x4E2D;&#x7684;$GOPATH&#x76EE;&#x5F55;&#x4E2D;&#x7684;src/github.com/micro/protobuf&#x4E2D;&#x770B;&#x5230;&#x65B0;&#x5B89;&#x88C5;&#x7684;&#x63D2;&#x4EF6;&#x3002;&#x6E90;&#x7801;&#x76EE;&#x5F55;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;
+  <img src="img/WX20190826-113159@2x.png" alt="micro&#x4E2D;&#x7684;protobuf&#x63D2;&#x4EF6;"></p>
+</li>
+<li><p>&#x6307;&#x5B9A;micro&#x63D2;&#x4EF6;&#x8FDB;&#x884C;&#x7F16;&#x8BD1;</p>
+<pre><code class="lang-go">  protoc --go_out=plugins=micro:. message.proto
+</code></pre>
+<p>  &#x4E0A;&#x8FF0;&#x7F16;&#x8BD1;&#x547D;&#x4EE4;&#x6267;&#x884C;&#x6210;&#x529F;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x9879;&#x76EE;&#x76EE;&#x5F55;&#x4E0B;&#x7684;message&#x76EE;&#x5F55;&#x4E0B;&#x751F;&#x6210;message.pb.go&#x6587;&#x4EF6;&#xFF0C;&#x8BE5;&#x6587;&#x4EF6;&#x662F;&#x7531;protoc&#x7F16;&#x8BD1;&#x5668;&#x81EA;&#x52A8;&#x7F16;&#x8BD1;&#x751F;&#x6210;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x4E0D;&#x80FD;&#x4FEE;&#x6539;&#x3002;message.pb.go&#x5982;&#x56FE;&#x6240;&#x793A;&#xFF1A;
+  <img src="img/WX20190826-113429@2x.png" alt="&#x7F16;&#x8BD1;&#x540E;&#x7684;&#x6587;&#x4EF6;"></p>
+</li>
+</ul>
+<h4 id="233&#x3001;&#x7F16;&#x7801;&#x5B9E;&#x73B0;&#x670D;&#x52A1;&#x529F;&#x80FD;">2.3.3&#x3001;&#x7F16;&#x7801;&#x5B9E;&#x73B0;&#x670D;&#x52A1;&#x529F;&#x80FD;</h4>
+<p>&#x5728;&#x9879;&#x76EE;&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x5B9E;&#x73B0;StudentService&#x5B9A;&#x4E49;&#x7684;rpc GetStudent&#x529F;&#x80FD;&#x3002;&#x65B0;&#x5EFA;studentManager.go&#x6587;&#x4EF6;&#xFF0C;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-comment">//&#x5B66;&#x751F;&#x670D;&#x52A1;&#x7BA1;&#x7406;&#x5B9E;&#x73B0;</span>
+<span class="hljs-keyword">type</span> StudentManager <span class="hljs-keyword">struct</span> {
+}
+
+<span class="hljs-comment">//&#x83B7;&#x53D6;&#x5B66;&#x751F;&#x4FE1;&#x606F;&#x7684;&#x670D;&#x52A1;&#x63A5;&#x53E3;&#x5B9E;&#x73B0;</span>
+<span class="hljs-keyword">func</span> GetStudent(ctx context.Context, request *message.StudentRequest, response *message.Student) error {
+
+    studentMap := <span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>]message.Student{
+        <span class="hljs-string">&quot;davie&quot;</span>:  message.Student{Name: <span class="hljs-string">&quot;davie&quot;</span>, Classes: <span class="hljs-string">&quot;&#x8F6F;&#x4EF6;&#x5DE5;&#x7A0B;&#x4E13;&#x4E1A;&quot;</span>, Grade: <span class="hljs-number">80</span>},
+        <span class="hljs-string">&quot;steven&quot;</span>: message.Student{Name: <span class="hljs-string">&quot;steven&quot;</span>, Classes: <span class="hljs-string">&quot;&#x8BA1;&#x7B97;&#x673A;&#x79D1;&#x5B66;&#x4E0E;&#x6280;&#x672F;&quot;</span>, Grade: <span class="hljs-number">90</span>},
+        <span class="hljs-string">&quot;tony&quot;</span>:   message.Student{Name: <span class="hljs-string">&quot;tony&quot;</span>, Classes: <span class="hljs-string">&quot;&#x8BA1;&#x7B97;&#x673A;&#x7F51;&#x7EDC;&#x5DE5;&#x7A0B;&quot;</span>, Grade: <span class="hljs-number">85</span>},
+        <span class="hljs-string">&quot;jack&quot;</span>:   message.Student{Name: <span class="hljs-string">&quot;jack&quot;</span>, Classes: <span class="hljs-string">&quot;&#x5DE5;&#x5546;&#x7BA1;&#x7406;&quot;</span>, Grade: <span class="hljs-number">96</span>},
+    }
+
+    <span class="hljs-keyword">if</span> request.Name == <span class="hljs-string">&quot;&quot;</span> {
+        <span class="hljs-keyword">return</span> errors.New(<span class="hljs-string">&quot; &#x8BF7;&#x6C42;&#x53C2;&#x6570;&#x9519;&#x8BEF;,&#x8BF7;&#x91CD;&#x65B0;&#x8BF7;&#x6C42;&#x3002;&quot;</span>)
+    }
+
+    student := studentMap[request.Name]
+
+    <span class="hljs-keyword">if</span> student.Name != <span class="hljs-string">&quot;&quot;</span> {
+        response = &amp;student
+    }
+    <span class="hljs-keyword">return</span> errors.New(<span class="hljs-string">&quot; &#x672A;&#x67E5;&#x8BE2;&#x5F53;&#x76F8;&#x5173;&#x5B66;&#x751F;&#x4FE1;&#x606F; &quot;</span>)
+}
+</code></pre>
+<h3 id="24&#x3001;&#x8FD0;&#x884C;&#x670D;&#x52A1;">2.4&#x3001;&#x8FD0;&#x884C;&#x670D;&#x52A1;</h3>
+<p>&#x5728;&#x4E4B;&#x524D;&#x7684;&#x5B66;&#x4E60;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x662F;&#x901A;&#x8FC7;&#x81EA;&#x5DF1;&#x7F16;&#x5199;server.go&#x7A0B;&#x5E8F;,&#x6CE8;&#x518C;&#x670D;&#x52A1;&#xFF0C;&#x5E76;&#x5B9E;&#x73B0;&#x8BF7;&#x6C42;&#x7684;&#x76D1;&#x542C;&#x3002;&#x73B0;&#x5728;&#xFF0C;&#x6211;&#x4EEC;&#x7528;micro&#x6846;&#x67B6;&#x6765;&#x5B9E;&#x73B0;&#x670D;&#x52A1;&#x7684;&#x8FD0;&#x884C;&#x3002;&#x5B8C;&#x6574;&#x7684;&#x8FD0;&#x884C;&#x670D;&#x52A1;&#x7684;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> main() {
+
+    <span class="hljs-comment">//&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x670D;&#x52A1;&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;</span>
+    service := micro.NewService(
+        micro.Name(<span class="hljs-string">&quot;student_service&quot;</span>),
+        micro.Version(<span class="hljs-string">&quot;v1.0.0&quot;</span>),
+    )
+
+    <span class="hljs-comment">//&#x670D;&#x52A1;&#x521D;&#x59CB;&#x5316;</span>
+    service.Init()
+
+    <span class="hljs-comment">//&#x6CE8;&#x518C;</span>
+message.RegisterStudentServiceHandler(service.Server(), <span class="hljs-built_in">new</span>(StudentManager))
+
+    <span class="hljs-comment">//&#x8FD0;&#x884C;</span>
+    err := service.Run()
+    <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+        log.Fatal(err)
+    }
+}
+</code></pre>
+<h3 id="25&#x3001;&#x5BA2;&#x6237;&#x7AEF;&#x8C03;&#x7528;">2.5&#x3001;&#x5BA2;&#x6237;&#x7AEF;&#x8C03;&#x7528;</h3>
+<p>&#x5BA2;&#x6237;&#x7AEF;&#x53EF;&#x4EE5;&#x6784;&#x9020;&#x8BF7;&#x6C42;&#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x8BBF;&#x95EE;&#x5BF9;&#x5E94;&#x7684;&#x670D;&#x52A1;&#x65B9;&#x6CD5;&#x3002;&#x5177;&#x4F53;&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> main() {
+
+    service := micro.NewService(
+        micro.Name(<span class="hljs-string">&quot;student.client&quot;</span>),
+    )
+    service.Init()
+
+    studentService := message.NewStudentServiceClient(<span class="hljs-string">&quot;student_service&quot;</span>, service.Client())
+
+    res, err := studentService.GetStudent(context.TODO(), &amp;message.StudentRequest{Name: <span class="hljs-string">&quot;davie&quot;</span>})
+    <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+        fmt.Println(err)
+    }
+    fmt.Println(res.Name)
+    fmt.Println(res.Classes)
+    fmt.Println(res.Grade)
+}
+</code></pre>
+<h3 id="26&#x3001;&#x8FD0;&#x884C;&#x7ED3;&#x679C;">2.6&#x3001;&#x8FD0;&#x884C;&#x7ED3;&#x679C;</h3>
+<h4 id="261&#x3001;&#x8FD0;&#x884C;&#x670D;&#x52A1;&#x7AEF;">2.6.1&#x3001;&#x8FD0;&#x884C;&#x670D;&#x52A1;&#x7AEF;</h4>
+<p>&#x8FD0;&#x884C;main.go&#x6587;&#x4EF6;&#x4E2D;&#x7684;main&#x51FD;&#x6570;,&#x670D;&#x52A1;&#x6CE8;&#x518C;&#x6210;&#x529F;&#xFF0C;&#x5E76;&#x8F93;&#x51FA;&#x5982;&#x4E0B;&#x65E5;&#x5FD7;&#xFF1A;
+<img src="img/WX20190826-231749@2x.png" alt="&#x670D;&#x52A1;&#x6CE8;&#x518C;"></p>
+<pre><code class="lang-go"><span class="hljs-number">2019</span>/<span class="hljs-number">08</span>/<span class="hljs-number">26</span> <span class="hljs-number">22</span>:<span class="hljs-number">50</span>:<span class="hljs-number">18</span> Transport [http] Listening on [::]:<span class="hljs-number">54343</span>
+<span class="hljs-number">2019</span>/<span class="hljs-number">08</span>/<span class="hljs-number">26</span> <span class="hljs-number">22</span>:<span class="hljs-number">50</span>:<span class="hljs-number">18</span> Broker [http] Connected to [::]:<span class="hljs-number">54344</span>
+<span class="hljs-number">2019</span>/<span class="hljs-number">08</span>/<span class="hljs-number">26</span> <span class="hljs-number">22</span>:<span class="hljs-number">50</span>:<span class="hljs-number">19</span> Registry [mdns] Registering node: student_service<span class="hljs-number">-346</span>b454c<span class="hljs-number">-998d</span><span class="hljs-number">-4e85</span>-a8cc-befbc0198eef
+</code></pre>
+<h4 id="262&#x3001;&#x8FD0;&#x884C;&#x5BA2;&#x6237;&#x7AEF;">2.6.2&#x3001;&#x8FD0;&#x884C;&#x5BA2;&#x6237;&#x7AEF;</h4>
+<p>&#x5BA2;&#x6237;&#x7AEF;&#x8D1F;&#x8D23;&#x53D1;&#x8D77;&#x8BF7;&#x6C42;&#x548C;&#x529F;&#x80FD;&#x8C03;&#x7528;,&#x8FD0;&#x884C;client.go&#x7A0B;&#x5E8F;&#xFF0C;&#x7A0B;&#x5E8F;&#x6B63;&#x5E38;&#x8F93;&#x51FA;&#x3002;</p>
+<h3 id="27&#x3001;&#x6CE8;&#x518C;&#x670D;&#x52A1;&#x5230;consul">2.7&#x3001;&#x6CE8;&#x518C;&#x670D;&#x52A1;&#x5230;consul</h3>
+<h4 id="271&#x3001;&#x9ED8;&#x8BA4;&#x6CE8;&#x518C;&#x5230;mdns">2.7.1&#x3001;&#x9ED8;&#x8BA4;&#x6CE8;&#x518C;&#x5230;mdns</h4>
+<p>&#x5728;&#x6211;&#x4EEC;&#x8FD0;&#x884C;&#x670D;&#x52A1;&#x7AEF;&#x7684;&#x7A0B;&#x5E8F;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x5230;Registry [mdns] Registering node:xxx&#x8FD9;&#x4E2A;&#x65E5;&#x5FD7;,&#x8BE5;&#x65E5;&#x5FD7;&#x663E;&#x793A;go-micro&#x6846;&#x67B6;&#x5C06;&#x6211;&#x4EEC;&#x7684;&#x670D;&#x52A1;&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x7684;&#x914D;&#x7F6E;&#x6CE8;&#x518C;&#x5230;&#x4E86;mdns&#x4E2D;&#x3002;mdns&#x662F;&#x53EF;&#x7B80;&#x5355;&#x7FFB;&#x8BD1;&#x4E3A;mdns&#xFF0C;&#x662F;go-micro&#x7684;&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;&#x9009;&#x9879;&#x3002;</p>
+<h4 id="272&#x3001;&#x6CE8;&#x518C;&#x5230;consul">2.7.2&#x3001;&#x6CE8;&#x518C;&#x5230;consul</h4>
+<p>&#x5728;&#x524D;&#x9762;&#x7684;&#x5FAE;&#x670D;&#x52A1;&#x7406;&#x8BBA;&#x8BFE;&#x7A0B;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x5B66;&#x4E60;&#x8FC7;consul&#x3002;consul&#x662F;&#x670D;&#x52A1;&#x6CE8;&#x518C;&#x4E0E;&#x53D1;&#x73B0;&#x7684;&#x7EC4;&#x4EF6;,&#x56E0;&#x6B64;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x672C;&#x5730;&#x7CFB;&#x7EDF;&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x4E86;consul&#x73AF;&#x5883;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x5C06;&#x6211;&#x4EEC;&#x7684;&#x670D;&#x52A1;&#x6CE8;&#x518C;&#x5230;consul&#x4E2D;&#x3002;&#x6307;&#x5B9A;&#x6CE8;&#x518C;&#x5230;consul&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x5148;&#x5C06;consul&#x8FDB;&#x884C;&#x542F;&#x52A8;&#x3002;</p>
+<ul>
+<li><p>&#x542F;&#x52A8;consul
+  &#x542F;&#x52A8;&#x547D;&#x4EE4;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-go">  consul agent -dev
+</code></pre>
+<p>&#x901A;&#x8FC7;&#x4E0A;&#x8FF0;&#x547D;&#x4EE4;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x7EC8;&#x7AEF;&#x4E2D;&#x542F;&#x52A8;consul&#x3002;</p>
+</li>
+<li><p>&#x6307;&#x5B9A;&#x670D;&#x52A1;&#x6CE8;&#x518C;&#x5230;consul
+&#x901A;&#x8FC7;&#x547D;&#x4EE4;&#x8FD0;&#x884C;&#x670D;&#x52A1;&#x7A0B;&#x5E8F;&#xFF0C;&#x5E76;&#x6307;&#x5B9A;&#x6CE8;&#x518C;&#x5230;consul&#xFF0C;&#x8BE6;&#x7EC6;&#x547D;&#x4EE4;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">go</span> run main.<span class="hljs-keyword">go</span> --registry=consul
+</code></pre>
+<p>&#x901A;&#x8FC7;--registry&#x9009;&#x9879;&#xFF0C;&#x6307;&#x5B9A;&#x8981;&#x6CE8;&#x518C;&#x5230;&#x7684;&#x670D;&#x52A1;&#x53D1;&#x73B0;&#x7EC4;&#x4EF6;&#x3002;</p>
+</li>
+<li><p>&#x67E5;&#x770B;&#x670D;&#x52A1;
+&#x7531;&#x4E8E;consul&#x7ED9;&#x6211;&#x4EEC;&#x63D0;&#x4F9B;&#x4E86;ui&#x754C;&#x9762;&#xFF0C;&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6D4F;&#x89C8;&#x5668;&#x754C;&#x9762;&#x6765;&#x8BBF;&#x95EE;consul&#x8282;&#x70B9;&#x9875;&#x9762;&#x3002;&#x8BBF;&#x95EE;&#x672C;&#x5730;8500&#x7AEF;&#x53E3;,&#x6D4F;&#x89C8;&#x5668;&#x5730;&#x5740;&#x662F;&#xFF1A;</p>
+<pre><code class="lang-go">  http:<span class="hljs-comment">//localhost:8500</span>
+</code></pre>
+<p>  <img src="img/WX20190827-083248@2x.png" alt="&#x670D;&#x52A1;&#x6CE8;&#x518C;&#x5230;consul"></p>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="day84_go-micro使用1.html" class="navigation navigation-next navigation-unique" aria-label="Next page: go-micro使用1">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"go-micro框架介绍","level":"3.5.1","depth":2,"next":{"title":"go-micro使用1","level":"3.5.2","depth":2,"path":"12-go-micro微服务框架/day84_go-micro使用1.md","ref":"12-go-micro微服务框架/day84_go-micro使用1.md","articles":[]},"previous":{"title":"go-micro","level":"3.5","depth":1,"ref":"","articles":[{"title":"go-micro框架介绍","level":"3.5.1","depth":2,"path":"12-go-micro微服务框架/day83_go-micro框架介绍.md","ref":"12-go-micro微服务框架/day83_go-micro框架介绍.md","articles":[]},{"title":"go-micro使用1","level":"3.5.2","depth":2,"path":"12-go-micro微服务框架/day84_go-micro使用1.md","ref":"12-go-micro微服务框架/day84_go-micro使用1.md","articles":[]},{"title":"go-micro使用2","level":"3.5.3","depth":2,"path":"12-go-micro微服务框架/day85_go-micro使用2.md","ref":"12-go-micro微服务框架/day85_go-micro使用2.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"12-go-micro微服务框架/day83_go-micro框架介绍.md","mtime":"2020-08-10T03:24:35.197Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-04T06:50:51.724Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1402 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>beego框架介绍和流程分析 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="day37_beego框架总结及数据库连接配置.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Go语言基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../01-Go语言基础/day01_第1节_知名编程语言或系统的发展简史.html">
+            
+                <a href="../01-Go语言基础/day01_第1节_知名编程语言或系统的发展简史.html">
+            
+                    
+                    第1节_知名编程语言或系统的发展简史
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../01-Go语言基础/day01_第2节_Go语言的前世今生.html">
+            
+                <a href="../01-Go语言基础/day01_第2节_Go语言的前世今生.html">
+            
+                    
+                    第2节_Go语言的前世今生
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../01-Go语言基础/day01_第3节_Go语言logo和版本.html">
+            
+                <a href="../01-Go语言基础/day01_第3节_Go语言logo和版本.html">
+            
+                    
+                    第3节_Go语言logo和版本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../01-Go语言基础/day01_第4节_Go语言的核心特性.html">
+            
+                <a href="../01-Go语言基础/day01_第4节_Go语言的核心特性.html">
+            
+                    
+                    第4节_Go语言的核心特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../01-Go语言基础/day01_第5节_Go语言的优势和其他语言的对比.html">
+            
+                <a href="../01-Go语言基础/day01_第5节_Go语言的优势和其他语言的对比.html">
+            
+                    
+                    第5节_Go语言的优势和其他语言的对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../01-Go语言基础/day01_第6节_Go语言能做什么.html">
+            
+                <a href="../01-Go语言基础/day01_第6节_Go语言能做什么.html">
+            
+                    
+                    第6节_Go语言能做什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../01-Go语言基础/day01_第7节_Go语言环境搭建.html">
+            
+                <a href="../01-Go语言基础/day01_第7节_Go语言环境搭建.html">
+            
+                    
+                    第7节_Go语言环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../01-Go语言基础/day01_第8节_第一个程序HelloWorld.html">
+            
+                <a href="../01-Go语言基础/day01_第8节_第一个程序HelloWorld.html">
+            
+                    
+                    第8节_第一个程序HelloWorld
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../01-Go语言基础/day01_第9节_Go的命令以及Go的执行原理.html">
+            
+                <a href="../01-Go语言基础/day01_第9节_Go的命令以及Go的执行原理.html">
+            
+                    
+                    第9节_Go的命令以及Go的执行原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../01-Go语言基础/day01_第10节_安装Goland开发工具.html">
+            
+                <a href="../01-Go语言基础/day01_第10节_安装Goland开发工具.html">
+            
+                    
+                    第10节_安装Goland开发工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../01-Go语言基础/day01_第11节_编码规范.html">
+            
+                <a href="../01-Go语言基础/day01_第11节_编码规范.html">
+            
+                    
+                    第11节_编码规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../01-Go语言基础/day02_基本语法.html">
+            
+                <a href="../01-Go语言基础/day02_基本语法.html">
+            
+                    
+                    基本语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../01-Go语言基础/day03_数据类型&运算符.html">
+            
+                <a href="../01-Go语言基础/day03_数据类型&运算符.html">
+            
+                    
+                    数据类型&运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="../01-Go语言基础/day03_键盘输入和打印输出.html">
+            
+                <a href="../01-Go语言基础/day03_键盘输入和打印输出.html">
+            
+                    
+                    键盘输入和打印输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="../01-Go语言基础/day04_分支语句.html">
+            
+                <a href="../01-Go语言基础/day04_分支语句.html">
+            
+                    
+                    分支语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="../01-Go语言基础/day05_循环语句.html">
+            
+                <a href="../01-Go语言基础/day05_循环语句.html">
+            
+                    
+                    循环语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="../01-Go语言基础/day06_数组.html">
+            
+                <a href="../01-Go语言基础/day06_数组.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="../01-Go语言基础/day07_Slice的使用.html">
+            
+                <a href="../01-Go语言基础/day07_Slice的使用.html">
+            
+                    
+                    Slice的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.19" data-path="../01-Go语言基础/day08_Map的使用.html">
+            
+                <a href="../01-Go语言基础/day08_Map的使用.html">
+            
+                    
+                    Map的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.20" data-path="../01-Go语言基础/day09_string.html">
+            
+                <a href="../01-Go语言基础/day09_string.html">
+            
+                    
+                    string
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.21" data-path="../01-Go语言基础/day10_函数.html">
+            
+                <a href="../01-Go语言基础/day10_函数.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.22" data-path="../01-Go语言基础/day11_包的管理.html">
+            
+                <a href="../01-Go语言基础/day11_包的管理.html">
+            
+                    
+                    包的管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.23" data-path="../01-Go语言基础/day12_指针.html">
+            
+                <a href="../01-Go语言基础/day12_指针.html">
+            
+                    
+                    指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.24" data-path="../01-Go语言基础/day13-结构体.html">
+            
+                <a href="../01-Go语言基础/day13-结构体.html">
+            
+                    
+                    结构体
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.25" data-path="../01-Go语言基础/day14_第1节_方法.html">
+            
+                <a href="../01-Go语言基础/day14_第1节_方法.html">
+            
+                    
+                    第1节_方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.26" data-path="../01-Go语言基础/day14_第2节_接口.html">
+            
+                <a href="../01-Go语言基础/day14_第2节_接口.html">
+            
+                    
+                    第2节_接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.27" data-path="../01-Go语言基础/day14_第3节-OOP编程.html">
+            
+                <a href="../01-Go语言基础/day14_第3节-OOP编程.html">
+            
+                    
+                    第3节-OOP编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.28" data-path="../01-Go语言基础/day14_第4节-type.html">
+            
+                <a href="../01-Go语言基础/day14_第4节-type.html">
+            
+                    
+                    第4节-type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.29" data-path="../01-Go语言基础/day15_错误处理.html">
+            
+                <a href="../01-Go语言基础/day15_错误处理.html">
+            
+                    
+                    错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Go语言基础进阶
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../02-Go语言基础进阶/day16_file操作.html">
+            
+                <a href="../02-Go语言基础进阶/day16_file操作.html">
+            
+                    
+                    01file操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../02-Go语言基础进阶/day17_Go语言并发Goroutine.html">
+            
+                <a href="../02-Go语言基础进阶/day17_Go语言并发Goroutine.html">
+            
+                    
+                    02Go语言并发Goroutine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../02-Go语言基础进阶/day18_channel通道.html">
+            
+                <a href="../02-Go语言基础进阶/day18_channel通道.html">
+            
+                    
+                    03channel通道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../02-Go语言基础进阶/day19_Go语言反射.html">
+            
+                <a href="../02-Go语言基础进阶/day19_Go语言反射.html">
+            
+                    
+                    04Go语言反射
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    MySQL数据库基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../03-MySQL数据库基础/day23_学习笔记.html">
+            
+                <a href="../03-MySQL数据库基础/day23_学习笔记.html">
+            
+                    
+                    01学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../03-MySQL数据库基础/day23_数据库基础知识和基础操作.html">
+            
+                <a href="../03-MySQL数据库基础/day23_数据库基础知识和基础操作.html">
+            
+                    
+                    02数据库基础知识和基础操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../03-MySQL数据库基础/day24_查询和复杂查询.html">
+            
+                <a href="../03-MySQL数据库基础/day24_查询和复杂查询.html">
+            
+                    
+                    03查询和复杂查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    beego框架
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.5.1" data-path="day36_beego框架介绍和流程分析.html">
+            
+                <a href="day36_beego框架介绍和流程分析.html">
+            
+                    
+                    beego框架介绍和流程分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="day37_beego框架总结及数据库连接配置.html">
+            
+                <a href="day37_beego框架总结及数据库连接配置.html">
+            
+                    
+                    beego框架总结及数据库连接配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    beego开发博客系统
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../05-beego框架开发博客系统/day38_项目搭建_登录注册和Session功能开发.html">
+            
+                <a href="../05-beego框架开发博客系统/day38_项目搭建_登录注册和Session功能开发.html">
+            
+                    
+                    项目搭建_登录注册和Session功能开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../05-beego框架开发博客系统/day39_写文章_项目首页和查看文章详情功能开发.html">
+            
+                <a href="../05-beego框架开发博客系统/day39_写文章_项目首页和查看文章详情功能开发.html">
+            
+                    
+                    写文章_项目首页和查看文章详情功能开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../05-beego框架开发博客系统/day40_修改文章_删除文章和文章标签功能开发.html">
+            
+                <a href="../05-beego框架开发博客系统/day40_修改文章_删除文章和文章标签功能开发.html">
+            
+                    
+                    修改文章_删除文章和文章标签功能开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../05-beego框架开发博客系统/day41_首页功能扩展_图片上传和关于功能开发.html">
+            
+                <a href="../05-beego框架开发博客系统/day41_首页功能扩展_图片上传和关于功能开发.html">
+            
+                    
+                    首页功能扩展_图片上传和关于功能开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" >
+            
+                <span>
+            
+                    
+                    iris框架
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../06-iris框架/day54_web开发介绍、iris框架安装、HTTP请求和返回、iris路由处理.html">
+            
+                <a href="../06-iris框架/day54_web开发介绍、iris框架安装、HTTP请求和返回、iris路由处理.html">
+            
+                    
+                    web开发介绍、iris框架安装、HTTP请求和返回、iris路由处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../06-iris框架/day55_框架设置、mvc包、session使用、项目搭建和资源导入.html">
+            
+                <a href="../06-iris框架/day55_框架设置、mvc包、session使用、项目搭建和资源导入.html">
+            
+                    
+                    框架设置、mvc包、session使用、项目搭建和资源导入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <span>
+            
+                    
+                    微服务特性
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../07-微服务特性/day76_微服务简介及特性介绍.html">
+            
+                <a href="../07-微服务特性/day76_微服务简介及特性介绍.html">
+            
+                    
+                    微服务简介及特性介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <span>
+            
+                    
+                    protobuf
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../08-protobuf/day77_Protobuf介绍.html">
+            
+                <a href="../08-protobuf/day77_Protobuf介绍.html">
+            
+                    
+                    Protobuf介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" >
+            
+                <span>
+            
+                    
+                    微服务管理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../09-微服务管理/day78_微服务管理_上.html">
+            
+                <a href="../09-微服务管理/day78_微服务管理_上.html">
+            
+                    
+                    微服务管理_上
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../09-微服务管理/day79_微服务管理_下.html">
+            
+                <a href="../09-微服务管理/day79_微服务管理_下.html">
+            
+                    
+                    微服务管理_下
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" >
+            
+                <span>
+            
+                    
+                    RPC&gRPC
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="../10-RPC远程调用机制/day80_RPC远程过程调用.html">
+            
+                <a href="../10-RPC远程调用机制/day80_RPC远程过程调用.html">
+            
+                    
+                    RPC远程过程调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="../11-gRPC远程调用机制/day81_gRPC远程调用机制介绍.html">
+            
+                <a href="../11-gRPC远程调用机制/day81_gRPC远程调用机制介绍.html">
+            
+                    
+                    gRPC远程调用机制介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="../11-gRPC远程调用机制/day82_gRPC使用.html">
+            
+                <a href="../11-gRPC远程调用机制/day82_gRPC使用.html">
+            
+                    
+                    gRPC使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" >
+            
+                <span>
+            
+                    
+                    go-micro
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.5.1" data-path="../12-go-micro微服务框架/day83_go-micro框架介绍.html">
+            
+                <a href="../12-go-micro微服务框架/day83_go-micro框架介绍.html">
+            
+                    
+                    go-micro框架介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.2" data-path="../12-go-micro微服务框架/day84_go-micro使用1.html">
+            
+                <a href="../12-go-micro微服务框架/day84_go-micro使用1.html">
+            
+                    
+                    go-micro使用1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.3" data-path="../12-go-micro微服务框架/day85_go-micro使用2.html">
+            
+                <a href="../12-go-micro微服务框架/day85_go-micro使用2.html">
+            
+                    
+                    go-micro使用2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" >
+            
+                <span>
+            
+                    
+                    RESTful
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../13-RESTful设计/day86_RESTful标准设计.html">
+            
+                <a href="../13-RESTful设计/day86_RESTful标准设计.html">
+            
+                    
+                    RESTful标准设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" >
+            
+                <span>
+            
+                    
+                    区块链
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../14-区块链/day01_初始区块链家族1.html">
+            
+                <a href="../14-区块链/day01_初始区块链家族1.html">
+            
+                    
+                    初始区块链家族1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="../14-区块链/day02_区块链基础入门.html">
+            
+                <a href="../14-区块链/day02_区块链基础入门.html">
+            
+                    
+                    区块链基础入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.3" data-path="../14-区块链/day03_区块链的本质.html">
+            
+                <a href="../14-区块链/day03_区块链的本质.html">
+            
+                    
+                    区块链的本质
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.4" data-path="../14-区块链/day04_区块链的特性.html">
+            
+                <a href="../14-区块链/day04_区块链的特性.html">
+            
+                    
+                    区块链的特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >beego框架介绍和流程分析</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="beego&#x6846;&#x67B6;&#x4ECB;&#x7ECD;&#x548C;&#x6D41;&#x7A0B;&#x5206;&#x6790;">beego&#x6846;&#x67B6;&#x4ECB;&#x7ECD;&#x548C;&#x6D41;&#x7A0B;&#x5206;&#x6790;</h1>
+<hr>
+<p><strong>create by victor</strong></p>
+<p>&#x4ECE;&#x4ECA;&#x5929;&#x5F00;&#x59CB;&#xFF0C;&#x6211;&#x4EEC;&#x5F00;&#x59CB;&#x8FDB;&#x5165;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x9636;&#x6BB5;&#x7684;&#x5B66;&#x4E60;&#x3002;&#x4ECE;&#x4ECA;&#x5929;&#x5F00;&#x59CB;&#x6211;&#x4EEC;&#x5F00;&#x59CB;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x6846;&#x67B6;&#x77E5;&#x8BC6;&#x7684;&#x5B66;&#x4E60;--GoWeb&#x5F00;&#x53D1;&#x4E4B;Beego&#x5B9E;&#x6218;&#x9879;&#x76EE;&#x3002;</p>
+<ul>
+<li>beego&#x5B98;&#x65B9;&#x6587;&#x6863;&#xFF1A;<a href="https://beego.me/" target="_blank">https://beego.me/</a></li>
+</ul>
+<h1 id="&#x4E00;&#x3001;beego&#x6846;&#x67B6;&#x4ECB;&#x7ECD;">&#x4E00;&#x3001;beego&#x6846;&#x67B6;&#x4ECB;&#x7ECD;</h1>
+<h2 id="11-beego&#x6846;&#x67B6;&#x4ECB;&#x7ECD;--beego&#x7B80;&#x4ECB;">1.1 beego&#x6846;&#x67B6;&#x4ECB;&#x7ECD;--beego&#x7B80;&#x4ECB;</h2>
+<h4 id="111-&#x4EC0;&#x4E48;&#x662F;beego">1.1.1 &#x4EC0;&#x4E48;&#x662F;beego</h4>
+<p>beego&#x662F;&#x4E00;&#x4E2A;&#x4F7F;&#x7528;Go&#x8BED;&#x8A00;&#x6765;&#x5F00;&#x53D1;WEB&#x5F15;&#x7528;&#x7684;GoWeb&#x6846;&#x67B6;&#xFF0C;&#x8BE5;&#x6846;&#x67B6;&#x8D77;&#x59CB;&#x4E8E;2012&#x5E74;&#xFF0C;&#x7531;&#x4E00;&#x4F4D;&#x4E2D;&#x56FD;&#x7684;&#x7A0B;&#x5E8F;&#x5458;&#x7F16;&#x5199;&#x5E76;&#x8FDB;&#x884C;&#x516C;&#x5F00;&#xFF0C;&#x5176;&#x76EE;&#x7684;&#x5C31;&#x662F;&#x4E3A;&#x5927;&#x5BB6;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x9AD8;&#x6548;&#x7387;&#x7684;web&#x5E94;&#x7528;&#x5F00;&#x53D1;&#x6846;&#x67B6;&#x3002;&#x8BE5;&#x6846;&#x67B6;&#x91C7;&#x7528;&#x6A21;&#x5757;&#x5C01;&#x88C5;&#xFF0C;&#x4F7F;&#x7528;&#x7B80;&#x5355;&#xFF0C;&#x5BB9;&#x6613;&#x5B66;&#x4E60;&#x3002;&#x65B9;&#x4FBF;&#x6280;&#x672F;&#x5F00;&#x53D1;&#x8005;&#x5FEB;&#x901F;&#x5B66;&#x4E60;&#x5E76;&#x8FDB;&#x884C;&#x5B9E;&#x9645;&#x5F00;&#x53D1;&#x3002;&#x5BF9;&#x7A0B;&#x5E8F;&#x5458;&#x6765;&#x8BF4;&#xFF0C;beego&#x638C;&#x63E1;&#x8D77;&#x6765;&#x975E;&#x5E38;&#x7B80;&#x5355;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5173;&#x6CE8;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x5B9E;&#x73B0;&#x5373;&#x53EF;&#xFF0C;&#x6846;&#x67B6;&#x81EA;&#x52A8;&#x4E3A;&#x9879;&#x76EE;&#x9700;&#x6C42;&#x63D0;&#x4F9B;&#x4E0D;&#x540C;&#x7684;&#x6A21;&#x5757;&#x529F;&#x80FD;&#x3002;</p>
+<p>&#x5728;&#x5BF9;beego&#x6846;&#x67B6;&#x6709;&#x4E86;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x57FA;&#x672C;&#x7684;&#x4E86;&#x89E3;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x7ED9;&#x5927;&#x5BB6;&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;beego&#x7684;&#x4E00;&#x4E9B;&#x7279;&#x6027;&#x3002;</p>
+<h4 id="112-beego&#x6846;&#x67B6;&#x7279;&#x6027;">1.1.2 beego&#x6846;&#x67B6;&#x7279;&#x6027;</h4>
+<p>Beego&#x6846;&#x67B6;&#x7684;&#x4E3B;&#x8981;&#x7279;&#x6027;&#xFF1A;</p>
+<p><strong>1&#xFF09;&#x7B80;&#x5355;&#x5316;&#xFF1A;</strong>RESTful&#x652F;&#x6301;&#xFF0C;MVC&#x6A21;&#x578B;&#xFF1B;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;bee&#x5DE5;&#x5177;&#x6765;&#x63D0;&#x9AD8;&#x5F00;&#x53D1;&#x6548;&#x7387;&#xFF0C;&#x6BD4;&#x5982;&#x76D1;&#x63A7;&#x4EE3;&#x7801;&#x4FEE;&#x6539;&#x8FDB;&#x884C;&#x70ED;&#x7F16;&#x8BD1;&#xFF0C;&#x81EA;&#x52A8;&#x5316;&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#xFF0C;&#x4EE5;&#x53CA;&#x81EA;&#x52A8;&#x5316;&#x6253;&#x5305;&#x90E8;&#x7F72;&#x7B49;&#x4E30;&#x5BCC;&#x7684;&#x5F00;&#x53D1;&#x8C03;&#x8BD5;&#x529F;&#x80FD;&#x3002;</p>
+<p><strong>2&#xFF09;&#x667A;&#x80FD;&#x5316;&#xFF1A;</strong>beego&#x6846;&#x67B6;&#x5C01;&#x88C5;&#x4E86;&#x8DEF;&#x7531;&#x6A21;&#x5757;&#xFF0C;&#x652F;&#x6301;&#x667A;&#x80FD;&#x8DEF;&#x7531;&#xFF0C;&#x667A;&#x80FD;&#x76D1;&#x63A7;&#xFF0C;&#x5E76;&#x53EF;&#x4EE5;&#x76D1;&#x63A7;&#x5185;&#x5B58;&#x6D88;&#x8017;&#xFF0C;CPU&#x4F7F;&#x7528;&#x4EE5;&#x53CA;goroutine&#x7684;&#x8FD0;&#x884C;&#x72B6;&#x51B5;&#xFF0C;&#x65B9;&#x4FBF;&#x5F00;&#x53D1;&#x8005;&#x5BF9;&#x7EBF;&#x4E0A;&#x5E94;&#x7528;&#x8FDB;&#x884C;&#x76D1;&#x63A7;&#x5206;&#x6790;&#x3002;</p>
+<p><strong>3&#xFF09;&#x6A21;&#x5757;&#x5316;&#xFF1A;</strong>beego&#x6839;&#x636E;&#x529F;&#x80FD;&#x5BF9;&#x4EE3;&#x7801;&#x8FDB;&#x884C;&#x8282;&#x8026;&#x5C01;&#x88C5;&#xFF0C;&#x5F62;&#x6210;&#x4E86;Session&#xFF0C;Cache&#xFF0C;Log&#xFF0C;&#x914D;&#x7F6E;&#x89E3;&#x6790;&#xFF0C;&#x6027;&#x80FD;&#x76D1;&#x63A7;&#xFF0C;&#x4E0A;&#x4E0B;&#x6587;&#x64CD;&#x4F5C;&#xFF0C;ORM&#x7B49;&#x72EC;&#x7ACB;&#x7684;&#x6A21;&#x5757;&#xFF0C;&#x65B9;&#x4FBF;&#x5F00;&#x53D1;&#x8005;&#x8FDB;&#x884C;&#x4F7F;&#x7528;&#x3002;</p>
+<p><strong>4&#xFF09;&#x9AD8;&#x6027;&#x80FD;&#xFF1A;</strong>beego&#x91C7;&#x7528;Go&#x539F;&#x751F;&#x7684;http&#x8BF7;&#x6C42;&#xFF0C;goroutine&#x7684;&#x5E76;&#x53D1;&#x6548;&#x7387;&#x5E94;&#x4ED8;&#x5927;&#x6D41;&#x91CF;&#x7684;Web&#x5E94;&#x7528;&#x548C;API&#x5E94;&#x7528;&#x3002;</p>
+<p>&#x5927;&#x5BB6;&#x9700;&#x8981;&#x8BB0;&#x4F4F;beego&#x7684;&#x51E0;&#x4E2A;&#x7279;&#x6027;&#xFF0C;&#x4E00;&#x65B9;&#x9762;&#x5728;&#x9762;&#x8BD5;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x9762;&#x8BD5;&#x5B98;&#x95EE;&#x8D77;&#x5927;&#x5BB6;&#x5173;&#x4E8E;goweb&#x5F00;&#x53D1;&#x7684;&#x76F8;&#x5173;&#x77E5;&#x8BC6;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6709;&#x53EF;&#x80FD;&#x95EE;beego&#x6846;&#x67B6;&#x6709;&#x4F18;&#x52BF;&#x6216;&#x8005;&#x6709;&#x4EC0;&#x4E48;&#x7279;&#x70B9;&#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x9700;&#x8981;&#x5927;&#x5BB6;&#x80FD;&#x591F;&#x5BF9;beego&#x6846;&#x67B6;&#x8FD9;&#x4E9B;&#x7279;&#x70B9;&#x505A;&#x4E00;&#x4E2A;&#x4ECB;&#x7ECD;&#xFF1B;&#x53E6;&#x4E00;&#x65B9;&#x9762;&#xFF0C;&#x54B1;&#x4EEC;&#x5728;&#x540E;&#x9762;&#x5B9E;&#x9645;&#x7684;&#x5B66;&#x4E60;&#x548C;&#x7F16;&#x7801;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x5927;&#x5BB6;&#x611F;&#x53D7;&#x4E00;&#x4E0B;&#x8FD9;&#x4E9B;&#x7279;&#x6027;&#x5728;&#x5B9E;&#x9645;&#x9879;&#x76EE;&#x4E2D;&#x4E3A;&#x6211;&#x4EEC;&#x5E26;&#x6765;&#x7684;&#x4FBF;&#x5229;&#x548C;&#x9AD8;&#x6548;&#x3002;</p>
+<h2 id="12-beego&#x6846;&#x67B6;&#x4ECB;&#x7ECD;--beego&#x5B89;&#x88C5;">1.2 beego&#x6846;&#x67B6;&#x4ECB;&#x7ECD;--beego&#x5B89;&#x88C5;</h2>
+<p>&#x5728;&#x5BF9;beego&#x7684;&#x7279;&#x70B9;&#x505A;&#x4E86;&#x7B80;&#x5355;&#x4E86;&#x89E3;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x771F;&#x6B63;&#x5F00;&#x59CB;&#x6765;&#x642D;&#x5EFA;beego&#x7684;&#x73AF;&#x5883;&#xFF0C;&#x5F00;&#x59CB;&#x8FDB;&#x5165;&#x5B9E;&#x9645;&#x7684;&#x7F16;&#x7801;&#x9636;&#x6BB5;&#x3002;</p>
+<p>&#x9996;&#x5148;&#x6211;&#x4EEC;&#x8FDB;&#x884C;beego&#x6E90;&#x7801;&#x7684;&#x5B89;&#x88C5;&#x3002;&#x8BF4;&#x5230;beego&#x7684;&#x6E90;&#x7801;&#x5B89;&#x88C5;&#xFF0C;&#x8FD9;&#x91CC;&#x9700;&#x8981;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#xFF0C;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x4E4B;&#x524D;&#x5927;&#x5BB6;&#x5E94;&#x8BE5;&#x90FD;&#x63A5;&#x89E6;&#x8FC7;&#x5427;&#xFF1F;&#x6211;&#x4EEC;&#x4F7F;&#x7528;go get&#x547D;&#x4EE4;&#x6765;&#x8FDB;&#x884C;beego&#x7684;&#x5B89;&#x88C5;&#x3002;</p>
+<h4 id="121-go&#x8BED;&#x8A00;&#x7248;&#x672C;&#x8981;&#x6C42;">1.2.1 Go&#x8BED;&#x8A00;&#x7248;&#x672C;&#x8981;&#x6C42;</h4>
+<p><strong>&#x3010;&#x6CE8;&#x610F;&#x3011;&#xFF1A;</strong>&#x5728;&#x5B89;&#x88C5;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6709;&#x4E00;&#x70B9;&#x5927;&#x5BB6;&#x8981;&#x6CE8;&#x610F;&#xFF0C;beego&#x6846;&#x67B6;&#x8981;&#x6C42;Go &#x8BED;&#x8A00;&#x7248;&#x672C;1.1+&#x4EE5;&#x4E0A;&#xFF0C;&#x8FD9;&#x4E2A;&#x6211;&#x4EEC;&#x5927;&#x5BB6;&#x7684;&#x7248;&#x672C;&#x5E94;&#x8BE5;&#x81F3;&#x5C11;&#x4E5F;&#x662F;1.9&#x7684;&#x5427;&#xFF0C;&#x5E94;&#x8BE5;&#x90FD;&#x6CA1;&#x6709;&#x3002;&#x6216;&#x8005;&#x5927;&#x5BB6;&#x73B0;&#x5728;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#xFF0C;&#x6267;&#x884C;go version&#x67E5;&#x770B;&#x4E00;&#x4E0B;&#x81EA;&#x5DF1;&#x7684;go&#x8BED;&#x8A00;&#x7248;&#x672C;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;
+<img src="img/WX20190515-154819@2x.png" alt="Go&#x8BED;&#x8A00;&#x7248;&#x672C;"></p>
+<p>&#x4E0A;&#x56FE;&#x663E;&#x793A;&#xFF0C;&#x672C;&#x5730;&#x73AF;&#x5883;go&#x8BED;&#x8A00;&#x7248;&#x672C;&#x5C31;&#x662F;1.10.4&#x7248;&#x672C;&#x3002;</p>
+<h4 id="122-beego&#x5B89;&#x88C5;&#x547D;&#x4EE4;">1.2.2 beego&#x5B89;&#x88C5;&#x547D;&#x4EE4;</h4>
+<p>&#x73B0;&#x5728;&#xFF0C;&#x6211;&#x4EEC;&#x6765;&#x6267;&#x884C;&#x5B89;&#x88C5;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">go</span> get github.com/astaxie/beego
+</code></pre>
+<p>&#x7B49;&#x5F85;go&#x5C06;&#x6E90;&#x4EE3;&#x7801;&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;&#x5B8C;&#x6BD5;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x6211;&#x4EEC;&#x81EA;&#x5DF1;&#x8BBE;&#x7F6E;&#x7684;GOPATH&#x4E0B;&#x9762;&#x7684;src&#x76EE;&#x5F55;&#x4E0B;&#x627E;&#x5230;beego&#x6846;&#x67B6;&#x6E90;&#x7801;&#x3002;</p>
+<h4 id="123-&#x7F16;&#x5199;&#x7B2C;&#x4E00;&#x4E2A;beego&#x7A0B;&#x5E8F;">1.2.3 &#x7F16;&#x5199;&#x7B2C;&#x4E00;&#x4E2A;beego&#x7A0B;&#x5E8F;</h4>
+<p>&#x90A3;&#x4E48;&#xFF0C;&#x6211;&#x4EEC;&#x9996;&#x5148;&#x6765;&#x770B;&#x4E00;&#x4E2A;&#x6700;&#x6700;&#x7B80;&#x5355;&#x7684;&#x4F8B;&#x5B50;beego&#x9879;&#x76EE;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x5C31;&#x4E00;&#x53E5;&#x8BDD;&#xFF1A;</p>
+<ul>
+<li><p>1&#x3001;&#x7F16;&#x5199;&#x7B2C;&#x4E00;&#x4E2A;beego&#x793A;&#x4F8B;&#x9879;&#x76EE;</p>
+<pre><code>  package main
+  import &quot;github.com/astaxie/beego&quot;
+  func main() {
+      beego.Info(&quot;&#x7B2C;&#x4E00;&#x4E2A;beego&#x6848;&#x4F8B;&quot;)
+      beego.Run(&quot;localhost:8080&quot;)
+  }
+</code></pre></li>
+<li><p>2&#x3001;&#x7F16;&#x8BD1;</p>
+<pre><code>  go build -o hello hello.go
+</code></pre></li>
+<li><p>3&#x3001;&#x6267;&#x884C;</p>
+<pre><code>  ./hello
+</code></pre></li>
+<li>4&#x3001;&#x6548;&#x679C;&#x67E5;&#x8BE2;<pre><code>  &#x8BBF;&#x95EE;&#x6D4F;&#x89C8;&#x5668;http://localhost:8080
+</code></pre>&#x6211;&#x4EEC;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x5F53;&#x4E2D;&#x8FDB;&#x884C;&#x8BBF;&#x95EE;:<a href="http://localhost:8080" target="_blank">http://localhost:8080</a>&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x5728;&#x6211;&#x4EEC;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x5F53;&#x4E2D;&#x51FA;&#x73B0;&#x4E86;404&#xFF0C;&#x4EE3;&#x8868;&#x7740;&#x9875;&#x9762;&#x6CA1;&#x627E;&#x5230;&#xFF1B;&#x8FD9;&#x4E2A;&#x5F88;&#x597D;&#x7406;&#x89E3;&#xFF0C;&#x56E0;&#x4E3A;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#x9ED8;&#x8BA4;&#x7684;&#x9875;&#x9762;&#xFF0C;&#x6240;&#x4EE5;&#x540E;&#x53F0;&#x9879;&#x76EE;&#x5C31;&#x4E0D;&#x77E5;&#x9053;&#x9ED8;&#x8BA4;&#x6307;&#x5411;&#x54EA;&#x4E2A;&#x9875;&#x9762;&#x8DEF;&#x5F84;&#xFF0C;&#x56E0;&#x6B64;&#x5C31;&#x63D0;&#x793A;404&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x770B;&#x540E;&#x53F0;&#x6253;&#x51FA;&#x4E86;&#x65E5;&#x5FD7;&#xFF0C;&#x8FD9;&#x5C31;&#x8BF4;&#x660E;&#xFF0C;&#x524D;&#x7AEF;&#x7684;&#x8BF7;&#x6C42;&#x786E;&#x5B9E;&#x5230;&#x4E86;&#x540E;&#x53F0;main&#x65B9;&#x6CD5;&#x91CC;&#x9762;&#x8FDB;&#x884C;&#x6267;&#x884C;&#x3002;</li>
+</ul>
+<h2 id="13-beego&#x6846;&#x67B6;&#x4ECB;&#x7ECD;--&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;bee">1.3 beego&#x6846;&#x67B6;&#x4ECB;&#x7ECD;--&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;Bee</h2>
+<p>&#x73B0;&#x5728;&#xFF0C;&#x5C1D;&#x8BD5;&#x6765;&#x8FDB;&#x884C;&#x5BF9;&#x4EE3;&#x7801;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#xFF0C;&#x5C31;&#x7B80;&#x5355;&#x7684;&#x6DFB;&#x52A0;&#x4E00;&#x884C;&#x6253;&#x5370;&#x65E5;&#x5FD7;&#xFF1A;beego.Info(&quot;&#x4EE3;&#x7801;&#x4FEE;&#x6539;&quot;)&#x3002;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x8981;&#x60F3;&#x8BA9;&#x4EE3;&#x7801;&#x751F;&#x6548;&#xFF0C;&#x5FC5;&#x987B;&#x628A;&#x539F;&#x6765;&#x6B63;&#x5728;&#x6267;&#x884C;&#x7684;&#x7A0B;&#x5E8F;&#x505C;&#x6B62;&#xFF0C;&#x7136;&#x540E;&#x91CD;&#x65B0;&#x6267;&#x884C;&#x7F16;&#x7801;&#x548C;&#x8FD0;&#x884C;&#x547D;&#x4EE4;&#xFF0C;&#x6211;&#x4EEC;&#x6765;&#x5B9E;&#x9645;&#x5C1D;&#x8BD5;&#x4E00;&#x4E0B;&#x3002;</p>
+<p>&#x7ECF;&#x8FC7;&#x6211;&#x4EEC;&#x7684;&#x5C1D;&#x8BD5;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x53D1;&#x73B0;&#xFF0C;&#x786E;&#x5B9E;&#x7B2C;&#x4E8C;&#x6B21;&#x7684;&#x91CD;&#x65B0;&#x542F;&#x52A8;&#x7684;&#x7A0B;&#x5E8F;&#x6253;&#x5370;&#x51FA;&#x4E86;&#x4E24;&#x6761;&#x540E;&#x53F0;&#x65E5;&#x5FD7;&#xFF0C;&#x8FD9;&#x8BF4;&#x660E;&#x6211;&#x4EEC;&#x4FEE;&#x6539;&#x7684;&#x4EE3;&#x7801;&#x751F;&#x6548;&#x4E86;&#x3002;</p>
+<p>&#x73B0;&#x5728;&#x5411;&#x5927;&#x5BB6;&#x5F15;&#x51FA;beego&#x7684;&#x4E00;&#x4E2A;&#x5DE5;&#x5177;&#xFF1A;<strong>bee</strong>&#x3002;</p>
+<h4 id="131-&#x4EC0;&#x4E48;&#x662F;bee">1.3.1 &#x4EC0;&#x4E48;&#x662F;bee</h4>
+<p>bee&#x662F;&#x4E00;&#x4E2A;&#x5F00;&#x53D1;&#x5DE5;&#x5177;&#xFF0C;&#x662F;&#x534F;&#x52A9;Beego&#x6846;&#x67B6;&#x5F00;&#x53D1;&#x9879;&#x76EE;&#x65F6;&#x8FDB;&#x884C;&#x521B;&#x5EFA;&#x9879;&#x76EE;&#xFF0C;&#x8FD0;&#x884C;&#x9879;&#x76EE;&#xFF0C;&#x70ED;&#x90E8;&#x7F72;&#x7B49;&#x76F8;&#x5173;&#x7684;&#x9879;&#x76EE;&#x7BA1;&#x7406;&#x7684;&#x5DE5;&#x5177;&#x3002;beego&#x662F;&#x6E90;&#x7801;&#xFF0C;&#x8D1F;&#x8D23;&#x5F00;&#x53D1;&#xFF0C;bee&#x662F;&#x5DE5;&#x5177;&#xFF0C;&#x8D1F;&#x8D23;&#x6784;&#x5EFA;&#x548C;&#x7BA1;&#x7406;&#x9879;&#x76EE;&#x3002;&#x4ECB;&#x7ECD;beego&#x7684;&#x7279;&#x6027;&#x7684;&#x65F6;&#x5019;&#x8BF4;&#x8FC7;&#x5176;&#x4E2D;&#x4E00;&#x70B9;beego&#x652F;&#x6301;&#x4EE3;&#x7801;&#x70ED;&#x90E8;&#x7F72;&#x5427;&#x3002;&#x6240;&#x8C13;&#x70ED;&#x90E8;&#x7F72;&#x5C31;&#x662F;&#xFF0C;&#x5F53;&#x4FEE;&#x6539;&#x4EE3;&#x7801;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EF;&#x4EE5;&#x4E0D;&#x7528;&#x505C;&#x6B62;&#x670D;&#x52A1;&#x91CD;&#x65B0;&#x542F;&#x52A8;&#xFF0C;&#x5185;&#x7F6E;&#x7684;beego&#x5C31;&#x80FD;&#x591F;&#x5B9E;&#x65F6;&#x611F;&#x77E5;&#x6E90;&#x4EE3;&#x7801;&#x7A0B;&#x5E8F;&#x7F16;&#x7801;&#xFF0C;&#x5E76;&#x8FDB;&#x884C;&#x5B9E;&#x65F6;&#x751F;&#x6548;&#xFF0C;&#x8FD9;&#x5C31;&#x662F;&#x70ED;&#x90E8;&#x7F72;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x5927;&#x5927;&#x65B9;&#x4FBF;&#x4E86;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x548C;&#x7EF4;&#x62A4;&#x4EBA;&#x5458;&#x8981;&#x9891;&#x7E41;&#x7684;&#x8FDB;&#x884C;&#x670D;&#x52A1;&#x505C;&#x6B62;&#xFF0C;&#x670D;&#x52A1;&#x91CD;&#x542F;&#x7684;&#x8FC7;&#x7A0B;&#x3002;&#x73B0;&#x5728;&#xFF0C;&#x6765;&#x770B;&#x770B;bee&#x90FD;&#x6709;&#x54EA;&#x4E9B;&#x529F;&#x80FD;&#xFF0C;&#x5982;&#x4F55;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#xFF1F;</p>
+<h4 id="132-bee&#x5B89;&#x88C5;">1.3.2 bee&#x5B89;&#x88C5;</h4>
+<p>&#x5982;&#x540C;beego&#x4E00;&#x6837;&#xFF0C;&#x5982;&#x679C;&#x8981;&#x4F7F;&#x7528;bee&#xFF0C;&#x9996;&#x5148;&#x8981;&#x8FDB;&#x884C;&#x5B89;&#x88C5;&#xFF0C;&#x540C;&#x6837;&#x7684;&#x9053;&#x7406;&#xFF0C;&#x5148;&#x4F7F;&#x7528;go get&#x547D;&#x4EE4;&#x5B89;&#x88C5;bee&#x5DE5;&#x5177;&#x3002;bee&#x5B89;&#x88C5;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre><code>go get github.com/beego/bee
+</code></pre><h4 id="133-bee&#x5E38;&#x7528;&#x529F;&#x80FD;&#x547D;&#x4EE4;">1.3.3 bee&#x5E38;&#x7528;&#x529F;&#x80FD;&#x547D;&#x4EE4;</h4>
+<p>&#x5B89;&#x88C5;&#x7ED3;&#x675F;&#x4EE5;&#x540E;&#xFF0C;&#x8FDB;&#x5165;&#x5230;<strong>GOPATH</strong>&#x5BF9;&#x5E94;&#x7684;&#x76EE;&#x5F55;&#x4E2D;&#xFF0C;&#x7136;&#x540E;&#x8FDB;&#x5165;&#x5230;bin&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6709;bee&#x8FD9;&#x4E2A;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x5C31;&#x662F;&#x5B89;&#x88C5;&#x7684;bee&#x5DE5;&#x5177;&#x7684;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#xFF0C;&#x5728;&#x8BE5;&#x76EE;&#x5F55;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x7EC8;&#x7AEF;&#x4E2D;&#x6267;&#x884C;&#x4EE5;&#x4E0B;bee&#x547D;&#x4EE4;&#xFF0C;&#x7136;&#x540E;&#x56DE;&#x8F66;&#xFF0C;&#x4F1A;&#x53D1;&#x73B0;&#x5217;&#x51FA;&#x5F88;&#x591A;&#x5173;&#x4E8E;bee&#x7684;&#x7528;&#x6CD5;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;</p>
+<ul>
+<li><p>new&#x547D;&#x4EE4;&#xFF1A;  </p>
+<pre><code>bee new ProjectName
+</code></pre><p>&#x8BE5;&#x547D;&#x4EE4;&#x8868;&#x793A;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x5168;&#x65B0;&#x7684;web&#x9879;&#x76EE;&#xFF0C;&#x6709;&#x4E00;&#x70B9;&#x9700;&#x8981;&#x6CE8;&#x610F;&#xFF1A;&#x8BE5;&#x547D;&#x4EE4;&#x5FC5;&#x987B;&#x5728;src&#x76EE;&#x5F55;&#x4E0B;&#x6267;&#x884C;&#xFF0C;&#x624D;&#x80FD;&#x751F;&#x6548;&#xFF0C;&#x81EA;&#x52A8;&#x751F;&#x6210;web&#x9879;&#x76EE;&#x7684;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#x3002;&#x5982;&#x679C;&#x5728;&#x5176;&#x4ED6;&#x76EE;&#x5F55;&#x4E0B;&#x9762;&#x6267;&#x884C;bee new&#x547D;&#x4EE4;&#xFF0C;&#x4E5F;&#x540C;&#x6837;&#x4F1A;&#x662F;&#x5728;src&#x76EE;&#x5F55;&#x4E0B;&#x9762;&#x751F;&#x6210;&#x5BF9;&#x5E94;&#x65B0;&#x9879;&#x76EE;&#x7684;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#xFF0C;&#x8FD9;&#x662F;bee&#x5DE5;&#x5177;&#x5728;&#x6784;&#x5EFA;&#x9879;&#x76EE;&#x7684;&#x65F6;&#x5019;&#x9ED8;&#x8BA4;&#x5BFB;&#x627E;&#x521B;&#x5EFA;&#x7684;&#x76EE;&#x5F55;&#x3002;</p>
+</li>
+<li><p>api&#x547D;&#x4EE4;&#xFF1A;  </p>
+<pre><code>bee api ProjectNames
+</code></pre><p>&#x8BE5;&#x547D;&#x4EE4;&#x8868;&#x793A;&#x7528;&#x6765;&#x521B;&#x5EFA;&#x5F00;&#x53D1;API&#x5E94;&#x7528;&#x3002;&#x5F88;&#x591A;&#x7528;&#x6237;&#x5199;&#x524D;&#x7AEF;&#x7684;&#x540E;&#x53F0;&#x63A5;&#x53E3;&#x4E5F;&#x662F;&#x901A;&#x8FC7;go&#x6765;&#x5199;&#xFF0C;&#x56E0;&#x6B64;bee&#x4E13;&#x95E8;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x5199;api&#x63A5;&#x53E3;&#x5E94;&#x7528;&#x7684;&#x547D;&#x4EE4;&#x3002;&#x901A;&#x8FC7;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x548C;Web&#x9879;&#x76EE;&#x76F8;&#x6BD4;&#xFF0C;API&#x9879;&#x76EE;&#x5C11;&#x4E86;static&#x548C;views&#x76EE;&#x5F55;&#xFF0C;&#x591A;&#x4E86;&#x4E00;&#x4E2A;test&#x76EE;&#x5F55;&#xFF0C;test&#x662F;&#x7528;&#x6765;&#x8FDB;&#x884C;&#x5199;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x4EE3;&#x7801;&#x7684;&#x3002;</p>
+</li>
+<li><p>run&#x547D;&#x4EE4;&#xFF1A;  </p>
+<pre><code>bee run
+</code></pre><p>&#x547D;&#x4EE4;&#x7528;&#x6765;&#x8FD0;&#x884C;&#x9879;&#x76EE;&#xFF0C;&#x5E76;&#x4E14;&#x80FD;&#x591F;&#x901A;&#x8FC7;&#x76D1;&#x63A7;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;&#x5B9E;&#x65F6;&#x8FDB;&#x884C;&#x4EE3;&#x7801;&#x7684;&#x70ED;&#x90E8;&#x7F72;&#x66F4;&#x65B0;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#xFF0C;&#x6211;&#x4EEC;&#x4EE3;&#x7801;&#x903B;&#x8F91;&#x8FDB;&#x884C;&#x4E86;&#x4FEE;&#x6539;&#xFF0C;&#x4E0D;&#x7528;&#x505C;&#x6B62;&#x5E94;&#x7528;&#xFF0C;&#x5728;&#x524D;&#x7AEF;&#x9875;&#x9762;&#x5C31;&#x80FD;&#x770B;&#x5230;&#x6539;&#x53D8;&#x3002;</p>
+</li>
+<li><p>pack&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre><code>bee pack
+</code></pre><p>pack&#x547D;&#x4EE4;&#x7528;&#x6765;&#x53D1;&#x5E03;&#x5E94;&#x7528;&#x7684;&#x65F6;&#x5019;&#x7684;&#x5927;&#x5305;&#x64CD;&#x4F5C;&#xFF0C;&#x8BE5;&#x547D;&#x4EE4;&#x4F1A;&#x628A;&#x9879;&#x76EE;&#x5927;&#x5305;&#x6210;zip&#x5305;&#xFF0C;&#x7136;&#x540E;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x90E8;&#x7F72;&#x7684;&#x65F6;&#x5019;&#x76F4;&#x63A5;&#x628A;&#x5927;&#x5305;&#x540E;&#x7684;&#x9879;&#x76EE;&#x4E0A;&#x4F20;&#x5230;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x7136;&#x540E;&#x89E3;&#x538B;&#x8FDB;&#x884C;&#x90E8;&#x7F72;&#x3002;</p>
+</li>
+<li><p>version&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre><code>bee version
+</code></pre><p>version&#x547D;&#x4EE4;&#x6765;&#x67E5;&#x770B;&#x5F53;&#x524D;bee&#xFF0C;beego&#xFF0C;go&#x7684;&#x7248;&#x672C;&#x3002;</p>
+</li>
+</ul>
+<h2 id="14-beego&#x6846;&#x67B6;&#x4ECB;&#x7ECD;--&#x4F7F;&#x7528;bee&#x5DE5;&#x5177;">1.4 beego&#x6846;&#x67B6;&#x4ECB;&#x7ECD;--&#x4F7F;&#x7528;Bee&#x5DE5;&#x5177;</h2>
+<p>&#x5E38;&#x89C1;&#x7684;&#x51E0;&#x4E2A;bee&#x5DE5;&#x5177;&#x547D;&#x4EE4;&#x5C31;&#x662F;&#x4E0A;&#x9762;&#x7684;&#x51E0;&#x4E2A;&#xFF0C;&#x7ACB;&#x5373;&#x6765;&#x7EC3;&#x4E60;&#x4F7F;&#x7528;&#x4E00;&#x4E0B;&#x3002;&#x6253;&#x5F00;&#x547D;&#x4EE4;&#x884C;&#x7EC8;&#x7AEF;&#xFF0C;&#x8FDB;&#x5165;&#x5230;GOPATH&#x6240;&#x5BF9;&#x5E94;&#x7684;&#x76EE;&#x5F55;&#xFF0C;&#x7136;&#x540E;&#x8FDB;&#x5165;&#x5230;src&#x76EE;&#x5F55;&#x4E2D;&#x3002;</p>
+<h4 id="141-&#x4F7F;&#x7528;bee&#x521B;&#x5EFA;&#x9879;&#x76EE;">1.4.1 &#x4F7F;&#x7528;bee&#x521B;&#x5EFA;&#x9879;&#x76EE;</h4>
+<p>&#x4F7F;&#x7528;bee run&#x547D;&#x4EE4;&#x6765;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x6848;&#x4F8B;&#x9879;&#x76EE;&#xFF0C;&#x6BD4;&#x5982;&#x6211;&#x4EEC;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;BeegoDemo2&#x7684;&#x9879;&#x76EE;&#xFF0C;&#x6211;&#x4EEC;&#x6267;&#x884C;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre><code class="lang-go">bee <span class="hljs-built_in">new</span> BeegoDemo2
+</code></pre>
+<p>&#x547D;&#x4EE4;&#x6267;&#x884C;&#x6548;&#x679C;&#x5982;&#x4E0B;&#xFF1A;
+<img src="img/bee_new.png" alt="bee&#x65B0;&#x5EFA;&#x9879;&#x76EE;">
+&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x7EC8;&#x7AEF;&#x4E2D;&#x8F93;&#x51FA;&#x4E86;bee&#x7684;&#x56FE;&#x6807;&#x548C;&#x7248;&#x672C;&#xFF0C;&#x5E76;&#x4E14;&#x6253;&#x5370;&#x51FA;&#x4E86;&#x5F88;&#x591A;&#x65E5;&#x5FD7;&#xFF0C;&#x521B;&#x5EFA;&#x4E86;&#x5F88;&#x591A;&#x6587;&#x4EF6;&#x548C;&#x76EE;&#x5F55;&#x3002;&#x8FD9;&#x5C31;&#x662F;bee new&#x547D;&#x4EE4;&#x7684;&#x6267;&#x884C;&#x6548;&#x679C;&#xFF0C;&#x8868;&#x793A;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#x3002;</p>
+<h4 id="142-&#x67E5;&#x770B;&#x9879;&#x76EE;&#x7ED3;&#x6784;">1.4.2 &#x67E5;&#x770B;&#x9879;&#x76EE;&#x7ED3;&#x6784;</h4>
+<p>&#x4F7F;&#x7528;&#x6211;&#x4EEC;&#x7684;&#x5F00;&#x53D1;&#x516C;&#x5C40;goland&#x6765;&#x6253;&#x5F00;&#x65B0;&#x5EFA;&#x7684;BeegoDemo2&#x9879;&#x76EE;&#xFF0C;&#x5E76;&#x67E5;&#x770B;&#x4E00;&#x4E0B;&#x9879;&#x76EE;&#x76EE;&#x5F55;&#x7EC4;&#x7EC7;&#x7ED3;&#x6784;&#xFF1A;
+<img src="img/project_cont.png" alt="&#x67E5;&#x770B;&#x9879;&#x76EE;&#x7ED3;&#x6784;"></p>
+<h4 id="143-&#x8FD0;&#x884C;&#x65B0;&#x5EFA;&#x9879;&#x76EE;">1.4.3 &#x8FD0;&#x884C;&#x65B0;&#x5EFA;&#x9879;&#x76EE;</h4>
+<p>&#x73B0;&#x5728;&#x4F7F;&#x7528;bee&#x547D;&#x4EE4;&#x6765;&#x8FD0;&#x884C;&#x4E00;&#x4E0B;&#x6848;&#x4F8B;&#xFF0C;&#x770B;&#x4E00;&#x4E0B;&#x6548;&#x679C;&#x3002;&#x5728;&#x5F00;&#x53D1;&#x5DE5;&#x5177;&#x4E0B;&#x65B9;&#x7684;terminal&#x4E2D;&#xFF0C;&#x6253;&#x5F00;terminal&#xFF0C;&#x8F93;&#x5165;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre><code class="lang-go">bee run
+</code></pre>
+<h4 id="144-&#x9879;&#x76EE;&#x8FD0;&#x884C;&#x6548;&#x679C;">1.4.4 &#x9879;&#x76EE;&#x8FD0;&#x884C;&#x6548;&#x679C;</h4>
+<p>&#x8FD0;&#x884C;&#x6548;&#x679C;&#x5982;&#x4E0B;&#xFF1A;
+<img src="img/bee_run.png" alt="&#x9879;&#x76EE;&#x8FD0;&#x884C;&#x6548;&#x679C;"></p>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8F93;&#x51FA;&#x65E5;&#x5FD7;&#x8BF4;&#xFF0C;http&#x670D;&#x52A1;&#x5DF2;&#x7ECF;&#x5728;<a href="http://localhost:8080" target="_blank">http://localhost:8080</a>&#x7AEF;&#x53E3;&#x8FD0;&#x884C;&#xFF0C;&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x53BB;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x9A8C;&#x8BC1;&#x4E00;&#x4E0B;&#xFF0C;&#x6548;&#x679C;&#x5982;&#x4E0B;&#xFF1A;
+<img src="img/project_show.png" alt="&#x6D4F;&#x89C8;&#x5668;&#x6548;&#x679C;"></p>
+<h1 id="&#x4E8C;&#x3001;beego&#x7A0B;&#x5E8F;&#x6D41;&#x7A0B;&#x5206;&#x6790;">&#x4E8C;&#x3001;beego&#x7A0B;&#x5E8F;&#x6D41;&#x7A0B;&#x5206;&#x6790;</h1>
+<h2 id="21-beego&#x7A0B;&#x5E8F;&#x6D41;&#x7A0B;&#x5206;&#x6790;--beego&#x7A0B;&#x5E8F;&#x5165;&#x53E3;">2.1 beego&#x7A0B;&#x5E8F;&#x6D41;&#x7A0B;&#x5206;&#x6790;--beego&#x7A0B;&#x5E8F;&#x5165;&#x53E3;</h2>
+<p>Go&#x8BED;&#x8A00;&#x6267;&#x884C;&#x7684;&#x65F6;&#x5019;&#x662F;&#x6267;&#x884C;main&#x5305;&#x4E0B;&#x9762;&#x7684;init&#x51FD;&#x6570;&#xFF0C;main&#x51FD;&#x6570;&#x4F9D;&#x6B21;&#x6267;&#x884C;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5148;&#x627E;&#x5230;main.go&#x6587;&#x4EF6;&#x3002;
+<img src="img/main_file.png" alt="beego&#x7A0B;&#x5E8F;&#x5165;&#x53E3;"></p>
+<p>&#x5982;&#x4E0A;&#x56FE;&#x5C31;&#x662F;main.go&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#xFF0C;&#x90A3;&#x4E48;&#x4EE3;&#x7801;&#x5982;&#x4F55;&#x6267;&#x884C;&#x5462;&#xFF1F;&#x9996;&#x5148;&#xFF0C;import&#x5BFC;&#x5165;&#x4E86;&#x4E24;&#x4E2A;&#x5305;&#xFF0C;&#x4E00;&#x4E2A;&#x662F;routers&#xFF0C;&#x4E00;&#x4E2A;&#x662F;beego&#x3002;&#x800C;&#x5728;routers&#x5305;&#x524D;&#x9762;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6709;&#x4E00;&#x4E2A;&#x201C;_&#x201D;&#xFF0C;&#x8FD9;&#x8868;&#x660E;&#x662F;&#x5F15;&#x5165;routers&#x5305;&#xFF0C;&#x5E76;&#x6267;&#x884C;init&#x65B9;&#x6CD5;&#x3002;</p>
+<h2 id="22-beego&#x7A0B;&#x5E8F;&#x6D41;&#x7A0B;&#x5206;&#x6790;--go&#x8BED;&#x8A00;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x987A;&#x5E8F;">2.2 beego&#x7A0B;&#x5E8F;&#x6D41;&#x7A0B;&#x5206;&#x6790;--Go&#x8BED;&#x8A00;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x987A;&#x5E8F;</h2>
+<p>&#x8FD9;&#x91CC;&#x6D89;&#x53CA;&#x4E00;&#x4E2A;&#x77E5;&#x8BC6;&#x70B9;&#xFF0C;&#x5C31;&#x662F;Go&#x8BED;&#x8A00;&#x7684;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#xFF0C;&#x8FD9;&#x91CC;&#x7ED9;&#x5927;&#x5BB6;&#x4E00;&#x5F20;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x6D41;&#x7A0B;&#x56FE;&#xFF1A;
+<img src="img/main_init.png" alt="Go&#x8BED;&#x8A00;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x987A;&#x5E8F;"></p>
+<h2 id="23-beego&#x7A0B;&#x5E8F;&#x6D41;&#x7A0B;&#x5206;&#x6790;--&#x8BF7;&#x6C42;&#x62E6;&#x622A;&#x4E0E;&#x8DEF;&#x7531;&#x5206;&#x53D1;">2.3 beego&#x7A0B;&#x5E8F;&#x6D41;&#x7A0B;&#x5206;&#x6790;--&#x8BF7;&#x6C42;&#x62E6;&#x622A;&#x4E0E;&#x8DEF;&#x7531;&#x5206;&#x53D1;</h2>
+<p>&#x6839;&#x636E;&#x4E0A;&#x56FE;&#xFF0C;&#x53EF;&#x4EE5;&#x5F97;&#x77E5;&#x7A0B;&#x5E8F;&#x9996;&#x5148;&#x5230;routers&#x5305;&#x4E0B;&#x6267;&#x884C;init&#x65B9;&#x6CD5;&#x3002;&#x5230;router.go&#x91CC;&#x9762;&#x770B;&#x4E00;&#x4E0B;&#x5177;&#x4F53;&#x7684;&#x4EE3;&#x7801;&#xFF1A;
+<img src="img/router.png" alt="router.go&#x7A0B;&#x5E8F;"></p>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5728;router.go&#x6587;&#x4EF6;&#x4E2D;&#x6709;&#x4E00;&#x4E2A;init&#x65B9;&#x6CD5;&#xFF0C;&#x770B;&#x5230;beego.Router()&#x8FD9;&#x53E5;&#x4EE3;&#x7801;&#x3002;</p>
+<h2 id="24-beego&#x7A0B;&#x5E8F;&#x6D41;&#x7A0B;&#x5206;&#x6790;--&#x63A7;&#x5236;&#x5668;&#x5904;&#x7406;">2.4 beego&#x7A0B;&#x5E8F;&#x6D41;&#x7A0B;&#x5206;&#x6790;--&#x63A7;&#x5236;&#x5668;&#x5904;&#x7406;</h2>
+<p>router&#x8868;&#x793A;&#x7684;&#x662F;&#x8DEF;&#x7531;&#x7684;&#x610F;&#x601D;&#xFF0C;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x529F;&#x80FD;&#x662F;&#x6620;&#x5C04; URL &#x5230; controller&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F; URL (&#x7528;&#x6237;&#x8BF7;&#x6C42;&#x7684;&#x5730;&#x5740;)&#xFF0C;&#x8FD9;&#x91CC;&#x6CE8;&#x518C;&#x7684;&#x662F; /&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BBF;&#x95EE;&#x7684;&#x4E0D;&#x5E26;&#x4EFB;&#x4F55;&#x53C2;&#x6570;&#x7684; URL&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x5BF9;&#x5E94;&#x7684; Controller&#xFF0C;&#x5373;&#x5C06;&#x628A;&#x8BF7;&#x6C42;&#x5206;&#x53D1;&#x5230;&#x90A3;&#x4E2A;&#x63A7;&#x5236;&#x5668;&#x6765;&#x6267;&#x884C;&#x76F8;&#x5E94;&#x7684;&#x903B;&#x8F91;&#xFF0C;&#x73B0;&#x5728;&#x53BB;&#x8FD9;&#x91CC;&#x8BBE;&#x7F6E;&#x7684;MainController&#x4E2D;&#x53BB;&#x770B;&#x4E00;&#x4E0B;&#x6709;&#x4EC0;&#x4E48;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<p><img src="img/controller.png" alt="&#x63A7;&#x5236;&#x5668;"></p>
+<p>MainController&#x7ED3;&#x6784;&#x4F53;&#x53CA;&#x51FD;&#x6570;&#x58F0;&#x660E;&#x5728;default.go&#x6587;&#x4EF6;&#x4E2D;&#x3002;&#x800C;&#x8FD9;&#x91CC;&#x5C31;&#x770B;&#x5230;&#x4E00;&#x4E2A;Get&#x65B9;&#x6CD5;&#xFF0C;&#x65B9;&#x6CD5;&#x4E2D;&#x6709;&#x4E09;&#x884C;&#x4EE3;&#x7801;&#x3002;</p>
+<p>&#x4E0A;&#x6587;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x8BBF;&#x95EE;&#x7684;&#x662F;&#xFF1A;<a href="http://localhost:8080" target="_blank">http://localhost:8080</a>&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;get&#x8BF7;&#x6C42;&#xFF0C;&#x8BF7;&#x6C42;&#x5230;&#x4E86;&#x540E;&#x53F0;&#x4EE5;&#x540E;&#xFF0C;&#x4EC0;&#x4E48;&#x8BF7;&#x6C42;&#x53C2;&#x6570;&#x90FD;&#x6CA1;&#x6709;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x5C31;&#x4F1A;&#x88AB;&#x201C;/&#x201D;&#x62E6;&#x622A;&#xFF0C;&#x6267;&#x884C;&#x5230;MainController&#x4E2D;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x56E0;&#x4E3A;&#x662F;get&#x8BF7;&#x6C42;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x81EA;&#x52A8;&#x627E;&#x5230;Get&#x51FD;&#x6570;&#x5E76;&#x8FDB;&#x884C;&#x6267;&#x884C;&#x3002;</p>
+<p>&#x5728;get&#x51FD;&#x6570;&#x91CC;&#x9762;&#xFF0C;&#x6709;&#x4E09;&#x53E5;&#x4EE3;&#x7801;&#xFF0C;&#x524D;&#x4E24;&#x53E5;c.Data[]= &quot;&quot;&#x8868;&#x793A;&#x8BBE;&#x7F6E;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#x5B57;&#x6BB5;&#x53CA;&#x5185;&#x5BB9;&#xFF0C;&#x6700;&#x540E;&#x4E00;&#x53E5;c.TplName&#x8868;&#x793A;&#x8BBE;&#x7F6E;&#x5904;&#x7406;&#x8BE5;&#x8BF7;&#x6C42;&#x6307;&#x5411;&#x67D0;&#x4E2A;&#x6A21;&#x677F;&#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x91CC;&#x6307;&#x5411;&#x4E86;index.tpl&#xFF0C;&#x90A3;&#x4E48;index.tpl&#x6587;&#x4EF6;&#x5728;&#x54EA;&#x91CC;&#x5462;&#xFF1F;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x9879;&#x76EE;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#xFF0C;&#x5728;views&#x4E0B;&#x9762;&#xFF0C;views&#x4E0B;&#x9762;&#x5B58;&#x653E;&#x4E00;&#x4E9B;&#x6A21;&#x677F;&#x6587;&#x4EF6;&#x3002;</p>
+<ul>
+<li><p><strong>&#x6A21;&#x677F;&#x6587;&#x4EF6;</strong>  </p>
+<p>  &#x7B80;&#x5355;&#x89E3;&#x91CA;&#x4E00;&#x4E0B;&#xFF0C;&#x901A;&#x5E38;&#x7684;&#x9875;&#x9762;&#x90FD;&#x662F;&#x4F7F;&#x7528;&#x9759;&#x6001;&#x7684;html+css+js&#x7B49;&#x8FD9;&#x4E9B;&#x9759;&#x6001;&#x4EE3;&#x7801;&#x6765;&#x8FDB;&#x884C;&#x9875;&#x9762;&#x7684;&#x5E03;&#x5C40;&#xFF0C;&#x9875;&#x9762;&#x6548;&#x679C;&#x63A7;&#x5236;&#x7B49;&#xFF0C;&#x800C;&#x628A;&#x9875;&#x9762;&#x7684;&#x6570;&#x636E;&#x4F7F;&#x7528;&#x53D8;&#x91CF;&#x8868;&#x793A;&#xFF0C;&#x8FD9;&#x6837;&#xFF0C;&#x5728;&#x8FDB;&#x884C;&#x9875;&#x9762;&#x5C55;&#x793A;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x80FD;&#x591F;&#x81EA;&#x52A8;&#x7684;&#x586B;&#x5145;&#x9875;&#x9762;&#x91CC;&#x9762;&#x7684;&#x53D8;&#x91CF;&#x7684;&#x503C;&#xFF1B;&#x8FD9;&#x4E9B;&#x9759;&#x6001;&#x7684;&#x4EE3;&#x7801;&#x6587;&#x4EF6;&#x7EDF;&#x79F0;&#x4E3A;&#x6A21;&#x677F;&#x6587;&#x4EF6;&#x3002;&#x6BCF;&#x4E2A;&#x6A21;&#x677F;&#x6587;&#x4EF6;&#x5C31;&#x662F;&#x50CF;&#x4E00;&#x4E2A;&#x6A21;&#x677F;&#x4E00;&#x6837;&#xFF0C;&#x6837;&#x5F0F;&#x6548;&#x679C;&#x90FD;&#x56FA;&#x5B9A;&#xFF0C;&#x53EA;&#x662F;&#x6839;&#x636E;&#x6570;&#x636E;&#x4E0D;&#x4E00;&#x6837;&#x8FDB;&#x884C;&#x6E32;&#x67D3;&#x548C;&#x5C55;&#x793A;&#x3002;</p>
+</li>
+</ul>
+<h2 id="24-beego&#x7A0B;&#x5E8F;&#x6D41;&#x7A0B;&#x5206;&#x6790;--beegorun&#x903B;&#x8F91;">2.4 beego&#x7A0B;&#x5E8F;&#x6D41;&#x7A0B;&#x5206;&#x6790;--beego.Run()&#x903B;&#x8F91;</h2>
+<p>init&#x65B9;&#x6CD5;&#x5206;&#x6790;&#x5B8C;&#x6BD5;&#x540E;&#xFF0C;&#x7A0B;&#x5E8F;&#x4F1A;&#x7EE7;&#x7EED;&#x5F80;&#x4E0B;&#x6267;&#x884C;&#xFF0C;&#x5C31;&#x5230;&#x4E86;main&#x51FD;&#x6570;&#xFF0C;&#x5728;main&#x51FD;&#x6570;&#x4E2D;&#x6267;&#x884C;&#xFF1A;beego.Run()&#x4EE3;&#x7801;&#x3002;&#x5206;&#x6790;&#x4E00;&#x4E0B;Run&#x4EE3;&#x7801;&#x7684;&#x903B;&#x8F91;&#xFF0C;&#x5728;Run&#x65B9;&#x6CD5;&#x5185;&#x90E8;&#xFF0C;&#x4E3B;&#x8981;&#x505A;&#x4E86;&#x51E0;&#x4EF6;&#x4E8B;&#xFF1A;</p>
+<ul>
+<li><p>&#x89E3;&#x6790;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x7684;app.conf&#x6587;&#x4EF6;&#xFF0C;&#x6BD4;&#x5982;&#x7AEF;&#x53E3;&#xFF0C;&#x5E94;&#x7528;&#x540D;&#x79F0;&#x7B49;&#x4FE1;&#x606F;&#x3002;</p>
+</li>
+<li><p>&#x68C0;&#x67E5;&#x662F;&#x5426;&#x5F00;&#x542F;session&#xFF0C;&#x5982;&#x679C;&#x5F00;&#x542F;session&#xFF0C;&#x5C31;&#x4F1A;&#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A;session&#x5BF9;&#x8C61;&#x3002;</p>
+</li>
+<li><p>&#x662F;&#x5426;&#x7F16;&#x8BD1;&#x6A21;&#x677F;&#xFF0C;beego&#x6846;&#x67B6;&#x4F1A;&#x5728;&#x9879;&#x76EE;&#x542F;&#x52A8;&#x7684;&#x65F6;&#x5019;&#x6839;&#x636E;&#x914D;&#x7F6E;&#x628A;views&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6240;&#x6709;&#x6A21;&#x677F;&#x8FDB;&#x884C;&#x9884;&#x7F16;&#x8BD1;&#xFF0C;&#x7136;&#x540E;&#x5B58;&#x653E;&#x5728;map&#x4E2D;&#xFF0C;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x6709;&#x6548;&#x7684;&#x63D0;&#x9AD8;&#x6A21;&#x677F;&#x8FD0;&#x884C;&#x7684;&#x6548;&#x7387;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x591A;&#x6B21;&#x7F16;&#x8BD1;&#x3002;</p>
+</li>
+<li><p>&#x76D1;&#x542C;&#x670D;&#x52A1;&#x7AEF;&#x53E3;&#x3002;&#x6839;&#x636E;app.conf&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x7AEF;&#x53E3;&#x914D;&#x7F6E;&#xFF0C;&#x542F;&#x52A8;&#x76D1;&#x542C;&#x3002;</p>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="day37_beego框架总结及数据库连接配置.html" class="navigation navigation-next navigation-unique" aria-label="Next page: beego框架总结及数据库连接配置">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"beego框架介绍和流程分析","level":"1.5.1","depth":2,"next":{"title":"beego框架总结及数据库连接配置","level":"1.5.2","depth":2,"path":"04-beego框架/day37_beego框架总结及数据库连接配置.md","ref":"04-beego框架/day37_beego框架总结及数据库连接配置.md","articles":[]},"previous":{"title":"beego框架","level":"1.5","depth":1,"ref":"","articles":[{"title":"beego框架介绍和流程分析","level":"1.5.1","depth":2,"path":"04-beego框架/day36_beego框架介绍和流程分析.md","ref":"04-beego框架/day36_beego框架介绍和流程分析.md","articles":[]},{"title":"beego框架总结及数据库连接配置","level":"1.5.2","depth":2,"path":"04-beego框架/day37_beego框架总结及数据库连接配置.md","ref":"04-beego框架/day37_beego框架总结及数据库连接配置.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"04-beego框架/day36_beego框架介绍和流程分析.md","mtime":"2020-08-10T03:24:34.262Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-04T06:50:51.724Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
